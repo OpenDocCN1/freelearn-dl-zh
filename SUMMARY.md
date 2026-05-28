@@ -50,6 +50,7 @@
 +   [会计的 ChatGPT 人工智能指南](docs/cgpt-ai-acnt/README.md)
 +   [ChatGPT 对话式人工智能与聊天机器人](docs/cgpt-cnvs-ai-cbt/README.md)
 +   [大语言模型解码](docs/dec-llm/README.md)
++   [DeepSeek 实战](docs/deepseek-in-practice/README.md)
 +   [PowerPlatform 数字转型指南](docs/dgt-trans-pwrplat/README.md)
 +   [深度学习架构手册](docs/dl-arch-hb/README.md)
 +   [深度学习初学者指南](docs/dl-bg/README.md)
