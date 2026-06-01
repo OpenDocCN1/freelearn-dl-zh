@@ -811,25 +811,10 @@ L1 和 L2 正则化有内在的差异，这些差异有时可以帮助我们提�
 
         ```py
         # Instantiate the grid search
-        ```
-
-        ```py
         object grid = GridSearchCV(
-        ```
-
-        ```py
             LogisticRegression(solver='liblinear'),
-        ```
-
-        ```py
             param_grid,
-        ```
-
-        ```py
             scoring='accuracy',
-        ```
-
-        ```py
             cv=5 )
         ```
 

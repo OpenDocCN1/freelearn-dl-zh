@@ -80,17 +80,8 @@
 
         ```py
         from sklearn.datasets import load_iris
-        ```
-
-        ```py
         from sklearn.model_selection import train_test_split
-        ```
-
-        ```py
         from sklearn.preprocessing import StandardScaler
-        ```
-
-        ```py
         from sklearn.linear_model import Perceptron
         ```
 
@@ -381,17 +372,8 @@ pip install torch
 
         ```py
         import torch
-        ```
-
-        ```py
         import torch.nn as nn
-        ```
-
-        ```py
         import torch.nn.functional as F
-        ```
-
-        ```py
         from torch.utils.data import Dataset, DataLoader
         ```
 
@@ -496,77 +478,23 @@ class CaliforniaDataset(Dataset):
 
         ```py
         class Net(nn.Module):
-        ```
-
-        ```py
             def __init__(self, input_shape: int,
-        ```
-
-        ```py
                 hidden_units: int = 24):
-        ```
-
-        ```py
                     super(Net, self).__init__()
-        ```
-
-        ```py
                     self.hidden_units = hidden_units
-        ```
-
-        ```py
                     self.fc1 = nn.Linear(input_shape,
-        ```
-
-        ```py
                         self.hidden_units)
-        ```
-
-        ```py
                     self.fc2 = nn.Linear(self.hidden_units,
-        ```
-
-        ```py
                         self.hidden_units)
-        ```
-
-        ```py
                     self.output = nn.Linear(self.hidden_units,
-        ```
-
-        ```py
                         1)
-        ```
-
-        ```py
             def forward(self,
-        ```
-
-        ```py
                 x: torch.Tensor) -> torch.Tensor:
-        ```
-
-        ```py
                     x = self.fc1(x)
-        ```
-
-        ```py
                     x = F.relu(x)
-        ```
-
-        ```py
                     x = self.fc2(x)
-        ```
-
-        ```py
                     x = F.relu(x)
-        ```
-
-        ```py
                     output = self.output(x)
-        ```
-
-        ```py
                     return output
         ```
 
@@ -1048,201 +976,54 @@ tensor([[0.4487]], grad_fn=<SigmoidBackward0>)
 
         ```py
         train_losses = []
-        ```
-
-        ```py
         test_losses = []
-        ```
-
-        ```py
         # Loop over the dataset 50 times
-        ```
-
-        ```py
         for epoch in range(50):
-        ```
-
-        ```py
             ## Train the model on the training set
-        ```
-
-        ```py
             running_train_loss = 0.
-        ```
-
-        ```py
             # Switch to train mode
-        ```
-
-        ```py
             net.train()
-        ```
-
-        ```py
             # Loop over the batches in train set
-        ```
-
-        ```py
             for i, data in enumerate(train_dataloader, 0):
-        ```
-
-        ```py
                 # Get the inputs: data is a list of [inputs, labels]
-        ```
-
-        ```py
                 inputs, labels = data
-        ```
-
-        ```py
                 # Zero the parameter gradients
-        ```
-
-        ```py
                 optimizer.zero_grad()
-        ```
-
-        ```py
                 # Forward + backward + optimize
-        ```
-
-        ```py
                 outputs = net(inputs)
-        ```
-
-        ```py
                 loss = criterion(outputs, labels.unsqueeze(1))
-        ```
-
-        ```py
                 loss.backward()
-        ```
-
-        ```py
                 optimizer.step()
-        ```
-
-        ```py
                 # Add current loss to running loss
-        ```
-
-        ```py
                 running_train_loss += loss.item()
-        ```
-
-        ```py
             # Once epoch is over, compute and store the epoch loss
-        ```
-
-        ```py
             train_epoch_loss = running_train_loss / len(
-        ```
-
-        ```py
                 train_dataloader)
-        ```
-
-        ```py
             train_losses.append(train_epoch_loss)
-        ```
-
-        ```py
             ## Evaluate the model on the test set
-        ```
-
-        ```py
             running_test_loss = 0.
-        ```
-
-        ```py
             # Switch to eval model
-        ```
-
-        ```py
             net.eval()
-        ```
-
-        ```py
             with torch.no_grad():
-        ```
-
-        ```py
                 # Loop over the batches in test set
-        ```
-
-        ```py
                 for i, data in enumerate(test_dataloader, 0):
-        ```
-
-        ```py
                     # Get the inputs
-        ```
-
-        ```py
                     inputs, labels = data
-        ```
-
-        ```py
                     # Compute forward propagation
-        ```
-
-        ```py
                     outputs = net(inputs)
-        ```
-
-        ```py
                     # Compute loss
-        ```
-
-        ```py
                     loss = criterion(outputs,
-        ```
-
-        ```py
                         labels.unsqueeze(1))
-        ```
-
-        ```py
                     # Add to running loss
-        ```
-
-        ```py
                     running_test_loss += loss.item()
-        ```
-
-        ```py
                     # Compute and store the epoch loss
-        ```
-
-        ```py
                     test_epoch_loss = running_test_loss / len(
-        ```
-
-        ```py
                         test_dataloader)
-        ```
-
-        ```py
                     test_losses.append(test_epoch_loss)
-        ```
-
-        ```py
             # Print stats
-        ```
-
-        ```py
             print(f'[epoch {epoch + 1}] Training loss: {
-        ```
-
-        ```py
                 train_epoch_loss:.3f} | Test loss: {
-        ```
-
-        ```py
                     test_epoch_loss:.3f}')
-        ```
-
-        ```py
             print('Finished Training')
         ```
 
@@ -1286,49 +1067,16 @@ tensor([[0.4487]], grad_fn=<SigmoidBackward0>)
 
         ```py
         # Compute the predictions with the trained neural network
-        ```
-
-        ```py
         y_train_pred = net(torch.tensor((
-        ```
-
-        ```py
             training_data.x_scaler.transform(
-        ```
-
-        ```py
                 X_train)))).detach().numpy() > 0.5
-        ```
-
-        ```py
         y_test_pred = net(torch.tensor((
-        ```
-
-        ```py
             training_data.x_scaler.transform(
-        ```
-
-        ```py
                 X_test)))).detach().numpy() > 0.5
-        ```
-
-        ```py
         # Compute the accuracy score
-        ```
-
-        ```py
         print('Accuracy on training set:', accuracy_score(
-        ```
-
-        ```py
             y_train, y_train_pred))
-        ```
-
-        ```py
         print('Accuracy on test set:', accuracy_score(y_test,
-        ```
-
-        ```py
             y_test_pred))
         ```
 
@@ -1484,13 +1232,7 @@ PyTorch 上可用的优化器列表：[`pytorch.org/docs/stable/optim.xhtml#algo
 
         ```py
         transform = transforms.Compose([transforms.ToTensor(),
-        ```
-
-        ```py
             transforms.Normalize((0.1307), (0.3081)),
-        ```
-
-        ```py
             transforms.Lambda(torch.flatten)])
         ```
 

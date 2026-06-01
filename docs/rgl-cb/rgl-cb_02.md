@@ -512,9 +512,6 @@ scikit-learn 中有几种可用的填充器。完整列表请见这里：[`sciki
 
         ```py
         # Instantiate the encoder
-        ```
-
-        ```py
         encoder=OneHotEncoder(drop='first', handle_unknown='ignore')
         ```
 

@@ -557,13 +557,7 @@ def plot_decision_function(dt, X, y):
 
         ```py
         from sklearn.datasets import load_iris
-        ```
-
-        ```py
         from sklearn.model_selection import train_test_split
-        ```
-
-        ```py
         from sklearn.tree import DecisionTreeClassifier
         ```
 

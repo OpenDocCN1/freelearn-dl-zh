@@ -120,33 +120,12 @@ pip install pandas numpy scikit-learn matplotlib torch transformers
 
         ```py
         import torch import torch.nn as nn
-        ```
-
-        ```py
         import torch.optim as optim from torch.utils.data
-        ```
-
-        ```py
         import DataLoader, Dataset from sklearn.model_selection
-        ```
-
-        ```py
         import train_test_split from sklearn.preprocessing
-        ```
-
-        ```py
         import LabelEncoder from transformers
-        ```
-
-        ```py
         import AutoTokenizer
-        ```
-
-        ```py
         import pandas as pd
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
         ```
 
@@ -607,41 +586,14 @@ pip install pandas numpy scikit-learn matplotlib torch transformers
 
         ```py
         import torch
-        ```
-
-        ```py
         import torch.nn as nn
-        ```
-
-        ```py
         import torch.optim as optim from torch.utils.data
-        ```
-
-        ```py
         import DataLoader,Dataset from sklearn.model_selection
-        ```
-
-        ```py
         import train_test_split from sklearn.preprocessing
-        ```
-
-        ```py
         import LabelEncoder from transformers
-        ```
-
-        ```py
         import AutoTokenizer
-        ```
-
-        ```py
         import pandas as pd
-        ```
-
-        ```py
         import numpy as np
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
         ```
 
@@ -685,65 +637,20 @@ pip install pandas numpy scikit-learn matplotlib torch transformers
 
         ```py
         # Define dataset class
-        ```
-
-        ```py
         class TextClassificationDataset(Dataset):
-        ```
-
-        ```py
             def __init__(self, data, max_length):
-        ```
-
-        ```py
                 self.data = data
-        ```
-
-        ```py
                 self.tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-        ```
-
-        ```py
                 self.tokens = self.tokenizer(
-        ```
-
-        ```py
                     data['review'].to_list(), padding=True,
-        ```
-
-        ```py
                     truncation=True, max_length=max_length,
-        ```
-
-        ```py
                     return_tensors='pt')['input_ids']
-        ```
-
-        ```py
                 le = LabelEncoder()
-        ```
-
-        ```py
                 self.labels = torch.tensor(le.fit_transform(
-        ```
-
-        ```py
                     data['sentiment']).astype(np.float32))
-        ```
-
-        ```py
             def __len__(self):
-        ```
-
-        ```py
                 return len(self.data)
-        ```
-
-        ```py
             def __getitem__(self, index):
-        ```
-
-        ```py
                 return self.tokens[index],self.labels[index]
         ```
 
@@ -783,109 +690,31 @@ pip install pandas numpy scikit-learn matplotlib torch transformers
 
         ```py
         # Define GRU model
-        ```
-
-        ```py
         class GRUClassifier(nn.Module):
-        ```
-
-        ```py
             def __init__(self, vocab_size, embedding_dim,
-        ```
-
-        ```py
                 hidden_size, output_size, num_layers=3):
-        ```
-
-        ```py
                     super(GRUClassifier, self).__init__()
-        ```
-
-        ```py
                     self.num_layers = num_layers
-        ```
-
-        ```py
                     self.hidden_size = hidden_size
-        ```
-
-        ```py
                     self.embedding = nn.Embedding(
-        ```
-
-        ```py
                         num_embeddings=vocab_size,
-        ```
-
-        ```py
                         embedding_dim=embedding_dim)
-        ```
-
-        ```py
                     self.gru = nn.GRU(
-        ```
-
-        ```py
                         input_size=embedding_dim,
-        ```
-
-        ```py
                         hidden_size=hidden_size,
-        ```
-
-        ```py
                         num_layers=num_layers,
-        ```
-
-        ```py
                         batch_first=True)
-        ```
-
-        ```py
                     self.fc = nn.Linear(hidden_size,
-        ```
-
-        ```py
                         output_size)
-        ```
-
-        ```py
             def forward(self, inputs):
-        ```
-
-        ```py
                 batch_size = inputs.size(0)
-        ```
-
-        ```py
                 zero_hidden = torch.zeros(
-        ```
-
-        ```py
                     self.num_layers, batch_size,
-        ```
-
-        ```py
                     self.hidden_size).to(device)
-        ```
-
-        ```py
                 embedded = self.embedding(inputs)
-        ```
-
-        ```py
                 output, hidden = self.gru(embedded,
-        ```
-
-        ```py
                     zero_hidden)
-        ```
-
-        ```py
                 output = torch.sigmoid(self.fc(output[:, -1]))
-        ```
-
-        ```py
                 return output
         ```
 
@@ -1227,117 +1056,33 @@ pip install pandas numpy scikit-learn matplotlib torch transformers
 
         ```py
         # Define GRU model
-        ```
-
-        ```py
         class GRUClassifier(nn.Module):
-        ```
-
-        ```py
             def __init__(self, vocab_size, embedding_dim,
-        ```
-
-        ```py
                 hidden_size, output_size, num_layers=3,
-        ```
-
-        ```py
                 dropout=0.25):
-        ```
-
-        ```py
                     super(GRUClassifier, self).__init__()
-        ```
-
-        ```py
                     self.num_layers = num_layers
-        ```
-
-        ```py
                     self.hidden_size = hidden_size
-        ```
-
-        ```py
                     self.embedding = nn.Embedding(
-        ```
-
-        ```py
                         num_embeddings=vocab_size,
-        ```
-
-        ```py
                         embedding_dim=embedding_dim)
-        ```
-
-        ```py
                     self.dropout = nn.Dropout(dropout)
-        ```
-
-        ```py
                     self.gru = nn.GRU(
-        ```
-
-        ```py
                         input_size=embedding_dim,
-        ```
-
-        ```py
                         hidden_size=hidden_size,
-        ```
-
-        ```py
                         num_layers=num_layers,
-        ```
-
-        ```py
                         batch_first=True, dropout=dropout)
-        ```
-
-        ```py
                     self.fc = nn.Linear(hidden_size,
-        ```
-
-        ```py
                         output_size)
-        ```
-
-        ```py
             def forward(self, inputs):
-        ```
-
-        ```py
                 batch_size = inputs.size(0)
-        ```
-
-        ```py
                 zero_hidden = torch.zeros(self.num_layers,
-        ```
-
-        ```py
                     batch_size, self.hidden_size).to(device)
-        ```
-
-        ```py
                 embedded = self.dropout(
-        ```
-
-        ```py
                     self.embedding(inputs))
-        ```
-
-        ```py
                 output, hidden = self.gru(embedded,
-        ```
-
-        ```py
                     zero_hidden)
-        ```
-
-        ```py
                 output = torch.sigmoid(self.fc(output[:, -1]))
-        ```
-
-        ```py
                 return output
         ```
 

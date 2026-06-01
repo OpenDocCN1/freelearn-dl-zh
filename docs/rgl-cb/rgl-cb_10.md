@@ -178,21 +178,9 @@ import torchvision.transforms as transforms
 
         ```py
         transform = transforms.Compose([
-        ```
-
-        ```py
             transforms.ToTensor(),
-        ```
-
-        ```py
             transforms.Normalize((0.5, 0.5, 0.5),
-        ```
-
-        ```py
                 (0.5, 0.5, 0.5)),
-        ```
-
-        ```py
         ])
         ```
 
@@ -1087,17 +1075,8 @@ traffic
 
         ```py
         import cv2
-        ```
-
-        ```py
         from glob import glob
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
-        ```
-
-        ```py
         from ultralytics import YOLO
         ```
 
@@ -1234,9 +1213,6 @@ plot_labels(
 
         ```py
         # Create a new YOLO model with random weights
-        ```
-
-        ```py
         model = YOLO('yolov8n.yaml')
         ```
 

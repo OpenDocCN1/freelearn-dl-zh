@@ -655,29 +655,11 @@ pip install pandas scikit-learn matplotlib imbalanced-learn
 
         ```py
         import pandas as pd
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
-        ```
-
-        ```py
         from sklearn.model_selection import train_test_split
-        ```
-
-        ```py
         from sklearn.preprocessing import StandardScaler
-        ```
-
-        ```py
         from imblearn.under_sampling import RandomUnderSampler
-        ```
-
-        ```py
         from sklearn.linear_model import LogisticRegression
-        ```
-
-        ```py
         from sklearn.metrics import roc_auc_score
         ```
 
@@ -890,29 +872,11 @@ pip install pandas scikit-learn matplotlib imbalanced-learn.
 
         ```py
         import pandas as pd
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
-        ```
-
-        ```py
         from sklearn.model_selection import train_test_split
-        ```
-
-        ```py
         from sklearn.preprocessing import StandardScaler
-        ```
-
-        ```py
         from imblearn.over_sampling import RandomOverSampler
-        ```
-
-        ```py
         from sklearn.linear_model import LogisticRegression
-        ```
-
-        ```py
         from sklearn.metrics import roc_auc_score
         ```
 
@@ -1113,29 +1077,11 @@ pip install pandas scikit-learn matplotlib imbalanced-learn.
 
         ```py
         import pandas as pd
-        ```
-
-        ```py
         import matplotlib.pyplot as plt
-        ```
-
-        ```py
         from sklearn.model_selection import train_test_split
-        ```
-
-        ```py
         from sklearn.preprocessing import StandardScaler
-        ```
-
-        ```py
         from imblearn.over_sampling import SMOTE
-        ```
-
-        ```py
         from sklearn.linear_model import LogisticRegression
-        ```
-
-        ```py
         from sklearn.metrics import roc_auc_score
         ```
 
