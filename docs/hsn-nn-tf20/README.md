@@ -1,6 +1,6 @@
 # TensorFlow 2.0 神经网络实用指南
 
-> 原文：[`annas-archive.org/md5/87c674ffae26bfd552462cfe4dde7475`](https://annas-archive.org/md5/87c674ffae26bfd552462cfe4dde7475)
+> 原文：[Hands-On Neural Networks with TensorFlow 2.0](https://annas-archive.gl/md5/87c674ffae26bfd552462cfe4dde7475)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

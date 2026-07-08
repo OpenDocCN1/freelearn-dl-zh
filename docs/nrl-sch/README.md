@@ -1,6 +1,6 @@
 # JINA 神经搜索：从原型到生产
 
-> 原文：[`annas-archive.org/md5/b1cbbd444ec98b4386abe602865c1d22`](https://annas-archive.org/md5/b1cbbd444ec98b4386abe602865c1d22)
+> 原文：[Neural Search - From Prototype to Production with Jina : Build Deep Learning–powered Search Systems That You Can Deploy and Manage with Ease](https://annas-archive.gl/md5/b1cbbd444ec98b4386abe602865c1d22)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

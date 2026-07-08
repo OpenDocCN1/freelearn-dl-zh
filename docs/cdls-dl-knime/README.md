@@ -1,6 +1,6 @@
 # KNIME 无代码深度学习
 
-> 原文：[`annas-archive.org/md5/3fb5edd9b2e990d054f2bfb606f7000f`](https://annas-archive.org/md5/3fb5edd9b2e990d054f2bfb606f7000f)
+> 原文：[Codeless deep learning with KNIME : build, train, and deploy various deep neural network architectures using KNIME Analytics Platform](https://annas-archive.gl/md5/3fb5edd9b2e990d054f2bfb606f7000f)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

@@ -1,6 +1,6 @@
 # Keras 深度学习秘籍
 
-> 原文：[`annas-archive.org/md5/1db02a22ae55dea1c646433e37acffb2`](https://annas-archive.org/md5/1db02a22ae55dea1c646433e37acffb2)
+> 原文：[Keras Deep Learning Cookbook: Over 80 Recipes for Implementing Deep Neural Networks in Python](https://annas-archive.gl/md5/1db02a22ae55dea1c646433e37acffb2)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

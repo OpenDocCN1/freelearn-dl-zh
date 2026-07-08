@@ -1,6 +1,6 @@
 # 贝叶斯推理深度学习增强指南
 
-> 原文：[`annas-archive.org/md5/3925f12c16b3ab4fff402d1f04c4210b`](https://annas-archive.org/md5/3925f12c16b3ab4fff402d1f04c4210b)
+> 原文：[Enhancing Deep Learning with Bayesian Inference : Create More Powerful, Robust Deep Learning Systems with Bayesian Deep Learning in Python](https://annas-archive.gl/md5/3925f12c16b3ab4fff402d1f04c4210b)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

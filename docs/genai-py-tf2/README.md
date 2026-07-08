@@ -1,6 +1,6 @@
 # Python 与 TensorFlow2 生成式 AI
 
-> 原文：[`zh.annas-archive.org/md5/d06d282ea0d9c23c57f0ce31225acf76`](https://zh.annas-archive.org/md5/d06d282ea0d9c23c57f0ce31225acf76)
+> 原文：[GENERATIVE AI WITH PYTHON AND TENSORFLOW 2 : harness the power of generative models to... create images, text, and music](https://zh.annas-archive.gl/md5/d06d282ea0d9c23c57f0ce31225acf76)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

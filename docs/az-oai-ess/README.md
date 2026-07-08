@@ -1,6 +1,6 @@
 # Azure OpenAI 精要
 
-> 原文：[`annas-archive.org/md5/9abfdbcdb0ce520c427f6f94336e2401`](https://annas-archive.org/md5/9abfdbcdb0ce520c427f6f94336e2401)
+> 原文：[Azure OpenAI Essentials: A practical guide to unlocking generative AI-powered innovation with Azure OpenAI](https://annas-archive.gl/md5/9abfdbcdb0ce520c427f6f94336e2401)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

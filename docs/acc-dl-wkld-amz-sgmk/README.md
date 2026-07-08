@@ -1,6 +1,6 @@
 # 亚马逊 SageMaker 深度学习负载加速指南
 
-> 原文：[`annas-archive.org/md5/621c8e4bb6ef8d84ed646f8ded57a6f8`](https://annas-archive.org/md5/621c8e4bb6ef8d84ed646f8ded57a6f8)
+> 原文：[Accelerate Deep Learning Workloads with Amazon SageMaker : Train, Deploy, and Scale Deep Learning Models Effectively Using Amazon SageMaker](https://annas-archive.gl/md5/621c8e4bb6ef8d84ed646f8ded57a6f8)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

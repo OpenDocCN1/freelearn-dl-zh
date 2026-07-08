@@ -1,6 +1,6 @@
 # Python 神经演化实用指南
 
-> 原文：[`zh.annas-archive.org/md5/c4cc7adb41ad9d14715dc730f23708c6`](https://zh.annas-archive.org/md5/c4cc7adb41ad9d14715dc730f23708c6)
+> 原文：[Hands-On Neuroevolution with Python](https://zh.annas-archive.gl/md5/c4cc7adb41ad9d14715dc730f23708c6)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

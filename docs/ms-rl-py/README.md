@@ -1,6 +1,6 @@
 # 精通 Python 强化学习
 
-> 原文：[`annas-archive.org/md5/39faf67615f2d59edcd86792ee1fcf06`](https://annas-archive.org/md5/39faf67615f2d59edcd86792ee1fcf06)
+> 原文：[Mastering Reinforcement Learning with Python : Build Next-generation, Self-learning Models Using Reinforcement Learning Techniques and Best Practices](https://annas-archive.gl/md5/39faf67615f2d59edcd86792ee1fcf06)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

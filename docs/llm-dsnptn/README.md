@@ -1,6 +1,6 @@
 # 大语言模型设计模式
 
-> 原文：[`zh.annas-archive.org/md5/0b9a2f9a35bc813b7b27fdd94da37638`](https://zh.annas-archive.org/md5/0b9a2f9a35bc813b7b27fdd94da37638)
+> 原文：[LLM Design Patterns](https://zh.annas-archive.gl/md5/0b9a2f9a35bc813b7b27fdd94da37638)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

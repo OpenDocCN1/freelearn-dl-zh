@@ -1,6 +1,6 @@
 # OpenAI Whisper 学习指南
 
-> 原文：[`annas-archive.org/md5/498a61d068550a5ec9498fc70995a63b`](https://annas-archive.org/md5/498a61d068550a5ec9498fc70995a63b)
+> 原文：[Learn OpenAI Whisper : Transform Your Understanding of GenAI Through Robust and Accurate Speech Processing Solutions](https://annas-archive.gl/md5/498a61d068550a5ec9498fc70995a63b)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

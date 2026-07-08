@@ -1,6 +1,6 @@
 # MLFlow 大规模深度学习实践指南
 
-> 原文：[`annas-archive.org/md5/0801c480d77054d281bf58617eeac06d`](https://annas-archive.org/md5/0801c480d77054d281bf58617eeac06d)
+> 原文：[PRACTICAL DEEP LEARNING AT SCALE WITH MLFLOW : bridge the gap between offline experimentation... and online production](https://annas-archive.gl/md5/0801c480d77054d281bf58617eeac06d)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

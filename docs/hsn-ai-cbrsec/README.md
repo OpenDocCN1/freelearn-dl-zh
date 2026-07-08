@@ -1,6 +1,6 @@
 # 人工智能与网络安全实用指南
 
-> 原文：[`annas-archive.org/md5/64f3bda8588b7d31830ae45037a1465b`](https://annas-archive.org/md5/64f3bda8588b7d31830ae45037a1465b)
+> 原文：[Hands-On Artificial Intelligence for Cybersecurity : Implement Smart AI Systems for Preventing Cyber Attacks and Detecting Threats and Network Anomalies](https://annas-archive.gl/md5/64f3bda8588b7d31830ae45037a1465b)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

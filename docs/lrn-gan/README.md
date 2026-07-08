@@ -1,6 +1,6 @@
 # 生成对抗网络学习指南
 
-> 原文：[`annas-archive.org/md5/0e2dfbc468b1899221a88758597af0ce`](https://annas-archive.org/md5/0e2dfbc468b1899221a88758597af0ce)
+> 原文：[Learning generative adversarial networks : next-generation deep learning simplified](https://annas-archive.gl/md5/0e2dfbc468b1899221a88758597af0ce)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

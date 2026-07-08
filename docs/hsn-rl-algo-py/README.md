@@ -1,6 +1,6 @@
 # Python 强化学习算法实用指南
 
-> 原文：[`annas-archive.org/md5/e3819a6747796b03b9288831f4e2b00c`](https://annas-archive.org/md5/e3819a6747796b03b9288831f4e2b00c)
+> 原文：[Hands-on reinforcement learning algorithms with Python : learn, understand, and develop smart algorithms for addressing AI challenges](https://annas-archive.gl/md5/e3819a6747796b03b9288831f4e2b00c)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

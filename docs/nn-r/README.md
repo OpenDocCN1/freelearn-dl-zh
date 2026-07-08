@@ -1,6 +1,6 @@
 # R 神经网络
 
-> 原文：[`annas-archive.org/md5/cee4ba49129fb804cd87ad198b9c8127`](https://annas-archive.org/md5/cee4ba49129fb804cd87ad198b9c8127)
+> 原文：[Neural Networks with R : Smart Models Using CNN, RNN, Deep Learning, and Artificial Intelligence Principles](https://annas-archive.gl/md5/cee4ba49129fb804cd87ad198b9c8127)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

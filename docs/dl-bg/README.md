@@ -1,6 +1,6 @@
 # 深度学习初学者指南
 
-> 原文：[`annas-archive.org/md5/421a22d06a9cca471494e5d218a49c68`](https://annas-archive.org/md5/421a22d06a9cca471494e5d218a49c68)
+> 原文：[Deep Learning for Beginners : A Beginner's Guide to Getting up and Running with Deep Learning From Scratch Using Python](https://annas-archive.gl/md5/421a22d06a9cca471494e5d218a49c68)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

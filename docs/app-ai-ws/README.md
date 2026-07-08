@@ -1,6 +1,6 @@
 # 应用人工智能研讨会
 
-> 原文：[`annas-archive.org/md5/0323474b1674bee4360c291447287161`](https://annas-archive.org/md5/0323474b1674bee4360c291447287161)
+> 原文：[The Applied Artificial Intelligence Workshop : Start Working with AI Today, to Build Games, Design Decision Trees, and Train Your Own Machine Learning Models](https://annas-archive.gl/md5/0323474b1674bee4360c291447287161)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

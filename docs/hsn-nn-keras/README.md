@@ -1,6 +1,6 @@
 # Keras 神经网络实用指南
 
-> 原文：[`annas-archive.org/md5/d340e8e4b7f611ff61fca2a8b0b525a6`](https://annas-archive.org/md5/d340e8e4b7f611ff61fca2a8b0b525a6)
+> 原文：[Hands-On Neural Networks with Keras : Design and Create Neural Networks Using Deep Learning and Artificial Intelligence Principles](https://annas-archive.gl/md5/d340e8e4b7f611ff61fca2a8b0b525a6)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

@@ -1,6 +1,6 @@
 # TensorFlow2 强化学习秘籍
 
-> 原文：[`annas-archive.org/md5/ae4f6c3ed954fce75003dcfcae0c4977`](https://annas-archive.org/md5/ae4f6c3ed954fce75003dcfcae0c4977)
+> 原文：[TENSORFLOW 2 REINFORCEMENT LEARNING COOKBOOK : over 50 recipes to help you build, train, and deploy.. learning agents for real-world applications](https://annas-archive.gl/md5/ae4f6c3ed954fce75003dcfcae0c4977)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

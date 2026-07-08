@@ -1,6 +1,6 @@
 # 解锁 AutoGPT 的威力
 
-> 原文：[`annas-archive.org/md5/d7da7db896a92e9c2a02b08d5d4468a9`](https://annas-archive.org/md5/d7da7db896a92e9c2a02b08d5d4468a9)
+> 原文：[Unlocking the Power of Auto-GPT and Its Plugins : Implement, Customize, and Optimize Auto-GPT for Building Robust AI Applications](https://annas-archive.gl/md5/d7da7db896a92e9c2a02b08d5d4468a9)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

@@ -1,6 +1,6 @@
 # Transformers 自然语言处理
 
-> 原文：[`zh.annas-archive.org/md5/a1e65552fc41f3b5a667f63d9bed854c`](https://zh.annas-archive.org/md5/a1e65552fc41f3b5a667f63d9bed854c)
+> 原文：[Transformers for Natural Language Processing and Computer Vision, 3rd Edition](https://zh.annas-archive.gl/md5/a1e65552fc41f3b5a667f63d9bed854c)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

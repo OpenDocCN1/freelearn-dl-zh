@@ -1,6 +1,6 @@
 # Python 深度学习
 
-> 原文：[`zh.annas-archive.org/md5/98cfb0b9095f1cf64732abfaa40d7b3a`](https://zh.annas-archive.org/md5/98cfb0b9095f1cf64732abfaa40d7b3a)
+> 原文：[Python Deep Learning: Next generation techniques to revolutionize computer vision, AI, speech and data analysis](https://zh.annas-archive.gl/md5/98cfb0b9095f1cf64732abfaa40d7b3a)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

@@ -1,6 +1,6 @@
 # 人工智能搜索实用指南
 
-> 原文：[`annas-archive.org/md5/eedb2e7332615aca26871aa14bb4e602`](https://annas-archive.org/md5/eedb2e7332615aca26871aa14bb4e602)
+> 原文：[Hands-On Artificial Intelligence for Search : Building Intelligent Applications and Perform Enterprise Searches](https://annas-archive.gl/md5/eedb2e7332615aca26871aa14bb4e602)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

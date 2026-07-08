@@ -1,6 +1,6 @@
 # R 深度学习实用指南
 
-> 原文：[`annas-archive.org/md5/fcbb901b0d8ff6ccac76991f12c1823a`](https://annas-archive.org/md5/fcbb901b0d8ff6ccac76991f12c1823a)
+> 原文：[Hands-On Deep Learning with R](https://annas-archive.gl/md5/fcbb901b0d8ff6ccac76991f12c1823a)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

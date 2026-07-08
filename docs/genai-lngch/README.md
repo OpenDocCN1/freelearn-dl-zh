@@ -1,6 +1,6 @@
 # 生成式 AI 与 LangCHain
 
-> 原文：[`zh.annas-archive.org/md5/2e3ab9ce96c35c507253e57a41b1a6f1`](https://zh.annas-archive.org/md5/2e3ab9ce96c35c507253e57a41b1a6f1)
+> 原文：[Generative AI with LangChain: Build large language model (LLM) apps with Python, ChatGPT and other models (Early Release)](https://zh.annas-archive.gl/md5/2e3ab9ce96c35c507253e57a41b1a6f1)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 

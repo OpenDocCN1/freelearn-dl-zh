@@ -1,6 +1,6 @@
 # Python 自然语言处理
 
-> 原文：[`annas-archive.org/md5/34b9a9247886758452c7c8642a43ec61`](https://annas-archive.org/md5/34b9a9247886758452c7c8642a43ec61)
+> 原文：[Python Natural Language Processing](https://annas-archive.gl/md5/34b9a9247886758452c7c8642a43ec61)
 > 
 > 译者：[飞龙](https://github.com/wizardforcel)
 > 
