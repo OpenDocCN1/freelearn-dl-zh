@@ -1,0 +1,24 @@
+name: Practical Generative AI with ChatGPT - 2nd Edition (Early Access)
+name_cn: ChatGPT 生成式 AI 实用指南 - 第2版（早期预览）
+slug: practical-generative-ai-with-chatgpt---2nd-edition-early-acc
+toc:
+- - '#'
+  - 4 在 ChatGPT 中避免隐藏偏见风险并考虑伦理考量
+- - '#'
+  - 6 新产品开发与市场进入策略
+- - '#'
+  - 8 如果奇数 data.append(el)
+- - '##'
+  - 理解 ML 模型可解释性
+- - '##'
+  - Load the MNIST dataset
+- - '#'
+  - 第 7 章 用 ChatGPT 重塑研究
+- - '#'
+  - 10 探索 GPTs
+- - '#'
+  - 11 代码助手
+- - '#'
+  - 12 CNN 深度如何影响图像分类？ResNet 的残差连接又是何帮助？
+- - '###'
+  - 修复说明：
