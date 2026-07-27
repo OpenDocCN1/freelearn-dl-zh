@@ -1,0 +1,3428 @@
+groups:
+- md: '
+
+    # MIDJOURNEY
+
+
+    Leverage The Future Of Creativity
+
+
+    Adrian Twarog
+
+
+    # 01
+
+    Anatomy of a prompt
+
+
+    A Prompt is a brief textual expression that triggers the Midjourney Bot to create
+    an **image**.
+
+    The Midjourney Bot deconstructs the words and phrases in the prompt, breaking
+    them into smaller units known as **tokens**. These tokens are then matched against
+    its training data, enabling the bot to generate an image.
+
+    Skillfully composing a prompt can result in the production of distinctive and
+    captivating images.
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Basic Prompts
+
+
+    A basic prompt can be as simple as a single word, phrase or emoji.
+
+
+    ```
+
+    prompt The prompt to imagine /imagine prompt description of what to imagine Text
+    Prompt
+
+    ```
+
+
+    > TIP For the most effective results, use brief and straightforward sentences
+    when describing what you want the Midjourney Bot to create. This way, the bot
+    can better understand your vision and produce the desired image more accurately.
+
+
+    > **Don''t** Show me a picture of lots of blooming California poppies, make them
+    bright, vibrant orange, and draw them in an illustrated style with colored pencils.
+
+
+    > **Do** Bright orange California poppies drawn with colored pencils.
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Advanced Prompts
+
+
+    Advanced prompts can include one or more imageURLs, multiple text phrases, parameters
+
+
+    ```
+
+    prompt The prompt to imagine
+
+    /imagine prompt http://imageURL1.png http://imageURL1.jpg description of what
+    to imagine --parameter 1 --parameter 2
+
+    Image Prompts Text Prompt Parameters
+
+    ```
+
+
+    # Image Prompts
+
+
+    Can be added to a prompt in order to influence the style and content of the finished
+    result. They always go at the front of a prompt.
+
+
+    # Text Prompt
+
+
+    Is the text description of what image you want to generate. Well-expressed prompts
+    help generate stunning pictures.
+
+
+    # Parameters
+
+
+    Change how an image generates. They go at the end of the prompt.
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Prompting Notes
+
+
+    ## Prompt Length
+
+
+    Using very short prompts will heavily rely on Midjourney''s default style. However,
+    overly long prompts do not always yield better results. The key is to concentrate
+    on the main concepts you want to convey effectively.
+
+
+    > Don''t Mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_4_0.png)
+
+
+    Prompts can be very simple. Single words will produce an image, you can even use
+    just an emoji!
+
+
+    Mysterious venetian carnival mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_5_0.png)
+
+
+    Focus on the main concepts about what do you want to create.
+
+
+    # Grammar
+
+
+    The Midjourney Bot doesn''t understand grammar like humans do. The words you choose
+    are very important too. Remove words when possible, as it gives more influence
+    to the words you choose. Use punctuation to help organize your thoughts if you
+    want, but the bot will not reliably interpret them. Also, the Midjourney Bot doesn''t
+    consider capitalization.
+
+
+    ```
+
+    Don''t
+
+    nPlease draw a very big octopus, with an angry face. Also, I want it to be purple.
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_6_0.png)
+
+
+    Too many words that don''t really add to the final result.
+
+
+    Gigantic furious purple octopus.
+
+
+    Better word selection, each one has an impact on the final result.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_7_0.png)
+
+
+    # Focus on what you want
+
+
+    Don''t type what you don''t want. If you want to exclude something from the final
+    image, try advanced prompting using the --no parameter.
+
+
+    ```
+
+    Don''t
+
+    Burger with no cheese
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_0.png)
+
+
+    If you type burger with "no cheese", you will probably get an image with cheese.
+
+
+    ```
+
+    Do
+
+    Complete burger --no cheese
+
+    ```
+
+
+    Try using advanced prompting parameters if you want specific things not to be
+    included in the image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_1.png)
+
+
+    # Think about what details matter
+
+
+    Be clear if you want specific details. Being vague is a great option to get variety,
+    it all depends on what are you looking for.
+
+
+    > Don''t
+
+    Low-poly house
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_0.png)
+
+
+    Don''t be too vague if you''re looking for specific details
+
+
+    > Do
+
+    Low-poly cozy wood cabin smoking chimney autumn afternoon
+
+
+    Think about subject, environment, mood, color, etc. Try to be clear about details
+    that are important to you.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_1.png)
+
+
+    # Use collective nouns
+
+
+    Plural words leave a lot to chance. Try specific numbers
+
+    and collective nouns if you want more detailed results.
+
+
+    > Don''t
+
+    Black puppies playing with ball
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_0.png)
+
+
+    > Do
+
+    Black puppies playing with ball
+
+
+    > Do
+
+    Black puppies playing with ball
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_1.png)
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Creating your first prompt
+
+
+    The Midjourney Bot doesn''t understand grammar like humans do. The words you choose
+    are very important too. Remove words when possible, as it gives more influence
+    to the words you choose. Use punctuation to help organize your thoughts if you
+    want, but the bot will not reliably interpret them. Also, the Midjourney Bot doesn''t
+    consider capitalization.
+
+
+    ```
+
+    Don''t
+
+    nPlease draw a very big octopus, with an angry face. Also, I want it to be purple.
+
+    ```
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Creating your first prompt
+
+
+    ![](img/de65630bac5611066a30f72c56787545_12_0.png)
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Upscale or Create Variations
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_0.png)
+
+
+    ## 01 Anatomy of a prompt
+
+
+    ## Upscale or Create Variations
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_1.png)
+
+    '
+  mdcn: '
+
+
+    # MIDJOURNEY
+
+
+    利用创造力的未来
+
+
+    Adrian Twarog
+
+
+    # 01
+
+    提示词的构造
+
+
+    提示词（Prompt）是一个简短的文本表达式，用于触发 Midjourney 机器人创建**图像**。
+
+    Midjourney 机器人会解构提示词中的单词和短语，将其拆分为被称为**标记（tokens）**的更单元。这些标记随后会与其训练数据进行匹配，使机器人能够生成图像。
+
+    巧妙地组合提示词可以产生独特且引人胜目的图像。
+
+
+    ## 01 提示词的构造
+
+
+    ## 基础提示词
+
+
+    基础提示词可以简单为一个单词、短语或表情符号。
+
+
+    ```
+
+    prompt The prompt to imagine /imagine prompt description of what to imagine Text
+    Prompt
+
+    ```
+
+
+    > 提示：为了获得最佳效果，在描述你想让 Midjourney 机器人创建的内容时，请使用简洁直接的句子。这样，机器人可以更好地理解你的视觉愿景，并更准确地生成所需的图像。
+
+
+    > **不要** 给我看一张有很多盛开的加州罂粟花的照片，让它们呈现明亮、鲜艳的橙色，并用彩色铅笔以插画风格画出来。
+
+
+    > **要** 用彩色铅笔画的亮橙色加州罂粟花。
+
+
+    ## 01 提示词的构造
+
+
+    ## 高级提示词
+
+
+    高级提示词可以包含一个或多个图像 URL、多个文本短语、参数
+
+
+    ```
+
+    prompt The prompt to imagine
+
+    /imagine prompt http://imageURL1.png http://imageURL1.jpg description of what
+    to imagine --parameter 1 --parameter 2
+
+    Image Prompts Text Prompt Parameters
+
+    ```
+
+
+    # 图像提示词
+
+
+    可以添加到提示词中以影响最终结果的风格和内容。它们始终位于提示词的前。
+
+
+    # 文本提示词
+
+
+    是对你想要生成的图像的文本描述。表达良好的提示词有助于生成惊艳的图片。
+
+
+    # 参数
+
+
+    改变图像生成的方式。它们位于提示词的末尾。
+
+
+    ## 01 提示词的构造
+
+
+    ## 提示词注意事项
+
+
+    ## 提示词长度
+
+
+    使用非常短的提示词将严重依赖 Midjourney 的默认样式。然而，过长的提示词并不总是能带来更好的结果。关键在于集中你想有效传达的核心概念上。
+
+
+    > 不要遮盖。
+
+
+    ![](img/de65630bac5611066a30f72c56787545_4_0.png)
+
+
+    提示词可以非常简单。单个单词就会生成图像，你甚至可以只用表情符号！
+
+
+    神秘的威尼斯狂欢面具。
+
+
+    ![](img/de65630bac5611066a30f72c56787545_5_0.png)
+
+
+    专注于你想创建的内容的核心概念。
+
+
+    # 语法
+
+
+    Midjourney 机器人并不像人类那样理解语法。你选择的单词也非常重要。尽可能删除单词，因为这会赋予你选择的单词更大的影响力。如果你愿意，可以使用标点符号来帮助组织思路，但机器人不会可靠地解释它们。此外，Midjourney
+    机器人不考虑大小写。
+
+
+    ```
+
+    不要
+
+    请画一只非常大的章鱼，带着愤怒的脸。另外，我想要紫色的。
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_6_0.png)
+
+
+    了太多对最终结果没有实际帮助的单词。
+
+
+    巨大的愤怒的紫色章鱼。
+
+
+    更好的词汇选择，每一个词对最终结果都有影响。
+
+
+    ![](img/de65630bac5611066a30f72c56787545_7_0.png)
+
+
+    # 关注你想要的
+
+
+    不要输入你不想要的内容。如果你想从最终图像中排除某些内容，请尝试使用 `--no` 参数的高级提示词。
+
+
+    ```
+
+    不要
+
+    没有奶士的汉堡
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_0.png)
+
+
+    如果你输入带 "no cheese" 的汉堡，你可能会得到一张带奶士的图像。
+
+
+    ```
+
+    要
+
+    完整的汉堡 --no cheese
+
+    ```
+
+
+    如果你希望特定内容不包含在图像中，请尝试使用高级提示词参数。
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_1.png)
+
+
+    # 思考哪些细节很重要
+
+
+    如果你想要特定的细节，请描述清晰。模糊是获得多样性的极佳选择，这完全取决于你在寻找什么。
+
+
+    > 不要
+
+    低多形房屋
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_0.png)
+
+
+    如果你在寻找特定的细节，不要太模糊
+
+
+    > 要
+
+    低多形温馨的木屋，烟囱冒着烟，秋日午后
+
+
+    思考主体、环境、氛围、颜色等。尝试对你来说重要的细节做到清晰明确。
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_1.png)
+
+
+    # 使用集合名词
+
+
+    复数形式形式会让很多因素取决于运气。如果你想要更详细的结果，请尝试具体的数字和集合名词。
+
+
+    > 不要
+
+    玩球的黑色小狗
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_0.png)
+
+
+    > 要
+
+    玩球的黑色小狗
+
+
+    > 要
+
+    玩球的黑色小狗
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_1.png)
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # MIDJOURNEY
+
+
+    Leverage The Future Of Creativity
+
+
+    Adrian Twarog'
+  - '[PAGE 1]
+
+
+    # 01
+
+    Anatomy of a
+
+    prompt
+
+
+    A Prompt is a brief textual expression that triggers the Midjourney Bot to create
+    an **image**.
+
+    The Midjourney Bot deconstructs the words and phrases in the prompt, breaking
+    them into smaller units known as **tokens**. These tokens are then matched against
+    its training data, enabling the bot to generate an image.
+
+    Skillfully composing a prompt can result in the production of distinctive and
+    captivating images.'
+  - '[PAGE 2]
+
+
+    # # 01 Anatomy of a prompt
+
+
+    # ## Basic Prompts
+
+
+    A basic prompt can be as simple as a single word, phrase or emoji.
+
+
+    ```
+
+    prompt The prompt to imagine /imagine prompt description of what to imagine Text
+    Prompt
+
+    ```
+
+
+    > TIP For the most effective results, use brief and straightforward sentences
+    when describing what you want the Midjourney Bot to create. This way, the bot
+    can better understand your vision and produce the desired image more accurately.
+
+
+    > **Don''t** Show me a picture of lots of blooming California poppies, make them
+    bright, vibrant orange, and draw them in an illustrated style with colored pencils.
+
+
+    > **Do** Bright orange California poppies drawn with colored pencils.'
+  - '[PAGE 3]
+
+
+    # 01 Anatomy of a prompt
+
+
+    # Advanced Prompts
+
+
+    Advanced prompts can include one or more imageURLs, multiple text phrases, parameters
+
+
+    ```
+
+    prompt The prompt to imagine
+
+    /imagine prompt http://imageURL1.png http://imageURL1.jpg description of what
+    to imagine --parameter 1 --parameter 2
+
+    Image Prompts Text Prompt Parameters
+
+    ```
+
+
+    # Image Prompts
+
+
+    Can be added to a prompt in order to influence the style and content of the finished
+    result. They always go at the front of a prompt.
+
+
+    # Text Prompt
+
+
+    Is the text description of what image you want to generate. Well-expressed prompts
+    help generate stunning pictures.
+
+
+    # Parameters
+
+
+    Change how an image generates. They go at the end of the prompt.'
+  - '[PAGE 4]
+
+
+    # 01 Anatomy of a prompt
+
+
+    # # Prompting Notes
+
+
+    # ## Prompt Length
+
+
+    Using very short prompts will heavily rely on Midjourney''s default style. However,
+    overly long prompts do not always yield better results. The key is to concentrate
+    on the main concepts you want to convey effectively.
+
+
+    > Don''t Mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_4_0.png)
+
+
+    Prompts can be very simple. Single words will produce an image, you can even use
+    just an emoji!'
+  - '[PAGE 5]
+
+
+    Mysterious venetian carnival mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_5_0.png)
+
+
+    Focus on the main concepts about what do you want to create.'
+  - '[PAGE 6]
+
+
+    # Grammar
+
+
+    The Midjourney Bot doesn''t understand grammar like humans do. The words you choose
+    are very important too. Remove words when possible, as it gives more influence
+    to the words you choose. Use punctuation to help organize your thoughts if you
+    want, but the bot will not reliably interpret them. Also, the Midjourney Bot doesn''t
+    consider capitalization.
+
+
+    ```
+
+    Don''t
+
+    nPlease draw a very big octopus, with an angry face. Also, I want it to be purple.
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_6_0.png)
+
+
+    Too many words that don''t really add to the final result.'
+  - '[PAGE 7]
+
+
+    Gigantic furious purple octopus.
+
+
+    Better word selection, each one has an impact on the final result.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_7_0.png)'
+  - '[PAGE 8]
+
+
+    # Focus on what you want
+
+
+    Don''t type what you don''t want. If you want to exclude something from the final
+    image, try advanced prompting using the --no parameter.
+
+
+    ```
+
+    Don''t
+
+    Burger with no cheese
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_0.png)
+
+
+    If you type burger with "no cheese", you will probably get an image with cheese.
+
+
+    ```
+
+    Do
+
+    Complete burger --no cheese
+
+    ```
+
+
+    Try using advanced prompting parameters if you want specific things not to be
+    included in the image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_1.png)'
+  - '[PAGE 9]
+
+
+    # Think about what details matter
+
+
+    Be clear if you want specific details. Being vague is a great option to get variety,
+    it all depends on what are you looking for.
+
+
+    > Don''t
+
+    Low-poly house
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_0.png)
+
+
+    Don''t be too vague if you''re looking for specific details
+
+
+    > Do
+
+    Low-poly cozy wood cabin smoking chimney autumn afternoon
+
+
+    Think about subject, environment, mood, color, etc. Try to be clear about details
+    that are important to you.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_1.png)'
+  - '[PAGE 10]
+
+
+    # Use collective nouns
+
+
+    Plural words leave a lot to chance. Try specific numbers
+
+    and collective nouns if you want more detailed results.
+
+
+    > Don''t
+
+    Black puppies playing with ball.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_0.png)
+
+
+    Plural words can mean
+
+    a lot of scenarios!
+
+
+    > Do
+
+    Two black puppies playing with a ball.
+
+
+    Try to be more specific and
+
+    you''ll get better results.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_1.png)'
+  - '[PAGE 11]
+
+
+    # 02
+
+
+    # Creating your first
+
+    Midjourney prompt
+
+
+    You can interact with the Midjourney Bot on Discord using a **Command**. Commands
+    are used to create images, change default settings, monitor user info, and perform
+    other helpful tasks.
+
+    The **/imagine** command generates a unique image from a short text description
+    (known as a Prompt).
+
+
+    +   1. Type /imagine prompt: or select the /imagine command from the slash commands
+    pop-up.
+
+    2. Type a description of the image you want to create in the prompt field.
+
+    3. Send your message.'
+  - '[PAGE 12]
+
+
+    # 02 Creating your first Midjourney prompt
+
+
+    ```
+
+    /imagine prompt vibrant California poppies
+
+    ```
+
+
+    > TIP 💡
+
+    The Midjourney Bot works best with simple, short sentences that describe what
+    you want to see. Avoid long lists of requests. Instead of: Show me a picture of
+    lots of blooming California poppies, make them bright, vibrant orange, and draw
+    them in an illustrated style with colored pencils Try: Bright orange California
+    poppies drawn with colored pencils
+
+
+    Once you hit enter you should see a job in progress, that’s Midjourney creating
+    up to four images for you to choose from.
+
+
+    You’ll see something like this with a progress bar:
+
+
+    ![](img/de65630bac5611066a30f72c56787545_12_0.png)
+
+
+    Once the job finishes you can either upscale one of the images, or create more
+    variations of one of the images.'
+  - '[PAGE 13]
+
+
+    # 02 Creating your first Midjourney prompt
+
+
+    # Upscale Or Create Variations
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_0.png)
+
+
+    +   - U1 U2 U3 U4
+
+
+    U buttons upscale an image generating a larger version of the selected image and
+    adding more details.
+
+
+    +   - V1 V2 V3 V4
+
+
+    V buttons create slight variations of the selected grid image. Creating a variation
+    generates a new image grid similar to the chosen image''s overall style and composition.
+
+
+    The (re-roll) reruns a Job. In this case, it would rerun the original prompt producing
+    a new grid of images.
+
+
+    # Create Variations or Favorite Your Image
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_1.png)
+
+
+    Creates a variation of the upscaled image and generates a new grid of four options.
+
+
+    Open the image in your gallery on Midjourney.com
+
+
+    Tag your best images to easily find them on the Midjourney website.'
+  - "[PAGE 14]\n\n# Save Your Image\n\nClick on the image to open it to full size,\
+    \ and then right-click and choose Save image. On mobile, long-tap the image and\
+    \ then tap the download icon in the top right corner.\n\nAll images are immediately\
+    \ available to view on midjourney.com/app\n\n> TIP \nIf the public channels move\
+    \ too fast for you, you can use the / imagine command while direct messaging with\
+    \ the Midjourney Bot."
+  - '[PAGE 15]
+
+
+    # 03
+
+
+    # Understanding
+
+    Midjourney commands
+
+
+    In our last chapter, we learned how commands serve as a means to interact with
+    Midjourney. Now, in this chapter, we''ll dive deep into the diverse range of commands
+    at our disposal.
+
+
+    Understanding each command is crucial to unlocking Midjourney''s full potential.
+    So, let us get started!'
+  - '[PAGE 16]
+
+
+    # 03 Understanding Midjourney commands
+
+
+    ```
+
+    /ask
+
+    ```
+
+
+    Get an answer to a question. Useful for asking questions related to midjourney,
+    e.g. “how can I blend 2 images?”
+
+
+    ![](img/de65630bac5611066a30f72c56787545_16_0.png)
+
+
+    ```
+
+    /describe
+
+    ```
+
+
+    The /describe command allows you to upload an image and generate four possible
+    prompts based on that image. Use the /describe command to explore new vocabulary
+    and aesthetic movements.'
+- md: "\n## Understanding Midjourney commands\n\n### Prompt\n\nThe image to describe\n\
+    \n![](img/de65630bac5611066a30f72c56787545_17_0.png)\n\nnintendo.png\n\n```\n\
+    /describe image nintendo.png\n```\n\n![](img/de65630bac5611066a30f72c56787545_17_1.png)\n\
+    \nOnce we send the /describe prompt to Midjourney, we'll get back 4 different\
+    \ prompts to try and create similar variations for the image we uploaded.\n\n\
+    ## 03 Understanding Midjourney commands\n\nIf we are not happy with the prompts,\
+    \ we can ask Midjourney to re-generate all the prompts with the button. \n\nBy\
+    \ clicking one of the options, we can have Midjourney run that specific prompt.\
+    \ We can also ask Midjourney to run all the prompts with the Imagine all button.\n\
+    \nWe can also edit one of the prompts ourselves and use the /image command. This\
+    \ is the result of just doing that:\n\n> Prompt\n> video game console with two\
+    \ nintendo controllers, in the style of retro gaming, with vibrant accent colors.\n\
+    \n![](img/de65630bac5611066a30f72c56787545_18_0.png)\n\n## 03 Understanding Midjourney\
+    \ commands\n\n```\n/blend\n```\n\nAfter typing the /blend command, you’ll be asked\
+    \ to upload 2–5 images, Midjourney then looks at the concepts and aesthetics of\
+    \ each image and merges them into a novel new image.\n\n![](img/de65630bac5611066a30f72c56787545_19_0.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_19_1.png)\n![](img/de65630bac5611066a30f72c56787545_19_2.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_19_3.png)\n\n## 03 Understanding Midjourney\
+    \ commands\n\n> TIP \n> For the best results, upload images that are the same\
+    \ aspect ratio as your desired result\n\nBlended images have a default 1:1 aspect\
+    \ ratio, but you can use the optional dimensions field to select between a square\
+    \ aspect ratio (1:1), portrait aspect ratio (2:3), or landscape aspect ratio (3:2).\n\
+    \n![](img/de65630bac5611066a30f72c56787545_20_0.png)\n\n- - blend 1_yVOQPTOL-W3PAv84gYiwg.webp\
+    \ image2 1_VvLDTPa2DFBP62HeddBb45g.webp\n  dim Landscape +3 more\n\n![](img/de65630bac5611066a30f72c56787545_20_1.png)\n\
+    \n## 04\n\n### Familiarizing with Parameter List\n\nParameters are choices integrated\
+    \ into a prompt that alter the way an image is formed. Parameters possess the\
+    \ capacity to alter the aspect ratios of an image, shift between various versions\
+    \ of the Midjourney Model, modify the selection of the Upscaler, and lots more.\n\
+    \n![](img/de65630bac5611066a30f72c56787545_21_0.png)\n\n## 04 Familiarizing with\
+    \ Parameter List\n\nParameters must be added at the end of a prompt, and you can\
+    \ add multiple parameters to each prompt.\n\n```\n/imagine a vibrant california\
+    \ poppy --aspect 2:3 --stop 95 --no sky\n```\n\n> TIP \n> You may notice that\
+    \ double hyphens (--) are automatically changed to an em-dash (--) if you're using\
+    \ an Apple device. Don't worry, Midjourney accepts both!\n\n## 04 Familiarizing\
+    \ with Parameter List\n\n### Basic Parameters\n\n### Aspect Ratios\n\n--aspect\
+    \ or --ar change the aspect ratio of a generated image.\n\n![](img/de65630bac5611066a30f72c56787545_23_0.png)\n\
+    \n> Prompt\n> whimsical tarot card aesthetic the moon --ar 4:7\n\n> Prompt\n>\
+    \ whimsical tarot card aesthetic the moon\n> --aspect 139:100\n\n![](img/de65630bac5611066a30f72c56787545_23_1.png)\n\
+    \n## Familiarizing with Parameter List\n\n### Chaos\n\n--chaos <number 0-100>\
+    \ changes how varied the initial image grids are. Higher values produce more unexpected\
+    \ images.\n\n![](img/de65630bac5611066a30f72c56787545_24_0.png)\n![](img/de65630bac5611066a30f72c56787545_24_1.png)\n\
+    \n```\nwarm apple pie --chaos 100\n```\n\n## Familiarizing with Parameter List\n\
+    \n### Image Weight\n\n--iw <0-2> sets the importance of the image vs the text.\
+    \ Higher values mean the image will have more impact on the finished result.\n\
+    \n> Prompt\n> house --iw 2\n\n![](img/de65630bac5611066a30f72c56787545_25_0.png)\n\
+    \n> Prompt\n> mushrooms --iw 0.5\n\n![](img/de65630bac5611066a30f72c56787545_25_1.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_25_2.png)\n\n## 04 Familiarizing with\
+    \ Parameter List\n\n### No\n\n--no can be used to remove unwanted elements from\
+    \ the prompt.\n\n![](img/de65630bac5611066a30f72c56787545_26_0.png)\n\n```\nfruit\
+    \ painting --no grapes\n```\n\n![](img/de65630bac5611066a30f72c56787545_26_1.png)\n\
+    \n## 04 Familiarizing with Parameter List\n\n### Quality\n\n--q <0.25-1> changes\
+    \ how much time you want to spend generating the image. Default is 1.\n\n> Prompt\n\
+    > fruit painting --q 0.5\n\n![](img/de65630bac5611066a30f72c56787545_27_0.png)\n\
+    \n### Repeat\n\n--repeat runs a job multiple times.\n\n> Prompt\n> llama --repeat\
+    \ 2\n\n![](img/de65630bac5611066a30f72c56787545_28_0.png)\n\n## Familiarizing\
+    \ with Parameter List\n\n### Seed\n\nMidjourney uses a seed number to create the\
+    \ initial image grids. This is a random number by default, but you can specify\
+    \ it with the --seed parameter. Similar seed numbers will result in similar images.\n\
+    \n> Prompt\n> classic tea --seed 42\n\n![](img/de65630bac5611066a30f72c56787545_29_0.png)\n\
+    \n## 04 Familiarizing with Parameter List\n\n### Stop\n\n--stop stops the generation\
+    \ at an earlier percentage. You can have less detailed results.\n\n> Prompt\n\
+    > underwater --stop 30\n\n![](img/de65630bac5611066a30f72c56787545_30_0.png)\n\
+    \n## 04 Familiarizing with Parameter List\n\n### Style\n\n--style customizes the\
+    \ aesthetic of some Midjourney Models. It changes the artistic influence applied\
+    \ during generation.\n\n> Prompt\n> dark academia --style raw\n\n![](img/de65630bac5611066a30f72c56787545_31_0.png)\n\
+    \n## 04 Familiarizing with Parameter List\n\n### Version\n\n--version uses a different\
+    \ version of the Midjourney algorithm.\n\n```\n--version <1, 2, 3, 4, 5, 5.1 or\
+    \ 5.2> or --v <1, 2, 3, 4, 5, 5.1 or 5.2>\n```\n\n## 05\n\n### Advanced prompts\n\
+    \nAdvanced prompts can include one or more imageURLs, multiple text phrases, parameters.\n\
+    \n![](img/de65630bac5611066a30f72c56787545_38_0.png)\n"
+  mdcn: "\n\n## 理解 Midjourney 命令\n\n### 提示词 (Prompt)\n\n待描述的图像\n\n![](img/de65630bac5611066a30f72c56787545_17_0.png)\n\
+    \nnintendo.png\n\n```\n/describe image nintendo.png\n```\n\n![](img/de65630bac5611066a30f72c56787545_17_1.png)\n\
+    \n一旦我们向 Midjourney 发送 /describe 指令，我们将获得 4 个不同的提示词，尝试为上传的图像创建相似的变体。\n\n## 03 理解\
+    \ Midjourney 命令\n\n如果我们对提示词不满意，可以通过按钮让 Midjourney 重新生成所有提示。\n\n点击其中一个选项，可以让 Midjourney\
+    \ 运行特定的提示词。我们也可以通过 Imagine all 按钮让 Midjourney 运行所有提示。\n\n我们还可以手动编辑其中一个提示词并使用 /image\
+    \ 命令。这就是仅仅操作的结果：\n\n> 提示词\n> 带有两个任天堂控制器的游戏主机，复古游戏风格，带有鲜艳的强调色。\n\n![](img/de65630bac5611066a30f72c56787545_18_0.png)\n\
+    \n## 03 理解 Midjourney 命令\n\n```\n/blend\n```\n\n在输入 /blend 命令后，会被要求上传 2–5 张图像，Midjourney\
+    \ 然后会查看每张图像的概念和审美，并将它们合并成一张全新的图像。\n\n![](img/de65630bac5611066a30f72c56787545_19_0.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_19_1.png)\n![](img/de65630bac5611066a30f72c56787545_19_2.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_19_3.png)\n\n## 03 理解 Midjourney 命令\n\
+    \n> 提示\n> 为了获得最佳效果，请上传与预期结果相同宽高比例的图像\n\n合并后的图像默认具有 1:1 的宽高比，但您可以使用可选的尺寸字段选择正方形比例\
+    \ (1:1)、纵屏比例 (2:3) 或横屏比例 (3:2)。\n\n![](img/de65630bac5611066a30f72c56787545_20_0.png)\n\
+    \n- - blend 1_yVOQPTOL-W3PAv84gYiwg.webp image2 1_VvLDTPa2DFBP62HeddBb45g.webp\n\
+    \  dim Landscape +3 more\n\n![](img/de65630bac5611066a30f72c56787545_20_1.png)\n\
+    \n## 04\n\n### 熟悉参数列表\n\n参数是集成在提示词中的选项，会改变图像形成的方式。参数具有改变图像宽高比、在不同的 Midjourney\
+    \ 模型版本之间切换、修改放大器选择以及许多其他功能。\n\n![](img/de65630bac5611066a30f72c56787545_21_0.png)\n\
+    \n## 04 熟悉参数列表\n\n参数必须添加在提示词的末尾，您可以为每个提示词添加多个参数。\n\n```\n/imagine a vibrant california\
+    \ poppy --aspect 2:3 --stop 95 --no sky\n```\n\n> 提示\n> 您可能会注意到，如果您使用的是 Apple\
+    \ 设备，双连字符 (--) 会自动转换为破折号 (--)。别担心，Midjourney 两种都接受！\n\n## 04 熟悉参数列表\n\n### 基础参数\n\
+    \n### 宽高比\n\n--aspect 或 --ar 改变生成图像的宽高比。\n\n![](img/de65630bac5611066a30f72c56787545_23_0.png)\n\
+    \n> 提示词\n> 奇幻的塔罗牌审美，月亮 --ar 4:7\n\n> 提示词\n> 奇幻的塔罗牌审美，月亮\n> --aspect 139:100\n\n\
+    ![](img/de65630bac5611066a30f72c56787545_23_1.png)\n\n## 熟悉参数列表\n\n### 混沌值 (Chaos)\n\
+    \n--chaos <number 0-100> 改变初始图像网格的变异程度。数值越高，产生的意外图像越多。\n\n![](img/de65630bac5611066a30f72c56787545_24_0.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_24_1.png)\n\n```\nwarm apple pie --chaos\
+    \ 100\n```\n\n## 熟悉参数列表\n\n### 图像权重 (Image Weight)\n\n--iw <0-2> 设置图像相对于文本的重要性。数值越高，图像对最终结果的影响越大。\n\
+    \n> 提示词\n> house --iw 2\n\n![](img/de65630bac5611066a30f72c56787545_25_0.png)\n\
+    \n> 提示词\n> mushrooms --iw 0.5\n\n![](img/de65630bac5611066a30f72c56787545_25_1.png)\n\
+    ![](img/de65630bac5611066a30f72c56787545_25_2.png)\n\n## 04 熟悉参数列表\n\n### 排除 (No)\n\
+    \n--no 可用于移除提示词中不的元素。\n\n![](img/de65630bac5611066a30f72c56787545_26_0.png)\n\n\
+    ```\nfruit painting --no grapes\n```\n\n![](img/de65630bac5611066a30f72c56787545_26_1.png)\n\
+    \n## 04 熟悉参数列表\n\n### 质量 (Quality)\n\n--q <0.25-1> 改变您在生成图像上花费的时间。默认为 1。\n\n>\
+    \ 提示词\n> fruit painting --q 0.5\n\n![](img/de65630bac5611066a30f72c56787545_27_0.png)\n\
+    \n### 重复 (Repeat)\n\n--repeat 多次运行任务。\n\n> 提示词\n> llama --repeat 2\n\n![](img/de65630bac5611066a30f72c56787545_28_0.png)\n\
+    \n## 熟悉参数列表\n\n### 种子 (Seed)\n\nMidjourney 使用种子值值来创建初始图像网格。默认情况下这是一个随机数，但您可以使用\
+    \ --seed 参数指定它。相似的种子将产生相似的图像。\n\n> 提示词\n> classic tea --seed 42\n\n![](img/de65630bac5611066a30f72c56787545_29_0.png)\n\
+    \n## 04 熟悉参数列表\n\n### 停止 (Stop)\n\n--stop 在更早的百分比停止生成。您可以获得细节较少的结果。\n\n> 提示词\n\
+    > underwater --stop 30\n\n![](img/de65630bac5611066a30f72c56787545_30_0.png)\n\
+    \n## 04 熟悉参数列表\n\n### 风格 (Style)\n\n--style 自定义某些 Midjourney 模型的审美。它改变了生成期间期间的艺术影响。\n\
+    \n> 提示词\n> dark academia --style raw\n\n![](img/de65630bac5611066a30f72c56787545_31_0.png)\n\
+    \n## 04 熟悉参数列表\n\n### 版本 (Version)\n\n--version 使用不同版本的 Midjourney 算法。\n\n```\n\
+    --version <1, 2, 3, 4, 5, 5.1 or 5.2> 或 --v <1, 2, 3, 4, 5, 5.1 or 5.2>\n```\n\
+    \n## 05\n\n### 高级提示词\n\n高级提示词可以包含一个或多个图像 URL、多个文本短语、参数。\n\n![](img/de65630bac5611066a30f72c56787545_38_0.png)\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 17]
+
+
+    # Understanding Midjourney commands
+
+
+    # Prompt
+
+
+    The image to describe
+
+
+    ![](img/de65630bac5611066a30f72c56787545_17_0.png)
+
+
+    nintendo.png
+
+
+    ```
+
+    /describe image nintendo.png
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_17_1.png)
+
+
+    Once we send the /describe prompt to midjourney, we''ll get back 4 different prompts
+    to try and create similar variations for the image we uploaded.'
+  - '[PAGE 18]
+
+
+    # 03 Understanding Midjourney commands
+
+
+    If we are not happy with the prompts we can ask midjourney to re-generate all
+    the prompts with the button.
+
+
+    By clicking one of the options we can have midjourney run that specific prompt.
+    We can also ask midjourney to run all the prompts with the Imagine all button.
+
+
+    We can also edit one of the prompts ourselves and use the /image command. This
+    is the result of just doing that:
+
+
+    > Prompt
+
+    video game console with two nintendo controllers, in the style of retro gaming,
+    with vibrant accent colors.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_18_0.png)'
+  - '[PAGE 19]
+
+
+    # 03 Understanding Midjourney commands
+
+
+    ```
+
+    /blend
+
+    ```
+
+
+    After typing the /blend command you’ll be asked to upload 2–5 images, Midjourney
+    then looks at the concepts and aesthetics of each image and merges them into a
+    novel new image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_2.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_3.png)'
+  - "[PAGE 20]\n\n# 03 Understanding Midjourney commands\n\n> TIP \nFor the best results,\
+    \ upload images that are the same aspect ratio as your desired result\n\nBlended\
+    \ images have a default 1:1 aspect ratio, but you can use the optional dimensions\
+    \ field to select between a square aspect ratio (1:1), portrait aspect ration\
+    \ (2:3), or landscape aspect ratio (3:2).\n\n![](img/de65630bac5611066a30f72c56787545_20_0.png)\n\
+    \n+   - blend 1_yVOQPTOL-W3PAv84gYiwg.webp image2 1_VvLDTPa2DFBP62HeddBb45g.webp\n\
+    dim Landscape +3 more\n\n![](img/de65630bac5611066a30f72c56787545_20_1.png)"
+  - '[PAGE 21]
+
+
+    # # 04
+
+
+    # ## Familiarizing with Parameter List
+
+
+    Parameters are choices integrated into a prompt that alter the way an image is
+    formed. Parameters possess the capacity to alter the aspect ratios of an image,
+    shift between various versions of the Midjourney Model, modify the selection of
+    the Upscaler, and lots more.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_21_0.png)'
+  - '[PAGE 22]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    Parameters must be added at the end of a prompt, and you can add multiple parameters
+    to each prompt.
+
+
+    ```
+
+    /imagine a vibrant california poppy --aspect 2:3 --stop 95 --no sky
+
+    ```
+
+
+    > TIP You may notice that double hyphens (--) are automatically changed to an
+    em-dash (--) if you''re using an Apple device. Don''t worry, Midjourney accepts
+    both!'
+  - '[PAGE 23]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # # Basic Parameters
+
+
+    # ## Aspect Ratios
+
+
+    --aspect or --ar change the aspect ratio of a generated image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_23_0.png)
+
+
+    > Prompt
+
+    whimsical tarot card aesthetic the moon --ar 4:7
+
+
+    > Prompt
+
+    whimsical tarot card aesthetic the moon
+
+    --aspect 139:100
+
+
+    ![](img/de65630bac5611066a30f72c56787545_23_1.png)'
+  - '[PAGE 24]
+
+
+    # Familiarizing with Parameter List
+
+
+    # Chaos
+
+
+    --chaos <number 0-100> changes how varied the initial image grids are. Higher
+    values produce more unexpected images.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_24_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_24_1.png)
+
+
+    ```
+
+    warm apple pie --chaos 100
+
+    ```'
+  - '[PAGE 25]
+
+
+    # Familiarizing with Parameter List
+
+
+    # Image Weight
+
+
+    --iw <0-2> sets the importance of the image vs the text. Higher values mean the
+    image will have more impact on the finished job.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_0.png)
+
+
+    Prompt mushrooms.png house --iw .5
+
+
+    Prompt mushrooms.png house --iw 2
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_2.png)'
+  - '[PAGE 26]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # No
+
+
+    --no parameter can be used to remove unwanted elements from the prompt.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_26_0.png)
+
+
+    ```
+
+    Prompt
+
+    fruit painting
+
+    ```
+
+
+    ```
+
+    Prompt
+
+    fruit painting --no grapes
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_26_1.png)'
+  - '[PAGE 27]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Quality
+
+
+    --quality <.25, .5 or .1> or -q <.25, .5 or 1> changes how much time you want
+    to spend generating an image (default is 1). Higher values use more GPU minutes.
+
+
+    # Relax
+
+
+    Use --relax mode to modify your current setting and run a single job.
+
+
+    # Repeat
+
+
+    --repeat runs a job multiple times.
+
+
+    > > Prompt
+
+    nhappy llama in the desert --r 2
+
+
+    ![](img/de65630bac5611066a30f72c56787545_27_0.png)'
+  - '[PAGE 28]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Seed
+
+
+    The Midjourney Bot uses a seed number to create a starting point to generate the
+    initial image grids. This is a random number by default, but you can specify it
+    with the --seed parameter. Similar seed numbers with the same prompt will result
+    in similar images.
+
+
+    ```
+
+    Prompt
+
+    classic tea cups
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_28_0.png)'
+  - '[PAGE 29]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    Prompt
+
+    classic tea cups --seed 429496729
+
+
+    ![](img/de65630bac5611066a30f72c56787545_29_0.png)'
+  - '[PAGE 30]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Stop
+
+
+    --stop parameter stops the generation process at an earlier percentage. You can
+    have less detailed images as result.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_30_0.png)
+
+
+    colorful explosion underwater
+
+
+    colorful explosion underwater
+
+    --stop 30
+
+
+    ![](img/de65630bac5611066a30f72c56787545_30_1.png)'
+  - '[PAGE 31]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Style
+
+
+    --style parameter customizes the aesthetic of some Midjourney Model Versions.
+    You can use this parameter to generate more photo-realistic images, cinematic
+    scenes or cute characters.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_31_0.png)
+
+
+    > Prompt
+
+    library dark academia aesthetic
+
+
+    > Prompt
+
+    library dark academia aesthetic
+
+    --style raw
+
+
+    ![](img/de65630bac5611066a30f72c56787545_31_1.png)'
+  - '[PAGE 32]
+
+
+    # 04 Familiarizing with Parameter List Stylize
+
+
+    The Midjourney Bot has been trained to generate images with an emphasis on artistic
+    color palettes, composition, and visual forms. The degree of artistic influence
+    applied during generation can be controlled using the --stylize or --s parameter.
+
+
+    > TIP
+
+    Default value is 100, and it accepts integer values between 0 and 1000.
+
+
+    colorful herbology painting --stylize 0'
+  - '[PAGE 33]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    > Prompt
+
+    colorful herbology painting --stylize 1000
+
+
+    ![](img/de65630bac5611066a30f72c56787545_33_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_33_1.png)'
+  - '[PAGE 34]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Tile
+
+
+    --tile generates images that can be used as patterns.
+
+
+    ```
+
+    Prompt
+
+    vibrant color peacock --tile
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_34_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_34_1.png)'
+  - '[PAGE 35]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Turbo
+
+
+    --turbo mode uses a high-speed experimental GPU pool. Jobs run in Turbo mode generate
+    up to four times faster but consume twice as many subscription GPU minutes as
+    a typical Fast Mode Job.
+
+
+    # Weird
+
+
+    --weird or --weird This parameter adds eccentric and unconventional characteristics
+    to the generated images, leading to distinct and surprising results that may be
+    unexpected or uncommon.
+
+
+    > TIP Default value is 0, and it accepts values between 0 and 3000.
+
+
+    ```
+
+    bunny with mustache and monocle --nweird 3000
+
+    ```'
+  - '[PAGE 36]
+
+
+    # 04 Familiarizing with Parameter List
+
+
+    # Model Version Parameters
+
+
+    # Niji
+
+
+    --niji is an alternative model focused on anime-style images.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_36_0.png)
+
+
+    cute dog eating ice cream --niji
+
+
+    ![](img/de65630bac5611066a30f72c56787545_36_1.png)
+
+
+    80''s aesthetic bedroom --niji'
+  - '[PAGE 37]
+
+
+    # 04 Familiarizing with
+
+    Parameter List
+
+
+    # Version
+
+
+    ```
+
+    --version <1, 2, 3, 4, 5, 5.1 or 5.2> or --v <1, 2, 3, 4, 5, 5.1 or 5.2>
+
+    ```
+
+
+    user a different version of the Midjourney algorithm.'
+  - '[PAGE 38]
+
+
+    # 05
+
+
+    # Advanced prompts
+
+
+    Advanced prompts can include one or more imageURLs, multiple text phrases, parameters.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_38_0.png)'
+- md: "\n## 05 Advanced prompts\n\n### Image Prompts\n\nYou can use image prompts\
+    \ to determine a Job's composition. Image prompts can be used alone or combined\
+    \ with text prompts, you can also combine different images.\n\n> TIP\n> Images\
+    \ go at the front of a prompt, and you need two images or a combination of image\
+    \ and text in order to work.\n\n> TIP\n> The URL must be a direct link to an online\
+    \ image and it should end in .png, .gif, .webp, .jpg or jpeg.\nIf the image is\
+    \ in your phone, you can send it as a message to the Midjourney Bot to generate\
+    \ a link.\n\n## Upload An Image To Discord\n\n- 1. Paste the image link into the\
+    \ chat with Midjourney Bot and press enter to send it.\n- 2. To obtain your image\
+    \ link, follow these steps depending on which platform you're using:\n    - Desktop\
+    \ app: Right click on the image and select \"Copy Link\" (NOT \"Copy Message Link\"\
+    )\n    - Web app: Click to expand the image, then right-click and select \"Copy\
+    \ image address\"\n    - Mobile app: Tap and hold the image, and then select \"\
+    Copy Media Link\"\n    - If none of these methods work, you can expand the image\
+    \ and then select \"Open in Browser\". Finally, you can copy and paste image's\
+    \ URL.\n\n## Add An Image To The Prompt\n\n1. Type /imagine\n2. Drag the image\
+    \ file into the prompt box to add the URL, or paste the link within the prompt\
+    \ box.\n\n![](img/de65630bac5611066a30f72c56787545_41_0.png)\n\n> TIP Upload your\
+    \ image in your Direct Messages with the Midjourney Bot to prevent other servers\
+    \ users from seeing an image. Image prompts are visible on the Midjourney website\
+    \ if the user doesn't have Stealth Mode.\n\n## Examples\n\nImage + Image\n\n![](img/de65630bac5611066a30f72c56787545_42_0.png)\n\
+    \n+\n\n![](img/de65630bac5611066a30f72c56787545_42_1.png)\n\n> TIP\n> Use images\
+    \ with the same aspect ratio for best results.\n\n## Examples\n\nImage + Text\n\
+    \n![](img/de65630bac5611066a30f72c56787545_43_0.png)\n\n+ flower vase\n\n![](img/de65630bac5611066a30f72c56787545_43_1.png)\n\
+    \n> TIP Use Image Weight parameter to adjust the importance of image vs. text\n\
+    \n## Remix Mode\n\nYou can use Remix Mode to change prompts, parameters, model\
+    \ versions, or aspect ratios between variations. Remix will take the general composition\
+    \ of your starting image and use it as part of the new Job.\n\n> **TIP** Remix\
+    \ is an experimental feature, this means it can be changed or removed at any time.\n\
+    \n### Using Remix\n\nActivate Remix Mode with the `/prefer remix` command or by\
+    \ using the `/settings` command and toggling the Remix Mode button. Remix changes\
+    \ the behavior of the variation buttons (V1, V2, V3, V4) and allows you to edit\
+    \ your prompt during each variation.\n\nTo Remix an upscale, select Vary\n\n>\
+    \ TIP\n> When you're done with Remix, use the /settings or /prefer remix command\
+    \ to turn it off.\n\n![](img/de65630bac5611066a30f72c56787545_45_0.png)\n\nPrompt\n\
+    bunch of balloons\n\nModify or enter a new prompt\n\n![](img/de65630bac5611066a30f72c56787545_45_1.png)\n\
+    \n![](img/de65630bac5611066a30f72c56787545_45_2.png)\n\nResults\n\n## Multi Prompts\n\
+    \nMulti Prompts allow you to assign importance to different parts. To make this\
+    \ possible, you can use :: as a separator.\n\n### Multi-Prompt Basics\n\nWhen\
+    \ you use a double colon, the bot treats the parts separately. For instance, if\
+    \ you use the prompt \"apple::cake,\" the bot would consider the prompt accordingly.\n\
+    \n![](img/de65630bac5611066a30f72c56787545_46_0.png)\n\n## Weights\n\nMulti Prompts\
+    \ allow you to assign importance to different parts. To make this possible, you\
+    \ can use :: as a separator.\n\n### Multi-Prompt Basics\n\nWhen you use a double\
+    \ colon, the bot treats the parts separately. For instance, if you use the prompt\
+    \ \"apple::cake,\" the bot would consider the prompt accordingly.\n\n| Prompt\
+    \ |\n| :--- | :--- |\n| cup | 2 |\n| cake | |\n\n![](img/de65630bac5611066a30f72c56787545_48_0.png)\n\
+    \n## Pan Option\n\nThe Pan feature enables you to stretch the image in a specific\
+    \ direction while keeping the original content intact.\n\n### Panning An Image\n\
+    \nPan buttons appear after upscaling an image. During panning, the new section\
+    \ of the image is determined by the prompt and the nearest 512 pixels.\n\n![](img/de65630bac5611066a30f72c56787545_49_0.png)\n\
+    \nPrompt\npost apocalyptic city\n\nStarting image\n\n![](img/de65630bac5611066a30f72c56787545_50_0.png)\n\
+    \nPan ↔\n\nPan ↕\n\n![](img/de65630bac5611066a30f72c56787545_50_1.png)\n\n![](img/de65630bac5611066a30f72c56787545_50_2.png)\n\
+    \nPan ↘\n\n![](img/de65630bac5611066a30f72c56787545_51_0.png)\n\nPan ➡\n\n![](img/de65630bac5611066a30f72c56787545_51_1.png)\n\
+    \n> **TIP**\n> Once you've panned an image in a particular direction, you're restricted\
+    \ to panning it further only in that same direction (horizontal/vertical). You're\
+    \ free to perform this successive panning as many times as you want. However,\
+    \ if you do this multiple times and the image size becomes too large to share\
+    \ directly on Discord, a link to the image will be provided to you.\n\n## Pan\
+    \ With Remix Mode\n\nUsing Pan with Remix Mode allows you to change your prompt\
+    \ when panning.\n\n![](img/de65630bac5611066a30f72c56787545_52_0.png)\n\n| Prompt\
+    \ |\n| :--- | :--- |\n| countryside landscape | |\n\n```\nPan Right\nThis form\
+    \ will be submitted to Midjourney Bot. Do not share passwords or other sensitive\
+    \ information.\nPAN WITH NEW PROMPT *\ncountryside river\n3983\nCancel Submit\n\
+    ```\n\n![](img/de65630bac5611066a30f72c56787545_53_0.png)\n"
+  mdcn: "\n\n## 05 高级提示词\n\n### 提示提示词\n\n你可以使用图片提示词来决定内容的组成。图片提示词可以单独使用，也可以与文本提示词结合，你还可以组合不同的图片。\n\
+    \n> 提示\n> 图片位于提示词的开头，你需要两张图片或图片与文本的才能生效。\n\n> 提示\n> URL 必须是在线图片的直接链接，并且应该以 .png、.gif、.webp、jpg\
+    \ 或 jpeg 结尾。\n如果图片在手机中，你可以将其作为消息发送给 Midjourney Bot 以生成链接。\n\n## 将图片上传到 Discord\n\
+    \n- 1. 将图片链接粘贴到与 Midjourney Bot 的聊天框中并按回车发送。\n- 2. 要获取图片链接，请根据你使用的平台遵循以下步骤：\n\
+    \    - 桌面端应用：右键点击图片并选择“复制链接”（不是“复制消息链接”）\n    - Web 端应用：点击展开图片，然后右键点击并选择“复制图像地址”\n\
+    \    - 移动端应用：长按图片，然后选择“复制媒体链接”\n    - 如果这些方法均无效，你可以展开图片并选择“在浏览器中打开”。最后，你可以复制并粘贴图片的\
+    \ URL。\n\n##向提示词添加图片\n\n1. 输入 /imagine\n2. 将图片文件拖入提示词框以添加 URL，或在提示词框内粘贴链接。\n\n\
+    ![](img/de65630bac5611066a30f72c56787545_41_0.png)\n\n> 提示 在 Midjourney Bot 的私信中上传图片，可以防止其他服务器的用户看到图片。如果用户没有开启隐身模式（Stealth\
+    \ Mode），图片提示词在 Midjourney 网站上是的。\n\n## 示例\n\n图片 + 图片\n\n![](img/de65630bac5611066a30f72c56787545_42_0.png)\n\
+    \n+\n\n![](img/de65630bac5611066a30f72c56787545_42_1.png)\n\n> 提示\n> 使用相同宽高比例的图片可获得最佳效果。\n\
+    \n## 示例\n\n图片 + 文本\n\n![](img/de65630bac5611066a30f72c56787545_43_0.png)\n\n+\
+    \ 花瓶\n\n![](img/de65630bac56110666a30f72c56787545_43_1.png)\n\n> 提示 使用权重参数（Image\
+    \ Weight）来调整图片与文本的重要性\n\n## Remix 模式\n\n你可以使用 Remix 模式在变体之间更改提示词、参数、模型版本或宽高比例。Remix\
+    \ 将取你初始图片的整体构图，并将其作为新任务的一部分。\n\n> **提示** Remix 是一个实验性功能，这意味着它可以随时更改或移除。\n\n###\
+    \ 使用 Remix\n\n通过 `/prefer remix` 命令或使用 `/settings` 命令并切换 Remix 按钮来激活 Remix 模式。Remix\
+    \ 会改变变体按钮（V1, V2, V3, V4）的行为，并允许你在每次变体时编辑提示词。\n\n要对放大（upscale）图片进行 Remix，请选择 Vary\n\
+    \n> 提示\n> 完成 Remix 后，使用 /settings 或 /prefer remix 命令将其关闭。\n\n![](img/de65630bac5611066a30f72c56787545_45_0.png)\n\
+    \n提示词\n一大束气球\n\n修改或输入新提示词\n\n![](img/de65630bac5611066a30f72c56787545_45_1.png)\n\
+    \n![](img/de65630bac5611066a30f72c56787545_45_2.png)\n\n结果\n\n## 多提示词 (Multi Prompts)\n\
+    \n多提示词允许你为不同的部分分配重要性。要实现这一点，你可以使用 `::` 作为分隔符。\n\n### 多提示词基础\n\n当你使用双冒时，机器人会分别处理这些部分。例如，如果你使用提示词\
+    \ \"apple::cake\"，机器人将相应地考虑该提示词。\n\n![](img/de65630bac5611066a30f72c56787545_46_0.png)\n\
+    \n## 权重 (Weights)\n\n多提示词允许你为不同的部分分配重要性。要实现这一点，你可以使用 `::` 作为分隔符。\n\n### 多提示词基础\n\
+    \n当你使用双冒号时，机器人会分别处理这些部分。例如，如果你使用提示词 \"apple::cake\"，机器人将相应地考虑该提示词。\n\n| 提示词 |\
+    \ |\n| :--- | :--- |\n| cup | 2 |\n| cake | |\n\n![](img/de65630bac5611066a30f72c56787545_48_0.png)\n\
+    \n## Pan（平移）选项\n\nPan 功能允许你在特定方向上拉伸图片，同时保持原始内容完整。\n\n### 平移图片\n\nPan 按钮在放大图片后出现。在平移过程中，图片的新部分由提示词和最近的\
+    \ 512 像素决定。\n\n![](img/de65630bac5611066a30f72c56787545_49_0.png)\n\n提示词\n末日后的城市\n\
+    \n起始图片\n\n![](img/de65630bac5611066a30f72c56787545_50_0.png)\n\n平移 ↔\n\n平移 ↕\n\
+    \n![](img/de65630bac5611066a30f72c56787545_50_1.png)\n\n![](img/de65630bac5611066a30f72c56787545_50_2.png)\n\
+    \n平移 ↘\n\n![](img/de65630bac5611066a30f72c56787545_51_0.png)\n\n平移 ➡\n\n![](img/de65630bac5611066a30f72c56787545_51_1.png)\n\
+    \n> **提示**\n> 一旦你在特定方向上平移了图片，你就被限制只能在相同方向（水平/垂直）上继续平移。你可以自由执行多次连续平移。然而，如果你执行多次且图片尺寸大到无法直接在\
+    \ Discord 上分享，将为你提供图片的链接。\n\n## Remix 模式下的 Pan\n\n在 Remix 模式下 Pan 允许你在平移时更改提示词。\n\
+    \n![](img/de65630bac5611066a30f72c56787545_52_0.png)\n\n| 提示词 | |\n| :--- | :---\
+    \ |\n| 乡村风景 | |\n\n```\n向右移动\n此表单将提交给 Midjourney Bot。不要共享密码或其他敏感信息。\n带新提示词的平移\
+    \ *\n乡村河流\n3983\n取消 提交\n```\n\n![](img/de65630bac5611066a30f72c56787545_53_0.png)\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 39]
+
+
+    # 05 Advanced prompts
+
+
+    # # Image Prompts
+
+
+    You can use image prompts to determine a Job''s composition. Image prompts can
+    be use alone or combined with text prompts, you can also combine different images.
+
+
+    > TIP
+
+    Images go at the front of a prompt, and you need two images or a combination of
+    image and text in order to work.
+
+
+    > TIP
+
+    The URL must be a direct link to an online image and it should en in .png,.gif,.webp,.jpg
+    or jpeg.
+
+    If the image is in your phone, you can send it as a message to the Midjourney
+    Bot to generate a link.'
+  - "[PAGE 40]\n\n# 05 Advanced prompts\n\n# Upload An Image To Discord\n\n+   1.\
+    \ Paste the image link into the chat with Midjourney Bot and press enter to send\
+    \ it.\n\n+   2. To obtain your image link, follow these steps depending on which\
+    \ platform you're using:\n    - Desktop app: Right click on the image and select\
+    \ \"Copy Link\" (NOT \"Copy Message Link\")\n    - Web app: Click to expand the\
+    \ image, then right-click and select \"Copy image address\"\\n    - Mobile app:\
+    \ Tap and hold the image, and then select \"Copy Media Link\"\\n    - If none\
+    \ of these methods work, you can expand the image and then select \"Open in Browser\"\
+    . Finally, you can copy and paste image's URL."
+  - '[PAGE 41]
+
+
+    # 05 Advanced prompts
+
+
+    # Add An Image To The Prompt
+
+
+    1. Type /imagine
+
+
+    2. Drag the image file into the prompt box to add the URL, or paste the link within
+    the prompt box.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_41_0.png)
+
+
+    > TIP Upload your image in your Direct Messages with the Midjourney Bot to prevent
+    other servers users from seeing an image. Image prompts are visible on the Midjourney
+    website if the user doesn''t has Stealth Mode.'
+  - "[PAGE 42]\n\n# 05 Advanced prompts\n\n# Examples\n\nImage + Image\n\n![](img/de65630bac5611066a30f72c56787545_42_0.png)\n\
+    \n+\n\n![](img/de65630bac5611066a30f72c56787545_42_1.png)\n\n> TIP \nUse images\
+    \ with the same aspect ratio for best results."
+  - '[PAGE 43]
+
+
+    # 05 Advanced prompts
+
+
+    # Examples
+
+
+    Image + Text
+
+
+    ![](img/de65630bac5611066a30f72c56787545_43_0.png)
+
+
+    + flower vase
+
+
+    ![](img/de65630bac5611066a30f72c56787545_43_1.png)
+
+
+    > TIP Use Image Weight parameter to adjust the importance of image vs. text'
+  - '[PAGE 44]
+
+
+    # 05 Advanced prompts
+
+
+    # Remix Mode
+
+
+    You can use Remix Mode to change prompts, parameters, model versions, or aspect
+    ratios between variations. Remix will take the general composition of your starting
+    image and use it as part of the new Job.
+
+
+    > **TIP** Remix is an experimental feature, this means it can be changed or removed
+    at any time.
+
+
+    # Using Remix
+
+
+    Activate Remix Mode with the `/prefer remix` command or by using the `/settings`
+    command and toggling the Remix Mode button. Remix changes the behavior of the
+    variation buttons (V1, V2, V3, V4) and allows you to edit your prompt during each
+    variation.
+
+
+    To Remix an upscale, select Vary'
+  - '[PAGE 45]
+
+
+    # 05 Advanced prompts
+
+
+    > TIP
+
+    When you''re done with Remix, use the /settings or /prefer remix command to turn
+    it off.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_0.png)
+
+
+    Prompt
+
+    bunch of balloons
+
+
+    Modify or enter a new prompt
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_2.png)
+
+
+    Results'
+  - '[PAGE 46]
+
+
+    # 05 Advanced prompts
+
+
+    # Multi Prompts
+
+
+    Separating prompts allows you to assign relative importance to different parts
+    of the prompt. To make this possible you can use :: as separator.
+
+
+    # Multi-Prompt Basics
+
+
+    When you use the double colon, the bot treats the parts of the prompt separately
+    to create distinct concepts. For instance, with the prompt "cheese::cake," the
+    bot would generate images of a cake made of cheese, combining the two separate
+    concepts.
+
+
+    > > Prompt
+
+    > cheese:: cake drawing
+
+
+    ![](img/de65630bac5611066a30f72c56787545_46_0.png)'
+  - '[PAGE 47]
+
+
+    # 05 Advanced prompts
+
+
+    On the other hand, without the double colon, the bot would consider the entire
+    prompt as one concept and generate images accordingly. This feature allows for
+    more creative and diverse image generation based on the input you provide.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_47_0.png)
+
+
+    > TIP \nThere is no space between the double colons ::
+
+
+    Advanced prompts 4'
+  - '[PAGE 48]
+
+
+    # 05 Advanced prompts
+
+
+    # Prompt Weights
+
+
+    If you use a double colon :: to split a prompt into sections, you have the option
+    to attach a number right after the double colon. This number indicates how significant
+    that specific section of the prompt is in terms of importance.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_48_0.png)
+
+
+    | Prompt |
+
+    | cup:: 2 cake |
+
+
+    ![](img/de65630bac5611066a30f72c56787545_48_1.png)
+
+
+    | Prompt |
+
+    | cup:: cake |'
+  - '[PAGE 49]
+
+
+    # 05 Advanced prompts
+
+
+    # Pan Option
+
+
+    The Pan feature enables you to stretch the image canvas in a specific direction,
+    all while keeping the original image content intact. The added space in the canvas
+    is filled using instructions from both the prompt and the initial image.
+
+
+    # Panning An Image
+
+
+    Pan buttons will appear after upscaling an image. During panning, the new section
+    of the image is determined using the prompt and the pixels closest to the image''s
+    side, limited to the nearest 512 pixels.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_49_0.png)
+
+
+    Prompt
+
+    post apocalyptic city'
+  - '[PAGE 50]
+
+
+    # 05 Advanced prompts
+
+
+    Starting image
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_0.png)
+
+
+    Pan ↔
+
+
+    Pan ↕
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_2.png)'
+  - '[PAGE 51]
+
+
+    # 05 Advanced prompts
+
+
+    Pan ↘
+
+
+    ![](img/de65630bac5611066a30f72c56787545_51_0.png)
+
+
+    Pan ➡
+
+
+    ![](img/de65630bac5611066a30f72c56787545_51_1.png)
+
+
+    Advanced prompts 4'
+  - '[PAGE 52]
+
+
+    # 05 Advanced prompts
+
+
+    > **TIP**
+
+    Once you''ve panned an image in a particular direction, you''re restricted to
+    panning it further only in that same direction (horizontal/vertical). You''re
+    free to perform this successive panning as many times as you want. However, if
+    you do this multiple times and the image size becomes too large to share directly
+    on Discord, a link to the image will be provided to you instead.
+
+
+    # # Pan With Remix Mode
+
+
+    Using Pan with Remix Mode allows you to change your prompt when panning.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_52_0.png)
+
+
+    | Prompt |
+
+    | countryside landscape |'
+  - '[PAGE 53]
+
+
+    # 05 Advanced
+
+    ppts
+
+
+    ```
+
+    Pan Right
+
+    This form will be submitted to Midjourney Bot. Do not share passwords or other
+    sensitive information.
+
+    PAN WITH NEW PROMPT *
+
+    countryside river
+
+    3983
+
+    Cancel Submit
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_53_0.png)
+
+
+    Advanced prompts 4'
+pages:
+- img_proc: true
+  md: '# MIDJOURNEY
+
+
+    Leverage The Future Of Creativity
+
+
+    Adrian Twarog'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# 01
+
+    Anatomy of a
+
+    prompt
+
+
+    A Prompt is a brief textual expression that triggers the Midjourney Bot to create
+    an **image**.
+
+    The Midjourney Bot deconstructs the words and phrases in the prompt, breaking
+    them into smaller units known as **tokens**. These tokens are then matched against
+    its training data, enabling the bot to generate an image.
+
+    Skillfully composing a prompt can result in the production of distinctive and
+    captivating images.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # 01 Anatomy of a prompt
+
+
+    # ## Basic Prompts
+
+
+    A basic prompt can be as simple as a single word, phrase or emoji.
+
+
+    ```
+
+    prompt The prompt to imagine /imagine prompt description of what to imagine Text
+    Prompt
+
+    ```
+
+
+    > TIP For the most effective results, use brief and straightforward sentences
+    when describing what you want the Midjourney Bot to create. This way, the bot
+    can better understand your vision and produce the desired image more accurately.
+
+
+    > **Don''t** Show me a picture of lots of blooming California poppies, make them
+    bright, vibrant orange, and draw them in an illustrated style with colored pencils.
+
+
+    > **Do** Bright orange California poppies drawn with colored pencils.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 01 Anatomy of a prompt
+
+
+    # Advanced Prompts
+
+
+    Advanced prompts can include one or more imageURLs, multiple text phrases, parameters
+
+
+    ```
+
+    prompt The prompt to imagine
+
+    /imagine prompt http://imageURL1.png http://imageURL1.jpg description of what
+    to imagine --parameter 1 --parameter 2
+
+    Image Prompts Text Prompt Parameters
+
+    ```
+
+
+    # Image Prompts
+
+
+    Can be added to a prompt in order to influence the style and content of the finished
+    result. They always go at the front of a prompt.
+
+
+    # Text Prompt
+
+
+    Is the text description of what image you want to generate. Well-expressed prompts
+    help generate stunning pictures.
+
+
+    # Parameters
+
+
+    Change how an image generates. They go at the end of the prompt.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 01 Anatomy of a prompt
+
+
+    # # Prompting Notes
+
+
+    # ## Prompt Length
+
+
+    Using very short prompts will heavily rely on Midjourney''s default style. However,
+    overly long prompts do not always yield better results. The key is to concentrate
+    on the main concepts you want to convey effectively.
+
+
+    > Don''t Mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_4_0.png)
+
+
+    Prompts can be very simple. Single words will produce an image, you can even use
+    just an emoji!'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Mysterious venetian carnival mask.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_5_0.png)
+
+
+    Focus on the main concepts about what do you want to create.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Grammar
+
+
+    The Midjourney Bot doesn''t understand grammar like humans do. The words you choose
+    are very important too. Remove words when possible, as it gives more influence
+    to the words you choose. Use punctuation to help organize your thoughts if you
+    want, but the bot will not reliably interpret them. Also, the Midjourney Bot doesn''t
+    consider capitalization.
+
+
+    ```
+
+    Don''t
+
+    nPlease draw a very big octopus, with an angry face. Also, I want it to be purple.
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_6_0.png)
+
+
+    Too many words that don''t really add to the final result.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Gigantic furious purple octopus.
+
+
+    Better word selection, each one has an impact on the final result.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Focus on what you want
+
+
+    Don''t type what you don''t want. If you want to exclude something from the final
+    image, try advanced prompting using the --no parameter.
+
+
+    ```
+
+    Don''t
+
+    Burger with no cheese
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_0.png)
+
+
+    If you type burger with "no cheese", you will probably get an image with cheese.
+
+
+    ```
+
+    Do
+
+    Complete burger --no cheese
+
+    ```
+
+
+    Try using advanced prompting parameters if you want specific things not to be
+    included in the image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_8_1.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Think about what details matter
+
+
+    Be clear if you want specific details. Being vague is a great option to get variety,
+    it all depends on what are you looking for.
+
+
+    > Don''t
+
+    Low-poly house
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_0.png)
+
+
+    Don''t be too vague if you''re looking for specific details
+
+
+    > Do
+
+    Low-poly cozy wood cabin smoking chimney autumn afternoon
+
+
+    Think about subject, environment, mood, color, etc. Try to be clear about details
+    that are important to you.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_9_1.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Use collective nouns
+
+
+    Plural words leave a lot to chance. Try specific numbers
+
+    and collective nouns if you want more detailed results.
+
+
+    > Don''t
+
+    Black puppies playing with ball.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_0.png)
+
+
+    Plural words can mean
+
+    a lot of scenarios!
+
+
+    > Do
+
+    Two black puppies playing with a ball.
+
+
+    Try to be more specific and
+
+    you''ll get better results.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_10_1.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 02
+
+
+    # Creating your first
+
+    Midjourney prompt
+
+
+    You can interact with the Midjourney Bot on Discord using a **Command**. Commands
+    are used to create images, change default settings, monitor user info, and perform
+    other helpful tasks.
+
+    The **/imagine** command generates a unique image from a short text description
+    (known as a Prompt).
+
+
+    +   1. Type /imagine prompt: or select the /imagine command from the slash commands
+    pop-up.
+
+    2. Type a description of the image you want to create in the prompt field.
+
+    3. Send your message.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 02 Creating your first Midjourney prompt
+
+
+    ```
+
+    /imagine prompt vibrant California poppies
+
+    ```
+
+
+    > TIP 💡
+
+    The Midjourney Bot works best with simple, short sentences that describe what
+    you want to see. Avoid long lists of requests. Instead of: Show me a picture of
+    lots of blooming California poppies, make them bright, vibrant orange, and draw
+    them in an illustrated style with colored pencils Try: Bright orange California
+    poppies drawn with colored pencils
+
+
+    Once you hit enter you should see a job in progress, that’s Midjourney creating
+    up to four images for you to choose from.
+
+
+    You’ll see something like this with a progress bar:
+
+
+    ![](img/de65630bac5611066a30f72c56787545_12_0.png)
+
+
+    Once the job finishes you can either upscale one of the images, or create more
+    variations of one of the images.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 02 Creating your first Midjourney prompt
+
+
+    # Upscale Or Create Variations
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_0.png)
+
+
+    +   - U1 U2 U3 U4
+
+
+    U buttons upscale an image generating a larger version of the selected image and
+    adding more details.
+
+
+    +   - V1 V2 V3 V4
+
+
+    V buttons create slight variations of the selected grid image. Creating a variation
+    generates a new image grid similar to the chosen image''s overall style and composition.
+
+
+    The (re-roll) reruns a Job. In this case, it would rerun the original prompt producing
+    a new grid of images.
+
+
+    # Create Variations or Favorite Your Image
+
+
+    ![](img/de65630bac5611066a30f72c56787545_13_1.png)
+
+
+    Creates a variation of the upscaled image and generates a new grid of four options.
+
+
+    Open the image in your gallery on Midjourney.com
+
+
+    Tag your best images to easily find them on the Midjourney website.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Save Your Image\n\nClick on the image to open it to full size, and then right-click\
+    \ and choose Save image. On mobile, long-tap the image and then tap the download\
+    \ icon in the top right corner.\n\nAll images are immediately available to view\
+    \ on midjourney.com/app\n\n> TIP \nIf the public channels move too fast for you,\
+    \ you can use the / imagine command while direct messaging with the Midjourney\
+    \ Bot."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 03
+
+
+    # Understanding
+
+    Midjourney commands
+
+
+    In our last chapter, we learned how commands serve as a means to interact with
+    Midjourney. Now, in this chapter, we''ll dive deep into the diverse range of commands
+    at our disposal.
+
+
+    Understanding each command is crucial to unlocking Midjourney''s full potential.
+    So, let us get started!'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 03 Understanding Midjourney commands
+
+
+    ```
+
+    /ask
+
+    ```
+
+
+    Get an answer to a question. Useful for asking questions related to midjourney,
+    e.g. “how can I blend 2 images?”
+
+
+    ![](img/de65630bac5611066a30f72c56787545_16_0.png)
+
+
+    ```
+
+    /describe
+
+    ```
+
+
+    The /describe command allows you to upload an image and generate four possible
+    prompts based on that image. Use the /describe command to explore new vocabulary
+    and aesthetic movements.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Understanding Midjourney commands
+
+
+    # Prompt
+
+
+    The image to describe
+
+
+    ![](img/de65630bac5611066a30f72c56787545_17_0.png)
+
+
+    nintendo.png
+
+
+    ```
+
+    /describe image nintendo.png
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_17_1.png)
+
+
+    Once we send the /describe prompt to midjourney, we''ll get back 4 different prompts
+    to try and create similar variations for the image we uploaded.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 03 Understanding Midjourney commands
+
+
+    If we are not happy with the prompts we can ask midjourney to re-generate all
+    the prompts with the button.
+
+
+    By clicking one of the options we can have midjourney run that specific prompt.
+    We can also ask midjourney to run all the prompts with the Imagine all button.
+
+
+    We can also edit one of the prompts ourselves and use the /image command. This
+    is the result of just doing that:
+
+
+    > Prompt
+
+    video game console with two nintendo controllers, in the style of retro gaming,
+    with vibrant accent colors.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 03 Understanding Midjourney commands
+
+
+    ```
+
+    /blend
+
+    ```
+
+
+    After typing the /blend command you’ll be asked to upload 2–5 images, Midjourney
+    then looks at the concepts and aesthetics of each image and merges them into a
+    novel new image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_2.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_19_3.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# 03 Understanding Midjourney commands\n\n> TIP \nFor the best results, upload\
+    \ images that are the same aspect ratio as your desired result\n\nBlended images\
+    \ have a default 1:1 aspect ratio, but you can use the optional dimensions field\
+    \ to select between a square aspect ratio (1:1), portrait aspect ration (2:3),\
+    \ or landscape aspect ratio (3:2).\n\n![](img/de65630bac5611066a30f72c56787545_20_0.png)\n\
+    \n+   - blend 1_yVOQPTOL-W3PAv84gYiwg.webp image2 1_VvLDTPa2DFBP62HeddBb45g.webp\n\
+    dim Landscape +3 more\n\n![](img/de65630bac5611066a30f72c56787545_20_1.png)"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# # 04
+
+
+    # ## Familiarizing with Parameter List
+
+
+    Parameters are choices integrated into a prompt that alter the way an image is
+    formed. Parameters possess the capacity to alter the aspect ratios of an image,
+    shift between various versions of the Midjourney Model, modify the selection of
+    the Upscaler, and lots more.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    Parameters must be added at the end of a prompt, and you can add multiple parameters
+    to each prompt.
+
+
+    ```
+
+    /imagine a vibrant california poppy --aspect 2:3 --stop 95 --no sky
+
+    ```
+
+
+    > TIP You may notice that double hyphens (--) are automatically changed to an
+    em-dash (--) if you''re using an Apple device. Don''t worry, Midjourney accepts
+    both!'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # # Basic Parameters
+
+
+    # ## Aspect Ratios
+
+
+    --aspect or --ar change the aspect ratio of a generated image.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_23_0.png)
+
+
+    > Prompt
+
+    whimsical tarot card aesthetic the moon --ar 4:7
+
+
+    > Prompt
+
+    whimsical tarot card aesthetic the moon
+
+    --aspect 139:100
+
+
+    ![](img/de65630bac5611066a30f72c56787545_23_1.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Familiarizing with Parameter List
+
+
+    # Chaos
+
+
+    --chaos <number 0-100> changes how varied the initial image grids are. Higher
+    values produce more unexpected images.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_24_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_24_1.png)
+
+
+    ```
+
+    warm apple pie --chaos 100
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Familiarizing with Parameter List
+
+
+    # Image Weight
+
+
+    --iw <0-2> sets the importance of the image vs the text. Higher values mean the
+    image will have more impact on the finished job.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_0.png)
+
+
+    Prompt mushrooms.png house --iw .5
+
+
+    Prompt mushrooms.png house --iw 2
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_25_2.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # No
+
+
+    --no parameter can be used to remove unwanted elements from the prompt.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_26_0.png)
+
+
+    ```
+
+    Prompt
+
+    fruit painting
+
+    ```
+
+
+    ```
+
+    Prompt
+
+    fruit painting --no grapes
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_26_1.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Quality
+
+
+    --quality <.25, .5 or .1> or -q <.25, .5 or 1> changes how much time you want
+    to spend generating an image (default is 1). Higher values use more GPU minutes.
+
+
+    # Relax
+
+
+    Use --relax mode to modify your current setting and run a single job.
+
+
+    # Repeat
+
+
+    --repeat runs a job multiple times.
+
+
+    > > Prompt
+
+    nhappy llama in the desert --r 2
+
+
+    ![](img/de65630bac5611066a30f72c56787545_27_0.png)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Seed
+
+
+    The Midjourney Bot uses a seed number to create a starting point to generate the
+    initial image grids. This is a random number by default, but you can specify it
+    with the --seed parameter. Similar seed numbers with the same prompt will result
+    in similar images.
+
+
+    ```
+
+    Prompt
+
+    classic tea cups
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    Prompt
+
+    classic tea cups --seed 429496729
+
+
+    ![](img/de65630bac5611066a30f72c56787545_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Stop
+
+
+    --stop parameter stops the generation process at an earlier percentage. You can
+    have less detailed images as result.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_30_0.png)
+
+
+    colorful explosion underwater
+
+
+    colorful explosion underwater
+
+    --stop 30
+
+
+    ![](img/de65630bac5611066a30f72c56787545_30_1.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Style
+
+
+    --style parameter customizes the aesthetic of some Midjourney Model Versions.
+    You can use this parameter to generate more photo-realistic images, cinematic
+    scenes or cute characters.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_31_0.png)
+
+
+    > Prompt
+
+    library dark academia aesthetic
+
+
+    > Prompt
+
+    library dark academia aesthetic
+
+    --style raw
+
+
+    ![](img/de65630bac5611066a30f72c56787545_31_1.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List Stylize
+
+
+    The Midjourney Bot has been trained to generate images with an emphasis on artistic
+    color palettes, composition, and visual forms. The degree of artistic influence
+    applied during generation can be controlled using the --stylize or --s parameter.
+
+
+    > TIP
+
+    Default value is 100, and it accepts integer values between 0 and 1000.
+
+
+    colorful herbology painting --stylize 0'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    > Prompt
+
+    colorful herbology painting --stylize 1000
+
+
+    ![](img/de65630bac5611066a30f72c56787545_33_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_33_1.png)'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Tile
+
+
+    --tile generates images that can be used as patterns.
+
+
+    ```
+
+    Prompt
+
+    vibrant color peacock --tile
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_34_0.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_34_1.png)'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Turbo
+
+
+    --turbo mode uses a high-speed experimental GPU pool. Jobs run in Turbo mode generate
+    up to four times faster but consume twice as many subscription GPU minutes as
+    a typical Fast Mode Job.
+
+
+    # Weird
+
+
+    --weird or --weird This parameter adds eccentric and unconventional characteristics
+    to the generated images, leading to distinct and surprising results that may be
+    unexpected or uncommon.
+
+
+    > TIP Default value is 0, and it accepts values between 0 and 3000.
+
+
+    ```
+
+    bunny with mustache and monocle --nweird 3000
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# 04 Familiarizing with Parameter List
+
+
+    # Model Version Parameters
+
+
+    # Niji
+
+
+    --niji is an alternative model focused on anime-style images.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_36_0.png)
+
+
+    cute dog eating ice cream --niji
+
+
+    ![](img/de65630bac5611066a30f72c56787545_36_1.png)
+
+
+    80''s aesthetic bedroom --niji'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 04 Familiarizing with
+
+    Parameter List
+
+
+    # Version
+
+
+    ```
+
+    --version <1, 2, 3, 4, 5, 5.1 or 5.2> or --v <1, 2, 3, 4, 5, 5.1 or 5.2>
+
+    ```
+
+
+    user a different version of the Midjourney algorithm.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# 05
+
+
+    # Advanced prompts
+
+
+    Advanced prompts can include one or more imageURLs, multiple text phrases, parameters.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # # Image Prompts
+
+
+    You can use image prompts to determine a Job''s composition. Image prompts can
+    be use alone or combined with text prompts, you can also combine different images.
+
+
+    > TIP
+
+    Images go at the front of a prompt, and you need two images or a combination of
+    image and text in order to work.
+
+
+    > TIP
+
+    The URL must be a direct link to an online image and it should en in .png,.gif,.webp,.jpg
+    or jpeg.
+
+    If the image is in your phone, you can send it as a message to the Midjourney
+    Bot to generate a link.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# 05 Advanced prompts\n\n# Upload An Image To Discord\n\n+   1. Paste the image\
+    \ link into the chat with Midjourney Bot and press enter to send it.\n\n+   2.\
+    \ To obtain your image link, follow these steps depending on which platform you're\
+    \ using:\n    - Desktop app: Right click on the image and select \"Copy Link\"\
+    \ (NOT \"Copy Message Link\")\n    - Web app: Click to expand the image, then\
+    \ right-click and select \"Copy image address\"\\n    - Mobile app: Tap and hold\
+    \ the image, and then select \"Copy Media Link\"\\n    - If none of these methods\
+    \ work, you can expand the image and then select \"Open in Browser\". Finally,\
+    \ you can copy and paste image's URL."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Add An Image To The Prompt
+
+
+    1. Type /imagine
+
+
+    2. Drag the image file into the prompt box to add the URL, or paste the link within
+    the prompt box.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_41_0.png)
+
+
+    > TIP Upload your image in your Direct Messages with the Midjourney Bot to prevent
+    other servers users from seeing an image. Image prompts are visible on the Midjourney
+    website if the user doesn''t has Stealth Mode.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 05 Advanced prompts\n\n# Examples\n\nImage + Image\n\n![](img/de65630bac5611066a30f72c56787545_42_0.png)\n\
+    \n+\n\n![](img/de65630bac5611066a30f72c56787545_42_1.png)\n\n> TIP \nUse images\
+    \ with the same aspect ratio for best results."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Examples
+
+
+    Image + Text
+
+
+    ![](img/de65630bac5611066a30f72c56787545_43_0.png)
+
+
+    + flower vase
+
+
+    ![](img/de65630bac5611066a30f72c56787545_43_1.png)
+
+
+    > TIP Use Image Weight parameter to adjust the importance of image vs. text'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Remix Mode
+
+
+    You can use Remix Mode to change prompts, parameters, model versions, or aspect
+    ratios between variations. Remix will take the general composition of your starting
+    image and use it as part of the new Job.
+
+
+    > **TIP** Remix is an experimental feature, this means it can be changed or removed
+    at any time.
+
+
+    # Using Remix
+
+
+    Activate Remix Mode with the `/prefer remix` command or by using the `/settings`
+    command and toggling the Remix Mode button. Remix changes the behavior of the
+    variation buttons (V1, V2, V3, V4) and allows you to edit your prompt during each
+    variation.
+
+
+    To Remix an upscale, select Vary'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    > TIP
+
+    When you''re done with Remix, use the /settings or /prefer remix command to turn
+    it off.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_0.png)
+
+
+    Prompt
+
+    bunch of balloons
+
+
+    Modify or enter a new prompt
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_45_2.png)
+
+
+    Results'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Multi Prompts
+
+
+    Separating prompts allows you to assign relative importance to different parts
+    of the prompt. To make this possible you can use :: as separator.
+
+
+    # Multi-Prompt Basics
+
+
+    When you use the double colon, the bot treats the parts of the prompt separately
+    to create distinct concepts. For instance, with the prompt "cheese::cake," the
+    bot would generate images of a cake made of cheese, combining the two separate
+    concepts.
+
+
+    > > Prompt
+
+    > cheese:: cake drawing
+
+
+    ![](img/de65630bac5611066a30f72c56787545_46_0.png)'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    On the other hand, without the double colon, the bot would consider the entire
+    prompt as one concept and generate images accordingly. This feature allows for
+    more creative and diverse image generation based on the input you provide.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_47_0.png)
+
+
+    > TIP \nThere is no space between the double colons ::
+
+
+    Advanced prompts 4'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Prompt Weights
+
+
+    If you use a double colon :: to split a prompt into sections, you have the option
+    to attach a number right after the double colon. This number indicates how significant
+    that specific section of the prompt is in terms of importance.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_48_0.png)
+
+
+    | Prompt |
+
+    | cup:: 2 cake |
+
+
+    ![](img/de65630bac5611066a30f72c56787545_48_1.png)
+
+
+    | Prompt |
+
+    | cup:: cake |'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    # Pan Option
+
+
+    The Pan feature enables you to stretch the image canvas in a specific direction,
+    all while keeping the original image content intact. The added space in the canvas
+    is filled using instructions from both the prompt and the initial image.
+
+
+    # Panning An Image
+
+
+    Pan buttons will appear after upscaling an image. During panning, the new section
+    of the image is determined using the prompt and the pixels closest to the image''s
+    side, limited to the nearest 512 pixels.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_49_0.png)
+
+
+    Prompt
+
+    post apocalyptic city'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    Starting image
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_0.png)
+
+
+    Pan ↔
+
+
+    Pan ↕
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_1.png)
+
+
+    ![](img/de65630bac5611066a30f72c56787545_50_2.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    Pan ↘
+
+
+    ![](img/de65630bac5611066a30f72c56787545_51_0.png)
+
+
+    Pan ➡
+
+
+    ![](img/de65630bac5611066a30f72c56787545_51_1.png)
+
+
+    Advanced prompts 4'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 05 Advanced prompts
+
+
+    > **TIP**
+
+    Once you''ve panned an image in a particular direction, you''re restricted to
+    panning it further only in that same direction (horizontal/vertical). You''re
+    free to perform this successive panning as many times as you want. However, if
+    you do this multiple times and the image size becomes too large to share directly
+    on Discord, a link to the image will be provided to you instead.
+
+
+    # # Pan With Remix Mode
+
+
+    Using Pan with Remix Mode allows you to change your prompt when panning.
+
+
+    ![](img/de65630bac5611066a30f72c56787545_52_0.png)
+
+
+    | Prompt |
+
+    | countryside landscape |'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 05 Advanced
+
+    ppts
+
+
+    ```
+
+    Pan Right
+
+    This form will be submitted to Midjourney Bot. Do not share passwords or other
+    sensitive information.
+
+    PAN WITH NEW PROMPT *
+
+    countryside river
+
+    3983
+
+    Cancel Submit
+
+    ```
+
+
+    ![](img/de65630bac5611066a30f72c56787545_53_0.png)
+
+
+    Advanced prompts 4'
+  merge: -1
+  pgno: 53
+toc:
+- - '#'
+  - Midjourney：释放创造未来
+- - '##'
+  - 01 提示词的构造
+- - '###'
+  - 基础提示词
+- - '###'
+  - 高级提示词
+- - '#'
+  - 图像提示词
+- - '#'
+  - 文本提示词
+- - '#'
+  - 参数
+- - '##'
+  - 01 提示词的构造
+- - '###'
+  - 提示词注意事项
+- - '###'
+  - 提示词长度
+- - '###'
+  - 语法
+- - '###'
+  - 关注你想要的
+- - '###'
+  - 思考哪些细节很重要
+- - '###'
+  - 使用集合名词
+- - '##'
+  - 03 理解 Midjourney 命令
+- - '###'
+  - 提示词 (Prompt)
+- - '##'
+  - 04 熟悉参数列表
+- - '###'
+  - 基础参数
+- - '###'
+  - 宽高比
+- - '###'
+  - 混沌值 (Chaos)
+- - '###'
+  - 图像权重 (Image Weight)
+- - '###'
+  - 排除 (No)
+- - '###'
+  - 质量 (Quality)
+- - '###'
+  - 重复 (Repeat)
+- - '###'
+  - 种子 (Seed)
+- - '###'
+  - 停止 (Stop)
+- - '###'
+  - 风格 (Style)
+- - '###'
+  - 版本 (Version)
+- - '##'
+  - 05 高级提示词
+- - '###'
+  - 提示词技巧
+- - '##'
+  - 将图片上传到 Discord
+- - '##'
+  - 示例
+- - '##'
+  - Remix 模式
+- - '###'
+  - 使用 Remix
+- - '##'
+  - 多提示词 (Multi Prompts)
+- - '###'
+  - 多提示词基础
+- - '##'
+  - 权重 (Weights)
+- - '##'
+  - Pan（平移）选项
+- - '###'
+  - 平移图片
+- - '##'
+  - Remix 模式下的 Pan
