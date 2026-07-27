@@ -1135,7 +1135,7 @@ LLM 响应：
 
 ```
 此文本被分类为“简历”。
-
+```
 
 ## 摘要提示词
 
@@ -1216,11 +1216,14 @@ LLM 响应：
 
 ```
 "Generate a Spring Boot project using Maven with basic configurations."
+```
 
 这是大语言模型的复复：
 
 ```
 $ mvn archetype:generate -DgroupId=com.example -DartifactId=demo -Dversion=1.0-SNAPSHOT -DpackageName=com.example.demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
+
 此 `mvn` 命令将创建一个带有指定的 group ID、artifact ID 和包包的基础 Spring Boot 项目结构。
 
 ### 示例 2：单元测试创建
