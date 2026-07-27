@@ -1507,7 +1507,7 @@ ollama run mistral-nemo
 ollama run mistral-nemo
 >set parameter top_k 10
 > 在此处输入提示词
-
+```
 
 
 
@@ -1592,6 +1592,7 @@ The Eiffel Tower was designed by Gustave Eiffel for the 1890 Exposition Universe
 >>> /set parameter max_tokens 10
 
 Couldn't set parameter: "unknown parameter 'max_tokens'"
+```
 
 `max_tokens` 参数对于控制生成文本的长度至关重要。通过调整此参数，用户可以管理模型产生简洁、中等或扩展的响应，使其成为适用于不同用例的多功能工具。
 
@@ -1860,6 +1861,7 @@ def min_p(logits, p, temperature=1.0):
 
 以下代码演示了如何将每种采样函数应用于预定义的 logits 上：
 
+```
 temperature = 1.0
 k = 3
 p_top = 0.8
@@ -1880,6 +1882,7 @@ min_p_logits, min_p_probabilities = min_p(
 print("\nMin p logits and probabilities:")
 for (word, logit), prob in zip(min_p_logits, min_p_probabilities):
     print(f'{word}: Logit = {logit}, Probability = {prob*100:.2f}%')
+```
 
 该示例可以在 GitHub 仓库 [https://github.com/PacktPublishing/Learn-Mistral] 中的 `Chapter-3/ch03_softmax_workshop.py` 文件找到。
 
@@ -2098,6 +2101,8 @@ models = client.models.list()
 ```python
 for model in models:
     print(model)
+```
+
 最后，我们使用 `for` 循环遍历 `models` 列表并 `print` 每个模型。这确保每个模型都单独行显示，便于阅读。
 
 输出将包含一个错误，这是预期之中的：
@@ -2178,6 +2183,7 @@ sample_embed=client.embeddings.create(
 
 ```python
 clean_sample_embed = sample_embed.data[0].embedding
+```
 
 下一行打印嵌入数组的长度：
 
@@ -2188,6 +2194,7 @@ print(len(clean_sample_embed))
 
 ```
 1024
+```
 
 我们打印了嵌入数组的长度。对于来自同一模型的所有响应，该长度是一致的，无论我们发送了多少单词（标记）——一个单词还一段文本。
 
@@ -2273,6 +2280,7 @@ print(len(dish_embeds_arr[0]))
 
 代码产生了以下输出：
 
+```
 10
 1024
 ```
@@ -2288,6 +2296,7 @@ user_input = input("What do you prefer for dinner? ")
 user_embed = client.embeddings.create(
     model='mistral-embed', inputs=[user_input]).data[0].embedding
 print(user_embed[:10])
+```
 
 `Figure 4.10` 显示了输入框。输入的值将被赋值给变量 `user_input`：
 
@@ -2300,10 +2309,6 @@ print(user_embed[:10])
 What do you prefer for dinner? pizza
 ```
 
-
-
-
-```python
 这段代码段将提示用户输入他们的晚餐偏好，为输入生成嵌入（embedding），并显示嵌入数组的前几个元素。这个过程帮助我们理解用户的偏好如何在嵌入空间中表示，为将这些偏好与我们的菜谱描述进行比较以找到最匹配的选项奠定基础
 
 ## 步骤 5：用户输入与现有选项的语义匹配
@@ -2360,6 +2365,7 @@ ValueError                              Traceback (most recent call)
 # 重塑为 1N 数组
 user_embed_reshaped = user_embed.reshape(1, -1)
 distances = cdist(user_embed_reshaped, dish_embeds_arr, "cosine")
+```
 
 这会将用户的嵌入重塑为 `1x1024`（假设嵌入大小为 `1024`），使其与二维嵌入数组兼容。
 
@@ -2370,16 +2376,19 @@ distances = cdist(user_embed_reshaped, dish_embeds_arr, "cosine")
 import numpy as np
 # 找到最相关菜肴的索引
 most_relevant_index = np.argmin(distances)
+```
 
 要找到数组中项目最相关的索引，可以使用 `argmin` 方法：
 
 ```python
 most_relevant_index = np.argmin(distances)
+```
 
 ### 显示最相关的语义匹配
 
 找到最相关的索引只是完成了一半。让我们显示匹配的菜肴，让结果对用户一目了然。
 
+```
 print(f"Based on your preference,)
 print(f"you might find tasty: {dish_descriptions[most_relevant_index]}")
 ```
@@ -2397,6 +2406,7 @@ distances = cdist(
 mostRelevant = np.argmin(distances)
 print(f"most relevant index: {mostRelevant}")
 print(f"Then you might find tasty: {dish_descriptions[mostRelevant]}")
+```
 
 对于用户输入的值“hot dog”，该代码产生了以下输出：
 
@@ -5969,6 +5979,7 @@ template = """You are a helpful assistant designed to generate multiple sub-ques
 Your goal is to break down the main question into distinct sub-problems that can be answered individually.
 
 Generate three related search queries based on: {question} and output each query on a new line."""
+```
 
 提示词引导 LLM 将主问题拆解为三个不同的子问题，为更精确的检索提供独特的视角。每个子问题都关注原始查询的一个方面，帮助我们检索更广泛的信息来构建一个详尽的答案。
 
