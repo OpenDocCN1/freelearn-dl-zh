@@ -273,7 +273,8 @@ AI 代理正在改变我们的工作方式。软件通常创建的是确定性�
 在整书中，实际示例和每章的完整代码将通过相应的 GitHub 仓库提供：`https://github.com/PacktPublishing/Building-Agents-with-OpenAI-Agents-SDK`。
 
 ```
-https://github.com/PacktPublishing/Building-Agents-with-OpenAI-Agents-SDK```
+https://github.com/PacktPublishing/Building-Agents-with-OpenAI-Agents-SDK
+```
 
 鼓励你克隆该仓库，复用并适配提供的代码示例，并在学习章节时根据需要参考它。
 

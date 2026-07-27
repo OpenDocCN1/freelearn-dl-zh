@@ -3,10 +3,7 @@
 
 
 ![](img/cover.jpeg)
-![cover.jpegs](img/cover.jpeg)
 
-1. 封面
-2. 目录
 
 
 **欢迎来到 Packt 早期访问**。在本书上市之前，我们为您提供独家预览。撰写一本书可能需要几个月，但我们的作者今天就有尖端信息可以与您分享。早期访问通过提供章节草稿，让您洞察最新进展。目前这些章节的内容可能还些粗糙，但作者将随着时间的推移对其更新。
@@ -960,7 +957,7 @@ Then, among the three answer, select the one which is most plausible given the r
 * `====`
 * `------`
 * `####`
-* ` ` ` ` `
+* `` ` `` `` ` `` `` ` ``
 
 等等。让我们考虑一个元提示词，其目标是指示模型将用户的任务转换为 Python 代码，并提供一个操作示例。
 
@@ -971,12 +968,12 @@ You are a Python expert that produces python code as per user's request.
 给我一个打印文本字符串的函数。
 ---User Output---
 下面你可以找到描述的函数：
-```def my_print(text):
+\`\`\`def my_print(text):
 
      #returning the printed text
 
      return print(text)
-```
+\`\`\`
 <===END EXAMPLE
 ```
 
