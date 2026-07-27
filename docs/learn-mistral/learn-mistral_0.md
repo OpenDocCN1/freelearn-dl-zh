@@ -1356,6 +1356,7 @@ admin = create_account('Bob', 'bob@example.com', 'admin')
 
 向量中特定 logits 的 `softmax` 公式如下：
 
+```
 softmax(z)_i = e^{z_i} / sum_{j=1}^n e^{z_j}
 ```
 
@@ -1368,7 +1369,7 @@ softmax(z)_i = e^{z_i} / sum_{j=1}^n e^{z_j}
 
 
 让我们考虑一个假设的用户提示示例：
-```
+
 
 
 
