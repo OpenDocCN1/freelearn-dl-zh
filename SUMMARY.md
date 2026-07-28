@@ -14,6 +14,7 @@
 +   [创意产业的人工智能](docs/ai-crt-prod/README.md)
 +   [人工智能伦理实战](docs/ai-eth-ia/README.md)
 +   [人工智能示例第二版](docs/ai-ex-2e/README.md)
++   [AI 网络秘籍 (早期访问)](docs/ai-networking-cookbook-early-access/README.md)
 +   [人工智能优化攻略书](docs/ai-opti-plbk/README.md)
 +   [人工智能产品经理手册](docs/ai-prod-mgr-hb/README.md)
 +   [人工智能驱动的商业](docs/ai-pwrd-cmm/README.md)
