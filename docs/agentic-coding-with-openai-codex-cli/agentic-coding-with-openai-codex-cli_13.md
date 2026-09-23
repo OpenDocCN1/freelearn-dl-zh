@@ -696,3 +696,5 @@ npx skills add google/skills
 
 3.  **创建一个本地插件市场。** 构建一个将两个相关技能（例如，一个审查技能和一个修复技能）捆绑为单个可安装单元的插件。在仓库根目录创建一个带有 `AVAILABLE` 安装策略的 `.codex/plugins/marketplace.json`。验证该插件出现在 `/plugins` 浏览器中，安装它，并测试这两个技能。然后将策略改为 `INSTALLED_BY_DEFAULT`，并确认全新的 Codex CLI 会话会在无需手动安装的情况下自动激活该插件。
 
+
+

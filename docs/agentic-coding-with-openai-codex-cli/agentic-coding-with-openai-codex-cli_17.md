@@ -1,493 +1,692 @@
-# 调试与诊断代理故障
+# 成本管理与配额策略
 
-*第 5 章* 确立了信任模型：审批模式、沙箱配置、权限阶梯。本章讲述当事情仍然出错时该怎么做。
+*第 12 章* 讲解了如何将子 Agent 组合成多步流水线、审查循环和持久化目标。每种模式都提升能力，也增加并发 API 调用。*第 7 章* 讲解了上下文窗口预算：单线程会话如何填满、如何管理。本章讲解另一预算：资金。上下文与成本相关（更多上下文意味着更多 token 意味着更高成本），但它们不是同一问题。会话可能远未触及上下文窗口上限，却仍产出惊人账单。
 
-第二部分的每个配置章节都教你如何正确设置 Codex CLI。但没有一章告诉你：当代理产生错误结果、陷入循环、默默忽略你的 `AGENTS.md`，或在未完成任务时耗尽上下文窗口时该怎么办。本章教授恢复技巧。
+本章涵盖：Codex CLI 配额如何运作、如何估算团队工作流成本、如何配置成本控制、如何构建监控以避免账单冲击。
 
 ### 学习目标
 
-您将能够：
+你将能够：
 
-1.  定位代理偏离意图的具体工具调用
+1.  估算启用 Codex CLI 的工程团队月度 API 成本
+2.  通过命名配置文件配置模型路由以实现成本控制
+3.  构建 `Stop` Hook 将会话成本记录到文件或 webhook
+4.  应用成本-质量决策矩阵，为给定任务类别选择合适模型
+5.  最大化提示缓存命中率，争取高达 90% 的缓存输入 token 折扣
+6.  利用 Plan Mode 的上下文用量可见性，防止昂贵的上下文膨胀会话
+7.  评估 AWS Bedrock 和 Azure OpenAI Service 作为企业部署的替代计费路径
 
-2.  运行只读诊断会话以在不执行的情况下检查代理的计划
+### Codex CLI 配额如何运作
 
-3.  使用 `RUST_LOG` 和 TUI 斜杠命令在多个粒度层面追踪代理行为
+配额运作方式取决于你如何访问服务。
 
-4.  通过 `RUST_LOG` 追踪输出验证加载了哪些 `AGENTS.md` 文件
+#### 订阅配额 (ChatGPT Plus 和 Pro)
 
-5.  使用 `codex sandbox` 在离线状态下测试沙箱强制执行下的命令
+ChatGPT Plus 和 Pro 订阅包含 Codex CLI 额度，以积分计价，并按模型设定每百万 token 积分单价（输入、缓存输入、输出）。`gpt-5.5` 单 token 积分高于 `gpt-5.4`；`gpt-5.4` 高于 `gpt-5.4-mini`。^113
 
-6.  使用 `codex execpolicy check` 在不启动会话的情况下验证执行策略规则
+订阅上运行两个节奏，区分它们很有必要：
 
-7.  干净地中断失控会话并选择正确的回滚策略
+1.  **账单节奏。** 订阅本身按月（或年）收取固定每席位费用。该费用不取决于 token 用量。
 
-8.  使用 `codex debug models` 验证在受限或代理环境中的模型可用性
 
-### 阅读会话记录
 
-会话记录以 JSONL 滚动文件形式写入 `~/.codex/sessions/`，每个事件一个 JSON 对象。每个文件包含类型化的 `RolloutItem` 事件，包括 `SessionMeta`、`UserMessage`、`ResponseItem`、`EventMsg` 和 `ApprovalDecision`，共同构成发生的一切的完整记录。^(¹⁵⁹) 典型的工具调用追踪如下：
+
+
+## 2. Usage-limit cadence
+
+在订阅内，Codex CLI 的使用量按滚动的 5 小时窗口计量。本地消息和云任务共享同一个 5 小时配额池；其上可能还会叠加每周限额。
+
+##### 其他属性
+
+1. 配额以积分为单位，不同模型的费率不同。订阅用量没有逐 token 美元定价；您已经为席位付费。
+2. 配额不会在窗口之间结转。
+3. 当达到使用限额时，Plus 和 Pro 用户可以购买额外积分以继续工作，或回退到 API 密钥计费，按标准逐 token 费率付费。
+
+Pro 计划在相同的窗口结构下提供 Plus 配额的 5 倍或 20 倍。企业版和教育版采用灵活定价，无固定速率限制；用量随工作区购买的积分而扩展。
+
+对于个人开发者，订阅配额通常足够。对于团队则通常不够，因为按用户订阅的账户不会在团队成员间聚合。
+
+#### Codex-only seats
+
+对于需要 API 级访问但不需要完整 ChatGPT 订阅的团队，OpenAI 提供 Codex-only seat：零席位月费，加上按已发布 API 费率计费的 token 消耗，管理员可通过组织仪表盘监控用量。
+
+#### Per-tier cost comparison
+
+*表 14-1* 估算了当前 API 费率下不同使用档位的日均和月均成本。在做财务预测前请核对实时定价页面。^(¹¹⁴)
+
+**表 14-1. 按使用档位估算的日均和月均 API 成本**
+
+| **Usage profile** | **Typical daily tokens** | **Est. daily cost** | **Est. monthly cost (22 days)** |
+| --- | --- | --- | --- |
+| Light (exploration, Q&A) | 50K to 150K | `$1` to `$3` | `$22` to `$66` |
+| Moderate (feature work, reviews) | 300K to 600K | `$4` to `$8` | `$88` to `$176` |
+| Heavy (multi-agent, CI pipelines) | 1M to 3M | `$10` to `$25` | `$220` to `$550` |
+| Team of 5 (orchestrator/worker) | 5M to 15M aggregate | `$50` to `$125` | `$1,100` to `$2,750` |
+| Team of 50 (enterprise) | 50M to 150M aggregate | `$500` to `$1,250` | `$11,000` to `$27,500` |
+
+这些估算假设编排使用 `gpt-5.4`，Worker 使用 `gpt-5.4-mini`。所有任务都跑 `gpt-5.5` 的团队，编排部分成本应预期约为 2 倍，但会被 GPT-5.5 的 token 效率提升部分抵消。所有任务都跑 `gpt-5.4` 的团队，Worker 部分成本应预期为 3 到 5 倍。社区讨论中有时引用的“每周十亿 token”数字是团队级聚合值；标准工作流下的单个开发者不会达到该量级。
+
+#### API pricing
+
+当您使用 API 密钥搭配 Codex CLI 时，计费按已发布费率逐 token 进行。^(¹¹⁵)
+
+**表 14-2. Codex CLI 会话的大致模型成本比率**
+
+| **Model** | **Input (per 1M tokens)** | **Output (per 1M tokens)** | **Relative cost vs. gpt-5.4** |
+| --- | --- | --- | --- |
+| `gpt-5.5` | `$5.00` | `$30.00` | ~2x |
+| `gpt-5.4` | `$2.50` | `$15.00` | 1.0x |
+| `gpt-5.4-mini` | `$0.75` | `$4.50` | 0.3x |
+| `gpt-5.4-mini` (reasoning) | `$1.10` | `$4.40` | ~0.6x (plus reasoning tokens) |
+| `gpt-5.4` (high reasoning) | `$10.00` | `$40.00` | ~5x |
+
+GPT-5.5 定价为输入/输出各 `$5`/`$30` 每百万 token，大约是 GPT-5.4 双向 2 倍。^(¹¹⁶) 标价虽高，但 OpenAI 报告其 token 效率更好：许多任务上该模型用更少 token 即可交付相当结果。若 GPT-5.5 能一遍通过而非两遍，或用 800 而非 1,500 输出 token 解决问题，任务有效成本可大致持平。在决定升级前，请跑代表性任务并对比 GPT-5.4 的总 token 用量。对于常规工作，成本更低的 GPT-5.4 仍是更高性价比之选。
+
+关键观察在于 `gpt-5.4-mini` 成本约为 `gpt-5.4` 的三分之一，却能很好地覆盖大部分智能体用例。^(¹¹⁷)
+
+#### Fast mode and the credit multiplier
+
+Codex CLI 提供更高吞吐的推理路径：在 `gpt-5.4` 和 `gpt-5.5` 上输出速度约快 1.5 倍，代价是更高的积分消耗率。^(¹¹⁸)
+
+OpenAI 文档将该功能称为 Fast mode；运行时将其作为名为 `priority` 的服务层暴露，备选为 `default`。可用 `/fast` 在会话间切换，它会在两者间翻转并打印新状态，例如 `Service tier set to priority`。要持久化选择，请在 `~/.codex/config.toml` 中设置 `service_tier = "fast"`（这会映射到内部的 `priority` 请求层）。
+
+积分乘数仅影响订阅计费：`priority` 服务对 `gpt-5.5` 按标准费率 2.5 倍消耗积分，对 `gpt-5.4` 按 2 倍消耗。它在 IDE 扩展、CLI 和 Codex App 中对使用 ChatGPT 计划登录的用户可用。API 密钥计费不可用，无论何时都适用标准逐 token 定价，斜杠命令无效。
+
+权衡因此大致是在每任务积分收支平衡的同时减少墙钟时间。Fast mode 以标准费率 2x 到 2.5 倍的积分率/秒运行，却能快约 1.5 倍完成：投入相似积分，减少开发者等待时间。它适合开发者等待时间本身有成本的交互式会话，不适合墙钟延迟无关紧要的批处理或后台工作。
+
+定价文档还描述了单独的 Codex-Spark 模型（`gpt-5.3-codex-spark`），定位于 Fast mode 下一层：一个快速、能力较弱的 Codex 模型，用于近乎即时的实时迭代，有自己的用量限制。撰写时它仅对 ChatGPT Pro 开放，且不出现在低档位的模型选择器中，因此大多数读者仍会在 `gpt-5.4`/`gpt-5.5` 上使用 Fast mode。Codex CLI 选择器默认暴露三个模型：`gpt-5.5`、`gpt-5.4` 和 `gpt-5.4-mini`。
+
+#### What counts as usage
+
+在智能体会话中，token 由以下项目消耗：
+
+1. **系统提示词**。包含 `AGENTS.md` 内容、活动配置文件配置，以及 Codex CLI 系统提示词本身。会话中每次 API 调用都会计费。
+2. **对话历史**。上下文窗口中仍保留的每条过往消息、工具调用和工具结果，在每次 API 调用中均作为输入 token 计费。
+3. **任务描述**。您的提示词。
+4. **工具调用结果**。文件内容、命令输出、搜索结果，均在后续 API 调用中作为输入 token 返回。
+5. **模型输出**。智能体的响应、推理 token（推理模型）及任何生成内容。
+
+智能体会话的昂贵部分不是模型输出，而是累积的对话历史。*第 7 章*称之为二次增长问题：每一轮都重发全部过往历史，因此会话累计发送 token 与轮数平方大致成正比，长会话成本显著偏高。
+
+这使得*第 7 章*中的每一个上下文管理杠杆同时也是成本杠杆。`/compact` 通过用较短摘要替换冗长详细历史，降低了后续每次 API 调用的 token 成本。子智能体委派在独立窗口运行 token 密集型子任务并向父级返回简洁摘要，保持计费前缀精简。Plan Mode 的全新上下文边界阻止实现会话继承规划会话的累积权重。两章描述的是同一机制的两个后果：费用保持有界，理由与窗口保持可用完全相同。
+
+### Estimating Team Costs
+
+抽象定价表不如具体示例实用。下面给出一个真实团队部署的估算演示。
+
+#### Scenario: five-engineer team, orchestrator/worker pattern
+
+Assumptions:
+
+
+
+
+
+### 成本估算与控制
+
+#### 基准估算：五人工程师团队
+
+**假设：**
+
+1.  5 名工程师，每人每天运行 Codex CLI 活跃会话约 3 小时。
+2.  编排器/工作器模式：每个任务使用一次编排器调用（在 `gpt-5.4` 上），派生出 2 到 3 个工作器代理（在 `gpt-5.4-mini` 上）。
+3.  平均编排器会话：40,000 个输入 token，4,000 个输出 token。
+4.  平均工作器会话：25,000 个输入 token，3,000 个输出 token。
+5.  每个任务平均 2.5 个工作器。
+6.  每位工程师每天 15 个任务（长短任务混合）。
+
+**每位工程师每日成本：**
+
+- 编排器调用（`gpt-5.4`）：
+  `15 x (40,000 x $2.50/1M + 4,000 x $15.00/1M) = 15 x ($0.10 + $0.06) = 15 x $0.16 = $2.40`
+- 工作器调用（`gpt-5.4-mini`）：
+  `15 x 2.5 x (25,000 x $0.75/1M + 3,000 x $4.50/1M) = 37.5 x ($0.01875 + $0.0135) = 37.5 x $0.03225 = $1.21`
+- 每位工程师每日总计：`$2.40 + $1.21 = $3.61`
+
+**团队月度成本（22 个工作日）：**
+
+`$3.61 x 5 名工程师 x 22 天 = $397/月`
+
+这是一个粗略估算，但确立了数量级。对于一个五人工程师团队，在编排器/工作器模式下，Codex CLI 的 API 成本大致相当于单个云服务实例。
+
+该估算也说明了模型路由的杠杆作用。如果团队让所有工作器都运行在 `gpt-5.4` 而非 `gpt-5.4-mini` 上，工作器成本将从每位工程师每日 `$1.21` 跃升至约 `$4.03`，工作器组件成本增加 3.3 倍，总成本从 `$397` 上升至约 `$707`/月。除缓存外，模型路由是最大的成本控制杠杆。
+
+#### 账单透明度问题
+
+两个反复出现的用户反馈刻画了心智模型与实际消耗之间的鸿沟。用户普遍反映 token 消耗速度比直觉预测的快 5 到 10 倍。^([¹¹⁹)] 且用户难以区分代理发起的 API 请求与用户发起的请求，这使得按任务分摊账单变得困难。^([¹²⁰)] 企业团队期望仪表盘提供细粒度的按会话和按任务成本归因，但目前尚不支持。
+
+根因是前文所述的**累积历史问题**：每次后续的 API 调用都会重新处理整个历史记录。一个*感觉*像“几个问题”的会话，到第十次 API 调用时可能已消耗 200,000 个或更多输入 token。
+
+一个具体例子：针对一个 7,000 行的代码库，使用 GPT-5.4 的 xHigh 推理模式，发出一个宽泛提示（“浏览此代码库并预防性地修复任何 macOS 问题”），在 7 分钟内跨 34 次 API 请求消耗了约 400 万 token，花费约 `$3.50`。在非平凡代码库上，宽泛、开放式的提示遇上最大推理力度的强力模型，会产生令人惊讶的巨额账单。
+
+用户预期与实际消耗之间的差距被三个因素放大：订阅配额显示剩余百分比而非 token 计数、缺乏按会话的成本细分、以及多代理工作流的复合效应（每个子代理都有自己的上下文累积曲线）。
+
+务实的应对是**监控**。使用稍后本章介绍的 `Stop` 钩子，记录每会话的 token 计数。每周将这些计数与您的预测进行对比。如果实际消耗持续超过预测 2 倍以上，您的会话深度假设需要修正。
+
+Codex CLI 会发出 `codex_compaction_event` 分析记录，追踪 `/compact` 触发的频率及节省的 token 数。将其与 `PreL1-Bullet`/`PostL1-Bullet` 钩子配对，可在使用仪表盘提供该功能前，构建本地的压缩频率图景。
+
+#### 浪费性支出：代理式 PR 失败率
+
+对 33,000 个代理撰写的拉取请求（PR）研究发现，28.5% 的代理式 PR 无法合并。^([¹²¹)] 主导的失败模式并非糟糕的代码，而是社交与工作流的错位：审查者放弃（占失败的 38%）、重复提交（23%）和不需要的功能（4%）。每个失败的 PR 都代表了用在从未发布的工作上的 token 支出。
+
+代理引入的符号中位存活期仅 3 天，而人类引入的为 34 天；代理代码的代码更动率为 7.33%，而人类代码为 4.10%。^([¹²²)] 即使合并了，代理代码修订得也更快，这进一步增加了每存活行代码的有效 token 成本。
+
+将代理式 PR 失败率从 28.5% 降至 15%（可通过缩小 PR 范围、提交前 CI 验证、`AGENTS.md` 中的显式范围约束来实现），将消除约一半的代理式浪费支出。*第 15 章* 基于这些发现介绍了 CI/CD 流水线设计。
+
+#### 用于审查循环的 SLM 裁判分层
+
+*第 12 章* 中的跨模型审查循环，将结构不同的模型置于批评者席位。在仅使用前沿模型的配置下，经济账算很贵。一个三提供商审查循环（一个前沿推理模型加两个旗舰评审模型）每个合并请求成本约 `$0.47` 到 `$0.50`。按每位开发者每月 40 个合并请求计算，仅审查成本就是 `$20`/开发者/月，一个 50 人团队一年约 `$12,000`。^([¹²³)]
+
+近期关于小语言模型（SLM）作为裁判的研究表明，微调后的 SLM 能达到与体量大 5 到 25 倍的模型竞争的裁判性能。^([¹²⁴)] 使用 `gpt-5.4-mini`（最小的 Codex 推荐模型）的 SLM 裁判分层会预筛选每个合并请求。只有被标记为潜在问题的请求（通常为常规 MR 的 25% 到 35%）才会进入完整的前沿模型审查。这将平均审查成本从约 `$0.27`（双模型）降至约 `$0.09`/MR，实现 3 倍降本。
+
+双模型审查循环（用一个模型实现，另一个审查）是成本与质量的平衡点。第三个评审模型增加成本的速度快于质量提升；研究显示，超过两个独立评审者后收益递减。应投资于 SLM 裁判分层和提示缓存（本章稍后介绍），而非增加第三个前沿模型评审者。
+
+#### 技能评估成本
+
+投资技能发展的团队应单独为评估预算。技能基准测试工具（*第 10 章*）每次基准运行消耗约 74,000 个 token。团队迭代五轮基准测试约消耗 370,000 个 token，按 `gpt-5.4` 输入价格约 `$0.93`，按 `gpt-5.4-mini` 约 `$0.28`。一个合理的默认值是将总 Codex CLI 支出的 5% 分配给技能开发与评估。
+
+#### 需调整的预测变量
+
+影响估算幅度最大的变量：
+
+1.  **会话深度。** 编排器 40,000 输入 token 的假设属中等水平。在大型遗留代码库中进行大量文件读取的会话可能达到 100,000 个或更多输入 token。请使用 `--debug` 输出测量实际会话并调整。
+2.  **每任务工作器数。** 并行度越高成本越高。三个工作器比 2.5 个贵 20%；五个工作器成本翻倍。
+3.  **任务频率。** 运行 Codex CLI 进行发现和探索（许多短会话）的工程师，其成本概况与进行深度任务完成（较少的长会话）者不同。探索性会话虽短，但每会话产生的开销比例更高。
+
+### 配置成本控制
+
+Codex CLI 的主要成本控制手段是**模型路由**：哪个任务命中哪个模型，以及使用何种推理力度。运行时未将硬性的按会话 token 上限作为配置键暴露，因此成本纪律体现在*第 6 章*介绍的配置文件系统，以及下文所述的压缩相关限制中。
+
+#### 通过配置文件进行模型路由
+
+
+
+
+
+#### 成本感知配置文件与监控
+
+*第 6 章* 全面介绍了命名配置文件机制：每个配置文件位于各自的文件 `~/.codex/<name>.config.toml` 中，包含顶层键，而 `--profile <name>` 会将该文件覆盖到 `~/.codex/config.toml` 上，优先级链为 `CLI 标志 > 配置文件 > 项目配置 > 用户配置 > 默认值`。本章将同一机制应用于成本控制：每个配置文件固定一种廉价、均衡或高性能的配置，使合适的成本形态仅在一个标志之遥。
 
 ```
-{"type":"tool_call","id":"call_abc123","name":"read_file","args":{"path":"src/handlers/auth.ts"},"ts":1710510121}
-{"type":"tool_result","call_id":"call_abc123","ok":true,"output":"import { Request, Response } from 'express'...","ts":1710510122}
-{"type":"tool_call","id":"call_def456","name":"run_shell","args":{"cmd":"npm test -- --testPathPattern=auth"},"ts":1710510123}
-{"type":"tool_result","call_id":"call_def456","ok":false,"output":"FAIL tests/auth.test.ts\n should validate JWT expiry...","ts":1710510126}
+##### ~/.codex/config.toml
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+##### ~/.codex/explore.config.toml
+model = "gpt-5.4-mini"
+model_reasoning_effort = "low"
+##### ~/.codex/commit.config.toml
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+##### ~/.codex/reason.config.toml
+model = "gpt-5.4-mini"
+model_reasoning_effort = "high"
 ```
 
-偏离点几乎总是以下三种情况之一：返回意外输出的工具调用、静默失败的命令（`ok: true` 但输出中包含错误），或做出错误推理的推理步骤。从结尾开始，倒推至您预期的最后一个结果。
-
-`jq -s 'map(select(.type == "tool_result" and .ok == false))' transcript.jsonl` 可一条命令提取所有失败的工具结果。
-
-除了失败结果，您还可以分析工具调用分布，并从会话中提取每一个审批决策：
+使用 `--profile`（或 `-p`）调用配置文件：
 
 ```
-#### 查找最新的会话记录
-ls -t ~/.codex/sessions/*.jsonl | head -1
-#### 按类型统计工具调用次数
-cat ~/.codex/sessions/<session>.jsonl | \
- jq 'select(.type == "ResponseItem") | .item.type' | \
- sort | uniq -c | sort -rn
-#### 提取所有审批决策
-cat ~/.codex/sessions/<session>.jsonl | \
- jq 'select(.type == "ApprovalDecision")'
+codex --profile explore "browse the auth module and explain how the session middleware works"
+codex -p commit "implement the new user authentication flow"
+codex -p reason "design a back-pressure scheme for the ingest pipeline"
 ```
 
-社区工具 `codex-replay` 可将这些 JSONL 文件渲染为可浏览的 HTML，而 `ccusage` 项目则提供基于回放令牌计数器解析的每日和每月成本报告。^(¹⁶⁰)
+顶层 `model` 和 `model_reasoning_effort` 键在未指定配置文件时作为默认值。`explore` 配置文件是最廉价的设置，适用于浏览代码和快速实验。`commit` 配置文件使用全性能模型处理将产生实际输出的任务。`reason` 配置文件在 `gpt-5.4-mini` 上支付“推理税”（本章后文介绍），适用于那些受益于扩展推理且令牌成本低于同等推理力度下的 `gpt-5.4` 的任务。根据任务类别添加任意数量的配置文件；在它们之间切换仅需一个标志。
 
-### 将审批模式用作诊断工具
+#### 限制工具输出与压缩
 
-使用 `-a untrusted -s read-only` 运行可创建纯检查模式：代理可读取文件但无法写入或执行。每个操作都会作为带有完整详情的审批提示出现。
+运行时提供三个键来限制单个会话的膨胀程度：
 
-```
-codex -a untrusted -s read-only "refactor the authentication module to use JWT"
-```
+1.  `tool_output_token_limit` 限制单次工具结果的令牌预算。否则，浏览器快照或单体仓库的 grep 结果可能在一次调用中就消耗 20% 的上下文窗口。
+2.  `model_auto_compact_token_limit` 设置触发自动压缩的阈值。将其降低至上下文容量的 80% 到 85%，可给摘要生成器留出更多空间，从而生成质量更高的摘要，减少后续压缩次数。
+3.  `compact_prompt` 覆盖默认的压缩摘要提示词。一个能保留文件路径、函数签名和决策理由的结构化交接提示词，能生成模型无需重读文件即可恢复的摘要。
 
-当之前的会话表现异常，而您希望在实际运行前了解其计划时，请使用此模式。
+这些是配置层面最接近“防止我在失控会话上烧钱”的设置。若想要真正的上限，请使用下一节的监控钩子在事后检测失控消耗，并在下一次会话前调整配置文件。
 
-当您在 `untrusted` 模式下拒绝审批请求时，可直接输入修正意见：
+其他地方已有文档记录了第三方智能体框架中无声的成本累积：某社区构建的工具报告称，因后台心跳机制在无任务运行时持续消耗令牌，导致空闲会话产生每月 `$86` 的费用。^(¹²⁵)
 
-```
-[需要审批] 写入 src/auth/jwt.ts
-> 拒绝：使用 jose 库，而非 new-jwt-library
-```
+无论运行时如何，请利用下一节的钩子自行构建成本可视化闭环。将遥测缺失视为可能存在无声烧费的信号。
 
-代理将接收您的修正并就地修订计划。
+### 使用钩子进行监控与告警
 
-### 用于实时诊断的 TUI 斜杠命令
+`Stop` 钩子在轮次停止时触发，包括你离开 Codex CLI 会话前的最后一轮。*第 9 章* 涵盖钩子生命周期、注册机制和完整载荷结构；本节提供一个可直接投入使用的配置及其三个变体。
 
-三个斜杠命令可在不离开 TUI 的情况下提供诊断信息：^(¹⁶¹)
+#### 入门级 Stop 钩子
 
-`/status` 显示当前会话配置和令牌用量。当感觉不对劲时，这是第一站；它确认当前活动的模型、当前推理力度级别、令牌消耗和有效的沙箱模式。
-
-`/debug-config` 揭示完整的配置解析堆栈：层级顺序（从最低到最高优先级）、每个键的有效值及设置它的层级，以及策略详情，包括 `allowed_approval_policies`、`allowed_sandbox_modes`、`mcp_servers` 和 `rules`。^(¹⁶²) 这在企业环境中特别有用，因为托管的 `requirements.toml` 可能会无声地覆盖您的 `config.toml` 设置。如果您的 `sandbox_mode = "danger-full-access"` 被忽略，`/debug-config` 将显示托管策略正在强制执行 `workspace-write`。
-
-
-
-`/feedback` 会收集诊断信息，包括请求 ID、会话 ID、连接状态、最后的错误消息、活动工具数量和 MCP 服务器状态，并直接提交给 OpenAI 的维护者。在关闭表现出意外行为的会话前运行 `/feedback`：请求 ID 是在 GitHub 上提交问题时最有用的单一数据。
-
-### codex doctor：会话前诊断
-
-在开始会话前，`codex doctor` 会运行全面的诊断检查，在配置和环境问题消耗 Token 之前将其捕获。
+在 `~/.codex/hooks.json`（或项目根目录下的 `.codex/hooks.json`）中注册钩子。*第 9 章* 介绍了这两种来源、信任审查流程，以及如何使用 `/hooks` 检查已加载的钩子。
 
 ```
-codex doctor
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.codex/scripts/cost-log.sh",
+            "statusMessage": "Logging session cost...",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
 ```
 
-该命令检查：
+将匹配的脚本保存至 `~/.codex/scripts/cost-log.sh` 并执行 `chmod +x`：
 
-1.  **API 密钥有效性和权限。** 能否通过身份验证？
-2.  **模型访问权限。** 配置的模型是否可达？
-3.  **网络连接。** Codex 能否通过 HTTP 到达所需的提供商端点，并打开到 `chatgpt.com` 的 WebSocket？
-4.  **MCP 服务器连通性。** 所有声明的服务器是否都在响应？
-5.  **config.toml 语法和键有效性。** 是否有拼写错误或已弃用的键？
-6.  **沙箱兼容性。** 您的操作系统和内核是否支持请求的沙箱模式？
-7.  **AGENTS.md 文件发现。** 哪些指令文件会被加载？
-
-在撰写本文时，诊断还会报告安装的 Codex 版本，探测是否有更新版本，并涵盖环境变量、Git 配置、终端功能、应用服务器状态和线程清单。线程清单特别有用：它列出所有现有线程、其状态和磁盘使用情况，有助于诊断累积会话消耗意外存储空间的问题。
-
-**何时运行：** 安装后、任何配置更改后、切换配置文件后，以及感觉不对劲时。五秒钟的诊断可节省二十分钟调试昂贵会话中第三轮出现的晦涩错误的时间。
-
-`codex doctor` 如果有任何检查失败则以非零值退出，因此它可作为 CI 中的预检门禁。在得出安装损坏的结论前请先阅读失败信息：在受限网络环境中，连接检查会在 DNS、通过 HTTP 的提供商端点、`chatgpt.com` WebSocket 以及针对 `api.github.com` 的更新探测上失败，即使安装、配置、认证和 MCP 均报告正常。本地检查健康且仅网络解析失败指向沙箱或代理，而非 Codex 本身。对于机器可读输出，`--json` 发出经过编辑的支持报告，`--summary` 仅显示分组的检查行和最终计数。
-
-### 诊断 AGENTS.md 失败
-
-#### 使用 `RUST_LOG` 验证加载
-
-```
-RUST_LOG=info,codex_core=debug codex "your task here" 2>&1 | head -50
-```
-
-查找显示 Codex 发现并组合的指令文件的 `tracing` 输出，例如：
-
-```
-codex_core: agents_md: found /home/dan/.codex/AGENTS.md (global)
-codex_core: agents_md: found /home/dan/projects/myapp/AGENTS.md (project)
-codex_core: agents_md: loaded 2 file(s), combined length 847 bytes
-```
-
-如果未列出您预期的文件，请检查路径、文件名大小写（Linux 区分大小写）和编码。
-
-#### 常见的静默失败模式
-
-**错误的目录。** 在子目录中创建了 `AGENTS.md` 但从仓库根目录运行，反之亦然。
-
-**编码问题。** BOM 标记或混合的行尾导致静默解析失败。使用 `file AGENTS.md` 和 `dos2unix AGENTS.md`。
-
-**与模型先验冲突的指令。** “永远不要给代码添加注释”如果没有理由将不会生效。添加理由：“该项目使用自文档化变量名作为唯一的文档机制。”
-
-**指令埋得太深。** 顶部的指令权重更大。将关键指令移到顶部。
-
-当 `AGENTS.md` 加载失败时没有显式错误。模块目标 `RUST_LOG` 追踪（例如 `RUST_LOG=codex_core=debug`）是确认加载的最可靠方法。
-
-### 认证失败
-
-当会话因认证错误无法启动时，请在重启前隔离问题：
-
-```
-#### 检查当前认证状态，不触发登录流程
-codex login status
-#### 直接检查令牌过期时间
-cat ~/.codex/auth.json | jq '.expires_at'
+```bash
+#!/usr/bin/env bash
+##### ~/.codex/scripts/cost-log.sh: 每个停止的轮次追加一行 JSONL。
+##### Stop 载荷包含 session_id、turn_id、model、cwd 和 transcript_path。
+##### 令牌总数位于 transcript_path 的执行记录中，因此我们在此遍历它。
+set -euo pipefail
+LOG_DIR="${HOME}/.codex/cost-logs"
+mkdir -p "$LOG_DIR"
+PAYLOAD="$(cat || echo '{}')"
+TIMESTAMP="$(date -u +%FT%TZ)"
+SESSION="$(jq -r '.session_id // "unknown"' <<<"$PAYLOAD")"
+TURN="$(jq -r '.turn_id // "unknown"' <<<"$PAYLOAD")"
+MODEL="$(jq -r '.model // "unknown"' <<<"$PAYLOAD")"
+CWD="$(jq -r '.cwd // empty' <<<"$PAYLOAD" || echo "$PWD")"
+TRANSCRIPT="$(jq -r '.transcript_path // empty' <<<"$PAYLOAD")"
+BRANCH="$(git -C "${CWD:-$PWD}" rev-parse --abbrev-ref HEAD 2>/dev/null || echo none)"
+# 遍历执行记录以获取用量并求和。转录记录中的字段名在版本间略有差异；
+# 此处涵盖常见结构
+# (input_tokens / output_tokens / total_tokens; prompt_tokens / completion_tokens)。
+USAGE='{"input":0,"output":0,"total":0}'
+if [ -n "$TRANSCRIPT" ] && [ -r "$TRANSCRIPT" ]; then
+  USAGE="$(jq -s '
+    [ .[] | .. | objects | select(has("input_tokens") or has("prompt_tokens")) ]
+    | reduce .[] as $u (
+        {input:0, output:0, total:0};
+        .input  += (($u.input_tokens // $u.prompt_tokens // 0) | tonumber? // 0)
+        | .output += (($u.output_tokens // $u.completion_tokens // 0) | tonumber? // 0)
+        | .total  += (($u.total_tokens // 0) | tonumber? // 0)
+      )' "$TRANSCRIPT" 2>/dev/null || echo "$USAGE")"
+fi
+jq -nc \
+  --arg ts "$TIMESTAMP" \
+  --arg session "$SESSION" \
+  --arg turn "$TURN" \
+  --arg model "$MODEL" \
+  --arg cwd "$CWD" \
+  --arg branch "$BRANCH" \
+  --argjson usage "$USAGE" \
+  '{ts:$ts, session:$session, turn:$turn, model:$model, cwd:$cwd, branch:$branch, usage:$usage}' \
+  >> "$LOG_DIR/cost-log.jsonl"
 ```
 
-`codex login status` 报告您是否已认证、使用的方法（浏览器 OAuth、设备代码或 API 密钥）以及令牌是否有效。一个常见的失败模式是 `auth.json` 文件损坏或过期：修复方法是 `codex logout` 后跟 `codex login`。
+运行一次 Codex CLI 会话并退出。随着 `Stop` 钩子触发，`~/.codex/cost-logs/cost-log.jsonl` 应会增长，每行携带时间戳、会话 ID、轮次 ID、模型、cwd、分支，以及从执行记录汇总得到的 `usage` 对象。若想要每个会话恰好一条记录，稍后按 `session` 聚合，并保留每个会话的最终或最大总量。
 
-### 在沙箱下测试命令
+稍后使用 `jq` 进行聚合。最近七天的按模型细分，包含总输入和输出令牌：
 
-`codex sandbox` 子命令在 Codex CLI 在代理会话期间应用的确切沙箱执行下测试任意命令，而无需启动会话。这在诊断构建工具或测试运行器为何在沙箱下失败时必不可少。
-
-```
-#### macOS：在 Seatbelt 执行下测试命令
-codex sandbox macos -- npm run build
-#### macOS：具有 workspace-write 权限和拒绝日志记录
-codex sandbox macos --permissions-profile workspace-write --log-denials -- cargo test
-#### Linux：在 bubblewrap/seccomp 执行下测试
-codex sandbox linux -- pytest tests/
-#### Linux：workspace-write 模式
-codex sandbox linux --permissions-profile workspace-write -- make install
-```
-
-macOS 上的 `--log-denials` 标志将每次 Seatbelt 拒绝打印到 stderr，显示确切被阻止的文件系统路径或网络操作。
-
-常见场景：您的 Rust 项目在 Codex CLI 外部构建正常，但在代理的沙箱下失败。使用 `codex sandbox` 隔离问题：
-
-```
-##### 步骤 1：在沙箱下测试构建
-codex sandbox linux -- cargo build 2>&1 | grep -i denied
-##### 步骤 2：如果出现失败，尝试使用 workspace-write
-codex sandbox linux --permissions-profile workspace-write -- cargo build
-# 步骤 3：如果仍然失败，问题在于网络访问
-# （例如，crates.io 下载被沙箱阻止）
+```bash
+SINCE="$(date -u -v-7d +%FT%TZ 2>/dev/null || date -u -d '7 days ago' +%FT%TZ)"
+jq -c --arg since "$SINCE" 'select(.ts > $since)' ~/.codex/cost-logs/cost-log.jsonl \
+  | jq -s 'group_by(.model)
+      | map({model: .[0].model,
+             turns: length,
+             sessions: (map(.session) | unique | length),
+             input:  (map(.usage.input  // 0) | add),
+             output: (map(.usage.output // 0) | add),
+             total:  (map(.usage.total  // 0) | add)})'
 ```
 
-此工作流避免了启动完整代理会话仅为调试沙箱限制的成本。
+Stop 标准输入载荷目前不直接包含令牌计数。入门脚本遍历 `transcript_path` 处的执行记录来恢复它们，这很稳健但敏感于版本：Codex 将 `transcript_path` 文档化为便利字段，而非稳定的钩子接口，且执行记录在各版本中曾同时使用 `input_tokens`/`output_tokens` 和 `prompt_tokens`/`completion_tokens`。上述 `jq` 归约器同时处理两者。*第 9 章* 对更广泛的钩子载荷表面提出了相同的警示。首次运行后，`jq .usage ~/.codex/cost-logs/cost-log.jsonl | tail` 可确认总计是否正在填充；若仍为零，说明你安装版本中的字段名已漂移，归约器需要再添加一个别名。
 
-### 执行策略规则（`.rules`）
+#### 变体：发送到 Webhook 以供团队聚合
 
-*第 15 章* 介绍了用于 CI 确定性的 `--ignore-rules`。这是其背后的机制。执行策略规则决定代理可以在沙箱外运行哪些命令，这是位于“操作系统允许什么”（沙箱模式，*第 5 章*）和“代理可以接触哪些文件”（权限配置文件）之间的层。沙箱阻止命令造成损害，而规则决定命令是否允许运行。
-
-规则位于用 Starlark 编写的 `.rules` 文件中，Starlark 是一种小型的、类 Python 的配置语言，无副作用。Codex 在启动时从多个层加载它们：团队配置、用户层 `~/.codex/rules/` 和项目本地 `<repo>/.codex/rules/`（仅当该 `.codex/` 目录受信任时加载项目层）。撰写时为实验性功能。
-
-核心结构是 `prefix_rule()`，它通过前导标记匹配命令并分配决策：
-
-```
-prefix_rule(
-    pattern = ["gh", "pr", ["view", "list"]],
-    decision = "prompt",
-    justification = "Reading PRs is fine, but flag it for visibility.",
-    match = ["gh pr view 7888", "gh pr list --state open"],
-    not_match = ["gh pr merge 7888"],
-)
-```
-
-每个 `pattern` 元素要么是字面标记，要么是该位置匹配的替代列表（并集），因此上述规则涵盖 `gh pr view` 和 `gh pr list`，但不包括 `gh pr merge`。`decision` 为 `allow`（默认）、`prompt`（仅在人工批准后运行）或 `forbidden`（从不运行）。可选的 `justification` 显示在批准提示和审计输出中；`match` 和 `not_match` 是规则应捕获和不应捕获的示例命令，供离线验证器使用。
+将脚本主体替换为 `curl` 而非 `jq` 追加。在 Shell 配置文件中一次性设置 `CODEX_COST_WEBHOOK`，以将 URL 保留在源码控制之外：
 
 
 
-当多条规则匹配同一条命令时，最严格的决策生效：`forbidden` 高于 `prompt` 高于 `allow`。Codex 会按安全操作符（`&&`、`||`、`;`、`|`）拆分 Shell 链并分别评估每条命令；使用了重定向、命令替换或变量的调用会被视为单条命令，而不会被拆分。
 
-### 离线验证执行策略规则
+#!/usr/bin/env bash
+##### ~/.codex/scripts/cost-webhook.sh
+set -euo pipefail
+[ -z "${CODEX_COST_WEBHOOK:-}" ] && exit 0
+PAYLOAD="$(cat || echo '{}')"
+TIMESTAMP="$(date -u +%FT%TZ)"
+SESSION="$(jq -r '.session_id // "unknown"' <<<"$PAYLOAD")"
+TURN="$(jq -r '.turn_id // "unknown"' <<<"$PAYLOAD")"
+curl -sS -m 5 -X POST "$CODEX_COST_WEBHOOK" \
+  -H 'content-type: application/json' \
+  -d "$(jq -nc \
+        --arg ts "$TIMESTAMP" \
+        --arg session "$SESSION" \
+        --arg turn "$TURN" \
+        --arg user "${USER:-unknown}" \
+        --argjson payload "${PAYLOAD:-null}" \
+        '{ts:$ts, session:$session, turn:$turn, user:$user, payload:$payload}')" \
+  > /dev/null || true
 
-在部署 Starlark `.rules` 文件之前，可使用 `codex execpolicy check` 进行离线验证：^(¹⁶⁶)
+将 `Stop` 钩子命令指向此脚本。`|| true` 和 `exit 0` 保护遵循第 9 章中的“优雅处理缺失依赖”建议：Webhook 故障应静默退出 `0`，而不是退出 `2` 并在轮次拆解期间显示为错误。
 
-```
-codex execpolicy check \
- --pretty \
- --rules ~/.codex/rules/default.rules \
- -- gh pr view 7888 --json title,body,comments
-```
+#### 变体：会话跨越 Token 阈值时发出警报
 
-输出会显示有效决策（所有匹配规则中最严格的严重级别：`forbidden` > `prompt` > `allow`）以及每条前缀匹配的规则，并显示确切的 `matchedPrefix`。您可以组合多个规则文件：
+Token 阈值检查，适用于在会话累积成本之前捕获失控会话。可通过 `CODEX_COST_ALERT_TOKENS` 调优：
 
 ```
-codex execpolicy check \
- --pretty \
- --rules ~/.codex/rules/default.rules \
- --rules .codex/rules/project.rules \
- -- rm -rf node_modules
+#!/usr/bin/env bash
+##### ~/.codex/scripts/cost-alert.sh
+set -euo pipefail
+THRESHOLD="${CODEX_COST_ALERT_TOKENS:-500000}"
+PAYLOAD="$(cat || echo '{}')"
+SESSION="$(jq -r '.session_id // "?"' <<<"$PAYLOAD")"
+TRANSCRIPT="$(jq -r '.transcript_path // empty' <<<"$PAYLOAD")"
+TOTAL=0
+if [ -n "$TRANSCRIPT" ] && [ -r "$TRANSCRIPT" ]; then
+  TOTAL="$(jq -s '
+    [ .[] | .. | objects | select(has("input_tokens") or has("prompt_tokens")) ]
+    | map(
+        ((.input_tokens // .prompt_tokens // 0) | tonumber? // 0)
+        + ((.output_tokens // .completion_tokens // 0) | tonumber? // 0)
+      )
+    | add // 0' "$TRANSCRIPT" 2>/dev/null || echo 0)"
+fi
+if [ "${TOTAL:-0}" -gt "$THRESHOLD" ]; then
+  MSG="Codex session $SESSION used $TOTAL tokens (threshold $THRESHOLD) in $(pwd)"
+  command -v notify-send >/dev/null && notify-send "Codex cost alert" "$MSG"
+  [ -n "${CODEX_SLACK_WEBHOOK:-}" ] && curl -sS -X POST "$CODEX_SLACK_WEBHOOK" \
+    -H 'content-type: application/json' \
+    -d "$(jq -nc --arg t "$MSG" '{text:$t}')" > /dev/null || true
+fi
 ```
 
-### 上下文溢出症状
+通过在 `"Stop"` 数组下注册多个 `Stop` 条目来堆叠这三个钩子。同一事件的匹配命令钩子可以并发启动，因此不要依赖注册顺序。如果日志记录必须发生在 Webhook 投递或警报之前，请从一个包装器脚本中按顺序调用这些脚本，并仅将该包装器注册为钩子。
 
-当上下文窗口填满时，Agent 会遗忘会话早期的内容：
+对于每次压缩的可观测性，将这些 `Stop` 钩子模式与 `PreL1-Bullet` 钩子配对（相同的 JSON 形状，使用 `"PreL1-Bullet"` 代替 `"Stop"`），记录时间戳和载荷字段。十五分钟内三次自动压缩意味着存在循环，应拆分会话。第 9 章记录了 `PreL1-Bullet` 的 stdin 字段（`session_id`、`turn_id`、`cwd`、`model`、`transcript_path` 和 `trigger`，其值为 `manual` 或 `auto`）以及保存和恢复模式的工作示例；当你需要特定成本形状时请返回此处。
 
-1.  **话题偏移**，忽略前文所述的约束条件
-2.  **工具调用循环**，多次读取同一文件
-3.  **幻觉文件名**，引用不存在的文件
-4.  **莫名其妙的失败**，报告错误的命令结果
+### 成本-质量决策矩阵
 
-会话日志会以百分比显示上下文使用率。达到 70% 至 80% 时，应采取行动。
+许多代理工程任务非常适合由更便宜的模型完成，正确路由它们可以在不牺牲质量的情况下降低成本。
 
-`/compact` 会触发一次总结压缩过程，压缩会话历史以释放上下文空间。这是有损的：压缩后详细的工具调用追踪将不复存在。
+### 决策框架
 
-**重新开始**的时机：Agent 对文件系统状态自信地判断错误超过一次、在修复 Bug 时引入了新 Bug，或任务完成度不足 50% 但上下文使用率已达 80% 以上时。
+**表 14-3. 任务类别和模型推荐**
 
-### 恢复失控会话
+| **任务类别** | **推荐模型** | **推理** |
+| --- | --- | --- |
+| 代码搜索和导航 | `gpt-5.4-mini` | 查找内容需要阅读和模式匹配，而非综合 |
+| 格式化和 Lint 遍历 | `gpt-5.4-mini` | 确定性转换；质量差异可忽略不计 |
+| 已知模式的测试生成 | `gpt-5.4-mini` | 适合成熟习惯用语的优秀模型 |
+| 文档生成 | `gpt-5.4-mini` | 流畅度比深度推理更重要 |
+| 探索性重构 | `gpt-5.4-mini` | 草稿质量可接受；工程师审查 |
+| 复杂多文件重构 | `gpt-5.4` | 跨多文件的连贯性需要完整能力 |
+| 架构设计和审查 | `gpt-5.4` 配合 `high` 推理力度 | 高风险推理；成本合理 |
+| 安全审计 | `gpt-5.4-mini` 配合 `xhigh` 推理力度 | 对抗性推理受益于扩展推理 |
+| 新算法实现 | `gpt-5.4-mini` 配合 `xhigh` 推理力度 | 硬问题受益于推理税 |
+| 大型代码库中的 Bug 诊断 | `gpt-5.4` | 上下文连贯性很重要；mini 可能丢失线索 |
 
-**目标延续与重试循环。** 当触及使用限制或反复遇到阻碍时，目标延续可能会陷入循环：Agent 在无人工干预的情况下重复同一失败动作，消耗 Token 和时间。Codex CLI 会在使用限制或反复阻碍时暂停并将控制权交还给开发者。如果发现 Agent 进入重试循环，最可能的原因是版本过旧，升级即可解决。
+原则：有强模式的任务使用更便宜的模型；模型解决新问题的任务使用更强的模型。
 
-按一次 `Ctrl-C` 即可干净地中断。请勿多次按下；第二次按键可能会取消清理处理程序。
+#### 高力度配置上的推理税
 
-`git stash` 通常比 `git checkout -- .` 更安全，因为它会保留 Agent 的更改以便选择性恢复：
+配置为 `xhigh` 或 `high` 推理力度的模型会在生成输出前“思考”，产生作为输出 Token 计费但不向用户显示的推理 Token。这种推理税使它们每次调用的成本比同一模型在 `medium` 力度下更高，但对于需要这种推理的问题（逻辑错误、复杂状态机、多约束优化），质量提升证明成本是合理的。
 
-```
-git stash
-git stash show -p # 检查暂存的内容
-git stash drop # 拣选后丢弃
-```
+对于常规任务，推理税不值得支付。以 `xhigh` 运行 `gpt-5.4` 生成标准 REST 端点并不会比 `gpt-5.4` 在 `medium` 下产生更好的结果。根据任务是否受益于扩展推理来路由，而不是基于哪个模型在基准测试中“最好”。
 
-`git checkout -- .` 和 `git stash` 均不会移除新的未跟踪文件。使用 `git clean -nfd` 预览，然后用 `git clean -fd` 移除。
+一个快速启发式：如果你能在代理运行前写出正确输出的精确规范，该任务可能不需要高推理力度。如果代理需要探索解空间并权衡取舍，推理税就能赚回成本。
 
-回滚后，花三十秒根据失败会话的教训修订提示词。
+#### 每推理力度 Token 消耗
 
-### 使用 `RUST_LOG` 进行结构化日志记录
+更高推理力度的成本乘数比大多数团队预算的要陡峭，且质量回报是非线性的。
 
-```
-RUST_LOG=debug codex "your task" 2>debug.log
-```
+**表 14-4. 按推理力度级别观察到的 Token 消耗 (gpt-5.4, 代表性编码任务)**
 
-调试日志包含：加载的配置文件、`AGENTS.md` 解析、工具调用分发、沙箱强制执行事件、API 计时和 Token 计数、错误堆栈跟踪。
+| **力度级别** | **输入 Token** | **输出 Token** | **推理 Token** | **总 Token** | **相对成本 (对比 medium)** |
+| --- | --- | --- | --- | --- | --- |
+| `Minimal` | ~12,000 | ~800 | ~200 | ~13,000 | ~0.15x |
+| `low` | ~15,000 | ~1,200 | ~1,500 | ~17,700 | ~0.35x |
+| `medium` | ~20,000 | ~2,500 | ~8,000 | ~30,500 | 1.0x (基准) |
+| `High` | ~25,000 | ~4,000 | ~35,000 | ~64,000 | ~3.5x |
+| `Xhigh` | ~30,000 | ~6,000 | ~120,000 | ~156,000 | ~12x |
 
-```
-grep 'agents_md' debug.log # AGENTS.md 加载
-grep '"type":"dispatch"' debug.log | jq # 工具调用
-grep 'ERROR\|WARN' debug.log # 错误
-```
+推理 Token 是成本驱动因素。在 `xhigh` 下，推理 Token 占总消耗的 75% 以上。这些 Token 作为输出 Token 计费，意味着 `xhigh` 的有效会话成本主要由用户在响应中永远看不见的不可见计算主导。
 
-#### 使用 RUST_LOG 进行模块级追踪
+#### KV 缓存经济学
 
-Codex CLI 由 Rust 构建，基于标准的 `tracing` crate，因此 `RUST_LOG` 环境变量可在模块粒度上控制详细程度。^(¹⁶⁷) Codex CLI crate 的默认级别为 `info`。逐模块定位可让您精准聚焦所需的子系统，而不必淹没在噪音中：
+KV 缓存未命中（模型必须重新计算缓存的键值对，而不是从上一轮重用它们）的成本大约是缓存命中的 10 倍。实际上，会话中断（网络断开、进程重启、`/compact` 操作）带有隐藏成本乘数。持续运行的会话受益于累积上下文的缓存命中；重启的会话支付完整的重新计算成本。
 
-```
-#### 调试核心 Agent 循环，其余保持 info 级别
-RUST_LOG=info,codex_core=debug codex
-#### 调试沙箱行为
-RUST_LOG=codex_sandbox=debug,codex_process_hardening=debug codex
-#### 调试 MCP 服务器连接
-RUST_LOG=codex_core::mcp=debug codex
-```
+实际含义：为长时间运行的任务最小化会话重启。当必须重启时，使用 `codex resume --last` 保留尽可能多的缓存上下文，而不是开始新会话。
 
-若需机器可解析的日志（便于管道传输至日志聚合系统），请将格式设为 JSON：^(¹⁶⁸)
-
-```
-RUST_LOG=debug RUST_LOG_FORMAT=json codex exec "run tests" 2>&1 | tee codex-debug.log
-```
-
-Codex 将 TUI 日志写入 `~/.codex/logs/codex-tui.log` 并自动轮转。在 `codex exec` 模式下，带时间戳的日志文件位于 `~/.codex/logs/codex-tui-<timestamp>.log`。^(¹⁶⁹)
-
-Debug 和 trace 级别可能会使吞吐量降低 10% 至 50%。^(¹⁷⁰) 请将其保留用于主动排查故障，而非生产工作流。
-
-### `codex debug` 子命令
-
-`codex debug` 命令是底层调试工具的入口点：^(¹⁷¹)
-
-```
-#### 列出可用的 debug 子命令
-codex debug --help
-#### 使用单条消息测试 V2 应用服务器协议
-codex debug app-server send-message-v2 "Hello, world"
-```
-
-`send-message-v2` 子命令会初始化应用服务器、启动线程、发送单条用户消息，并将所有服务器通知流式传回终端，以此验证协议工作正常，而无需启动完整的 TUI。
-
-#### 使用 `codex debug models` 进行模型目录内省
-
-`codex debug models` 会查询提供商 API 并报告当前凭据可访问的模型。当会话拒绝启动、回退到意外模型，或因请求的模型不可用而产生降级输出时，请使用它。
-
-```
-codex debug models
-```
-
-输出会列出您的 API 密钥可访问的每个模型。常见场景：
-
-**企业代理环境。** 重写或过滤 API 请求的代理可能会静默阻断某些模型。`codex debug models` 可确认从您的网络位置实际能到达提供商的哪些模型。
-
-**组织级模型限制。** 企业版 OpenAI 账户通常会按 API 密钥或项目限制可用模型。当团队成员反馈 Codex CLI "无法工作" 时，第一步诊断是确认其密钥有权访问 `config.toml` 中指定的模型。
-
-**提供商迁移。** 通过 `OPENAI_BASE_URL` 在 OpenAI、Azure OpenAI 或第三方提供商间切换时，模型名称会有所不同。`codex debug models` 会显示提供商的实际模型目录，而非您假设可用的目录。
-
-```
-#### 结合 grep 检查特定模型
-codex debug models | grep gpt-5.4-mini
-#### 在 CI 中很有用：若预期模型不可用则快速失败
-codex debug models | grep -q "gpt-5.4-mini" || echo "ERROR: gpt-5.4-mini not available"
-```
-
-#### 使用 SLUMP 检测规格漂移
-
-当 Agent 开始产出偏离原始规格的输出、编写了解决不同问题的正确代码时，问题不在于工具故障，而在于**规格漂移**。SLUMP 框架（普渡大学，2026）提供了一种诊断方法：对比早期轮次输出与后期轮次输出对原始规格的忠实度。^(¹⁷²)
-
-实际诊断步骤简明扼要：
-
-1.  **明确规格。** 定位最初的 `PLANS.md`、 `/goal` 目标或定义任务的初始提示词。
-2.  **在两个节点采样输出。** 对比 Agent 在前 10 轮编写的文件与第 30+ 轮的文件。检查两者是否实现了相同的架构决策、使用了指定的模块依赖、遵循了相同的命名约定。
-3.  **专门寻找结构性漂移。** SLUMP 研究表明，Codex CLI 保留了语义正确性（单个组件仍做正确的事），但丧失了结构集成性（组件不再正确连接）。检查导入图和模块依赖；漂移最先显现于此处。
+#### 双峰 ROI 分布
 
 
 
+### 大规模开发者研究
 
-如果检测到偏移，补救措施是重新锚定：将原始规范粘贴回对话中，使用 `/goal` 重述目标，或使用相同的 `PLANS.md` 开启一个新会话。计划模式 (`Shift+Tab`) 提供了一个天然的重新落地点：进入计划模式以根据原始规范审查当前状态，然后退出以恢复执行。
+大规模开发者研究报告称，AI 编码工具带来的生产力提升呈现双峰分布：中位数收益为 10% 至 15%，前四分位数看到 40% 至 60% 的收益，而后四分位数则看到微乎其微或负面影响。^(¹²⁶) 以中位数为基准制定预算，将更高回报视为额外收益。那些以全体开发者 40% 的收益为依据为 AI 工具投资定价的团队将会失望。
 
-详见第 16 章了解完整的 SLUMP 分析和缓解模式。
+#### 工具悖论
 
-### 诊断工作流清单
+生产环境评审中发现了一个反直觉的结果：在受评审的部署中，将可用工具数量从 46 个减少到 19 个，使代理准确率提高了 44%。更多工具会产生更多的上下文开销和更高的决策复杂度。每个工具描述在每次 API 调用中都会消耗 Token（参见第 7 章），而每增加一个工具都会增加错误选择的概率。
 
-出现问题时，按顺序执行以下步骤，先进行低成本检查，最后才进行昂贵的重启：
+连接到会话的每个非必要 `MCP` 服务器都是一个成本倍增器。增加的决策复杂度会导致更长的推理链和更频繁的工具使用错误。
 
-1.  **检查配置**：在 TUI 中运行 `/debug-config` 以验证您的设置是否生效。
+### 提示词缓存：最大的单一成本杠杆
 
-2.  **检查认证**：运行 `codex login status` 以排除凭证问题。
+提示词缓存可降低你所选模型的成本。对于前缀超过 1,024 个 Token 的任何 API 请求，OpenAI 的提示词缓存机制会自动生效。缓存的输入 Token 按高达 90% 的折扣计费（取决于模型；`gpt-5.5` 缓存输入的路由费率约为标准输入费率的 10%），且无需显式加入。^(¹²⁷)
 
-3.  **检查沙箱**：使用 `codex sandbox <platform> -- <command>` 在隔离环境中测试命令。
+在典型的 `Codex CLI` 会话中，系统提示词、工具定义、`AGENTS.md` 内容以及早期的对话轮次构成了一个稳定的前缀，并在每次 API 调用时重新发送。在默认设置和稳定配置下可实现 85% 的缓存命中率，这使得输入 Token 的有效成本在会话生命周期内大幅下降，通常超过一半。^(¹²⁸)
 
-4.  **检查规则**：使用 `codex execpolicy check --pretty --rules <file> -- <command>` 以验证执行策略。
+节省效果随模型路由而复合。一个将探索任务路由至 `gpt-5.4-mini` 并实现高缓存命中率的团队，支付的成本仅为天真使用未缓存 `gpt-5.4` 基准成本的一小部分。
 
-5.  **检查模型**：运行 `codex debug models` 以验证预期模型是否可通过您的网络和凭证访问。
+#### 最大化缓存命中的四大实践
 
-6.  **启用追踪**：使用 `RUST_LOG=debug codex` 重启并监控 `~/.codex/logs/codex-tui.log`。
+1.  **保持系统提示词稳定。** 系统提示词中的动态内容（时间戳、构建编号、会话标识符）会在每个会话中使前缀失效。请将易变数据移至用户消息中。
 
-7.  **审查展开记录**：检查失败会话的 JSONL 会话文件。
+2.  **将 AGENTS.md 置于开头并保持其确定性。** `AGENTS.md` 内容被聚合到开发者角色前缀中。如果这些文件包含自动生成的元数据（行数、最后修改日期），每次调用都会产生不同的前缀。将 `AGENTS.md` 的发现固定到特定路径，并避免动态生成的内容。
 
-8.  **提交报告**：运行 `/feedback` 以在关闭前捕获诊断上下文。
+3.  **保持工具顺序一致。** `MCP` 服务器发现顺序必须是确定性的。在会话中途添加、移除或重新排序 `MCP` 服务器会改变前缀并使缓存状态失效。在 `config.toml` 中预先声明每个服务器，并倾向于禁用而非移除。
 
-### 三层可观测性栈
+4.  **在稳定配置下批量处理相似任务。** 从同一配置文件启动、针对同一仓库的并行会话共享相同的系统指令和工具定义。每个项目使用一个配置文件，而不是临时的命令行覆盖，这样连续调用将命中相同的缓存键，并受益于预热的前缀。
 
-本地展开文件是 Codex CLI 调试的基础，但它们只是三层可观测性栈中的一层。每一层服务于不同的调试需求。
+有关缓存机制、前缀布局、反模式和监控的详细处理，请参阅 OpenAI 开发者文档中的提示词缓存部分。
 
-![图 18.1 - 三层可观测性栈](img/B40007_18_01.jpg)
+### 规划模式下的上下文使用可见性
 
-图 18.1 - 三层可观测性栈
+`Codex CLI` 的规划模式将规划与实现分离开来。规划输出包含一个上下文使用指示器，显示规划阶段消耗了多少上下文窗口。
 
-三层可观测性栈的自上而下视图，每一层服务于不同的调试需求。第 1 层是 `~/.codex/sessions` 中的本地展开 JSONL 文件，用于审计和重放；使用 API 密钥的会话会自动追踪至第 2 层，即 OpenAI 平台追踪，它将工具调用、切换和时序渲染为跨度树；团队可从那里导出至第 3 层，即其自有后端（如 Jaeger、Grafana Tempo 或 SigNoz）中的 OTLP/gRPC OpenTelemetry 跨度。
+如果仅规划就消耗了 60% 的上下文窗口，实现阶段将从有限的剩余空间开始，导致早期压缩（这会重置提示词缓存）或上下文溢出（这会终止会话）。任一结果都会浪费 Token。
 
-**第 1 层：本地展开文件** (`~/.codex/sessions/*.jsonL`)。完整的纯追加 JSONL 记录，详见本章开头。最适合审计追踪、合规性检查和会话重放。
+实用工作流：
 
-**第 2 层：OpenAI 平台追踪** (`platform.openai.com/traces`)。Codex CLI 的展开追踪会自动记录工具调用、代码模式切换、会话关系以及多智能体父子链接。当您使用 API 密钥（而非 ChatGPT 套餐）运行 Codex CLI 时，这些追踪会出现在 OpenAI 平台的“日志”下的“追踪”中。^1 每个追踪捕获模型调用（提示词、消耗的 token、推理力度、响应）、工具调用（工具名称、参数、输出）、切换（带线程关系的子智能体生成）、护栏评估（批准决策、策略检查）以及时序数据（时钟时长、排队时间、生成延迟）。仪表板将每个会话渲染为一棵跨度树，可展开以显示确切的工具参数、标准输出/标准错误输出以及批准决议。
+1.  在规划模式下运行任务。
 
-**第 3 层：OTLP 导出至外部后端。** 对于需要在自有可观测性栈中查看追踪的团队，Codex CLI 通过 OTLP/gRPC 导出 OpenTelemetry 跨度。^2 配置位于 `~/.codex/config.toml` 中：
+2.  检查规划输出中的上下文使用指示器。
+
+3.  如果上下文使用率超过 50%，在批准实现前将任务拆分为更小的子任务。
+
+4.  如果上下文使用率低于 30%，任务拥有舒适的剩余空间，可按原样继续。
+
+这避免了代理会话中成本最高的失败模式：任务深入消耗上下文窗口，触发压缩，丢失缓存收益，随后产生需要第二个会话才能完成的不完整输出。在规划阶段捕获上下文膨胀——在花费任何实现 Token 之前——严格比在十次工具调用后发现它更便宜。
+
+### 目标模式与长周期成本
+
+目标模式（第 12 章）解决了一个特定的成本问题：跨越多个会话或经受上下文压缩的任务。如果没有持久化目标，像“将认证模块从 JWT 迁移到 PASETO”这样的长周期目标只存在于对话上下文中，而压缩可能会悄无声息地丢弃目标的子任务和完成状态。代理随后会重复已完成的工作，这是多会话工作流中成本最高的失败模式。
+
+目标状态位于应用服务器内的专用存储层中，而非易失性会话状态中。进度跟踪可在会话重启、上下文压缩和终端崩溃后存活。当你使用 `/goal "将认证模块从 JWT 迁移到 PASETO"` 设定目标时，目标、其子任务及其完成状态会被写入专用数据库。
+
+成本影响有三方面：
+
+1.  **无重复工作。** 目标状态独立于上下文窗口持久化，因此压缩永远不会丢弃进度。以前因压缩重置代理对已完成工作的理解而需要两个会话的任务，现在可在一个会话中完成。
+
+2.  **按目标跟踪 Token 消耗。** 目标按目标跟踪 Token 消耗，让你了解哪些任务昂贵、哪些便宜。如果一个迁移目标在三个会话中消耗了 40 万 Token，你就拥有了下一个形状相似迁移的校准估算值。
+
+3.  **预算感知的续行。** 目标续行在使用限制处停止，而非无限制运行。当目标会话达到其 Token 预算时，代理会检查点进度并停止。下一个会话从检查点恢复。
+
+对于从本章提示词和模型路由部分构建成本优化栈的团队，目标模式增加了第四个维度：时间成本摊销。一个跨三个短小精悍会话完成的目标，消耗的总 Token 可能比触及压缩边界的单次马拉松式会话更少，因为每个短会话都能受益于完整的提示词缓存，并避免了压缩后的上下文重建惩罚。
+
+### 替代云计费路径
+
+`Codex CLI` 不必直接调用 OpenAI API。对于云支出已集中在 `AWS` 或 `Azure` 的企业，通过匹配的云服务商路由推理，可将 `Codex CLI` 成本保留在同一张发票上，并解锁直接 API 计费不存在的云服务商承诺折扣。撰写时有两家服务商提供第一方 `Codex CLI` 支持：`AWS Bedrock`（内置）和 `Azure OpenAI Service`（配置为自定义服务商）。`GCP Vertex AI` 和 `Anthropic Claude` 目前不作为原生服务商支持。
+
+#### Amazon Bedrock
+
+`Bedrock` 是 `Codex CLI` 的内置模型服务商之一。通过它路由可为你提供：
+
+1.  **承诺使用折扣。** 带有承诺支出协议的 `AWS` 预置吞吐量定价，可为具有可预测量的团队将实际单 Token 成本降低至低于公开的按需费率。
+
+2.  **AWS 账单合并。** `Codex CLI` 推理费用与计算、存储及其他基础设施出现在同一张 `AWS` 发票上，简化了成本归因，避免了单独的 OpenAI 账单关系。
+
+
+
+
+##### 企业级定价层级
+
+拥有 AWS 企业折扣计划 (Enterprise Discount Programs) 的组织，可能会在 Bedrock 推理上获得额外折扣，而这些折扣无法通过直接的 OpenAI API 计费获得。
+
+配置 Codex CLI，使其通过内置的 `amazon-bedrock` 提供商路由配置文件：
 
 ```
-[otel]
-log_user_prompt = true
-exporter = { otlp-grpc = { endpoint = "https://ingest.eu.signoz.cloud:443", headers = { "signoz-ingestion-key" = "your-key-here" } } }
+##### ~/.codex/bedrock.config.toml
+model = "openai.gpt-5.4"
+model_provider = "amazon-bedrock"
+[model_providers.amazon-bedrock.aws]
+profile = "my-aws-profile"   # optional; falls back to default credential chain
+region = "us-west-2"
 ```
 
-对于自托管后端（Jaeger、Grafana Tempo、SigNoz），请使用本地端点：
+认证使用标准 AWS 凭证链 (SigV4)；模型标识符遵循 Bedrock 约定 (`openai.gpt-5.4`, `openai.gpt-5.5`)，而非裸 OpenAI 别名。提示缓存在 Bedrock 上得以保留，因为运行时将其视为与 OpenAI 兼容的端点。
+
+#### Azure OpenAI 服务
+
+Azure OpenAI 服务并非内置提供商，但可通过通用的 `[model_providers.*]` 配置获得全面支持。TOML 结构如下：
 
 ```
-[otel]
-log_user_prompt = true
-exporter = { otlp-grpc = { endpoint = "http://localhost:4317" } }
+##### ~/.codex/azure.config.toml
+model = "gpt-5.4"
+model_provider = "azure-openai"
+[model_providers.azure-openai]
+name = "Azure"
+base_url = "https://YOUR-RESOURCE.openai.azure.com/openai"
+env_key = "AZURE_OPENAI_API_KEY"
+wire_api = "responses"
+query_params = { "api-version" = "2025-04-01-preview" }
 ```
 
-每个 Codex CLI 会话生成的跨度遵循以下层级：`codex.session` → `codex.turn.N` → `codex.model_call` / `codex.tool.<name>`。关键跨度属性包括 `codex.session_id`、`codex.model`、`codex.tool.name`、`codex.tool.exit_code`，以及每轮的 token 消耗（`codex.tokens.input`、`codex.tokens.cached_input`、`codex.tokens.output`）。
+在环境中设置 `AZURE_OPENAI_API_KEY`。`name = "Azure"` 这一行至关重要：运行时在决定提示缓存是否可用时，会检查是否存在 Azure 形态的提供商，字符串匹配会启用缓存路径。模型标识符与您的 Azure 部署名称匹配；您将名为 `gpt-5.4` 的部署映射到 Azure 门户中的相应模型。
 
-#### 展开-追踪调试归约器
+Azure 路由将 Codex CLI 推理置于您现有的 Azure 订阅上，该订阅可能已包含企业协议折扣或承诺消费定价，这与直接的 OpenAI 计费截然不同。
 
-对于原生终端调试，您可以使用标准 Shell 工具直接检查展开 JSONL。在撰写本文时，Codex 还附带一个实验性的 `codex debug trace-reduce` 辅助工具，但自行查询 JSONL 可使工作流在不同版本间保持可移植性：
+#### 权衡
+
+无论选择哪个提供商，权衡点在于运维方面：与 OpenAI 直接 API 相比，云托管端点可能会增加延迟，且在新模型发布上可能滞后。请在您选择的提供商上端到端地验证提示缓存行为；缓存在 Bedrock 和 Azure 上均可工作，但缓存命中率取决于因提供商而异的基础设施。
+
+经验法则：Codex CLI 推理月支出大约超过 **$5,000** 时，仅云提供商的承诺使用折扣即可抵消运维开销，而账单合并带来的收益也能实现自我回报。低于该门槛时，直接 OpenAI API 计费更简单，且能更快获得新功能。
+
+### 通过代理进行 Token 压缩
+
+本节中的技术属于社区工具，而非 Codex CLI 功能。请将其视为值得针对您自身工作负载进行调查的建议，而非部署推荐：纸面上的成本核算看似诱人，但失效模式切实存在，因此审慎试用是正确的下一步。
+
+#### 代理概念
+
+Token 压缩代理位于 Codex CLI 与模型 API 或生成工具输出的 Shell 之间。无论它位于何处，同四种核心操作发挥作用：
+
+1.  **过滤。** 丢弃不承载信号的行、字段或 token：模型可推断的警告、ANSI 转义序列、重复的堆栈帧、包安装噪音。
+2.  **分组与摘要。** 将重复行折叠为 `N x message`；用最终状态替换冗长的进度流。
+3.  **按结构截断。** 在有意义的边界处截断（模型已理解的函数体、大型差异的中间部分），而非在任意字节数处截断。
+4.  **跨轮次去重。** 发现重复出现的相同文件路径、错误消息或树片段，并通过引用代替重复。
+
+这些正是您在将冗长的 Shell 输出粘贴到聊天窗口前，手动会进行的操作。代理在模型为摄取原始输出付费前，一致地应用这些操作。
+
+最具体的社区示例是 **RTK (Rust Token Killer)**，它作为本地包装器安装，并将观测量大的 Shell 命令 (`git status`、`pytest`、大文件读取) 重写为紧凑摘要。^(¹²⁹) 其自身文档报告称，在常见开发者命令上可实现 60% 至 90% 的减少。同一追踪器上的调试报告还记录了一种失效模式：静默重写减少了输入 token，却导致模型输出 token 增加约 50%，使受影响任务的总成本上升约 18%。
+
+教训是标准的：在采用任何压缩层用于热路径前，请衡量每任务的端到端成本，而非仅看标题上的输入节省。
+
+#### 原始人模式：压缩模型输出
+
+第二种模式压缩对话的另一侧：模型的散文。社区工具 `squeez` 作为 Codex CLI 钩子安装，并在会话开始时注入一个简洁的人设；其约定俗成的名称为**原始人模式**。^(¹³⁰) 该人设要求模型去除冠词、填充词和客套话，精确保留技术术语，并原样保留代码块和错误消息。其意图是减少输出 token，因为输出 token 的按 token 计费单价高于输入。
+
+概念上，这是位于提示词顶部的单条钩子注入指令，大致如下：
+
+> 以原始人模式回复：简练。去除冠词、填充词和客套话。精确保留代码块、文件路径、错误消息和技术术语。仅在提交信息和 PR 描述中使用正常散文。
+
+这可通过 `SessionStart` 或 `UserPromptSubmit` 钩子 (第 9 章) 实现，该钩子将指令写入 stdout 以供注入。像 `squeez` 这样的社区实现将人设和一些相关调整打包在一起；自行编写只需几行 bash 脚本。
+
+杠杆虽小，但副作用显而易见。与工具输出压缩相比，同样的警示更适用于此：模型输出是读者或下一轮代理所见的内容，因此削减其连接组织属于质量风险。一项公开的“原始人语言”实验报告称，其节省 token 的代价是质量严重下降，以至于作者不敢将其用于严肃代码编写。
+
+适合尝试原始人模式的场景：常规实现循环、状态更新、探索性工作（简练沟通可接受的场景）。不适合的场景：教学材料、架构解释、安全敏感型审查、任何缺失连接组织会改变读者理解的场景。
+
+#### 如何调查任一层
+
+若您想在不承诺投入生产的前提下评估这些工具：
+
+1.  选取一项工作负载（一种重复性任务类型，而非您最重要的 PR）。
+2.  运行基准会话，并从本章前文的 `Stop` 钩子捕获每会话总量。
+3.  仅为该工作负载启用代理或钩子；专用配置文件 (见 第 6 章) 可将影响面控制在容器内。
+4.  再次运行相同工作负载，并对比总 token 成本、总时钟时间以及输出的任何定性差异。
+
+这两个层均为独立维护的社区项目，拥有各自的发布节奏和 Bug；若采用任一工具，请固定版本，并将其视为命令或钩子路径中的不可信代码。在开发者会话的同一主机上运行，保留原始输出的逃生通道，并为那些精确输出即产物的命令禁用压缩：迁移、部署、安全扫描、生成文件，以及任何用于事件报告或审计记录的内容。
+
+#### 上下文健康度即成本可观测性
+
+
+
+
+上下文退化在成为质量问题之前，首先是一个成本问题。一个陷入压缩循环的会话——模型进行压缩，随即再次填满上下文，并反复压缩——会在重复读取已处理文件和重复生成已产出摘要上浪费 Token。^(¹³¹) 前文介绍的三个与压缩相关的键（`tool_output_token_limit`、`model_auto_compact_token_limit`、`compact_prompt`）是配置侧的防御手段；`PreL1-Bullet` 钩子则是遥测侧的防御手段。
+
+实用原则：**在上下文使用率达到 60% 时压缩，而非 95%**。等待自动触发意味着压缩在压力下运行，留给高质量摘要的空间更小。在自然任务边界处手动压缩——完成一个子任务后、开始新文件前——能给摘要器更多喘息空间，并降低整个会话生命周期内的总 Token 开销。
+
+#### 本地推理：GB10 盈亏平衡点
+
+对于 Codex CLI API 使用量大的团队，本地推理可以完全消除按 Token 计费的成本。NVIDIA 的 GB10 级硬件（DGX Spark 系列、128 GB 统一内存、Blackwell GPU）是入门门槛。^(¹³²)
+
+按公开硬件价格与每月 `$800` API 支出进行的数量级盈亏平衡测算，回本周期约为 6 个月；若为每月 `$400`，则接近 12 个月。GB10 硬件运行的开放权重模型在常规编码任务上具有竞争力（Qwen3.6-35B-A3B 在 SWE-bench Verified 上报告得分 73.4%，速度约 240 tokens/s），尽管它们在前沿基准测试上落后于 GPT-5.5。
+
+对大多数企业而言，成本最优模式是分层路由：将常规任务（Lint、测试生成、文档编写）路由到运行开放权重模型的本地 GB10，将复杂任务（架构推理、多文件重构）路由到云端 API 以使用前沿模型。*第 17 章*将详细介绍部署拓扑。
 
 ```
-jq '.items[] | select(.type == "tool_call") | {tool: .name, status, duration_ms}' \
- ~/.codex/sessions/2026/05/07/rollout-*.jsonl
+##### ~/.codex/local.config.toml: 常规工作在本地硬件上运行
+model = "qwen3.6-35b-a3b"
+model_provider = "local_gb10"
+##### ~/.codex/cloud.config.toml: 复杂工作在前沿模型上运行
+model = "gpt-5.5"
+model_provider = "openai"
 ```
 
-输出结果提供了工具调用、退出状态和时序的紧凑视图。调整 `jq` 过滤器以隔离失败项、长时间运行的命令，或您展开模式中捕获的 token 使用字段。
+盈亏平衡分析是容易的部分；运营权衡才是其余难点。本地推理将支出从运营支出转为资本支出，增加了硬件刷新周期，并需要安排专人负责模型更新、GPU 驱动兼容性和推理服务器正常运行时间。在 API 支出低于盈亏平衡点时，这很少是正确答案。超过该阈值后，决策通常不再关乎数学计算，而是非成本约束：禁止代码或提示词离开网络的数据驻留规则、云端根本无法触达的物理隔离环境，或前沿模型的边际能力不值得其流出成本或延迟的工作负载。
 
-#### 结合追踪的实用调试工作流
-
-**诊断错误的文件编辑。** 打开 `platform.openai.com/traces`，按会话 ID 筛选，展开编辑错误文件的那一轮，并检查 `apply_patch` 之前是哪些 `read_file` 调用。确认相关文件是否在上下文中，或智能体是否根据命名约定进行了猜测。
-
-**识别缓慢的会话。** JSONL 查询可识别最慢的工具调用：
-
-```
-jq '[.items[] | select(.type == "tool_call")
- | {tool: .name, duration_ms: .duration_ms}]
- | sort_by(-.duration_ms) | .[0:5]' <rollout-file>
-```
-
-**Token 花费归因。** 对于按任务跟踪成本的团队，OTLP 跨度按轮携带 token 计数。类似 `sum by (codex.model)(rate(codex_tokens_output_total[5m]))` 的 Grafana 查询可显示按模型划分的输出 token 燃烧率。
-
-**多智能体关系映射。** 平台追踪仪表板通过 `codex.parent_session_id` 显示子智能体线程间的父子关系，让您能够验证委派指令、识别超出深度限制的子智能体，并将子智能体失败与父智能体重试决策关联起来。
-
-ChatGPT 套餐会话不会出现在 API 平台追踪仪表板中；您需要 API 密钥才能获得平台级可见性。在典型部署中，OTLP 导出给会话时钟时长增加的开销为个位数百分比。
+对大多数团队而言，正确的形态是上述两个配置文件所示的混合模式：本地产能吸纳常规负载，云端处理需要前沿能力的调用，配置系统使路由显式化且可审计。*第 17 章*涵盖了周围部署拓扑，包括网络、模型生命周期，以及混合模式如何与企业安全控制交互。
 
 ### 总结
 
-1.  **会话记录是主要工具。** `~/.codex/sessions/` 中的 JSONL 展开文件记录了一切发生的事情。从末尾向前阅读以找到偏离点，并使用 `jq` 分析工具调用分布和提取批准决策。
+1.  **两个计费面。** ChatGPT 订阅按月按固定席位费收费；席位内，Codex CLI 用量按滚动五小时窗口以积分计量，可选每周限额。API 计费独立，按公开美元费率按 Token 计费。一个由五名工程师组成的编排者/工作者团队，API 账单通常在每月 `$350` 至 `$450` 区间，其中运行 `gpt-5.4-mini` 的工作者按 Token 成本约为 `gpt-5.4` 的三分之一。
 
-2.  **TUI 内的实时诊断。** `/status`、`/debug-config` 和 `/feedback` 可在不离开 TUI 的情况下呈现会话配置、解析后的配置栈和可提交的诊断上下文；使用 `-a untrusted -s read-only` 运行可让您在智能体执行任何操作前检查其意图。
+2.  **主要成本驱动因素是累积历史，而非输出。** 上下文管理（包括 `/compact`）是一项财务决策；*第 7 章*的二次增长分析解释了其形态与杠杆。
 
-3.  **AGENTS.md 静默失败。** `RUST_LOG` 调试级追踪是确认文件已加载的最可靠手段。静默失败的常见原因包括目录错误、编码问题以及指令埋藏过深。
+3.  **成本控制核心在于路由。** 通过命名配置文件进行模型路由（*第 6 章*）是最有效的杠杆：将探索性工作路由到 `gpt-5.4-mini`，将复杂工作路由到 `gpt-5.4` 并开启高推理力度，让推理税物有所值。极速模式以 2 倍至 2.5 倍的积分费率倍数（仅限订阅制）换取约 1.5 倍吞吐量；在开发者等待时间本身有成本的交互式会话中使用，批处理工作则跳过。
 
-4.  **会话前的离线验证。** `codex sandbox` 在智能体使用的精确执行环境下运行命令（在 macOS 上带有 `--log-denials`），`codex execpolicy check` 验证 Starlark `.rules` 文件针对拟议命令的有效性，两者均无需启动会话。
+4.  **提示词缓存是最大的单一成本杠杆。** 缓存输入 Token 最高可享 90% 折扣；结合路由，稳态输入成本仅为原始未缓存费率的一小部分。
 
-5.  **追踪与模型内省。** 带有模块级目标（`codex_core`、`codex_exec`、`codex_sandbox`）的 `RUST_LOG` 提供从单个子系统到完整调试级追踪的粒度日志，而 `codex debug models` 会报告您的凭证能在企业代理或组织级限制后访问哪些模型。
+5.  **使用钩子监控。** `Stop` 钩子是主要机制：在本地记录会话负载、推送到 Webhook 进行团队聚合，或在超阈值时告警。`PreL1-Bullet` 和 `PostL1-Bullet` 钩子既是成本遥测，又能捕捉压缩循环。将 `model_auto_compact_token_limit` 设为上下文容量的 80% 至 85%，限制 `tool_output_token_limit`，并在 60% 时手动压缩，而非等待自动触发。*第 9 章*有实现细节。
 
-6.  **上下文溢出与质量衰退。** 话题偏移、工具调用循环和幻觉文件名预示着上下文窗口已满，且代码质量会在长会话中下降。通过定期 `/compact`、`PostToolUse` 质量检查钩子和会话长度限制来应对这两者。
+6.  **大部分成本浪费藏在工作流中，而非代码。** 研究报告约 28.5% 的智能体 PR 无法合并，主因是审查者放弃、重复提交和不需要的功能。后续隐性成本是人工审查时间，随智能体产出增加而上升，因概念性失败而复合。^(¹³³) 跨模型审查循环上的 SLM 分流层可将纯审查成本降低约 3 倍；双模型审查循环是成本-质量的最佳平衡点，第三个审查者增加成本快于质量。对策是收紧提交纪律，加上将低风险变更路由至自动审查，保留人工审查用于高风险变更。
 
-7.  **干净地中断，刻意地恢复。** 按一次 `Ctrl-C`，然后使用 `git stash` 保留智能体的更改以便有选择地恢复。
+7.  **长周期工作需要计划模式和目标模式。** 计划模式在实施开始前暴露上下文用量，让你在 Token 消耗前拆分膨胀任务。目标模式跨会话持久化目标，消除重复工作失败模式，并增加按目标的 Token 追踪和预算感知续行。
+
+8.  **计费和压缩存在替代路径。** AWS Bedrock（内置）和 Azure OpenAI 服务（自定义提供商）将推理合并到现有云账单上，并解锁承诺用量折扣。社区压缩工具处于两层（工具输出代理如 RTK；输出风格人格如 `squeez` 的原始人模式），值得针对单一工作负载调研后再部署。衡量总任务成本，而非标题式的输入节省；过度压缩可能强制要求额外解释或后续调用。
+
+*第 15 章*将这一成本感知基础延伸至 CI/CD：在流水线中无头运行 Codex CLI、`openai/codex-action` GitHub Action、GitLab 集成，以及 PR 审查、测试生成和依赖更新的生产模式。
+
+### 练习
+
+1.  **构建团队成本估算。** 以“估算团队成本”节中的演算示例为模板。构建您自己团队过去一周 Codex CLI 用量的估算。若无实际用量数据，取五个典型会话并使用 `--debug` 输出测量各会话类型的平均 Token 数。然后将您的估算与 OpenAI 用量仪表盘上的实际成本对比。记录模板中哪些假设与您的现实差异最大。
 
 
 
 
-## 8. Agent Logging Gap (智能体日志缺口)
 
-Agents under-log by default. Unlike human developers, who produce console output and commit messages as side effects of work, agents optimise for task completion and skip observability unless instructed. Enforce logging through `AGENTS.md` instructions ('log every major decision to stdout') and `PostToolUse` hooks.
+### 2. 配置基于概况的路由
 
-智能体默认日志记录不足。与人类开发者不同，后者将控制台输出和提交消息作为工作的副作用产生，智能体则针对任务完成进行优化，除非被指示，否则会跳过可观测性。通过 `AGENTS.md` 指令（“将每个主要决策记录到 stdout”）和 `PostToolUse` 钩子来强制记录日志。
+将三个概况配置为单独的文件（`~/.codex/explore.config.toml`、`~/.codex/commit.config.toml`、`~/.codex/reason.config.toml`）：一个用于探索（`gpt-5.4-mini`），一个用于提交（`gpt-5.4`），一个用于推理任务（`gpt-5.4-mini` 且 `effort` 为 `high`）。添加一个 `Stop` 钩子，将会话成本数据追加到本地日志文件中。在两天内使用适合各任务的概况运行至少十个会话。最后，分析日志并计算如果每个会话都使用提交概况，总成本会是多少。
 
-## 9. The Three-Level Observability Stack (三级可观测性栈)
+### 3. 构建团队成本归因系统
 
-Local rollout files, OpenAI Platform Traces, and OTLP export are complementary: local files for audit and replay, platform traces for visual exploration, and OTLP for team-wide dashboards and alerting.
+如果您的团队共享一个 API 密钥或使用 Codex Cloud，请设计一个成本归因系统。为至少三种不同的用例（交互式开发、CI 流水线、自动化审查）创建单独的 API 密钥（或通过 OpenAI API 元数据字段设置成本标签）。编写一个简短的脚本或 Shell 别名，根据上下文设置正确的密钥或标签。一周后，从 OpenAI 使用仪表板拉取使用明细并验证归因是否生效。计算每个用例的成本，并确定哪个用例单位 token 成本最高，哪个用例总成本最高。
 
-本地回放文件、OpenAI 平台追踪和 OTLP 导出是互补的：本地文件用于审计和回放，平台追踪用于可视化探索，OTLP 用于团队级仪表板和告警。
+### 4. 审计您成本最高的会话
 
-## 10. Work the Checklist Top-Down (自上而下执行清单)
-
-When all else fails, run the cheap checks first: config, auth, sandbox, rules, models, tracing, rollout, feedback.
-
-当其他方法都失效时，先运行低成本检查：配置、认证、沙箱、规则、模型、追踪、回放、反馈。
-
-# Exercises (练习)
-
-1.  **Trace Failed Shell Calls. (追踪失败的 Shell 调用。)** Examine a `transcript.jsonl` and use `jq` to extract all `run_shell` tool calls. Identify which failed and whether the agent detected the failure.
-
-    检查 `transcript.jsonl` 并使用 `jq` 提取所有 `run_shell` 工具调用。识别哪些失败了，以及智能体是否检测到了失败。
-
-2.  **Verify Nested AGENTS.md Loading. (验证嵌套 AGENTS.md 加载。)** Create overlapping `AGENTS.md` files at root and subdirectory level. Run `RUST_LOG=codex_core=debug codex` from the subdirectory and verify both loaded.
-
-    在根目录和子目录层级创建重叠的 `AGENTS.md` 文件。从子目录运行 `RUST_LOG=codex_core=debug codex` 并验证两者均已加载。
-
-3.  **Recover from an Underspecified Prompt. (从欠指定提示词中恢复。)** Give Codex CLI a deliberately underspecified prompt in a throwaway repo. Let it run two to three turns, interrupt, examine the transcript, and write a better prompt.
-
-    在一个临时仓库中给 Codex CLI 一个故意欠指定的提示词。让它运行两到三轮，中断，检查记录，并编写一个更好的提示词。
-
-4.  **Find the Divergence Point. (找到偏离点。)** Use `RUST_LOG=debug` to trace a failing task. Run a task that you expect to fail, capture the debug output, and identify the exact point where the agent's reasoning went wrong. Note the tool-call sequence and the decision that led to failure.
-
-    使用 `RUST_LOG=debug` 追踪一个失败的任务。运行一个你预期会失败的任务，捕获调试输出，并确定智能体推理出错的确切点。记录工具调用序列和导致失败的决策。
-
-5.  **Confirm Model Availability. (确认模型可用性。)** Run `codex debug models` and compare the output to the model specified in your `config.toml`. If the model is missing, change your config to use an available model and verify the session starts successfully.
-
-    运行 `codex debug models` 并将输出与 `config.toml` 中指定的模型进行比较。如果模型缺失，更改配置以使用可用模型，并验证会话能否成功启动。
-
+从您的使用仪表板或本地成本日志中，确定本月您运行的成本最高的 Codex CLI 会话。打开该会话的 `transcript.jsonl`（位于 `~/.codex/sessions/` 中）并分析 token 细分：系统提示词占多少，结束时的对话历史占多少，工具调用结果占多少。找出最大的单一成本贡献者，并设计一种工作流变更（提示词、上下文管理或配置），使类似会话的成本至少降低 20%。

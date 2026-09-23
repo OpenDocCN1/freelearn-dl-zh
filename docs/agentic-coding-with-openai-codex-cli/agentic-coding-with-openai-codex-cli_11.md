@@ -725,3 +725,5 @@ metrics_exporter = { kind = "otlp-http", endpoint = "http://localhost:4317", pro
 
 3.  **完整生命周期集成。** 将 `SessionStart`、`UserPromptSubmit`、`PreToolUse`、`PostToolUse` 和 `Stop` 组合到单个 `hooks.json` 中。设置保守的超时，在每个 Bash 脚本中添加 `set -euo pipefail`，并在 `.codex/scripts/` 内的 README 中记录每个钩子。运行三个会话并查看审计日志。找出至少一处钩子增加意外延迟的情况，并解释如何减少它。
 
+
+
