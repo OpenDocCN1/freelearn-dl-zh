@@ -1,4 +1,4 @@
-# Hooks：拦截 Agent 生命周期
+# 第九章：Hooks：拦截 Agent 生命周期
 
 MCP 向外延伸 Agent 的触达；Hooks 则让您掌控 Agent 自身的生命周期。在十个定义好的节点上，从会话开启到子 Agent 停止，您可以运行 Shell 命令来注入上下文、强制执行策略、记录行为或发送通知，且无需更改 `AGENTS.md` 的任何一行。
 

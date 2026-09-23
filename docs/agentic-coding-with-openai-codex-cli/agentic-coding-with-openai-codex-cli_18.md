@@ -1,5 +1,5 @@
 
-# CI/CD 集成
+# 第十五章：CI/CD 集成
 
 前几章在人工监督每一步的交互模式下运行 Codex CLI。本章将其移入流水线，由代理无人值守运行：无头 `codex exec`、`openai/codex-action` GitHub Action、带有 Duo Agent Platform 的 GitLab CI/CD，以及包括 PR 审查、测试生成、依赖更新和安全修复在内的生产自动化模式。在代理驱动的流水线中，流水线的设计比模型的选择更重要。
 
