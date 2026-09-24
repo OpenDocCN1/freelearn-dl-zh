@@ -1097,4 +1097,4 @@ Skills 直接解决了开发者的一个日常痛点：如何确保 Claude 永�
 
 3. 假设你的项目安装了 25 个 Skills，`description` 字符总预算为 16,000。你如何在严格遵守这一预算的同时，最大化每个 Skill 的触发准确率？哪些类型的 Skills 适合配置 `disable-model-invocation: true`，从而释放宝贵的 `description` 空间？
 
-# 4
+
