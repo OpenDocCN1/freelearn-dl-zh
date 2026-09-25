@@ -60,6 +60,7 @@
 +   [大语言模型解码](docs/dec-llm/README.md)
 +   [C++ 深度学习](docs/deep-learning-with-c/README.md)
 +   [DeepSeek 实战](docs/deepseek-in-practice/README.md)
++   [使用MCP和A2A设计多智能体AI系统](docs/design-multi-agent-ai-systems-using-mcp-and-a2a/README.md)
 +   [PowerPlatform 数字转型指南](docs/dgt-trans-pwrplat/README.md)
 +   [分布式AI系统](docs/distributed-ai-systems/README.md)
 +   [深度学习架构手册](docs/dl-arch-hb/README.md)
