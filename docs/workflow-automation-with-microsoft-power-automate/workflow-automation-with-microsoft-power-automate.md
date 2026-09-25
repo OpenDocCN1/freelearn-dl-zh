@@ -1,3 +1,4 @@
+
 # Microsoft Power Automate 工作流自动化
 
 献给每一位希望技术能再多提供一点点帮助的人。
@@ -12,13 +13,13 @@
 
 # 关于评审员
 
-Steve Miles 是微软 MVP、MCT 和作者，在安全、网络、计算、数据和 AI 基础设施方面拥有超过25 年的经验。他在一家领先的欧洲多云分销商担任高级技术赋能职位，以通过清晰的类比和白板叙述故事来简化复杂技术而闻名。自 1999 年获得首个 Windows NT 微软认证以来，他获得了各个层级的 Azure、安全、数据、AI 和 M365 认证，以及主流云平台的厂商认证。Steve 曾与 Packt 合作编写并技术评审了 10 多本关于微软的书。
+Steve Miles 是微软 MVP、MCT 和作者，在安全、网络、计算、数据和 AI 基础设施方面拥有超过 25 年的经验。他在一家领先的欧洲多云分销商担任高级技术赋能职位，以通过清晰的类比和白板叙述故事来简化复杂技术而闻名。自 1999 年获得首个 Windows NT 微软认证以来，他获得了各个层级的 Azure、安全、数据、AI 和 M365 认证，以及主流云平台的厂商认证。Steve 曾与 Packt 合作编写并技术评审了 10 多本关于微软的书。
 
-你可以在 LinkedIn 上找到他：linkedin.com/in/stemiles7
+你可以在 LinkedIn 上找到他：`linkedin.com/in/stemiles7`
 
-Benedikt Bergmann 是 CRMK Deutschland 的 CEO，居住在德国法兰克福附近。2017年至2024年间，他与妻子家人住在瑞典斯德哥尔摩。期间，他在斯德哥尔摩的 CRM Konsulterna 担任5年的解决方案架构师和开发者。
+Benedikt Bergmann 是 CRMK Deutschland 的 CEO，居住在德国法兰克福附近。2017 年至 2024 年间，他与妻子家人住在瑞典斯德哥尔摩。期间，他在斯德哥尔摩的 CRM Konsulterna 担任 5 年的解决方案架构师和开发者。
 
-Benedikt 的背景是 .NET 开发者，带有一些前端元素。自2014年以来，他一直在 Dynamics 和 Dataverse 中工作，现在实施基于 Dynamics 和 Power Platform 的解决方案。Benedikt 通过他的博客、YouTube 频道和演讲积极与社区分享他的知识。他是 Power Platform 应用生命周期管理领域的领先负责人之一，也是关于该主题的首批专业级书籍之一的作者。2021年初，Benedikt 被评为微软业务应用领域最有价值专业人士（MVP）。
+Benedikt 的背景是 .NET 开发者，带有一些前端元素。自 2014 年以来，他一直在 Dynamics 和 Dataverse 中工作，现在实施基于 Dynamics 和 Power Platform 的解决方案。Benedikt 通过他的博客、YouTube 频道和演讲积极与社区分享他的知识。他是 Power Platform 应用生命周期管理领域的领先负责人之一，也是关于该主题的首批专业级书籍之一的作者。2021 年初，Benedikt 被评为微软业务应用领域最有价值专业人士（MVP）。
 
 ## 前言
 
@@ -94,13 +95,9 @@ Benedikt 的背景是 .NET 开发者，带有一些前端元素。自2014年以�
 
 第 23 章：使用 Copilot 创建和管理流，涵盖了部分新的 Copilot 功能。
 
-
-
-
-
 # 如何充分利用本书
 
-为了充分利用本书的内容，您应该拥有 Microsoft 365 订阅，并可以访问高级 Power Automate 计划，以启用高级连接器、AI 模型和**机器人流程自动化** (RPA)。
+为了充分利用本书的内容，您应该拥有 Microsoft 365 订阅，并可以访问高级 Power Automate 计划，以启用高级连接器、AI 模型和**机器人流程自动化**（RPA）。
 
 您还应该拥有一台连接了网络的计算机，并使用现代浏览器（如 Microsoft Edge 或 Google Chrome）。您可以从 https://www.microsoft.com/en-us/microsoft-365/try 获取免费的 Microsoft 365 订阅。
 
@@ -116,7 +113,7 @@ Benedikt 的背景是 .NET 开发者，带有一些前端元素。自2014年以�
 
 本书中使用了多种文本规范。
 
-CodeInText：表示文本中的代码词、数据库表名、文件夹名、文件名、扩展名、路径名、虚拟 URL、用户输入以及 X/Twitter 账号。例如：“在 **Search connectors and actions** 框中，输入 SharePoint Create new **folder** 并选择 **Create new folder** SharePoint 操作。”
+`CodeInText`：表示文本中的代码词、数据库表名、文件夹名、文件名、扩展名、路径名、虚拟 URL、用户输入以及 X/Twitter 账号。例如：“在 **Search connectors and actions** 框中，输入 SharePoint Create new **folder** 并选择 **Create new folder** SharePoint 操作。”
 
 代码块设置如下：
 
@@ -136,11 +133,11 @@ if [condition equals true], then [do action];else [do other action]
 
 我们随时欢迎读者的反馈。
 
-**一般反馈：** 如果您对本书的任何方面有疑问或有任何一般反馈，请发送电子邮件至 customer@packt.com 联系我们，并在邮件主题中注明书名。
+**一般反馈：** 如果您对本书的任何方面有疑问或有任何一般反馈，请发送电子邮件至 `customer@packt.com` 联系我们，并在邮件主题中注明书名。
 
 **勘误：** 尽管我们尽力确保内容的准确性，但错误仍然不可避免的。如果您在书中发现错误，请向我们报告，我们将不胜感激。请访问 http://www.packt.com/submit-errata，点击 **Submit Errata**（提交勘误）并填写表格。
 
-**盗版：** 如果您在互联网上遇到任何形式的我们作品的非法副本，请向我们提供您的所在地地址或网站名称。请通过 copyright@packt.com 联系我们并附上材料链接。
+**盗版：** 如果您在互联网上遇到任何形式的我们作品的非法副本，请向我们提供您的所在地地址或网站名称。请通过 `copyright@packt.com` 联系我们并附上材料链接。
 
 **如果您对成为作者感兴趣：** 如果您在某个领域拥有专长并对编写或贡献书籍感兴趣，请访问 http://authors.packt.com/。
 
@@ -165,15 +162,20 @@ if [condition equals true], then [do action];else [do other action]
 ![](img/bfc58bb450784476738fab1c5bfe829d_27_1.png)
 
 - 访问本书的无 DRM PDF 副本，可在任何地方、在任何设备上阅读。
+
 - 使用您喜喜欢的电子阅读器使用无 DRM 的 ePub 版本。
+
 - 多设备进度同步：在任何设备上从上次离开的地方继续。
+
 - 高亮和做记：捕捉想法并将阅读转化为持久的知识。
+
 - 书签：在需要时随时保存并重新访问章节。
+
 - 深色模式：通过切换到深色或深褐色主题来减轻眼睛疲劳。
 
 # 如何解锁
 
-扫描二维码（或访问 packtpub.com/unlock）。按名称搜索本书，确认版本，然后按照页面上的步骤操作。
+扫描二维码（或访问 `packtpub.com/unlock`）。按名称搜索本书，确认版本，然后按照页面上的步骤操作。
 
 注意：请妥善您的发票。直接从 Packt 购买的不需要发票。
 
@@ -188,11 +190,17 @@ if [condition equals true], then [do action];else [do other action]
 本书的en包含以下章节：
 
 - 第 1 章：介绍 Microsoft Power Automate
+
 - 第 2 章：开始使用 Power Automate
+
 - 第 3 章：处理电子邮件
+
 - 第 4 章：复制文件
+
 - 第 5 章：创建按钮流
+
 - 第 6 章：生成推送通知
+
 - 第 7 章：处理共享流
 
 # 1
@@ -203,14 +211,18 @@ if [condition equals true], then [do action];else [do other action]
 
 计算机引入了帮助我们做更多事的承诺，但很大程度上导致了为了获得同样的价值，需要做的事情更多了。如果我们能利用技术来处理常规任务，并将我们的精力留给那些需要技能和思考的事情，该有多好？
 
-在书中，我们将学习 Microsoft Power Automate 的基础，该工具旨在帮助您自动化重复性任务并回归价值创造。这个新修订的第三版扩展了**机器人流程自动化 (RPA)、人工智能 (AI)、生成式 AI (GenAI) 和治理。**
+在书中，我们将学习 Microsoft Power Automate 的基础，该工具旨在帮助您自动化重复性任务并回归价值创造。这个新修订的第三版扩展了**机器人流程自动化（RPA）、人工智能（AI）、生成式 AI（GenAI）和治理。**
 
 本章重点在于理解 Power Automate 的一些基本概念以及如何获取它：
 
 - 什么是 Power Automate？
+
 - 选择要自动化的
+
 - 熟悉通用术语
+
 - 扩展到 Power Automate 术语
+
 - 获取 Power Automate
 
 到本章结束时，您将了解 Power Automate 的组件，以及我们何时使用它们来简化日常运营——从电子邮件管理的基础到更复杂的业务操作，再到使用最新的 AI 技术帮助决策。
@@ -232,10 +244,6 @@ Power Automate 是 Power Platform 产品家族的一部分，它是一个工作�
 ![](img/bfc58bb450784476738fab1c5bfe829d_32_0.png)
 
 许多读者可能熟悉 SharePoint 工作流的概念。在 SharePoint 平台上，您可以使用 SharePoint Designer 和 Workflow Manager 等产品，根据工作活动启动业务流程，例如文档被签入到特定的库中。SharePoint 工作流的巨大优点之一是，它们可以在 SharePoint 环境内实现业务流程和任务。
-
-
-
-
 
 # 第 1 章
 
@@ -261,33 +269,31 @@ Power Automate 的能力仅限于你的想象以及你想要集成的应用程�
 
 自动化是一项关键的业务技术，可以减少重复性、低技能任务对劳动力的影响。在考虑业务流程时，它们通常可以分为以下四个象限之一：
 
-![](img/bfc58bb450784476738fab1c5bfe829d_34_0.png)
+![](img/bfc58bb450784476738fab1c5bfe829d_34_0.png) 
+
+
 
 这些象限构成了一个优先级矩阵（有时称为努力-影响-价值-技能矩阵）。以下是每个区域含义的详细说明：
 
-- *高价值，低技能*：需要极少的专家技能，但至关重要或能产生高价值输出。此类任务是自动化的理想选择，并能产生最大的收益。
+- **高价值，低技能**：需要极少的专家技能，但至关重要或能产生高价值输出。此类任务是自动化的理想选择，并能产生最大的收益。
+- **高价值，高技能**：需要人类智能或处理来确定价值、技能和关系；输出是关键的或高价值的。由于其高度个性化的性质，这些流程或任务通常是最不适合自动化的。
+- **低价值，低技能**：需要极少的专家技能，同时产生价值很小的输出。与高价值/低技能任务相比，这些通常也适合自动化。
+- **低价值，高技能**：需要高度的专注或技能，但产生的输出价值很小。这些任务是你通常应该尝试降低优先级，或者确定它们是否真的需要执行。
 
-- **高价值，高技能：**：需要人类智能或处理来确定价值、技能和关系；输出是关键的或高价值的。由于其高度个性化的性质，这些流程或任务通常是最不适合自动化的。
-
-- **低价值，低技能：**需要极少的专家技能，同时产生价值很小的输出。与高价值/低技能任务相比，这些通常也适合自动化。
-
-- **低价值，高技能：**需要高度的专注或技能，但产生的输出价值很小。这些任务是你通常应该尝试降低优先级，或者确定它们是否真的需要执行。
-
-当你检查日常工作中的任务时，可以根据先验矩阵对其进行评估，以帮助理解它是否是可以或应该自动化的。你甚至可能会发现某些业务价值存疑且完全可以放弃的任务。落在*低技能*象限的项目是自动化的很好的候选者。
+当你检查日常工作中的任务时，可以根据先验矩阵对其进行评估，以帮助理解它是否是可以或应该自动化的。你甚至可能会发现某些业务价值存疑且完全可以放弃的任务。落在**低技能**象限的项目是自动化的很好的候选者。
 
 考虑以下示例：
 
 - 运行前一天的销售总额报告是一项需要低专家技能的重复任务。如果可能，你应该寻求自动化此任务。
-
 - 给客户致电跟进已发出的演示机是一项高接触、高价值的活动，但需要人类关系管理的个性化和复杂性才能有效执行。这项任务可能不是自动化的良好候选者。
 
-正如你可以想象的，使用使用 Power Automate 等工具来减少重复的数据处理任务，可以为人们腾出时间，为业务流程和关系增加真正的价值。
+正如你可以想象的，使用使用 `Power Automate` 等工具来减少重复的数据处理任务，可以为人们腾出时间，为业务流程和关系增加真正的价值。
 
-接下来，我们将熟悉 Power Automate 的术语和界面，然后学习如何连接到常用应用程序以解决问题。
+接下来，我们将熟悉 `Power Automate` 的术语和界面，然后学习如何连接到常用应用程序以解决问题。
 
 ### 熟悉通用术语
 
-你已经看到了一些术语，如果你熟悉 SharePoint 或协作工具，它们可能是你所熟悉的。但为了确保我们有一个坚实的基础，我们将回顾一些基础术语，然后开始进入特定的 Power Automate 术语。
+你已经看到了一些术语，如果你熟悉 `SharePoint` 或协作工具，它们可能是你所熟悉的。但为了确保我们有一个坚实的基础，我们将回顾一些基础术语，然后开始进入特定的 `Power Automate` 术语。
 
 ### 业务流程
 
@@ -297,7 +303,7 @@ Power Automate 的能力仅限于你的想象以及你想要集成的应用程�
 - **支持**：这些流程对于主要或运营流程的发生是必要的。例如，购买制造火车所需的材料或培训员工被视为支持流程。
 - **管理**：这些流程用于监督运营和支持流程，或用于改进这些流程。管理流程的示例可能是对采购或员工入职进行审查并提出建议。
 
-自动化可以用于所有这些类别的流程。Power Automate 可用于自动化许多类型业务流程的部分或全部。
+自动化可以用于所有这些类别的流程。`Power Automate` 可用于自动化许多类型业务流程的部分或全部。
 
 ### 流程挖掘
 
@@ -305,35 +311,31 @@ Power Automate 的能力仅限于你的想象以及你想要集成的应用程�
 
 它可以帮助发现减缓、效率低下或无意义的步骤：
 
-- **收集数据**：从企业资源计划（ERP）软件、客户关系管理（CRM）工具或物联网（IoT）设备等系统收集日志
+- **收集数据**：从企业资源计划（`ERP`）软件、客户关系管理（`CRM`）工具或物联网（`IoT`）设备等系统收集日志
 - **绘制流程**：将这些数据转换为显示所采取步骤的视觉地图
 - **分析流程**：寻找延迟、额外步骤或显示此处可以改进运行的模式
 
-这就像使用手机的 GPS 历史记录查看你每天如何通勤——然后找到更快的路线。
+这就像使用手机的 `GPS` 历史记录查看你每天如何通勤——然后找到更快的路线。
 
 ### 工作流
 
 工作流可以被视为实现业务流程的单个任务或组件步骤。例如，员工入职可能是一个业务流程，而订购新电脑或创建用户账户可能是完成员工入职流程的工作流任务。
 
-Power Automate 可用于自动化工作流的部分或全部。
+`Power Automate` 可用于自动化工作流的部分或全部。
 
 ### REST
 
-REST 是 REpresentational State Transfer 的行业缩写。它用于描述与计算机系统交互的方法。在基于 REST 的系统中，客户端设备通常向目标系统的统一资源标识符（URI）发送 HTTP 操作（称为动词），以输入或检索数据。
+`REST` 是 `REpresentational State Transfer` 的行业缩写。它用于描述与计算机系统交互的方法。在基于 `REST` 的系统中，客户端设备通常向目标系统的统一资源标识符（`URI`）发送 `HTTP` 操作（称为动词），以输入或检索数据。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_37_0.png)
 
-> 有关 REST 架构的历史和设计原理的信息，请参考 https://restfulapi.net/。与 Microsoft 365 上的许多技术一样，Power Automate 利用 REST 实现高性能大量的交易。
+> 有关 `REST` 架构的历史和设计原理的信息，请参考 `https://restfulapi.net/`。与 `Microsoft 365` 上的许多技术一样，`Power Automate` 利用 `REST` 实现高性能大量的交易。
 
 ### 扩展 Power Automate 术语
 
-在我们开始使用 Power Automate 时，理解所使用的核心术语是非常重要的。同样重要的是，术语会定期更改，因此如果你在几年前开始使用 Power Automate（当时它还被称为 Flow），你可能需要阅读一遍，并确保你使用的是当前的术语和概念。
+在我们开始使用 `Power Automate` 时，理解所使用的核心术语是非常重要的。同样重要的是，术语会定期更改，因此如果你在几年前开始使用 `Power Automate`（当时它还被称为 `Flow`），你可能需要阅读一遍，并确保你使用的是当前的术语和概念。
 
 以下术语通常按照你在书中遇到的顺序排列，这与它们复杂性和使用程度的增加相对应。你需要理解这些术语，以便选择在何处应用正确的业务逻辑和流程。在阅读本书的过程中，如果你遇到不认识的术语，可以返回此章节以帮助你重新定位。
-
-
-
-
 
 ### 流程 (Flow)
 
@@ -341,14 +343,14 @@ REST 是 REpresentational State Transfer 的行业缩写。它用于描述与计
 
 以下是你可以描述或分类流的某些示例：
 
-- 自动化 (Automated)：根据触发器或事件发生的流。它们可以是基于云端的，也可以基于桌面的。
-- 按钮 (Button)：也称为即时或手动流，在用户启动时发生（例如，通过点击图标或磁片启动流）。
-- 云流 (Cloud flows)：从 Power Automate Web 界面创建的流，通常不需要本地计算能力或访问权限。
-- 计划 (Scheduled)：配置为按特定的时间间隔发生。
-- 审批 (Approval)：一种过程请求，其中请求通过审批链进行路由。
-- 业务流程 (Business process)：由较小任务和工作流组成的高级流程。
-- 机器人流程自动化 (Robotic Process Automation)：也称为 RPA 或用户界面 (UI) 流，RPA 通常用于自动化非 REST 应用程序。机器人流程自动化于 2020 年宣布广泛可用，并利用了 Power Automate Desktop 应用程序。
-- AI 生成器 (AI Builder)：用于在流执行期间帮助决策的人工智能 (AI) 技术。AI Builder 也于 2020 年宣布广泛可用。
+- **自动化 (Automated)**：根据触发器或事件发生的流。它们可以是基于云端的，也可以基于桌面的。
+- **按钮 (Button)**：也称为即时或手动流，在用户启动时发生（例如，通过点击图标或磁片启动流）。
+- **云流 (Cloud flows)**：从 `Power Automate` Web 界面创建的流，通常不需要本地计算能力或访问权限。
+- **计划 (Scheduled)**：配置为按特定的时间间隔发生。
+- **审批 (Approval)**：一种过程请求，其中请求通过审批链进行路由。
+- **业务流程 (Business process)**：由较小任务和工作流组成的高级流程。
+- **机器人流程自动化 (Robotic Process Automation)**：也称为 `RPA` 或用户界面 (`UI`) 流，`RPA` 通常用于自动化非 `REST` 应用程序。机器人流程自动化于 2020 年宣布广泛可用，并利用了 `Power Automate Desktop` 应用程序。
+- **AI 生成器 (AI Builder)**：用于在流执行期间帮助决策的人工智能 (`AI`) 技术。`AI Builder` 也于 2020 年宣布广泛可用。
 
 每个流都有不同的用例、触发器和配置功能。
 
@@ -364,14 +366,15 @@ REST 是 REpresentational State Transfer 的行业缩写。它用于描述与计
 
 图 1.3 – Power Automate 连接器
 
-连接器通常分为两个层级：标准 (standard) 和高级 (premium)。标准连接器通常包含在所有 Power Automate 计划中（例如适用于 Office 365 的 Power Automate），而高级连接器则有额外的成本（来自微软或连接器供应商）。
+连接器通常分为两个层级：标准 (`standard`) 和高级 (`premium`)。标准连接器通常包含在所有 `Power Automate` 计划中（例如适用于 `Office 365` 的 `Power Automate`），而高级连接器则有额外的成本（来自微软或连接器供应商）。
 
 > 扩展 Power Automate
-> 除了使用内置的标准和高级连接器外，你还可以构建自己的连接器来与你自己的应用程序和服务进行交互。虽然此类开发不在本书的涵盖范围内，但你可以在 https://learn.microsoft.com/en-us/connectors/custom-connectors 了解更多信息。
+>
+> 除了使用内置的标准和高级连接器外，你还可以构建自己的连接器来与你自己的应用程序和服务进行交互。虽然此类开发不在本书的涵盖范围内，但你可以在 `https://learn.microsoft.com/en-us/connectors/custom-connectors` 了解更多信息。
 
 ### 连接 (Connections)
 
-在 Power Automate 术语中，连接（connection）是与连接器关联的保存凭据（认为用户名和密码）。
+在 `Power Automate` 术语中，连接（`connection`）是与连接器关联的保存凭据（认为用户名和密码）。
 
 ### 连接引用 (Connection references)
 
@@ -381,9 +384,9 @@ REST 是 REpresentational State Transfer 的行业缩写。它用于描述与计
 
 解决方案是构建和运行流所需的所有对象的集合。解决方案可能包含流本身、连接以及任何其他支持组件。解决方案还实现了应用周期管理功能。
 
-作为解决方案部分的流被称为解决方案感知云流 (solution-aware cloud flows)。书中的大多数流都是作为非解决方案流构建的，但也可以添加到解决方案中。从企业的角度来看，解决方案优于独立流。出于本书的目的，我们将主要关注构建流并探索其功能。
+作为解决方案部分的流被称为解决方案感知云流 (`solution-aware cloud flows`)。书中的大多数流都是作为非解决方案流构建的，但也可以添加到解决方案中。从企业的角度来看，解决方案优于独立流。出于本书的目的，我们将主要关注构建流并探索其功能。
 
-Power Automate Desktop 流只能导出为解决方案。
+`Power Automate Desktop` 流只能导出为解决方案。
 
 ### 触发器 (Triggers)
 
@@ -399,7 +402,7 @@ Power Automate Desktop 流只能导出为解决方案。
 
 步骤由流执行的各个单独评估和操作组成。步骤以有规律的方式排列。步骤经常使用之前执行的操作的输出数据或变量。以下是步骤的一些示例：
 
-- 在 Teams 频道发布消息
+- 在 `Teams` 频道发布消息
 - 读取电子邮件
 - 保存文件
 - 执行计算
@@ -411,7 +414,7 @@ Power Automate Desktop 流只能导出为解决方案。
 
 ### 操作 (Actions)
 
-操作描述了流执行的活动类型（例如复制文件、向 Teams 频道发布或发送电子邮件）。从技术角度来看，一个步骤是一个或多个操作的组。然而，许多人交替使用“操作”和“步骤”这两个词。
+操作描述了流执行的活动类型（例如复制文件、向 `Teams` 频道发布或发送电子邮件）。从技术角度来看，一个步骤是一个或多个操作的组。然而，许多人交替使用“操作”和“步骤”这两个词。
 
 ### 条件 (Conditions)
 
@@ -419,50 +422,46 @@ Power Automate Desktop 流只能导出为解决方案。
 
 ### Dataverse
 
-Dataverse（以前称为 Common Data Service 或 CDS）是一种类似于数据库表的存储机机制，允许组织存储业务数据。术语也发生了几次变化，因此确保大家的理解一致是有关重要的。
+`Dataverse`（以前称为 `Common Data Service` 或 `CDS`）是一种类似于数据库表的存储机机制，允许组织存储业务数据。术语也发生了几次变化，因此确保大家的理解一致是有关重要的。
 
-下表显示了旧的 CDS 术语以及当前对应的 Dataverse 术语：
+下表显示了旧的 `CDS` 术语以及当前对应的 `Dataverse` 术语：
 
-| 旧版 CDS 术语 | 当前 Dataverse 术语 |
-|---|---|
-| 实体 (Entity) | 表 (Table) |
-| 字段或属性 (Field or attribute) | 列 (Column) |
-| 记录 (Record) | 行 (Row) |
-| 选项集或选择列表 (Option set or picklist) | 选项 (Choice) |
-| 多选 (Multi-select) | 多选 (Choices) |
-| 两个选项 (Two options) | 是/否 (Yes/No) |
+| 旧版 CDS 术语                    | 当前 Dataverse 术语       |
+| -------------------------------- | ------------------------- |
+| 实体 (Entity)                    | 表 (Table)                |
+| 字段或属性 (Field or attribute)  | 列 (Column)               |
+| 记录 (Record)                    | 行 (Row)                  |
+| 选项集或选择列表 (Option set or picklist) | 选项 (Choice)    |
+| 多选 (Multi-select)              | 多选 (Choices)            |
+| 两个选项 (Two options)           | 是/否 (Yes/No)            |
 
 表 1.1 - 术语更新
 
-多种应用程序，如 Dynamics 365、Power Apps、Power Automate 和 Power BI 可以与 Dataverse 中的数据交互。高级 Power Automate 场景（例如处理 Dynamics 365 实体，它对不同类型的数据元素复用了旧 CDS 术语）可能需要访问 Dataverse。
+多种应用程序，如 `Dynamics 365`、`Power Apps`、`Power Automate` 和 `Power BI` 可以与 `Dataverse` 中的数据交互。高级 `Power Automate` 场景（例如处理 `Dynamics 365` 实体，它对不同类型的数据元素复用了旧 `CDS` 术语）可能需要访问 `Dataverse`。
 
 ### 网关
 
-网关（也称为数据网关）是安装在本地计算机上的软件应用程序。该应用程序用于方便 Power Platform 服务访问位于本地环境的数据源。例如，可以使用数据网关允许 Power Automate 从本地 SharePoint 服务器列表中读取项目。下面的图显示了数据网关向 Power Automate、Power BI 和 Power Apps 服务提供本地数据：
+网关（也称为数据网关）是安装在本地计算机上的软件应用程序。该应用程序用于方便 `Power Platform` 服务访问位于本地环境的数据源。例如，可以使用数据网关允许 `Power Automate` 从本地 `SharePoint` 服务器列表中读取项目。下面的图显示了数据网关向 `Power Automate`、`Power BI` 和 `Power Apps` 服务提供本地数据：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_43_0.png)
 
 图 1.4 - 数据网关概述
 
-图 1.4 显示的数据网关充当本地数据源与 Power Platform 服务（如 Power Automate、Power BI 和 Power Apps）之间的通道。
+图 1.4 显示的数据网关充当本地数据源与 `Power Platform` 服务（如 `Power Automate`、`Power BI` 和 `Power Apps`）之间的通道。
 
 ### 模板 (Templates)
 
-模板由一组旨在实现预定义目的的连接器、触发器和操作组成。模板允许标准化部署以及常用组件和配置的复用。模板通常发布到 Power Automate 模板库（https://us.flow.microsoft.com/en-us/templates/）。
+模板由一组旨在实现预定义目的的连接器、触发器和操作组成。模板允许标准化部署以及常用组件和配置的复用。模板通常发布到 `Power Automate` 模板库（`https://us.flow.microsoft.com/en-us/templates/`）。
 
 ### 包 (Packages)
 
 与模板类似，包允许你保存并导出流以便复用。你可以内部或外部共享包。如果你在测试环境中开发流，然后需要一种机制将其部署到生产环境，包也是非常有用的。
 
-
-
-
-
 ### 分支
 
 分支用于描述可能发生的不同系列步骤或操作的概念。
 
-你可能决定通过使用条件来调用分支，例如采用**if-then 结构：如果是，则执行操作 1；如果否，则执行操作 2**。如果评估结果需要你的流程根据答案采取不同的路径，那么这种方法可能非常有用。
+你可能决定通过使用条件来调用分支，例如采用 **if-then 结构：如果是，则执行操作 1；如果否，则执行操作 2**。如果评估结果需要你的流程根据答案采取不同的路径，那么这种方法可能非常有用。
 
 在其他情况下，如果你有长时间运行的进程，或者一个分支的输出不需要继续另一个分支的工作流，或者没有其他依赖于特定操作集完成的项，那么你可能决定使用并行分支（可以同时执行的不同动作或逻辑集合）。
 
@@ -470,75 +469,81 @@ Dataverse（以前称为 Common Data Service 或 CDS）是一种类似于数据�
 
 图 1.5 - 基于条件的分支示例
 
-在探索 Power Automate 的过程中，理解这些术语将有助于我们在创建流的过程中有所帮助。
+在探索 `Power Automate` 的过程中，理解这些术语将有助于我们在创建流的过程中有所帮助。
 
-> ### 进阶阅读
-> 虽然我们在本节中涵盖了在书中会遇到的 Power Automate 术语基础，但在 https://learn.microsoft.com/en-us/power-automate/glossary 还有更多内容可以发现。
+> **进阶阅读**
+>
+> 虽然我们在本节中涵盖了在书中会遇到的 `Power Automate` 术语基础，但在 `https://learn.microsoft.com/en-us/power-automate/glossary` 还有更多内容可以发现。
 
 ### 获取 Power Automate
 
 在开始之前，你需要确保你拥有支持你想要创建的流类型的许可证。
 
-如前所述，Power Automate 包含了标准连接器和高级连接器的概念。标准连接器适用于所有 Power Automate 计划，包括随 Microsoft 365 提供的 Power Automate 计划（也称为种子许可证）。高级连接器（或 AI Builder 和机器人流程自动化等功能）可能需要使用独立的 Power Automate 许可证。此外，Power Automate 支持用户许可和容量许可。用户许可直接应用于用户，而容量许可则分配给自动化程序（例如流）：
+如前所述，`Power Automate` 包含了标准连接器和高级连接器的概念。标准连接器适用于所有 `Power Automate` 计划，包括随 `Microsoft 365` 提供的 `Power Automate` 计划（也称为种子许可证）。高级连接器（或 `AI Builder` 和机器人流程自动化等功能）可能需要使用独立的 `Power Automate` 许可证。此外，`Power Automate` 支持用户许可和容量许可。用户许可直接应用于用户，而容量许可则分配给自动化程序（例如流）：
 
-- Power Automate Premium（用户许可）
-- Power Automate Process（容量许可）
-- Power Automate Mining（用户许可）
-- Power Automate Hosted RPA（容量许可）
-- Power Automate per user attended RPA 附加组件计划（容量许可）
-- 旧版 Power Automate P1、P2、每用户和每流计划
+- `Power Automate Premium`（用户许可）
+- `Power Automate Process`（容量许可）
+- `Power Automate Mining`（用户许可）
+- `Power Automate Hosted RPA`（容量许可）
+- `Power Automate` per user attended `RPA` 附加组件计划（容量许可）
+- 旧版 `Power Automate P1`、`P2`、每用户和每流计划
 
-高级计划最适合广泛采用和大量使用 Power Automate 的组织。对于只有少数流被组织内所有人使用的组织来说，基于容量的计划可能更合适。有关有关最新的许可证详细信息和指导，请参阅 https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types 和 https://learn.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq。
+高级计划最适合广泛采用和大量使用 `Power Automate` 的组织。对于只有少数流被组织内所有人使用的组织来说，基于容量的计划可能更合适。有关有关最新的许可证详细信息和指导，请参阅 `https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types` 和 `https://learn.microsoft.com/en-us/power-platform/admin/powerapps-flow-licensing-faq`。
 
 既然这些都介绍了，让我们进入平台吧！
 
 ### 总结
 
-在本章中，我们讨论了 Power Automate 的高层概念，包括它与解决问题（如业务流程或工作流）的关系。我们还涵盖了操作、触发器和条件等介绍性知识概念。理解触发器和连接器的类型将帮助你设计减少重复工作并为组织创造价值的流和业务流程。
+在本章中，我们讨论了 `Power Automate` 的高层概念，包括它与解决问题（如业务流程或工作流）的关系。我们还涵盖了操作、触发器和条件等介绍性知识概念。理解触发器和连接器的类型将帮助你设计减少重复工作并为组织创造价值的流和业务流程。
 
-除了理解功能和术语外，我们还涵盖了 Microsoft Power Automate 自本书上次修订以来的一些更新和更改，包括 Power Automate Desktop 的引入以及机器人流程自动化和 AI Builder 的通用可用（以及生成式 AI 功能的扩展和包含）。
+除了理解功能和术语外，我们还涵盖了 `Microsoft Power Automate` 自本书上次修订以来的一些更新和更改，包括 `Power Automate Desktop` 的引入以及机器人流程自动化和 `AI Builder` 的通用可用（以及生成式 `AI` 功能的扩展和包含）。
 
-我们还提到了利用 Power Automate 功能所需的许可证。
+我们还提到了利用 `Power Automate` 功能所需的许可证。
 
-在下一章中，我们将开始探索 Power Automate 界面并使用它创建简单的流。
+在下一章中，我们将开始探索 `Power Automate` 界面并使用它创建简单的流。
 
 #### 获取本书的 PDF 版本和独家额外福利
-扫描二维码（或访问 packpub.com/unlock）。按书名搜索此书，确认版本，然后按照页面上的步骤操作。
 
-注意：请妥善保存发票。直接从 Packt 购买不需要发票。
+扫描二维码（或访问 `packpub.com/unlock`）。按书名搜索此书，确认版本，然后按照页面上的步骤操作。
+
+注意：请妥善保存发票。直接从 `Packt` 购买不需要发票。
 
 ## 2
 
 ## 开始使用 Power Automate
 
-在第一章中，我们介绍了 Microsoft Power Automate 的一些基本概念。现在你已经熟悉了 Power Automate 背后的一些思想和术语，让我们来看看如何导航界面。
+在第一章中，我们介绍了 `Microsoft Power Automate` 的一些基本概念。现在你已经熟悉了 `Power Automate` 背后的一些思想和术语，让我们来看看如何导航界面。
 
-作为 Power Automate 用户，你将可以访问 Web 门户界面（最常用）以及桌面和移动界面。如果你管理 Microsoft 365 租户，你还将获得一些管理功能的权限。
+作为 `Power Automate` 用户，你将可以访问 Web 门户界面（最常用）以及桌面和移动界面。如果你管理 `Microsoft 365` 租户，你还将获得一些管理功能的权限。
 
 在本章中，我们将探索以下概念：
 
-- 登录 Power Automate
+- 登录 `Power Automate`
 - 学习流是如何运作的
 - 创建你的第一个流
 
-你将学习各个界面的功能，然后我们将创建一个基础流并发布到 Teams 频道。
+你将学习各个界面的功能，然后我们将创建一个基础流并发布到 `Teams` 频道。
 
 让我们开始吧！
 
 ## 登录 Power Automate
 
-Power Automate 有四种不同的体验：
+`Power Automate` 有四种不同的体验：
 
 - 用户端 Web 门户：用户或创建者界面，用于设计、导入、保存、导出和执行流。
 - 移动端应用：用户或创建者界面，用于设计、导入、导出和执行流，专为移动设备定制。
-- 桌面端：最用于创建机器人流程自动化 (RPA) 流。
-- 管理端：对租户的 Power Automate 环境进行整体管理，包括执行或运行次数以及数据网关配置。
+- 桌面端：最用于创建机器人流程自动化 (`RPA`) 流。
+- 管理端：对租户的 `Power Automate` 环境进行整体管理，包括执行或运行次数以及数据网关配置。
 
-Power Automate 租户管理很大程度上超我们从设计角度学习的范围，但如果你需要管理 Power Automate 环境，你将知道从哪里开始。
 
-无论你使用哪种界面，你都需要访问 Power Automate 才能充分利用本书的内容。如果你在组织内部无法访问 Microsoft Power Automate，你可能需要开始 Microsoft 365 试用以获取访问。要开始订阅，请访问 https://www.microsoft.com/en-us/microsoft-365/trial 并点击“Start your free trial”链接。
 
-另外需要注意的是，Microsoft Power Automate 是一个纯云解决方案——没有要求的本地服务器对应项（尽管你可以安装服务器端组件，如数据网关，或在 Windows 10 和 11 计算机上使用 Power Automate Desktop）。Microsoft Power Automate 可在以下 Microsoft 365 云可用：
+# Power Automate 租户管理概述
+
+`Power Automate` 租户管理很大程度上超我们从设计角度学习的范围，但如果你需要管理 `Power Automate` 环境，你将知道从哪里开始。
+
+无论你使用哪种界面，你都需要访问 `Power Automate` 才能充分利用本书的内容。如果你在组织内部无法访问 `Microsoft Power Automate`，你可能需要开始 `Microsoft 365` 试用以获取访问。要开始订阅，请访问 https://www.microsoft.com/en-us/microsoft-365/trial 并点击“Start your free trial”链接。
+
+另外需要注意的是，`Microsoft Power Automate` 是一个纯云解决方案——没有要求的本地服务器对应项（尽管你可以安装服务器端组件，如数据网关，或在 `Windows 10` 和 `11` 计算机上使用 `Power Automate Desktop`）。`Microsoft Power Automate` 可在以下 `Microsoft 365` 云可用：
 
 - 全球商业版：https://make.powerautomate.com
 - 美国政府社区云（中级）：https://gov.microsoft.us
@@ -548,102 +553,95 @@ Power Automate 租户管理很大程度上超我们从设计角度学习的范�
 
 ## 用户端门户界面
 
-用户端门户界面是你设计、管理和执行大部分流的地方。要访问它，你可以登录 http://make.powerautomate.com，或者登录 Microsoft 365 用户端门户 (https://portal.office.com) 并点击 Power Automate 磁贴。如果你使用主权云之一，请使用上一节中的链接或联系你的经销商获取特定链接。
+用户端门户界面是你设计、管理和执行大部分流的地方。要访问它，你可以登录 `http://make.powerautomate.com`，或者登录 `Microsoft 365` 用户端门户 (https://portal.office.com) 并点击 `Power Automate` 磁贴。如果你使用主权云之一，请使用上一节中的链接或联系你的经销商获取特定链接。
 
 Web 门户界面如图 2.1 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_49_0.png)
 
-图 2.1 - Power Automate 首页
+图 2.1 - `Power Automate` 首页
 
 页面左侧部分具有默认导航菜单，包括创建和管理自己的流以及搜索模板和连接器的选项。以下列表描述了可用选项：
 
 - 首页 (Home)：首次登录时显示的仪表板
 - 创建 (Create)：创建新流的界面
 - 模板 (Templates)：仅需自定义的连接器预设流
-- 学习 (Learn)：指向 docs.microsoft.com 上 Power Automate 落地页的链接 (https://learn.microsoft.com/en-us/power-automate)
+- 学习 (Learn)：指向 `docs.microsoft.com` 上 `Power Automate` 落地页的链接 (https://learn.microsoft.com/en-us/power-automate)
 - 我的流 (My flows)：你创建或分享给你的流
 - 审批 (Approvals)：列出你的待处理或过去的审批活动
-
-
-
-
-
-- **解决方案 (Solutions):** 用于管理 Power Platform 应用程序和生命周期的容器
-
-- **流程挖掘 (Process mining):** 用于探索业务流程（如 ERP 或财务工作流）的模板操作
-
-- **桌面流活动 (Desktop flow activity):** 查看有关桌面流、托管机和机组的数据
-
-- **AI Hub纽 (AI Hub):** 访问 AI Builder 模型和生成式 AI 提示词
-
-- **更多 (More):** 顶层菜单项，包含指向可以固定到导航菜单的其他项的链接
-
-- **Power Platform:** 指向其他 Power Platform 组件的链接，例如 Power Apps、Power BI、Power Pages、Copilot Studio 和 Power Platform 管理中心
+- 解决方案 (Solutions): 用于管理 `Power Platform` 应用程序和生命周期的容器
+- 流程挖掘 (Process mining): 用于探索业务流程（如 `ERP` 或财务工作流）的模板操作
+- 桌面流活动 (Desktop flow activity): 查看有关桌面流、托管机和机组的数据
+- AI Hub纽 (AI Hub): 访问 `AI Builder` 模型和生成式 `AI` 提示词
+- 更多 (More): 顶层菜单项，包含指向可以固定到导航菜单的其他项的链接
+- Power Platform: 指向其他 `Power Platform` 组件的链接，例如 `Power Apps`、`Power BI`、`Power Pages`、`Copilot Studio` 和 `Power Platform` 管理中心
 
 在本书中，我们将探索在构建自己的流时会用到的一些组件。
 
 进阶阅读
 
-> 你可能想花些时间查看[连接器](https://www.microsoft.com/en-us/power-platform/connectors)和[模板](https://www.microsoft.com/en-us/power-platform/connectors)，以开始了解你可以与 Power Automate 集成的各种类型的应用程序和服务。你可能希望关注能够帮助你集成组织经常使用的应用程序的连接器和模板。
+> 你可能想花些时间查看[连接器](https://www.microsoft.com/en-us/power-platform/connectors)和[模板](https://www.microsoft.com/en-us/power-platform/connectors)，以开始了解你可以与 `Power Automate` 集成的各种类型的应用程序和服务。你可能希望关注能够帮助你集成组织经常使用的应用程序的连接器和模板。
 
 ## 移动应用界面
 
-Power Automate 移动应用分别适用于 iOS (https://apps.apple.com/us/app/microsoft-flow/id1094928825) 和 Android (https://play.google.com/store/apps/details?id=com.microsoft.flow) 平台，提供类似的设计审美和体验，如下截图所示：
+`Power Automate` 移动应用分别适用于 `iOS` (https://apps.apple.com/us/app/microsoft-flow/id1094928825) 和 `Android` (https://play.google.com/store/apps/details?id=com.microsoft.flow) 平台，提供类似的设计审美和体验，如下截图所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_51_0.png)
-图 2.2 – 用于 iOS 的 Power Automate
+
+图 2.2 – 用于 `iOS` 的 `Power Automate`
 
 登录后，主屏幕上将提供以下选项：
 
-- **我的云 (My clouds):** 显示你创建的流列表
-- **与我共享 (Shared with me):** 显示他人创建并共享给你的流列表
-- **流 (Flows):** 显示你有权访问的流，并按**我的云流**和**与我共享**选项卡进行过滤
-- **即时流 (Instant flows):** 显示过滤后的即时流或按钮流列表
-- **审批 (Approvals):** 显示需要关注的审批列表
-- **+ (创建流):** 允许你使用 Power Automate 移动应用创建新流
+- 我的云 (My clouds): 显示你创建的流列表
+- 与我共享 (Shared with me): 显示他人创建并共享给你的流列表
+- 流 (Flows): 显示你有权访问的流，并按 `我的云流` 和 `与我共享` 选项卡进行过滤
+- 即时流 (Instant flows): 显示过滤后的即时流或按钮流列表
+- 审批 (Approvals): 显示需要关注的审批列表
+- + (创建流): 允许你使用 `Power Automate` 移动应用创建新流
 
 移动应用侧重于展示专门为移动设备定制的流组件和操作。本书的大部分将关注端用户网络门户体验，但我们也鼓励你与移动应用交互。
 
 ## Power Automate Desktop 界面
 
-如第 1 章“介绍 Microsoft Power Automate”所述，Power Automate Desktop 是一种与流交互的新方式。你只能通过 Power Automate Desktop 创建机器人流程自动化流。
+如第 1 章“介绍 `Microsoft Power Automate`”所述，`Power Automate Desktop` 是一种与流交互的新方式。你只能通过 `Power Automate Desktop` 创建机器人流程自动化流。
 
-Power Automate Desktop 应用程序本身供 Windows 10 用户免费下载。但是为了使用高级功能（如 RPA 流），你可能需要获得额外的许可。
+`Power Automate Desktop` 应用程序本身供 `Windows 10` 用户免费下载。但是为了使用高级功能（如 `RPA` 流），你可能需要获得额外的许可。
 
-图 2.3 显示了 Windows 11  Power Automate Desktop 应用：
+图 2.3 显示了 `Windows 11` `Power Automate Desktop` 应用：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_52_0.png)
-图 2.3 – 用于 Windows 11 的 Power Automate Desktop
 
-Power Automate Desktop 允许你查询系统资源，并与文件、浏览器实例、Outlook 和 Excel 等应用程序、命令提示符甚至打印机进行交互。
+图 2.3 – 用于 `Windows 11` 的 `Power Automate Desktop`
 
-我们将在第 18 章“介绍机器人流程自动化”中开始使用 Power Automate Desktop。
+`Power Automate Desktop` 允许你查询系统资源，并与文件、浏览器实例、`Outlook` 和 `Excel` 等应用程序、命令提示符甚至打印机进行交互。
+
+我们将在第 18 章“介绍机器人流程自动化”中开始使用 `Power Automate Desktop`。
 
 ## 管理员界面
 
-此前，管理员需要同时使用 Power Automate 管理中心和 Power Platform 管理中心来管理他们的环境。2021 年，所有功能已合并到 Power Platform 管理中心中。
+此前，管理员需要同时使用 `Power Automate` 管理中心和 `Power Platform` 管理中心来管理他们的环境。2021 年，所有功能已合并到 `Power Platform` 管理中心中。
 
-> 注意：除非你是 Microsoft 365 租户的全局管理员或被专门授予了 Power Platform 管理员角色，否则你对 Power Platform 管理中心仅有只读权限。
+> 注意：除非你是 `Microsoft 365` 租户的全局管理员或被专门授予了 `Power Platform` 管理员角色，否则你对 `Power Platform` 管理中心仅有只读权限。
 
-Power Automate 管理中心 (https://admin.powerplatform.microsoft.com) 允许你跟踪整个租户执行的运行，查看许可证信息、整体环境数据并配置数据丢失防护 (DLP)策略。
+`Power Automate` 管理中心 (https://admin.powerplatform.microsoft.com) 允许你跟踪整个租户执行的运行，查看许可证信息、整体环境数据并配置数据丢失防护 (DLP)策略。
 
-管理中心还允许你管理流水线（Power Platform 应用生命周期管理/持续交付的一部分），以实现开发运维 (DevOps) 和持续集成/持续交付 (CI/CD)软件开发生命周期工作流。
+管理中心还允许你管理流水线（`Power Platform` 应用生命周期管理/持续交付的一部分），以实现开发运维 (DevOps) 和持续集成/持续交付 (CI/CD)软件开发生命周期工作流。
 
-此外，Power Platform 管理中心允许你管理整个 Power Platform 的功能，包括 Power Automate，以及 Dynamics 365、Power BI、Power Pages、Copilot 和 Power Apps，如图 2.4 所示：
+此外，`Power Platform` 管理中心允许你管理整个 `Power Platform` 的功能，包括 `Power Automate`，以及 `Dynamics 365`、`Power BI`、`Power Pages`、`Copilot` 和 `Power Apps`，如图 2.4 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_53_0.png)
 
-虽然本书不会广泛使用管理员界面，但你应该了解它的存在，整个 Microsoft 365 环境的管理员可以配置注册并查看跨组织的统计数据。
+虽然本书不会广泛使用管理员界面，但你应该了解它的存在，整个 `Microsoft 365` 环境的管理员可以配置注册并查看跨组织的统计数据。
 
-现在你已经看到了 Power Automate 的各种界面，让我们来看看流是如何工作的吧！
+现在你已经看到了 `Power Automate` 的各种界面，让我们来看看流是如何工作的吧！
 
 ## 学习流的工作原理
 
-正如你在第 1 章“介绍 Power Automate”中所学到的，流可以包含许多组件，例如触发器（或步骤）、条件、分支和变量。这些组件在通常称为“画布”的设计区域按逻辑模式排列。
+正如你在第 1 章“介绍 `Power Automate`”中所学到的，流可以包含许多组件，例如触发器（或步骤）、条件、分支和变量。这些组件在通常称为“画布”的设计区域按逻辑模式排列。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_54_0.png)
-图 2.5 – 探索 Power Automate 设计画布
+
+图 2.5 – 探索 `Power Automate` 设计画布
 
 触发器是流中的第一个操作。触发器通常连接到资源。触发器可以是自动、手动或基于计划的。
 
@@ -652,63 +650,61 @@ Power Automate 管理中心 (https://admin.powerplatform.microsoft.com) 允许�
 动态值可以用于操作中填充字段，如图 2.6 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_55_0.png)
+
 图 2.6 – 使用动态值
 
-除了动态内容，你还可以使用表达式。表达式是用于进一步处理变量的代码（例如转换时间或替换文本）。表达式可以结合函数（类似于 Excel 语言）以及动态内容来创建新的对象。
+除了动态内容，你还可以使用表达式。表达式是用于进一步处理变量的代码（例如转换时间或替换文本）。表达式可以结合函数（类似于 `Excel` 语言）以及动态内容来创建新的对象。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_55_1.png)
+
 图 2.7 – 探索函数
 
 我们将在第9 章进一步探讨一些常用函数和表达式。现在你只需按照示例选择正确的选项。
 
 ## 创建你的第一个流
 
-查看 Power Automate 作用的最佳方法是创建一个流。在示例中，我们将创建一个监控 X 标签并向通道发送通知的流。此类流对于尝试衡量或捕捉产品或服务的情绪、追踪公共健康话题、监控参与度或其他社交媒体平台上的其他主题警报非常有用。
+查看 `Power Automate` 作用的最佳方法是创建一个流。在示例中，我们将创建一个监控 `X` 标签并向通道发送通知的流。此类流对于尝试衡量或捕捉产品或服务的情绪、追踪公共健康话题、监控参与度或其他社交媒体平台上的其他主题警报非常有用。
 
 ## 理解流组件
 
 此特定的流将依赖于几个组件：
 
-- X 的 API 密钥和密钥（类似于用户名和密码）
-- 监控 X 特定单词或短语的触发器
-- Microsoft 365 身份（用户名和密码）
-- Microsoft Teams 团队
-- 向 Microsoft Teams 发布的操作
+- `X` 的 API 密钥和密钥（类似于用户名和密码）
+- 监控 `X` 特定单词或短语的触发器
+- `Microsoft 365` 身份（用户名和密码）
+- `Microsoft Teams` 团队
+- 向 `Microsoft Teams` 发布的操作
 
-要完成此流，你需要 Microsoft 365 身份（或你在测试环境中使用的身份），以及带有 API 密钥的 X 身份。你还需要访问一个发布消息的 Microsoft Teams 团队。
+要完成此流，你需要 `Microsoft 365` 身份（或你在测试环境中使用的身份），以及带有 API 密钥的 `X` 身份。你还需要访问一个发布消息的 `Microsoft Teams` 团队。
 
 ## 获取 X API 密钥
 
-X 更改了用户与其交互的方式，现在需要 API 密钥才能通过编程读取和发布推文。你需要在 https://developer.x.com 注册。
+`X` 更改了用户与其交互的方式，现在需要 API 密钥才能通过编程读取和发布推文。你需要在 https://developer.x.com 注册。
 
 拥有免费开发者帐户，你可以创建一个包含单个应用程序的项目。要创建应用程序，请按照以下步骤操作：
 
-1. 登录 X 开发者门户 (https://developer.x.com)。
+1. 登录 `X` 开发者门户 (https://developer.x.com)。
 2. 选择“免费开始”。
 3. 在“开发者协议与策略”页面，提供你想使用开发者 API 的原因。勾选复选框同意条款，然后点击“提交”。
 4. 展开项目和应用程序并选择默认项目。
 5. 在“密钥和令牌”选项卡上，点击“重新生成”以创建新的 API 密钥和 API 密钥。
 6. 点击“是，重新生成”。
-
-
-
-
 7. 将它们复制到安全位置以备后后用。完成后，点击“是的，我已保存它们”。
 
-## 您保存了 API Key 和 API Key 密钥吗？
+您保存了 `API Key` 和 `API Key` 密钥吗？
 
 - 将将它们保存在安全的地方
 - 像对待密码或一组密钥一样对待它们
 - 如果安全性已破坏，请重新生成它们
 - 不要将它们存储在公共场所或共享文档中
 
-API Key
+`API Key`
 
 ```
 H9i... Copy
 ```
 
-API Secret
+`API Secret`
 
 ```
 IEML Copy
@@ -719,41 +715,36 @@ IEML Copy
 图 2.10 - 查看 OAuth 密钥和密钥
 
 8. 选择“设置”（Settings）选项卡。
-
 9. 在“用户身份验证设置”（User authentication settings）下，点击“设置”（Set up）。
-
 10. 在“应用权限”（App permissions）下，选择如读取和写入之类的的权限级别。
-
 11. 在“应用类型”（Type of App）下，选择“Web 应用”（Web App）、“自动化应用”（Automated App）或“机器人”（Bot）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_58_0.png)
 
 图 2.11 - 配置身份验证参数
 
-12. 在“应用信息”（App info）下，在“回调 URI / 重定向 URL”（Call-back URI / Redirect URL）字段中输入 https://global.consent.azure-apim.net/redirect。
-
-13. 在“网站 URL”（Website URL）下，输入任何网站（例如个人博客或工作区、x.com 或网站——这不会影响 Power Automate）。
+12. 在“应用信息”（App info）下，在“回调 URI / 重定向 URL”（Call-back URI / Redirect URL）字段中输入 `https://global.consent.azure-apim.net/redirect`。
+13. 在“网站 URL”（Website URL）下，输入任何网站（例如个人博客或工作区、`x.com` 或网站——这不会影响 `Power Automate`）。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_59_0.png)
 
 14. 滚动到页面底部并点击“保存”（Save）。
-
 15. 如果提示，点击“是”以确认更改权限。
-
 16. 最后，将客户端 ID 和客户端密钥复制到安全位置以备后用。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_59_1.png)
 
 17. 点击“完成”（Done）。
 
-在 Web 开发术语中，API 密钥和密钥类似于用户名和密码。您需要这些从您的 Power Automate 流向 X 进行身份验证。
+在 Web 开发术语中，API 密钥和密钥类似于用户名和密码。您需要这些从您的 `Power Automate` 流向 `X` 进行身份验证。
 
 ### 创建 Microsoft Teams 团队
 
-如果您不熟悉 Microsoft Teams，它是一个现代协作软件平台，将多项 Microsoft 技术整合到一个单一的统一用户界面中。您可以在这里学习如何创建团队：https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels。
+如果您不熟悉 `Microsoft Teams`，它是一个现代协作软件平台，将多项 `Microsoft` 技术整合到一个单一的统一用户界面中。您可以在这里学习如何创建团队：https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels。
 
-> 延伸阅读
-> 您也可以在另一本 Packt 书籍《Expert Microsoft Teams Solutions》（ISBN: 978-1810075558）中学习更多关于 Microsoft Teams 的知识。您可以在此处购买该书：https://packpub.com/en-us/product/expert-microsoft-teams-solutions-9781810075558。
+延伸阅读
+
+> 您也可以在另一本 Packt 书籍《Expert Microsoft Teams Solutions》（ISBN: 978-1810075558）中学习更多关于 `Microsoft Teams` 的知识。您可以在此处购买该书：https://packpub.com/en-us/product/expert-microsoft-teams-solutions-9781810075558。
 
 一旦您配置了所需的身份、团队和 API 密钥，我们将开始创建流！
 
@@ -761,17 +752,17 @@ IEML Copy
 
 一旦我们准备好了创建流所需的先决组件（即前面提到的身份和团队），就可以开始配置了。要构建此示例流，请遵循以下步骤：
 
-1. 登录 Power Automate Web 门户（https://powerautomate.microsoft.com）。
+1. 登录 `Power Automate` Web 门户（https://powerautomate.microsoft.com）。
 2. 在页面左侧，点击“创建”（Create）。
 3. 在“我的流”（My Flows）页面上，点击“新建流”（New flow），然后选择“从空白开始创建流”，选择“自动化云流”（Automated cloud flow）。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_60_0.png)
 
-4. 输入流名称。
+4. 输入流名称姓名。
 
 ## 第 2 章
 
-5. 在“选择流触发器”（Choose your flow's trigger）中，输入 X 以过滤与 X 相关的触发器。选择“发布新推文时”（When a new tweet is posted）并点击“创建”（Create）。
+5. 在“选择流触发器”（Choose your flow's trigger）中，输入 `X` 以过滤与 `X` 相关的触发器。选择“发布新推文时”（When a new tweet is posted）并点击“创建”（Create）。
 
 构建自动化云流
 
@@ -804,15 +795,15 @@ IEML Copy
 
 图 2.18 - 配置连接
 
-9. 提示时，点击“登录”（Sign In）授权您的 X 应用代表您访问 X，如图 2.19 所示。
+9. 提示时，点击“登录”（Sign In）授权您的 `X` 应用代表您访问 `X`，如图 2.19 所示。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_63_0.png)
 
-图 2.19 - 登录 X 应用
+图 2.19 - 登录 `X` 应用
 
-10. 如果提示，使用您的用户名和密码登录 X。
+10. 如果提示，使用您的用户名和密码登录 `X`。
 11. 点击“授权”（Authorize）。
-12. 在重定向到 X 弹出窗后，在“搜索”（Search）文本框中输入一个值。您可以输入术语、标签或其他支持的搜索查询。见图 2.20。
+12. 在重定向到 `X` 弹出窗后，在“搜索”（Search）文本框中输入一个值。您可以输入术语、标签或其他支持的搜索查询。见图 2.20。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_63_1.png)
 
@@ -820,8 +811,11 @@ IEML Copy
 
 ## 开始使用 Power Automate
 
-> 注意
-> 所有带有标签的 X 交互都将使用 X API 进行查询，而不仅仅是提供凭据的账户发布的推文。然而，由于 X 新的速率限制和 API 功能，您将需要 Pro 订阅才能看到搜索产生的任何推文数据。
+注意
+
+> 所有带有标签的 `X` 交互都将使用 `X` API 进行查询，而不仅仅是提供凭据的账户发布的推文。然而，由于 `X` 新的速率限制和 API 功能，您将需要 Pro 订阅才能看到搜索产生的任何推文数据。
+
+
 
 13. 关闭弹出窗。
 
@@ -838,8 +832,11 @@ IEML Copy
 图 2.22 - 选择操作
 
 16. 在“参数”（Parameters）选项卡下，在“以...身份发布”（Post as）下，选择“机器人”（bot）。
+
 17. 在“发布到”（Post in）下，选择。
+
 18. 在“团队”（Team）下，选择您创建的团队。
+
 19. 在“通道”（Channel）下，选择可用通道。见图 2.23。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_65_0.png)
@@ -858,7 +855,7 @@ IEML Copy
 
 图 2.25 – 使用动态内容
 
-2. 完成后，点击菜单栏上的“保存”（Save）。
+22. 完成后，点击菜单栏上的“保存”（Save）。
 
 就是这样！您创建了第一个流。现在，为了查看它是如何工作的：
 
@@ -884,7 +881,7 @@ IEML Copy
 
 图 2.27 – 推文后检查 Teams
 
-## 查看流
+### 查看流
 
 任何您都可以可以使用“查看代码”（Peek code）的功能，该功能允许您查看控制步骤函数的底层 JavaScript 对象表示（JSON）代码。
 
@@ -900,13 +897,9 @@ IEML Copy
 
 在下一章中，我们将开始使用 Power Automate 执行常见的电子邮件任务，例如过滤消息和处理附件。
 
+## 获取本书的 PDF 版本和独家额外
 
-
-
-
-# 获取本书的 PDF 版本和独家额外
-
-扫描二维码（或访问 packtub.com/unlock）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
+扫描二维码（或访问 `packtub.com/unlock`）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
 
 注意：请妥善保存发票。直接从 Packt 购买的不需要发票。
 
@@ -919,6 +912,7 @@ IEML Copy
 Power Automate 不使用离散或自定义的代码模块，而是使用基于 REST 的 API 与 Web 服务的数据进行交互。正如你在第 1 章“介绍 Microsoft Power Automate”中所学习到的，连接器被用于连接数据源和端点（以接收、检索、存储或发送数据）。
 
 > 深入探讨
+>
 > 连接器是结构化的配置文件（通常格式为 JavaScript 对象表示，即 JSON），定义了 Power Automate 如何与其他服务交互以完成自动化任务。Power Automate 操作可以发送、接收和处理各种格式的数据——二进制、图像、字符串、JSON、XML 等。
 
 那么，是什么让 Power Automate 区别于之前的自动化技术呢？
@@ -949,7 +943,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 正如你在上一章中看到的，你可以访问动态内容——与唯一项目相关的属性、元数据和内容。在操作电子信箱内容时，你有许多类型的对象可以作为动态内容参数供使用。
 
-例如，当使用 Get Emails (V3) 操作（https://docs.microsoft.com/en-us/connectors/office365/#get-emails-(v3)）检索消息时，你可以处理这些关于消息的常用参数：
+例如，当使用 Get Emails (V3) 操作（`https://docs.microsoft.com/en-us/connectors/office365/#get-emails-(v3)`）检索消息时，你可以处理这些关于消息的常用参数：
 
 - Folder（包含消息的文件夹）
 - To（消息的收件人）
@@ -961,7 +955,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 通过在动态内容表单中处理这些参数或字段，你可以创建带有自定义或个性化信息的流，并评估参数以确保流仅在满足某些条件约束时执行。
 
-要查看可用的数百个连接器和操作的完整列表，请访问 https://docs.microsoft.com/en-us/connectors。
+要查看可用的数百个连接器和操作的完整列表，请访问 `https://docs.microsoft.com/en-us/connectors`。
 
 在下一节中，我们将开始探索 Office 365 电子邮件连接器的某些可能性（尽管在处理 Outlook 或 Gmail 连接器时，许多功能和概念也同样适用）。
 
@@ -983,8 +977,10 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 要开始操作此流，请遵循以下步骤：
 
-1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com)。
+1. 导航到 Power Automate 制作门户（`https://make.powerautomate.com`）。
+
 2. 点击“创建”（Create）并选择“自动化云流”（Automated cloud flow）。
+
 3. 为“流名称”输入值，然后搜索“新邮件到达时”（When a new email arrives）可用触发器：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_74_0.png)
@@ -1003,13 +999,14 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 图 3.2 – 显示触发器弹出窗
 
-在高级参数（Advanced parameters）部分，找到“主题筛选”（Subject Filter）字段。在“主题筛选”框中输入如 report 之类的文本值。这将确保流仅对符合标准的消息执行操作：
+在高级参数（Advanced parameters）部分，找到“主题筛选”（Subject Filter）字段。在“主题筛选”框中输入如 `report` 之类的文本值。这将确保流仅对符合标准的消息执行操作：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_75_1.png)
 
 图 3.3 – 添加主题筛选
 
-7. 在触发器后，点击 + 或“添加操作”（Add an action）按钮。
+7. 在触发器后，点击 `+` 或“添加操作”（Add an action）按钮。
+
 8. 在“添加操作”弹出窗中，搜索“操作”（Compose）操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_76_0.png)
@@ -1017,9 +1014,11 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 3.4 – 添加“操作”操作
 
 > 提示
+>
 > “操作”（Compose）操作是一个有趣的数据操作，允许你构建新值或变量，或对字符串数据执行中间操作。
 
 9. 在“输入”（Inputs）字段中，选择动态值图标（闪电形状）。
+
 10. 选择一个动态值令牌（例如“主题”Subject），将其添加到“输入”字段中。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_76_1.png)
@@ -1028,11 +1027,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 11. 点击“保存”（Save）图标保存此流。
 
-
-
-
-
-# 第 3 章
+### 第 3 章
 
 虽然我们主要通过此流程来学习一些可用选项，但如果你以后需要，可以回来并将其转换为其他用途的内容。
 
@@ -1040,15 +1035,14 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 现在你已经有了一个完整的流程（一个触发器和至少一个其他操作），你可以点击“Test”（测试），然后向被监控的邮箱发送一条消息。我们将检查“Compose”（组合）操作的输出，以查看流程是否执行正确：
 
-- 1. 在菜单栏上，点击**Test**。
-- 2. 在**Test Flow**（测试流程）弹出窗中，点击**Manually**（手动）单选按钮，滚动到弹出窗底部，然后点击**Test**。
+- 1. 在菜单栏上，点击 **Test**。
+- 2. 在 **Test Flow**（测试流程）弹出窗中，点击 **Manually**（手动）单选按钮，滚动到弹出窗底部，然后点击 **Test**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_77_0.png)
 
 图 3.6 – 测试流程
 
 - 3. 向被监控的邮箱发送一封邮件，包含你配置为过滤器的关键词或短语——例如，**expense report**（费用报表）。
-
 - 4. 点击画布上的任何操作来查看流程的输出。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_77_1.png)
@@ -1061,7 +1055,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 在创建流程时，你可能注意到其他基于电子邮件的触发器，它们看起来很相似：“当提到我的新邮件到达时 (V2)”和“当提到我的新邮件到达时 (V3)”。
 
-“当提到我的新邮件到达时”触发器使用特殊的 Microsoft API 调用来检查包含你身份的 @mention（读音为 "at mention"）的消息。它们非常适合寻找专门定制的消息（例如可能被分配任务的消息）。在 Outlook 中创建消息时，使用 @mention 作为收件人会将他们添加到“收件人”行。
+“当提到我的新邮件到达时”触发器使用特殊的 Microsoft API 调用来检查包含你身份的 `@mention`（读音为 "at mention"）的消息。它们非常适合寻找专门定制的消息（例如可能被分配任务的消息）。在 Outlook 中创建消息时，使用 `@mention` 作为收件人会将他们添加到“收件人”行。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_78_0.png)
 
@@ -1073,11 +1067,11 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 有时，你可能还会面临需要处理单封邮件中多个附件的情况。幸运的是，Power Automate 对此也有一些内置的智能能力。
 
-# 第 3 章
+### 第 3 章
 
 在下一个示例中，我们将组合一个执行以下操作的示例流程：
 
-- 监控共享邮箱箱中包含 expense report 字样的消息
+- 监控共享邮箱箱中包含 `expense report` 字样的消息
 - 将附件保存到名为 Expense Reports 的 SharePoint 站点文档库中
 - 将邮件标记为已读
 - 将邮件标记为已完成
@@ -1085,8 +1079,8 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 为了准备此示例做准备，你需要以下内容：
 
-- 一个带有文档库的 SharePoint 站点，你可以在其中保存文件。如果你不确定如何创建站点或库，可以按照 https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-4b28-b60d-f902e1d75939 上的步骤来创建一个，或者使用已连接到 Microsoft Teams 团队的现有文档库。
-- 一个你已被授予管理权限的共享邮箱。如果你不确定如何创建共享邮箱，可以按照 https://learn.microsoft.com/en-us/exchange/collaboration-exo/shared-mailboxes 上的步骤操作，或者直接使用普通用户邮箱。你可能想参考上一个示例中处理普通邮箱的步骤。
+- 一个带有文档库的 SharePoint 站点，你可以在其中保存文件。如果你不确定如何创建站点或库，可以按照 `https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-4b28-b60d-f902e1d75939` 上的步骤来创建一个，或者使用已连接到 Microsoft Teams 团队的现有文档库。
+- 一个你已被授予管理权限的共享邮箱。如果你不确定如何创建共享邮箱，可以按照 `https://learn.microsoft.com/en-us/exchange/collaboration-exo/shared-mailboxes` 上的步骤操作，或者直接使用普通用户邮箱。你可能想参考上一个示例中处理普通邮箱的步骤。
 
 如果你为了跟读这本书而注册了新的 Microsoft 365 试用订阅，你将获得所需的一切。在满足这些要求后，你可以开始创建流程。
 
@@ -1094,7 +1088,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 为了完成此示例，请遵循以下步骤：
 
-- 1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com)。
+- 1. 导航到 Power Automate 制作门户（`https://make.powerautomate.com`）。
 - 2. 点击 **Create**（创建），然后选择 **Automated cloud flow**（自动化云流）。
 - 3. 为 **Flow name**（流程名称）输入值，并搜索触发器 **When a new email arrives in a shared mailbox**（当共享邮箱收到新邮件时）：
 
@@ -1118,9 +1112,9 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 图 3.10 - 选择高级参数
 
-- 在 **Only Attachments**（仅附件）下拉菜单中选择 Yes。
-- 在 **Include Attachments**（包含附件）下拉菜单中选择 Yes。
-- 在 **Subject Filter**（主题过滤器）字段中输入 expense report。见图 3.11。
+- 在 **Only Attachments**（仅附件）下拉菜单中选择 `Yes`。
+- 在 **Include Attachments**（包含附件）下拉菜单中选择 `Yes`。
+- 在 **Subject Filter**（主题过滤器）字段中输入 `expense report`。见图 3.11。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_81_1.png)
 
@@ -1136,7 +1130,13 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 - 13. 点击文件操作打开弹出窗。
 - 14. 在文件弹出窗中，选择选项卡。
 - 15. 在 **Site Address** 字段中，选择要存储文件的站点。
-- 16. 在 **Folder path** 字段中，选择文档库。默认库名为 "Shared"。
+
+
+
+### 处理电子邮件附件
+
+- 16. 在 **Folder path** 字段中，选择文档库。默认库名为 “Shared”。
+
 - 17. 在 **File Name** 字段中，选择动态值 **Name**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_82_1.png)
@@ -1150,20 +1150,26 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 3.14 - 每一个
 
 - 19. 在 **File Content** 字段中，选择动态值 **Content**。
+
 - 20. 在 **Apply to each** 函数外部，点击 **Add action**。
+
 - 21. 搜索 **Mark as read** 并选择 **Mark as read or unread** 操作。
+
 - 22. 在 **Message Id** 字段中，选择动态值 **Id**。
-- 23. 在 **Advanced parameters**下，点击 **Show all**（显示所有）以显示所有参数。
+
+- 23. 在 **Advanced parameters** 下，点击 **Show all**（显示所有）以显示所有参数。
+
 - 24. 在 **Original Mailbox Address** 字段中，选择获取邮件的邮箱名称。
+
 - 25. 在 **Mark** 字段中，选择 Yes（将邮件标记为已读）。
+
 - 26. 添加操作。搜索 **Flag email (v2)** 操作并选择它。
+
 - 27. 在 **Message Id** 字段中，选择动态值 **Id**。
+
 - 28. 在 **Original Mailbox Address** 字段中，再次选择共享邮箱地址。
+
 - 29. 在 **Flag Status** 下拉菜单中，选择 **Complete**（已完成）。
-
-
-
-
 
 ## 第 3 章
 
@@ -1182,6 +1188,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 对于此任务，我们将继续操作当前的费用报告附件流，并回复一条消息，告知发送者文件已收到：
 
 - 1. 导航到流的末并选择“添加操作”（Add action）。
+
 - 2. 由于流使用了共享邮箱箱，请搜索并添加“从共享邮箱箱发送电子邮件 (V2)”（Send email from a shared mailbox (V2)）操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_85_1.png)
@@ -1189,6 +1196,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 3.18 – 添加一个发送邮件的操作
 
 - 3. 在“参数”（Parameters）选项卡中，在“原始邮箱地址”（Original Mailbox Address）下拉菜单中输入共享邮箱箱名称。
+
 - 4. 在“收件人”（To）字段上方，点击“切换到高级模式”（Switch to advanced mode）按钮。这将允许你使用动态值令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_86_0.png)
@@ -1202,6 +1210,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 3.20 - 添加发件人字段
 
 - 6. 在“主题”（Subject）字段中输入值，例如“已收到：”，然后添加“主题”（Subject）动态内容令牌。
+
 - 7. 在“正文”（Body）字段中输入值。如果需要，你可以在此处使用动态值对象，并使用富文本编辑器更改字体或文本属性。参见图 3.21。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_87_0.png)
@@ -1223,7 +1232,9 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 通过执行此流并发送测试消息，你将能够实时检查结果：
 
 - 1. 点击“测试”（Test）打开“测试流”飞出窗口。
+
 - 2. 选择“手动”（Manually）单选按钮，然后点击“测试”。
+
 - 3. 向共享邮箱箱发送符合要求的消息（包含一个附件）且主题包含“费用报告”文本。
 
 接下来，我们将检查流的运行历史和 SharePoint 站点，看看它是否按照我们的预期执行！
@@ -1268,13 +1279,14 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 在本章中我们了解到 Power Automate 可以处理附件。我们还看到了如何使用文件相关操作。在下一章，我们将关注一些文件相关概念，如复制文件。
 
-## 4
+## 第 4 章
 
 ### 复制文件
 
 在上一章“处理电子邮件”中，你看到 Power Automate 可以处理附件。需要自动化附件的流程也可以从自动化这些文件中受益。在本章中，我们将关注一些文件相关概念：
 
 - 学习文件连接器和操作
+
 - 处理文件
 
 在本章结束时，你应该熟悉常用的文件连接器和操作，并能够使用它们在 Microsoft 365 环境和外部存储之间复制数据。
@@ -1286,12 +1298,19 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 可用文件存储机制简述如下：
 
 - SharePoint Online
+
 - OneDrive for Business
+
 - OneDrive
+
 - Azure File Storage
+
 - Google Drive
+
 - Box
+
 - Dropbox
+
 - FTP/SFTP
 
 许多用户和组织主要通过 Power Automate 在 SharePoint Online 和 OneDrive for Business 中处理文件。然而，大多数组织在与合作伙伴、客户或供应商合作时，也会访问或使用其他文件托管和共享机制，因此能够与尽可能平台交互是非常重要的。许多组织，特别是工程、制造、电子数据交换（EDI）或物流领域的组织，可能依赖需要 FTP 或 SFTP 协议的旧系统。Power Automate 的文件处理功能适用于许多这种情况。
@@ -1299,34 +1318,41 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 文件连接器通常具有以下类型的触发操作，允许你创建自动化流：
 
 - 文件创建时
+
 - 文件修改时
+
 - 文件属性被修改时
 
 文件连接器通常允许执行以下类型的操作（取决于连接器以及所连接的服务提供的 API）：
 
 - 更新文件
+
 - 复制文件
+
 - 获取文件元数据
+
 - 删除文件
+
 - 列出文件或文件夹
+
 - 创建或删除文件夹
 
-
-
-
-
-# 第 4 章
-
 - 提取归档文件
+
 - 创建文件共享链接
+
 - 检入或检出文件
 
 最后，连接器允许你提取、管理或操作内容和元数据（关于文件的信息），例如以下内容：
 
 - 文件或文件夹的名称或显示名称（DisplayName）
+
 - 文件或文件夹的唯一 ID
+
 - 文件路径
+
 - 最后修改时间（LastModified）日期和时间
+
 - 文件的媒体类型（MediaType）
 
 除了可以使用文件本身的可用元数据外，你可能还可以包含来自流中其他部分的动态属性，并将其作为文件处理过程的一部分包含其中。
@@ -1346,7 +1372,9 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 假设你的组织有一项要求，对通过特定工作流程的所有内容进行存档备份。在本例中，我们将基于第 3 章“处理电子邮件”中创建的流，保存电子邮件附件并将这些文件附件复制到新的子文件夹。我们将执行一系列步骤来为文件夹计算唯一名称：
 
 - 提取电子邮件的接收时间和日期
-- 使用表达式将日期格式化为 yyyy-MM-dd（四位数字年份、两位月份、两位日期）
+
+- 使用表达式将日期格式化为 `yyyy-MM-dd`（四位数字年份、两位月份、两位日期）
+
 - 将表达式的结果作为文件夹名称的一部分，以指示处理文件的时间
 
 为了完成这些活动，你需要一个带有文档库的 SharePoint 站点，以及文档库内部的一个文件夹。我们将从保存费用报表文件的 SharePoint 站点开始，但你可以使用任何喜欢的站点。
@@ -1357,8 +1385,10 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 按照以下步骤更新流：
 
-- 导航到 Power Automate 网页门户 (https://make.powerautomate.com) 并选择“我的流”（My flows）。
+- 导航到 Power Automate 网页门户 (`https://make.powerautomate.com`) 并选择“我的流”（My flows）。
+
 - 选择你在第 3 章“处理电子邮件”中创建的“费用报表”流旁边的三个点，并点击“编辑”。
+
 - 展开“每一个”（For each 或 Apply to each）循环步骤以展开，如图 4.1 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_97_0.png)
@@ -1366,6 +1396,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 4.1 – 展开步骤
 
 - 4. 在循环步骤内部，点击 `+` 图标（或操作），取决于你的用户界面。
+
 - 5. 在“搜索连接器和操作”框中，输入 `SharePoint Create new folder` 并选择 `Create new folder Sharepoint` 操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_97_1.png)
@@ -1373,11 +1404,13 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 4.2 – 定位 SharePoint 创建新文件夹操作
 
 - 6. 在“站点地址”（Site Address）框中，输入目标 SharePoint 站点。如果你在使用“费用报表”站点，它将显示在下拉列表中。如果你没有在流中使用过此站点，则需要手动输入。
+
 - 7. 在“列表或库”（List or Library）字段中，选择你想要存储文件的文档库。
 
 > 注意：如果你点击文件夹浏览到文档库，根据你的用户界面设置，你可能会看到名为“Shared Documents”（共享文档）的文件夹。然而，在浏览 SharePoint 站点本身时，站点将显示库的显示名称“Documents”（文档）。库路径在 URL 栏中也显示为 `Shared%20Documents`。它们都指向同一个目标。
 
-- 8. 在“文件夹路径”（Folder Path）字段中，输入文件夹结构。根据你的界面版本，你可能会看到用于定位文件夹的浏览选项。如果没有，你只需输入文件夹路径，从文件夹名称开始。如果你正在使用“费用报表” SharePoint 站点，可以使用之前创建的 `ExpenseReports` 文件夹名称。带有两个结尾斜杠（/）的顶层文件夹路径。
+- 8. 在“文件夹路径”（Folder Path）字段中，输入文件夹结构。根据你的界面版本，你可能会看到用于定位文件夹的浏览选项。如果没有，你只需输入文件夹路径，从文件夹名称开始。如果你正在使用“费用报表” SharePoint 站点，可以使用之前创建的 `ExpenseReports` 文件夹名称。带有两个结尾斜杠（`/`）的顶层文件夹路径。
+
 - 9. 选择“插入”（Insert insertion）。见图 4.3。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_98_0.png)
@@ -1399,6 +1432,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 4.5 – 添加接收时间动态内容标记
 
 - 12. 表达式字段将更新。将光标移动到方括号 `[` 和闭合括号 `]` 之间行的行末尾，并添加 `,'yyyy-MM-dd'`。
+
 - 13. 表达式字段现在应显示 `formatDateTime(triggerOutputs()?['body/receivedDateTime'],'yyyy-MM-dd')`。完成后点击“添加”。见图 4.6。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_99_1.png)
@@ -1415,7 +1449,8 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 图 4.7 – 自定义文件夹路径
 
-- 15. 接下来，我们将文件从 ExpenseReports 主文件夹复制到新位置。在““创建新文件夹”操作之后插入一个操作。
+- 15. 接下来，我们将文件从 ExpenseReports 主文件夹复制到新位置。在“创建新文件夹”操作之后插入一个操作。
+
 - 16. 在搜索连接器和操作字段中，输入 `SharePoint Copy file` 并从列表中选择 `Copy file` 操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_100_1.png)
@@ -1423,23 +1458,24 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 图 4.8 – 添加复制文件操作
 
 - 17. 在“当前站点地址”（Current Site Address）字段中，选择流配置保存文件的 SharePoint 站点。
+
 - 18. 在“要复制的文件”（File to Copy）字段中，选择代表原始创建文件操作中保存的文件 ID 的动态内容标记。根据你的用户界面，它可能被称为 `body/Id`。
 
-> 注意：有两个类似的标记：ItemId 和 Id。选择 Id 那个。
+> 注意：有两个类似的标记：`ItemId` 和 `Id`。选择 `Id` 那个。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_101_0.png)
 
 图 4.9 – 选择文件标识
 
 - 19. 在“目标站点地址”（Destination Site Address）下拉列表中，选择你想保存此新归档副本的 SharePoint URL。如果你以前没有在流中使用此 URL，可能需要手动输入。在本例中，你可以直接使用我们已经在使用的“Expense Reports”站点，尽管你可能想创建一个新文件夹（例如“Archive”），以表示这是不同或新的。
+
 - 20. 在“目标文件夹”（Destination Folder）下拉列表中，添加来自“创建新文件夹”操作的“完整路径”（Full Path）动态内容标记。
+
+
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_101_1.png)
 
 图 4.10 – 配置目标文件夹路径
-
-
-
 
 21. 在“如果文件已存在”（If another file is already there）字段中，你可以从四个选项中进行选择：重命名复制（Copy with a new name）、失败此操作（Fail this action）、替换（Replace）和输入自定义值（Enter a custom value）。哪种选项取决于你的业务需求？情况下，我们将选择“重命名复制”。你可以使用“输入自定义值”选项，像我们在上一步中所做的那，使用表达式和动态内容构建自己的命名规范。
 
@@ -1449,31 +1485,33 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 接下来，我们将验证更改的结果。
 
-### 通过测试验证结果
+## 通过测试验证结果
 
 在每次进行更新时，确保语法正确非常重要。虽然流的验证过程非常健壮，但测试以确保你获得预期结果仍然很重要。为此，你可以像在之前的章节中那样使用页面顶部的“测试”（Test）函数。按照以下步骤操作：
 
--1. 点击“测试”打开测试飞出窗口。
--2. 你可以选择手动触发此操作或重用之前运行的数据。在示例中，我们将仅使用成功运行的结果，然后点击“测试”。
--3. 结果应返回成功。如果不是，请检查流的配置并进行任何必要的更新。
+1. 点击“测试”打开测试飞出窗口。
+
+2. 你可以选择手动触发此操作或重用之前运行的数据。在示例中，我们将仅使用成功运行的结果，然后点击“测试”。
+
+3. 结果应返回成功。如果不是，请检查流的配置并进行任何必要的更新。
 
 图 4.11 – 测试更新后的流
 
-### 验证结果
+## 验证结果
 
 虽然看到成功横通常是一个好信号，但它仅表示流没有报错。验证输出是否符合预期同样重要。我们将在下一步查看这一点。
 
-### 验证结果
+## 验证结果
 
 虽然“测试”函数可能显示成功，但这并不一定意味着它是正确的。它只是在没有错误的情况下完成了。当涉及格式化表达式或函数时，许多是区分大小写敏感的。例如，如果你正在处理像 2025 年 3 月这样的日期，并在表达式中使用 `YYYY-MM-DD` 而不是 `yyyy-MM-dd`，你将得到一个名为 `YYYY-MM-DD` 的文件夹，而不是 `2025-03-02`。若要验证你是否实现了预期结果，可以展开并检查每一步生成的值。或者，你可以直接导航到目标库，如下所示：
 
 图 4.12 – 验证测试结果
 
-### 验证值和文件是否存在
+## 验证值和文件是否存在
 
 至此，附加在最近处理的费用报告上的文件已存入命名正确的文件夹中（在我们的示例中，文件夹路径包含了日期和电子邮件地址）。接下来，我们将查看用于处理文件的 Dropbox 连接器。
 
-### 将文件发布到 Dropbox
+## 将文件发布到 Dropbox
 
 另一个流行的文件复制场景是将文件移动到 SharePoint Online 之外的存储。SharePoint Online 的公共站点在多年前已弃用，这使得广泛发布信息变得更加困难。例如，假设你的组织托管了一个 SharePoint 站点，个人在该站点保存准备好用于投标的报价请求 (RFP)，而你需要让这些文件在面向潜在供应商的站点上自动可用。你可以创建一个流来监控该 SharePoint 站点，并将内容复制到 Dropbox 站点以实现此任务。
 
@@ -1481,40 +1519,50 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 要开始操作，请遵循以下步骤：
 
--1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com) 并选择“创建流”（Create flow）。
--2. 选择“自动化云流”（Automated cloud flow）。
--3. 为流输入名称并搜索 SharePoint 触发器“当文件夹中创建或修改文件”（When a file is created or modified in a folder）。选择它并点击“创建”。
+1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com) 并选择“创建流”（Create flow）。
 
-### 构建自动化云流
+2. 选择“自动化云流”（Automated cloud flow）。
+
+3. 为流输入名称并搜索 SharePoint 触发器“当文件夹中创建或修改文件”（When a file is created or modified in a folder）。选择它并点击“创建”。
+
+## 构建自动化云流
 
 通过连接你已使用的应用程序从重复工作中解放出来——自动化警报、报告和其他任务。示例：
 
 - 在业务解决方案中自动收集并存储数据
+
 - 通过对 SQL 数据库的自定义查询生成报告
 
 图 4.14 – 使用 SharePoint 触发器创建新的云流
 
--4. 在画布上，选择该触发器。
--5. 在“站点地址”（Site Address）字段中，输入要监控新文件的 SharePoint 站点 URL。在这种情况下，我们将监控一个名为 PublishedRFPs 的站点。
--6. 在“文件夹 ID”（Folder Id）字段中，选择要监控的文件夹。选择文件夹图标开始浏览，然后选择文件夹名称以选择高亮文件夹，或使用箭头导航到子文件夹。见图 4.15。
+4. 在画布上，选择该触发器。
+
+5. 在“站点地址”（Site Address）字段中，输入要监控新文件的 SharePoint 站点 URL。在这种情况下，我们将监控一个名为 `PublishedRFPs` 的站点。
+
+6. 在“文件夹 ID”（Folder Id）字段中，选择要监控的文件夹。选择文件夹图标开始浏览，然后选择文件夹名称以选择高亮文件夹，或使用箭头导航到子文件夹。见图 4.15。
 
 图 4.15 – 选择要监控的文件夹
 
 7. 添加操作（Add an action）。
+
 8. 在“搜索操作或连接器”字段中，搜索 Dropbox 并选择它。
+
 9. 在标题栏中，根据需要重命名该流。
+
 10. 在“文件路径”（File Path）字段中，使用动态内容。
+
 11. 在“文件名”（File Name）字段中，使用动态内容。
+
 12. 在“内容”（Content）字段中，使用动态内容。
+
 13. 点击“保存”保存更新后的流。
-
-
-
 
 可以通过三种不同的方式创建按钮或即时流：
 
 - 从按钮流模板创建
+
 - 从空白模板创建
+
 - 从包导入
 
 开始的最好方法之一（特别是在处理常见任务时）是查看他人的示例和模板。如果你认为你可能正在做别人以前做过的事情，那么模板是一个极佳的起点。你还可以导入之前保存和导出的流（你将在第 25 节“流的导出、导入和分发”中学习更多内容）。
@@ -1529,7 +1577,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 在下一节中，我们将从 Web 门户创建一个按钮流。
 
-### 创建一个向经理发送电子邮件的按钮流
+## 创建一个向经理发送电子邮件的按钮流
 
 有时，你只需要一个快速表单来回答问题或向某人发送通知，例如由于假期或生病不在办公室。在本节中，我们将配置这个简单的按钮流，向你的经理发送电子邮件，告知你不在办公室。
 
@@ -1538,8 +1586,10 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 为了实现这一点，我们将引入一个新的连接器和一些有趣的操作：
 
 - Office 365 Users 连接器：此连接器允许你连接到 Entra ID 以获取与用户数据相关的信息。你可以在此处了解更多关于 Office 365 连接器的信息：https://learn.microsoft.com/en-us/connectors/office365users/
-- Get my profile (V2) 操作：此操作将从 Entra ID 获取你的特定详细信息。你可以在此处了解更多关于此操作可以访问的属性：https://learn.microsoft.com/en-us/graph/api/resources/user?view=rest-1.0#properties。
-- Get manager (V2) 操作：此操作检索所选用户的经理属性。为了使用此操作，必须配置 Exchange 属性。你可以在此处了解更多关于 Get manager (V2) 操作：https://learn.microsoft.com/en-us/connectors/office365users/#get-manager-(v2)。
+
+- `Get my profile (V2)` 操作：此操作将从 Entra ID 获取你的特定详细信息。你可以在此处了解更多关于此操作可以访问的属性：https://learn.microsoft.com/en-us/graph/api/resources/user?view=rest-1.0#properties。
+
+- `Get manager (V2)` 操作：此操作检索所选用户的经理属性。为了使用此操作，必须配置 Exchange 属性。你可以在此处了解更多关于 `Get manager (V2)` 操作：https://learn.microsoft.com/en-us/connectors/office365users/#get-manager-(v2)。
 
 通过这些新组件，你将能够检索你的用户对象的经理值并发送一封预填充的电子邮件。在完成示例的过程中，请仔细注意处理 Office 365 数据时步骤的顺序——即：先检索你的个人资料数据，然后检索你的经理值。
 
@@ -1548,6 +1598,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 要执行这些步骤，你需要一个配置了经理属性的 Exchange Online 邮箱箱。大多数企业环境已经通过与 Entra ID 的同步设置了这一点。
 
 > 提示
+>
 > 如果你不确定在何处为用户账户配置经理属性，请参阅 https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-users。
 
 按照以下步骤完成示例：
@@ -1561,7 +1612,9 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 从任何设备手动触发的易共享即时流任务，无需重复。
 
 示例：
+
 - 每当 VIP 客户给你发送电子邮件时，获取自动手机警报
+
 - 自动将所有电子邮件附件保存到文件夹中
 
 图 5.2 – 创建即时云流
@@ -1576,41 +1629,41 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 ## 第 5 章
 
-如果你在 Power Automate 内部没有创建任何连接或对 Office 365 进行身份验证，你需要通过点击 Get profile (v2) 操作上的链图标 🔗 来配置身份验证。
+如果你在 Power Automate 内部没有创建任何连接或对 Office 365 进行身份验证，你需要通过点击 `Get profile (V2)` 操作上的链图标 🔗 来配置身份验证。
 
 一旦身份验证成功，添加新操作。
 
-5. 在 Add an action 弹出窗口中，搜索 Office 365 Get manager (V2) 操作并从列表中选择它。
+5. 在 `Add an action` 弹出窗口中，搜索 Office 365 `Get manager (V2)` 操作并从列表中选择它。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_113_0.png)
 
-图 5.4 – 添加 Get manager (v2) 操作
+图 5.4 – 添加 Get manager (V2) 操作
 
-6. 在 Get manager (v2) 操作上，配置 Exchange 属性以使用它。
+6. 在 `Get manager (V2)` 操作上，配置 Exchange 属性以使用它。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_113_1.png)
 
-图 5.5 – 更新 Get manager (v2) 操作
+图 5.5 – 更新 Get manager (V2) 操作
 
-7. 在 Add an action 弹出窗口中，搜索 Office 365 Get manager (V2) 操作并从列表中选择它。
+7. 在 `Add an action` 弹出窗口中，搜索 Office 365 `Get manager (V2)` 操作并从列表中选择它。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_114_0.png)
 
-图 5.6 – 添加 Get manager (v2) 操作
+图 5.6 – 添加 Get manager (V2) 操作
 
-8. 在 Get manager (V2) 弹出窗口中，点击 User 字段。
+8. 在 `Get manager (V2)` 弹出窗口中，点击 `User` 字段。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_114_1.png)
 
 图 5.7 – 在 Get manager (V2) 操作
 
-9. 在 Get profile (V2) 操作下添加 UserName 动态令牌。
+9. 在 `Get profile (V2)` 操作下添加 `UserName` 动态令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_115_0.png)
 
 图 5.8 – 添加 UserName 令牌
 
-10. 悬停以查看底层代码——它应该是 `outputs('Get_profile_(V2)')['body/userName']`。
+10. 悬停以查看底层代码——它应该是 ``outputs('Get_profile_(V2)')['body/userName']``。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_115_1.png)
 
@@ -1618,32 +1671,29 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 11. 添加操作。
 
-12. 在 Add an action 弹出窗口中，搜索 Office 365 Send email (V2) 操作，如**图 5.10** 所示。
+12. 在 `Add an action` 弹出窗口中，搜索 Office 365 `Send email (V2)` 操作，如**图 5.10** 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_115_2.png)
 
 图 5.10 – 添加 Send email (V2) 操作
 
-13. 在 Send email (V2) 流中，点击 To 字段并添加 Get manager (V2) 下的 Mail 动态令牌。
+13. 在 `Send email (V2)` 流中，点击 `To` 字段并添加 `Get manager (V2)` 下的 `Mail` 动态令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_116_0.png)
 
 图 5.11 – 添加 Mail 动态令牌
 
-14. 通过填写 Subject 和 Body 字段完成流。这可以尝试新表达式的好机会。例如，你可以使用 `formatDateTime()` 表达式检索今天的日期并将其格式化为月/日/年。选择 `utcNow()` 表达式作为第一个参数，并将日期作为第二个参数：`formatDateTime(utcNow(), 'MM/dd/yyyy')`
+14. 通过填写 `Subject` 和 `Body` 字段完成流。这可以尝试新表达式的好机会。例如，你可以使用 `formatDateTime()` 表达式检索今天的日期并将其格式化为月/日/年。选择 `utcNow()` 表达式作为第一个参数，并将日期作为第二个参数：`formatDateTime(utcNow(), 'MM/dd/yyyy')`
 
+2. 点击流名称以打开流的属性。
 
-
-
-
-- 2. 点击流名称以打开流的属性。
-- 3. 点击“运行流”以执行流。
+3. 点击“运行流”以执行流。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_117_0.png)
 
 图 5.13 - 运行流
 
-- 4. 在启动流后，您应该收到一条关于流初始执行状态的应用内通知，如图 5.14 所示：
+4. 在启动流后，您应该收到一条关于流初始执行状态的应用内通知，如图 5.14 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_117_1.png)
 
@@ -1651,24 +1701,25 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 关于图 5.14 显示的确认横幅，更有趣的一点是，它只是报告是否成功启动了流，而不是是否实际执行成功。对于这一点，我们需要深入流的运行历史。
 
-### 验证流
+## 验证流
 
 你可以从 Power Automate 制作门户 (https://make.powerautomate.com) 和 Power Automate 移动应用查看流的运行历史。由于我们在本章的大部分都在使用移动应用，因此我们将继续使用它。
 
-- 在 Power Automate 移动应用中，选择“即时流”选项卡。
-- 找到该流并点击三个点图标以展开上下文菜单。点击**详细**显示流的运行历史。
+1. 在 Power Automate 移动应用中，选择“即时流”选项卡。
+
+2. 找到该流并点击三个点图标以展开上下文菜单。点击**详细**显示流的运行历史。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_118_0.png)
 
 图 5.15 - 展开流的上下文菜单
 
-- 3. 检查流的输出。在这种情况下，流实际上失败了，因为流用户的账户没有配置经理。参见**图 5.16**。
+3. 检查流的输出。在这种情况下，流实际上失败了，因为流用户的账户没有配置经理。参见**图 5.16**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_119_0.png)
 
 图 5.16 – 查看流的运行历史
 
-- 4. 解决任何错误并重新运行流。按照步骤 1-3 查看更新后的流运行历史。
+4. 解决任何错误并重新运行流。按照步骤 1-3 查看更新后的流运行历史。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_120_0.png)
 
@@ -1676,18 +1727,17 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 流已完成。如果需要，可以通过检查执行流的用户邮箱箱的“已发送”文件夹来执行进一步验证。由于流已通过身份验证，发出的电子邮件将从发送者的邮箱箱发送（并保存到）该邮箱中。
 
-### 总结
+## 总结
 
 在本章中，我们涵盖了新的连接器和操作，以及通过使用 `formatDateTime()` 表达式对 `utcNow()` 的值进行格式化，并将表达式嵌套在另一个表达式中的示例。通过组合多个表达式，你可以以符合流的格式显示变量数据。
 
-正如你所看到的，即时流对于可以从制作 Web门户或移动设备执行的快速任务非常有用。虽然可以在移动设备上创建即时流，但你可能希望考虑在制作 界面上创建复杂的流，这样就可以同时在屏幕上看到更多的组件。
+正如你所看到的，即时流对于可以从制作 Web门户或移动设备执行的快速任务非常有用。虽然可以在移动设备上创建即时流，但你可能希望考虑在制作界面上创建复杂的流，这样就可以同时在屏幕上看到更多的组件。
 
 在下一章中，我们将学习如何使用推送通知来提高可见性并引起对注意事项的关注。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_121_0.png)
 
-# 6
-## 生成推送通知
+# 6 生成推送通知
 
 推送通知是一种通信机制，用于将消息（通常是弹窗或横幅）传递到终端用户的设备。推送通知是让用户与数据和活动保持连接、驱动参与场景或提示用户执行操作或相关任务的方便方法。
 
@@ -1696,15 +1746,20 @@ Microsoft Power Automate 允许用户作为流的一部分配置他们自己的�
 在本章中，我们将查看推送通知如何工作，以及如何将通知集成到流中。我们将涵盖的主题如下：
 
 - 学习推送通知
+
 - 为来自你经理的邮件配置通知
+
 - 介绍条件
+
 - 创建流
+
 - 检查通知
+
 - 重新制作流
 
 有效使用通知可以帮助你掌握重要任务。让我们开始吧！
 
-### 学习推送通知
+## 学习推送通知
 
 推送通知使用基于订阅的平台通知系统 (PNSes) 进行递送。PNS 是移动平台特有的。平台包括 Android 设备的 Firebase、iOS 平台设备的 Apple 推送通知服务 (APNs) 以及基于 Windows 的设备的 Windows 通知服务。开发多平台应用程序的供应商必须与其希望提供推送通知的每个 PNS 集成。
 
@@ -1717,10 +1772,14 @@ Microsoft Power Automate 允许用户作为流的一部分配置他们自己的�
 为了实现推送通知，开发者必须编写客户端和服务器应用程序，使其能够与推送通知系统通信。推送通知通常包含几个组成部分：
 
 - 移动设备：终端用户设备上的应用程序将在应用程序或服务器基础设施以及平台的推送通知服务注册，在此过程中生成唯一的标识令牌 (token)。
+
 - 应用程序或服务器基础设施：应用程序在终端用户设备上交互的服务或应用程序。
+
 - 平台或推送通知系统：该系统管理应用程序基础设施与用户移动设备之间的通信。PNS 处理网络状况、设备可用性以及由于错误或离线设备导致的重试等事项。
 
 推送通知基于客户端设备与应用程序、应用程序服务器基础设施以及推送通知系统之间的订阅和处理系统。激活时，启用通知的应用程序联系 PNS 并请求一个称为句柄 (handle) 的特殊令牌。该令牌标识请求订阅特定服务的应用程序和单个设备。句柄或令牌代表用户设备和应用程序的唯一配对。它不能用于任何其他应用程序或设备组合。
+
+
 
 当用户配置应用程序接收通知时，应用程序向 PNS 请求句柄并将其保存到应用程序服务器的基础中。当应用程序基础设施发生触发通知的事件时，应用程序基础设施联系 PNS，并提供与事件或通知对应的句柄。反之，PNS 使用句柄联系目标设备上的应用程序。
 
@@ -1728,18 +1787,21 @@ Microsoft Power Automate 允许用户作为流的一部分配置他们自己的�
 
 接下来，你将看到如何配置集成推送通知的移动设备。
 
-### 为来自经理的邮件配置通知
+## 为来自经理的邮件配置通知
 
 配置使用推送通知的流非常简单。你可以向现有流添加通知，也可以创建一个利用推送通知的新流。
 
 在示例中，我们将创建一个新流，当邮箱箱接收来自经理的邮件时发送推送通知。我们将使用在上章中学到的以下组件：
 
-- 连接器：Office 365 Users 和 Outlook
-- 操作：Get my profile (V2) 和 Get manager我们还将引入一个新的连接器和新操作：
+- 连接器：`Office 365 Users` 和 `Outlook`
+- 操作：`Get my profile (V2)` 和 `Get manager`
+
+我们还将引入一个新的连接器和新操作：
 
 - **Notifications 连接器**：此连接器允许与通知服务交互。可以在此处了解更多 notifications 连接器：https://learn.microsoft.com/en-us/connectors/flowpush
+- **Send me a mobile notification 操作**：此操作向移动设备发送推送通知。可以在此处了解更多 `Send me a mobile notification` 操作：https://learn.microsoft.com/en-us/connectors/flowpush#send-me-an-email-notification
 
-- **Send me a mobile notification 操作**：此操作向移动设备发送推送通知。可以在此处了解更多 **Send me a mobile notification** 操作：https://learn.microsoft.com/en-us/connectors/flowpush#send-me-an-email-notification。 **Condition 控制操作**：允许根据条件（例如属性的值）执行不同的操作。可以在此处了解更多 **Condition** 控制：https://learn.microsoft.com/en-us/power-automate/add
+**Condition 控制操作**：允许根据条件（例如属性的值）执行不同的操作。可以在此处了解更多 **Condition** 控制：https://learn.microsoft.com/en-us/power-automate/add
 
 取决于应用程序如何配置，你可能可以配置通知以利用深度链接，深度链接将用户带到相关项目（而不是项目列表）。可以在此处了解更多深度链接：https://www.microsoft.com/en-us/power-platform/blog/powerapps-deep-linking。
 
@@ -1748,9 +1810,6 @@ Microsoft Power Automate 允许用户作为流的一部分配置他们自己的�
 ![](img/bfc58bb450784476738fab1c5bfe829d_126_0.png)
 
 图 6.2 – 条件示例
-
-
-
 
 `if` 语句通常遵循以下示例之一：
 
@@ -1792,7 +1851,7 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 
 任何条件评估的结果都是布尔值：条件要么评估为（真/true），要么为（假/false）。
 
-### 创建流
+## 创建流
 
 在示例示例中，我们将使用条件来控制何时发送通知。目标是在当你收到经理的电子邮件时发送推送通知。
 
@@ -1800,8 +1859,8 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 
 1. 导航到 Power Automate 制作器门户 (https://make.powerautomate.com)。点击“创建”并选择“自动化云流”。
 2. 输入名称并选择“当有新邮件到达 (V3) Office 365 Outlook”触发器。点击“创建”。
-3. 添加操作。选择“获取我的配置 (V2) Office 365”操作。
-4. 添加操作。选择“获取经理 (V2)”操作。
+3. 添加操作。选择“获取我的配置 (V2) Office 365”操作：`Get my profile (V2)`。
+4. 添加操作。选择“获取经理 (V2)”操作：`Get manager (V2)`。
 5. 在“获取经理 (V2)”面板中，在“用户 UPN”字段中，添加来自“获取我的配置 (V2)”操作的“用户主要名称 (User Principal Name)”动态值。
 
 ## 第 6 章
@@ -1819,11 +1878,8 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 图 6.5 – 添加条件控件
 
 7. 在**条件**控制控件中，选择**参数**选项卡。
-
 8. 在第一个**选择值**字段中，添加“**当有新邮件到达** (V3)”操作下的**发件人 (From)**动态值令牌。
-
 9. 对于评估操作符，选择**包含 (contains)**。
-
 10. 此步的目标是检查电子邮件发件人的值是否匹配**获取经理 (V2)**操作的结果。在第二个**选择值**字段中，添加来自“**获取经理 (V2)**”操作的**邮件 (Mail)**动态值令牌。参见图 6.6。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_129_2.png)
@@ -1831,7 +1887,6 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 图 6.6 – 配置条件控件评估
 
 11. 在 sometimes的**真 (True)** 分支中，添加一个操作。
-
 12. 在“添加操作”面板中，选择“向发送手机通知”操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_130_0.png)
@@ -1845,9 +1900,7 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 图 6.8 – 配置通知文本
 
 14. 在“高级”下，点击“显示”。
-
 15. 在“链接”字段中，添加来自“**当有新邮件到达**”操作的动态值。
-
 16. 在链接字段中输入描述性文本。参见图 6.9：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_130_2.png)
@@ -1856,7 +1909,7 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 
 17. 点击“保存”。
 
-### 审核通知
+## 审核通知
 
 当你收到符合条件的电子邮件时，你将收到通知。
 
@@ -1876,10 +1929,7 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 
 图 6.12 – 打开深度链接
 
-### 重构流
-
-
-
+## 重构流
 
 ### 理解共享流 (shared flows)
 
@@ -1925,23 +1975,24 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 
 图 7.2 - 创建流的副本
 
-4. 点击新创建流上的“共享”图标开始编辑。
+3. 点击新创建流上的“共享”图标开始编辑。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_138_0.png)
 
 图 7.3 – 共享流
 
-5. 在“所有者 (Owners)”部分，在“用户和组”下，开始输入要与其共享的用户或组的名称或地址，并点击进行选择。
+4. 在“所有者 (Owners)”部分，在“用户和组”下，开始输入要与其共享的用户或组的名称或地址，并点击进行选择。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_138_1.png)
 
 图 7.4 – 添加共同所有者
 
-6. 在添加新成员或共同所有者时，系统将提示你确认将授予共同所有者的连接器和数据访问权限：
+5. 在添加新成员或共同所有者时，系统将提示你确认将授予共同所有者的连接器和数据访问权限：
 
-### 在共享之前...
+**在共享之前...**
 
 请确保你只添加你信任的共同所有者。你正在共享使用下方连接的权限以及更改流可以执行的操作的权限。
+
 [了解更多]
 
 ```
@@ -1965,7 +2016,7 @@ SharePoint
 
 图 7.5 – 确认将授予的共享权限
 
-7. 如果你的流连接到 SharePoint 站点，你还可以将 SharePoint 列表或库作为共同所有者添加。选择 SharePoint 选项卡，然后选择列表和文档库。点击“添加 (Add)”：
+6. 如果你的流连接到 SharePoint 站点，你还可以将 SharePoint 列表或库作为共同所有者添加。选择 SharePoint 选项卡，然后选择列表和文档库。点击“添加 (Add)”：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_139_0.png)
 
@@ -1998,70 +2049,67 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_141_0.png)
 
-导航到“桌面 (Desktop)”选项卡并点击“新建 (New)”。
+2. 导航到“桌面 (Desktop)”选项卡并点击“新建 (New)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_141_1.png)
 
-2. 在“创建流”对话框中，输入“流名称”并点击“创建”。
+3. 在“创建流”对话框中，输入“流名称”并点击“创建”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_142_0.png)
 
 图 7.10 - 填写流对话框
 
-3. 如果提示，点击“打开 (Open)”启动 Power Automate 应用。
+4. 如果提示，点击“打开 (Open)”启动 Power Automate 应用。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_142_1.png)
 
 图 7.11 - 启动 Power Automate 应用
 
-4. 登录你的 Microsoft 365 租户。
-5. 从主页点击“新建”并选择“流”。
+5. 登录你的 Microsoft 365 租户。
+
+6. 从主页点击“新建”并选择“流”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_143_0.png)
 
-6. 在“创建流”对话框中，输入“流名称”并点击“创建”。
+7. 在“创建流”对话框中，输入“流名称”并点击“创建”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_143_1.png)
 
 ### 使用共享流
 
-### 注意
+**注意**
 
 你可以在“创建流”对话框中启用 Power Fx。Power Fx 是 Power Automate 的原生语言（类似于 Excel 公式使用的宏语言）。Power Fx 语言有一些细微差别，例如从 1 开始的数组索引、变量初始化要求以及变量的大小写敏感性。更多信息请参阅 https://learn.microsoft.com/en-us/power-automate/desktop-flows/power-fx。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_144_0.png)
 
-7. 在操作面板中搜索“打开”并选择“打开 CMD 会话 (Open CMD session)”。将其拖动到画布区域。
+8. 在操作面板中搜索“打开”并选择“打开 CMD 会话 (Open CMD session)”。将其拖动到画布区域。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_144_1.png)
 
 图 7.14 – 选择 CMD 操作
 
-8. 在“工作文件夹”框中输入 C:\，然后点击“保存 (Save)”。
+9. 在“工作文件夹”框中输入`C:\`，然后点击“保存 (Save)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_144_2.png)
 
 图 7.15 – 指定工作文件夹
 
-
-
-
-
 ## 第 7 章
 
-9. 现在，将“写入 CMD 会话”（Write to CMD session）操作拖到画布区域，位于“打开 CMD 会话”操作下方。
+10. 现在，将“写入 CMD 会话”（Write to CMD session）操作拖到画布区域，位于“打开 CMD 会话”操作下方。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_145_0.png)
 
 图 7.16 - 添加写入 CMD 会话操作
 
-10. 在命令输入框中，输入 `dir c:\ > dir.txt` 并点击保存。
+11. 在命令输入框中，输入`dir c:\ > dir.txt`并点击保存。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_145_1.png)
 
 图 7.17 - 指定要执行的命令
 
-11. 最后，将“关闭 CMD 会话”（Close CMD session）操作拖到“写入 CMD 会话”操作下方的。在对话框中点击保存，然后点击 Power Automate 设计器标题栏上的保存图标。
+12. 最后，将“关闭 CMD 会话”（Close CMD session）操作拖到“写入 CMD 会话”操作下方的。在对话框中点击保存，然后点击 Power Automate 设计器标题栏上的保存图标。
 
 搞定！你已经创建了一个基础桌面流。它功能不多，但足以向你展示共享过程是如何工作的，我们将在下一节中介绍这一点。
 
@@ -2069,27 +2117,33 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 要从 Power Automate Web 门户共享桌面流，请按照以下步骤操作：
 
-- 1. 转到 Power Automate Web 门户 (https://make.powerautomate.com) 并选择“我的流”（My flows）。
-- 2. 选择“桌面流”选项卡。
+1. 转到 Power Automate Web 门户 (https://make.powerautomate.com) 并选择“我的流”（My flows）。
+
+2. 选择“桌面流”选项卡。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_146_0.png)
 
 图 7.18 – 查看桌面流
 
-- 3. 悬停在流上，展开三个点，然后选择“共享”（Share）。
+3. 悬停在流上，展开三个点，然后选择“共享”（Share）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_146_1.png)
 
 图 7.19 – 访问共享活动
 
-- 4. 在用户框中开始输入名称或电子邮件地址，选择要添加到流的用户。
-- 5. 在**管理访问**（Manage access）框中，开始输入名称并选择用户。默认情况下，新用户被赋予**用户**（User）权限（可以运行流但不能编辑）。点击名称以显示更多选项。你可以选择**用户**（User）或**共同所有者**（Co-owner）权限。
+4. 在用户框中开始输入名称或电子邮件地址，选择要添加到流的用户。
+
+
+
+5. 在**管理访问**（Manage access）框中，开始输入名称并选择用户。默认情况下，新用户被赋予**用户**（User）权限（可以运行流但不能编辑）。点击名称以显示更多选项。你可以选择**用户**（User）或**共同所有者**（Co-owner）权限。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_147_0.png)
 
 图 7.20 – 添加用户并配置权限
-- 6. 完成添加用户并设置权限后，点击**保存**。
-- 7. 添加的用户可以在 Power Automate 桌面应用程序的“共享”（Shared with me）选项卡下访问该流。
+
+6. 完成添加用户并设置权限后，点击**保存**。
+
+7. 添加的用户可以在 Power Automate 桌面应用程序的“共享”（Shared with me）选项卡下访问该流。
 
 在某些情况下，你可能不想带有完全共同所有者权限共享流，请务必验证谁将使用该流（更重要的是，你是否愿意处理他人编辑时出现的问题）。
 
@@ -2099,7 +2153,8 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 仅运行权限功能允许你为手动触发的流（例如按钮流和即时流）授予非常有限的权限。
 
-> 注意
+> **注意**
+>
 > 自动化流不支持仅运行权限。
 
 通过此选项，用户只能执行流。他们不能编辑或修改流的任何部分，仅被授予触发流的权限。
@@ -2108,29 +2163,35 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 要向按钮流或即时流授予仅运行权限，请按照以下步骤操作：
 
-- 1. 登录 Power Automate Web 门户 (https://make.powerautomate.com) 并选择“我的流”。
-- 2. 点击按钮流或即时流旁边的三个点，就像第 5 章“创建按钮流”中的按钮或即时流一样。选择“详情”（Details）打开详情页：
+1. 登录 Power Automate Web 门户（`https://make.powerautomate.com`）并选择“我的流”。
+
+2. 点击按钮流或即时流旁边的三个点，就像第 5 章“创建按钮流”中的按钮或即时流一样。选择“详情”（Details）打开详情页：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_148_0.png)
 
 图 7.21 – 打开详情页
-- 3. 在“仅运行用户”部分，点击“编辑”（Edit）：
+
+3. 在“仅运行用户”部分，点击“编辑”（Edit）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_148_1.png)
 
 图 7.22 – 查看流详情页
-- 4. 在“管理仅运行权限”飞出面板中，添加你想要授予仅运行权限的用户或组。对于需要数据源凭据的连接，你可以选择使用哪些凭据——由仅运行用户提供的凭据或保存在流中的凭据。提供的凭据是在此流的上下文中，不与用户可能拥有的任何流绑定：
+
+4. 在“管理仅运行权限”飞出面板中，添加你想要授予仅运行权限的用户或组。对于需要数据源凭据的连接，你可以选择使用哪些凭据——由仅运行用户提供的凭据或保存在流中的凭据。提供的凭据是在此流的上下文中，不与用户可能拥有的任何流绑定：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_149_0.png)
 
 图 7.23 – 管理仅运行用户
-- 5. 滚动到面板底部并点击保存。
-- 6. “详情”选项卡将显示带有仅运行用户的更新配置。
+
+5. 滚动到面板底部并点击保存。
+
+6. “详情”选项卡将显示带有仅运行用户的更新配置。
 
 该流已为指定的用户和组配置了仅运行权限。
 
-> > 注意
->> 当流仅配置了仅运行权限时，它不会显示在“与共享”（Shared with me）选项卡下。只有配置了共同所有者的流才会移动到“共享”选项卡。
+> **注意**
+>
+> 当流仅配置了仅运行权限时，它不会显示在“与共享”（Shared with me）选项卡下。只有配置了共同所有者的流才会移动到“共享”选项卡。
 
 接下来，我们将查看一些与管理共享流相关的任务。
 
@@ -2148,50 +2209,89 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 要解决此情况，请按照以下步骤操作：
 
-- 1. 在详情页上，在“连接”区域点击“编辑”。
-- 2. 在状态部分，点击“管理”。
-- 3. 点击三个点并选择“所有者”。
-- 4. 选择流进行更新。
-- 5. 在状态部分，点击“所有者”。
-- 6. 选择流进行更新。
-- 7. 在状态部分，点击“所有者”。
-- 8. 选择流进行更新。
-- 9. 在状态部分，点击“所有者”。
-- 10. 选择流进行更新。
-- 11. 在状态部分，点击“所有者”。
-- 12. 选择流进行更新。
-- 13. 在状态部分，点击“所有者”。
-- 14. 选择流进行更新。
-- 15. 在状态部分，点击“所有者”。
-- 16. 选择流进行更新。
-- 17. 在状态部分，点击“所有者”。
-- 18. 选择流进行更新。
-- 19. 在状态部分，点击“所有者”。
-- 20. 选择流进行更新。
-- 21. 在状态部分，点击“所有者”。
-- 22. 选择流进行更新。
-- 23. 在状态部分，点击“所有者”。
-- 24. 选择流进行更新。
+1. 在详情页上，在“连接”区域点击“编辑”。
+
+2. 在状态部分，点击“管理”。
+
+3. 点击三个点并选择“所有者”。
+
+4. 选择流进行更新。
+
+5. 在状态部分，点击“所有者”。
+
+6. 选择流进行更新。
+
+7. 在状态部分，点击“所有者”。
+
+8. 选择流进行更新。
+
+9. 在状态部分，点击“所有者”。
+
+10. 选择流进行更新。
+
+11. 在状态部分，点击“所有者”。
+
+12. 选择流进行更新。
+
+13. 在状态部分，点击“所有者”。
+
+14. 选择流进行更新。
+
+15. 在状态部分，点击“所有者”。
+
+16. 选择流进行更新。
+
+17. 在状态部分，点击“所有者”。
+
+18. 选择流进行更新。
+
+19. 在状态部分，点击“所有者”。
+
+20. 选择流进行更新。
+
+21. 在状态部分，点击“所有者”。
+
+22. 选择流进行更新。
+
+23. 在状态部分，点击“所有者”。
+
+24. 选择流进行更新。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_151_0.png)
 
 图 7.25 – 显示无效凭据的页面
-- 25. 在状态部分，点击“所有者”。
-- 26. 选择流进行更新。
-- 27. 在状态部分，点击“所有者”。
-- 28. 选择流进行更新。
-- 29. 在状态部分，点击“所有者”。
-- 30. 选择流进行更新。
-- 31. 在状态部分，点击“所有者”。
-- 32. 选择流进行更新。
-- 33. 在状态部分，点击“所有者”。
-- 34. 选择流进行更新。
-- 35. 在状态部分，点击“所有者”。
-- 36. 选择流进行更新。
-- 37. 在状态部分，点击“所有者”。
-- 38. 选择流进行更新。
-- 39. 在状态部分，点击“所有者”。
-- 40. 选择流进行更新。
+
+25. 在状态部分，点击“所有者”。
+
+26. 选择流进行更新。
+
+27. 在状态部分，点击“所有者”。
+
+28. 选择流进行更新。
+
+29. 在状态部分，点击“所有者”。
+
+30. 选择流进行更新。
+
+31. 在状态部分，点击“所有者”。
+
+32. 选择流进行更新。
+
+33. 在状态部分，点击“所有者”。
+
+34. 选择流进行更新。
+
+35. 在状态部分，点击“所有者”。
+
+36. 选择流进行更新。
+
+37. 在状态部分，点击“所有者”。
+
+38. 选择流进行更新。
+
+39. 在状态部分，点击“所有者”。
+
+40. 选择流进行更新。
 
 该流已为指定的用户和组配置了仅运行权限。
 
@@ -2202,7 +2302,6 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 在下一章中，我们将扩展条件的概念。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_152_0.png)
-
 
 正如你在本章中看到的，条件可以用来扩展流的能力，或者可能地将多个流组合成一个更大、更健壮的流。在本章中，我们将通过以下主题来扩展你对条件的理解：
 
@@ -2215,37 +2314,37 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 运算符指示了在评估时将执行的计算类型。你可能对常见的数学运算符熟悉，例如：
 
-- +（加法）
-- -（减法）
-- ÷（除法）
-- ×（乘法）
-- <（小于）
-- >（大于）
+- `+`（加法）
+- `-`（减法）
+- `÷`（除法）
+- `×`（乘法）
+- `<`（小于）
+- `>`（大于）
 
 这些运算符主要用于评估数值值。在流中操作对象和文本时，仅使用数学运算符可能是不够。虽然你可以在某些地方使用表达式，但理解其他用于判断值是否满足条件的运算符也同样重要。
 
 Power Automate 还可以使用以下字符串运算符来评估条件：
 
-- contains（包含）
-- does not contain（不包含）
-- is equal to（等于）
-- is not equal to（不等于）
-- is greater than（大于）
-- is greater than equal（大于或等于）
-- is less than（小于）
-- is less than equal to（小于或等于）
-- starts with（开头为）
-- does not start with（不以...开头）
-- ends with（结尾为）
-- does not end with（不以...结尾）
+- `contains`（包含）
+- `does not contain`（不包含）
+- `is equal to`（等于）
+- `is not equal to`（不等于）
+- `is greater than`（大于）
+- `is greater than equal`（大于或等于）
+- `is less than`（小于）
+- `is less than equal to`（小于或等于）
+- `starts with`（开头为）
+- `does not start with`（不以...开头）
+- `ends with`（结尾为）
+- `does not end with`（不以...结尾）
 
 其中一些适用于数字（例如大于或等于），而另一些适用于字母（例如开头为）。
 
 ### 注意
 
-是的，字符串和文本可以使用大于或等于等比较运算符，但这可能会导致意料之外的结果，或让你的流更难调试。使用数值运算符时的结果将基于字符串的字母顺序，而不是实际值。例如，评估 `abc > def` 的结果为 False，因为字符串 `abc` 的第一个字符的字母顺序低于字符串 `def` 的第一个字符。
+是的，字符串和文本可以使用大于或等于等比较运算符，但这可能会导致意料之外的结果，或让你的流更难调试。使用数值运算符时的结果将基于字符串的字母顺序，而不是实际值。例如，评估`abc > def`的结果为 False，因为字符串`abc`的第一个字符的字母顺序低于字符串`def`的第一个字符。
 
-回顾你在“生成通知”中创建的流，你可以看到条件如何用于比较动态内容的值：在这种情况下，我们不希望在每次收到电子邮件时都发送通知；我们只想在发件者值相同时生成通知。这是通过 `is equal to` 实现的，它可以用于评估字符串或数值值。
+回顾你在“生成通知”中创建的流，你可以看到条件如何用于比较动态内容的值：在这种情况下，我们不希望在每次收到电子邮件时都发送通知；我们只想在发件者值相同时生成通知。这是通过`is equal to`实现的，它可以用于评估字符串或数值值。
 
 在接下来的示例中（基于第 2 章“开始使用 Power Automate”中的“创建你的第一个流”部分），你可以看到我们已对其修改以包含一个条件。更新后的流包含一个条件，用于评估发布的推文是否至少有 100 个粉丝，如果是，则向通道启动发布操作：
 
@@ -2257,12 +2356,12 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 除了能够评估字符串、数字、表达式结果或动态内容值外，Power Automate Desktop 还有特殊的条件来处理不同类型的对象：
 
-- If file exists（如果文件存在）：在执行一组操作之前检查文件是否存在。
-- If folder exists（如果文件夹存在）：在执行一组操作之前检查文件夹是否存在。
-- If window exists（如果窗口存在）：如果特定窗口处于打开状态，则执行一组操作
-- If window contains（如果窗口包含）：如果窗口中存在特定文本或 UI 元素，则执行一组操作
-- If image exists（如果图像存在）：如果在屏幕上找到特定图像，则执行一组操作
-- If web page contains（如果网页包含）：如果网页包含特定元素或文本值，则执行一组操作
+- `If file exists`（如果文件存在）：在执行一组操作之前检查文件是否存在。
+- `If folder exists`（如果文件夹存在）：在执行一组操作之前检查文件夹是否存在。
+- `If window exists`（如果窗口存在）：如果特定窗口处于打开状态，则执行一组操作
+- `If window contains`（如果窗口包含）：如果窗口中存在特定文本或 UI 元素，则执行一组操作
+- `If image exists`（如果图像存在）：如果在屏幕上找到特定图像，则执行一组操作
+- `If web page contains`（如果网页包含）：如果网页包含特定元素或文本值，则执行一组操作
 
 接下来，我们将查看如何将表达式作为条件公式的一部分。
 
@@ -2270,9 +2369,9 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 可能基于单个静态值（例如电子邮件消息的发件者）的条件并不能提供流所需的粒度、灵活性或可移植性。在这种情况下，你也可以同时使用多个条件（包括评估动态内容值的条件）来做出决策。
 
-你已经见过在第 4 章“复制文件”中将表达式作为动态内容一部分的示例，例如使用 `dateTime()` 和 `utcNow()`。在那个示例中，表达式被用于帮助生成存储费用报告的文件夹名称值。你也可以将表达式或函数作为条件的一部分。我们将在下一章中探索更多表达式；你可以将对条件的知识扩展到包含使用表达式。
+你已经见过在第 4 章“复制文件”中将表达式作为动态内容一部分的示例，例如使用`dateTime()`和`utcNow()`。在那个示例中，表达式被用于帮助生成存储费用报告的文件夹名称值。你也可以将表达式或函数作为条件的一部分。我们将在下一章中探索更多表达式；你可以将对条件的知识扩展到包含使用表达式。
 
-执行多次评估的条件通常被称为“高级条件”。你可以简单地使用“添加”按钮并继续添加准则。在添加多个待评估的准则时，有两种运算符可用：AND 和 OR。选择 AND 要求所有条件都评估为真，控制操作才会评估为真。选择 OR 则只需要其中一个条件评估为真即可。
+执行多次评估的条件通常被称为“高级条件”。你可以简单地使用“添加”按钮并继续添加准则。在添加多个待评估的准则时，有两种运算符可用：`AND`和`OR`。选择`AND`要求所有条件都评估为真，控制操作才会评估为真。选择`OR`则只需要其中一个条件评估为真即可。
 
 在接下来的章节中，我们将查看两种利用多个准则创建高级条件的场景。第一个将一起使用多个条件，第二个将使用多个条件组。
 
@@ -2282,24 +2381,31 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 以下示例了向我们的 Monitor X 中添加一个条件，以评估推文语言是英语还是西班牙语：
 
-1. 从 Power Automate 门户 (https://make.powerautomate.com)，选择“My flows”（我的流），然后选择“Monitor X”进行编辑。
-2. 在“发布推文”和“在通道中发布消息”操作之间点击 `+` 图标以插入新步骤，如图 8.3 所示：
+1. 从 Power Automate 门户（`https://make.powerautomate.com`），选择“My flows”（我的流），然后选择“Monitor X”进行编辑。
+
+2. 在“发布推文”和“在通道中发布消息”操作之间点击`+`图标以插入新步骤，如图 8.3 所示：
+
 3. 选择“Add action”（添加操作）。
+
 4. 在“Choose operation”框中，搜索并添加“Condition”（条件）控件。
-5. 从动态内容菜单中，选择 Tweet language（推文语言）令牌和 `is equal to` 运算符，然后输入 `en` 作为值。这添加了英语作为条件，以便控制操作评估为真。
+
+5. 从动态内容菜单中，选择 Tweet language（推文语言）令牌和`is equal to`运算符，然后输入`en`作为值。这添加了英语作为条件，以便控制操作评估为真。
+
 6. 选择“New item”（新建项目），然后点击“Add row”（添加行）：
-7. 选择 Tweet language 动态内容令牌和 `is equal to` 运算符，然后输入 `es` 作为值（或另一个两位语言代码）。这添加了西班牙语作为条件，以便控制操作评估为。在此时，推文语言必须同时评估为英语和西班牙语，条件才为真。虽然从语法角度来看这是一个有效配置，但它将导致没有内容可以通过条件。
-8. 选择“Condition”表达式标题下的下拉框，然后选择 `OR` 运算符
+
+7. 选择 Tweet language 动态内容令牌和`is equal to`运算符，然后输入`es`作为值（或另一个两位语言代码）。这添加了西班牙语作为条件，以便控制操作评估为。在此时，推文语言必须同时评估为英语和西班牙语，条件才为真。虽然从语法角度来看这是一个有效配置，但它将导致没有内容可以通过条件。
+
+8. 选择“Condition”表达式标题下的下拉框，然后选择`OR`运算符
+
 图 8.6 – 将运算符更新为 OR
+
 9. 点击“Post message in a channel”操作的标题，将其拖到“True”（真）分支框的正文中，如图 8.7 所示。
+
 图 8.7 – 将操作移动到条件分支
+
 10. 点击“Save”（保存）。
 
 此时，需要发布一条语言为英语或西班牙语的推文，条件才能评估为真。这个简单的示例展示了你如何使用条件来帮助过滤或识别符合特定业务准则的内容，并对其进行操作。
-
-
-
-
 
 在下一节中，我们将介绍条件组（condition groups）的概念以及如何使用它们进一步控制流的处理。
 
@@ -2316,49 +2422,59 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 请按照以下步骤创建条件组：
 
-1.  从 Power Automate 门户（https://make.powerautomate.com），选择“流”（Flows），然后选择“Monitor X”流进行编辑。
-2.  选择你在上一个练习中创建的“条件”（Condition）控件以将其展开。
-3.  勾选两个推文语言条件的复选框，点击其中一行的省略号（...），并选择“创建组”（Make group）。
+1. 从 Power Automate 门户（`https://make.powerautomate.com`），选择“流”（Flows），然后选择“Monitor X”流进行编辑。
+
+2. 选择你在上一个练习中创建的“条件”（Condition）控件以将其展开。
+
+3. 勾选两个推文语言条件的复选框，点击其中一行的省略号（...），并选择“创建组”（Make group）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_162_0.png)
 
 图 8.8 - 将现有条件移动到条件组
 
-4.  情况下，Power Automate 将新条件组的运算符配置为 `AND`（与）。选择下拉菜单将其更改为 `OR`（或），如图 8.9 所示；
+4. 情况下，Power Automate 将新条件组的运算符配置为`AND`（与）。选择下拉菜单将其更改为`OR`（或），如图 8.9 所示；
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_163_0.png)
 
 图 8.9 – 更新条件组运算符
 
-5.  如果 Power Automate 在你的新组之外创建了额外的条件（如图 8.9 所示），只需选择并删除它。
-6.  点击“条件”控件底部的“添加”（Add）按钮并选择“添加组”（Add group），如图 8.10 所示。
+5. 如果 Power Automate 在你的新组之外创建了额外的条件（如图 8.9 所示），只需选择并删除它。
+
+6. 点击“条件”控件底部的“添加”（Add）按钮并选择“添加组”（Add group），如图 8.10 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_163_1.png)
 
 图 8.10 – 添加新的条件组
 
-7.  在新条件组中，将运算符更改为 `OR`。
-8.  在新条件组中，选择行中的第一个文本框。添加“粉丝数”（Followers count）动态内容值，选择“大于等于”（is greater than equal to）运算符，然后输入值 100。
-9.  在新条件组中，点击“添加”按钮并选择“添加行”（Add row）。选择“点赞数”（Favorites）动态内容值，选择“大于等于”运算符，输入值 100。
-10. 将整体条件的顶层运算符从 `OR` 为 `AND`。查看图 8.11 查看完成的条件控件。
+7. 在新条件组中，将运算符更改为`OR`。
+
+8. 在新条件组中，选择行中的第一个文本框。添加“粉丝数”（Followers count）动态内容值，选择“大于等于”（is greater than equal to）运算符，然后输入值 100。
+
+9. 在新条件组中，点击“添加”按钮并选择“添加行”（Add row）。选择“点赞数”（Favorites）动态内容值，选择“大于等于”运算符，输入值 100。
+
+10. 将整体条件的顶层运算符从`OR`为`AND`。查看图 8.11 查看完成的条件控件。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_164_0.png)
 
 图 8.11 - 检查已完成的条件控件
 
 11. 点击“保存”（Save）。
+
 12. 使用另一个浏览器窗口，准备一条符合触发流标准的推文。如果你没有符合所需粉丝数或点赞数要求的 X 账户，可以更新条件以匹配你可以满足的场景。
+
 13. 在 Power Automate 门户中，点击“测试”（Test），选择“我将触发操作”（I will perform the trigger action）按钮，然后点击“测试”。
+
 14. 回到之前的浏览器窗口并发送推文。
+
 15. 返回 Power Automate 设计器门户，通过展开触发器和条件来验证结果。如果你满足发布到 Teams 频道的条件，你也可以去那里查看你的推文！
 
-你可以从图 8.11 中看到，每个条件组至少有一个条件被成功满足，条件被评估为 `true`（真），导致条件的“是”（Yes）分支执行。
+你可以从图 8.11 中看到，每个条件组至少有一个条件被成功满足，条件被评估为`true`（真），导致条件的“是”（Yes）分支执行。
 
 ### 使用切换条件（switch condition）
 
 在大多数情况下，你可能会使用条件来检查布尔（真/假）值。然而，在某些情况下，流需要能够评估不仅仅是“是/否”、“等于/不等于”或“大于/小于”。你可以通过嵌套条件来实现更复杂的评估，但 Power Automate 提供了另一种结构：切换（switch）。
 
-切换条件允许 Power Automate 从多个分支或路径中选择。如果你熟悉脚本或开发语言，`switch` 或 `case` 语句的函数和语法会让你感到熟悉。
+切换条件允许 Power Automate 从多个分支或路径中选择。如果你熟悉脚本或开发语言，`switch`或`case`语句的函数和语法会让你感到熟悉。
 
 切换条件为流提供了从一组值中进行匹配的机会；如果没有匹配的值，流也有一个可以采取的默认（default）操作或路径。
 
@@ -2366,41 +2482,44 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 让我们编辑该流并进行一些更改：
 
-1.  从上一个练习中打开“Monitor X”流。
-2.  展开“真或 / 如果是”（True or If yes）分支。
+1. 从上一个练习中打开“Monitor X”流。
+
+2. 展开“真或 / 如果是”（True or If yes）分支。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_165_0.png)
 
-3.  添加操作（Add action）。
-4.  选择“切换”（Switch）控件，如图 8.13 所示。
+3. 添加操作（Add action）。
+
+4. 选择“切换”（Switch）控件，如图 8.13 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_163_1.png) (注：此处示例图编号可能与原文略有出入，按逻辑翻译)
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_113_0.png) (假设图 8.13)
 
-5.  在操作操作。  ..   14 所示。
+5. 在操作操作。  ..   14 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_166_0.png)
 
-6.  在参数选项卡中，展开下拉菜单，“推推语言”（Tweet language）。这表明我们将根据语言执行操作。
+
+
+6. 在参数选项卡中，展开下拉菜单，“推推语言”（Tweet language）。这表明我们将根据语言执行操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_166_1.png)
 
-7.  在切换控件内部点击 `+` 图标，如图 8.15 所示。
+7. 在切换控件内部点击 `+` 图标，如图 8.15 所示。
 
-.... `. ` ` ` ` ` ` ` `.
-
-8   在 `Equals` 字段中，输入 `en`。这是当语言代码为英语时的操作。
+8. 在 `Equals` 字段中，输入 `en`。这是当语言代码为英语时的操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_167_0.png)
 
-9.  接下来，将“在聊天频道中发布消息”（Post message in a channel）操作拖入 `Case` 主体。这是真分支执行的主组件。
+9. 接下来，将“在聊天频道中发布消息”（Post message in a channel）操作拖入 `Case` 主体。这是真分支执行的主组件。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_167_1.png)
 
 10. 在 `Case` 语句和 `Default` 块之间点击 `+` 添加新用例。默认情况下，新用例命名为 `Case 2`。在 `Case 2` 的 `Equals` 字段中，输入 `es`。这是当语言代码为西班牙语时的操作。
 
 11. 在 `Case 2` 操作中，点击操作。
+
 12. 像上一个练习那样配置操作，选择“机器人”作为发布值，选择“频道”作为发布值。你也可以从第一个用例中复制操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_168_0.png)
@@ -2420,10 +2539,6 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 16. 点击“保存”（Save）完成流。
 
 你可以通过发布符合你配置的逻辑条件的推文来测试该流。如果你发送英语推文，英语文本将发布到频道。如果你将 X 配置为使用西班牙语作为语言，推文将显示你输入的相应西班牙语文本。
-
-
-
-
 
 ### 总结
 
@@ -2448,8 +2563,11 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 这就是本章大显用场的地方在本章中，你将通过以下章节，学习如何开始在 Power Automate 中处理更复杂的对象：
 
 - 学习表达式和函数
+
 - 处理字符串和文本
+
 - 操作时间和日期
+
 - 处理数组
 
 如果你还没有对该平台的功能感到兴奋，那么这一章定会让你大开眼界。
@@ -2460,27 +2578,25 @@ Power Automate 还可以使用以下字符串运算符来评估条件：
 
 如前提到的，Power Automate 流是由对象和一种类似于 Excel 或 Visual Basic 宏的语言组成的。在这些语言中，**工作流定义语言 (WDL)**、**表达式**和**函数**指的是用于操作数据的内部过程和能力。
 
-函数是一个基础的计算结构——是 Power Automate 提供的最底层处理逻辑。函数是允许你对传递给它的值执行预定义操作的操作。让我们来看 CONCAT 函数，它用于将字符串连接：
+函数是一个基础的计算结构——是 Power Automate 提供的最底层处理逻辑。函数是允许你对传递给它的值执行预定义操作的操作。让我们来看 `CONCAT` 函数，它用于将字符串连接：
 
 ```
 concat(text_1, text_2)
 ```
 
-如果你使用过 Excel 函数
-
-虽然函数是构建基石，但表达式是函数（包括其参数）、文本字符串和动态内容的应用，用于获取结果。
+如果你使用过 Excel 函数，虽然函数是构建基石，但表达式是函数（包括其参数）、文本字符串和动态内容的应用，用于获取结果。
 
 函数被分为 10 个不同的类别。
 
 ### 字符串
 
-字符串或文本函数用于修改或格式化字符串、查找字符或其他其它方式操作文本。你已经见过 concat 字符串函数的示例。
+字符串或文本函数用于修改或格式化字符串、查找字符或其他其它方式操作文本。你已经见过 `concat` 字符串函数的示例。
 
 ### 集合
 
 在编程语言中，集合是可以包含其他对象的类型。常见的集合类型包括数组和哈希表。集合函数可能用于检查数组是否为空、计算数组中对象的数量（或字符串中字符长度），或选择数组中的特定项目。
 
-例如，你可以使用 length 函数返回字符串的长度。
+例如，你可以使用 `length` 函数返回字符串的长度。
 
 ```
 length('The quick brown fox jumps over the lazy dog')
@@ -2496,9 +2612,9 @@ length('The quick brown fox jumps over the lazy dog')
 if(less(14,8),'Yes, it is less than','No, it is not less than')
 ```
 
-当在流中使用时，如果第一个参数 (14) 小于第二个参数 (8)，此函数将返回文本 Yes, it is less than；如果第一个参数大于第二个参数，则返回文本 No, it is not less than。
+当在流中使用时，如果第一个参数 (14) 小于第二个参数 (8)，此函数将返回文本 `Yes, it is less than`；如果第一个参数大于第二个参数，则返回文本 `No, it is not less than`。
 
-我们在上一章中提到了使用条件，而逻辑上的 if 函数可以执行与条件控制相同类型的评估。这取决于你选择哪种方式最适合你的场景。
+我们在上一章中提到了使用条件，而逻辑上的 `if` 函数可以执行与条件控制相同类型的评估。这取决于你选择哪种方式最适合你的场景。
 
 ### 转换
 
@@ -2514,7 +2630,7 @@ int('14')
 
 你可以使用数学函数来执行算术计算，例如将两个数字相加。数学函数还包括查找数据集中最小或最大数字、生成随机数或返回除法余数的能力。
 
-你可以使用以下表达式将两个数字相：
+你可以使用以下表达式将两个数字相加：
 
 ```
 add(14,8)
@@ -2540,7 +2656,7 @@ utcNow()
 
 ### 引用
 
-引用函数在触发器和操作期间使用。这些通常由 Power Automate 自动调用，尽管你可以自己编写它们。例如，如果你的流包含一个 GetPoint Item，你可以使用主体输出的 Title。
+引用函数在触发器和操作期间使用。这些通常由 Power Automate 自动调用，尽管你可以自己编写它们。例如，如果你的流包含一个 `GetPoint Item`，你可以使用主体输出的 `Title`。
 
 ### 工作流
 
@@ -2550,7 +2666,7 @@ utcNow()
 
 URI 函数用于处理 URI 字符串。你可能需要查找域或主机名、URI 路径，或编码解码 URL 字符串。
 
-例如，encodeUriComponent 可以将字符串转换为 URL 编码格式：
+例如，`encodeUriComponent` 可以将字符串转换为 URL 编码格式：
 
 ```
 encodeUriComponent('https://example.com') 将返回 https%3A%2F%2Fexample.com.
@@ -2558,7 +2674,7 @@ encodeUriComponent('https://example.com') 将返回 https%3A%2F%2Fexample.com.
 
 ### 操作
 
-这些函数通常用于处理 XML 对象或 JSON 节点。例如，你可能需要向 JSON 对象添加或设置特定属性。coalesce 是另一个你可能会使用的常用函数，用于在一组值查找第一个非空值。你可以这样使用它：
+这些函数通常用于处理 XML 对象或 JSON 节点。例如，你可能需要向 JSON 对象添加或设置特定属性。`coalesce` 是另一个你可能会使用的常用函数，用于在一组值查找第一个非空值。你可以这样使用它：
 
 ```
 coalesce(null, 'Hello', 'world') 将返回字符串 Hello
@@ -2566,45 +2682,45 @@ coalesce(null, 'Hello', 'world') 将返回字符串 Hello
 
 你可以在此处了解更多可用函数：https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference
 
-coalesce 函数在 Power Automate 中有时被视为逻辑函数，取决于你阅读的文档。
+`coalesce` 函数在 Power Automate 中有时被视为逻辑函数，取决于你阅读的文档。
 
 接下来，我们将查看使用表达式处理字符串和文本值。
 
- 处理字符串和文本
+### 处理字符串和文本
 
-当你开始使用 Power Automate 函数和表达式时，可能会从处理字符串和文本开始。通过创建一个即时流并仅使用 Compose 操作，你可以了解函数的工作原理。
+当你开始使用 Power Automate 函数和表达式时，可能会从处理字符串和文本开始。通过创建一个即时流并仅使用 `Compose` 操作，你可以了解函数的工作原理。
 
 让我们处理一组字符串！
 
-- 导航到 Power 制作门户 (https://make.powerautomate.com) 并创建一个新的即时云流。
+1. 导航到 Power 制作门户 (https://make.powerautomate.com) 并创建一个新的即时云流。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_175_0.png)
-Figure 9.1 – 创建新的即时云流
 
-- 选择“手动触发流”并点击“创建”。
+图 9.1 – 创建新的即时云流
 
-- 点击画布上的“手动触发流”触发器。
+2. 选择“手动触发流”并点击“创建”。
 
-- 在“参数”选项卡上，添加任何输入类型。这并不重要，因为我们将使用 Compose 操作来传递值进行实验。
+3. 点击画布上的“手动触发流”触发器。
 
-- 添加操作。
+4. 在“参数”选项卡上，添加任何输入类型。这并不重要，因为我们将使用 `Compose` 操作来传递值进行实验。
+
+5. 添加操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_175_1.png)
-Figure 9.2 – 添加输入
 
+图 9.2 – 添加输入
 
-
-
-
-### 选择数据操作并进行组合。
+6. 选择数据操作并进行组合。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_176_0.png)
 
 图 9.3 – 扩展数据操作操作类型
 
-- 在“输入”（Inputs）文本区域，添加一个表达式。
-- 输入值 `toLower()` 向表达式编辑器中添加 `toLower()` 函数。
-- 在括号内，输入值 'HeLLO, wORLD' 并点击添加（Add）。
+7. 在“输入”（Inputs）文本区域，添加一个表达式。
+
+8. 输入值 `toLower()` 向表达式编辑器中添加 `toLower()` 函数。
+
+9. 在括号内，输入值 `'HeLLO, wORLD'` 并点击添加（Add）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_176_1.png)
 
@@ -2612,30 +2728,50 @@ Figure 9.2 – 添加输入
 
 完成后的表达式应显示为 `toLower('HELLO, wORLD')`。
 
-- 添加一个操作并选择“组合”（Compose）操作。
-- 在“输入”（Inputs）区域，添加一个表达式。
-- 在表达式编辑器中，输入 `substring('automate', 0, 3)` 并点击添加。
-- 添加一个操作并选择“组合”（Compose）操作。
-- 在“输入”（Inputs）区域，添加一个表达式。
-- 在表达式编辑器中，输入 `slice('automate', 0, 3)` 并点击添加。
-- 添加一个操作并选择“组合”（Compose）操作。
-- 在“输入”（Inputs）区域，添加一个表达式。
-- 在表达式编辑器中，输入 `replace('Brave Old World', 'Old', 'New')` 并点击添加。
-- 添加一个操作并选择“组合”（Compose）操作。
-- 在“输入”（Inputs）区域，添加一个表达式。
-- 在表达式编辑器中，输入 `indexOf('The quick brown fox jumps over the lazy dog', 'fox')` 并点击添加。此表达式应返回 fox 开始的字符整数索引。
+10. 添加一个操作并选择“组合”（Compose）操作。
+
+11. 在“输入”（Inputs）区域，添加一个表达式。
+
+12. 在表达式编辑器中，输入 `substring('automate', 0, 3)` 并点击添加。
+
+13. 添加一个操作并选择“组合”（Compose）操作。
+
+14. 在“输入”（Inputs）区域，添加一个表达式。
+
+15. 在表达式编辑器中，输入 `slice('automate', 0, 3)` 并点击添加。
+
+16. 添加一个操作并选择“组合”（Compose）操作。
+
+17. 在“输入”（Inputs）区域，添加一个表达式。
+
+18. 在表达式编辑器中，输入 `replace('Brave Old World', 'Old', 'New')` 并点击添加。
+
+19. 添加一个操作并选择“组合”（Compose）操作。
+
+20. 在“输入”（Inputs）区域，添加一个表达式。
+
+21. 在表达式编辑器中，输入 `indexOf('The quick brown fox jumps over the lazy dog', 'fox')` 并点击添加。此表达式应返回 `fox` 开始的字符整数索引。
 
 ## 第 9 章
 
 22. **添加操作（Add an action）**并选择**组合（Compose）**操作。
+
 23. 在**输入（Inputs）**区域，添加一个表达式。
+
 24. 在表达式编辑器中，输入 `nthIndexOf('I have an apple, a red apple, and a green apple.', 'apple', 2)` 并点击**添加（Add）**。此表达式应返回第二个单词 *apple* 开始的字符整数索引。
+
 25. **添加操作（Add an action）**并选择**组合（Compose）**操作。
+
 26. 在**输入（Inputs）**区域，添加一个表达式。
-27. 在表达式编辑器中，输入 `split('contoso: ENTERPRISEPACK:50:Unassigned', ':')` 并点击**添加（Add）**。此表达式根据冒号分隔符值分割字符串，创建一个包含四个项的数组（contoso, ENTERPRISEPACK, 50 和 Unassigned）。
+
+27. 在表达式编辑器中，输入 `split('contoso: ENTERPRISEPACK:50:Unassigned', ':')` 并点击**添加（Add）**。此表达式根据冒号分隔符值分割字符串，创建一个包含四个项的数组（`contoso`、`ENTERPRISEPACK`、`50` 和 `Unassigned`）。
+
 28. 可选，根据你正在测试的函数对每个**组合（Compose）**操作步骤重命名。
+
 29. 点击**保存（Save）**然后点击**测试（Test）**。
+
 30. 选择**手动（Manually）**并匹配你为触发器选择的输入类型，点击**运行流（Run flow）**。
+
 31. 输入与你为触发器选择的输入类型匹配的值，点击**运行流（Run flow）**。
 
 检查流中每个步骤的输入和输出。例如，检查 `concat()` 函数步骤，你将看到一段单一文本：**This is a concatenated string**，如图 9.5 所示：
@@ -2657,41 +2793,51 @@ Figure 9.2 – 添加输入
 假设你想使用 Power Automate 流来确定特定日期是星期几。你可以使用 `dayOfWeek()` 函数来解出这个问题：
 
 1. 导航到 Power Automate 门户网站（https://make.powerautomate.com/）并创建一个新的即时流（instant flow）。
+
 2. 在画布上点击“手动触发流”（Manually trigger a flow）。
+
 3. 在“参数”（Parameters）选项卡上，点击“添加输入”（Add input）并选择“日期”（Date）输入类型。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_178_0.png)
 
 4. 添加操作。
+
 5. 过滤操作找到“组合”（Compose）数据操作并将其添加到画布上。
+
 6. 在“组合”操作的“参数”选项卡上，在“输入”（Inputs）字段中插入一个表达式。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_178_1.png)
 
-### 7. 添加 dayOfWeek 函数。
+7. 添加 `dayOfWeek` 函数。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_179_0.png)
 
 图 9.8 - 添加 dayOfWeek 函数
 
-### 8. 在函数区域添加一个左括号，然后选择“手动触发流”下“日期内容”（Date content）令牌下的“动态内容令牌”（Dynamic content token）令牌。
+8. 在函数区域添加一个左括号，然后选择“手动触发流”下“日期内容”（Date content）令牌下的“动态内容令牌”（Dynamic content token）令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_179_1.png)
 
 图 9.9 - 添加日期内容值
 
-### 9. 点击保存。此“组合”操作将返回对应触发器的星期几的整数。
+9. 点击保存。此“组合”操作将返回对应触发器的星期几的整数。
+
 10. 点击测试运行流。
+
 11. 在“测试”浮窗中，选择“手动”（Manually）按钮并点击“测试”。
+
 12. 在“运行流”浮窗中，输入一个日期（或从日期控件中选择），然后点击“运行流”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_180_0.png)
 
-13. 在流运行后，选择“组合”操作，然后选择“显示原始输出”（Show raw outputs）以查看数值。![](img/bfc58bb450784476738fab1c5bfe829d_180_1.png)
+13. 在流运行后，选择“组合”操作，然后选择“显示原始输出”（Show raw outputs）以查看数值。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_180_1.png)
 
 接下来，我们将更新流以显示实际日期。
 
 - 点击“编辑”（Edit）返回编辑流。
+
 - 在“组合”操作之后，添加另一个操作。
 
 - 有多种方法解决此问题，例如使用复杂表达式或使用“切换”（Switch）条件。正如你之前看到复杂数学计算的那样，你可以嵌套多个函数来执行高级评估。在这个示例中，你可以复制并粘贴以下表达式来开始：
@@ -2705,20 +2851,23 @@ if(equals(dayOfWeek(), 4), 'Thursday',
 if(equals(dayOfWeek(), 5), 'Friday',
 ```
 
-![](img/bfc58bb450784476738fab1c5bfe829d_181_0)
+![](img/bfc58bb450784476738fab1c5bfe829d_181_0.png)
 
 4. 在 `dayOfWeek()` 函数的括号内，选择“手动触发流”下“日期内容”令牌下的“动态内容令牌”下的动态内容。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_181_1.png)
 
 5. 点击保存然后点击测试。
+
 6. 在流运行后，选择“组合”操作，然后选择“显示原始输出”。如下图所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_182_0.png)
 
 图 9.14 - 检查流的输出
 
-如之前提到的，你可以使用表达式或“切换”（Switch）控件来计算此。由于 `dayOfWeek()` 为每个星期返回不同的整数，你需要创建 7 种情况（除非你使用默认情况）。点击 + 号创建情况。
+如之前提到的，你可以使用表达式或“切换”（Switch）控件来计算此。由于 `dayOfWeek()` 为每个星期返回不同的整数，你需要创建 7 种情况（除非你使用默认情况）。点击 `+` 号创建情况。
+
+
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_182_1.png)
 
@@ -2728,7 +2877,7 @@ if(equals(dayOfWeek(), 5), 'Friday',
 
 在工作环境中，通常使用工作日而非日历日（因为许多企业在周末不进行交易）。为了解决这个问题，我们将使用一系列“组合”操作进行计算。
 
-1. 导航到 Power Automate 门户网站（https://make.powerautomate.com/）并创建一个新的即时流。
+1. 导航到 Power Automate 门户网站（`https://make.powerautomate.com/`）并创建一个新的即时流。
 2. 在画布上点击“手动触发流”。
 3. 在“参数”选项卡上，点击“添加输入”并选择“日期”输入类型。
 4. 将其命名为“开始日期”。
@@ -2742,53 +2891,34 @@ if(equals(dayOfWeek(), 5), 'Friday',
 7. 添加操作。
 8. 选择“组合”操作。
 9. 添加一个表达式。
-10. 在表达式字段中，输入 `div(sub(ticks(), ticks()), 86400000000)`。此表达式使用了 `ticks()` 函数，对于初来说，在 Microsoft .NET 编程中一个 tick 代表 100 纳秒。然后，点击第一个 `ticks()` 的括号并选择“结束日期”动态内容值。
+10. 在表达式字段中，输入 `div(sub(ticks(), ticks()), 86400000000)`。此表达式使用了 `ticks()` 函数，对于初学者来说，在 Microsoft .NET 编程中一个 tick 代表 100 纳秒。然后，点击第一个 `ticks()` 的括号并选择“结束日期”动态内容值。
 11. 对第二个 `ticks()` 函数重复此过程，选择“开始日期”动态内容值。见图 9.17。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_183_1.png)
 
 图 9.17 - 添加天数计算
 
-
-
-
-
 > 提示：如果在运行工作流时遇到超出范围（out of range）错误，请确保结束日期值位于第一个 `ticks()` 函数中，而开始日期参数位于第二个 `ticks()` 函数中。
 
 12. 点击添加。
-
 13. 添加操作。
-
 14. 选择“编写数据”（Compose）操作。
-
 15. 输入以下表达式：`(range(0, add(), 1))`。此表达式将用于构建一个由单个数字组成的数组，每个数字代表一天。此数字范围将用于递增开始日期，通过每个 `dayOfWeek()` 函数返回代表星期几的整数。
-
 16. 点击 `add()` 函数括号内部。添加“编写数据”操作的“输出”（Outputs）动态内容值，这是你计算的两个日期之间的天数。见图 9.18。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_184_0.png)
 
 17. 添加操作。
-
 18. 选择“数据操作”（Data operations），然后选择“选择”（Select）操作。
-
 19. 在“参数”（Parameters）选项卡上，从“从”（From）字段添加上一个“编写数据”操作的“输出”动态内容值，该操作创建了日期范围。
-
 20. 在“映射”（Map）部分，在“键”（Key）字段添加如 `my` 的值。然后，在“值”（Value）字段添加以下表达式：`addDays(triggerBody()['date'], item())`。此表达式利用 `addDays()` 函数为“创建日期范围”编写数据函数“输出”动态内容中的每个项为开始日期增加相应的天数。
 
-# 第 9 章
-# 157
-
-![](img/bfc58bb450784476738fab1c5bfe829d_185_0.png)
-
-- 21. **添加操作。**
-- 22. **选择筛选数组（Filter array）**操作。
-- 23. 在**参数（Parameters）**选项卡上，在**从（From）**字段中，添加来自**选择（Select）**语句的**输出（Output）**动态内容值。可选，可以将操作重命名为具有描述性的名称……
-
-![](img/bfc58bb450784476738fab1c5bfe829d_185_1.png)
-
-- 25. 在**筛选查询（Filter query）**字段中，输入 `dayOfWeek(item())['mydate']`。此表达式将评估上一个**选择（Select）**操作的数组项。`item()` 函数用于……的操作中……
-- 26. 在**算运算符（Operator）**下拉菜单中，选择**不等于（is not equal to）**。
-- 27. 在**值（Value）**字段中输入数字 6。如果你还记得*计算星期几*练习，每周的每一天都被分配了一个数字（在这种情况下，我们选择 6 代表星期六）。
+21. 添加操作。
+22. 选择“筛选数组”（Filter array）操作。
+23. 在“参数”（Parameters）选项卡上，在“从”（From）字段中，添加来自“选择”（Select）语句的“输出”（Output）动态内容值。可选，可以将操作重命名为具有描述性的名称。
+24. 在“筛选查询”（Filter query）字段中，输入 `dayOfWeek(item())['mydate']`。此表达式将评估上一个“选择”（Select）操作的数组项。`item()` 函数用于获取当前数组项。
+25. 在“运算符”（Operator）下拉菜单中，选择“不等于”（is not equal to）。
+26. 在“值”（Value）字段中输入数字 6。如果你还记得*计算星期几*练习，每周的每一天都被分配了一个数字（在这种情况下，我们选择 6 代表星期六）。
 
 输出将是一个数组，过滤掉所有 `dayOfWeek()` 评估为 6 的日期。
 
@@ -2796,126 +2926,34 @@ if(equals(dayOfWeek(), 5), 'Friday',
 
 图 9.21 - 过滤掉星期六
 
-接下来，我们将重复过滤过程，只是现在我们要过滤掉 `dayWeek()` 函数评估为 0 的项。
+接下来，我们将重复过滤过程，只是现在我们要过滤掉 `dayOfWeek()` 函数评估为 0 的项。
 
-- 28. 添加操作。
-- 29. 选择筛选数组（Filter array）操作。
-- 30. 可选，将操作重命名为具有描述性的名称，在“从（From）”字段中，添加来自“过滤星期六”数组的“输出”动态内容值。
-- 31. 在**参数（Parameters）**选项卡上，在**从（From）**字段中，添加“过滤星期六”数组操作的“输出”动态内容值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_186_1.png)
-
-图 9.22 - 选择输出动态内容
-
-- 32. 筛选查询的构建方式与“过滤星期六”数组的查询相同——只是这次，它应配置为不等于 0。见图 9.23。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_186_2.png)
-
-图 9.23 - 构建筛选查询
-
-# 第 9 章
-# 159
-
-此表达式的结果应该是所有过滤后的日期的列表（其中 `dayOfWeek` 评估为 6 或 0 的日期已被移除）。最后，我们将对它们进行计数！
-
-- 33. **添加操作。**
-- 34. 选择**编写数据（Compose）**操作，在**输入（Inputs）**字段中添加一个表达式。
-- 35. 在**参数（Parameters）**选项卡上，添加 `length()` 函数。
-- 36. 在括号中，添加“过滤星期日（Filter out Sundays）”操作下的**正文（Body）**动态内容标记。此表达式将计算数组中的项数（这应该是我们过滤掉星期六和星期日后的列表）。完成后的表达式应该类似于 `length(body('Filter_out_Sundays'))`。点击添加。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_187_0.png)
-
-- 38. **保存并测试工作流。**
-- 39. 在查看运行历史时，**输出（Outputs）**区域应包含你的开始和结束日期之间的（非周末）日期。作为验证，你可以打开工作流并计算天数。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_187_1.png)
-
-### 处理数组
-
-如前述提到的，数组是对象的集合。早些演示的 `split()` 函数根据分隔符将字符串拆分为数组。有许多数组函数可以用来处理数据。让我们来看其中几个。首先，让我们使用“编写数据”（Compose）操作创建数组。
-
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加以下表达式：`split('pepperoni,sausage,mushrooms,olives,tomatoes,cheese',',).sausage', 'mushrooms', 'olives', 'tomatoes', 'cheese')`。见图 9.26。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_188_0.png)
-
-图 9.26 - 创建数组
-
-接下来，我们将重复过滤过程，只是现在我们要过滤掉 `dayWeek()` 函数评估为 0 的项。
-
-- 1. 添加操作。
-- 2. 选择“选择”（Select）操作。
-- 3. 在“参数（Parameters）”选项卡上，从“从（From）”字段，添加上一个“编写数据”操作的“输出”动态内容值，该操作创建了日期范围。
-- 4. 在“映射”（Map）部分，在“键”（Key）字段添加如 `my` 的值。然后，在“值”（Value）字段添加以下表达式：`addDays(triggerBody()['date'], item())`。此表达式利用 `addDays()` 函数为“创建日期范围”编写数据函数“输出”动态内容中的每个项为开始日期增加相应的天数。
-
-# 第 9 章
-
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中，添加“过滤星期日”操作下的“正文（Body）”动态内容标记。此表达式将计算数组中的项数（这应该是我们过滤掉星期六和星期日后的列表）。完成后的表达式应该类似于 `length(body('Filter_out_Sundays'))`。点击添加。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_189_0.png)
-
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `contains()` 函数。此函数可检查特定值是否存在于数组中。结果是布尔值（真或假）。
-
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `empty()` 函数。此表达式将根据数组是否为空返回一个布尔值（真或假）。由于此数组包含对象，我们预期输出为假。
-
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `intersection()` 函数。此表达式将返回一个包含两个数组共同值的新数组。完成后的表达式应类似于：`intersection(outputs('Pizza_ingredients_1'),outputs('Pizza_ingredients_2'))`
-
-![](img/bfc58bb450784476738fab1c5bfe829d_190_0.png)
-
-- 21. **添加操作。**
-- 22. **选择筛选数组（Filter array）**操作。
-- 23. 在**参数（Parameters）**选项卡上，在**从（From）**字段中，添加来自**选择（Select）**语句的**输出（Output）**动态内容值。可选，可以将操作重命名为具有描述性的名称……
-
-- 25. 在**筛选查询（Filter query）**字段中，输入 `dayOfWeek(item())['mydate']`。此表达式将评估上一个**选择（Select）**操作的数组项。`item()` 函数用于……的操作中……
-- 26. 在**运算符（Operator）**下拉菜单中，选择**不等于（is not equal to）**。
-- 27. 在**值（Value）**字段中输入数字 6。如果你还记得*计算星期几*练习，每周的每一天都被分配了一个数字（在这种情况下，我们选择 6 代表星期六）。
-
-输出将是一个数组，过滤掉所有 `dayOfWeek()` 评估为 6 的日期。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_186_0.png)
-
-图 9.21 - 过滤掉星期六
-
-接下来，我们将重复过滤过程，只是现在我们要过滤掉 `dayWeek()` 函数评估为 0 的项。
-
-- 28. 添加操作。
-- 29. 选择筛选数组（Filter array）操作。
-- 30. 可选，将操作重命名为具有描述性的名称，在“从（From）”字段中，添加来自“过滤星期六”数组的“输出”动态内容值。
-- 31. 在**参数（Parameters）**选项卡上，在**从（From）**字段中，添加“过滤星期六”数组操作的“输出”动态内容值。
+27. 添加操作。
+28. 选择“筛选数组”（Filter array）操作。
+29. 可选，将操作重命名为具有描述性的名称，在“从”（From）字段中，添加来自“过滤星期六”数组的“输出”动态内容值。
+30. 在“参数”（Parameters）选项卡上，在“从”（From）字段中，添加“过滤星期六”数组操作的“输出”动态内容值。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_186_1.png)
 
 图 9.22 - 选择输出动态内容
 
-- 32. 筛选查询的构建方式与“过滤星期六”数组的查询相同——只是这次，它应配置为不等于 0。见图 9.23。
+31. 筛选查询的构建方式与“过滤星期六”数组的查询相同——只是这次，它应配置为不等于 0。见图 9.23。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_186_2.png)
 
 图 9.23 - 构建筛选查询
 
-# 第 9 章
-# 159
-
 此表达式的结果应该是所有过滤后的日期的列表（其中 `dayOfWeek` 评估为 6 或 0 的日期已被移除）。最后，我们将对它们进行计数！
 
-- 33. **添加操作。**
-- 34. 选择**编写数据（Compose）**操作，在**输入（Inputs）**字段中添加一个表达式。
-- 35. 在**参数（Parameters）**选项卡上，添加 `length()` 函数。
-- 36. 在括号中，添加“过滤星期日（Filter out Sundays）”操作下的**正文（Body）**动态内容标记。此表达式将计算数组中的项数（这应该是我们过滤掉星期六和星期日后的列表）。完成后的表达式应该类似于 `length(body('Filter_out_Sundays'))`。点击添加。
+32. 添加操作。
+33. 选择“编写数据”（Compose）操作，在“输入”（Inputs）字段中添加一个表达式。
+34. 在“参数”（Parameters）选项卡上，添加 `length()` 函数。
+35. 在括号中，添加“过滤星期日”（Filter out Sundays）操作下的“正文”（Body）动态内容标记。此表达式将计算数组中的项数（这应该是我们过滤掉星期六和星期日后的列表）。完成后的表达式应该类似于 `length(body('Filter_out_Sundays'))`。点击添加。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_187_0.png)
 
-- 38. **保存并测试工作流。**
-- 39. 在查看运行历史时，**输出（Outputs）**区域应包含你的开始和结束日期之间的（非周末）日期。作为验证，你可以打开工作流并计算天数。
+36. 保存并测试工作流。
+37. 在查看运行历史时，“输出”（Outputs）区域应包含你的开始和结束日期之间的（非周末）日期。作为验证，你可以打开工作流并计算天数。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_187_1.png)
 
@@ -2923,56 +2961,52 @@ if(equals(dayOfWeek(), 5), 'Friday',
 
 数组，如前述提到的，是对象的集合。早些演示的 `split()` 函数根据分隔符将字符串拆分为数组。有许多数组函数可以用来处理数据。让我们来看其中几个。首先，让我们使用“编写数据”（Compose）操作创建数组。
 
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加以下表达式：`split('pepperoni,sausage,mushrooms,olives,tomatoes,cheese',',).sausage', 'mushrooms', 'olives', 'tomatoes', 'cheese')`。见图 9.26。
+1. 添加操作。
+2. 选择“编写数据”（Compose）操作。
+3. 在“参数”（Parameters）选项卡上，在“输入”（Inputs）字段中添加以下表达式：`split('pepperoni,sausage,mushrooms,olives,tomatoes,cheese',',')`。见图 9.26。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_188_0.png)
 
 图 9.26 - 创建数组
 
-接下来，我们将重复过滤过程，只是现在我们要过滤掉 `dayWeek()` 函数评估为 0 的项。
+接下来，我们将使用“选择”（Select）操作将数组中的每个元素添加到一个新数组中。
 
-- 1. 添加操作。
-- 2. 选择“选择”（Select）操作。
-- 3. 在“参数（Parameters）”选项卡上，从“从（From）”字段，添加上一个“编写数据”操作的“输出”动态内容值，该操作创建了日期范围。
-- 4. 在“映射”（Map）部分，在“键”（Key）字段添加如 `my` 的值。然后，在“值”（Value）字段添加以下表达式：`addDays(triggerBody()['date'], item())`。此表达式利用 `addDays()` 函数为“创建日期范围”编写数据函数“输出”动态内容中的每个项为开始日期增加相应的天数。
+1. 添加操作。
+2. 选择“选择”（Select）操作。
+3. 在“参数”（Parameters）选项卡上，从“从”（From）字段，添加上一个“编写数据”操作的“输出”动态内容值，该操作创建了数组。
+4. 在“映射”（Map）部分，在“键”（Key）字段添加如 `my` 的值。然后，在“值”（Value）字段添加以下表达式：`item()`。此表达式将返回当前数组项。
 
-# 第 9 章
+接下来，我们将使用 `contains()` 函数检查特定值是否存在于数组中。
 
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中，添加“过滤星期日”操作下的“正文（Body）”动态内容标记。此表达式将计算数组中的项数（这应该是我们过滤掉星期六和星期日后的列表）。完成后的表达式应该类似于 `length(body('Filter_out_Sundays'))`。点击添加。
+1. 添加操作。
+2. 选择“编写数据”（Compose）操作。
+3. 在“参数”（Parameters）选项卡上，在“输入”（Inputs）字段中添加 `contains()` 函数。此函数可检查特定值是否存在于数组中。结果是布尔值（真或假）。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_189_0.png)
+接下来，我们将使用 `empty()` 函数检查数组是否为空。
 
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `contains()` 函数。此函数可检查特定值是否存在于数组中。结果是布尔值（真或假）。
+1. 添加操作。
+2. 选择“编写数据”（Compose）操作。
+3. 在“参数”（Parameters）选项卡上，在“输入”（Inputs）字段中添加 `empty()` 函数。此表达式将根据数组是否为空返回一个布尔值（真或假）。由于此数组包含对象，我们预期输出为假。
 
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `empty()` 函数。此表达式将根据数组是否为空返回一个布尔值（真或假）。由于此数组包含对象，我们预期输出为假。
+接下来，我们将使用 `intersection()` 函数获取两个数组的共同值。
 
-- 1. 添加操作。
-- 2. 选择“编写数据”（Compose）操作。
-- 3. 在“参数（Parameters）”选项卡上，在“输入（Inputs）”字段中添加 `intersection()` 函数。此表达式将返回一个包含两个数组共同值的新数组。完成后的表达式应类似于：`intersection(outputs('Pizza_ingredients_1'),outputs('Pizza_ingredients_2'))`
-
-
-
-
+1. 添加操作。
+2. 选择“编写数据”（Compose）操作。
+3. 在“参数”（Parameters）选项卡上，在“输入”（Inputs）字段中添加 `intersection()` 函数。此表达式将返回一个包含两个数组共同值的新数组。完成后的表达式应类似于：`intersection(outputs('Pizza_ingredients_1'),outputs('Pizza_ingredients_2'))`
 
 ### 进一步探索
 
-你可以使用**初始化变量**（Initialize variable）操作创建在本节中使用的数组。在**参数**（Parameters）选项卡上，设置**名称**（Name），将**类型**（Type）选择为**数组**（Array），然后在**值**（Value）字段中输入 ["pepperoni", "sausage", "onions", "mushrooms", "olives", "tomatoes", "cheese", "sauce"]。然后可以使用**操作**（Compose）函数的输出更新此变量。
+你可以使用“初始化变量”（Initialize variable）操作创建在本节中使用的数组。在“参数”（Parameters）选项卡上，设置“名称”（Name），将“类型”（Type）选择为“数组”（Array），然后在“值”（Value）字段中输入 `["pepperoni", "sausage", "onions", "mushrooms", "olives", "tomatoes", "cheese", "sauce"]`。然后可以使用“操作”（Compose）函数的输出更新此变量。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_191_0.png)
 
-图 9.30 - 初始化数组变量
+
+
+# 图 9.30 - 初始化数组变量
 
 本章有很多新概念，因此你可能想下载示例并开始亲自进行实验！
 
-### 总结
+## 总结
 
 掌握表达式是充分利用 Power Automate 功能的关键。本章介绍了几种你可以直接应用于 Power Automate 流的不同表达式和函数。
 
@@ -2984,120 +3018,112 @@ if(equals(dayOfWeek(), 5), 'Friday',
 
 扫描二维码（或访问 packtub.com/unlock）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
 
-注意：请妥善发票。直接从 Packt 购买的不需要发票。
+**注意：** 请妥善保留发票。直接从 Packt 购买的不需要发票。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_192_0.png)
 
-## 10
-
-## 开始使用审批
+# 第 10 章：开始使用审批
 
 你在前几章中使用的流在很大程度上是自动化的（例如检测新文件或电子邮件），或由用户操作触发的（例如发送模板电子邮件的按钮流）。在本章中，我们将开始探索需要额外的用户操作才能继续的流，例如审批流。
 
-审批流需要一个特殊的服务，用于存储与流相关的状态信息。Dataverse（以前称为 Common Data Service）是更复杂流（如审批）的 same。
+审批流需要一个特殊的服务，用于存储与流相关的状态信息。`Dataverse`（以前称为 `Common Data Service`）是更复杂流（如审批）的基础。
 
 具体来说，本章将涵盖以下主题：
 
-- 了解 Dataverse
+- 了解 `Dataverse`
 - 创建审批流
 - 使用审批流
 
-在本章结束时，你将拥有 Dataverse 的实用知识，并能够创建基本的审批流。
+在本章结束时，你将拥有 `Dataverse` 的实用知识，并能够创建基本的审批流。
 
 让我们开始吧！
 
-### 了解 Dataverse
+## 了解 Dataverse
 
-Microsoft Dataverse（以前称为 Common Data Service，或 CDS）可以被比作数据库。它由称为表格（tables，以前称为实体）的数据对象组成。就像电子表格一样，表格具有列（以前称为属性）的概念。
+`Microsoft Dataverse`（以前称为 `Common Data Service`，或 `CDS`）可以被比作数据库。它由称为表格（tables，以前称为实体）的数据对象组成。就像电子表格一样，表格具有列（以前称为属性）的概念。
 
-微软文档目前对存储在 Dataverse 中的对象类型有两种单独的描述。我们已经在第 1 章“Power Automate 简介”中涵盖了新的命名法。然而在某些情况下，取决于用户界面 (UI)、协议或使用的技术，Dataverse 的术语可能会发生变化。
+微软文档目前对存储在 `Dataverse` 中的对象类型有两种单独的描述。我们已经在第 1 章“Power Automate 简介”中涵盖了新的命名法。然而在某些情况下，取决于用户界面 (`UI`)、协议或使用的技术，`Dataverse` 的术语可能会发生变化。
 
-术语最大的变化之一是将实体（entity）重命名为表格（table）。你将遇到许多 UI 组件仍以旧名称引用 Dataverse 元素。当我们在 UI 中遇到这些内容时，我们会指出它们。
+术语最大的变化之一是将实体（entity）重命名为表格（table）。你将遇到许多 `UI` 组件仍以旧名称引用 `Dataverse` 元素。当我们在 `UI` 中遇到这些内容时，我们会指出它们。
 
-Dataverse 拥有涵盖许多使用场景的标准表格。标准表格位于几个组或类别中，如下所示：
+`Dataverse` 拥有涵盖许多使用场景的标准表格。标准表格位于几个组或类别中，如下所示：
 
 | 表格类型 | 描述 |
 |---|---|
-| 标准 | 也称为开箱即用的表格，这些表格包括账户（Account）、部门（Business Unit）、联系人（Contact）、任务（Task）和用户（User）。 |
-| 活动 | 用于管理在日历上执行的操作。活动表格包括预约（Appointment）、电子邮件（Email）、信函（Letter）、电话（Phone Call）、重复预约（Recurring Appointment）和任务（Task）。 |
-| 虚拟 | 将填充来自 Dataverse 外部源数据的表格。 |
+| 标准 | 也称为开箱即用的表格，这些表格包括账户（`Account`）、部门（`Business Unit`）、联系人（`Contact`）、任务（`Task`）和用户（`User`）。 |
+| 活动 | 用于管理在日历上执行的操作。活动表格包括预约（`Appointment`）、电子邮件（`Email`）、信函（`Letter`）、电话（`Phone Call`）、重复预约（`Recurring Appointment`）和任务（`Task`）。 |
+| 虚拟 | 将填充来自 `Dataverse` 外部源数据的表格。 |
 | 弹性 | 将超过数行的表格。 |
 
-表 10.1 – Dataverse 表格类型
+表 10.1 – `Dataverse` 表格类型
 
-除了这些标准表格，Dataverse 还允许创建自定义表格以支持特定的业务流程或目标。
+除了这些标准表格，`Dataverse` 还允许创建自定义表格以支持特定的业务流程或目标。
 
-有关表格及其可以执行的操作的完整列表，请参此此参考：https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/about-entity-reference。
+有关表格及其可以执行的操作的完整列表，请参考此参考：`https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/about-entity-reference`。
 
-涉及审批流，Dataverse 用于在流的整个期间在表格中存储状态信息。没有这种数据存储能力，审批流将没有机制来跟踪状态或任何审批分支。
+涉及审批流，`Dataverse` 用于在流的整个期间在表格中存储状态信息。没有这种数据存储能力，审批流将没有机制来跟踪状态或任何审批分支。
 
-虽然审批流依赖 Dataverse 运行，但终端用户不需要直接与 Dataverse 交互来创建审批流。有关 Dataverse 事务的所有集成和读取操作都是通过流创建过程内部透明地处理的——用户无需处理它们。
+虽然审批流依赖 `Dataverse` 运行，但终端用户不需要直接与 `Dataverse` 交互来创建审批流。有关 `Dataverse` 事务的所有集成和读取操作都是通过流创建过程内部透明地处理的——用户无需处理它们。
 
 接下来，我们将学习创建审批流的步骤。
 
-### 创建审批流
+## 创建审批流
 
 审批流可以涵盖许多场景，例如请求休假、经理签署报销单，或业务所有者签署发布的产品营销材料。审批流通常分为两类：
 
-- 自动：例如当向 SharePoint 文档库或列表添加新项目时。你可能使用自动流来启动报销单的审批过程，该过程在文档上传到站点时触发。
-- 即时：例如当用户从现有文档、列表或应用程序手动启动审批。
+- **自动：** 例如当向 `SharePoint` 文档库或列表添加新项目时。你可能使用自动流来启动报销单的审批过程，该过程在文档上传到站点时触发。
+- **即时：** 例如当用户从现有文档、列表或应用程序手动启动审批。
 
-审批（Approvals）连接器具有流可以交互的操作和对象类型，尽管我们主要处理响应和结果。你可以在此处了解更多关于审批连接器的信息：https://learn.microsoft.com/en-us/connectors/approvals
+审批（`Approvals`）连接器具有流可以交互的操作和对象类型，尽管我们主要处理响应和结果。你可以在此处了解更多关于审批连接器的信息：`https://learn.microsoft.com/en-us/connectors/approvals`
 
-在启动审批时，工作流会向审批者发送电子邮件并在审批者的队列中添加项目。审批可以通过电子邮件、Teams 审批应用或 Power Automate 门户中的审批部分进行响应。在示例中，我们将创建一个休假请求的示例审批。此流具有以下前提条件：
+在启动审批时，工作流会向审批者发送电子邮件并在审批者的队列中添加项目。审批可以通过电子邮件、`Teams` 审批应用或 `Power Automate` 门户中的审批部分进行响应。在示例中，我们将创建一个休假请求的示例审批。此流具有以下前提条件：
 
-- 具有已填充经理（Manager）属性的 Entra 用户标识
-- 带有现代列表的 SharePoint 现代团队站点，包括开始日期和结束日期的日期时间列
+- 具有已填充经理（`Manager`）属性的 `Entra` 用户标识
+- 带有现代列表的 `SharePoint` 现代团队站点，包括开始日期和结束日期的日期时间列
 
 在接下来的章节中，我们将设置一个支持审批的环境，然后创建审批流。
 
-### 配置前提条件
+## 配置前提条件
 
-首先，我们将创建将用于流的 SharePoint 站点和列表。
+首先，我们将创建将用于流的 `SharePoint` 站点和列表。
 
 ### 创建 SharePoint 站点和列表
 
-在此例中，请求将添加到 SharePoint 列表中。你可以按照以下步骤创建带有列表的站点：
+在此例中，请求将添加到 `SharePoint` 列表中。你可以按照以下步骤创建带有列表的站点：
 
-1. 导航到 Microsoft 365 管理中心 (https://admin.microsoft.com)，使用管理员身份登录，并导航到 SharePoint 管理中心（管理中心 | SharePoint）。
-2. 选择站点（Sites） | 活动站点（Active sites）并点击创建（Create）。
+1. 导航到 `Microsoft 365` 管理中心（`https://admin.microsoft.com`），使用管理员身份登录，并导航到 `SharePoint` 管理中心（管理中心 | `SharePoint`）。
+2. 选择站点（`Sites`） | 活动站点（`Active sites`）并点击创建（`Create`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_196_0.png)
 
-3. 选择团队站点（Team site）：
-4. 选择标准团队模板（Standard team template）。
-5. 点击使用模板（Use template）。
+3. 选择团队站点（`Team site`）。
+4. 选择标准团队模板（`Standard team template`）。
+5. 点击使用模板（`Use template`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_196_1.png)
 
-6. 输入站点名称，例如 Vacation Requests。
-7. 填充站点描述、组电子邮件地址、站点地址、地址和组所有者的其他属性。点击下一步（Next）。
+6. 输入站点名称，例如 `Vacation Requests`。
+7. 填充站点描述、组电子邮件地址、站点地址、地址和组所有者的其他属性。点击下一步（`Next`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_197_0.png)
 
 图 10.3 – 配置站点属性
 
-8. 将隐私设置设置为公共（Public），选择语言并设置时区。点击创建站点（Create site）。
-9. 在添加站点所有者和成员页面，添加任何其他成员并点击完成（Finish）。
-
+8. 将隐私设置设置为公共（`Public`），选择语言并设置时区。点击创建站点（`Create site`）。
+9. 在添加站点所有者和成员页面，添加任何其他成员并点击完成（`Finish`）。
 10. 导航到新站点。
-11. 展开导航菜单并选择站点内容（Site contents）。
+11. 展开导航菜单并选择站点内容（`Site contents`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_197_1.png)
 
 图 10.4 – 访问导航菜单
 
-
-
-
-
-12. 点击“新建 (New) | 列表 (List)”，如图 10.5 所示。
+12. 点击“新建 (`New`) | 列表 (`List`)”，如图 10.5 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_198_0.png)
 
 13. 选择“空白”模板类型。
-
-14. 为列表输入名称（例如 Requests），并点击“创建 (Create)”。
+14. 为列表输入名称（例如 `Requests`），并点击“创建 (`Create`)”。
 
 接下来，我们将为列表配置额外的列。
 
@@ -3105,181 +3131,176 @@ Dataverse 拥有涵盖许多使用场景的标准表格。标准表格位于几�
 
 在本节中，我们将配置存储和处理请求数据所需的列。接下来的步骤介绍如下：
 
-- 1. 点击“添加列 (Add column)”。
+1. 点击“添加列 (`Add column`)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_198_1.png)
 
 图 10.6 - 查看列表
 
-- 2. 选择“日期和时间 (Date and time)”作为类型并点击“下一步 (Next)”。
-
-- 3. 在“创建列 (Create column)”浮窗中，为开始日期列输入名称，例如“从 (From)”。
+2. 选择“日期和时间 (`Date and time`)”作为类型并点击“下一步 (`Next`)”。
+3. 在“创建列 (`Create column`)”浮窗中，为开始日期列输入名称，例如“从 (`From`)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_199_0.png)
 
-图 10.7 - 创建“从 (From)”列
+图 10.7 - 创建“从 (`From`)”列
 
-- 4. 点击“保存 (Save)”。
-
-- 5. 点击“添加列”，选择“选择 (Choice)”作为类型，并将名称设置为“状态 (Status)”。点击选择选项并将它们重命名为“待处理 (Pending)”、“已批准 (Approved)”和“已拒绝 (Denied)”，如图 10.8 所示。将默认值设置为“待处理 (Pending)”，完成后点击“保存”。
+4. 点击“保存 (`Save`)”。
+5. 点击“添加列”，选择“选择 (`Choice`)”作为类型，并将名称设置为“状态 (`Status`)”。点击选择选项并将它们重命名为“待处理 (`Pending`)”、“已批准 (`Approved`)”和“已拒绝 (`Denied`)”，如图 10.8 所示。将默认值设置为“待处理 (`Pending`)”，完成后点击“保存”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_199_1.png)
 
 图 10.8 - 配置选择列
 
-- 6. 根据下表添加额外的列（以及您需要的任何其他详细列）：
+6. 根据下表添加额外的列（以及您需要的任何其他详细列）：
 
 | 名称 | 类型 | 可能的值 | 默认值 |
 |---|---|---|---|
-| 收件人 (To) | 日期和时间 | [NA] | [NA] |
-| 详情 (Details) | 多行文本 | [NA] | [NA] |
+| 收件人 (`To`) | 日期和时间 | [NA] | [NA] |
+| 详情 (`Details`) | 多行文本 | [NA] | [NA] |
 
 表 10.2 – 列表列设置
 
 您可以根据自己的逻辑自由地拖动这些列的顺序。
 
-您的 SharePoint 站点和列表现在已准备好接收休假请求！接下来，我们将创建实际的审批流。
+您的 `SharePoint` 站点和列表现在已准备好接收休假请求！接下来，我们将创建实际的审批流。
 
 ### 创建审批
 
-创建 SharePoint 站点和列表后，我们需要创建一个实际的审批，以便在请求出现在列表中出现时对其进行处理。按照以下步骤创建审批流：
+创建 `SharePoint` 站点和列表后，我们需要创建一个实际的审批，以便在请求出现在列表中出现时对其进行处理。按照以下步骤创建审批流：
 
-- 1. 导航到 Power Automate 网页门户 (https://make.powerautomate.com)。
-- 2. 点击“创建 (Create)”。在“从空白开始 (Start from blank)”下，选择“自动化云流 (Automated cloud flow)”。
-- 3. 输入流名称，例如“休假审批 (Vacation Approval)”。搜索“SharePoint 创建新项时 (When an item is created)” 触发器。选择它并点击“创建”。
-- 4. 点击“创建新项时 (When an item is created)”触发器。
-- 5. 在“参数 (Parameters)”选项卡中，在“站点地址 (Site Address)”下拉菜单中，选择您在上一步中创建的 Vacation Requests SharePoint 站点。如果站点未显示，使用下拉菜单中的“自定义值 (Custom value)”选项手动指定地址。
-- 6. 在“列表名称 (List Name)”下拉菜单中，选择您在先决条件中创建的列表。如果列表未显示，使用下拉菜单中的“自定义值 (Custom value)”选项手动指定列表。
+1. 导航到 `Power Automate` 网页门户（`https://make.powerautomate.com`）。
+2. 点击“创建 (`Create`))。在“从空白开始 (`Start from blank`)”下，选择“自动化云流 (`Automated cloud flow`)”.
+3. 输入流名称，例如“休假审批 (`Vacation Approval`)”。搜索“`SharePoint` 创建新项时 (`When an item is created`)” 触发器。选择它并点击“创建”。
+4. 点击“创建新项时 (`When an item is created`)”触发器。
+5. 在“参数 (`Parameters`)”选项卡中，在“站点地址 (`Site Address`)”下拉菜单中，选择您在上一步中创建的 `Vacation Requests` `SharePoint` 站点。如果站点未显示，使用下拉菜单中的“自定义值 (`Custom value`)”选项手动指定地址。
+6. 在“列表名称 (`List Name`)”下拉菜单中，选择您在先决条件中创建的列表。如果列表未显示，使用下拉菜单中的“自定义值 (`Custom value`)”选项手动指定列表。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_200_0.png)
 
-- 7. 添加操作 (Add an action)。
-- 8. 添加“获取配置 (Get profile (V2))”操作。
+7. 添加操作 (`Add an action`)。
+8. 添加“获取配置 (`Get profile (V2)`)”操作.
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_201_0.png)
 
-图 10.10 – 添加“获取配置 (Get profile (V2))”操作
+图 10.10 – 添加“获取配置 (`Get profile (V2)`)”操作
 
-- 9. 添加操作。
-- 10. 在“获取经理 (Get manager (V2))”操作中添加“获取经理”框。
-- 11. 在“获取经理 (V2)”操作的“用户 (UPN)”值中，添加来自“获取配置 (V2)”操作的“用户主体名称 (User Principal Name)”动态值令牌：
+9. 添加操作。
+10. 在“获取经理 (`Get manager (V2)`)”操作中添加“获取经理”框。
+11. 在“获取经理 (`V2`)”操作的“用户 (`UPN`)”值中，添加来自“获取配置 (`V2`)”操作的“用户主体名称 (`User Principal Name`)”动态值令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_201_1.png)
 
 图 10.11 – 添加“用户主体名称”动态内容值
 
-- 12. 添加操作。
-- 13. 选择“启动并等待审批 (Start and wait for an approval)”操作，如图 10.12 所示。
+12. 添加操作。
+13. 选择“启动并等待审批 (`Start and wait for an approval`)”操作，如图 10.12 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_201_2.png)
 
 图 10.12 – 添加审批操作
 
-- 14. 在“参数 (Parameters)”选项卡中，展开“审批类型 (Approval type)”下拉菜单，并选择“自定义响应 - 等待单个响应 (Custom Responses - Wait for one response)”。
+14. 在“参数 (`Parameters`)”选项卡中，展开“审批类型 (`Approval type`)”下拉菜单，并选择“自定义响应 - 等待单个响应 (`Custom Responses - Wait for one response`)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_202_0.png)
 
 图 10.13 - 选择自定义响应审批类型
 
-- 15. 在“响应选项 (Response options)”下，输入文本“批准 (Approve)”。
-- 16. 选择“新建项 (Add new item)”并添加另一个文本为“拒绝 (Deny)”的选项。这些选项将在审批发送给审批者时显示：
+15. 在“响应选项 (`Response options`)”下，输入文本“批准 (`Approve`)”。
+16. 选择“新建项 (`Add new item`)”并添加另一个文本为“拒绝 (`Deny`)”的选项。这些选项将在审批发送给审批者时显示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_202_1.png)
 
 图 10.14 - 配置响应选项
 
-- 17. 在标题 (Title) 字段中，输入将向审批者显示的标题。可以使用来自“获取配置 (V2)”操作的“显示名称 (Display Name)”动态内容来填充它：
+17. 在标题 (`Title`) 字段中，输入将向审批者显示的标题。可以使用来自“获取配置 (`V2`)”操作的“显示名称 (`Display Name`)”动态内容来填充它：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_201_1.png)
 
-- 18. 在“分配 (Assigned)”框中，添加来自“获取经理 (V2)”操作的动态令牌：
+18. 在“分配 (`Assigned`)”框中，添加来自“获取经理 (`V2`)”操作的动态令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_203_0.png)
 
 图 10.15 - 配置标题和分配
 
-- 19. 在**详情 (Details)**框中，输入您想要包含的任何额外信息。
-- 20. 在“链接 (link)”框中，添加来自“创建新项时”的动态令牌。
+19. 在**详情 (`Details`)**框中，输入您想要包含的任何额外信息。
+20. 在“链接 (`link`)”框中，添加来自“创建新项时”的动态令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_203_1.png)
 
 图 10.16 - 配置审批操作
 
-- 21. 添加操作。
-- 22. 选择“控制 (Control)”。
-- 23. 在框中，添加来自“启动并等待审批”的动态令牌。
+21. 添加操作。
+22. 选择“控制 (`Control`)”。
+23. 在框中，添加来自“启动并等待审批”的动态令牌。
 
 ### 开始审批
 
-一旦创建了 站点和列表，我们需要创建一个审批来处理列表中出现的请求。
+一旦创建了站点和列表，我们需要创建一个审批来处理列表中出现的请求。
 
-- 24. 在“操作符 (Operator)”下拉菜单中，选择“等于 (equal to)”。
-
-- 25. 在“是 (True)”分支下，添加操作。
-- 26. 选择“更新项 (Update)”。
-- 27. 在“站点地址 (Site Address)”下拉菜单中，选择您之前创建的 Vacation Requests SharePoint 站点。
-- 28. 在“列表 (List Name)”下拉菜单中，选择您在先决条件中创建的列表。
-- 29. 在“ID”字段中，选择来自“创建新项时”的令牌。
-- 30. 在“标题 (Title)”字段中，选择来自“创建新项时”的令牌。
-- 31. 在“状态值 (Status Value)”下拉菜单中，选择“已批准 (Approved)”。
+24. 在“操作符 (`Operator`)”下拉菜单中，选择“等于 (`equal to`)”。
+25. 在“是 (`True`)”分支下，添加操作。
+26. 选择“更新项 (`Update`)”。
+27. 在“站点地址 (`Site Address`)”下拉菜单中，选择您之前创建的 `Vacation Requests` `SharePoint` 站点。
+28. 在“列表 (`List Name`)”下拉菜单中，选择您在先决条件中创建的列表。
+29. 在“`ID`”字段中，选择来自“创建新项时”的令牌。
+30. 在“标题 (`Title`)”字段中，选择来自“创建新项时”的令牌。
+31. 在“状态值 (`Status Value`)”下拉菜单中，选择“已批准 (`Approved`)”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_204_0.png)
 
 图 10.17 - 配置响应
 
-- 32. 右键点击“更新项”操作并“复制 (Copy)”。
+32. 右键点击“更新项”操作并“复制 (`Copy`)”。
 
 ![](img/bfc58bb4507844476738fab1c5bfe829d_204_1.png)
 
 图 10.18 - 复制操作
 
-- 33. 在“否 (False)”分支中，点击 `+` 图标，然后粘贴操作。
+33. 在“否 (`False`)”分支中，点击 `+` 图标，然后粘贴操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_205_0.png)
 
 图 10.19 - 粘贴操作
 
-- 34. 在“状态值 (Status Value)”下拉菜单中，选择“已拒绝 (Denied)”。
-- 35. 点击“保存 (Save)”保存流。
+34. 在“状态值 (`Status Value`)”下拉菜单中，选择“已拒绝 (`Denied`)”。
+35. 点击“保存 (`Save`)”保存流。
 
 ### 添加日历事件和通知
 
 通过在“是”分支中添加日历安排，可以增加此审批的实用性。根据需要在电子邮件中包含额外信息。使用以下可选步骤通过共享日历进行扩展：
 
-- 1. 在“休假审批”流中，导航到“是”分支的末端。
-- 2. 添加操作。
-- 3. 选择“Office 365 Groups”连接器下的“创建组事件 (Create a group event (V2))”操作：
+1. 在“休假审批”流中，导航到“是”分支的末端。
+2. 添加操作。
+3. 选择“`Office 365 Groups`”连接器下的“创建组事件 (`Create a group event (V2)`)”操作：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_206_0.png)
 
 图 10.21 - 添加组事件
 
-- 4. 在“参数 (Parameters)”选项卡中，在“组 ID (Group Id)”下拉菜单中，选择与审批 SharePoint 站点对应的 Microsoft 365 组。只要连接账户具有权限，也可以选择其他组。
-- 5. 在“主题 (Subject)”字段中，输入动态内容令牌和静态内容组成的任何值，例如来自“SharePoint 创建新项时”的“创建者显示名称 (Created by Display Name)”令牌。
-- 6. 在“开始时间 (Start Time)”字段中，添加来自“创建新项时”的开始时间动态令牌。
-- 7. 在“结束时间 (End Time)”字段中，选择来自“创建新项时”操作的结束时间动态令牌。
-- 8. 展开“高级参数 (Advanced parameters)”。选择“全天 (Is All Day)”和“显示为 (Show As)”进行显示。
-- 9. 将“全天”设置为“是 (Yes)并将“显示为”选项设置为“空闲 (Free)”。根据您的喜好编辑任何额外选项。
+4. 在“参数 (`Parameters`)”选项卡中，在“组 `ID` (`Group Id`)”下拉菜单中，选择与审批 `SharePoint` 站点对应的 `Microsoft 365` 组。只要连接账户具有权限，也可以选择其他组。
+5. 在“主题 (`Subject`)”字段中，输入动态内容令牌和静态内容组成的任何值，例如来自“`SharePoint` 创建新项时”的“创建者显示名称 (`Created by Display Name`)”令牌。
+6. 在“开始时间 (`Start Time`)”字段中，添加来自“创建新项时”的开始时间动态令牌。
+7. 在“结束时间 (`End Time`)”字段中，选择来自“创建新项时”操作的结束时间动态令牌。
+8. 展开“高级参数 (`Advanced parameters`)”。选择“全天 (`Is All Day`)”和“显示为 (`Show As`)”进行显示。
+9. 将“全天”设置为“是 (`Yes`)”并将“显示为”选项设置为“空闲 (`Free`)”。根据您的喜好编辑任何额外选项。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_206_1.png)
 
 图 10.22 - 配置更新项操作
 
-
-
-
-
 10. 点击保存保存流。
 
-Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历项目。
+`Microsoft 365` 组日历现在将更新并显示请求者已批准的休假日历项目。
 
 ### 进一步修改
 
-除了在批准后在 Microsoft 365 组日历创建条目外，您还可以添加另一个操作来在请求者的日历上配置日历事件。另一个实用的修改可能是向请求者生成电子邮件以进行批准或拒绝。
+除了在批准后在 `Microsoft 365` 组日历创建条目外，您还可以添加另一个操作来在请求者的日历上配置日历事件。另一个实用的修改可能是向请求者生成电子邮件以进行批准或拒绝。
+
+
 
 接下来，我们将开始使用审批。
 
-### 使用审批流
+## 使用审批流
 
 回想一下该流，它包含几个步骤：
 
@@ -3290,17 +3311,13 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 让我们从请求者的角度来看审批。
 
-### 开始审批
+## 开始审批
 
 测试“创建”此流最简单的方法是启动一个休假请求。请按照以下步骤操作：
 
 1. 导航到作为本次练习一部分创建的 SharePoint 列表。
 2. 在列表中，点击“新建”以创建一个新的请求项。
-3. 填写表单。添加标题，选择开始和结束日期，并点击保存：
-
-## 第 10 章
-
-## 181
+3. 填写表单。添加标题，选择开始和结束日期，并点击保存。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_209_0.png)
 
@@ -3310,15 +3327,11 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 此时，您已经创建了一个可以作为审批流触发器的 SharePoint 列表，以及“创建”了审批流本身。最后，您触发了该流。接下来，我们将看到在审批者端看起来是什么样。
 
-### 响应审批请求
+## 响应审批请求
 
 作为审批者，您将收到一封电子邮件通知，说明需要采取操作。审批也会出现在 Power Automate 网页门户和移动端应用程序的“审批”部分，以及 Microsoft Teams 中的“审批”应用中。可以从这些位置中的任何一个处理审批。
 
 审批具有根据审批流中选择的各种响应选项项的按钮。在接后的截图中，您可以看到我们在创建审批流时配置的选项显示在电子邮件正文中。审批者可以选择“批准”或“拒绝”，输入任何可选信息，然后点击“提交”。
-
-182
-
-审批入门
 
 图 10.26 显示了审批邮件发送给审批者时的样子：
 
@@ -3331,8 +3344,6 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 ![](img/bfc58bb450784476738fab1c5bfe829d_210_1.png)
 
 图 10.27 – Microsoft Teams 中的审批应用
-
-## 第 10 章
 
 最后，审批者还可以登录 Power Automate 网页门户并导航到“审批”，以查看并处理挂起的审批请求：
 
@@ -3356,17 +3367,13 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 选择选项后，项会在 SharePoint Online 列表中更新，如接下来的截图所示。
 
-### 总结
+## 总结
 
 在本章中，您学习了最流行且实用的功能之一：审批。您学习了如何创建审批、触发审批并响应。您还学习了如何从多个位置访问审批。在下一章中，我们将探索更复杂的审批场景。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_213_0.png)
 
-## 第 10 章
-
-## 214
-
-## 11
+## 第 11 章
 
 ## 使用审批
 
@@ -3379,11 +3386,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 在本章结束时，您将理解如何使用这些技术。
 
-## 第 10 章
-
-## 216
-
-### 使用顺序审批
+## 使用顺序审批
 
 顺序审批要求按顺序进行多个阶段的审批。图 11.1 显示了一个示例：
 
@@ -3401,19 +3404,19 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 审批过程可以有任何数量的阶段，而不限于两个。
 
-### 使用并行审批
+## 使用并行审批
 
 顺序审批按单线程处理，而并行审批是独立发生的。休假请求也可以以并行审批的形式出现：您可能需要两个人来批准休假（例如您的直属经理以及一名 HR 代表员，或者直接经理和项目经理），但这些个人可能处于不同的管理和汇报结构中，他们的审批过程是相互独立的。
 
 并行审批过程允许不同的审批分支独立进行。流末尾的逻辑（如条件）用于评估整个审批是否成功。
 
-### 使用高级场景
+## 使用高级场景
 
 创建更复杂的审批工作流时，可以使用一些配置选项。这些选项通常用于大型组织，一个或多个个人或组可以与审批交互。我们将简要介绍两种此类选项：混合审批类型和所有人批准。
 
-对于非常复杂的场景，审批可能包含多个级别的顺序审批、并行与顺序审批的混合，甚至是分支中的顺序审批。这些类型的审批被称为混合审批。在评估结果和响应时，您需要确保选择了了正确的动态值标记。
+对于非常复杂的场景，审批可能包含多个级别的顺序审批、并行与顺序审批的混合，甚至是分支中的顺序审批。这些类型的审批被称为混合审批。在评估结果和响应时，您需要确保选择了正确的动态值标记。
 
-### 所有人批准
+## 所有人批准
 
 在创建审批工作流时，如果满足两个条件之一，做出最终决策可能是理想的：
 
@@ -3422,11 +3425,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 这些类型的审批被称为所有人批准。为了演示这些技术，我们将创建一个使用系列（或顺序）审批的审批。
 
-
-
-
-
-### 创建基础顺序审批
+## 创建基础顺序审批
 
 在本节中，我们将创建一个涉及第一阶段和第二阶段审批的基础顺序审批。这类审批常见于以下场景：个人申请一定数量的休假，或需要进行达到特定阈值的支出。在本示例中，我们将创建一个根据价格阈值对请求的采购订单进行评估的审批。如果金额超过了用户直属经理 1,000 美元的审批限额，将触发另一个审批序列。
 
@@ -3442,21 +3441,21 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 接下来我们将配置前提条件。
 
-### 配置前提条件
+## 配置前提条件
 
 首先，你需要配置一个 SharePoint 列表，用于存储采购订单请求的数据。
 
 按照以下步骤配置列表：
 
-- 导航到包含用于启动此工作流的列表的 SharePoint 站点。如果你没有合适的站点，可以创建一个。
+1. 导航到包含用于启动此工作流的列表的 SharePoint 站点。如果你没有合适的站点，可以创建一个。
 
 图 11.2 – 创建新列表
 
-1. 从导航菜单中选择“站点内容”，然后点击“新建”并选择“列表”。
-2. 创建一个 SharePoint 列表。
-3. 在列表中，选择“所有项目”下拉菜单并选择“添加或删除字段”。
-4. 确保选择了 Title（标题）、Created（创建时间）、Created by（创建者）、Modified（修改）和 Modified by（修改者）列，并点击“应用”。
-5. 使用“添加列”按钮，使用以下列和类型配置列表：
+2. 从导航菜单中选择“站点内容”，然后点击“新建”并选择“列表”。
+3. 创建一个 SharePoint 列表。
+4. 在列表中，选择“所有项目”下拉菜单并选择“添加或删除字段”。
+5. 确保选择了 `Title`（标题）、`Created`（创建时间）、`Created by`（创建者）、`Modified`（修改）和 `Modified by`（修改者）列，并点击“应用”。
+6. 使用“添加列”按钮，使用以下列和类型配置列表：
 
 | 列名 | 列类型 |
 | --- | --- |
@@ -3472,7 +3471,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 列创建完成后，就可以继续创建审批流了。请务必记住你正在使用的 SharePoint 站点 URL 和列表名称，因为你将在下一节中需要它们。
 
-### 创建工作流
+## 创建工作流
 
 一旦创建了 SharePoint 列表，就可以开始处理流本身了。我们将分几个章节来创建此流：
 
@@ -3487,37 +3486,32 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 要创建此流，请按照以下步骤操作：
 
-- 导航到 Power Automate 制作 Web门户 (https://make.powerautomate.com)，登录并点击**创建**。
-- 选择**自动化云流**。
-- 为工作流输入一个名称（例如“采购订单请求两阶段审批”）。
-- 从触发器列表中，选择 SharePoint 触发器 **当项目创建时**，然后点击**创建**。
+1. 导航到 Power Automate 制作 Web门户 (https://make.powerautomate.com)，登录并点击**创建**。
+2. 选择**自动化云流**。
+3. 为工作流输入一个名称（例如“采购订单请求两阶段审批”）。
+4. 从触发器列表中，选择 SharePoint 触发器 **当项目创建时**，然后点击**创建**。
 
 通过连接你已使用的应用程序从重复性工作中解放出来——自动化警报、报告和其他任务。
 
 示例：
+
 - 在业务解决方案中自动收集并存储数据
 - 通过对 SQL 数据库的自定义查询生成报告
 
-点击触发器卡片以展开 **当项目创建时**。在**站点地址**字段中，选择存储列表的 SharePoint 站点的 URL。如果站点未出现在下拉菜单中，选择**输入自定义值**然后输入站点地址。
-
-6. 在**列表名称**字段中，选择你在*配置前提条件* 节中创建的列表名称。
+5. 点击触发器卡片以展开 **当项目创建时**。在**站点地址**字段中，选择存储列表的 SharePoint 站点的 URL。如果站点未出现在下拉菜单中，选择**输入自定义值**然后输入站点地址。
+6. 在**列表名称**字段中，选择你在*配置前提条件*节中创建的列表名称。
 
 图 11.4 – 配置触发器
 
 7. **添加操作。**
-
-8. 选择 **Office 365 Users - 获取经理 (V2)** 操作，在**当项目创建时**”部分添加来自“**创建者电子邮件 (Created By Email)**”的动态内容标记：
-
-9. 在 **获取经理 (V2)** 操作的**用户 (UPN)**字段中，添加来自“**当项目创建时**”部分的“**创建者电子邮件 (Created By Email)**”的动态内容标记：
+8. 选择 **Office 365 Users - 获取经理 (V2)** 操作，在**当项目创建时**部分添加来自“**创建者电子邮件 (Created By Email)**”的动态内容标记。
+9. 在 **获取经理 (V2)** 操作的**用户 (UPN)**字段中，添加来自“**当项目创建时**”部分的“**创建者电子邮件 (Created By Email)**”的动态内容标记。
 
 图 11.5 – 配置获取经理 (V2)
 
 10. **添加操作。**
-
 11. **选择条件。**
-
 12. 在条件的左侧，选择**采购金额 (Purchase Amount)**。
-
 13. 选择操作类型为**大于**。
 14. 在右侧输入 **1000**。
 
@@ -3546,9 +3540,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 10. 点击“保存”保存工作流进度。
 11. 展开是（True）分支。
-
 12. **添加操作**并选择 SharePoint **更新项**操作。
-
 13. 在**站点地址**字段中，选择包含此工作流所需列表的站点。如果站点未在下拉列表中显示，选择输入自定义值选项并粘贴 SharePoint 站点的 URL。
 14. 在**列表名称**字段中，选择用于此工作流的列表。
 15. 在**ID**字段中，选择来自“当项目创建时”部分的 **ID** 动态内容标记。
@@ -3569,54 +3561,42 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 图 11.10 – 完成更新项操作
 
-
-
-
-
-## 第 11 章
-
-## 197
-
 ![](img/bfc58bb450784476738fab1c5bfe829d_225_0.png)
 
 图 11.11 - 部分完成的条件控制配置
 
-- 28. 点击保存。
-- 29. 滚动到流程底部。
-- 30. 添加操作。
-- 31. 选择条件控制（Condition）。默认情况下，该操作将标记为 Condition 2。
-- 32. 将操作名称更新为具描述性的名称，例如评估阶段批准条件（Evaluate Stage Approval Condition）。
-- 33. 在条件控制中，选择左侧的选择值（Choose value）框，然后在“等待等待审批”（Start and wait for an approval）部分中选择结果（Outcome）动态内容令牌。
+27. 点击保存。
+28. 滚动到流程底部。
+29. 添加操作。
+30. 选择条件控制（Condition）。默认情况下，该操作将标记为 `Condition 2`。
+31. 将操作名称更新为具描述性的名称，例如评估阶段批准条件（Evaluate Stage Approval Condition）。
+32. 在条件控制中，选择左侧的选择值（Choose value）框，然后在“等待等待审批”（Start and wait for an approval）部分中选择结果（Outcome）动态内容令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_225_1.png)
 
 图 11.12 - 选择结果动态值内容令牌
 
-- 34. 确保操作符值设置为“等于”（equal to）。
-- 35. 在右侧的选择值框中，输入文本 Approve（批准）。
-- 36. 在“评估阶段 1 批准条件”的假（False）分支中，点击添加操作并选择“发送电子邮件 (V2)” Office 365 Outlook 操作。
-- 37. 在“项目创建时”（When item is created）部分下将创建者电子邮件（Created by Email）动态内容令牌添加到收件者（To）字段。
-- 38. 在主题（Subject）字段中添加拒绝消息。您可能想要包含 Title 动态内容令牌。
-- 39. 在正文（Body）字段中添加拒绝消息。您可能还需要使用 Title SharePoint 动态内容令牌，以及来自“获取经理 (V2)”操作的显示名称（Display Name）动态内容令牌：
+33. 确保操作符值设置为“等于”（equal to）。
+34. 在右侧的选择值框中，输入文本 `Approve`（批准）。
+35. 在“评估阶段 1 批准条件”的假（False）分支中，点击添加操作并选择“发送电子邮件 (V2)” Office 365 Outlook 操作。
+36. 在“项目创建时”（When item is created）部分下将创建者电子邮件（Created by Email）动态内容令牌添加到收件者（To）字段。
+37. 在主题（Subject）字段中添加拒绝消息。您可能想要包含 `Title` 动态内容令牌。
+38. 在正文（Body）字段中添加拒绝消息。您可能还需要使用 `Title` SharePoint 动态内容令牌，以及来自“获取经理 (V2)”操作的显示名称（Display Name）动态内容令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_226_0.png)
 
 图 11.13 – 正在处理阶段 1 批准条件
 
-- 40. 可选的是，您可能想扩展高级参数并添加发件人（发送为）[From (Send as)] 属性，并指定值如 noreply@domain.com（这样投诉就不会回到您的邮箱）。
-- 41. 在假（False）分支中，点击添加操作并选择终端控制（Terminal）。
-- 42. 状态（Status）选择“成功”（Succeeded）。
-- 43. 点击保存。
+39. 可选的是，您可能想扩展高级参数并添加发件人（发送为）[From (Send as)] 属性，并指定值如 `noreply@domain.com`（这样投诉就不会回到您的邮箱）。
+40. 在假（False）分支中，点击添加操作并选择终端控制（Terminal）。
+41. 状态（Status）选择“成功”（Succeeded）。
+42. 点击保存。
 
 此时，审批流程的第一阶段已完成。对于金额在 1,000 美元或以下的采购订单，直接经理可以批准或拒绝请求。对于金额超过 1,000 美元的采购订单，SharePoint 项目将更新为“待审批”状态，并启动一个新的审批流程。
 
-## 第 11 章
-
-## 199
-
 作为审批流程的一部分，流程会向请求者的经理发送通知。如果被拒绝，审批将结束；流程的最后一步是向请求者发送电子邮件，指示审批已被拒绝。然而，如果结果是批准的，工作流将启动一个新分支以开始第二阶段。
 
-### 重命名步骤
+## 重命名步骤
 
 默认情况下，步骤使用操作的名称标记。然而，在包含多个操作、条件或分支的长步骤或复杂步骤中，重命名特定步骤可能有助于记录您处于流程的什么位置。每个步骤都使用操作名称（默认值），并为每个实例附加一个数字（因为每个步骤必须有唯一的名称值）。
 
@@ -3626,33 +3606,42 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 现在，让我们继续创建审批的下一个阶段。
 
-### 创建第二阶段审批
+## 创建第二阶段审批
 
 在审批流程的此部分，请求将发送给第二级或第二阶段审批者。第二阶段审批者也将具有批准或拒绝请求的能力。
 
 要完成此流程，请按照以下步骤操作：
 
-- 1. 在打开流程的情况下，选择第二个条件控制“评估阶段 1 批准”的真（True）分支，然后点击添加操作。
-- 2. 选择“更新项目”（Update item）操作
-- 3. 在站点地址（Site Address）字段中，选择包含此工作流 SharePoint 列表的站点。
-- 4. 在列表名称（List Name）字段中，选择用于此工作流的列表。
-- 5. 在 Id 字段中，选择“项目创建时”部分下的 ID 动态内容令牌。
-- 6. 将标题（Title）字段设置为“项目创建时”部分下的 Title 动态内容令牌。
-- 7. 将采购金额（Purchase Amount）字段设置为“项目创建时”部分中的 Purchase Amount 动态内容令牌。
-- 8. 将预批准（Pre-approved）下拉菜单设置为“是”（Yes）。
-- 9. 确保“已批准”（Approved）下拉菜单设置为“是”。见图 11.14。
-- 10. 确保“需要预审”（Pre-approval required）下拉菜单设置为“是”。
+1. 在打开流程的情况下，选择第二个条件控制“评估阶段 1 批准”的真（True）分支，然后点击添加操作。
+2. 选择“更新项目”（Update item）操作
+3. 在站点地址（Site Address）字段中，选择包含此工作流 SharePoint 列表的站点。
+4. 在列表名称（List Name）字段中，选择用于此工作流的列表。
+5. 在 `Id` 字段中，选择“项目创建时”部分下的 `ID` 动态内容令牌。
+6. 将标题（Title）字段设置为“项目创建时”部分下的 `Title` 动态内容令牌。
+7. 将采购金额（Purchase Amount）字段设置为“项目创建时”部分中的 `Purchase Amount` 动态内容令牌。
+8. 将预批准（Pre-approved）下拉菜单设置为“是”（Yes）。
+
+
+
+## 9. 确保“已批准”（Approved）下拉菜单设置为“是”。见图 11.14。
+
+## 10. 确保“需要预审”（Pre-approval required）下拉菜单设置为“是”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_228_0.png)
 
-- 11. 点击添加操作。
-- 12. 选择“等待审批”（Start and wait for approval）操作。
-- 13. 将步骤重命名为有意义的名称。
-- 14. 对于类型（Type）字段，选择结果（Outcome）动态内容。
-- 15. 对于主题（Subject）字段，选择“项目创建时”部分中的 Title 动态内容。
-- 16. 对于分配给（Assigned）字段，选择经理的电子邮件地址。
+## 11. 点击添加操作。
 
-## 第 11 章
+## 12. 选择“等待审批”（Start and wait for approval）操作。
+
+## 13. 将步骤重命名为有意义的名称。
+
+## 14. 对于类型（Type）字段，选择结果（Outcome）动态内容。
+
+## 15. 对于主题（Subject）字段，选择“项目创建时”部分中的 Title 动态内容。
+
+## 16. 对于分配给（Assigned）字段，选择经理的电子邮件地址。
+
+# 第 11 章
 
 ## 201
 
@@ -3660,7 +3649,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 图 11.15 - 快速检查流程
 
-- 17. 点击保存。
+## 17. 点击保存。
 
 您现在已完成第二阶段审批。接下来，我们将开始完成流程。
 
@@ -3670,52 +3659,38 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 要完成此流程，请按照以下步骤操作：
 
-- 1. 在采购订单审批流程中，滚动到流程底部并点击新建步骤。
-- 2. 添加条件控制。可选的是，将新步骤重命名为“评估 2”（Evaluate 2）。
-- 3. 在条件控制左侧的选择值框中，选择“等待审批”部分的结果（Outcome）值。
-- 4. 选择“等于”作为条件的评估方法。
-- 5. 将条件控制右侧的选择值设置为“批准”（App）。
-- 6. 在假（False）分支中，点击添加操作。
-- 7. 选择“发送电子邮件 (V2)” Office 365 Outlook 操作。
-- 8. 在收件者（To）字段中，添加“项目创建时”部分下的创建者电子邮件（Created by Email）动态内容。
-- 9. 在主题（Subject）字段中，添加消息。可选的是，添加 Title 动态内容值。
-- 10. 在正文（Body）字段中添加消息。此外，添加 Title 动态内容值以及其他值（例如审批者名称）。
-- 11. 可选的是，您可能想扩展高级参数并添加发件人（发送为）属性，并指定值如 noreply@domain.com（这样投诉就不会回到您的邮箱）。
-- 12. 点击操作并选择“项目创建时”部分下的更新项目动态内容值。
-- 13. 使用“项目创建时”部分的动态内容令牌配置站点地址、列表名称、ID、标题和采购金额。
-- 14. 将预批准（Pre-approved）分支设置为“否”（No）。
-- 15. 将已批准（Approved）字段设置为“否”。
-- 16. 将需要预审（Pre-approval required）设置为“是”。
-- 17. 点击添加操作，然后选择终端控制（Terminal）。
-- 18. 检查假（False）分支确保其结构与图 11.16 类似：
+1. 在采购订单审批流程中，滚动到流程底部并点击新建步骤。
+2. 添加条件控制。可选的是，将新步骤重命名为“评估 2”（Evaluate 2）。
+3. 在条件控制左侧的选择值框中，选择“等待审批”部分的结果（Outcome）值。
+4. 选择“等于”作为条件的评估方法。
+5. 将条件控制右侧的选择值设置为“批准”（App）。
+6. 在假（False）分支中，点击添加操作。
+7. 选择“发送电子邮件 (V2)” Office 365 Outlook 操作。
+8. 在收件者（To）字段中，添加“项目创建时”部分下的创建者电子邮件（Created by Email）动态内容。
+9. 在主题（Subject）字段中，添加消息。可选的是，添加 Title 动态内容值。
+10. 在正文（Body）字段中添加消息。此外，添加 Title 动态内容值以及其他值（例如审批者名称）。
+11. 可选的是，您可能想扩展高级参数并添加发件人（发送为）属性，并指定值如 `noreply@domain.com`（这样投诉就不会回到您的邮箱）。
+12. 点击操作并选择“项目创建时”部分下的更新项目动态内容值。
+13. 使用“项目创建时”部分的动态内容令牌配置站点地址、列表名称、ID、标题和采购金额。
+14. 将预批准（Pre-approved）分支设置为“否”（No）。
+15. 将已批准（Approved）字段设置为“否”。
+16. 将需要预审（Pre-approval required）设置为“是”。
+17. 点击添加操作，然后选择终端控制（Terminal）。
+18. 检查假（False）分支确保其结构与图 11.16 类似：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_230_0.png)
 
-- 20. 选择最后的真（True）条件分支，然后添加操作。
-- 21. 选择 SharePoint “更新项目”操作。
-
-
-
-
-
+20. 选择最后的真（True）条件分支，然后添加操作。
+21. 选择 SharePoint “更新项目”操作。
 22. 使用“创建项时”部分中的动态内容标记，配置站点地址、列表名称、ID、标题和购买金额值。
-
 23. 将“预批准（Pre-approved）”字段设置为“是”。
-
 24. 将“批准（Approved）”字段设置为“是”。
-
 25. 将“预批准要求（Pre-approval requirement）”字段设置为“是”。
-
 26. 选择发送电子邮件 (V2) Office 365 Outlook 操作。
-
 27. 在“致（To）”字段中，添加“创建项时”部分下的“创建者电子邮件（Created by Email）”动态内容值。
-
 28. 在“主题（Subject）”字段中添加消息。可选添加“标题（Title）”动态内容值。
-
 29. 在“正文（Body）”字段中添加消息主体。可选添加“标题（Title）”动态内容以及任何其他值（如审批人姓名）。
-
 30. 点击“添加操作”并选择“终止（Terminate）”。
-
 31. 将状态设置为“如果是成功（If Yes succeeds）”，以确保其结构与图 11.17 类似：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_231_0.png)
@@ -3730,7 +3705,7 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 ### 测试流
 
-要测试此流，请导航到包含受监控的列表和值的 SharePoint 站点。为了验证它是否按设计运行工作，你可能需要运行多次测试，包括金额高于 $1,000 和低于 $1,000 的请求，然后在第一阶段或第二阶段批准或拒绝它们。
+要测试此流，请导航到包含受监控的列表和值的 SharePoint 站点。为了验证它是否按设计运行工作，你可能需要运行多次测试，包括金额高于 `$1,000` 和低于 `$1,000` 的请求，然后在第一阶段或第二阶段批准或拒绝它们。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_232_0.png)
 
@@ -3744,22 +3719,25 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 对于运行时间较长或涉及多个用户或交互的审批过程，你可能希望向用户发送定期电子邮件提醒。实现此点的一种方法是在每个审批阶段填充变量，并使用并行审批分支检查它们是否已完成。你将通过五个组件完成此操作：
 
-- 初始化变量（Initialize variable）操作将用于配置一个变量（例如 FirstApprovalDone），你将在整个审批过程中检查该变量。该变量将初始化为 false，只有在审批人批准请求后才会被设置为 true。
+- 初始化变量（Initialize variable）操作将用于配置一个变量（例如 `FirstApprovalDone`），你将在整个审批过程中检查该变量。该变量将初始化为 `false`，只有在审批人批准请求后才会被设置为 `true`。
 
 # 第 11 章
 
-# 205
+## 205
 
 在某些编程语言中，你可以即时将操作或命令的结果保存到变量中。在 Power Automate 中，你必须在使用变量之前对其进行声明。
 
-- **直直到（Do until）** 控件将用于创建一个循环，定期检查变量（示例中的 FirstApprovalDone）是否已从 **false** 变为 **true**。
+- **直直到（Do until）** 控件将用于创建一个循环，定期检查变量（示例中的 `FirstApprovalDone`）是否已从 `false` 变为 `true`。
+
 - **延迟（Delay）** 操作允许你定义通过某段时间来发送电子邮件（以便让审批人在收到通知之前有机会做出响应）。
+
 - **发送电子邮件 (V2)** 操作（你之前已使用过）将向审批人发送提醒性电子邮件。
-- **设置变量（Set variable）** 操作将用于更新变量（FirstApprovalDone），以表示审批已完成。
+
+- **设置变量（Set variable）** 操作将用于更新变量（`FirstApprovalDone`），以表示审批已完成。
 
 你可以使用以下步骤添加提醒性电子邮件：
 
-1. 使用 Power Automate 制作器网页门户界面 (https://make.powerautomate.com)，编辑两阶段审批。
+1. 使用 Power Automate 制作器网页门户界面 (`https://make.powerautomate.com`)，编辑两阶段审批。
 2. 导航到 **获取经理 (Get manager (V2))** 步骤，然后在它与第一个批准控制控件之间**添加操作**：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_233_0.png)
@@ -3772,15 +3750,13 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_234_0.png)
 
-4. 将帮助你跟踪正在处理哪个审批的变量命名为 FirstApprovalDone。将类型设置为布尔（Boolean）并输入初始值 false。
-
-5. 在这种情况下，你将使用此变量来跟踪第一个审批是否完成，将其命名为 FirstApprovalDone：
+4. 将帮助你跟踪正在处理哪个审批的变量命名为 `FirstApprovalDone`。将类型设置为布尔（Boolean）并输入初始值 `false`。
+5. 在这种情况下，你将使用此变量来跟踪第一个审批是否完成，将其命名为 `FirstApprovalDone`：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_234_1.png)
 
-6. 接下来，展开创建第一个审批的条件（它应该是第二个条件控制步骤，如果你重命名了它，它应该名为 Evaluate Stage 1 Approval）。
-
-7. 在“真（True）”分支中，右键点击“更新项（Update item）和“开始并等待审批”操作之间的 + 号，然后选择**添加并行分支**：
+6. 接下来，展开创建第一个审批的条件（它应该是第二个条件控制步骤，如果你重命名了它，它应该名为 `Evaluate Stage 1 Approval`）。
+7. 在“真（True）”分支中，右键点击“更新项（Update item）和“开始并等待审批”操作之间的 `+` 号，然后选择**添加并行分支**：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_235_0.png)
 
@@ -3788,28 +3764,25 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_235_1.png)
 
-9. 为 **计数（Count）** 输入数字并选择 **单位（Unit）**，这将用于发送电子邮件。在示例中，为 **计数** 输入 1 并选择 **天（Day）** 意味着提醒电子邮件将在一天后后发送：
+9. 为 **计数（Count）** 输入数字并选择 **单位（Unit）**，这将用于发送电子邮件。在示例中，为 **计数** 输入 `1` 并选择 **天（Day）** 意味着提醒电子邮件将在一天后后发送：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_236_0.png)
 
 图 11.24 – 配置延迟
 
 10. 在延迟操作之后，添加一个操作：
-
 11. 在 直直到（Do until）左侧的“选择值”框中，选择 发送电子邮件 (V2) 操作，如图 11.25 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_236_1.png)
 
 图 11.25 – 添加操作
 
-12. 在 直直到（Do until）右侧的“选择值”框中，选择 FirstApprovalDone 的动态内容。
-
-13. 在“选择值”框中，选择 true 的表达式——注意使用浏览器功能可能会选择器隐藏：
+12. 在 直直到（Do until）右侧的“选择值”框中，选择 `FirstApprovalDone` 的动态内容。
+13. 在“选择值”框中，选择 `true` 的表达式——注意使用浏览器功能可能会选择器隐藏：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_237_0.png)
 
 14. 选择 发送电子邮件 (V2) 操作。
-
 15. 使用 获取经理 (Get Manager (V2)) 的动态内容填充邮件。输入主题和邮件正文：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_238_0.png)
@@ -3823,7 +3796,6 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 图 11.27 – 添加操作
 
 17. 添加 **设置变量（Set variable）** 操作。
-
 18. 从 **名称（Name）** 下拉列表中选择 **FirstApprovalDone** 变量，然后添加 **true** 表达式：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_239_1.png)
@@ -3846,21 +3818,18 @@ Microsoft 365 组日历现在将更新并显示请求者已批准的休假日历
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_240_0.png)
 
-
-
-
-
 # 12
+
 ## 向 Teams 发送审批
 
-Microsoft 已将 Teams 定位于“协作枢纽”（https://learn.microsoft.com/en-us/microsoftteams/teams-overview；参见 [协作](https://Teamwork)）。考虑到此，我们将应用在第 10 节“开始使用审批”中获得的审批流技能，并用这些技能来为 Microsoft Teams 构建一个审批体验。你将能够使用这些技能，帮助为使用 Teams 作为平台的组织成员简化审批流程。
+Microsoft 已将 Teams 定位于“协作枢纽”（`https://learn.microsoft.com/en-us/microsoftteams/teams-overview`；参见 [协作](https://Teamwork)）。考虑到此，我们将应用在第 10 节“开始使用审批”中获得的审批流技能，并用这些技能来为 Microsoft Teams 构建一个审批体验。你将能够使用这些技能，帮助为使用 Teams 作为平台的组织成员简化审批流程。
 
 在本章中，我们将涵盖以下主题：
 
--   理解工作流
--   配置先决条件
--   配置一个使用 Teams 的审批流
--   测试工作流
+- 理解工作流
+- 配置先决条件
+- 配置一个使用 Teams 的审批流
+- 测试工作流
 
 在本章结束时，你将能够将 Power Automate 审批流与 Microsoft Teams 集成。
 
@@ -3872,16 +3841,16 @@ Microsoft 已将 Teams 定位于“协作枢纽”（https://learn.microsoft.com
 
 这个复杂的工作流将使用几个熟悉的组件，包括：
 
--   SharePoint **当文件夹中创建文件时 触发器**
--   Office 365 Users **获取用户配置文件 (V2)** 动作
--   Office 365 Users **获取经理 (V2)** 动作
--   审批（Approvals） **创建审批 (V2)** 动作
--   条件
+- SharePoint **当文件夹中创建文件时 触发器**
+- Office 365 Users **获取用户配置文件 (V2)** 动作
+- Office 365 Users **获取经理 (V2)** 动作
+- 审批（Approvals） **创建审批 (V2)** 动作
+- 条件
 
 在本章中，我们还引入了 **Microsoft Teams 连接器**。通过 Microsoft Teams 连接器，你将能够执行此类操作：
 
--   **作为 Flow 机器人向用户发送你自己的自适应卡片**：自适应卡片是直接在 Microsoft Teams 会话或体验中展示内容的新方法。自适应卡片可以包含图表、图像和格式化文本等组件。
--   **作为 Flow 机器人向用户发送消息**：这将允许 Power Automate 和 Flow 机器人与审批请求者进行通信。
+- **作为 Flow 机器人向用户发送你自己的自适应卡片**：自适应卡片是直接在 Microsoft Teams 会话或体验中展示内容的新方法。自适应卡片可以包含图表、图像和格式化文本等组件。
+- **作为 Flow 机器人向用户发送消息**：这将允许 Power Automate 和 Flow 机器人与审批请求者进行通信。
 
 这些新操作将允许 Power Automate 与 Microsoft Teams 平台交互。为了提高业务生产力，审批人员应该能够在 Microsoft Teams 应用程序内部响应审批。
 
@@ -3896,6 +3865,7 @@ Microsoft 已将 Teams 定位于“协作枢纽”（https://learn.microsoft.com
 此审批流的一个输出是根据是否获得批准或拒绝，在 SharePoint 站点上移动文档。这需要一个包含“已提交（Submitted）”、“已批准（Approved）”和“已拒绝（Rejected）”文件夹的 SharePoint 站点，如下所示：
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_243.png)
+
 图 12.1 – 创建文件夹
 
 在示例中，我们将使用名为“采购订单”的 SharePoint 站点（参见第 10 节“开始使用审批”），但你可以使用任何站点。
@@ -3904,15 +3874,17 @@ Microsoft 已将 Teams 定位于“协作枢纽”（https://learn.microsoft.com
 
 Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行双向交互。要安装该应用，请按照以下步骤操作：
 
-1. 启动 Microsoft Teams（桌面版或网页版 https://teams.microsoft.com）。
+1. 启动 Microsoft Teams（桌面版或网页版 `https://teams.microsoft.com`）。
 2. 在左侧栏中点击三个点（...），搜索 **Power Automate**：
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_243.png)
+
 图 12.2 – 添加 Power Automate
 
 3. 在应用页面上，点击添加，并同意 Workflows 的隐私条款。
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_244.png)
+
 图 12.3 – 使用 Power Automate 应用
 
 一旦安装了该应用，你就可以开始配置了。
@@ -3931,14 +3903,14 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 在第一部分中，我们将配置触发器以检测文件并获取请求者的信息。要配置工作流，请遵循以下步骤：
 
-1. 导航到 Automate 门户（https://make.powerautomate.com），选择创建，然后从空白开始工作流。
+1. 导航到 Automate 门户（`https://make.powerautomate.com`），选择创建，然后从空白开始工作流。
 2. 搜索“当文件夹中创建文件时”。
 3. 在站点地址字段中，选择 SharePoint 站点。在文件夹字段中，选择“已提交（Submitted）”文件夹。
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_245.png)
 
 4. 点击新步骤。
-5. 选择 SharePoint 获取文件属性。在站点地址字段中，选择 SharePoint 站点。在库名称字段中，选择文档库。在 ID 字段中，选择来自“当文件夹中创建文件时”的 ItemId 令牌。
+5. 选择 SharePoint 获取文件属性。在站点地址字段中，选择 SharePoint 站点。在库名称字段中，选择文档库。在 ID 字段中，选择来自“当文件夹中创建文件时”的 `ItemId` 令牌。
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_246.png)
 
@@ -3960,14 +3932,16 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 1. 在“获取经理 (V2)”动作之后添加一个动作。
 2. 选择审批 创建审批 动作。
 3. 在审批类型下，选择“批准/拒绝 - 响应响应者”。
-4. 在标题下，选择能够唯一标识此请求的文本。在示例中，你可以选择来自“获取文件属性”部分的 Title 和 Created ByDisplayName 动态值令牌。
+
+
+
+# 配置审批工作流
+
+4. 在标题下，选择能够唯一标识此请求的文本。在示例中，你可以选择来自“获取文件属性”部分的 `Title` 和 `Created ByDisplayName` 动态值令牌。
 
 ![](img/bfc58bb45078446738fab1c5bfe29d_247_0.png)
+
 图 12.8 – 配置获取用户配置文件 (V2) 动作
-
-
-
-
 
 在 **Assigned**（分配给）字段中，选择 **Get manager**（获取经理）部分下的 **Mail** 动态内容令牌值：
 
@@ -3981,7 +3955,7 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 选择 Microsoft Teams 操作中的 **Post card in a chat or channel**（在聊天或通道中发布卡片）：
 
-![](imgimg/bfc58bb450784476738fab1c5bfe829d_248_1.png)
+![](img/bfc58bb450784476738fab1c5bfe829d_248_1.png)
 
 图 12.10 – 添加自适应卡片操作
 
@@ -3997,19 +3971,21 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_249_1.png)
 
-- 13. 添加操作。
-- 14. 选择 **Wait for an approval**（等待审批）操作。
-- 15. 在 **Approval ID** 字段中，选择 **Create an approval** 下的 **Approval ID** 动态内容令牌：
+13. 添加操作。
+
+14. 选择 **Wait for an approval**（等待审批）操作。
+
+15. 在 **Approval ID** 字段中，选择 **Create an approval** 下的 **Approval ID** 动态内容令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_250_0.png)
 
 图 12.13 – 配置“等待审批”操作
 
-- 16. 点击保存。
+16. 点击保存。
 
 现在你已经配置好了一个审批工作流，它将启动、向 Teams 用户发送自适应卡片，并等待他们的响应。在下一节中，我们将评估响应并决定采取什么操作。
 
-### 返回响应
+## 返回响应
 
 在最后一个章节中，我们将根据审批者的响应来配置操作（通知请求者并移动已提交的文件）。由于步骤较多，我们将其分为较小的部分。
 
@@ -4017,145 +3993,76 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 要完成流的这部分，请确保来自上一个节的流处于编辑状态，并按照以下步骤操作：
 
-- 1. 在 **Wait for an approval** 操作之后，添加操作。
-- 2. 选择 **Condition**（条件）控制。
-- 3. 在控制器左侧的 **Choose a value**（选择值）框中，选择 **Outcome**（结果）动态内容令牌：
+1. 在 **Wait for an approval** 操作之后，添加操作。
+2. 选择 **Condition**（条件）控制。
+3. 在控制器左侧的 **Choose a value**（选择值）框中，选择 **Outcome**（结果）动态内容令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_251_0.png)
 
 图 12.14 – 配置条件控制器
 
-- 4. 为条件选择 **is equal to**（等于）评估方法。
-- 5. 在条件的右侧框中输入文本 `Approve`（批准），点击 **Add action**（添加操作）。
-- 6. 在条件的 **True**（真）分支中，点击 **Add action**。
-- 7. 选择 **Post message in a chat or channel**（在聊天或通道中发布消息）操作：
+4. 为条件选择 **is equal to**（等于）评估方法。
+5. 在条件的右侧框中输入文本 `Approve`（批准），点击 **Add action**（添加操作）。
+6. 在条件的 **True**（真）分支中，点击 **Add action**。
+7. 选择 **Post message in a chat or channel**（在聊天或通道中发布消息）操作：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_251_1.png)
 
 图 12.15 – 添加发布消息操作
 
-- 8. 在 **Post as** 中，选择 **Flow bot**。
-- 9. 在 **Recipient** 字段中，选择 **Chat with the Flow bot**。
-- 10. 在 **Recipient** 字段中，添加 **Get user profile**（获取用户配置文件）部分下的 **Mail** 动态内容令牌。这将响应发送给请求者。
-- 11. 在 **Message** 字段中，输入将发布在请求者消息正文中的文本。
-- 12. 在 **True** 分支中，添加操作。
-- 13. 选择 SharePoint **Move file**（移动文件）操作。
-- 14. 在 **Current Site Address**（当前站点地址）中，选择流中使用的 SharePoint 站点。
-- 15. 在 **File to Move**（要移动的文件）中，选择 **When a file is created in a folder**（文件夹中创建文件时）部分下的 `headers/x-ms-file-id` 动态内容令牌。
+8. 在 **Post as** 中，选择 **Flow bot**。
+9. 在 **Recipient** 字段中，选择 **Chat with the Flow bot**。
+10. 在 **Recipient** 字段中，添加 **Get user profile**（获取用户配置文件）部分下的 **Mail** 动态内容令牌。这将响应发送给请求者。
+11. 在 **Message** 字段中，输入将发布在请求者消息正文中的文本。
+12. 在 **True** 分支中，添加操作。
+13. 选择 SharePoint **Move file**（移动文件）操作。
+14. 在 **Current Site Address**（当前站点地址）中，选择流中使用的 SharePoint 站点。
+15. 在 **File to Move**（要移动的文件）中，选择 **When a file is created in a folder**（文件夹中创建文件时）部分下的 `headers/x-ms-file-id` 动态内容令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_252_0.png)
 
 图 12.16 - 添加 x-ms-file-id 动态内容令牌
-- 16. 在 **Destination Site address**（目标站点地址）中，选择你创建 Approved 文件夹的 SharePoint 站点。
-- 17. 对于 **Destination Folder**（目标文件夹），选择如果目标文件夹中存在同名文件时要的操作。在 **Another file is already there**（已存在文件）下拉菜单中选择一个选项，例如 **Move with a new name**（重命名移动）操作。完成的分支应该类似于图 12.17。
+
+16. 在 **Destination Site address**（目标站点地址）中，选择你创建 `Approved` 文件夹的 SharePoint 站点。
+17. 对于 **Destination Folder**（目标文件夹），选择如果目标文件夹中存在同名文件时要的操作。在 **Another file is already there**（已存在文件）下拉菜单中选择一个选项，例如 **Move with a new name**（重命名移动）操作。完成的分支应该类似于图 12.17。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_252_1.png)
 
 图 12.17 - 配置 SharePoint 移动文件操作
 
-- 19. 点击保存。
+19. 点击保存。
 
 现在，我们将配置当审批者拒绝或否定请求时会发生什么。步骤非常相似——事实上，它们是同一组操作，你可以编辑消息响应和文件目标。你可以重复步骤并进行更新，也可以使用 **Copy action**（复制操作）功能节省时间：
 
-- 1. 在 **True** 分支中，右键点击 **Post message in a chat or channel** 操作的卡片，并选择 **Copy action**：
+1. 在 **True** 分支中，右键点击 **Post message in a chat or channel** 操作的卡片，并选择 **Copy action**：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_253_0.png)
 
 图 12.18 - 复制操作
-- 2. 在 **False** 条件分支中，右键点击 **Add action** `+` 号并选择 **Paste action**（粘贴操作）。
-- 3. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
-- 4. 更新 **Message** 字段，替换现有的发布在请求者消息正文中的值。正如你配置原始操作时一样，你可以使用文本、表达式和动态内容的组合。
+
+2. 在 **False** 条件分支中，右键点击 **Add action** `+` 号并选择 **Paste action**（粘贴操作）。
+3. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
+4. 更新 **Message** 字段，替换现有的发布在请求者消息正文中的值。正如你配置原始操作时一样，你可以使用文本、表达式和动态内容的组合。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_253_1.png)
 
 图 12.19 - 更新粘贴操作的属性
-- 5. 在 **True** 条件分支中，选择 **Move file** 操作的卡片，然后选择 **Copy action**。
-- 6. 在 **False** 条件分支中，右键点击 **Add an action** `+` 号并选择 **Paste after action**（在操作后粘贴）。
-- 7. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
-- 8. 对于 **Destination Folder**，选择默认文档库中的 **Rejected** 文件夹。
-- 9. 最后，选择如果目标文件夹中存在同名文件时要的操作。在 **If another folder is already there** 下拉菜单下选择一个选项，例如 **Move with a new name** 操作。完成的分支应该类似于图 12.20：
+
+5. 在 **True** 条件分支中，选择 **Move file** 操作的卡片，然后选择 **Copy action**。
+6. 在 **False** 条件分支中，右键点击 **Add an action** `+` 号并选择 **Paste after action**（在操作后粘贴）。
+7. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
+8. 对于 **Destination Folder**，选择默认文档库中的 **Rejected** 文件夹。
+9. 最后，选择如果目标文件夹中存在同名文件时要的操作。在 **If another folder is already there** 下拉菜单下选择一个选项，例如 **Move with a new name** 操作。完成的分支应该类似于图 12.20：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_254_0.png)
 
 图 12.20 - 检查 If 分支的配置
-- 10. 点击保存。
+
+10. 点击保存。
 
 你已经配置好了一个审批工作流，它将启动、向 Teams 用户发送自适应卡片，并等待他们的响应。在下一节中，我们将评估响应并决定采取什么操作。
 
-### 返回响应
-
-在最后一个章节中，我们将根据审批者的响应来配置操作（通知请求者并移动已提交的文件）。由于步骤较多，我们将其分为较小的部分。
-
-首先，我们将配置当审批者决定批准请求时会发生什么。
-
-要完成流的这部分，请确保来自上一个节的流处于编辑状态，并按照以下步骤操作：
-
-- 1. 在 **Wait for an approval** 操作之后，添加操作。
-- 2. 选择 **Condition**（条件）控制。
-- 3. 在控制器左侧的 **Choose a value**（选择值）框中，选择 **Outcome**（结果）动态内容令牌：
-
-![](img/bfc58bb450784476738fab1c5bfe829d_251_0.png)
-
-图 12.14 – 配置条件控制器
-
-- 4. 为条件选择 **is equal to**（等于）评估方法。
-- 5. 在条件的右侧框中输入文本 `Approve`（批准），点击 **Add action**（添加操作）。
-- 6. 在条件的 **True**（真）分支中，点击 **Add action**。
-- 7. 选择 **Post message in a chat or channel**（在聊天或通道中发布消息）操作：
-
-![](img/bfc58bb450784476738fab1c5bfe829d_251_1.png)
-
-图 12.15 – 添加发布消息操作
-
-- 8. 在 **Post as** 中，选择 **Flow bot**。
-- 9. 在 **Recipient** 字段中，选择 **Chat with the Flow bot**。
-- 10. 在 **Recipient** 字段中，添加 **Get user profile**（获取用户配置文件）部分下的 **Mail** 动态内容令牌。这将响应发送给请求者。
-- 11. 在 **Message** 字段中，输入将发布在请求者消息正文中的文本。
-- 12. 在 **True** 分支中，添加操作。
-- 13. 选择 SharePoint **Move file**（移动文件）操作。
-- 14. 在 **Current Site Address**（当前站点地址）中，选择流中使用的 SharePoint 站点。
-- 15. 在 **File to Move**（要移动的文件）中，选择 **When a file is created in a folder**（文件夹中创建文件时）部分下的 `headers/x-ms-file-id` 动态内容令牌。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_252_0.png)
-
-图 12.16 - 添加 x-ms-file-id 动态内容令牌
-- 16. 在 **Destination Site address**（目标站点地址）中，选择你创建 Approved 文件夹的 SharePoint 站点。
-- 17. 对于 **Destination Folder**（目标文件夹），选择如果目标文件夹中存在同名文件时要的操作。在 **Another file is already there**（已存在文件）下拉菜单中选择一个选项，例如 **Move with a new name**（重命名移动）操作。完成的分支应该类似于图 12.17。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_252_1.png)
-
-图 12.17 - 配置 SharePoint 移动文件操作
-
-- 19. 点击保存。
-
-现在，我们将配置当审批者拒绝或否定请求时会发生什么。步骤非常相似——事实上，它们是同一组操作，你可以编辑消息响应和文件目标。你可以重复步骤并进行更新，也可以使用 **Copy action**（复制操作）功能节省时间：
-
-- 1. 在 **True** 分支中，右键点击 **Post message in a chat or channel** 操作的卡片，并选择 **Copy action**：
-
-![](img/bfc58bb450784476738fab1c5bfe829d_253_0.png)
-
-图 12.18 - 复制操作
-- 2. 在 **False** 条件分支中，右键点击 **Add action** `+` 号并选择 **Paste action**（粘贴操作）。
-- 3. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
-- 4. 更新 **Message** 字段，替换现有的发布在请求者消息正文中的值。正如你配置原始操作时一样，你可以使用文本、表达式和动态内容的组合。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_253_1.png)
-
-图 12.19 - 更新粘贴操作的属性
-- 5. 在 **True** 分支中，选择 **Move file** 操作的卡片，然后选择 **Copy action**。
-- 6. 在 **False** 条件分支中，右键点击 **Add an action** `+` 号并选择 **Paste after action**（在操作后粘贴）。
-- 7. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
-- 8. 对于 **Destination Folder**，选择默认文档库中的 **Rejected** 文件夹。
-- 9. 最后，选择如果目标文件夹中存在同名文件时要的操作。在 **If another folder is already there** 下拉菜单下选择一个选项，例如 **Move with a new name** 操作。完成的分支应该类似于图 12.20：
-
-![](img/bfc58bb450784476738fab1c5bfe829d_254_0.png)
-
-图 12.20 - 检查 If 分支的配置
-- 10. 点击保存。
-
-你已经配置好了一个审批工作流，它将启动、向 Teams 用户发送自适应卡片，并等待他们的响应。在下一节中，我们将评估响应并决定采取什么操作。
-
-### 测试流
+## 测试流
 
 为了测试此流，你需要满足以下条件：
 
@@ -4164,13 +4071,13 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 - 其中一个用户应配置为另一个用户的经理
 - 至少两个浏览器会话，分别以审批者请求者的身份登录
 
-使用 Microsoft365 管理中心 (https://admin.microsoft.com) 配置经理。导航到 Users | Active users，选择一个用户进行编辑，并点击 manager 链接进行配置：
+使用 Microsoft365 管理中心 (https://admin.microsoft.com) 配置经理。导航到 `Users | Active users`，选择一个用户进行编辑，并点击 `manager` 链接进行配置：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_255_0.png)
 
 图 12.21 – 配置经理
 
-如果你没有权限设置经理，你需要编辑流以使用特定的用户邮箱地址作为审批者，而不是 Get manager (V2) 操作的 Mail 令牌。
+如果你没有权限设置经理，你需要编辑流以使用特定的用户邮箱地址作为审批者，而不是 `Get manager (V2)` 操作的 `Mail` 令牌。
 
 测试过程将涉及三个核心步骤：
 
@@ -4184,10 +4091,10 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 流程必须由请求者启动。请求者必须在 Entra 中填写经理字段。一旦满足此要求，请按照以下步骤操作：
 
-- 1. 从流中，点击 **Test** 并选择 **Manually** 单选按钮。点击 **Test** 启动测试过程。
-- 2. 使用一个浏览器会话，以请求者用户登录 Microsoft 365。
-- 3. 浏览到流监控的 SharePoint 站点。
-- 4. 向监控文件的 SharePoint 站点中的 Submitted 文件夹上传文件。
+1. 从流中，点击 **Test** 并选择 **Manually** 单选按钮。点击 **Test** 启动测试过程。
+2. 使用一个浏览器会话，以请求者用户登录 Microsoft 365。
+3. 浏览到流监控的 SharePoint 站点。
+4. 向监控文件的 SharePoint 站点中的 `Submitted` 文件夹上传文件。
 
 此活动将触发流。
 
@@ -4195,27 +4102,23 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 
 对于此过程，你必须拥有以审批者身份登录的独立浏览器会话：
 
-- 1. 以审批者身份通过浏览器会话登录 Office 365 时，打开 Microsoft Teams (https://teams.microsoft.com/)。
-- 2. 选择左侧栏的 **Chat** 并选择来自 Workflows 应用的消息。
-- 3. 要批准或拒绝请求，点击自适应卡片上的 **Approve**（批准）或 **Reject**（拒绝）按钮：
+1. 以审批者身份通过浏览器会话登录 Office 365 时，打开 Microsoft Teams (https://teams.microsoft.com/)。
+2. 选择左侧栏的 **Chat** 并选择来自 Workflows 应用的消息。
+3. 要批准或拒绝请求，点击自适应卡片上的 **Approve**（批准）或 **Reject**（拒绝）按钮：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_256_0.png)
 
-- 4. 可选，输入批准或拒绝意见。点击 **Submit**（提交）。
+4. 可选，输入批准或拒绝意见。点击 **Submit**（提交）。
 
 完成后，它将触发流的后续部分。
-
-
-
-
 
 ### 查看响应
 
 在最后这一步骤中，请求者应该能够查看审批者的响应：
 
-- 1. 以请求者的身份通过浏览器会话登录 Office 365，启动 Teams (https://teams.microsoft.com)。
-- 2. 选择左侧边栏的“聊天”(Chat)，并选择来自 Power Automate 应用的消息消息。
-- 3. 审核消息：
+1. 以请求者的身份通过浏览器会话登录 Office 365，启动 Teams (https://teams.microsoft.com)。
+2. 选择左侧边栏的“聊天”(Chat)，并选择来自 Power Automate 应用的消息。
+3. 审核消息：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_257_0.png)
 
@@ -4224,6 +4127,8 @@ Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行�
 ![](img/bfc58bb450784476738fab1c5bfe829d_257_1.png)
 
 审批流程已完成。
+
+
 
 你还可以使用额外的验证方法，例如查看流的运行历史并浏览 SharePoint 文档库以确认文件已移动：
 
@@ -4288,8 +4193,8 @@ Power Automate 可以连接到许多数据库，例如 Microsoft SQL Server、Az
 
 Microsoft SQL Server 连接器支持两个触发器：
 
-- 当创建项时 (v2)
-- 当项被修改时 (v2)
+- `当创建项时 (v2)`
+- `当项被修改时 (v2)`
 
 在处理这两个触发器工作时，你需要提供服务器名称、数据库名称和表名，以及可选的筛选查询。
 
@@ -4297,15 +4202,15 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 在操作数据库时，有许多可以执行的操作。你最常使用的操作列在下面的列表中：
 
-- 获取表 (Get tables) - 列出数据库中的表
-- 获取行 (Get row(s)) - 从表中检索一行或多行
-- 插入行 (Insert row) - 向表中添加新行
-- 更新行 (Update row) - 修改现有行
-- 删除行 (Delete row) - 从表中删除某行
-- 执行 SQL 查询 (Execute SQL query) - 运行 SQL 查询
-- 执行存储过程 (Execute stored procedure) - 运行存储过程（预先准备的 SQL 语句或命令集合）
+- `获取表 (Get tables)` - 列出数据库中的表
+- `获取行 (Get row(s))` - 从表中检索一行或多行
+- `插入行 (Insert row)` - 向表中添加新行
+- `更新行 (Update row)` - 修改现有行
+- `删除行 (Delete row)` - 从表中删除某行
+- `执行 SQL 查询 (Execute SQL query)` - 运行 SQL 查询
+- `执行存储过程 (Execute stored procedure)` - 运行存储过程（预先准备的 SQL 语句或命令集合）
 
-你最经常使用 Power Automate 内置操作来处理行和表。然而，如果你需要执行更复杂的事务或函数，可以使用“执行 SQL 查询”和“执行存储过程”。
+你最经常使用 Power Automate 内置操作来处理行和表。然而，如果你需要执行更复杂的事务或函数，可以使用`执行 SQL 查询`和`执行存储过程`。
 
 现在你已经知道了可用哪些触发器和操作，让我们连接到数据库吧。
 
@@ -4321,7 +4226,7 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 在 Azure 中创建 SQL 服务器，请遵循以下步骤：
 
-- 1. 导航到 https://portal.azure.com 并使用具有管理权限的账户登录。
+1. 导航到 https://portal.azure.com 并使用具有管理权限的账户登录。
 2. 在搜索栏中输入 SQL 并选择 SQL Server。
 3. 在创建中创建：
 
@@ -4329,9 +4234,7 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 > 图 13.1 - 创建新的 SQL 服务器
 
-- 4. 选择订阅和资源组。资源组仅仅是与项目、服务、应用程序或其他管理单元相关的组件的逻辑容器。如果你没有资源组，可以创建一个，如图 13.2 所示：
-
-
+4. 选择订阅和资源组。资源组仅仅是与项目、服务、应用程序或其他管理单元相关的组件的逻辑容器。如果你没有资源组，可以创建一个，如图 13.2 所示：
 
 ## 第 13 章
 
@@ -4339,25 +4242,21 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_265_0.png)
 
-- 5. 输入唯一的服务器名称，在“位置”（Location）中选择您附近的数据中心，并输入管理凭据。为了示例起见，请使用 SQL 身份验证。
+5. 输入唯一的服务器名称，在“位置”（Location）中选择您附近的数据中心，并输入管理凭据。为了示例起见，请使用 SQL 身份验证。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_265_1.png)
 
-- 6. 选择一个服务器管理员登录 ID 并输入密码。
-
-- 7. 完成后，点击“下一步”。
-
-- 8. 在“网络”（Networking）选项卡中，将切换器设置为“是”，以配置防火墙允许访问 Azure 服务。
-
-- 9. 点击“查看并创建”（Review + create）来创建您的服务器。
+6. 选择一个服务器管理员登录 ID 并输入密码。
+7. 完成后，点击“下一步”。
+8. 在“网络”（Networking）选项卡中，将切换器设置为“是”，以配置防火墙允许访问 Azure 服务。
+9. 点击“查看并创建”（Review + create）来创建您的服务器。
 
 > 图 13.2 – 创建资源组
-
 > 图 13.3 – 配置数据库服务器属性
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_265_2.png)
 
-- 10. 检查最终设置，然后点击“创建”。
+10. 检查最终设置，然后点击“创建”。
 
 等待 Azure 部署完成。
 
@@ -4365,23 +4264,21 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 现在您已经配置好了一个 SQL Server 实例，需要一个数据库。如果您已经有一个可以使用的数据库，可以跳过此步骤。否则，您可以使用以下过程在上一节中配置的实例上创建一个新数据库：
 
-- 从 Azure 门户，点击搜索栏并开始输入 Azure。选择 Azure SQL 选项：
+1. 从 Azure 门户，点击搜索栏并开始输入 Azure。选择 Azure SQL 选项：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_266_0.png)
 
-- 在 Azure SQL 数据库下，选择“SQL 数据库”（SQL databases）。
-
-- 点击“创建”来创建一个新数据库。
+2. 在 Azure SQL 数据库下，选择“SQL 数据库”（SQL databases）。
+3. 点击“创建”来创建一个新数据库。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_266_1.png)
 
-- 在“项目详情”（Project details）下，选择订阅和资源组。为了简单起见，请使用与您之前创建的服务器相同的订阅和资源组。
-
-- 5. 在“数据库详情”（Database details）下，为新数据库名称输入值，然后选择服务器。如果您在上一节中创建了服务器，请在此处选择该服务器。您可以让其他设置保持默认配置。点击**查看并创建**（Review + create）继续。
+4. 在“项目详情”（Project details）下，选择订阅和资源组。为了简单起见，请使用与您之前创建的服务器相同的订阅和资源组。
+5. 在“数据库详情”（Database details）下，为新数据库名称输入值，然后选择服务器。如果您在上一节中创建了服务器，请在此处选择该服务器。您可以让其他设置保持默认配置。点击**查看并创建**（Review + create）继续。
 
 > 请务记下数据库的名称，因为您在配置 Power Automate 连接对象时会需要它。
 
-- 6. 点击**创建**。
+6. 点击**创建**。
 
 向导将完成过程并创建数据库。
 
@@ -4389,11 +4286,9 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 为了让您有地方添加内容，数据库需要一个数据库表。您可以使用查询编辑器（Query editor）并按照以下步骤创建数据库表：
 
-- 1. 从 Azure 门户，点击搜索栏并开始输入 SQL databases。选择**SQL Server 数据库**（SQL Server databases）选项。
-
-- 2. 选择您在上一个小节中创建的数据库以打开其属性页。
-
-- 3. 选择**查询编辑器（预览）**（Query editor (preview)）。输入您的登录凭据以访问数据库，然后点击确定：
+1. 从 Azure 门户，点击搜索栏并开始输入 SQL databases。选择**SQL Server 数据库**（SQL Server databases）选项。
+2. 选择您在上一个小节中创建的数据库以打开其属性页。
+3. 选择**查询编辑器（预览）**（Query editor (preview)）。输入您的登录凭据以访问数据库，然后点击确定：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_267_0.png)
 
@@ -4405,9 +4300,8 @@ Microsoft SQL Server 连接器支持两个触发器：
 
 图 13.7 – 创建防火墙规则的提示
 
-- 4. 防火墙规则更新后，登录。
-
-- 5. 接下来，我们将创建一个名为 Customers 的数据库表并向其中插入单行数据。将以下代码复制并粘贴到查询编辑器中：
+4. 防火墙规则更新后，登录。
+5. 接下来，我们将创建一个名为 Customers 的数据库表并向其中插入单行数据。将以下代码复制并粘贴到查询编辑器中：
 
 ```sql
 CREATE TABLE Customers
@@ -4424,13 +4318,13 @@ INSERT INTO Customers VALUES('Contoso', 'John', 'Doe', 'Purchasing Manager', 'jd
 GO
 ```
 
-- 6. 点击“运行”（Run），如图 13.8 所示：
+6. 点击“运行”（Run），如图 13.8 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_269_0.png)
 
 图 13.8 – 准备提交查询
 
-- 7. 检查“消息”（Messages）以确保数据库表已创建。
+7. 检查“消息”（Messages）以确保数据库表已创建。
 
 到此时，您已经有了一个服务器、一个数据库和一个包含某些内容的表。此数据库表有七列（CustomerID、CompanyName、FirstName、LastName、JobTitle、Mail 和 Telephone）以及一行填充了这些列或字段的数据。
 
@@ -4452,79 +4346,68 @@ GO
 
 连接详情取决于您要连接的数据库类型。要在 Power Automate 中连接数据库，请按照以下步骤操作：
 
-- 1. 导航到 Azure 门户 (https://make.azure.com)。选择“更多”（More）并点击“连接”（Connections）。
-
-- 2. 选择**SQL Server**。
+1. 导航到 Azure 门户 (https://make.azure.com)。选择“更多”（More）并点击“连接”（Connections）。
+2. 选择**SQL Server**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_270_0.png)
 
-- 3. 点击**新建连接**（New connection）。
+3. 点击**新建连接**（New connection）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_270_1.png)
 
-- 4. 在“项目详情”下，选择订阅和资源组。为了简单起见，请使用与您之前创建的服务器相同的订阅和资源组。
-
-- 5. 在“数据库详情”下，为新数据库名称输入值，然后选择服务器。如果您在上一节中创建了服务器，请在此处选择该服务器。您可以让其他设置保持默认配置。点击**查看并创建**（Review + create）继续。
+4. 在“项目详情”下，选择订阅和资源组。为了简单起见，请使用与您之前创建的服务器相同的订阅和资源组。
+5. 在“数据库详情”下，为新数据库名称输入值，然后选择服务器。如果您在上一节中创建了服务器，请在此处选择该服务器。您可以让其他设置保持默认配置。点击**查看并创建**（Review + create）继续。
 
 > 请务记下数据库的名称，因为您在配置 Power Automate 连接对象时会需要它。
 
-- 6. 点击**创建**。
+6. 点击**创建**。
 
 现在连接已经建立，您就可以创建一个简单的流了。
 
 ### 创建流
 
-正如您在本章节早期学到的那样，在处理数据库时，您需要告诉应用程序如何连接到数据库……（此处重复原文逻辑检查）
+正如您在本章节早期学到的那样，在处理数据库时，您需要告诉应用程序如何连接到数据库……
 
 要检查内容是否写入了流，请遵循以下步骤：
 
-- 1. 从 Power Automate 门户 (https://make.powerautomate.com)，点击“创建”。
-
-- 2. 选择**即时云流**（Instant cloud flow）。
-
-- 3. 为流命名，并选择**手动触发流**（Manually trigger flow）作为触发器。
-
-- 4. 点击“创建”。
-
-- 5. 添加操作。
-
-- 6. 在搜索框中输入 insert，选择**插入行 (V2)**（Insert row (V2)）操作：
+1. 从 Power Automate 门户 (https://make.powerautomate.com)，点击“创建”。
+2. 选择**即时云流**（Instant cloud flow）。
+3. 为流命名，并选择**手动触发流**（Manually trigger flow）作为触发器。
+4. 点击“创建”。
+5. 添加操作。
+6. 在搜索框中输入 insert，选择**插入行 (V2)**（Insert row (V2)）操作：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_272_0.png)
 
-- 7. 选择您在数据库表节中创建的服务器名称、数据库名称和表名。
+7. 选择您在数据库表节中创建的服务器名称、数据库名称和表名。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_272_1.png)
 
-- 8. 一旦您选择了连接项，操作将更新“高级参数”（Advanced parameters）部分下的可用列。选择所有参数。
+8. 一旦您选择了连接项，操作将更新“高级参数”（Advanced parameters）部分下的可用列。选择所有参数。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_272_2.png)
 
-- 9. 在选择列名后，添加一些测试数据，如图 13.16 所示：
+9. 在选择列名后，添加一些测试数据，如图 13.16 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_273_0.png)
 
-- 10. 点击“保存”。
+10. 点击“保存”。
 
 ### 执行流
 
 使用您在第 5 章“创建按钮流”中学习的方法来执行该流。作为回顾，您可以遵循以下步骤：
 
-- 1. 在生成器画布页面上，点击“测试”。
-- 2. 选择“手动”单选按钮并点击“测试”。
-- 3. 在“运行流”飞出面板中，点击“继续”。
-- 4. 点击“运行流”。
-- 5. 点击“完成”。
+1. 在生成器画布页面上，点击“测试”。
+2. 选择“手动”单选按钮并点击“测试”。
+3. 在“运行流”飞出面板中，点击“继续”。
+4. 点击“运行流”。
+5. 点击“完成”。
 
 至此，流已成功执行。
 
 ### 验证流
 
 您可以通过检查流的运行历史或在 SQL 中查询数据库表来检查内容是否已写入流。
-
-
-
-
 
 ### 检查运行历史
 
@@ -4557,13 +4440,15 @@ GO
 
 ### 总结
 
+
+
 在本章中，你学习了 Power Automate 的一些数据库交互功能。通过遵循本章的步骤，你成功创建了 Azure SQL Server 实例、一个数据库和一个用于存储内容的数据库表。你能够连接到数据库、创建一个流，并插入了一行新数据。最后，你检查了流的运行历史，并学习了如何直接查询数据库。
 
 下一章将在此知识的基础上，向你展示如何获取 Microsoft Forms 数据并使用 Power Automate 将其插入数据库中。
 
 ## 获取本书的 PDF 版本和独家额外奖励
 
-扫描二维码（或访问 packpub.com/unlock）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
+扫描二维码（或访问 `packpub.com/unlock`）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
 
 注意：请妥善保存发票。直接从 Packt 购买的不需要发票。
 
@@ -4585,48 +4470,48 @@ GO
 
 ### 理解 Forms 触发器和操作
 
-在开始编写涉及 Microsoft Forms 的流之前，了解 Forms 连接器提供哪些类型的触发器和操作是重要的。提醒一下，触发器（triggers）是能够启动流的活动，而操作（actions）是流可以执行的活动。如果你需要复习术语，可以回查到第 1 章“介绍 Power Automate”。
+在开始编写涉及 Microsoft Forms 的流之前，了解 Forms 连接器提供哪些类型的触发器和操作是重要的。提醒一下，触发器（`triggers`）是能够启动流的活动，而操作（`actions`）是流可以执行的活动。如果你需要复习术语，可以回查到第 1 章“介绍 Power Automate”。
 
 ### 触发器
 
-如引言所述，Microsoft Forms 是一种调查和信息收集工具。最终用户与 Forms 的交互在他们完成并提交表单时结束。因此，Forms 连接器目前有一个触发器：**提交回复时**（When a response is submitted）。当用户向服务提交表单时，该触发器会被激活。
+如引言所述，Microsoft Forms 是一种调查和信息收集工具。最终用户与 Forms 的交互在他们完成并提交表单时结束。因此，Forms 连接器目前有一个触发器：**提交回复时**（`When a response is submitted`）。当用户向服务提交表单时，该触发器会被激活。
 
 ### 操作
 
-对于此流，我们将关注 Forms 的**获取详细信息**（Get details）操作。使用此操作，Power Automate 可以检索流中的数据。在我们用 Power Automate 处理表单之前，我们需要一个表单进行操作。在接下来的节中，我们将创建一个收集基本信息的表单。
+对于此流，我们将关注 Forms 的**获取详细信息**（`Get details`）操作。使用此操作，Power Automate 可以检索流中的数据。在我们用 Power Automate 处理表单之前，我们需要一个表单进行操作。在接下来的节中，我们将创建一个收集基本信息的表单。
 
 ### 创建基本表单
 
 Forms 应用的使用非常直观。在本节中，我们将创建一个基本表单来收集用户信息。请按照以下步骤创建该表单：
 
-1. 导航到 https://forms.office.com 并登录以启动 Forms 应用。
-2. 如果你是首次登录 Forms，请点击启动页上的“新表单”（New Form）按钮。如果你之前登录过 Forms，可以点击仪表板上的“新表单”按钮，如图 14.1 所示。
+1. 导航到 `https://forms.office.com` 并登录以启动 Forms 应用。
+2. 如果你是首次登录 Forms，请点击启动页上的“新表单”（`New Form`）按钮。如果你之前登录过 Forms，可以点击仪表板上的“新表单”按钮，如图 14.1 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_279_0.png)
 
-3. 点击标题区域（未标题的表单）文本框，并为表单输入名称，例如“客户数据采集”（Customer Data Intake），如图 14.2 所示：
+3. 点击标题区域（未标题的表单）文本框，并为表单输入名称，例如“客户数据采集”（`Customer Data Intake`），如图 14.2 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_279_1.png)
 
-4. 点击 + 添加新项目。
-5. 选择“文本”（Text）选项：
+4. 点击 `+` 添加新项目。
+5. 选择“文本”（`Text`）选项：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_279_2.png)
 
-6. 输入 CompanyName 的值。如果需要，你可以输入更具描述性的内容，但为了本章示例，请确保它很容易识别为公司名称值。如果需要，可以将字段属性切换为“必填”（Required），并启用字段限制：
+6. 输入 `CompanyName` 的值。如果需要，你可以输入更具描述性的内容，但为了本章示例，请确保它很容易识别为公司名称值。如果需要，可以将字段属性切换为“必填”（`Required`），并启用字段限制：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_280_0.png)
 
-图 14.4 – 配置 CompanyName 数据字段
+图 14.4 – 配置 `CompanyName` 数据字段
 
-7. 重复步骤 4–6，为 FirstName（名）、LastName（姓）、JobTitle（职位）、Mail（邮箱）和 TelephoneNumber（电话）添加字段。你会注意到这些字段映射到你在上一章中创建的列名。
+7. 重复步骤 4–6，为 `FirstName`（名）、`LastName`（姓）、`JobTitle`（职位）、`Mail`（邮箱）和 `TelephoneNumber`（电话）添加字段。你会注意到这些字段映射到你在上一章中创建的列名。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_280_1.png)
 
 图 14.5 – 配置其余数据字段
 
-8. 点击“收集回复”（Collect responses），然后点击“复制链接”按钮以复制表单的 URL。将其粘贴到临时位置（如记事本窗口）。
-9. 选择并复制 id= 之后的值。该值看起来应该是一段长随机文本字符串，如下：
+8. 点击“收集回复”（`Collect responses`），然后点击“复制链接”按钮以复制表单的 URL。将其粘贴到临时位置（如记事本窗口）。
+9. 选择并复制 `id=` 之后的值。该值看起来应该是一段长随机文本字符串，如下：
 
 ```
 fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
@@ -4642,11 +4527,11 @@ fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
 
 ### 使用 Power Automate 处理表单
 
-在练习中，我们将配置一个流来处理回复并保存到第 13 章“使用数据库”中创建的数据库中。该流将利用上一节保存的表单 ID、**当提交新回复时**（When a new response is submitted）触发器以及 Forms 连接器的**获取回复详细**（Get response details）操作。
+在练习中，我们将配置一个流来处理回复并保存到第 13 章“使用数据库”中创建的数据库中。该流将利用上一节保存的表单 ID、**当提交新回复时**（`When a new response is submitted`）触发器以及 Forms 连接器的**获取回复详细**（`Get response details`）操作。
 
 遵循以下步骤配置流：
 
-1. 登录 Power Automate 网页门户 (https://make.powerautomate.com) 并点击“创建”。
+1. 登录 Power Automate 网页门户（`https://make.powerautomate.com`）并点击“创建”。
 2. 在“从空白开始”部分，选择“自动化云流”。
 3. 为流输入名称（例如“客户数据采集”），并选择“当提交新回复时”Forms 触发器。
 4. 点击“创建”。
@@ -4662,41 +4547,32 @@ fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
 
 图 14.7 - 使用触发器创建新的自动化云流
 
-在触发器的详情中，如果显示了表单，请选择它。如果你创建的表单未显示，**添加自定义项**（Add a custom item）并粘贴上一节保存的表单 ID：
+5. 在触发器的详情中，如果显示了表单，请选择它。如果你创建的表单未显示，**添加自定义项**（`Add a custom item`）并粘贴上一节保存的表单 ID：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_282_1.png)
 
 图 14.8 - 手动输入表单 ID 值
 
 6. 添加步骤。
-
-
-
-
-
-7. 在搜索栏中，输入 Get response details 并选择 Microsoft Forms 的操作，如图 14.9 所示：
+7. 在搜索栏中，输入 `Get response details` 并选择 Microsoft Forms 的操作，如图 14.9 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_283_0.png)
 
-8. 在 Get response details 操作中，选择代表表单的表 ID（如果显示，则选择名称）。选择 Response Id，然后选择 Response Id 动态内容标记：
+8. 在 `Get response details` 操作中，选择代表表单的表 ID（如果显示，则选择名称）。选择 `Response Id`，然后选择 `Response Id` 动态内容标记：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_283_1.png)
 
 9. 添加步骤。
-
-10. 从 SQL Server 的连接设置中选择服务器名称（Server name）、数据库名称（Database name）和表名称（Table name）值。
-
-11. 从第 13 章“使用数据库”中创建的连接设置中选择服务器名称、数据库名称和表名称。片刻之后，高级参数（Advanced parameters）区域将变为可用。
-
+10. 从 SQL Server 的连接设置中选择服务器名称（`Server name`）、数据库名称（`Database name`）和表名称（`Table name`）值。
+11. 从第 13 章“使用数据库”中创建的连接设置中选择服务器名称、数据库名称和表名称。片刻之后，高级参数（`Advanced parameters`）区域将变为可用。
 12. 展开高级参数下拉菜单，并选择列值属性中的全选框。
-
-13. 选择 CompanyName 字段，并从 Get response details 操作中选择 CompanyName 动态内容值，如图 14.11 所示：
+13. 选择 `CompanyName` 字段，并从 `Get response details` 操作中选择 `CompanyName` 动态内容值，如图 14.11 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_284_0.png)
 
-图 14.11 – 添加 CompanyName 动态内容值
+图 14.11 – 添加 `CompanyName` 动态内容值
 
-14. 对剩余数据库列字段重复步骤 11，将它们与响应值匹配。完成后点击保存（Save）：
+14. 对剩余数据库列字段重复步骤 11，将它们与响应值匹配。完成后点击保存（`Save`）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_284_1.png)
 
@@ -4708,13 +4584,12 @@ fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
 
 为了测试此流，你需要提交一个表单响应。要提交表单响应，请遵循以下步骤：
 
-- 1. 导航到 Microsoft Forms 仪表板 (https://forms.office.com 并在**我的表单（My forms）**下选择你的表单：
+1. 导航到 Microsoft Forms 仪表板（`https://forms.office.com`）并在**我的表单**（`My forms`）下选择你的表单：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_285_0.png)
 
-- 2. 选择**预览（Preview）。**
-
-- 3. 填写表单并点击**提交（Submit）：**
+2. 选择**预览**（`Preview`）。
+3. 填写表单并点击**提交**（`Submit`）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_285_1.png)
 
@@ -4730,17 +4605,17 @@ fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
 
 验证流是否成功最简单最快的方法是检查运行历史。运行历史将显示流执行期间执行的步骤。你可以按照以下流程查看流的运行历史：
 
-- 1. 从 Power Automate 制作者 Web门户 (https://make.powerautomate.com)，点击**我的流（My flows）**，然后选择该自定义流。
-- 2. 点击流的省略号，然后选择**运行历史（Run history）。**
-- 3. 点击运行的日期：
+1. 从 Power Automate 制作者 Web 门户（`https://make.powerautomate.com`），点击**我的流**（`My flows`），然后选择该自定义流。
+2. 点击流的省略号，然后选择**运行历史**（`Run history`）。
+3. 点击运行的日期：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_286_0.png)
 
-- 4. 展开**Insert row (V2)** 操作并查看数据：
+4. 展开**Insert row (V2)** 操作并查看数据：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_287_0.png)
 
-图 14.16 – 查看 Insert Row (V2) SQL 操作的运行详细信息
+图 14.16 – 查看 `Insert Row (V2)` SQL 操作的运行详细信息
 
 展开的操作将显示从表单处理并插入表中的数据。
 
@@ -4748,29 +4623,28 @@ fHnoJLB9UauRqGcukAKHtjp4N5BXJJKk4cz0rMVSXuUqjGV1QzUTJQwhJUUVZKNZA3Q03MFFINS4u
 
 你也可以使用 SQL 查询编辑器查看新添加的数据。如需直接查看 SQL 数据，请遵循以下步骤：
 
-- 1. 从 Azure 门户 (https://portal.azure.com)，导航到 SQL 数据库，并选择你在第 13 章“使用数据库”中创建的数据库条目。
-- 2. 选择查询编辑器（预览）（Query editor preview）。如果提示，输入凭据访问数据库并点击确定。
-- 3. 将以下代码复制并粘贴到查询编辑器中：
+1. 从 Azure 门户（`https://portal.azure.com`），导航到 SQL 数据库，并选择你在第 13 章“使用数据库”中创建的数据库条目。
+2. 选择查询编辑器（预览）（`Query editor preview`）。如果提示，输入凭据访问数据库并点击确定。
+3. 将以下代码复制并粘贴到查询编辑器中：
 
 ```
 SELECT * FROM [dbo].[Customers]
 ```
 
-- 4. 如果需要，可以添加 WHERE 子句来查找你在表单上输入的名字。在示例中，我们使用了第一个名字 Nestor，因此你可以这样构建 WHERE 子句，将 FirstName 值替换为你在测试时使用的值：
+4. 如果需要，可以添加 `WHERE` 子句来查找你在表单上输入的名字。在示例中，我们使用了第一个名字 `Nestor`，因此你可以这样构建 `WHERE` 子句，将 `FirstName` 值替换为你在测试时使用的值：
 
 ```
 WHERE FirstName='Nestor'
 ```
 
-- 5. 点击运行（Run）。
-
-- 6. 查看结果（Results）部分中的数据，如图 14.17 所示：
+5. 点击运行（`Run`）。
+6. 查看结果（`Results`）部分中的数据，如图 14.17 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_288_0.png)
 
 图 14.17 - 执行查询后查看结果
 
-- 7. 将结果部分中的数据与你在“测试”部分中输入的值进行比较。
+7. 将结果部分中的数据与你在“测试”部分中输入的值进行比较。
 
 无论你选择哪种方式来验证流执行的结果，你都应该看到相同的数据。你可以验证表中的数据是否与表单中提交的数据匹配，以确认流正在正常工作。
 
@@ -4780,33 +4654,29 @@ WHERE FirstName='Nestor'
 
 在现实场景中，你可以进一步扩展此流，向提交者生成确认电子邮件，或使用 Excel 或 Power BI 等工具对数据进行排序。根据表单中收集的数据类型，你甚至可以将这些数据发送到 Azure Cognitive Services（现为 Azure AI 服务）进行情感分析（你将在第 22 章中学习相关内容）。
 
-
-
-
-
 # 第 15 章
 
 ## 265
 
-传统的看板通过与工作阶段对齐的列来组织任务。任务卡从左到右跨列移动，代表了整个工作过程的进度。在 Microsoft Planner 中，任务被放置在称为“桶”（buckets）的组中，并可以在桶内进行排序或分类。
+传统的看板通过与工作阶段对齐的列来组织任务。任务卡从左到右跨列移动，代表了整个工作过程的进度。在 Microsoft Planner 中，任务被放置在称为“桶”（`buckets`）的组中，并可以在桶内进行排序或分类。
 
-Microsoft Planner 有三个触发条件：当任务创建时、当任务分配给我时，以及当任务完成时。这些条件都非常通俗易懂。在本章中，我们将重点关注“当任务分配给我时”。输出是一个任务对象，具有多个参数，如计划 ID（指向任务所属计划的对象 ID）、任务标题（Title）、桶 ID（任务所属的桶）、分配人员（assignments，谁负责处理该任务）、优先级、完成百分比状态，以及创建、开始和完成的各种日期。
+Microsoft Planner 有三个触发条件：当任务创建时、当任务分配给我时，以及当任务完成时。这些条件都非常通俗易懂。在本章中，我们将重点关注“当任务分配给我时”。输出是一个任务对象，具有多个参数，如计划 ID（指向任务所属计划的对象 ID）、任务标题（`Title`）、桶 ID（任务所属的桶）、分配人员（`assignments`，谁负责处理该任务）、优先级、完成百分比状态，以及创建、开始和完成的各种日期。
 
-你可以在此处找到 Planner 连接器功能的完整列表：https://learn.microsoft.com/en-us/connectors/planner。
+你可以在此处找到 Planner 连接器功能的完整列表：`https://learn.microsoft.com/en-us/connectors/planner`。
 
 # Slack
 
-在 Microsoft Teams 出现之前，有了 Slack。Slack 和 Teams 一样都是基于云的协作和消息平台，旨在帮助团队实时通信和工作。它将对话组织到频道（channels）中——即项目、主题或团队的专用空间。像 Teams 一样，它还支持一对一或小群聊的直接消息。用户可以共享文件、搜索过去的讨论，并与广泛的应用程序和服务集成，使其更新、警报和工作流的核心枢。
+在 Microsoft Teams 出现之前，有了 Slack。Slack 和 Teams 一样都是基于云的协作和消息平台，旨在帮助团队实时通信和工作。它将对话组织到频道（`channels`）中——即项目、主题或团队的专用空间。像 Teams 一样，它还支持一对一或小群聊的直接消息。用户可以共享文件、搜索过去的讨论，并与广泛的应用程序和服务集成，使其更新、警报和工作流的核心枢纽。
 
-Slack 有自己的一套触发器，在本章中，我们将重点关注操作（actions）。Slack 可用的操作包括创建和加入频道，以及发布消息。
+Slack 有自己的一套触发器，在本章中，我们将重点关注操作（`actions`）。Slack 可用的操作包括创建和加入频道，以及发布消息。
 
-你可以在此处找到 Slack 连接器功能的完整列表：https://learn.microsoft.com/en-us/connectors/slack。
+你可以在此处找到 Slack 连接器功能的完整列表：`https://learn.microsoft.com/en-us/connectors/slack`。
 
 # 准备工作设置
 
 在本节中，我们将关注环境和组件的设置。
 
-为了运行此内容，你需要在 https://slack.com/intl1/en-in 注册一个免费的 Slack 账户。
+为了运行此内容，你需要在 `https://slack.com/intl1/en-in` 注册一个免费的 Slack 账户。
 
 一旦激活了账户，请登录。你将看到一个与图 15.1 截图类似的桌面：
 
@@ -4814,9 +4684,9 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 
 图 15.1 – Slack 界面
 
-默认情况下，你应该有一个名为 #all-<organization> 的频道。我们将使用该频道发布通知，但你也可以使用任何需要的频道。
+默认情况下，你应该有一个名为 `#all-<organization>` 的频道。我们将使用该频道发布通知，但你也可以使用任何需要的频道。
 
-你还需要一个 Planner 计划。你可以作为团队的一部分进行设置，也可以直接使用独立计划。要设置独立计划，导航到 https://planner.cloud.microsoft 并点击“新建计划”（New plan）。选择空白计划或从模板中选择一个。
+你还需要一个 Planner 计划。你可以作为团队的一部分进行设置，也可以直接使用独立计划。要设置独立计划，导航到 `https://planner.cloud.microsoft` 并点击“新建计划”（`New plan`）。选择空白计划或从模板中选择一个。
 
 # 第 15 章
 
@@ -4832,9 +4702,9 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 
 和我们在书中目前为止处理过的许多流一样，我们将从一个自动化触发器开始。按照以下步骤启动它。
 
-1. 导航到 Power Automate 制作网页门户 (https://make.powerautomate.com) 并登录。
-2. 点击“创建”（Create）并选择“自动化的流”（Automated flow）。
-3. 为你的流输入名称，然后选择“当任务分配给我时”（When a task is assigned to me）Planner 触发器操作。
+1. 导航到 Power Automate 制作网页门户（`https://make.powerautomate.com`）并登录。
+2. 点击“创建”（`Create`）并选择“自动化的流”（`Automated flow`）。
+3. 为你的流输入名称，然后选择“当任务分配给我时”（`When a task is assigned to me`）Planner 触发器操作。
 
 就这些。此触发器没有主要的参数，因为它是在检测 Microsoft 365 生态系统中的 Planner 分配。见图 15.3。
 
@@ -4848,134 +4718,135 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 
 在不同平台之间保持同步非常重要，这就是为什么我们要将这些任务分配发送到 Slack。
 
-1. 在你的流处于打开状态下，点击“添加操作”（Add an action）。
-2. 选择“发布消息 (V2)”(Post message (V2)) Slack 操作。
+1. 在你的流处于打开状态下，点击“添加操作”（`Add an action`）。
+2. 选择“发布消息 (V2)”（`Post message (V2)`）Slack 操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_296_0.png)
 
 图 15.4 - 添加发布消息 (V2) 操作
 
 3. 如果提示，请登录 Slack。
-4. 在“发布消息 (V2)”飞出窗口中，选择“参数”（Parameters）选项卡。
-5. 在“频道名称”（Channel Name）下拉菜单中，选择 all-<organization> 频道（或你选择的任何频道）。
+4. 在“发布消息 (V2)”飞出窗口中，选择“参数”（`Parameters`）选项卡。
+5. 在“频道名称”（`Channel Name`）下拉菜单中，选择 `all-<organization>` 频道（或你选择的任何频道）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_296_1.png)
 
 图 15.5 - 选择目标频道
 
-6. 在“消息文本”（Message Text）字段中添加通知文本。在示例中，我们添加了标题（Title，任务名称）、分配人员（assignments Assigned To User Id，任务分配给谁）以及分配者（Assigned By User Id，任务由谁分配给谁的）的动态内容值令牌。
+
+
+### 配置发布消息
+6. 在“消息文本”（`Message Text`）字段中添加通知文本。在示例中，我们添加了标题（`Title`，任务名称）、分配人员（`assignments Assigned To User Id`，任务分配给谁）以及分配者（`Assigned By User Id`，任务由谁分配给谁的）的动态内容值令牌。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_297_0.png)
 
 图 15.6 - 配置发布消息
 
-由于 Assigned To User Id 是一个数组，我们将使用 Title 的动态内容值令牌。
+由于`Assigned To User Id`是一个数组，我们将使用`Title`的动态内容值令牌。
 
-7. 展开“高级参数”（Advanced parameters）。
+7. 展开“高级参数”（`Advanced parameters`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_297_1.png)
 
 图 15.7 - 添加高级参数
 
-8. 点击 ID 字段内部。
+8. 点击`ID`字段内部。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_298_0.png)
 
 图 15.8 - 选择用户
 
-9. 点击“保存”（Save）。
+9. 点击“保存”（`Save`）。
 
 10. 保存流。
 
 ### 测试流
-
 流保存好后，是时候触发它了。
 
 1. 导航到你的计划。
+
 2. 选择一个现有任务或创建一个新任务。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_299_0.png)
 
 图 15.9 - 添加任务
 
-3. 为你的流输入名称，然后点击“分配”（Assign）。
+3. 为你的流输入名称，然后点击“分配”（`Assign`）。
 
 ## 输出调试
-
 如果你熟悉 Microsoft 365，可能会识别出显示的数字而不是名称。哦，不！看起来出问题了！让我们查看输出。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_299_1.png)
 
 图 15.10 - 输出调试
 
-在画布上，选择“当任务分配给我时”触发器操作的“运行结果”（Run results）。滚动到 OUTPUTS 部分并点击。
+在画布上，选择“当任务分配给我时”触发器操作的“运行结果”（`Run results`）。滚动到`OUTPUTS`部分并点击。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_300_0.png)
 
-滚动到输出底部，你可以看到 assignments 数组。深入查看，你会发现 id 属性关联有一个数字——并不用户友好。这种格式被称为 GUID（全局唯一标识符）——它是用户的不可变表示。幸运的是，我们有方法查询它！
+滚动到输出底部，你可以看到`assignments`数组。深入查看，你会发现`id`属性关联有一个数字——并不用户友好。这种格式被称为`GUID`（全局唯一标识符）——它是用户的不可变表示。幸运的是，我们有方法查询它！
 
-- 回到流并展开“对于”（For each）循环。
+- 回到流并展开“对于”（`For each`）循环。
+
 - 在“发布消息 (V2)”操作上方点击“+”插入新步骤。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_301_0.png)
 
 图 15.11 - 插入新操作
 
-3. 添加“组合”（Compose）操作。
-4. 将该操作名称更新为描述性名称，例如 Compose assignedTo。
-5. 选择“输入”（Inputs）字段。
-6. 添加 assignments Assigned User Id 的动态内容值。
+3. 添加“组合”（`Compose`）操作。
+
+4. 将该操作名称更新为描述性名称，例如`Compose assignedTo`。
+
+5. 选择“输入”（`Inputs`）字段。
+
+6. 添加`assignments Assigned User Id`的动态内容值。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_301_1.png)
 
 图 15.12 - 添加第一个 Compose 语句
 
-7. 在 Compose-assignedTo 操作之后，添加另一个“组合”操作。
-8. 将该操作名称更新为描述性名称，例如 Compose assignedBy。
-9. 选择“输入”（Inputs）字段。
-10. 添加 assignments Assigned By User Id 的动态内容值。
+7. 在`Compose-assignedTo`操作之后，添加另一个“组合”操作。
+
+8. 将该操作名称更新为描述性名称，例如`Compose assignedBy`。
+
+9. 选择“输入”（`Inputs`）字段。
+
+10. 添加`assignments Assigned By User Id`的动态内容值。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_301_2.png)
 
 图 15.13 - 添加第二个 Compose 语句
 
+11. 在第二个`Compose`动作和`Post message (V2)`动作之间插入一个动作。
 
-
-
-
-11. 在第二个 Compose 动作和 Post message (V2) 动作之间插入一个动作。
-
-12. 选择 Get user profile (V2) 动作。
+12. 选择`Get user profile (V2)`动作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_302_0.png)
 
 图 15.16 – 添加 Get user profile (V2) 动作
 
-13. 将 Get user profile (V2) 动作的名称更新为具有描述性的名称，例如 Get user profile (V2) – assignedTo。
+13. 将`Get user profile (V2)`动作的名称更新为具有描述性的名称，例如`Get user profile (V2) – assignedTo`。
 
-14. 选择 User (UPN) 字段，并添加来自 Compose – assignedTo 的 Outputs 动态内容标记。
+14. 选择`User (UPN)`字段，并添加来自`Compose – assignedTo`的`Outputs`动态内容标记。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_302_1.png)
 
 图 15.17 – 获取 assignedTo 的用户配置文件
 
-15. 在 Get user profile (V2) 动作和 Post message (V2) 动作之间插入一个动作。
+15. 在`Get user profile (V2)`动作和`Post message (V2)`动作之间插入一个动作。
 
-16. 选择 Get user profile (V2) 动作。
+16. 选择`Get user profile (V2)`动作。
 
-17. 将 Get user profile (V2) 动作的名称更新为具有描述性的名称，例如 Get user profile (V2) – assignedTo。
+17. 将`Get user profile (V2)`动作的名称更新为具有描述性的名称，例如`Get user profile (V2) – assignedTo`。
 
-18. 选择 User (UPN) 字段，并添加来自 Compose – assignedBy 动作的 Outputs 动态内容标记。
+18. 选择`User (UPN)`字段，并添加来自`Compose – assignedBy`动作的`Outputs`动态内容标记。
 
-19. 选择 Post message (V2) 动作卡片。
+19. 选择`Post message (V2)`动作卡片。
 
-20. 选择 Message Text 字段。
+20. 选择`Message Text`字段。
 
-21. 将 userId 和 value/assignedBy 动态值标记替换为新的 Get user profile (V2) 动作值，如图 15.18 所示：
-
-# 第 15 章
-
-# 275
+21. 将`userId`和`value/assignedBy`动态值标记替换为新的`Get user profile (V2)`动作值，如图 15.18 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_303_0.png)
 
@@ -4986,13 +4857,15 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 让我们再次尝试！
 
 # 重新测试流
-
 是时候看看我们成功了。
 
-- 1. 回到你正在操作的计划。
-- 2. 选择一个任务（或创建一个新任务）并为自己添加一个新的分配。
-- 3. 等待任务执行。
-- 4. 去检查 Slack！
+1. 回到你正在操作的计划。
+
+2. 选择一个任务（或创建一个新任务）并为自己添加一个新的分配。
+
+3. 等待任务执行。
+
+4. 去检查 Slack！
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_303_1.png)
 
@@ -5003,11 +4876,9 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 处理流有时会很复杂，需要一些尝试才能得到你想要的结果。当你看到意外之外的值时，务必检查每个动作的输出。
 
 ### 进一步探索
-
-“当任务分配给我（When a task is assigned to me）”触发器的缺点之一是它只适用于直接分配给你的任务。处理此流另一种方法可能是使用触发器，例如[创建新任务时（When a new task is created)](https://learn.microsoft.com/en-us/connectors/planner/#when-a-new-task-is-created)。仅凭该动作你无法获得分配详情，而且结果可能不如我们的预期，因此你需要利用 Get task details 来检索额外信息。
+“当任务分配给我（`When a task is assigned to me`）”触发器的缺点之一是它只适用于直接分配给你的任务。处理此流另一种方法可能是使用触发器，例如[创建新任务时（`When a new task is created`）](https://learn.microsoft.com/en-us/connectors/planner/#when-a-new-task-is-created)。仅凭该动作你无法获得分配详情，而且结果可能不如我们的预期，因此你需要利用`Get task details`来检索额外信息。
 
 ### 总结
-
 本章介绍了新的应用、触发器和动作——让你有机会与 Microsoft Planner 和 Slack 进行协作。
 
 虽然流最初看起来可能很简单，但输出并不符合我们的预期，导致我们必须排查故障并修改流以正确查找所需的数据。
@@ -5015,20 +4886,22 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 在下一章中，我们将学习如何使用 Power Automate 接受用户输入以创建更具交互性的流。
 
 获取本书的 PDF 版本和独家额外内容
+
 立即锁定
+
 扫描二维码（或访问 packpub.com/unlock）。按书名搜索此书，确认版本，然后按照页面上的步骤操作。
+
 注意：请妥善保存发票。直接从 Packt 购买不需要发票。
 
-# 16
-
 # 接受用户输入
-
 许多类型的业务处理需要某种形式的用户输入。输入可以是用户输入的数据形式，可以是用户选择“是”或“否”的提示提示符，甚至是上传文件。Power Automate 提供了一个接口，让用户可以作为流的一部分提供信息。连接的应用程序（如 Power Apps）也可以用于向流提供信息。
 
 在本章中，我们将重新回顾第 5 章“创建按钮流”中即时云流的概念。你将学习如何收集不同类型的用户输入，这些输入稍后可用在流中。具体而言，本章将涵盖以下主题：
 
 - 理解用户输入选项
+
 - 创建一个使用所有输入类型的流
+
 - 验证流的执行
 
 通过完成本章末尾的练习，你将熟悉不同类型的用户输入选项以及它们如何被用于创建交互式流。
@@ -5036,29 +4909,29 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 继续前进！
 
 ### 理解用户输入选项
+用户输入可以有许多形式。在创建手动触发流（也称为按钮流或即时流）时，Power Automate 允许流设计人员接受六种用户输入。要向手动触发的流添加输入功能，点击标记为“`Manually trigger a flow`”的标题。
 
-用户输入可以有许多形式。在创建手动触发流（也称为按钮流或即时流）时，Power Automate 允许流设计人员接受六种用户输入。要向手动触发的流添加输入功能，点击标记为“Manually trigger a flow”的标题。
-
-当触发器对象展开时，点击“Add an input”，即可看到图 16.1 所示的输入选项：
+当触发器对象展开时，点击“`Add an input`”，即可看到图 16.1 所示的输入选项：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_306_0.png)
 
 输入类型如下：
 
-- **Text（文本）**：Text 输入选项支持自由格式文本、单个下拉列表和多选列表。
-- **Yes/No（是/否）**：Yes/No 输入选项是一个开关。
-- **File（文件）**：File 选项提供了上传文件的功能。
-- **Email（电子邮件）**：Email 输入选项旨在接收电子邮件地址。
-- **Number（数字）**：Number 输入选项允许用户输入数字。
-- **Date（日期）**：Date 选项允许用户选择日期。
+- **Text（文本）**：`Text`输入选项支持自由格式文本、单个下拉列表和多选列表。
+
+- **Yes/No（是/否）**：`Yes/No`输入选项是一个开关。
+
+- **File（文件）**：`File`选项提供了上传文件的功能。
+
+- **Email（电子邮件）**：`Email`输入选项旨在接收电子邮件地址。
+
+- **Number（数字）**：`Number`输入选项允许用户输入数字。
+
+- **Date（日期）**：`Date`选项允许用户选择日期。
 
 手动触发的流可以使用一个或多个输入选项。
 
-此外，如果你的流正在捕敏感数据（如帐户凭据或其他值），你可以配置 **Secure inputs（安全输入）** 和 **Secure outputs（安全输出）**。选择 **Manually trigger a flow**，然后选择 **Settings（设置）**查看选项：
-
-# 第 16 章
-
-# 279
+此外，如果你的流正在捕敏感数据（如帐户凭据或其他值），你可以配置 **Secure inputs（安全输入）** 和 **Secure outputs（安全输出）**。选择 **Manually trigger a flow**，然后选择 **Settings（设置）** 查看选项：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_307_0.png)
 
@@ -5073,174 +4946,172 @@ Slack 有自己的一套触发器，在本章中，我们将重点关注操作�
 现在你已经对输入类型有了基本的了解，让我们创建一个流吧！
 
 ### 创建使用所有输入类型的流
-
 在示例中，我们将配置一个使用所有输入类型的简单流，并使用这些数据填充 SharePoint 列表。你也可以尝试此示例将内容保存到数据库。
 
 在开始配置流之前，你需要配置一些基本的先决条件，例如存储各种值的 SharePoint 列表。完成先决条件后，你就可以创建并测试流了。
 
 ### 配置先决条件
-
 由于流的数据将存储在 SharePoint 列表中，如果你没有这些列表，你需要配置一个。在示例中，我们将在现有站点创建一个新列表，然后为我们的每个值添加一列。
 
 要创建列表，请遵循以下步骤：
 
-- 导航到 SharePoint 站点，点击 Site contents（站点内容），点击 New（新建）。从下拉菜单中选择 List（列表），如图 16.4 所示：
+1. 导航到 SharePoint 站点，点击 `Site contents`（站点内容），点击 `New`（新建）。从下拉菜单中选择 `List`（列表），如图 16.4 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_308_0.png)
 
-- 从模板样式中选择 Blank（空白）。
-- 为列表输入名称并点击 Create（创建）。
-- 点击 Edit in grid view（在网格视图编辑）。
+2. 从模板样式中选择 `Blank`（空白）。
+
+3. 为列表输入名称并点击 `Create`（创建）。
+
+4. 点击 `Edit in grid view`（在网格视图编辑）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_308_1.png)
 
-- 点击 Title 单词，指向 Column settings（列设置），并选择 Rename Column（重命名列）。将列重命名为 Name。
-
-
-
-
-
-## 第 16 章
-## 281
+5. 点击 `Title` 单词，指向 `Column settings`（列设置），并选择 `Rename Column`（重命名列）。将列重命名为 `Name`。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_309_0.png)
 
 图 16.6 – 创建列并设置其类型
 
-- 7. 在“创建列”飞出窗口中，将名称（Name）设置为 Email1 Address，并确保类型（Type）下拉菜单设置为“单行文本（Single line of text）”。点击保存。
-- 8. 重复此过程添加列，使用以下列类型和值：
+6. 在“创建列”飞出窗口中，将名称（`Name`）设置为 `Email1 Address`，并确保类型（`Type`）下拉菜单设置为“单行文本（`Single line of text`）”。点击保存。
+
+7. 重复此过程添加列，使用以下列类型和值：
 
 | 列类型 | 标识 (Name) |
 | :--- | :--- |
-| 文本 / 单行文本 | Email Address |
-| 是/否 | 上周内吃过吗？ (Eaten in the last week?) |
+| 文本 / 单行文本 | `Email Address` |
+| 是/否 | `Eaten in the last week?`（上周内吃过吗？） |
 | 数字 | 你每个月吃几次？ |
-| 日期 | 今天的日期 (Today’s Date) |
+| 日期 | `Today’s Date`（今天的日期） |
 | 图像 | 你最喜欢的食物的照片 |
 
 表 16.1 – 列表值
 
-完成后，它看起来应该像像图所示：
+完成后，它看起来应该像下图所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_309_1.png)
 
 图 16.7 – 配置后的列表
 
-- 9. 点击“退出网格视图（Exit grid view）”以保存更改。
+8. 点击“退出网格视图（`Exit grid view`）”以保存更改。
 
-稍等片，你配置的列表将被保存。你可以进行下一步了。
+稍等片刻，你配置的列表将被保存。你可以进行下一步了。
 
 ### 创建流
-
 现在你已经有了保存数据的地方，可以开始创建流了。按照以下步骤创建一个手动触发并捕用户输入的流：
 
-- 1. 转到 Power Automate Web 门户 (https://make.powerautomate.com) 并选择“创建”。
-- 2. 选择“即时云流（Instant cloud flow）”。
-- 3. 为流输入名称，选择“手动触发流（Manually trigger a flow）”触发器，并点击“创建”。
-- 4. 点击触发器标题显示“添加输入选项（Add an input）”：
+1. 转到 Power Automate Web 门户 (https://make.powerautomate.com) 并选择“创建”。
+
+2. 选择“即时云流（`Instant cloud flow`）”。
+
+3. 为流输入名称，选择“手动触发流（`Manually trigger a flow`）”触发器，并点击“创建”。
+
+4. 点击触发器标题显示“添加输入选项（`Add an input`）”：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_310_0.png)
 
 图 16.8 – 展开触发器选项
 
-- 5. 点击“添加输入”并选择“文本（Text）”：
+5. 点击“添加输入”并选择“文本（`Text`）”：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_310_1.png)
 
 图 16.9 – 添加新的输入类型
 
-- 6. 将标签更新为文本 Name，然后将提示（prompt）更新为“请输入您的姓名：”
-
-## 第 16 章
-## 283
+6. 将标签更新为文本 `Name`，然后将提示（`prompt`）更新为“请输入您的姓名：”
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_311_0.png)
 
 图 16.10 – 配置文本输入
 
-- 7. 点击**添加输入（Add an input）**并选择**电子邮件（Email）**。将提示更新为“请输入您的电子邮件地址”。
-- 8. 点击**添加输入（Add an input）**并选择**文件（File）**。将标签更新为“图片”。点击该项目旁的省略号 (...)，然后根据需要开启**必填字段（Make the field required）**选项：
+7. 点击**添加输入（Add an input）**并选择**电子邮件（Email）**。将提示更新为“请输入您的电子邮件地址”。
+
+8. 点击**添加输入（Add an input）**并选择**文件（File）**。将标签更新为“图片”。点击该项目旁的省略号 (...)，然后根据需要开启**必填字段（Make the field required）**选项：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_311_1.png)
 
 图 16.11 – 配置图片输入
 
-- 9. 点击**添加输入（Add an input）**并选择**是/否（Yes/No）**。将标签更新为“你上周吃过这个吗？”
-- 10. 点击**添加输入（Add an input）**并选择**数字（Number）**。将提示更新为“请输入你通常每个月吃几次”。
-- 11. 点击**添加输入（Add an input）**并选择**日期（Date）**。将标签更新为“今天的日期”。将提示更新为“请输入今天的日期”。
-- 12. **添加操作（Add an action）**。
-- 13. 选择 SharePoint 操作**创建项（Create item）**。
-- 14. 在**站点地址（Site Address）**框中选择包含你为练习创建的列表的站点。如果没有显示，点击**输入自定义值（Enter custom value）**并添加 SharePoint 站点的 URL。
-- 15. 选择列表。稍等片，列表上的列名可能会出现：
+9. 点击**添加输入（Add an input）**并选择**是/否（Yes/No）**。将标签更新为“你上周吃过这个吗？”
+
+10. 点击**添加输入（Add an input）**并选择**数字（Number）**。将提示更新为“请输入你通常每个月吃几次”。
+
+11. 点击**添加输入（Add an input）**并选择**日期（Date）**。将标签更新为“今天的日期”。将提示更新为“请输入今天的日期”。
+
+12. **添加操作（Add an action）**。
+
+13. 选择 SharePoint 操作**创建项（Create item）**。
+
+14. 在**站点地址（Site Address）**框中选择包含你为练习创建的列表的站点。如果没有显示，点击**输入自定义值（Enter custom value）**并添加 SharePoint 站点的 URL。
+
+15. 选择列表。稍等片刻，列表上的列名可能会出现：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_312_0.png)
 
 图 16.12 – 编辑“创建项”操作
 
-标记为“必填（Required）”的列表项显示。你可以点击高级参数下的“显示所有（Show all）”按钮，自动将所有剩余列名添加到操作中。
+标记为“必填（`Required`）”的列表项显示。你可以点击高级参数下的“显示所有（`Show all`）”按钮，自动将所有剩余列名添加到操作中。
 
-- 16. 点击 Name 或 Title 字段（取决于你使用的哪种设计器画布视图），然后选择 Name 的动态值令牌。
-- 17. 对“上周内吃过吗？是/否”字段、自定义值（Custom value）重复此过程，然后你就可以选择相应的动态内容令牌。完成后，它看起来应该像下面的截图：
+16. 点击 `Name` 或 `Title` 字段（取决于你使用的哪种设计器画布视图），然后选择 `Name` 的动态值令牌。
+
+17. 对“上周内吃过吗？是/否”字段、自定义值（`Custom value`）重复此过程，然后你就可以选择相应的动态内容令牌。完成后，它看起来应该像下面的截图：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_312_1.png)
 
 图 16.13 – 完成“创建项”操作
 
-## 第 16 章
-## 285
+18. 添加操作。
 
-- 18. 添加操作。
-- 19. 在搜索框中输入 attachment（附件）。选择 SharePoint **添加附件（Add attachment）**操作：
+19. 在搜索框中输入 `attachment`（附件）。选择 SharePoint **添加附件（Add attachment）**操作：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_313_0.png)
 
 图 16.14 – 选择“添加附件”操作
 
-- 20. 在站点地址（Site Address）框中，选择包含列表的站点。在列表名称（List Name）框中选择你之前使用的列表。
-- 21. 在 Id 框中，选择“创建项”操作下的 Id 动态内容令牌。
-- 22. 在文件名（File Name）框中，输入用于保存文件的文件，例如 FavoriteThing.jpg。你也可以使用表达式来动态命名项目。在本例中，我们使用了以下表达式：
+20. 在站点地址（`Site Address`）框中，选择包含列表的站点。在列表名称（`List Name`）框中选择你之前使用的列表。
+
+21. 在 `Id` 框中，选择“创建项”操作下的 `Id` 动态内容令牌。
+
+22. 在文件名（`File Name`）框中，输入用于保存文件的文件，例如 `FavoriteThing.jpg`。你也可以使用表达式来动态命名项目。在本例中，我们使用了以下表达式：
 
 ```
 concat(triggerBody()?['email'],_'FavoriteThing_',triggerBody()?['file']['name'])
 ```
 
-- 23. 在文件内容（File Content）框中，从“手动触发流”部分选择 PicturecontentBytes 动态内容令牌：
+23. 在文件内容（`File Content`）框中，从“手动触发流”部分选择 `PicturecontentBytes` 动态内容令牌：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_313_1.png)
 
 图 16.15 – 将图片添加到 SharePoint 列表项
 
-- 24. **添加操作（Add an action）**。
+24. **添加操作（Add an action）**。
+
+
+
+## 25. 配置收件人并保存
+
 - 25. 在**收者（To）**字段中，选择**电子邮件（Email）**动态内容令牌。
 - 26. 在**主题（Subject）**字段中，输入“感谢告知”。
 - 27. 在**正文（Body）**字段中，选择任何你想要的动态内容。
 - 28. 点击**保存（Save）**。
 
-此时，你已经配置了一个捕获示例输入的流，进行了测试并验证了数据已上传。你可能注意到图像是以附件形式显示的，而不是列表中的列。目前，SharePoint 创建项或更新项的操作不支持默认图像列。然而，只要有创意，你可以编写 SharePoint HTTP 请求来直接上传数据。
+此时，你已经配置了一个捕获示例输入的流，进行了测试并验证了数据已上传。你可能注意到图像是以附件形式显示的，而不是列表中的列。目前，`SharePoint`创建项或更新项的操作不支持默认图像列。然而，只要有创意，你可以编写`SharePoint HTTP`请求来直接上传数据。
 
-（注：原文末尾部分存在大量重复的乱码文本，译文已根据逻辑进行了清理和去重。）
-
-
-
-
+> 注：原文末尾部分存在大量重复的乱码文本，译文已根据逻辑进行了清理和去重。
 
 ## 第 16 章
 
-8. 选择 POST 作为方法。
-
-9. 在 Uri 文本字段中输入 `/api/web/lists/GetByTitle('Favorite%20Things')/items(@outputs('Create_item'))?['body/id']/ValidateUpdateListItem`，并将列表标题替换为您的列表名称。如果您的列表名称包含空格，您可能需要将空格字符替换为其 URL 编码值 %20。
+8. 选择`POST`作为方法。
+9. 在`Uri`文本字段中输入`/api/web/lists/GetByTitle('Favorite%20Things')/items(@outputs('Create_item'))?['body/id']/ValidateUpdateListItem`，并将列表标题替换为您的列表名称。如果您的列表名称包含空格，您可能需要将空格字符替换为其`URL`编码值`%20`。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_319_0.png)
 
-图 16.21– 配置 HTTP 请求
+图 16.21– 配置 `HTTP` 请求
 
 10. 点击高级参数区域下的“显示所有”。
-
-11. 在 Headers 区域，配置一个 `Content-Type` 标头，值为 `application/json; odata=verbose`。
-
-12. 添加第二个 `Accept` 标头，值为 `application/json; odata=notmetadata`。
-
-13. 在 Body 区域，添加以下内容：
+11. 在`Headers`区域，配置一个`Content-Type`标头，值为`application/json; odata=verbose`。
+12. 添加第二个`Accept`标头，值为`application/json; odata=notmetadata`。
+13. 在`Body`区域，添加以下内容：
 
 ```json
 {
@@ -5253,13 +5124,13 @@ concat(triggerBody()?['email'],_'FavoriteThing_',triggerBody()?['file']['name'])
 }
 ```
 
-参见图 16.22 以向 SharePoint 发送完整 HTTP 请求的示例。
+参见图 16.22 以向`SharePoint`发送完整`HTTP`请求的示例。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_320_0.png)
 
-图 16.22 - 配置 HTTP 请求
+图 16.22 - 配置 `HTTP` 请求
 
-### 14. 点击保存。
+### 14. 点击保存
 
 这一次，当您测试流时，图像应该直接显示在列表中，如图 16.23 所示：
 
@@ -5267,162 +5138,148 @@ concat(triggerBody()?['email'],_'FavoriteThing_',triggerBody()?['file']['name'])
 
 图 16.23 - 列表显示上传图像的缩图
 
-您可以使用此变通方法提高基于列表的 Power Automate 流的质量。向 SharePoint 列表添加图像可能需要一些额外工作，但结果有助于他人通过更少的点击次数可视化更多数据。
+您可以使用此变通方法提高基于列表的`Power Automate`流的质量。向`SharePoint`列表添加图像可能需要一些额外工作，但结果有助于他人通过更少的点击次数可视化更多数据。
 
 ### 总结
 
-在本章中，您学习了 Power Automate 可以接受的不同类型的用户输入，包括文本、数字、是/否选择框、日期和二进制数据。您还配置了一个利用这些方法每种方法的流并将内容保存到 SharePoint 列表中。
+在本章中，您学习了`Power Automate`可以接受的不同类型的用户输入，包括文本、数字、是/否选择框、日期和二进制数据。您还配置了一个利用这些方法每种方法的流并将内容保存到`SharePoint`列表中。
 
-请求输入是 Power Automate 的一个非常有用的功能，它为您的组织提供了许多自助和数据收集操作。通过这些输入能力，您可以启用依赖运行时提供的唯一数据的工作流场景，例如照片或其他在没有用户交互的情况下无法获取类型类型。
+请求输入是`Power Automate`的一个非常有用的功能，它为您的组织提供了许多自助和数据收集操作。通过这些输入能力，您可以启用依赖运行时提供的唯一数据的工作流场景，例如照片或其他在没有用户交互的情况下无法获取类型类型。
 
-在下一章中，我们将开始查看 Power Automate 的高级操作场景，例如与 Entra ID（原 Azure Active Directory，简称 AD 或 AAD）进行交互。
+在下一章中，我们将开始查看`Power Automate`的高级操作场景，例如与`Entra ID`（原`Azure Active Directory`，简称`AD`或`AAD`）进行交互。
 
-立即解锁本书的 PDF 版本和独家额外内容——扫描二维码码（或访问 packpub.com/unlock）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
-**注意：** 请保留好您的发票。直接从 Packt 购买的物品不需要发票。
+立即解锁本书的`PDF`版本和独家额外内容——扫描二维码码（或访问`packpub.com/unlock`）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
 
-## 17
-### 自动化 Entra ID
+> **注意：** 请保留好您的发票。直接从`Packt`购买的物品不需要发票。
 
-在此为止，我们一直关注于从用户的角度将 Power Automate 作为工作流引擎。我们专注于处理电子邮件、发布到 SharePoint 列表和文档库、连接到文件和文件夹，以及启动审批工作流。
+## 第 17 章：自动化 Entra ID
 
-在本章中，我们将重心离开业务应用程序自动化，转向查看 Power Automate 在直接处理 Entra ID（原 Azure Active Directory，AD 或 AAD）管理方面的能力。Entra ID 是 Microsoft 365 生态系统中应用程序和服务使用的身份存储器。
+在此为止，我们一直关注于从用户的角度将`Power Automate`作为工作流引擎。我们专注于处理电子邮件、发布到`SharePoint`列表和文档库、连接到文件和文件夹，以及启动审批工作流。
+
+在本章中，我们将重心离开业务应用程序自动化，转向查看`Power Automate`在直接处理`Entra ID`（原`Azure Active Directory`，`AD`或`AAD`）管理方面的能力。`Entra ID`是`Microsoft 365`生态系统中应用程序和服务使用的身份存储器。
 
 有许多例行操作任务具有自动化潜力——特别是在涉及身份置备或注销、报告和组管理时。从管理的角度来看，这些都是重要的任务，但如果您需要不断在工单系统和一个或多个管理界面之间切换，可能会产生高昂的人力成本。
 
-虽然 Entra ID 具有许多原生组管理和报告功能，但某些时候您可能需要根据普通 Entra ID 管理门户中不可用的属性来创建自动化。虽然数据存在，但从原生的自动化角度来看，它很容易被消费。
+虽然`Entra ID`具有许多原生组管理和报告功能，但某些时候您可能需要根据普通`Entra ID`管理门户中不可用的属性来创建自动化。虽然数据存在，但从原生的自动化角度来看，它很容易被消费。
 
-假设您向公司的安全团队定期提供报告，说明哪些用户尚未成功完成多因素身份验证（MFA）注册。数据存在 Entra ID 中，但需要切换任务来收集这些数据、处理它们，然后发送电子邮件。这类活动似乎属于“必须做，但不需要由你来做”的类别。
+假设您向公司的安全团队定期提供报告，说明哪些用户尚未成功完成多因素身份验证（`MFA`）注册。数据存在`Entra ID`中，但需要切换任务来收集这些数据、处理它们，然后发送电子邮件。这类活动似乎属于“必须做，但不需要由你来做”的类别。
 
 这就是本章大派用场的地方。
 
-为了获取这些高级数据，我们必须使用一些高级技能，例如解析 JSON 和使用 HTTP 连接器。我们将涵盖以下主题：
+为了获取这些高级数据，我们必须使用一些高级技能，例如解析`JSON`和使用`HTTP`连接器。我们将涵盖以下主题：
 
 - 学习连接器和操作
 - 配置前提条件
-- 创建 HTTP 流
+- 创建`HTTP`流
 - 测试和排排除流
 - 验证流
 
-在本章结束时，您应该理解使用 HTTP 连接器与 Entra ID 交互的基础知识。
+在本章结束时，您应该理解使用`HTTP`连接器与`Entra ID`交互的基础知识。
 
 让我们开始吧！
 
 ### 技术要求
 
-由于我们将处理 Entra ID…… [文本根据 OCR 流已截断]
+由于我们将处理`Entra ID`…… [文本根据`OCR`流已截断]
 
 ### 学习连接器和操作
 
-在本章中，我们将基于其他章节中学到的知识，例如处理条件、动态内容以及发送电子邮件。然后，我们将引入几个与 Entra ID 相关的新概念，包括 HTTP、解析 JSON 和创建表操作。
+在本章中，我们将基于其他章节中学到的知识，例如处理条件、动态内容以及发送电子邮件。然后，我们将引入几个与`Entra ID`相关的新概念，包括`HTTP`、解析`JSON`和创建表操作。
 
 ### HTTP 操作
 
-虽然处理 Entra ID 通常可以使用标准的 Entra ID 连接器（如 Entra ID 和 Office 365 Groups 连接器）来完成，但存储 MFA 信息的属性并未通过这些连接器暴露。
+虽然处理`Entra ID`通常可以使用标准的`Entra ID`连接器（如`Entra ID`和`Office 365 Groups`连接器）来完成，但存储`MFA`信息的属性并未通过这些连接器暴露。
 
-为了检索这些数据，我们需要查看另一个源：Microsoft Graph API（通常称为 Graph API）。Microsoft Graph API 是一种基于 REST 的 API，允许您与存储在 Microsoft 365 生态中的数据进行交互。由于我们正在寻找的数据在 Entra ID 中，Graph API 是自然的选择。
+为了检索这些数据，我们需要查看另一个源：`Microsoft Graph API`（通常称为`Graph API`）。`Microsoft Graph API`是一种基于`REST`的`API`，允许您与存储在`Microsoft 365`生态中的数据进行交互。由于我们正在寻找的数据在`Entra ID`中，`Graph API`是自然的选择。
 
-正如您可能从第 1 章《介绍 Power Automate》回想起的那样，使用 HTTP 发动词（有时称为操作、指令或方法）与基于 REST 的系统交互，例如 GET（读）、POST（写）、PUT（更新）、PATCH（部分更新）和 DELETE（删除）。
+正如您可能从第 1 章《介绍 Power Automate》回想起的那样，使用`HTTP`发动词（有时称为操作、指令或方法）与基于`REST`的系统交互，例如`GET`（读）、`POST`（写）、`PUT`（更新）、`PATCH`（部分更新）和`DELETE`（删除）。
 
-要成功使用 HTTP 操作，我们通常需要提供几个信息：
+要成功使用`HTTP`操作，我们通常需要提供几个信息：
 
-- **Method**：如前，我们将从 GET、POST、PUT 或 DELETE 之间进行选择。
-- **URI**：调用 Graph API 服务的地址（也称为端点）。
-- **Headers**：标头有时是可选的，是描述请求正在处理的内容类型的信息。标头通常以键/值对的形式构建，例如 Content-type: application/json，其中 Content-type 是键，application/json 是值。
-- **Queries**：查询是您发送到服务或端点的参数。在 Entra ID 的上下文中，查询通常是某种过滤标准。
+- **Method**：如前，我们将从`GET`、`POST`、`PUT`或`DELETE`之间进行选择。
+- **URI**：调用`Graph API`服务的地址（也称为端点）。
+- **Headers**：标头有时是可选的，是描述请求正在处理的内容类型的信息。标头通常以键/值对的形式构建，例如`Content-type: application/json`，其中`Content-type`是键，`application/json`是值。
+- **Queries**：查询是您发送到服务或端点的参数。在`Entra ID`的上下文中，查询通常是某种过滤标准。
 - **Body**：正文包含请求本身的详细信息。
 
+虽然某些服务和`API`是开放的并允许对终端进行免费查询，但大多数服务都需要某种形式的身份验证，以确保只有授权的实体才能访问数据。在处理`Entra ID`时，我们将指定几条关于身份验证的信息。
 
+> 你可以使用 `https://developer.microsoft.com/graph/graph-explorer` 使用`Microsoft Graph Explorer`尝试其他`Microsoft Graph API`操作。
 
-
-
-虽然某些服务和 API 是开放的并允许对终端进行免费查询，但大多数服务都需要某种形式的身份验证，以确保只有授权的实体才能访问数据。在处理 Entra ID 时，我们将指定几条关于身份验证的信息。
-
-> 你可以使用 https://developer.microsoft.com/graph/graph-explorer 使用 Microsoft Graph Explorer 尝试其他 Microsoft Graph API 操作。
-
-与你为止所过的其他连接器和操作相比，你是在创建流时通过交互式地输入用户名和密码来提供身份验证。然而，在处理 HTTP 请求和 Entra ID 时，我们需要单独以租户 ID（tenant ID）、客户端 ID（Client ID）和客户端密钥（Client Secret）的形式来指定这些信息。
+与你为止所过的其他连接器和操作相比，你是在创建流时通过交互式地输入用户名和密码来提供身份验证。然而，在处理`HTTP`请求和`Entra ID`时，我们需要单独以租户 ID（`tenant ID`）、客户端 ID（`Client ID`）和客户端密钥（`Client Secret`）的形式来指定这些信息。
 
 ### 解析 JSON 操作
 
-如第 1 节“介绍 Microsoft Power Automate”所述，连接器以 JavaScript 对象表示法（或 JSON）存储信息。在处理基于 REST 的 API 时，处理的数据（无论发送还是接收）经常会被格式化为 JSON。
+如第 1 节“介绍 Microsoft Power Automate”所述，连接器以`JavaScript`对象表示法（或`JSON`）存储信息。在处理基于`REST`的`API`时，处理的数据（无论发送还是接收）经常会被格式化为`JSON`。
 
-为了提取创建报告所需的信息，我们需要使用“解析 JSON”（Parse JSON）操作，这将我们配置 Power Automate 以理解正在使用的架构（schema）。架构是一种用于描述数据结构的定义或图例。我们将利用它来帮助识别构建报告所需的字段或属性。
+为了提取创建报告所需的信息，我们需要使用“解析 JSON”（`Parse JSON`）操作，这将我们配置`Power Automate`以理解正在使用的架构（`schema`）。架构是一种用于描述数据结构的定义或图例。我们将利用它来帮助识别构建报告所需的字段或属性。
 
 ### 创建 CSV 表操作
 
-在例示例中，我们将使用逗号分隔值（CSV）表来存储输出内容。“创建 CSV 表”（Create CSV table）操作将用于将信息汇成简单的电子表格风格报告，该报告可以附加在电子邮件中。
+在例示例中，我们将使用逗号分隔值（`CSV`）表来存储输出内容。“创建 CSV 表”（`Create CSV table`）操作将用于将信息汇成简单的电子表格风格报告，该报告可以附加在电子邮件中。
 
 现在你已经对将要使用的操作有了进一步了解，让我们开始设置环境以支持该流。
 
 ### 配置先决条件
 
-由于我们要配置的 HTTP 流没有办法输入传统的用户名和密码作为身份验证机制，我们将创建一个或注册一个具有适当权限的特殊应用程序。该应用程序将通过客户端 ID（本质上是应用程序的用户身份）进行标识。
+由于我们要配置的`HTTP`流没有办法输入传统的用户名和密码作为身份验证机制，我们将创建一个或注册一个具有适当权限的特殊应用程序。该应用程序将通过客户端 ID（本质上是应用程序的用户身份）进行标识。
 
 此外，你还需要配置客户端密钥，它是应用程序相当于密码。不过，租户信息、应用程序信息和客户端密钥将用于提供执行流所需的身份验证。
 
 ### 配置 Entra ID 应用程序
 
-为此流注册新的 Entra ID 应用程序，请遵循以下步骤：
+为此流注册新的`Entra ID`应用程序，请遵循以下步骤：
 
-- 1. 使用具有全局管理员权限的身份登录到 Entra ID 门户 (https://entra.microsoft.com)。
-- 2. 展开 Entra ID 并选择“应用注册”（App registrations）。
+1. 使用具有全局管理员权限的身份登录到`Entra ID`门户 (`https://entra.microsoft.com`)。
+2. 展开`Entra ID`并选择“应用注册”（`App registrations`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_327_0.png)
 
 图 17.1 - 应用注册页面
 
-- 3. 点击“注册”（registration）。
-- 4. 为应用程序配置显示名称。
-- 5. 在“支持的账户类型”下选择“仅此组织目录中的帐户[仅主帐户 - 单租户]”，然后在“重定向 URI”下输入 https://auth，如图 17.2 所示。完成后点击“注册”。
+3. 点击“注册”（`registration`）。
+4. 为应用程序配置显示名称。
+5. 在“支持的账户类型”下选择“仅此组织目录中的帐户[仅主帐户 - 单租户]”，然后在“重定向 URI”下输入 `https://auth`，如图 17.2 所示。完成后点击“注册”。
 
-### 自动化 Entra ID
-
-> 提示
-
-最好为每个应用程序或用例创建一个单独的注册，不要重用应用注册。这允许你针对特定需求更紧密地界定权限。
+> **提示：** 最好为每个应用程序或用例创建一个单独的注册，不要重用应用注册。这允许你针对特定需求更紧密地界定权限。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_328_0.png)
 
-- 6. 在“管理”（Manage）下，选择“API 权限”（API permissions）。
+6. 在“管理”（`Manage`）下，选择“API 权限”（`API permissions`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_328_1.png)
 
-- 7. 点击“添加权限”（Add a permission）。
-
-- 8. 在“请求 API 权限”浮窗中，选择 Microsoft Graph。
+7. 点击“添加权限”（`Add a permission`）。
+8. 在“请求 API 权限”浮窗中，选择`Microsoft Graph`。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_329_0.png)
 
 图 17.4 – 选择 API
 
-- 9. **选择委派权限（delegations）。** 在“选择权限”区域，选择 **Reports.Read、Directory.Read.All、UserAuthenticationMethod.Read.All 以及 AuditLog.Read.All。**点击“添加权限”。
+9. **选择委派权限（`delegations`）。** 在“选择权限”区域，选择 **`Reports.Read`、`Directory.Read.All`、`UserAuthenticationMethod.Read.All` 以及 `AuditLog.Read.All`。** 点击“添加权限”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_329_1.png)
 
 图 17.5 – 添加委派 API 权限
 
-- 10. 点击“添加权限”。
+10. 点击“添加权限”。
+11. 在“请求 API 权限”浮窗中，选择 **`Microsoft Graph`**。
+12. 选择“应用程序权限”（`Application permissions`）。在“选择权限”区域，选择 **`Reports.Read.All`、`Directory.Read.All`、`UserAuthenticationMethod.Read.All` 以及 `AuditLog.Read.All`。**
+13. 点击“添加权限”。
 
-- 11. 在“请求 API 权限”浮窗中，选择 **Microsoft Graph**。
-
-- 12. 选择“应用程序权限”（Application permissions）。在“选择权限”区域，选择 **Reports.Read.All、Directory.Read.All、UserAuthenticationMethod.Read.All 以及 AuditLog.Read.All。**
-
-- 13. 点击“添加权限”。
-
-### 注意
-
-对 AuditLog.Read.All 权限的需求目前被归类为 bug。虽然文档表明此权限并非必需，但未能配置此权限偶尔可能会导致以下错误：**错误详细信息：应用程序缺少 MSGraph API 'Read all audit log data'。** 添加 AuditLog.Read.All 权限将解决此问题。
-
-Directory.Read.All 权限只有在租户许可证缓存未更新（通常每小时更新一次）时才是必要的。如果你在向租户添加高级版许可证后不久尝试运行流，可能需要临时添加此权限，以允许注册的应用程序具有从租户收集许可证数据的能力。
+> **注意：** 对`AuditLog.Read.All`权限的需求目前被归类为 bug。虽然文档表明此权限并非必需，但未能配置此权限偶尔可能会导致以下错误：**错误详细信息：`应用程序缺少 MSGraph API 'Read all audit log data'`。** 添加`AuditLog.Read.All`权限将解决此问题。
+>
+> `Directory.Read.All`权限只有在租户许可证缓存未更新（通常每小时更新一次）时才是必要的。如果你在向租户添加高级版许可证后不久尝试运行流，可能需要临时添加此权限，以允许注册的应用程序具有从租户收集许可证数据的能力。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_330_0.png)
 
-如果你的租户中未启用 Entra ID 订阅，可能会收到以下错误：**错误详细：租户既不是 B2C 也没有高级许可证。** 要解决此错误，你需要开始试用或购买一个 Entra ID P1 许可证。
+如果你的租户中未启用`Entra ID`订阅，可能会收到以下错误：**错误详细：`租户既不是 B2C 也没有高级许可证`。** 要解决此错误，你需要开始试用或购买一个`Entra ID P1`许可证。
 
-- 1. 在 **API 权限页面**上，点击“授予管理员同意”（Grant admin consent），如**图 17.6** 所示。
+4. 在 **API 权限页面**上，点击“授予管理员同意”（`Grant admin consent`），如**图 17.6** 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_330_1.png)
 
-- 2. 点击“是”以批准管理员同意操作。
+5. 点击“是”以批准管理员同意操作。
 
 创建应用程序并授予权限后，让我们继续创建客户端密钥。
 
@@ -5432,30 +5289,29 @@ Directory.Read.All 权限只有在租户许可证缓存未更新（通常每小�
 
 要创建客户端密钥，请遵循以下步骤：
 
-- 1. 在应用注册打开的情况下，选择“管理”部分下的“证书和密钥”（Certificates & secrets）。
+1. 在应用注册打开的情况下，选择“管理”部分下的“证书和密钥”（`Certificates & secrets`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_331_0.png)
 
 图 17.7 – 证书和密钥
 
-- 2. 选择“新建客户端密钥”（New client secret）。
-- 3. 在“添加客户端密钥”浮窗中输入描述并从下拉列表中选择过期时间。完成后点击“添加”。
+2. 选择“新建客户端密钥”（`New client secret`）。
+3. 在“添加客户端密钥”浮窗中输入描述并从下拉列表中选择过期时间。完成后点击“添加”。
 
-> 提示
-一旦配置了过期时间，设置一个日历事件提醒自己。
+> **提示：** 一旦配置了过期时间，设置一个日历事件提醒自己。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_331_1.png)
 
 图 17.8 – 配置客户端密钥
 
-一旦你离开此页面，将无法检索该值。点击图标将值复制到剪贴板；将其粘贴到文本文档中保存。
+4. 一旦你离开此页面，将无法检索该值。点击图标将值复制到剪贴板；将其粘贴到文本文档中保存。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_332_0.png)
 
 图 17.9 - 客户端密钥
 
-- 5. 在导航窗中，选择“概述”（Overview）。
-- 6. 采集应用程序（客户端）ID 和租户（目录）ID 值，并将它们保存到第 4 步创建的同一个文件中。
+5. 在导航窗中，选择“概述”（`Overview`）。
+6. 采集应用程序（客户端）`ID`和租户（目录）`ID`值，并将它们保存到第 4 步创建的同一个文件中。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_332_1.png)
 
@@ -5471,127 +5327,109 @@ Directory.Read.All 权限只有在租户许可证缓存未更新（通常每小�
 
 在本节中，我们将创建一个用于检索注册数据的流。让我们开始吧！
 
-创建流的第一部分需要连接 Entra ID 以检索构建报告所需的数据。我们将使用 HTTP 操作查询 Entra ID。
+创建流的第一部分需要连接`Entra ID`以检索构建报告所需的数据。我们将使用`HTTP`操作查询`Entra ID`。
 
-> 在本章中，我们关注 Microsoft Graph API 终端中的一个 REST 资源。你可以使用数百个不同的资源来检索和修改数据。有关 Graph 资源的完整列表，请参见：https://learn.microsoft.com/en-us/graph/api/overview。
+> 在本章中，我们关注`Microsoft Graph API`终端中的一个`REST`资源。你可以使用数百个不同的资源来检索和修改数据。有关`Graph`资源的完整列表，请参见：`https://learn.microsoft.com/en-us/graph/api/overview`。
 
-按照以下步骤配置 HTTP 操作：
+按照以下步骤配置`HTTP`操作：
 
-
-
-- 1. 导航到 Power Automate 制作者 Web门户 (https://make.powerautomate.com) 并点击“创建”。
-- 2. 点击“计划云流”（Scheduled cloud flow）。
-- 3. 配置流名称。
-
-
-
-
-
-4. 在“运行此流”（Run this flow）下配置计划设置以每周执行。完成后点击“创建”（Create）。
+1. 导航到`Power Automate`制作者 `Web` 门户 (`https://make.powerautomate.com`) 并点击“创建”。
+2. 点击“计划云流”（`Scheduled cloud flow`）。
+3. 配置流名称。
+4. 在“运行此流”（`Run this flow`）下配置计划设置以每周执行。完成后点击“创建”（`Create`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_334_0.png)
 
 图 17.11 – 配置流计划设置
 
 5. 添加操作。
-
-6. 选择 HTTP 操作。
+6. 选择`HTTP`操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_334_1.png)
 
 图 17.12 – 选择 HTTP 操作
 
-7. 在 HTTP 操作中，在“方法”（Method）下选择 GET。
-
-# 第 17 章
+7. 在`HTTP`操作中，在“方法”（`Method`）下选择`GET`。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_335_0.png)
 
 图 17.13 - 配置 HTTP 操作
 
-8. **点击高级参数（Advanced parameters）下的“显示”（Show）**以展开额外的参数字段。
-
-9. 使用在本章之前****配置前提**（Configuring prerequisites）练习中保存的值，使用 *Tenant*（租户）、*Client ID* 和 *Secret*（密钥）字段中的值填写剩余的 HTTP 操作参数：
+8. **点击高级参数（`Advanced parameters`）下的“显示”（`Show`）** 以展开额外的参数字段。
+9. 使用在本章之前**配置前提**（`Configuring prerequisites`）练习中保存的值，使用 *Tenant*（租户）、*Client ID* 和 *Secret*（密钥）字段中的值填写剩余的`HTTP`操作参数：
 
 | 参数 | 值 |
 | :--- | :--- |
-| URI | https://graph.microsoft.com/beta/reports/credentialRegistrationDetails |
-| Queries | Key: $filter Value: isMfaRegistered eq false |
+| URI | `https://graph.microsoft.com/beta/reports/credentialRegistrationDetails` |
+| Queries | Key: `$filter` Value: `isMfaRegistered eq false` |
+
+
+
+# 配置 HTTP 操作参数
+
 | Authentication | Active Directory OAuth |
-| Tenant | <Tenant ID value> |
-| Audience | https://graph.microsoft.com |
-| Client ID | <Application (client) ID value> |
+| --- | --- |
+| Tenant | `<Tenant ID value>` |
+| Audience | `https://graph.microsoft.com` |
+| Client ID | `<Application (client) ID value>` |
 | Credential type | Secret |
-| Secret | <Client secret value> |
+| Secret | `<Client secret value>` |
 
 表 17.1 - 配置 HTTP 操作参数
 
 这里有趣（或重要）的值包括 URI，它是显示用户已注册身份验证方法的 Microsoft Graph 端点；以及筛选器查询，该查询选取了 `isMfaRegistered` 设置为 false 的用户。
 
 10. 检查完成的操作，如图 17.14 所示：
+    ![](img/bfc58bb450784476738fab1c5bfe829d_336_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_336_0.png)
-
-图 17.14 – 检查完成的 HTTP 操作
+    图 17.14 – 检查完成的 HTTP 操作
 
 11. 选择 HTTP 操作浮窗顶部的“设置”（Settings）选项卡。
-
 12. 在“网络”（Networking）下，将“异步模式”（Asynchronous pattern）切换开关置为“开启”（On）。
-
 13. 将“分页”（Pagination）切换开关置为“开启”，并将“阈”（Threshold）字段配置为 5000。
+    ![](img/bfc58bb450784476738fab1c5bfe829d_336_1.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_336_1.png)
-
-图 17.15 – 配置 HTTP 操作设置
+    图 17.15 – 配置 HTTP 操作设置
 
 14. 点击“完成”（Done）。
-
 15. 点击“保存”（Save）。
-
 16. 点击“测试”（Test），然后在“测试流”（Test Flow）浮窗面板中，选择“手动”（Manually）单选框然后点击“测试”。
-
 17. 点击“运行流”（Run flow）确认您的选择。
-
 18. 点击“完成”（Done）。
-
 19. 流运行后，点击步骤的标题栏展开 HTTP 操作步骤。
-
 20. 滚动到运行历史的“输出”（Outputs）部分。点击“显示原始输出”（Show raw outputs）打开 HTTP 浮窗，以便您查看 JSON 结构。
-
 21. 将 HTTP 浮窗文本框中的整个 Body 值复制到剪贴板。此数据将用于定义 JSON 架构（组织结构）。
 
-> 注意
-> 您可能希望将数据粘贴到文本文档或 JSON 友好的编辑器中（例如 Notepad++ (https://www.notepad-plus-plus.org)），以验证您已捕获了所有数据，包括起始括号和结束括号。
+> **注意**
+>
+> 您可能希望将数据粘贴到文本文档或 JSON 友好的编辑器中（例如 Notepad++ (`https://www.notepad-plus-plus.org`)），以验证您已捕获了所有数据，包括起始括号和结束括号。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_337_0.png)
 
 22. 关闭浮窗。
-
 23. 点击“编辑”（Edit）返回编辑流。
 
 此时，您已创建了一个成功连接到 Entra ID 的流。接下来，我们将查看如何使用“解析 JSON”（Parse JSON）操作来配置 Power Automate。
 
-### 解析输出
+## 解析输出
 
 在成功从 Entra ID 查询未配置 MFA 的用户列表后，您现在需要配置一个步骤来解码返回的数据。此过程被称为“解析”，它允许 Power Automate 识别单独记录以及这些记录内部的单独属性或参数。
 
 按照以下步骤操作：
 
-1. 滚动到当前流的底部并“添加操作”。
+1. 滚动到当前流的底部并添加操作（Add an action）。
 2. 选择“解析 JSON”（Parse JSON）数据操作。
+   ![](img/bfc58bb450784476738fab1c5bfe829d_338_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_338_0.png)
-
-图 17.17 - 添加解析 JSON 操作
+   图 17.17 - 添加解析 JSON 操作
 
 3. 选择“内容”（Content）字段，然后添加 Body 动态内容值，如图 17.18 所示。
+   ![](img/bfc58bb450784476738fab1c5bfe829d_338_1.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_338_1.png)
-
-图 17.18 - 配置解析 JSON 操作
+   图 17.18 - 配置解析 JSON 操作
 
 4. 在解析 JSON 操作的底部，点击“使用示例负载生成架构”（Use sample payload to generate schema）。
-5. 将上一节节第 21 步中复制的 JSON 数据粘贴到“输入或粘贴示例 JSON 负载”对话框的主体中。点击“完成”。
+5. 将上一节第 21 步中复制的 JSON 数据粘贴到“输入或粘贴示例 JSON 负载”对话框的主体中。点击“完成”。
 
 当您粘贴 JSON 示例数据时，它可能包含多个条目。不用担心——Power Automate 将分析内容并仅选择一个条目，用于定义架构。
 
@@ -5619,35 +5457,35 @@ Enter or paste a sample JSON payload.
   }
 }
 ```
+
 图 17.19 – 使用 JSON
 
 6. 检查架构以确保它包含闭合括号。点击“保存”。
 
 Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将此输出构建报告。
 
-### 创建报告
+## 创建报告
 
 要完成此流，请遵循以下步骤：
 
 1. 打开流后，滚动到底部并选择操作。
 2. 选择“筛选数组”（Filter array）。
 3. 在“源”（From）字段中，添加来自解析 JSON 的 Body 动态内容，如图 17.20 所示。
+   ![](img/bfc58bb450784476738fab1c5bfe829d_340_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_340_0.png)
-
-图 17.20 – 筛选
+   图 17.20 – 筛选
 
 4. 在第一个值框中，选择解析 JSON 的 Body 动态内容。
 5. 在运算符下拉菜单中选择“不等于”（not equal to）。
-6. 在第二个值框中，选择“表达式”（Expression），然后选择“null”。
+6. 在第二个值框中，选择“表达式”（Expression），然后选择 `null`。
 7. 添加。
+   ![](img/bfc58bb450784476738fab1c5bfe829d_340_1.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_340_1.png)
+   图 17.21 – 配置筛选
 
-图 17.21 – 配置筛选
-
-> 注意
-> 检查此步骤中使用的输入值很重要。根据界面（新设计器与旧设计器），此值的显示方式可能不同。如果在测试流后收到提示输入需要数组的错误，请检查此操作。您可以悬停在 From 字段中粘贴的值上。您需要确保它*完全*那样粘贴在框中，注意 null 单词周围没有任何引号。错误的格式会导致 null 被视为字符串而非表达式。见图 17.22。
+> **注意**
+>
+> 检查此步骤中使用的输入值很重要。根据界面（新设计器与旧设计器），此值的显示方式可能不同。如果在测试流后收到提示输入需要数组的错误，请检查此操作。您可以悬停在 From 字段中粘贴的值上。您需要确保它*完全*那样粘贴在框中，注意 `null` 单词周围没有任何引号。错误的格式会导致 `null` 被视为字符串而非表达式。见图 17.22。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_341_0.png)
 
@@ -5655,51 +5493,38 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 8. 添加操作。
 9. 选择“创建 CSV 表”（Create CSV table）操作。
-
 10. 在“源”（From）字段中，选择来自筛选操作的 Body 动态内容。
+    ![](img/bfc58bb450784476738fab1c5bfe829d_342_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_342_0.png)
-
-图 17.24 – 配置 CSV 操作
+    图 17.24 – 配置 CSV 操作
 
 11. 在“创建 CSV 表”操作浮窗中，选择高级参数下的“显示所有”（Show all）。
 12. 在“列”（Columns）下拉菜单中，选择“自定义”（Custom）。我们将使用此设置来定义要添加到 CSV 表的列。
+13. 在“Header”列中填充你想要包含的信息，并在“Value”列中填充来自“筛选数组”操作的相应动态值令牌。此示例将 `DisplayName` 头部映射到 `userDisplayName` 令牌，并将 `Address` 映射到 `userPrincipalName` 令牌。
+    ![](img/bfc58bb450784476738fab1c5bfe829d_343_0.png)
 
+14. 添加一个操作。
+15. 选择 Office 365 Outlook 的“发送电子邮件 (V2)”操作。
+16. 在“致”框中输入电子邮件地址或从地址簿中选择收件人。
 
+> **注意**
+>
+> 如果你没有配置 Office 365 Outlook 连接，系统将提示你输入启用邮箱的帐户的凭据才能继续。
 
+17. 输入主题，例如“未启用 MFA 用户周报”。
+18. 在“正文”部分输入描述性文本，例如“未完成 MFA 注册的用户周报”。
+19. 选择“高级参数”下的下拉菜单并点击“附件”。
+20. 在“附件”区域，点击“添加新项”。
+21. 在“附件名称”字段中输入一个给 CSV 输出的文件。你可以使用表达式来创建自定义名称。
 
-
-+ 13. 在“Header”列中填充你想要包含的信息，并在“Value”列中填充来自“筛选数组”操作的相应动态值令牌。此示例将 `DisplayName` 头部映射到 `userDisplayName` 令牌，并将 `Address` 映射到 `userPrincipalName` 令牌。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_343_0.png)
-
-+ 14. 添加一个操作。
-
-+ 15. 选择 Office 365 Outlook 的“发送电子邮件 (V2)”操作。
-
-+ 16. 在“致”框中输入电子邮件地址或从地址簿中选择收件人。
-
-> 注意
- 如果你没有配置 Office 365 Outlook 连接，系统将提示你输入启用邮箱的帐户的凭据才能继续。
-
-+ 17. 输入主题，例如“未启用 MFA 用户周报”。
-
-+ 18. 在“正文”部分输入描述性文本，例如“未完成 MFA 注册的用户周报”。
-
-+ 19. 选择“高级参数”下的下拉菜单并点击“附件”。
-
-+ 20. 在“附件”区域，点击“添加新项”。
-
-+ 21. 在“附件名称”字段中输入一个给 CSV 输出的文件。你可以使用表达式来创建自定义名称。
-
-> 注意
- 请确保在名称末尾添加 `.csv` 或 `.txt`，以便收件人能够轻松在电子表格或文本查看器中打开。
+> **注意**
+>
+> 请确保在名称末尾添加 `.csv` 或 `.txt`，以便收件人能够轻松在电子表格或文本查看器中打开。
 
 22. 在“附件内容”正文中，选择“创建 CSV 表”下的 `Output` 动态内容令牌，如图 17.27 所示。
+    ![](img/bfc58bb450784476738fab1c5bfe829d_344_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_344_0.png)
-
-图 17.27 – 配置附件名称和内容
+    图 17.27 – 配置附件名称和内容
 
 23. 点击保存。
 
@@ -5707,7 +5532,7 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 你现在已经配置了一个针对未注册 MFA 用户的自动化 Entra 报告。
 
-### 测试流
+## 测试流
 
 要测试此流，你可以点击 Power Automate 画布区域右上角的“测试”。
 
@@ -5719,9 +5544,9 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 如果任何操作或步骤返回错误，你可以展开该步骤并查看输出。
 
-### 验证流
+## 验证流
 
-最后一步是检查发送的电子邮件。要执行此，请登录作为“发送电子邮件 (V2)”操作收件人的邮箱箱，并查找该消息：
+最后一步是检查发送的电子邮件。要执行此操作，请登录作为“发送电子邮件 (V2)”操作收件人的邮箱，并查找该消息：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_346_0.png)
 
@@ -5735,19 +5560,19 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 图 17.30 – 检查附件
 
-如果一切运行正常，你应该得到一个报告，其中包含了 Microsoft 365 租户中所有启用启用 的用户。
+如果一切运行正常，你应该得到一个报告，其中包含了 Microsoft 365 租户中所有启用的用户。
 
-### 进一步扩展
+## 进一步扩展
 
 除了创建 CSV 输出外，你还可以探索更丰富的数据方案。其中一种方案是创建一个 HTML 表格并直接包含在电子邮件中。
 
 创建 HTML 表格数据操作的功能与“创建 CSV 表”操作相同，不同之处在于输出是基本 HTML 格式的数据而不是逗号分隔的数据。通过将 HTML 输出包含在邮件消息正文中，你可以潜在地提高电子邮件的可用性。
 
-### 总结
+## 总结
 
 能够处理 Entra ID 可以为许多管理和报告任务开启自动化模式。使用 Power Automate 帮助处理报告数据或其他管理任务，可能会释放出宝贵的时间来处理其他高价值任务。
 
-在本章中，你学习了如何开始直接与 Entra ID 工作。你学习了如何与 Microsoft Graph API 交互以检索 MFA 数据、对其进行解析和过滤，然后将输出作为 CSV 附件添加到电子邮件中。你接触了几个新操作（包括 HTTP、解析 JSON 和创建 CSV 表），并使用它们以检索和格式化数据，以便人类轻松理解。
+在本章中，你学习了如何开始直接与 Entra ID 工作。你学习了如何与 Microsoft Graph API 交互以检索 MFA 数据、对其进行解析和过滤，然后将输出作为 CSV 附件添加到电子邮件中。你接触了几个新操作（包括 HTTP、解析 JSON 和创建 CSV 表），并使用它们来检索和格式化数据，以便人类轻松理解。
 
 在下一章中，我们将开始学习机器人流程自动化。
 
@@ -5755,7 +5580,9 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 # 第 3 部分
 
-## 机器人流程自动化、AI 模型、Copilot 及更多在本部分，你将介绍最新的自动化技术，包括用于遗留应用程序的机器人流程自动化、AI 和机器学习模型、Copilot 以及更高级的第三方应用程序。
+## 机器人流程自动化、AI 模型、Copilot 及更多
+
+在本部分，你将了解最新的自动化技术，包括用于遗留应用程序的机器人流程自动化、AI 和机器学习模型、Copilot 以及更高级的第三方应用程序。
 
 本书包含以下章节：
 
@@ -5778,11 +5605,11 @@ Power Automate 现在有了从 Entra ID 获取的信息。接下来，我们将�
 
 你可以将 RPA 视为一种允许你自动化桌面应用程序的宏。Power Automate 支持两种类型的自动化：使用桌面应用程序创建的流和使用 Selenium IDE 的流。Selenium IDE 是一个可以用于记录浏览器会话的开源工具。
 
-我们将直接处理桌面应用程序，因此我们将使用 Power Automate 桌面版（它也具有浏览器功能）。此外，Power Automate 支持两种 RPA 场景：交互式和无人值。交互式 RPA 场景包括人类交互，用于启动流或在执行期间提供输入。无人值流是无需用户干预即可运行的全自动化流程。
+我们将直接处理桌面应用程序，因此我们将使用 Power Automate 桌面版（它也具有浏览器功能）。此外，Power Automate 支持两种 RPA 场景：交互式和无人值守。交互式 RPA 场景包括人类交互，用于启动流或在执行期间提供输入。无人值守流是无需用户干预即可运行的全自动化流程。
 
-Power Automate Desktop 现在包含“使用 Copilot 录制”功能，允许你将录制过程与语音旁白相结合，帮助 Copilot Determine如何创建和更新操作。使用 Copilot 录制仅适用于美国地区的租户，且仅支持英语旁白。访问 https://learn.microsoft.com/en-us/power-automate/desktop-flows/create-flow-using-ai-recorder。
+Power Automate Desktop 现在包含“使用 Copilot 录制”功能，允许你将录制过程与语音旁白相结合，帮助 Copilot 确定如何创建和更新操作。使用 Copilot 录制仅适用于美国地区的租户，且仅支持英语旁白。访问 `https://learn.microsoft.com/en-us/power-automate/desktop-flows/create-flow-using-ai-recorder`。
 
-在本章中，我们将探索如何与 Copilot 和机器人流程自动化工作。我们在第 2 章“开始使用 Power Automate”中仅仅触山一角。在这里，在深入探讨示例之前，我们将进一步地探索 RPA 的力量。
+在本章中，我们将探索如何与 Copilot 和机器人流程自动化工作。我们在第 2 章“开始使用 Power Automate”中仅仅触及了皮毛。在这里，在深入探讨示例之前，我们将进一步地探索 RPA 的力量。
 
 ### 技术要求
 
@@ -5792,19 +5619,15 @@ Power Automate Desktop 现在包含“使用 Copilot 录制”功能，允许你
 * Power Automate WebDriver
 * Microsoft 数据网关
 
-
-
-
-
 在本章中，我们将使用 Windows 11 自带的 Power Automate Desktop 版本。Power Automate Desktop 也可以为 Windows 10 提供免费下载，我们将在“配置先决条件”部分介绍这一点。
 
 微软的数据网关与 Power Automate Desktop 一样，可以在 Power Automate 网页门户内部免费获取。我们稍后在“配置先决条件”部分也会介绍这一点。
 
-提醒一下，你需要 Power Automate 用户计划（per-user plan）以及无人 RPA 附加组件。
+提醒一下，你需要 Power Automate 用户计划（per-user plan）以及无人值守 RPA 附加组件。
 
 ### 学习操作和传递变量
 
-在本章中，我们将介绍一些与使用 Power Automate Desktop 的相关新概念，特别是关于运行 Power Automate Desktop 流的操作，以及如何将变量从云端传递到桌面应用程序。
+在本章中，我们将介绍一些与使用 Power Automate Desktop 相关的新概念，特别是关于运行 Power Automate Desktop 流的操作，以及如何将变量从云端传递到桌面应用程序。
 
 ### 运行使用 Power Automate for desktop 操作构建的流
 
@@ -5832,61 +5655,65 @@ Power Automate Desktop 还可以启动各种脚本，包括 DOS、VBS、Java、P
 
 ## 第 18 章
 
-一旦激活了脚本操作，你就可以输入自己的代码，甚至可以使用 Copilot 进行引导引导，如图 18.2 所示：
+一旦激活了脚本操作，你就可以输入自己的代码，甚至可以使用 Copilot 进行引导指引，如图 18.2 所示：
 
-图 18.2 – 使用 Copilot 生成脚本（等待，图像引用为 img/bfc58bb450784476738fab1c5bfe829d_355_0.png，但我将按照指令保留文本）。
+
+
+# 第 18 章
+
+## 使用 Copilot 生成脚本
+
+图 18.2 – 使用 Copilot 生成脚本
 
 显然，你将对 Copilot（或任何其他 AI 助手）生成的任何脚本进行测试，但它确实可以节省时间！
 
 ### Power Automate 录制器
 
-Power Automate 录制器是一个强大的工具，允许你捕捉作为用户执行的步骤，它是了解 Power Automate Desktop 环境某些功能的绝佳方法。
+`Power Automate` 录制器是一个强大的工具，允许你捕捉作为用户执行的步骤，它是了解 `Power Automate Desktop` 环境某些功能的绝佳方法。
 
-如果你以前在 Microsoft Excel 中录制过宏，你就会对 Power Automate 录制过程的工作原理有一个大致了解。Power Automate 会记录诸如启动应用程序、选择对话框或界面、输入文本等行为。录制过程完成后，你将得到一个操作列表，你可以编辑这些操作以完善你的最终输出。
+如果你以前在 `Microsoft Excel` 中录制过宏，你就会对 `Power Automate` 录制过程的工作原理有一个大致了解。`Power Automate` 会记录诸如启动应用程序、选择对话框或界面、输入文本等行为。录制过程完成后，你将得到一个操作列表，你可以编辑这些操作以完善你的最终输出。
 
 现在你已经了解了我们将使用的内容，让我们进入配置先决条件的阶段。
 
 ### 配置先决条件
 
-如前所述，此流将需要一些软件先决条件——即 Power Automate Desktop 应用程序、支持的浏览器组件以及数据网关应用程序。
+如前所述，此流将需要一些软件先决条件——即 `Power Automate Desktop` 应用程序、支持的浏览器组件以及数据网关应用程序。
 
-虽然可以在主计算机上完成这些步骤，但我们建议使用第二台计算机（或虚拟机）来配置先决条件并运行流。Power Automate Desktop 会自动化鼠标和键盘输入，如果你尝试从执行操作的同一台计算机上触发流，可能会遇到困难和意外错误。
+虽然可以在主计算机上完成这些步骤，但我们建议使用第二台计算机（或虚拟机）来配置先决条件并运行流。`Power Automate Desktop` 会自动化鼠标和键盘输入，如果你尝试从执行操作的同一台计算机上触发流，可能会遇到困难和意外错误。
 
-如果你没有第二台计算机，可以启动一个免费的 Azure 试用订阅（https://portal.azure.com）并配置虚拟机。或者，你可以从你有权的另一个设备（如手机或平板电脑）触发流。
+如果你没有第二台计算机，可以启动一个免费的 `Azure` 试用订阅（`https://portal.azure.com`）并配置虚拟机。或者，你可以从你有权的另一个设备（如手机或平板电脑）触发流。
 
-让我们开始！
+让我们开始吧！
 
 ### 配置 Power Automate Desktop
 
-Windows 11 已经包含了 Power Automate Desktop，这就是我们在练习中将使用的版本。不过，你可以从 https://go.microsoft.com/fwlink/?linkid=2137322 或 Power Automate 制作网页门户免费下载并在 Windows 10 上安装 Power Automate Desktop，如图 18.3 所示。
-
-## 第 18 章
+`Windows 11` 已经包含了 `Power Automate Desktop`，这就是我们在练习中将使用的版本。不过，你可以从 `https://go.microsoft.com/fwlink/?linkid=2137322` 或 `Power Automate` 制作网页门户免费下载并在 `Windows 10` 上安装 `Power Automate Desktop`，如图 18.3 所示。
 
 图 18.3 - 下载 Power Automate Desktop
 
-在配置时，可能会出现 Power Automate 网页门户无法识别 Power Automate Desktop 的情况；安装原生 Windows 版网关。
+在配置时，可能会出现 `Power Automate` 网页门户无法识别 `Power Automate Desktop` 的情况；安装原生 `Windows` 版网关。
 
 ### 配置微软数据网关
 
-网关的功能允许内部网络设备与 Power Platform 服务（如 Power Apps 和 Power Automate）通信。
+网关的功能允许内部网络设备与 `Power Platform` 服务（如 `Power Apps` 和 `Power Automate`）通信。
 
 ### 机器人流程自动化
 
-如果你在现有的 Microsoft 365 环境中工作，可能需要权限才能配置网关。如果你使用的是自己的设备，可以按照以下步骤操作：
+如果你在现有的 `Microsoft 365` 环境中工作，可能需要权限才能配置网关。如果你使用的是自己的设备，可以按照以下步骤操作：
 
-- 在要安装的设备上，导航到 Power Automate 网页门户（https://make.powerautomate.com）。
-- 滚动到页面底部，选择下载下的“网关”。如果链接未出现，也可以访问 https://go.microsoft.com/fwlink/?2116849。
+- 在要安装的设备上，导航到 `Power Automate` 网页门户（`https://make.powerautomate.com`）。
+- 滚动到页面底部，选择下载下的“网关”。如果链接未出现，也可以访问 `https://go.microsoft.com/fwlink/?2116849`。
 - 同意使用条款，然后点击“安装”。
 
 图 18.4 - 下载本地网关
 
-- 软件安装后，输入你的 Microsoft 365 凭据以开始向租户注册网关。点击“登录”开始过程。
+- 软件安装后，输入你的 `Microsoft 365` 凭据以开始向租户注册网关。点击“登录”开始过程。
 - 完成现代身份验证对话框。
 - 选择“在此计算机上注册新网关”选项并点击“下一步”。
 
 图 18.5 - 安装网关
 
-- 为“新的本地数据网关名称”输入值。你可以使用任何喜欢的名称，不必是计算机名称。这是你在 Power Automate 网页门户中配置访问本地服务的流时显示的名称。
+- 为“新的本地数据网关名称”输入值。你可以使用任何喜欢的名称，不必是计算机名称。这是你在 `Power Automate` 网页门户中配置访问本地服务的流时显示的名称。
 - 为“恢复密钥”输入值。当你需要恢复或重新配置网关时，需要该恢复密钥。在“确认恢复密钥”框中输入相同的值并点击“配置”。
 
 图 18.6 – 配置网关设置
@@ -5895,16 +5722,7 @@ Windows 11 已经包含了 Power Automate Desktop，这就是我们在练习中�
 
 图 18.8 – 配置网关设置
 
-
-
-
-第 18 章
-
-333
-
-### 9. 确认设置。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_361_0.png)
+9. 确认设置。
 
 图 18.9 – 确认数据网关设置
 
@@ -5916,44 +5734,36 @@ Windows 11 已经包含了 Power Automate Desktop，这就是我们在练习中�
 
 ### 配置浏览器扩展
 
-最后一步是确保安装了 Selenium 浏览器扩展。此软件可用于多种自动化平台，帮助进行基于浏览器的测试和操作。按照以下步骤操作：
+最后一步是确保安装了 `Selenium` 浏览器扩展。此软件可用于多种自动化平台，帮助进行基于浏览器的测试和操作。按照以下步骤操作：
 
-- 1. 打开您的浏览器（Chrome 或 Edge）。
-- 2. 选择您想要使用的浏览器配置。
-- 3. 点击浏览器扩展图标进入浏览器的扩展商店。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_362_0.png)
+1. 打开您的浏览器（`Chrome` 或 `Edge`）。
+2. 选择您想要使用的浏览器配置。
+3. 点击浏览器扩展图标进入浏览器的扩展商店。
 
 图 18.10 - 启动浏览器扩展商店
 
-## 第 18 章
-
-### 4. 搜索 Selenium。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_363_0.png)
+4. 搜索 `Selenium`。
 
 图 18.11 – 搜索 Selenium 扩展
 
-- 5. 选择一个可用的扩展。
-- 6. 根据您的浏览器，点击“获取”或“添加至 Chrome”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_363_1.png)
+5. 选择一个可用的扩展。
+6. 根据您的浏览器，点击“获取”或“添加至 Chrome”。
 
 图 18.12 – 安装扩展
 
-7. **点击添加扩展程序**以确认安装。
+7. 点击**添加扩展程序**以确认安装。
 
-您可能需要为每个想要自动化的浏览器重复安装扩展程序（尽管在接下来的章节中，我们将重点关注 Microsoft Edge）。
+您可能需要为每个想要自动化的浏览器重复安装扩展程序（尽管在接下来的章节中，我们将重点关注 `Microsoft Edge`）。
 
 ### 总结
 
 RPA 有助于简化以前不适用于自动化的旧应用程序的操作。这对于依赖于不具备网络感知能力或使用无法在互联网上路由的旧通信协议的老应用程序的企业来说，非常有益。
 
-在下一章中，我们将开始使用 RPA 和 Power Automate Desktop 应用来处理本地数据库应用程序。
+在下一章中，我们将开始使用 RPA 和 `Power Automate Desktop` 应用来处理本地数据库应用程序。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_364_0.png)
+---
 
-## 19
+# 第 19 章
 
 ## 使用 RPA 向 Access 数据库写入数据
 
@@ -5961,7 +5771,7 @@ RPA 有助于简化以前不适用于自动化的旧应用程序的操作。这�
 
 但还有什么比实际操作更能理解它的方式呢？
 
-为了实现这一点，我们将从 Microsoft Forms 调查中获取输入。在第 14 章“使用 Microsoft Forms”中，您获取了用户提交的数据并将其插入 SQL 数据库。在本章中，我们将获取这些 Forms 数据并使用桌面流将其输入 Microsoft Access 数据库。
+为了实现这一点，我们将从 `Microsoft Forms` 调查中获取输入。在第 14 章“使用 Microsoft Forms”中，您获取了用户提交的数据并将其插入 `SQL` 数据库。在本章中，我们将获取这些 `Forms` 数据并使用桌面流将其输入 `Microsoft Access` 数据库。
 
 本章中将涵盖的主题如下：
 
@@ -5970,25 +5780,25 @@ RPA 有助于简化以前不适用于自动化的旧应用程序的操作。这�
 - 测试流
 - 验证流
 
-在本章结束时，您应该对 Power Automate Desktop 环境的一些功能有所了解。
+在本章结束时，您应该对 `Power Automate Desktop` 环境的一些功能有所了解。
 
 让我们开始吧！
 
 ### 技术要求
 
-除了 Power Automate 许可外，本章将使用以下软件和应用程序：
+除了 `Power Automate` 许可外，本章将使用以下软件和应用程序：
 
-- Power Automate Desktop
-- Microsoft Access
-- Microsoft 数据网关
+- `Power Automate Desktop`
+- `Microsoft Access`
+- `Microsoft` 数据网关
 
-在本章中，我们将使用 Windows 11 自带的 Power Automate Desktop 版本。Power Automate Desktop 也可以作为 Windows 10 的免费下载，我们在上一章中介绍过（您也可以点击此处下载：https://go.microsoft.com/fwlink/?linkid=21373222）。
+在本章中，我们将使用 `Windows 11` 自带的 `Power Automate Desktop` 版本。`Power Automate Desktop` 也可以作为 `Windows 10` 的免费下载，我们在上一章中介绍过（您也可以点击此处下载：`https://go.microsoft.com/fwlink/?linkid=21373222`）。
 
-Microsoft Access 可以作为独立应用程序或套件的一部分提供，例如 Microsoft 365 商业（以前称为 Microsoft Office 365 ProPlus）或 Microsoft Office 2019 和 Microsoft Office 2024。如果您有 Microsoft 365 租，可以从落地页下载 Microsoft 365 Apps 的评估版。
+`Microsoft Access` 可以作为独立应用程序或套件的一部分提供，例如 `Microsoft 365` 商业（以前称为 `Microsoft Office 365 ProPlus`）或 `Microsoft Office 2019` 和 `Microsoft Office 2024`。如果您有 `Microsoft 365` 租，可以从落地页下载 `Microsoft 365 Apps` 的评估版。
 
-Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automate Web 门户内免费获取。上一章提供了安装的步骤说明，如果您错过了，请回翻几页。
+`Microsoft` 数据网关像 `Power Automate Desktop` 一样，可以在 `Power Automate Web` 门户内免费获取。上一章提供了安装的步骤说明，如果您错过了，请回翻几页。
 
-提醒一下，您需要 Power Automate 每用户计划和**无人值 RPA 加项**。
+提醒一下，您需要 `Power Automate` 每用户计划和**无人值 RPA 加项**。
 
 ### 配置先决条件
 
@@ -5996,206 +5806,161 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 ### 配置 Power Automate 机器组
 
-除了数据网关外，Power Automate 还可以使用**机器**和**机器组**。机器和机器组是将多台机器（或机器人）聚合在一起的方式，以便您的流运行得更可靠且扩展性更好。
+除了数据网关外，`Power Automate` 还可以使用**机器**和**机器组**。机器和机器组是将多台机器（或机器人）聚合在一起的方式，以便您的流运行得更可靠且扩展性更好。
 
-机器组是注册到 Power Automate 的单个机器（物理计算机或虚拟机）的逻辑分组。分配给机器组的桌面流会进入队列，当组中的某台机器空闲时，它就会获取下一个作业。这种方法有助于分配负载、避免瓶颈并提高无人值自动化的吞吐量。
+机器组是注册到 `Power Automate` 的单个机器（物理计算机或虚拟机）的逻辑分组。分配给机器组的桌面流会进入队列，当组中的某台机器空闲时，它就会获取下一个作业。这种方法有助于分配负载、避免瓶颈并提高无人值自动化的吞吐量。
 
 要设置基础机器，请遵循以下步骤：
 
-## 第 18 章
-
-## 19
-
-## 333
-
-![](img/bfc58bb450784476738fab1c5bfe829d_367_0.png)
-
 图 19.1 – 创建机器
 
-- 1. 导航到 Power Automate Web 门户 (make.powerautomate.com) 并选择“机器”。
-- 2. 点击“新建”并选择“机器”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_367_1.png)
+1. 导航到 `Power Automate Web` 门户 (`make.powerautomate.com`) 并选择“机器”。
+2. 点击“新建”并选择“机器”。
 
 图 19.2 – 创建机器
 
-- 3. 如果您已经部署了 Power Automate（您应该已经有了），现在启动它。否则，请获取最新版本。
-- 4. 如果提示，请启动 Power Automate。
-- 5. 选择您想要注册的环境。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_368_0.png)
+3. 如果您已经部署了 `Power Automate`（您应该已经有了），现在启动它。否则，请获取最新版本。
+4. 如果提示，请启动 `Power Automate`。
+5. 选择您想要注册的环境。
 
 图 19.3 – 注册机器
 
-- 6. 连接成功后，Power Automate 运行时将显示注册详细信息。
+6. 连接成功后，`Power Automate` 运行时将显示注册详细信息。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_368_1.png)
-
-- 7. 关闭应用程序。
+7. 关闭应用程序。
 
 接下来，我们将配置要使用的数据库。
 
 ### 配置数据库
 
-在本章中，我们将使用 Microsoft 包含的默认联系人模板。要配置数据库，请遵循以下步骤：
+在本章中，我们将使用 `Microsoft` 包含的默认联系人模板。要配置数据库，请遵循以下步骤：
 
-- 1. 启动 Microsoft Access。
-- 2. 在“首页”选项卡上，展开“新建”并选择“联系人”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_369_0.png)
+1. 启动 `Microsoft Access`。
+2. 在“首页”选项卡上，展开“新建”并选择“联系人”。
 
 图 19.4 – 创建数据库
 
-- 3. 接受默认设置并点击“创建”。
-- 4. 如果看到标记为“安全警告”的金色条，点击**启用内容**。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_369_1.png)
+3. 接受默认设置并点击“创建”。
+4. 如果看到标记为“安全警告”的金色条，点击**启用内容**。
 
 图 19.5 – 创建数据库
 
-- 5. 观察并熟悉数据库。您会注意到数据库有几个关键区域，包括表（联系人）和设置，以及表单（详细信息、联系人列表和欢迎）。
+5. 观察并熟悉数据库。您会注意到数据库有几个关键区域，包括表（联系人）和设置，以及表单（详细信息、联系人列表和欢迎）。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_370_0.png)
-
-- 6. 我们在本章中处理“联系人列表”表单。点击此页面上的“新建联系人”按钮将打开图 19.7 所示的详细信息表单，我们将在此插入之后获取的 Microsoft Forms 数据。
-
-- 7. 点击 X 图标关闭详细信息表单。如果弹出图 19.8 所示的“打开数据库时显示欢迎”复选框，您需要关闭并重新打开数据库以清除它，因为它会干扰自动化。
-
-- 8. 完成后，退出 Microsoft Access 应用程序。
+6. 我们在本章中处理“联系人列表”表单。点击此页面上的“新建联系人”按钮将打开图 19.7 所示的详细信息表单，我们将在此插入之后获取的 `Microsoft Forms` 数据。
+7. 点击 `X` 图标关闭详细信息表单。如果弹出图 19.8 所示的“打开数据库时显示欢迎”复选框，您需要关闭并重新打开数据库以清除它，因为它会干扰自动化。
+8. 完成后，退出 `Microsoft Access` 应用程序。
 
 核心前提准备完成后，让我们开始创建流！
 
 ### 配置流
 
-为了简单起见，我们将重用在第 14 章“使用 Microsoft Forms”中创建的现有 Microsoft Forms 表单。如果需要，您可以创建一个新的，但您可能需要根据您的表单修改示例中的步骤。
+为了简单起见，我们将重用在第 14 章“使用 Microsoft Forms”中创建的现有 `Microsoft Forms` 表单。如果需要，您可以创建一个新的，但您可能需要根据您的表单修改示例中的步骤。
 
 由于这是一个更复杂且涉及较大的流，此过程将分解为若干较小的部分。
 
 ### 配置流触发器
 
-在本节中，我们将配置一个新流来调用启动 Power Automate Desktop 的操作。我们还将设置变量。
-
-
-
-
-
-## 第 19 章
-## 345
+在本节中，我们将配置一个新流来调用启动 `Power Automate Desktop` 的操作。我们还将设置变量。
 
 要开始，请按照以下步骤操作：
 
-- 1. 在配置了 Microsoft Access 和 Power Automate Desktop 的计算机上，确保已用 Microsoft Access 打开了“联系人”（Contact）数据库。
-- 2. 点击“创建”，然后选择“自动化云流”。输入流名称，例如“将联系人 Access 数据库”。
-- 3. 选择“提交新响应”Microsoft Forms 触发器，并点击“创建”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_373_0.png)
+1. 在配置了 `Microsoft Access` 和 `Power Automate Desktop` 的计算机上，确保已用 `Microsoft Access` 打开了“联系人”（`Contact`）数据库。
+2. 点击“创建”，然后选择“自动化云流”。输入流名称，例如“将联系人 Access 数据库”。
+3. 选择“提交新响应”`Microsoft Forms` 触发器，并点击“创建”。
 
 图 19.9 - 添加新流
 
-- 4. 在“提交新响应”触发器中，选择与第 14 章“使用 Microsoft Forms”中的“客户数据采集”（Customer Data Intake）表单对应的表单 ID。
-- 5. 添加操作。
-- 6. 选择“获取响应详情”Microsoft Forms 操作。
-- 7. 选择你在“提交新响应”触发器中选择的表单（或表单 ID）。在“响应 ID”（Response ID）字段中，添加“响应 Id”动态内容值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_373_1.png)
+4. 在“提交新响应”触发器中，选择与第 14 章“使用 Microsoft Forms”中的“客户数据采集”（`Customer Data Intake`）表单对应的表单 ID。
+5. 添加操作。
+6. 选择“获取响应详情”`Microsoft Forms` 操作。
+7. 选择你在“提交新响应”触发器中选择的表单（或表单 ID）。在“响应 ID”（`Response ID`）字段中，添加“响应 Id”动态内容值。
 
 图 19.10 - 添加“获取响应详情”操作
 
 添加操作，然后选择“运行使用 Power Automate Desktop 构建的流”操作，如图 19.11 所示：
 
-![](img/bfc58bb450784476738fab1c5bfe829d_374_0.png)
+填充操作的属性。在“连接名称”（`Connection name`）下，添加一个名称，例如“`Power Automate Desktop`”。
 
-填充操作的属性。在“连接名称”（Connection name）下，添加一个名称，例如“Power Automate Desktop”。
+在“连接”（`Connection`）下，指定“使用用户名和密码连接”。或者，如果你将坐在桌面前并登录设备，可以指定“使用登录连接 - 交互式”（`Connect with sign in – Attended`）。
 
-在“连接”（Connection）下，指定“使用用户名和密码连接”。或者，如果你将坐在桌面前并登录设备，可以指定“使用登录连接 - 交互式”（Connect with sign in – Attended）。
+在“机器或机器组”（`Machine or machine group`）下，选择你的新机器。
 
-在“机器或机器组”（Machine or machine group）下，选择你的新机器。
+最后，输入你登录机器的凭据（使用 `DOMAIN\username` 或 `MACHINE\username`）。完成后，点击“创建新的”。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_374_1.png)
+在创建连接对象后，该操作将更新。在“桌面流”（`Desktop flow`）下，选择“创建新桌面”选项。流更新后，将“运行模式”（`Run mode`）更新为“非交互式”（`Unattended`，在未注销的机器上运行）。
 
-最后，输入你登录机器的凭据（使用 DOMAIN\username 或 MACHINE\username）。完成后，点击“创建新的”。
-
-在创建连接对象后，该操作将更新。在“桌面流”（Desktop flow）下，选择“创建新桌面”选项。流更新后，将“运行模式”（Run mode）更新为“非交互式”（Unattended，在未注销的机器上运行）。
-
-## 第 19 章
-- 15. 在“桌面流”下，选择“创建新桌面流”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_375_0.png)
+15. 在“桌面流”下，选择“创建新桌面流”。
 
 图 19.13 – 创建新的桌面流
 
-- 16. 在“生成桌面流”弹出框中，输入新的流名称（例如“添加到联系人数据库（桌面端）”），并点击“启动应用”。
-- 17. 如果出现提示，点击“打开”允许网站链接到本地应用程序。
-- 18. 如果出现提示，提供凭据以允许 Power Automate Desktop 应用连接到你的环境。默认情况下，你将连接到 Microsoft 365 租户的默认环境。
-- 19. 点击屏幕右侧的 [x] 图标打开“变量”面板。
-- 20. 在“变量”面板中，在“输入/输出变量”下，点击 + 图标，然后选择“输入”以添加输入变量。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_375_1.png)
+16. 在“生成桌面流”弹出框中，输入新的流名称（例如“添加到联系人数据库（桌面端）”），并点击“启动应用”。
+17. 如果出现提示，点击“打开”允许网站链接到本地应用程序。
+18. 如果出现提示，提供凭据以允许 `Power Automate Desktop` 应用连接到你的环境。默认情况下，你将连接到 `Microsoft 365` 租户的默认环境。
+19. 点击屏幕右侧的 `[x]` 图标打开“变量”面板。
+20. 在“变量”面板中，在“输入/输出变量”下，点击 `+` 图标，然后选择“输入”以添加输入变量。
 
 图 19.14 – 添加变量
 
-- 21. 填写“新输入变量”。完成的示例请参阅图 19.15。
+21. 填写“新输入变量”。完成的示例请参阅图 19.15。
 
-> 注意：“变量名称”（Variable name）和“外部名称”（External name）均指的是你给特定变量起的名称。“变量名称”是你在 Power Automate Desktop 中工作时使用的变量属性。“外部名称”属性将显示在 Power Automate 云端服务中。
+> 注意：“变量名称”（`Variable name`）和“外部名称”（`External name`）均指的是你给特定变量起的名称。“变量名称”是你在 `Power Automate Desktop` 中工作时使用的变量属性。“外部名称”属性将显示在 `Power Automate` 云端服务中。
 
 - 变量类型：输入
-- 变量名称：varFormCompanyName
+- 变量名称：`varFormCompanyName`
 - 数据类型：文本（以前为字符串）
-- 默认值：<空>
-- 外部名称：varDesktopCompanyName
-- 描述：<空>
-- 标记为敏感：<否>
-- 标记为可选：<否>
-
-![](img/bfc58bb450784476738fab1c5bfe829d_376_0.png)
+- 默认值：`<空>`
+- 外部名称：`varDesktopCompanyName`
+- 描述：`<空>`
+- 标记为敏感：`<否>`
+- 标记为可选：`<否>`
 
 图 19.15 - 填写变量参数
 
-## 第 19 章
-## 349
-- 22. Microsoft Forms 应该有六个数据字段（CompanyName、FirstName、LastName、JobTitle、Mail 和 TelephoneNumber）。对剩余的每个变量重复步骤 13 和 14。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_377_0.png)
+22. `Microsoft Forms` 应该有六个数据字段（`CompanyName`、`FirstName`、`LastName`、`JobTitle`、`Mail` 和 `TelephoneNumber`）。对剩余的每个变量重复步骤 13 和 14。
 
 图 19.16 - 配置完成的变量
 
-- 23. 点击“文件 | 保存”以保存你的进度。
+23. 点击“文件 | 保存”以保存你的进度。
 
-接下来，我们将使用 Power Automate 运行输入数据的步骤。
+接下来，我们将使用 `Power Automate` 运行输入数据的步骤。
 
 ### 配置打开一个应用程序
 
-为了确保成功，建议从运行 Microsoft Access 应用程序的系统操作开始。按照以下步骤操作以配置该操作：
+为了确保成功，建议从运行 `Microsoft Access` 应用程序的系统操作开始。按照以下步骤操作以配置该操作：
 
-- 1. 在打开 Power Automate 设计器的情况下，在“操作”面板中搜索“运行”。
-- 2. 选择“运行应用程序”并将其拖到“主主体”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_377_1.png)
+1. 在打开 `Power Automate` 设计器的情况下，在“操作”面板中搜索“运行”。
+2. 选择“运行应用程序”并将其拖到“主主体”。
 
 图 19.17 - 添加“运行”操作
 
-- 3. 在**应用程序路径**（Application path）框中，点击文件图标浏览到 Microsoft Access 可执行文件的位置，例如 C:\Program Files\Microsoft Office\root\16\MSACCESS.EXE。
+
+
+3. 在**应用程序路径**（Application path）框中，点击文件图标浏览到 Microsoft Access 可执行文件的位置，例如 `C:\Program Files\Microsoft Office\root\16\MSACCESS.EXE`。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_378_0.png)
 
 图 19.18 - 添加 Microsoft Access 路径
 
-- 4. 在**命令行参数**（Command line arguments）框中，添加联系人数据库的路径。你可以使用**资源管理器**导航到文件夹，右键点击数据库文件，并选择**复制为路径**。
+4. 在**命令行参数**（Command line arguments）框中，添加联系人数据库的路径。你可以使用**资源管理器**导航到文件夹，右键点击数据库文件，并选择**复制为路径**。
 
 ## 第 19 章
+
 ## 351
+
 ![](img/bfc58bb450784476738fab1c5bfe829d_379_0.png)
 
 图 19.19 - 复制数据库的路径
 
-- 5. 将该值粘贴到**命令行参数**框中，如图 19.20 所示：
+5. 将该值粘贴到**命令行参数**框中，如图 19.20 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_379_1.png)
 
 图 19.20 - 将数据库路径作为参数添加
 
-- 6. 在“窗口样式”（Window style）下，选择“最大化”（Maximized）。
-- 7. 点击“保存”保存该步骤。
+6. 在“窗口样式”（Window style）下，选择“最大化”（Maximized）。
+
+7. 点击“保存”保存该步骤。
 
 此时，你已经配置了桌面流来启动 Microsoft Access 并打开正确的数据库文件。
 
@@ -6203,25 +5968,29 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 现在，我们准备好开始捕捉构成流的基本动作。让我们开始吧！
 
-- 1. 确保桌面上没有显示不必要的桌面应用程序。你可以退出或最小化它们，以免它们干扰录制。
+1. 确保桌面上没有显示不必要的桌面应用程序。你可以退出或最小化它们，以免它们干扰录制。
 
 > 注意：不要关闭已打开 Power Automate 的浏览器窗口。我们稍后的步骤中会返回那里，所以我们要确保一切准备就绪。
 
-- 2. 在 Power Automate 应用打开的情况下，点击菜单栏上的“录制”启动录制器。
+2. 在 Power Automate 应用打开的情况下，点击菜单栏上的“录制”启动录制器。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_380_0.png)
 
 图 19.21 - 启动 Power Automate 录制器
 
-- 3. 确保联系人数据库已最大化，并关闭所有其他窗口（浏览器和 Power Automate 应用），以防止弹出窗口占用焦点。
-- 4. 点击应用中的录制按钮。从此时点起，Power Automate 录制器将捕捉你在桌面上执行的每项活动。
+3. 确保联系人数据库已最大化，并关闭所有其他窗口（浏览器和 Power Automate 应用），以防止弹出窗口占用焦点。
+
+4. 点击应用中的录制按钮。从此时点起，Power Automate 录制器将捕捉你在桌面上执行的每项活动。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_381_0.png)
 
-- 5. 点击“下一步”，然后点击“录制”开始录制。
-- 6. 移动录制器以防遮挡。
-- 7. 点击“新联系人”按钮。
-- 8. 为名、姓、公司、职位、电子邮件和电话电话字段添加占位数据。点击选择每个字段。
+5. 点击“下一步”，然后点击“录制”开始录制。
+
+6. 移动录制器以防遮挡。
+
+7. 点击“新联系人”按钮。
+
+8. 为名、姓、公司、职位、电子邮件和电话字段添加占位数据。点击选择每个字段。
 
 > 注意：每次按键都会被录制，因此请谨慎输入。你只需要占位信息，因为我们将编辑步骤并将文本替换为变量。速度要慢一点，以便录制器捕捉你的点击操作。注意当你悬停并选择字段时周围的红色高亮。这是录制器捕捉的关键数据。
 
@@ -6229,48 +5998,49 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 图 19.23 - 向联系人条目添加数据
 
-- 9. 在联系人详情页面点击“关闭”。
-- 10. 点击“关闭”退出 Microsoft Access。
-- 11. 在 Power Automate 录制器上点击“完成”。
+9. 在联系人详情页面点击“关闭”。
+
+10. 点击“关闭”退出 Microsoft Access。
+
+11. 在 Power Automate 录制器上点击“完成”。
 
 ## 第 19 章
+
 ## 355
-你应该返回到了 Power Automate Desktop 设计界面。主窗口显示了你在编辑表单时执行的所有操作。仔细检查列出的操作。如果你发现任何位置不当或以任何方式会干扰流自动化运行的操作（例如关闭另一个应用程序、移动窗口或点击无关字段），可以选择该操作并按键盘上的 Delete 键删除，或展开省略号并点击删除。
+
+你应该返回到了 Power Automate Desktop 设计界面。主窗口显示了你在编辑表单时执行的所有操作。仔细检查列出的操作。如果你发现任何位置不当或以任何方式会干扰流自动化运行的操作（例如关闭另一个应用程序、移动窗口或点击无关字段），可以选择该操作并按键盘上的 `Delete` 键删除，或展开省略号并点击删除。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_383_0.png)
 
 图 19.24 - 检查操作
 
-- 12. 删除错误项后，梳理最终步骤集，以确保它们逻辑合理且所有步骤都已在内。如果不小心删除了或更改了步骤顺序，可以按 Ctrl + Z 撤销。你可以通过拖放来重新排序步骤，并复制粘贴步骤。
-
-
-
+12. 删除错误项后，梳理最终步骤集，以确保它们逻辑合理且所有步骤都已在内。如果不小心删除了或更改了步骤顺序，可以按 `Ctrl + Z` 撤销。你可以通过拖放来重新排序步骤，并复制粘贴步骤。
 
 356
 
 ### 更新变量
 
-当你检查这些步骤时，应该已经看到了你所选择并输入占位符文本的文本框（例如 First Name）。在本节中，我们将介绍将占位符文本替换为你在“配置流”部分创建的输入变量的过程：
+当你检查这些步骤时，应该已经看到了你所选择并输入占位符文本的文本框（例如 `First Name`）。在本节中，我们将介绍将占位符文本替换为你在“配置流”部分创建的输入变量的过程：
 
-- 1. 找到 `Send keys`（发送按键）操作的实例，它对应于录制过程中向“Contact Details”表单上的 `First Name` 字段输入占位符文本值。
+1. 找到 `Send keys`（发送按键）操作的实例，它对应于录制过程中向“Contact Details”表单上的 `First Name` 字段输入占位符文本值。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_384_0.png)
 
-- 2. 双击该条目。
+2. 双击该条目。
 
-- 3. 在 `Send keys` 窗口中，选择占位符文本（在本例中值为 `firstname`）。
+3. 在 `Send keys` 窗口中，选择占位符文本（在本例中值为 `firstname`）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_385_0.png)
 
-图 19.26 – 编辑 Send keys 数据
+图 19.26 – 编辑 `Send keys` 数据
 
-- 4. 在 `Text to send`（要发送的文本）文本框的右上角，选择变量图标，图标由 `{x}` 表示）。
+4. 在 `Text to send`（要发送的文本）文本框的右上角，选择变量图标，图标由 `{x}` 表示）。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_386_0.png)
 
-- 5. 从显示的输入变量列表中，选择代表 `First Name` 值的变量。在这种情况下，变量名为 `varFormFirstName`。双击变量或点击 `Select`（选择）以确认你的选择。
+5. 从显示的输入变量列表中，选择代表 `First Name` 值的变量。在这种情况下，变量名为 `varFormFirstName`。双击变量或点击 `Select`（选择）以确认你的选择。
 
-- 6. 验证 `Text to send` 框中的数据已更新为 `%varFormFirstName%`，如图 19.28 所示：
+6. 验证 `Text to send` 框中的数据已更新为 `%varFormFirstName%`，如图 19.28 所示：
 
 ### Send keys
 
@@ -6282,20 +6052,20 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 | :--- | :--- |
 | Send keys to: | |
 | Text to send: | |
-| Input as text, variable or expression (作为文本、变量或表达式输入) | %varFormFirstName% |
+| Input as text, variable or expression (作为文本、变量或表达式输入) | `%varFormFirstName%` |
 | Delay between keystrokes (按键之间的延迟): | |
 | Send Text as hardware keys (作为硬件按键发送文本): | |
 | On error (出错时) | |
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_387_0.png)
 
-- 7. 点击 `Save`（保存）。
+7. 点击 `Save`（保存）。
 
-- 8. 对对应姓、公司、职位、电子邮件地址和电话号码的其余变量重复此系列步骤。
+8. 对对应姓、公司、职位、电子邮件地址和电话号码的其余变量重复此系列步骤。
 
-- 9. 在 Power Automate 设计器中点击 `Save`。
+9. 在 Power Automate 设计器中点击 `Save`。
 
-- 10. 退出 Power Automate 设计器。
+10. 退出 Power Automate 设计器。
 
 恭喜！你已经录制了一个流。现在，我们将返回 Power Automate Web 门户并完成该流。
 
@@ -6309,27 +6079,27 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 开始吧！
 
-- 1. 在浏览器中打开 `Add Connect to Access Database` 流后，等待流更新。如果它没有自动更新，点击 `Save`。来自桌面流的变量应该会被填充。参见图 19.29。
+1. 在浏览器中打开 `Add Connect to Access Database` 流后，等待流更新。如果它没有自动更新，点击 `Save`。来自桌面流的变量应该会被填充。参见图 19.29。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_388_0.png)
 
 图 19.29 - 编辑流以更新变量
 
-- 2. 从列出的第一个输入变量开始，点击文本框并选择来自 `Get response details` 操作中对应变量的动态内容。
+2. 从列出的第一个输入变量开始，点击文本框并选择来自 `Get response details` 操作中对应变量的动态内容。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_388_1.png)
 
 图 19.30 - 将动态内容链接到相应的桌面输入变量
 
-- 3. 为每个变量重复此过程。
+3. 为每个变量重复此过程。
 
 ## 第 19 章
 
 361
 
-- 4. 完成后点击 `Save`。
+4. 完成后点击 `Save`。
 
-- 5. 关闭浏览器窗口，并确保执行桌面流的机器上没有运行其他应用程序。
+5. 关闭浏览器窗口，并确保执行桌面流的机器上没有运行其他应用程序。
 
 你已经完成了桌面流的配置。现在，来测试它。
 
@@ -6339,32 +6109,32 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 按照以下步骤测试流：
 
-- 1. 在另一台计算机上，打开浏览器。
+1. 在另一台计算机上，打开浏览器。
 
-- 2. 导航到 Power Automate Maker Web 门户 (https://make.powerautomate.com)。
+2. 导航到 Power Automate Maker Web 门户 (`https://make.powerautomate.com`)。
 
-- 3. 点击 `My flows`（我的流），选择 `Add Contact to Access Database` 流并点击 `Edit`（编辑）。
+3. 点击 `My flows`（我的流），选择 `Add Contact to Access Database` 流并点击 `Edit`（编辑）。
 
-- 4. 点击 `Test`（测试）打开测试面板。
+4. 点击 `Test`（测试）打开测试面板。
 
-- 5. 选择 `Manually`（手动）单击按钮，然后点击 `Save & Test`（保存并测试）。
+5. 选择 `Manually`（手动）单击按钮，然后点击 `Save & Test`（保存并测试）。
 
-- 6. 打开另一个浏览器标签页并导航到 Microsoft Forms 门户 (https://forms.office.com)。选择 Customer Data Intake 表单
+6. 打开另一个浏览器标签页并导航到 Microsoft Forms 门户 (`https://forms.office.com`)。选择 Customer Data Intake 表单
 
-- 7. 在菜单栏上选择 `Preview`（预览）。
+7. 在菜单栏上选择 `Preview`（预览）。
 
-- 8. 使用唯一且于识别的测试数据填充表单，然后点击 `Submit`（提交）。
+8. 使用唯一且易于识别的测试数据填充表单，然后点击 `Submit`（提交）。
 
 此时，你可以切换回 Power Automate 浏览器窗口并查看步骤的输出。
 
 ### 验证流
 
-验证桌面流成功完成的最简单方法是实时观察桌面流的执行（取决于你选择了 Attended（受托管的）还是 Unattended（非托管的））。在执行过程中（如果你是受托管流），你应该能够看到以下操作发生：
+验证桌面流成功完成的最简单方法是实时观察桌面流的执行（取决于你选择了 `Attended`（受托管的）还是 `Unattended`（非托管的））。在执行过程中（如果你是受托管流），你应该能够看到以下操作发生：
 
 - Microsoft Access 应用程序启动并打开 Contacts 数据库
-- 点击 New（新建联系人）按钮
+- 点击 `New`（新建联系人）按钮
 - 在每个字段中输入文本
-- 点击 Close（关闭）按钮
+- 点击 `Close`（关闭）按钮
 - Microsoft Access 应用程序关闭
 
 你也可以自己打开 Contact 数据库来验证流，确认数据与你在 Customer Data Intake 表单中输入的内容匹配：
@@ -6379,10 +6149,6 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 图 19.32 – 非托管的错误
 
-391
-
-## 第 19 章
-
 如果你尝试观察非托管流，你可能会收到此错误：
 
 ![](img/bfc58bb4507844766738fab1c5fe829d_390_1.png)
@@ -6404,12 +6170,6 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 如果你尝试观察非托管流，你可能会收到此错误：
 
 ![](img/bfc58bb4507844766738fab1c5fe829d_390_1.png)
-
-图 19.32 – 非托管的错误
-
-如果你尝试观察非托管流，你可能会收到此错误：
-
-![](img/bfc58bb450784476638fab1c5fe829d_390_1.png)
 
 图 19.32 – 非托管的错误
 
@@ -6493,101 +6253,40 @@ Microsoft 数据网关像 Power Automate Desktop 一样，可以在 Power Automa
 
 Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）直接带入现代工作区。使用 Power Automate Desktop，你可以记录、编写并重放诸如点击、表单提交、导航和数据提取等浏览器操作。这使得执行基于网页的任务成为——从登录门户到收集报告或根据网站更改触发工作流。它是传统自动化与日益增长的网页交互需求之间的桥梁。
 
-通过本章的示例，你学习了如何将云流与桌面集成，为应用程序记录步骤并在环境之间传递变量——这些对你的需求非常有用。（等等，我在上面的草稿中提供了一些重复文本。让我根据你的指令提供一个干净的最终版本。）
+通过本章的示例，你学习了如何将云流与桌面集成，为应用程序记录步骤并在环境之间传递变量——这些对你的需求非常有用。
 
-[content]
-356
 
-### 更新变量
 
-当你检查这些步骤时，你应该已经看到了你所选择并输入占位符文本的文本框（例如 First Name）。在本节中，我们将介绍将占位符文本替换为你在“配置流”部分创建的输入变量的过程：
+# 使用 RPA 写入 Access 数据库
 
-- 1. 找到 `Send keys`（发送按键）操作的实例，它对应于录制过程中向“Contact Details”表单上的 `First Name` 字段输入占位符文本值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_384_0.png)
-
-- 2. 双击该条目。
-
-- 3. 在 `Send keys` 窗口中，选择占位符文本（在本例中值为 `firstname`）。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_385_0.png)
-
-图 19.26 – 编辑 Send keys 数据
-
-- 4. 在 `Text to send`（要发送的文本）文本框的右上角，选择变量图标，图标由 `{x}` 表示）。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_386_0.png)
-
-- 5. 从显示的输入变量列表中，选择代表 `First Name` 值的变量。在这种情况下，变量名为 `varFormFirstName`。双击变量或点击 `Select`（选择）以确认你的选择。
-
-- 6. 验证 `Text to send` 框中的数据已更新为 `%varFormFirstName%`，如图 19.28 所示：
-
-### Send keys
-
-向当前激活的应用程序发送按键更多信息
-
-### Select parameters
-
-| 字段 (Field) | 值 (Value) |
-| :--- | :--- |
-| Send keys to: | |
-| Text to send: | |
-| Input as text, variable or expression (作为文本、变量或表达式输入) | %varFormFirstName% |
-| Delay between keystrokes (按键之间的延迟): | |
-| Send Text as hardware keys (作为硬件按键发送文本): | |
-| On error (出错时) | |
-
-![](img/bfc58bb450784476738fab1c5bfe829d_387_0.png)
-
-- 7. 点击 `Save`（保存）。
-
-- 8. 对对应姓、公司、职位、电子邮件地址和电话号码的其余变量重复此系列步骤。
-
-- 9. 在 Power Automate 设计器中点击 `Save`。
-
-- 10. 退出 Power Automate 设计器。
-
-- 恭喜！你已经录制了一个流。现在，我们将返回 Power Automate Web 门户并完成该流。
-
-### 完成流
-
-现在你已经在桌面流中创建了所有的输入变量，现在是时候更新云流，将 Microsoft Forms 数据的动态内容令牌发送到相应的桌面流输入变量了。
-
-360
-
-使用 RPA 写入 Access 数据库
-
-- 1. 在浏览器中打开 `Add Connect to Access Database` 流后，等待流更新。如果它没有自动更新，点击 `Save`。来自桌面流的变量应该会被填充。参见图 19.29。
+1. 在浏览器中打开 `Add Connect to Access Database` 流后，等待流更新。如果它没有自动更新，点击 `Save`。来自桌面流的变量应该会被填充。参见图 19.29。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_388_0.png)
 
 图 19.29 - 编辑流以更新变量
 
-- 2. 从列出的第一个输入变量开始，点击文本框并选择来自 `Get response details` 操作中对应变量的动态内容。
+2. 从列出的第一个输入变量开始，点击文本框并选择来自 `Get response details` 操作中对应变量的动态内容。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_388_1.png)
 
 图 19.30 - 将动态内容链接到相应的桌面输入变量
 
-- 3. 为每个变量重复此过程。
+3. 为每个变量重复此过程。
 
-- 4. 完成后点击 `Save`。
+4. 完成后点击 `Save`。
 
-- 5. 关闭浏览器窗口，并确保执行桌面流的机器上没有运行其他应用程序。
+5. 关闭浏览器窗口，并确保执行桌面流的机器上没有运行其他应用程序。
 
 你已经完成了桌面流的配置。现在，来测试它。
-
-
-
 
 通过自动化这些浏览器任务，你可以节省时间、减少错误，并在现代和遗留环境中创建更具一致性的数字流程。
 
 你还可以构建一种浏览器交互，从网站上收集数据（这一过程被称为网页爬取）。有许多演示网站可以供你练习网页爬取技术，例如：
 
-- web-scraping.dev: https://web-scraping.dev
-- Web Scraper: https://webservices.io/test-sites
-- ToScrape: https://toscope.com
-- Scrape This Site: https://www.scrapethissite.com
+- `web-scraping.dev`: https://web-scraping.dev
+- `Web Scraper`: https://webservices.io/test-sites
+- `ToScrape`: https://toscope.com
+- `Scrape This Site`: https://www.scrapethissite.com
 
 你甚至可以在 Amazon、MSN 或 Yahoo! 等热门网站上进行学习。
 
@@ -6600,7 +6299,7 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 让我们开始吧！
 
-### 导航网页
+## 导航网页
 
 在构建向网页发送数据或从网页检索数据的流程之前，你将需要学习如何让机器人流程自动化（RPA）与浏览器交互的基础知识。
 
@@ -6612,6 +6311,7 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 4. 流程加载后，在“操作”窗格中，展开“浏览器自动化”，然后选择“启动新的 Microsoft Edge”。将其拖到“主画布”区域。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_395_0.png)
+
 图 20.1 - 添加“启动 Microsoft Edge”操作
 
 5. 在“启动新的 Microsoft Edge”屏幕上，点击“初始 URL”字段内部。输入一个网站网站地址，例如 https://www.yahoo.com。
@@ -6622,7 +6322,7 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 接下来，我们将查看如何从网页上爬取（收集）数据。
 
-### 爬取数据
+## 爬取数据
 
 爬取数据是一项用于广泛目的常见活动——特别是当无法通过 API 轻松获取结构化数据时。一些常见用途包括：
 
@@ -6637,18 +6337,19 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 在本节中，我们将使用 Edge 浏览器和录制器进行一些基础爬取操作。
 
-要开始爬取，我们需要一些示例数据。对于这个练习，我们将从本章之前列出的示例网站之一提取数据。我们要关注的页面包含电子商务商店中以表格格式排列的项目列表，如**图 20.2** 所示。
+要开始爬取，我们需要一些示例数据。对于这个练习，我们将从本章之前列出的示例网站之一提取数据。我们要关注的页面包含电子商务商店中以表格格式排列的项目列表，如图 20.2 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_396_0.png)
 
 完成页面后，我们将数据保存到 Excel 文件中。让我们开始吧！
 
 1. 启动一个新的 Microsoft Edge 浏览器会话并导航到 https://web-scraping.dev/products。
-2. 返回 Power Automate Desktop，并打开上一个练习中的示例流。它应该有一个操作——**启动新的 Microsoft Edge**。
-3. 双击**启动新的 Microsoft Edge**操作。将初始 URL 更新为 https://web-scraping.dev/products。
+2. 返回 Power Automate Desktop，并打开上一个练习中的示例流。它应该有一个操作——`启动新的 Microsoft Edge`。
+3. 双击 `启动新的 Microsoft Edge` 操作。将初始 URL 更新为 https://web-scraping.dev/products。
 4. 将“窗口状态”设置为“最大化”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_397_0.png)
+
 图 20.3 – 配置浏览器会话设置
 
 5. 点击“保存”。
@@ -6657,18 +6358,21 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 8. 在任务栏上，选择你已打开的 Edge 浏览器会话。你会注意到“实时网页助手”应用程序打开了并获取了焦点。该应用程序将在你移动页面上移动鼠标时，通过在每个元素周围放置红色边框，帮助你识别你想要爬取的字段。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_398_0.png)
-**图 20.4 – 使用网页助手突出显示内容**
 
-9. 悬停在产品名称上，例如 **Box of Chocolate Candy**，然后右键点击它。指向“提取**提取元素值**”，然后选择下一个项目“**文本**”（'Box of Chocolate...'），并点击它。该项目名称将用绿色虚线框突出显示。
+图 20.4 – 使用网页助手突出显示内容
+
+9. 悬停在产品名称上，例如 `Box of Chocolate Candy`，然后右键点击它。指向“提取提取元素值”，然后选择下一个项目`文本`（'Box of Chocolate...'），并点击它。该项目名称将用绿色虚线框突出显示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_398_1.png)
-**图 20.5 – 选择第一个元素**
 
-10. 重复该过程，选择该电子商务网站上的项目标题 **Dark Red Energy Potion**。注意其他相同类型的示例元素是如何被选中并显示在**提取预览**下的。网页助手应用程序已检测到模式，并将处理该数据。
-11. 再次重复该过程，这次突出显示巧克力盒的价格。右键点击价格，指向“提取元素值”并选择“**文本**（'$24.99'）。
+图 20.5 – 选择第一个元素
+
+10. 重复该过程，选择该电子商务网站上的项目标题 `Dark Red Energy Potion`。注意其他相同类型的示例元素是如何被选中并显示在提取预览下的。网页助手应用程序已检测到模式，并将处理该数据。
+11. 再次重复该过程，这次突出显示巧克力盒的价格。右键点击价格，指向“提取元素值”并选择`文本`（'$24.99'）。
 12. 再次悬停在项目标题（Box of Chocolate Candy）上，右键点击它，指向“提取元素值”并选择 Href（'https://web-scra...'）。注意实时网页助手中的所有值都已填充。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_399_0.png)
+
 图 20-6 - 添加项目的 URL
 
 13. 点击“完成”。
@@ -6691,18 +6395,19 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 3. 在实时网页助手上，点击“高级设置”按钮。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_400_0.png)
+
 图 20.7 – 启动高级设置
 
 4. 将“使用”切换置到“开启”。
 5. 点击“确定”。
-6. 在网页上，点击“下一页”按钮（在这个示例页面上，它是一个 > 符号）。右键点击它并选择“将元素作为分页器”。参见图 20.8。
+6. 在网页上，点击“下一页”按钮（在这个示例页面上，它是一个 `>` 符号）。右键点击它并选择“将元素作为分页器”。参见图 20.8。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_400_1.png)
+
 图 20.8 – 设置分页器
 
 7. 点击“完成”返回流。
 8. 在“从网页上提取数据”操作中，选择“提取数据从”下拉菜单并选择“可用”。
-
 9. 将“物理点击下一页”切换置到“开启”。
 10. 点击“保存”。
 11. 将“关闭浏览器”操作拖到流的末尾。
@@ -6725,13 +6430,10 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 7. 在“循环”操作页面上，将“从开始值”设置为 1，“结束值”设置为 1000000，然后将“增量值”设置为 1。参见图 20.10。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_402_0.png)
+
 图 20.10 - 添加循环操作
 
 8. 点击“保存”。
-
-
-
-
 
 # 第 20 章
 
@@ -6744,7 +6446,6 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 图 20.11 – 移动“从网页提取数据”操作
 
 10. 在“从网页提取数据”操作之后和“循环结束”操作之前，添加“如果网页包含”操作。
-
 11. 选择 UI 元素下拉列表。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_403_1.png)
@@ -6753,35 +6454,34 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 376 使用 RPA 实现网页自动化
 
-- 12. 点击“添加 UI 元素”以启动 UI 元素 拾取器。
-- 13. 切换到带有示例页面的网页浏览器。
-- 14. 按住键盘上的 Control 键，然后选择 > 符号（表示下一页）。这将被添加到“如果网页包含”操作的 UI 元素部分，如图 20.13 所示。
+12. 点击“添加 UI 元素”以启动 UI 元素拾取器。
+13. 切换到带有示例页面的网页浏览器。
+14. 按住键盘上的 Control 键，然后选择 `>` 符号（表示下一页）。这将被添加到“如果网页包含”操作的 UI 元素部分，如图 20.13 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_404_0.png)
 
 图 20.13 - 更新 UI 元素
 
-- 15. 点击铅笔图标编辑 UI 元素。
-- 16. 滚动到“锚点元素”并选择 Href 属性。
+15. 点击铅笔图标编辑 UI 元素。
+16. 滚动到“锚点元素”并选择 Href 属性。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_405_0.png)
 
 图 20.14 – 选择 Href 元素
 
-- 17. 将 Href 运算符设置为“包含”（Contains）。
-
-- 18. 将 Href 值更新为 =。点击保存。
+17. 将 Href 运算符设置为“包含”（Contains）。
+18. 将 Href 值更新为 `=`。点击保存。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_406_0.png)
 
 图 20.15 – 更新 HREF 元素
 
-- 19. 点击保存以关闭“如果网页包含”操作。
-- 20. 在“如果网页包含”操作之后立即添加“点击网页上的链接”操作。
-- 21. 在“点击网页上的链接”操作中，在 UI 元素下选择锚点元素。
-- 22. 点击保存。
-- 23. 在“点击网页上的链接”操作之后立即插入“否则”（Else）操作。
-- 24. 在“否则”操作之后立即插入“退出循环”操作。见图 20.16。
+19. 点击保存以关闭“如果网页包含”操作。
+20. 在“如果网页包含”操作之后立即添加“点击网页上的链接”操作。
+21. 在“点击网页上的链接”操作中，在 UI 元素下选择锚点元素。
+22. 点击保存。
+23. 在“点击网页上的链接”操作之后立即插入“否则”（Else）操作。
+24. 在“否则”操作之后立即插入“退出循环”操作。见图 20.16。
 
 25. 将“启动 Excel”操作作为第 2 步，放在 Microsoft Edge 和“循环”操作之间。将“实例可见”设置为“关闭”（Off）。点击保存。
 
@@ -6791,9 +6491,9 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 26. 在“循环”操作内部，在“从网页提取数据”操作之前立即添加“从 Excel 中获取第一列/第一行”操作。接受变量 FirstColumn 和 FirstRow 的默认值。
 27. 在“从网页提取数据”之后，添加“写入 Excel”操作。
-28. 在“要写入的值”字段中，添加 %DataFromWebPage%。
-29. 在“列”字段中，输入 A（代表第一列）。
-30. 在“行”字段中，添加 %FirstRow% 变量。见图 20.18。
+28. 在“要写入的值”字段中，添加 `%DataFromWebPage%`。
+29. 在“列”字段中，输入 `A`（代表第一列）。
+30. 在“行”字段中，添加 `%FirstRow%` 变量。见图 20.18。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_408_0.png)
 
@@ -6801,7 +6501,7 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 31. 将 Excel 操作拖到“关闭网页浏览器”操作之后。
 32. 在“关闭 Excel 之前”字段中，选择“另存为”（Save as）。
-33. 在“文档路径”中，输入工作站硬盘上的一个路径，例如 C:\Temp\Demo.xlsx。
+33. 在“文档路径”中，输入工作站硬盘上的一个路径，例如 `C:\Temp\Demo.xlsx`。
 34. 点击保存。
 35. 最后，将“停止”操作拖到流程的最末端。
 36. 点击保存图标保存浏览器自动化流。
@@ -6821,41 +6521,41 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 在此练习中，我们将把凭据存储在变量中，然后按照以下步骤登录网站：
 
-- 1. 在打开 Power Automate 流程的情况下，将“设置变量”操作拖到流程中第一步之前。
-- 2. 将变量名更新为 username，并将值更新为 user123。
-- 3. 点击保存。
-- 4. 在步骤 2 添加另一个“设置变量”操作，直接跟在第一个“设置变量”操作之后。
-- 5. 将变量名更新为 password，并将值更新为 password。
-- 6. 在“关闭网页浏览器”之前添加“转到网页”操作。
-- 7. 在“转到网页”操作上，将 URL 字段设置为 https://web-scraping.dev/login。
+1. 在打开 Power Automate 流程的情况下，将“设置变量”操作拖到流程中第一步之前。
+2. 将变量名更新为 `username`，并将值更新为 `user123`。
+3. 点击保存。
+4. 在步骤 2 添加另一个“设置变量”操作，直接跟在第一个“设置变量”操作之后。
+5. 将变量名更新为 `password`，并将值更新为 `password`。
+6. 在“关闭网页浏览器”之前添加“转到网页”操作。
+7. 在“转到网页”操作上，将 URL 字段设置为 https://web-scraping.dev/login。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_410_0.png)
 
 图 20.21 – 更新浏览器 URL
 
-- 8. 点击保存。
-- 9. 在“转到网页”和“关闭网页浏览器”操作之间，添加“在网页上填充文本字段”操作。
-- 10. 点击 UI 元素下拉列表，然后选择“添加 UI 元素”。
+8. 点击保存。
+9. 在“转到网页”和“关闭网页浏览器”操作之间，添加“在网页上填充文本字段”操作。
+10. 点击 UI 元素下拉列表，然后选择“添加 UI 元素”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_411_0.png)
 
 图 20.22 - 添加 UI 元素
 
-- 11. 切换回带有登录页面的浏览器会话。
-- 12. 打开 UI 元素拾取器的情况下，按住 Control 键并左键点击用户名字段。
-- 13. 在“文本”字段中，添加 %username% 变量。
-- 14. 在“关闭网页浏览器”之前添加“在网页上填充文本字段”操作。
+11. 切换回带有登录页面的浏览器会话。
+12. 打开 UI 元素拾取器的情况下，按住 Control 键并左键点击用户名字段。
+13. 在“文本”字段中，添加 `%username%` 变量。
+14. 在“关闭网页浏览器”之前添加“在网页上填充文本字段”操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_412_0.png)
 
 图 20.23 - 添加 UI 元素
 
-- 15. 切换回浏览器会话。
-- 16. 在 UI 元素拾取器打开的情况下，按住 Control 键并左点击密码字段。
-- 17. 在“文本”字段中，添加 %password% 变量。
-- 18. 在“关闭网页浏览器”之前添加“在网页上填充文本字段”操作。
-- 19. 点击 UI 元素下拉列表并选择“添加 UI 元素”。
-- 20. 按住 Control 键并左点击“提交”按钮。保存。
+15. 切换回浏览器会话。
+16. 在 UI 元素拾取器打开的情况下，按住 Control 键并左点击密码字段。
+17. 在“文本”字段中，添加 `%password%` 变量。
+18. 在“关闭网页浏览器”之前添加“在网页上填充文本字段”操作。
+19. 点击 UI 元素下拉列表并选择“添加 UI 元素”。
+20. 按住 Control 键并左点击“提交”按钮。保存。
 
 点击“运行”启动流程。
 
@@ -6865,48 +6565,44 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 在 Power Automate Desktop 中，你可以针对浏览器会话或整个工作站显示进行截图。按照以下步骤配置截图操作，以日期生成的名称保存文件。
 
-- 1. 在打开 Power Automate 流程的情况下，将“获取当前日期和时间”操作拖到“点击网页上的按钮”之后。点击保存。
-- 2. 从操作面板中，将“日期转换为文本”操作拖到“获取当前日期和时间”和“关闭网页浏览器”之间。
+1. 在打开 Power Automate 流程的情况下，将“获取当前日期和时间”操作拖到“点击网页上的按钮”之后。点击保存。
+2. 从操作面板中，将“日期转换为文本”操作拖到“获取当前日期和时间”和“关闭网页浏览器”之间。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_413_0.png)
 
 图 20.24 – 配置日期转换为文本操作
 
-- 3. 在“要转换日期”字段中，添加 %CurrentDateTime% 变量。
-- 4. 在“使用格式”字段中，选择“自定义”。
-- 5. 在“自定义格式”区域输入 yyyyMMddHHmm，配置四位年份、两位月份、两位小时和分钟。点击保存。
-- 6. 在“日期转换为文本”和“关闭网页浏览器”之间添加“设置变量”操作。
-- 7. 将变量更新为 filename。
-- 8. 将值更新为 %FormattedDateTime_%screenshot.png 并点击保存。
+3. 在“要转换日期”字段中，添加 `%CurrentDateTime%` 变量。
+4. 在“使用格式”字段中，选择“自定义”。
+5. 在“自定义格式”区域输入 `yyyyMMddHHmm`，配置四位年份、两位月份、两位小时和分钟。点击保存。
+6. 在“日期转换为文本”和“关闭网页浏览器”之间添加“设置变量”操作。
+7. 将变量更新为 `filename`。
+8. 将值更新为 `%FormattedDateTime_%screenshot.png` 并点击保存。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_414_0.png)
 
 图 20.25 – 更新“设置变量”操作
 
-- 9. 从操作面板中，将“工作站”部分的“截图”操作拖到“设置变量”和“关闭网页浏览器”所在的画布上。
-- 10. 在“保存截图到”下拉列表中，选择“文件”。
-- 11. 在“图像文件”字段中，添加 C:\temp\%filename% 变量。
-- 12. 将“图像格式”下拉列表设置为 PNG。
+9. 从操作面板中，将“工作站”部分的“截图”操作拖到“设置变量”和“关闭网页浏览器”所在的画布上。
+10. 在“保存截图到”下拉列表中，选择“文件”。
+11. 在“图像文件”字段中，添加 `C:\temp\%filename%` 变量。
+12. 将“图像格式”下拉列表设置为 PNG。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_415_0.png)
 
 13. 点击保存。
 
+
+
 流程运行后，你应该在指定的文件夹中同时拥有一个 Excel 文档和一个截图。
-
-
-
-
 
 # 获取本书的 PDF 版本及专属额外内容
 
-扫描二维码（或访问 packptub.com/unlock）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
+扫描二维码（或访问 `packptub.com/unlock`）。按名称搜索此书，确认版本，然后按照页面上的步骤操作。
 
 注意：请妥善保存发票。直接从 Packt 购买不需要发票。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_416_0.png)
-
-# 21
 
 # 介绍 AI 模型和生成式 AI
 
@@ -6918,11 +6614,9 @@ Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）�
 
 当你处理硬性数据（数字、布尔值或精确字符串匹配）时，这类评估非常有用。但当你尝试根据不那么直观的数据做出决策时，会发生什么呢？
 
-这就是 AI 模型变得有用的地方。AI 模型利用人工智能对各种不同的内容和数据类型进行判断。例如，人类阅读名片并确定哪个值是个人姓名、哪个值是个人职位非常容易，无论它们位于名片的什么位置。然而，对于计算机来说，完成这项任务要困难得多。随着名片设计的不断，数据字段会移动，传统的自动化引擎更难识别和辨别它们。AI 模型帮助为数据带来上下文感知，使自动化执行得更像人类。
+这就是 AI 模型变得有用的地方。AI 模型利用人工智能对各种不同的内容和数据类型进行判断。例如，人类阅读名片并确定哪个值是个人姓名、哪个值是个人职位非常容易，无论它们位于名片的什么位置。然而，对于计算机来说，完成这项任务要困难得多。随着名片设计的不断变化，数据字段会移动，传统的自动化引擎更难识别和辨别它们。AI 模型帮助为数据带来上下文感知，使自动化执行得更像人类。
 
-# 390
-
-# 介绍 AI 模型和生成式 AI
+## 介绍 AI 模型和生成式 AI
 
 Microsoft Power Automate 包含了多个预构建的 AI 模型，还具有训练和自定义多个额外模型的能力。预构建模型聚焦于已经通过特定数据集预训练以执行特定类型任务的 AI，而自定义模型则需要更多的配置以及使用你自己的数据集进行训练。Power Automate 允许你使用最新的生成式 AI 技术（如 ChatGPT、Azure OpenAI 和 Copilot）来增加创意，并帮助解释细微的内容。
 
@@ -6950,8 +6644,6 @@ Power Platform 中提供了许多类型的模型，涵盖了广泛的数据类�
 | 类别分类 | 文本 | 预构建或自定义 | 焦点小组反馈分类 |
 | 实体提取 | 文本 | 预构建或自定义 | 从产品或服务评论中提取见解 |
 
-# 第 21 章
-
 | 模型名称 | 数据类型 | 构建类型 | 业务案例 |
 |---|---|---|---|
 | 关键短提取 | 文本 | 预构建 | 获取提及品牌的新闻或社交媒体帖的警报 |
@@ -6970,11 +6662,11 @@ Power Platform 中提供了许多类型的模型，涵盖了广泛的数据类�
 
 Power Automate 对生成式 AI 的集成——特别是通过 Copilot 和基于生成式预训练转换器 (GPT) 的模型——改变了自动化的设计、部署和维护方式。
 
-如果你使用 ChatGPT 等生成式 AI 工具，你已经熟悉该技术的一些功能。就像 ChatGPT 一，Power Platform 中的生成式 AI 操作是由提示（prompts）驱动的——即用户可以向模型调用创意的自然语言问题或指令。
+如果你使用 ChatGPT 等生成式 AI 工具，你已经熟悉该技术的一些功能。就像 ChatGPT 一样，Power Platform 中的生成式 AI 操作是由提示（prompts）驱动的——即用户可以向模型调用创意的自然语言问题或指令。
 
 生成式 AI 还增强了现有流的智能性。通过 GPT 集成，Power Automate 可以分析上下文数据、总结长内容、生成适应响应，甚至自动编写自然语言电子邮件或报告。例如，流可以从客户支持系统中提取信息，总结工单活动，并起草每周状态报告供评审。同样，AI 驱动的情感分析、文本分类和数据提取允许做出更明的决策——根据语气、紧急性或检测到的意图优先处理任务、路由请求并升级问题。这实现了从纯静态、基于规则的自动化向自适应、上下文感知自动化的转变。
 
-你可以将 GPT 驱动的操作直接嵌入到流中，引入内容生成、翻译或总结等功能。结果是了一种结合了传统的确定性过程自动化与高级推理及创意的工具——这允许组织超越重复性任务自动化，进入业务流程的智能编排。
+你可以将 GPT 驱动的操作直接嵌入到流中，引入内容生成、翻译或总结等功能。结果是结合了传统的确定性过程自动化与高级推理及创意的工具——这允许组织超越重复性任务自动化，进入业务流程的智能编排。
 
 ### 探索用于 Power Platform 的 Microsoft Copilot
 
@@ -6996,8 +6688,6 @@ Power Automate 对生成式 AI 的集成——特别是通过 Copilot 和基于�
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_421_1.png)
 
-# 介绍 AI 模型和生成式 AI
-
 Copilot 甚至可以根据组织模式或过去的使用情况推荐优化、识别缺失的触发器并建议额外的集成。这种对话方法允许所有技术水平的用户在几分钟而不是几小时内实现复杂工作流的自动化。例如，你可以向 Copilot 实际关于流的问题。
 
 在图 21.14 所示的示例中，我们要求 Copilot 提供动态重命名附件的方法，将发送者的电子邮件地址作为文件名：
@@ -7006,18 +6696,13 @@ Copilot 甚至可以根据组织模式或过去的使用情况推荐优化、识
 
 图 21.14 – 让 Copilot 提出建议
 
-
-
-
-## 第 21 章
-
 Power Automate 的生成式 AI 能力扩展到了流程理解和精炼。通过流程挖掘和任务挖掘的帮助，AI 可以分析工作在组织内部实际发生的方式——识别出用于自动化的重复性手动步骤。Copilot 通过生成建议的流流来协助简化这些流程，有效地将业务活动转化为可操作的蓝图。这不仅缩短了发现自动化机会所需的时间，还确保自动化反映了真实的用户行为，从而提高了效率和采用率。
 
 接下来，我们将重点关注使用基于 AI 的解决方案的技术要求。
 
 ### 技术要求
 
-AI 模型（通过 Power Platform 中的 AI Builder 管理）需要访问 Microsoft Dataverse。如果你在本书早之前的章节中完成过需要访问 Dataverse 的示例，那么你应该已经满足了这些要求。如果你尚未创建 Dataverse 数据库，可以使用以下流程：
+AI 模型（通过 Power Platform 中的 `AI Builder` 管理）需要访问 Microsoft Dataverse。如果你在本书早之前的章节中完成过需要访问 Dataverse 的示例，那么你应该已经满足了这些要求。如果你尚未创建 Dataverse 数据库，可以使用以下流程：
 
 1. 导航到 Power Automate 制作者网页门户 (https://make.powerautomate.com)。
 2. 选择 AI hub（AI 中枢）。如果你的环境已过配置，你将看到图 21.5 所示的屏幕：
@@ -7026,28 +6711,26 @@ AI 模型（通过 Power Platform 中的 AI Builder 管理）需要访问 Micros
 
 图 21.5：启动 AI Builder
 
-3. 3. 然而，如果 Dataverse 尚未配置，你将看到一个与图 21.6 所示类似的屏幕：
+3. 然而，如果 Dataverse 尚未配置，你将看到一个与图 21.6 所示类似的屏幕：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_424_0.png)
 
 图 21.6 – 创建数据库
 
-4. 4. 如果显示此屏幕，点击“Create a database”（创建数据库）。
-
-5. 5. 在提示时，选择一种货币和语言。
-6. 6. 点击“Create my database”（创建我的数据库）：
+4. 如果显示此屏幕，点击 Create a database（创建数据库）。
+5. 在提示时，选择一种货币和语言。
+6. 点击 Create my database（创建我的数据库）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_424_1.png)
 
 图 21.7 – 创建 Dataverse 数据库
 
-7. 7. 使用浏览器的刷新按钮更新 AI hub 落地页。
-
-8. 8. 在屏幕顶部，点击“Start free trial”（开始免费试用）：
+7. 使用浏览器的刷新按钮更新 AI hub 落地页。
+8. 在屏幕顶部，点击 Start free trial（开始免费试用）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_425_0.png)
 
-图 21.8 –  AI Builder 试用
+图 21.8 – AI Builder 试用
 
 此试用将激活 AI Builder 并让你访问模型。一旦试用成功启动，你就可以开始使用 AI 模型。
 
@@ -7063,37 +6746,31 @@ AI 模型（通过 Power Platform 中的 AI Builder 管理）需要访问 Micros
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_426_0.png)
 
-## 第 22 章
-
-### 创建情感分析流
+## 创建情感分析流
 
 到目前为止，我们已经了解了 Power Platform 中的 AI（特别是微软的 Copilot 和 AI Builder）如何帮助我们创建和修改工具（如流和应用）。虽然它们可能很有帮助，但通常情况下，要让这类通用助手执行非常特定的以步骤为导向的任务，需要付出大量的额外努力。
 
-正如第 21 章 **介绍 AI 模型和生成式 AI* 中提到的，Microsoft Power Platform 允许你利用人工智能对广泛的内容和数据类型进行判断，帮助以机器速度模拟人类评估。
+正如第 21 章 **介绍 AI 模型和生成式 AI** 中提到的，Microsoft Power Platform 允许你利用人工智能对广泛的内容和数据类型进行判断，帮助以机器速度模拟人类评估。
 
 例如，人类可以一眼看名片并识别出人的姓名和职位，无论使用何种字体、它们在名片上的位置、颜色或文本字段的方向如何。然而，对于传统的计算机逻辑来说，执行这项任务要困难得多。随着名片设计的演变，数据字段不断演变……（注：此处原文存在大量重复文本，已按要求处理）。
 
-
-
-
-
-## 第 22 章
-## 403
-
 ![](img/bfc58bb450784476738fab1c5bfe829d_431_0.png)
+
 图 22.3 – 查看共享邮箱箱
 
-在“添加共享邮箱箱”飞出窗中，输入名称并根据需要调整电子邮件地址。
+在添加共享邮箱箱飞出窗中，输入名称并根据需要调整电子邮件地址。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_431_1.png)
+
 图 22.4 – 创建共享邮箱箱
 
 点击向你的共享邮箱箱添加成员。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_431_2.png)
+
 图 22.5 – 查看新创建的邮箱箱
 
-5. 在“共享成员”飞出窗中，点击“添加成员”。您需要从组织中选择至少一个拥有邮箱箱许可证的用户（访问共享邮箱箱的必要条件），然后点击“添加”。
+5. 在共享成员飞出窗中，点击添加成员。您需要从组织中选择至少一个拥有邮箱箱许可证的用户（访问共享邮箱箱的必要条件），然后点击添加。
 
 6. 关闭飞出窗。
 
@@ -7105,105 +6782,118 @@ AI 模型（通过 Power Platform 中的 AI Builder 管理）需要访问 Micros
 
 Microsoft 团队将用于接收来自 Power Automate 的通知。使用这些步骤从 Microsoft 365 管理中心创建团队。
 
-- 1. 从 Microsoft 365 管理中心 (https://admin.microsoft.com)，展开“Teams 和组”，然后选择“活动团队和组”。
-- 2. 在“Teams 和 365 组”选项卡上，点击“添加团队”。
-- 3. 在“添加团队”向导的基本设置中，为团队提供名称并点击“下一步”。见图 22.6。
+1. 从 Microsoft 365 管理中心 (https://admin.microsoft.com)，展开 Teams 和组，然后选择活动团队和组。
+2. 在 Teams 和 365 组选项卡上，点击添加团队。
+3. 在添加团队向导的基本设置中，为团队提供名称并点击下一步。见图 22.6。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_432_0.png)
+
 图 22.6 – 创建新团队
 
-- 4. 在“所有者”页面上，添加至少一个所有者（例如管理共享邮箱箱的帐户）。点击“下一步”。
-- 5. 在“成员”页面上，添加任何额外成员并点击“下一步”。
-- 6. 在“设置”页面上，填写团队电子邮件地址。点击“下一步”。
+4. 在所有者页面上，添加至少一个所有者（例如管理共享邮箱箱的帐户）。点击下一步。
+5. 在成员页面上，添加任何额外成员并点击下一步。
+6. 在设置页面上，填写团队电子邮件地址。点击下一步。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_433_0.png)
+
 图 22.7 - 为团队配置电子邮件地址
 
-- 7. 在“完成”页面上，检查设置并点击“添加团队”。
+7. 在完成页面上，检查设置并点击添加团队。
 
 现在，进入有趣的部分了！
 
 ### 配置情感分析流
 
-如您在在本章较早部分所学到的，情感分析提供了一种评估内容语调并提供评估输出的机制。为了解决识别负面客户反馈的场景，您可以使用情感分析流来处理共享邮箱箱收到的消息。
+如您在本章较早部分所学到的，情感分析提供了一种评估内容语调并提供评估输出的机制。为了解决识别负面客户反馈的场景，您可以使用情感分析流来处理共享邮箱箱收到的消息。
 
-- 1. 导航到 Power Automate 制作器网页网站 (https://make.powerautomate.com)。
-- 2. 从导航菜单中选择“创建”。
+1. 导航到 Power Automate 制作器网页网站 (https://make.powerautomate.com)。
+2. 从导航菜单中选择创建。
 
-406
-创建情感分析流
-
-### 3. 在“从空白开始”下，选择“自动化云流”。
+### 3. 在从空白开始下，选择自动化云流。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_434_0.png)
+
 图 22.8 – 开始新流
 
-### 4. 在“生成自动化云流”向导中，填写“名称”并选择“当共享邮箱箱有新邮件到达时 (V2)”触发器。点击“创建”。
+### 4. 在生成自动化云流向导中，填写名称并选择当共享邮箱箱有新邮件到达时 (V2)触发器。点击创建。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_434_1.png)
+
 图 22.9 – 选择流的触发器
 
-### 5. 在画布中，选择“当共享邮箱箱有新邮件到达时 (V2)”触发器。
+### 5. 在画布中，选择当共享邮箱箱有新邮件到达时 (V2)触发器。
 
-### 6. 在飞出窗中，在“原始邮箱地址”字段中，添加客户服务共享邮箱箱。见图 22.10。
-
-第 22 章
-407
+### 6. 在飞出窗中，在原始邮箱地址字段中，添加客户服务共享邮箱箱。见图 22.10。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_435_0.png)
+
 图 22.10 – 配置共享邮箱箱
 
-- 8. 选择将用于身份邮箱箱的凭据。如果未列出凭据，点击“**添加新建**”并提供访问共享邮箱箱帐户的用户名和密码。
+8. 选择将用于身份邮箱箱的凭据。如果未列出凭据，点击添加新建并提供访问共享邮箱箱帐户的用户名和密码。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_435_1.png)
+
 图 22.11 – 更新连接设置
 
-- 9. 添加操作。
-- 10. 在“**添加操作**”飞中，在搜索框中输入 `Detect` 并选择“**检测语言**”操作，如**图 22.12**所示。
+9. 添加操作。
+10. 在添加操作飞出窗中，在搜索框中输入 `Detect` 并选择检测语言操作，如图 22.12 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_435_2.png)
+
 图 22.12 – 选择检测语言操作
 
-10. 在“文本中使用的检测语言”飞出窗中，点击“文本”字段。选择闪电图标展开动态选择器。
-- 11. 选择“正文”。
+10. 在文本中使用的检测语言飞出窗中，点击文本字段。选择闪电图标展开动态选择器。
+11. 选择正文。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_436_0.png)
-12. 折叠飞出窗。您会注意到“文本中使用的检测语言”操作被封装在“应用到每一个”（或“对于”，取决于您的租户在循环控制中的中的位置）中。这是因为“当共享邮箱箱有新邮件到达时 (V2)”可能会触发多个消息到下一个操作（使其成为数组），因此需要循环控制来处理从触发器传递的每条消息。见图 22.14。
+
+12. 折叠飞出窗。您会注意到文本中使用的检测语言操作被封装在应用到每一个（或对于，取决于您的租户在循环控制中的中的位置）中。这是因为当共享邮箱箱有新邮件到达时 (V2)可能会触发多个消息到下一个操作（使其成为数组），因此需要循环控制来处理从触发器传递的每条消息。见图 22.14。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_436_1.png)
-- 13. 点击“应用到每一个”循环内的 `+` 以添加操作。
-- 14. 在“添加操作”飞出窗中，在搜索框中输入 `Sentiment analysis` 并选择“分析文本中的正或负面情感”。
 
-第 22 章
-- 15. 在“分析文本中的正或负面情感”飞出窗中，选择“语言”字段。添加来自“文本中使用的检测语言”的语言动态内容。
+13. 点击应用到每一个循环内的 `+` 以添加操作。
+14. 在添加操作飞出窗中，在搜索框中输入 `Sentiment analysis` 并选择分析文本中的正或负面情感。
+
+15. 在分析文本中的正或负面情感飞出窗中，选择语言字段。添加来自文本中使用的检测语言的语言动态内容。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_437_0.png)
+
 图 22.15 – 选择语言选择器
-- 16. 点击“文本”字段。选择动态选择器。
-- 17. 在“共享邮箱箱有新邮件到达 (V2)”下选择“正文”。
-- 18. 折叠飞出窗。您会注意到“分析文本中的正或负面情感”被封装在应用到每一个中。
-- 19. 检查该流。它应该类似于图 22.16。
+
+16. 点击文本字段。选择动态选择器。
+17. 在共享邮箱箱有新邮件到达 (V2)下选择正文。
+18. 折叠飞出窗。您会注意到分析文本中的正或负面情感被封装在应用到每一个中。
+19. 检查该流。它应该类似于图 22.16。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_437_1.png)
+
 图 22.16 – 检查流的状态
-- 20. 在“分析文本中的正或负面情感”操作之后添加一个操作。
-- 21. 在“应用到每一个”循环内部，在搜索框中输入 `Condition` 并选择“条件”操作。
-- 22. 在“条件”飞出窗中，点击左侧字段并选择动态选择器。
-- 23. 选择来自“文本中使用的检测语言”的整体情感动态内容。
-- 24. 在运算符下拉菜单中，选择“等于”。
-- 25. 在右侧字段中输入值 `negative`。
+
+20. 在分析文本中的正或负面情感操作之后添加一个操作。
+21. 在应用到每一个循环内部，在搜索框中输入 `Condition` 并选择条件操作。
+22. 在条件飞出窗中，点击左侧字段并选择动态选择器。
+23. 选择来自文本中使用的检测语言的整体情感动态内容。
+24. 在运算符下拉菜单中，选择等于。
+25. 在右侧字段中输入值 `negative`。
+
+
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_438_0.png)
+
 图 22.17 – 配置条件评估
+
 - 26. 折叠飞出窗。
 - 27. 在条件的“是”分支上，点击 `+` 添加操作。
 - 28. 在“添加操作”搜索框中输入 `Post message` 并选择“在 Teams 中发布消息”操作。
 
-第 22 章
-411
+---
+
+第 22 章 411
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_438_1.png)
+
 图 22.18 – 添加消息操作
+
 - 29. 在“在聊天或频道中发布消息”飞出窗中，点击登录以创建连接（必要）。提供将发布到 Teams 的帐户凭据。
 - 30. 在“发布”下拉菜单中，选择“Flow bot”。
 - 31. 在“发布”下拉菜单中，选择“频道”。
@@ -7214,7 +6904,9 @@ Microsoft 团队将用于接收来自 Power Automate 的通知。使用这些步
 - 36. 检查流的布局并检查是否有明显的错误。见图 22.21。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_440_0.png)
+
 图 22.21 – 检查整体流
+
 - 37. 在菜单栏上，点击“保存”以保存流。
 
 检查流以确保步骤已配置好。完成后，是时候测试它了！
@@ -7228,15 +6920,12 @@ Microsoft 团队将用于接收来自 Power Automate 的通知。使用这些步
 - 3. 通过向配置的共享邮箱箱发送电子邮件来测试您的流。确保您没有遇到反对。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_440_1.png)
+
 图 22.22 – 撰写测试电子邮件
 
+---
 
-
-
-
-## 第22 章
-
-## 413
+第 22 章 413
 
 发送电子邮件后，流运行历史将开始在 Power Automate 制作器门户中更新。
 
@@ -7245,7 +6934,7 @@ Microsoft 团队将用于接收来自 Power Automate 的通知。使用这些步
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_441_0.png)
 
-图图 22.23 - 流执行结果
+图 22.23 - 流执行结果
 
 - 6. 打开 Microsoft Teams（或访问 https://teams.microsoft.com）并验证频道帖子已发布。
 
@@ -7277,6 +6966,8 @@ AI Builder 模型开箱即用就具有许多功能。在本章中，你学习了
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_442_0.png)
 
+---
+
 ## 23
 
 ## 使用 Copilot 创建和管理流
@@ -7285,7 +6976,7 @@ AI Builder 模型开箱即用就具有许多功能。在本章中，你学习了
 
 云流中的 Copilot 让构建自动化变得像对话一样简单。你不需要在菜单中寻找或拖动操作卡片，只需自然语言告诉 Copilot 你想做什么。例如，你可能会说：*当有人提交表单时，给我发送一条 Teams 消息并将文件保存到 SharePoint 中*。Copilot 会逐步引导完成整个过程，将你的想法转化为可以运行的流，为你节省时间和精力。
 
-Copilot 拥有哪些能力？
+### Copilot 拥有哪些能力？
 
 - **理解你的意思：** 描述你的场景，Copilot 就会识别你的意图并围绕此构建流
 - **自动设置连接：** 它会在后台链接你的帐户和服务，使你的自动化程序能够立刻运行
@@ -7302,7 +6993,7 @@ Copilot 拥有哪些能力？
 - 编辑流
 - 描述流
 
-在本章结束时，你将更更好地理解 Copilot 如何帮助你快速构建流。
+在本章结束时，你将更好地理解 Copilot 如何帮助你快速构建流。
 
 ### 使用 Copilot 创建流
 
@@ -7317,9 +7008,9 @@ Copilot 拥有哪些能力？
 
 将提示词看作是与 Copilot 的快速对话——你对自己的要求的越清晰，它就越能构建出你设中的流。
 
-## 第23 章
+---
 
-## 417
+第 23 章 417
 
 首先，让我们看看如何使用 Copilot 创建新流。假设你的 Dropbox 站点是外勤人员上传手写表单的地方。你想创建一个流，连接 Dropbox 站点、导入文档、执行光学字符识别 (OCR)，然后将其保存为文本文档。
 
@@ -7370,10 +7061,6 @@ Copilot 拥有哪些能力？
 
 接下来，我们将看看如何使用 Copilot 修改流。
 
-
-
-
-
 ### 编辑流
 
 你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
@@ -7393,25 +7080,19 @@ Copilot 拥有哪些能力？
 图 23.8 – 更新 Copilot 提示词
 
 - 3. 直接在提示词字段中输入“yes”（是）。
-
 - 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
 
 - 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
 - 6. 选择“执行 OCR”操作以展开弹出窗口。
-
 - 7. 在“图像”（Image）参数中粘贴。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
 
 - 8. 点击保存。
-
 - 9. 选择“测试”，选择“手动”（Manually）单选按钮，并点击“测试”。
-
 - 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
 - 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”（Assist me）图标。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
@@ -7421,7 +7102,6 @@ Copilot 拥有哪些能力？
 ![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
 
 - 13. 选择“执行 OCR”操作以显示布局。
-
 - 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”（File Content）动态值。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
@@ -7429,7 +7109,6 @@ Copilot 拥有哪些能力？
 图 23.13 - 替换参数的值
 
 - 15. 点击保存。
-
 - 16. 点击“测试”，选择“自动”（Automatically），并选择失败的触发器。点击“测试”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
@@ -7445,7 +7124,6 @@ Copilot 拥有哪些能力？
 *注。*
 
 - 18. 点击“编辑”返回工作流并查看“创建文件”（Create file）操作。
-
 - 19. 检查参数。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
@@ -7453,7 +7131,6 @@ Copilot 拥有哪些能力？
 在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
 
 - 20. 更新“文件名”（File Name）参数为类似 test.txt 的内容。
-
 - 21. 更新“文件内容”（File Content）参数为“文档全文”（Full text of the document）动态值标记。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
@@ -7468,601 +7145,96 @@ Copilot 拥有哪些能力？
 
 你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png) (注：此处原文未提供23.19路径，但根据逻辑应有，此处按要求翻译文本) 
-
-原文如下：
-
-### 编辑流
-
-你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
-
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
-
-![](img/..._448_0.png)
-
-图 23.7 – 通过 Copilot 添加 OCR 操作
-
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
-
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
-
-![](img/..._448_1.png)
-
-图 23.8 – 更新 Copilot 提示词
-
-- 3. 直接在提示词字段中输入 yes（是）。
-
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
-
-![](img/..._449_0.png)
-
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
-
-- 7. 在“图像”参数中粘贴。
-
-![](img/..._449_1.png)
-
-- 8. 点击保存。
-
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
-
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/..._450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/..._450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/..._451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/..._451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/..._451_2.png)
-
-图 23.15 - 检查额外错误
-
-*注。*
-
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
-
-- 19. 检查参数。
-
-![](img/..._452_0.png)
-
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
-
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/..._452_1.png)
-
-- 22. 点击保存并再次测试。
-
-最后，工作流看起来成功了！
-
-![](img/..._453_0.png)
-
-图 23.18 – 检查工作流输出
-
-你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
-
-![](img/..._453_1.png)
-
-### 编辑流
-
-你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
-
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
-
-图 23.7 – 通过 Copilot 添加 OCR 操作
-
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
-
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
-
-图 23.8 – 更新 Copilot 提示词
-
-- 3. 直接在提示词字段中输入 yes（是）。
-
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
-
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
-
-- 7. 在“图像”参数中粘贴。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
-
-- 8. 点击保存。
-
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
-
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
-
-图 23.15 - 检查额外错误
-
-*注。*
-
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
-
-- 19. 检查参数。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
-
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
-
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
-
-- 22. 点击保存并再次测试。
-
-最后，工作流看起来成功了！
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_0.png)
-
-图 23.18 – 检查工作流输出
-
-你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
-
 ![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
 
-### 编辑流
 
-你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
 
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
-
-图 23.7 – 通过 Copilot 添加 OCR 操作
-
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
-
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
-
-图 23.8 – 更新 Copilot 提示词
-
-- 3. 直接在提示词字段中输入 yes（是）。
-
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
-
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
-
-- 7. 在“图像”参数中粘贴。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
-
-- 8. 点击保存。
-
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
-
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
-
-图 23.15 - 检查额外错误
-
-*注。*
-
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
-
-- 19. 检查参数。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
-
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
-
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
-
-- 22. 点击保存并再次测试。
-
-最后，工作流看起来成功了！
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_0.png)
-
-图 23.18 – 检查工作流输出
-
-你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
 
 ### 编辑流
 
 你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
 
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
+1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
+   
+   ![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
+   
+   图 23.7 – 通过 Copilot 添加 OCR 操作
 
-![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
+2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
+   
+   使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
+   
+   ![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
+   
+   图 23.8 – 更新 Copilot 提示词
 
-图 23.7 – 通过 Copilot 添加 OCR 操作
+3. 直接在提示词字段中输入 `yes`（是）。
 
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
+4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
+   
+   ![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
 
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
+5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
+6. 选择“执行 OCR”操作以展开弹出窗口。
 
-图 23.8 – 更新 Copilot 提示词
+7. 在“图像”参数中粘贴。
+   
+   ![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
 
-- 3. 直接在提示词字段中输入 yes（是）。
+8. 点击保存。
 
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
+9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
+10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
 
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
+11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
 
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
+12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（`base64`）的文件，并对编辑文件提出了建议，如图 23.12 所示。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
 
-- 7. 在“图像”参数中粘贴。
+13. 选择“执行 OCR”操作以显示布局。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
+14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（`body/content`）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
+    
+    图 23.13 - 替换参数的值
 
-- 8. 点击保存。
+15. 点击保存。
 
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
+16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
+    
+    图 23.14 - 选择最近失败的触发器
 
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
-
-图 23.15 - 检查额外错误
+17. 检查任何潜在错误。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
+    
+    图 23.15 - 检查额外错误
 
 *注。*
 
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
+18. 点击“编辑”返回工作流并查看“创建文件”操作。
 
-- 19. 检查参数。
+19. 检查参数。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
+    
+    在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
+20. 更新“文件名”参数为类似 `test.txt` 的内容。
 
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
+21. 更新“文件内容”参数为“文档全文”动态值标记。
+    
+    ![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
 
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
-
-- 22. 点击保存并再次测试。
-
-最后，工作流看起来成功了！
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_0.png)
-
-图 23.18 – 检查工作流输出
-
-你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
-
-Wait, I noticed I provided the translation twice in the block above by mistake. Let me provide the final, clean translation of the requested text as per instructions.
-
-Actually, looking at the user prompt, the user wants me to translate the text under "以下是需要翻译的文本", which is the snippet starting from "## Editing a flow" and ending with the end of the provided text.
-
-Let me re-summarize and provide the final output correctly.
-
-[content]
-### 编辑流
-
-你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
-
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
-
-图 23.7 – 通过 Copilot 添加 OCR 操作
-
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
-
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
-
-图 23.8 – 更新 Copilot 提示词
-
-- 3. 直接在提示词字段中输入 yes（是）。
-
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
-
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
-
-- 7. 在“图像”参数中粘贴。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
-
-- 8. 点击保存。
-
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
-
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
-
-图 23.15 - 检查额外错误
-
-*注。*
-
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
-
-- 19. 检查参数。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
-
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
-
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
-
-- 22. 点击保存并再次测试。
-
-最后，工作流看起来成功了！
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_0.png)
-
-图 23.18 – 检查工作流输出
-
-你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
-[/content]
-
-Wait, I see the input text in the prompt is actually longer than I thought. Let me re-read. The input text provided by the user ends at "See Figure 23.19." No, wait, the user's input text actually ends with "See Figure 23.19." followed by an image tag? Let me look at the very end of the prompt.
-
-The prompt ends with:
-"See Figure 23.19.
-![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)"
-Wait, I see what happened. The user provided the text *inside* a [content] block in the prompt. I should translate that.
-
-Actually, looking closely at the user's prompt structure:
-`以下是需要翻译的文本`
-`[content]` ... (text) ... `[/content]`
-
-The user provided the text to be translated. I will translate that specific text.
-
-Wait, the user's text in the prompt ends at `See Figure 23.19.`. The image tag after is part of the text.
-
-Okay, I will provide the translation of the text provided in the final [content] block.
-
-[content]
-### 编辑流
-
-你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
-
-- 1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
-
-图 23.7 – 通过 Copilot 添加 OCR 操作
-
-- 2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
-
-使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
-
-图 23.8 – 更新 Copilot 提示词
-
-- 3. 直接在提示词字段中输入 yes（是）。
-
-- 4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
-
-- 5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
-
-- 6. 选择“执行 OCR”操作以展开弹出窗口。
-
-- 7. 在“图像”参数中粘贴。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
-
-- 8. 点击保存。
-
-- 9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
-
-- 10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
-
-- 11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
-
-- 12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
-
-- 13. 选择“执行 OCR”操作以显示布局。
-
-- 14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（body/content）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
-
-图 23.13 - 替换参数的值
-
-- 15. 点击保存。
-
-- 16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
-
-图 23.14 - 选择最近失败的触发器
-
-- 17. 检查任何潜在错误。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
-
-图 23.15 - 检查额外错误
-
-*注。*
-
-- 18. 点击“编辑”返回工作流并查看“创建文件”操作。
-
-- 19. 检查参数。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
-
-在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
-
-- 20. 更新“文件名”参数为类似 test.txt 的内容。
-
-- 21. 更新“文件内容”参数为“文档全文”动态值标记。
-
-![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
-
-- 22. 点击保存并再次测试。
+22. 点击保存并再次测试。
 
 最后，工作流看起来成功了！
 
@@ -8075,6 +7247,103 @@ Okay, I will provide the translation of the text provided in the final [content]
 ![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
 
 
+
+
+### 编辑流
+
+你可以使用 Copilot 来插入操作并对你的工作流进行故障排除。
+
+1. 在 Copilot 窗中，使用提示词告诉 Copilot 在文件保存到 SharePoint 之前添加一个操作，对该文件执行 OCR。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_448_0.png)
+
+图 23.7 – 通过 Copilot 添加 OCR 操作
+
+2. 点击“执行 OCR”操作以展开该方法的弹出窗口。注意此时没有提供图像。添加一个提示词来更新“图像”参数。在示例中，你可以使用以下提示词：
+
+使用来自 Dropbox 的文件作为执行 OCR 操作的图像文件。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_448_1.png)
+
+图 23.8 – 更新 Copilot 提示词
+
+3. 直接在提示词字段中输入 `yes`（是）。
+
+4. 如果 Copilot 无法代表你执行更改，你仍然可以采取指令并相应地修改工作流，如图 23.9 所示。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_449_0.png)
+
+5. 选择 `triggerOutputs()['body/content']` 建议文本并复制到剪贴板。
+
+6. 选择“执行 OCR”操作以展开弹出窗口。
+
+7. 在“图像”参数中粘贴。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_449_1.png)
+
+8. 点击保存。
+
+9. 选择“测试”，选择“手动”单选按钮，并点击“测试”。
+
+10. 切换到 Dropbox 站点，向文件夹上传一个带有手写文本的图像文件，然后等待工作流进行处理。
+
+11. 检查输出结果。如果生成了错误，你可以点击 Copilot 窗中的“协助我”图标。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_450_0.png)
+
+12. 检查 Copilot 的故障排除步骤。在这种情况下，Copilot 报告执行 OCR 步骤没有收到正确格式（base64）的文件，并对编辑文件提出了建议，如图 23.12 所示。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_450_1.png)
+
+13. 选择“执行 OCR”操作以显示布局。
+
+14. 点击“图像”参数内部，注意 Copilot 生成的工作流添加的动态值（`body/content`）。根据故障排除器的建议，你需要将其替换为“文件内容”动态值。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_451_0.png)
+
+图 23.13 - 替换参数的值
+
+15. 点击保存。
+
+16. 点击“测试”，选择“自动”，并选择失败的触发器。点击“测试”。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_451_1.png)
+
+图 23.14 - 选择最近失败的触发器
+
+17. 检查任何潜在错误。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_451_2.png)
+
+图 23.15 - 检查额外错误
+
+*注。*
+
+18. 点击“编辑”返回工作流并查看“创建文件”操作。
+
+19. 检查参数。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_452_0.png)
+
+在这种情况下，Copilot 生成的工作流使用了 Dropbox 的名称和内容动态内容值。这并不完全对应于错误，但这些值需要更新，以利用 Copilot 之前插入的 OCR 操作（尽管 Copilot 说它已经为我们更新了一切）。
+
+20. 更新“文件名”参数为类似 `test.txt` 的内容。
+
+21. 更新“文件内容”参数为“文档全文”动态值标记。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_452_1.png)
+
+22. 点击保存并再次测试。
+
+最后，工作流看起来成功了！
+
+![](img/bfc58bb450784476738fab1c5bfe829d_453_0.png)
+
+图 23.18 – 检查工作流输出
+
+你也可以去检查 SharePoint 站点查看创建的文件。“详细信息”窗格显示工作流的预览。你也可以在浏览器中打开该文件。见图 23.19。
+
+![](img/bfc58bb450784476738fab1c5bfe829d_453_1.png)
 
 6. 在“验证手机号码”页面上，输入一个能够接收短信的设备手机号码。点击“发送代码”。
 
@@ -8092,11 +7361,11 @@ Okay, I will provide the translation of the text provided in the final [content]
 
 11. 在“设置支付方式”页面上，输入信用卡信息并点击“继续”。
 
-12. 在“配置支付”页面上，为“初始点数购买”输入一个值。您可以选择 $5 到 $50 之间的任何金额。
+12. 在“配置支付”页面上，为“初始点数购买”输入一个值。您可以选择 `$5` 到 `$50` 之间的任何金额。
 
 13. 在“支付摘要”页面上，点击“确认支付”。您将被收取配置页面上指定并在摘要中显示的金额。
 
-14. 导航至 https://platform.openai.com/api-keys。见图 24.2。
+14. 导航至 `https://platform.openai.com/api-keys`。见图 24.2。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_459_1.png)
 
@@ -8104,7 +7373,7 @@ Okay, I will provide the translation of the text provided in the final [content]
 
 15. 在 API 密钥页面上，选择“创建新的密钥密钥”。
 
-16. 在“创建新的密钥密钥”弹出窗口中，为 API 密钥输入一个名称（例如 OpenAI），并点击“创建密钥”。
+16. 在“创建新的密钥密钥”弹出窗口中，为 API 密钥输入一个名称（例如 `OpenAI`），并点击“创建密钥”。
 
 17. 将显示的值复制到安全的地方。当从其他应用和服务（如 Power Automate）连接到 OpenAI 服务时，您将需要此值。当您点击“完成”时，此值将被隐藏，您将无法再次检索它。
 
@@ -8120,7 +7389,7 @@ Okay, I will provide the translation of the text provided in the final [content]
 
 ### 开始 Encodian 试用
 
-Encodian 提供了一系列连接器，我们将使用它们来操作 Word 文档。Encodian 在 https://www.encodian.com/product/flowr/ 提供了 Flowr 连接器的免费 30 天试用（包含 500 个积分点数）：
+Encodian 提供了一系列连接器，我们将使用它们来操作 Word 文档。Encodian 在 `https://www.encodian.com/product/flowr/` 提供了 Flowr 连接器的免费 30 天试用（包含 500 个积分点数）：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_461_0.png)
 
@@ -8135,8 +7404,11 @@ Encodian 提供了一系列连接器，我们将使用它们来操作 Word 文�
 在真正开始工作此项目之前，您需要了解如何使用 Encodian Flowr 连接器和操作。在本节中，我们将查看使此流程运行的关键部分。要成功使用连接器和操作，您将需要理解以下概念、术语和操作：
 
 - 输入格式
+
 - 标记 (Tokens)
+
 - 填充 Word 操作 (Populate Word action)
+
 - 合并演示文操作 (Merge Presentations action)
 
 让我们快速查看这些领域！
@@ -8145,7 +7417,7 @@ Encodian 提供了一系列连接器，我们将使用它们来操作 Word 文�
 
 Encodian 的许多内容操作操作都需要使用结构化数据。在这种情况下，结构化数据通常以 JavaScript 对象表示 (JSON) 语法提供：
 
-```
+```json
 {
   "object1" : "value1",
   "object2" : "value2-electric boogaloo"
@@ -8169,10 +7441,6 @@ Encodian 的许多内容操作操作都需要使用结构化数据。在这种�
 }
 ```
 
-# 第 24 章
-
-# 435
-
 ```json
 "category": "grain",
 "data": [
@@ -8181,11 +7449,11 @@ Encodian 的许多内容操作操作都需要使用结构化数据。在这种�
 ]
 ```
 
-在 foods JSON 对象中，您可以看到指定数据值的几个示例。有标准的键/值对（如 "category": "fruit"）用于标识单个对象，以及数组（如 "data": [{"type": "sorghum","count": 1}, {"type": "wheat","count": 3}]）用于标识键/值对组。
+在 `foods` JSON 对象中，您可以看到指定数据值的几个示例。有标准的键/值对（如 `"category": "fruit"`）用于标识单个对象，以及数组（如 `"data": [{"type": "sorghum","count": 1}, {"type": "wheat","count": 3}]`）用于标识键/值对组。
 
 JSON 对象可以包含多种数据类型，包括字符串（文本）、整数（数字）、数组（字符串或键/值对的集合）、布尔值（真或假）以及其他 JSON 对象。
 
-> JSON 是一种处理结构化内容的极其灵活格式，既易于人类阅读，又独立平台和语言。有关处理 JSON 对象和语法的更多信息，请参阅 https://www.w3schools.com/js/js_json_intro.asp。您还可以使用 https://jsonformatter.org/ 等工具来帮助确保 JSON 格式正确。
+> JSON 是一种处理结构化内容的极其灵活格式，既易于人类阅读，又独立平台和语言。有关处理 JSON 对象和语法的更多信息，请参阅 `https://www.w3schools.com/js/js_json_intro.asp`。您还可以使用 `https://jsonformatter.org/` 等工具来帮助确保 JSON 格式正确。
 
 接下来，我们将查看标记是如何工作的（在 Encodian 连接器的上下文中）。
 
@@ -8193,7 +7461,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 多个 Flowr 操作使用特殊格式的标签（或 Encodian 称为标记），连接器将这些标记与您提供的内容以查找并替换的方式。
 
-例如，假设您让 Flowr 在文档中放置“The rain in Spain falls mainly on the plain”单词或短语。您可能决定将该短语分配给名为 rhyme 的标记。然后，插入文档或演示文稿模板时，通过输入由一系列方括号和尖括号包围的标记名称来指示希望此文本出现的位置： <<[rhyme]]..
+例如，假设您让 Flowr 在文档中放置“The rain in Spain falls mainly on the plain”单词或短语。您可能决定将该短语分配给名为 `rhyme` 的标记。然后，插入文档或演示文稿模板时，通过输入由一系列方括号和尖括号包围的标记名称来指示希望此文本出现的位置：`<<[rhyme]>>`。
 
 如果您曾经用过文本编辑器中的查找/替换功能，或者在指定占位符文本的合并应用程序，您将理解这个概念。
 
@@ -8203,7 +7471,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_464_0.png)
 
-图 24.6 – 在 PowerPoint 幻灯片中查看 <<[fox]>> 标记
+图 24.6 – 在 PowerPoint 幻灯片中查看 `<<[fox]>>` 标记
 
 在任何您想要使用 Encodian 连接器修改或自定义的文档或演示文稿中，工作原理都是相同的。
 
@@ -8213,32 +7481,33 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要注册，请按照以下步骤操作：
 
-1. 导航至 https://portal.cloudmersive.com/signup。
+1. 导航至 `https://portal.cloudmersive.com/signup`。
+
 2. 填写表单并点击“立即注册”。
+
 3. 在“选择计划”页面上，选择“免费层级”。
+
 4. 在“选择角色以完成账户设置”页面上，选择一个代表您的职业类型的角色。
+
 5. 在“您想从哪个 API 开始？”页面上，选择“文档和数据转换”。
-
-# 第 24 章
-
-# 437
 
 6. 在“您希望使用的编程语言？”上选择 Microsoft Flow / Power Automate。
 
 7. 在 API 密钥页面点击“创建密钥”。
+
 8. 将免费层 API 密钥区域的值复制到可以方便访问的地方。API 密钥是一个 36 字符的代码，由字母 a 到 f 和数字 0 到 9 组成。
 
 现在您已经准备好了软件和许可，是时候准备内容了！
 
 ### 准备文档模板
 
-在这种情况下，准备文档模板意味着为 Flow 操作放置标记标记。本质上，您编辑一份文档（在本情况下，是包含工作说明书或其他需要摘要的 Word 文档），并插入一个指示您希望 Flow 将其放置的位置的标记 <<，如图 24.7 所示：
+在这种情况下，准备文档模板意味着为 Flow 操作放置标记标记。本质上，您编辑一份文档（在本情况下，是包含工作说明书或其他需要摘要的 Word 文档），并插入一个指示您希望 Flow 将其放置的位置的标记 `<<`，如图 24.7 所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_465_0.png)
 
 图 24.7 – 在文档中放置标记
 
-在图 24.7 中，<<[ExecutiveSummary]>> 标记代表 Flow 将插入 ChatGPT 或 OpenAI 服务生成的摘要的位置。
+在图 24.7 中，`<<[ExecutiveSummary]>>` 标记代表 Flow 将插入 ChatGPT 或 OpenAI 服务生成的摘要的位置。
 
 ### 设置云存储提供程序
 
@@ -8248,14 +7517,17 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 在完成所有的准备工作后，是时候开始处理一些自动化了！我们将从触发器开始。
 
-
-
-
 ### 配置触发器
 
 此流程与手动触发器配合效果最佳，你将提供将作为执行摘要基础的文档。
 
 如你所知，GPTs 利用提示词（prompts）来对要执行的任务类型提供说明。你可以选择在触发器中直接提供整个提示词内容，也可以稍后移动提示词的基础，并允许在触发器中进行自定义或微调。
+
+
+
+# 创建执行摘要流程
+
+## 配置触发器
 
 在此流程中，我们将采用后一种方法。此触发器将使用四个输入变量：
 
@@ -8266,7 +7538,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要配置此流程，请按照以下步骤操作：
 
-1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com) 并选择“创建”。
+1. 导航到 Power Automate 制作门户（`https://make.powerautomate.com`）并选择“创建”。
 2. 在“从空白开始”下，选择“即时云流”。
 3. 在“构建自动化工作流”页面上，提供工作流名称（例如“生成执行摘要”），并选择“手动触发流”。点击“创建”。
 4. 选择“手动触发流”。在设置中，选择“添加输入”。
@@ -8276,7 +7548,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 24.8 – 选择输入
 
-6. 将“输入文本”（Input text）替换为“In”。这将是你描述包含在流程中的文档章节或组件的区域。在文本区域中，你可以将“请输入你的输入”替换为可能包含的重要章节的建议（例如工作范围和项目交付物），如图 24.9 所示。
+6. 将“输入文本”（`Input text`）替换为“In”。这将是你描述包含在流程中的文档章节或组件的区域。在文本区域中，你可以将“请输入你的输入”替换为可能包含的重要章节的建议（例如工作范围和项目交付物），如图 24.9 所示。
 
 ## 第 24 章
 
@@ -8284,26 +7556,27 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 24.9 – 自定义输入
 
-> 注意
+> **注意**
+>
 > 需要注意的是，你用作建议的文本与默认文本（在未提供自定义时将自动包含的文本）是不相同的。Power Automate 目前不支持默认文本选项。你需要在流程运行期间填写此文本。
 
 根据你的文档是如何构建的以及你典型的执行摘要是什么样子的，你可能希望进一步自定义：
 
 1. 点击**添加输入**。
-2. 将**输入文本**（Input text）替换为“排除项”（Exclusions）。这将是你描述从 ChatGPT 摘要中排除的文档章节或组件的文本区域。在文本区域中，你可以将**请输入你的输入**替换为可能重要或通常不包含在执行摘要中的章节建议（例如项目治理、项目管理、履行期间、资源规划、变更订单、客户资源承诺和定价）。
+2. 将**输入文本**（`Input text`）替换为“排除项”（`Exclusions`）。这将是你描述从 ChatGPT 摘要中排除的文档章节或组件的文本区域。在文本区域中，你可以将**请输入你的输入**替换为可能重要或通常不包含在执行摘要中的章节建议（例如项目治理、项目管理、履行期间、资源规划、变更订单、客户资源承诺和定价）。
 3. 点击**添加输入**。
-4. 将**输入文本**（Input text）替换为“附加指令”（Additional Instructions）。这将是你提供任何其他指令的文本区域，例如哪些内容对特定客户可能重要。在文本区域中，你可以将**请输入你的输入**替换为建议内容：“关注积极成果和合作伙伴机会”。
+4. 将**输入文本**（`Input text`）替换为“附加指令”（`Additional Instructions`）。这将是你提供任何其他指令的文本区域，例如哪些内容对特定客户可能重要。在文本区域中，你可以将**请输入你的输入**替换为建议内容：“关注积极成果和合作伙伴机会”。
 5. 点击**添加输入**并选择**文件**。
-6. 将**文件内容**（File Content）替换为“上传”（Upload）。这是你上传需要执行摘要的文档的地方（在查找/替换活动中的适当部分带有令牌）。
+6. 将**文件内容**（`File Content`）替换为“上传”（`Upload`）。这是你上传需要执行摘要的文档的地方（在查找/替换活动中的适当部分带有令牌）。
 
-### 转换文档
+## 转换文档
 
 配置触发器后，现在是处理流程中开始处理已上传文档的部分。
 
 由于 GPT 只能处理文本形式的内容（无法处理 Word 文档的二进制格式），因此有对其进行转换。接下来的步骤将文档发送到 Cloudmersive 连接器并转换为纯文本：
 
 1. 在触发器之后，**添加操作**。
-2. 在**添加操作**拉出菜单中，输入 Cloudmersive 并滚动到 **Cloudmersive 文档连接器**，然后点击**查看更多**。
+2. 在**添加操作**拉出菜单中，输入 `Cloudmersive` 并滚动到 **Cloudmersive 文档连接器**，然后点击**查看更多**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_468_0.png)
 
@@ -8320,11 +7593,11 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_469_0.png)
 
-图 24.12 – 添加 File ContentBytes 动态内容令牌
+图 24.12 – 添加 `File ContentBytes` 动态内容令牌
 
 现在，我们将数据发送到 OpenAI 的 ChatGPT 进行处理：
 
-### 将内容发送给 GPT
+## 将内容发送给 GPT
 
 在此节中，我们将配置保存内容的必要步骤。我们将使用 OpenAI 的 ChatGPT 进行处理。在在此之前，让我们探索一下发送的 JSON：
 
@@ -8347,26 +7620,23 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 }
 ```
 
-
-### 使用生成式 AI 总结文档
+## 使用生成式 AI 总结文档
 
 接下来，我们将进入精彩部分——实际操作 ChatGPT！
 
-- 1. 在执行“将 DOCX 文档转换为文本 (txt)”操作之后，在 HTTP 连接器下添加“HTTP”操作。
+1. 在执行“将 DOCX 文档转换为文本 (txt)”操作之后，在 HTTP 连接器下添加“HTTP”操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_472_0.png)
 
 图 24-15 – 添加 HTTP 操作
 
-- 2. 在 HTTP 操作的弹出窗中，在参数（Parameters）选项卡下，在 URI 字段输入以下端点：https://api.openai.com/v1/chat/completions。
+2. 在 HTTP 操作的弹出窗中，在参数（`Parameters`）选项卡下，在 URI 字段输入以下端点：`https://api.openai.com/v1/chat/completions`。
 
 这是 OpenAI 用于聊天完成的服务端点。
 
-- 3. 在方法（Method）下，选择 POST。
-
-- 4. 在头部（Headers）下，在键（Key）字段中输入值 Authorization。
-
-- 5. 接下来，你需要 OpenAI API key。在头部（Headers）下，在值（Value）字段输入 Bearer <OpenAI AI key>。例如，如果你的 OpenAI API key 为 sk-qtnjnJ1cToXtXfXXIFYnT3Clb-kfJqOOBJ7gfc9nCERCKqqeYbV，你将在值字段中输入值 Bearer sk-qtnjnJ1cToXtXfXXIFYnT3Clb-3clkbkfJqOOBJ7gfc9nCERCKqqeYbV。见图 24-15。
+3. 在方法（`Method`）下，选择 `POST`。
+4. 在头部（`Headers`）下，在键（`Key`）字段中输入值 `Authorization`。
+5. 接下来，你需要 OpenAI API key。在头部（`Headers`）下，在值（`Value`）字段输入 `Bearer <OpenAI AI key>`。例如，如果你的 OpenAI API key 为 `sk-qtnjnJ1cToXtXfXXIFYnT3Clb-kfJqOOBJ7gfc9nCERCKqqeYbV`，你将在值字段中输入值 `Bearer sk-qtnjnJ1cToXtXfXXIFYnT3Clb-3clkbkfJqOOBJ7gfc9nCERCKqqeYbV`。见图 24-15。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_472_1.png)
 
@@ -8374,7 +7644,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 不，那不是真实的密钥，请不要尝试使用它。它看起来像。
 
-- 6. 正文（Body）字段是我们向 GPT 发送请求的地方。我们将发送的请求将化为 JSON 负载。你可以复制以下负载：
+6. 正文（`Body`）字段是我们向 GPT 发送请求的地方。我们将发送的请求将化为 JSON 负载。你可以复制以下负载：
 
 ```json
 {
@@ -8398,21 +7668,17 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 }
 ```
 
-- 7. 选择动态令牌 **Inclusions**，并将其替换为来自“手动触发流”操作的 **Inclusions** 动态内容令牌。
-
-- 8. 选择文本 **Exclusions** 并将其替换为来自“手动触发流”操作的 **Exclusions** 动态内容令牌。
-
-- 9. 选择文本 **Additional Instructions** 并将其替换为来自“手动触发流”操作的 **Additional Instructions** 动态内容。见**图 24.16**。
+7. 选择动态令牌 **Inclusions**，并将其替换为来自“手动触发流”操作的 **Inclusions** 动态内容令牌。
+8. 选择文本 **Exclusions** 并将其替换为来自“手动触发流”操作的 **Exclusions** 动态内容令牌。
+9. 选择文本 **Additional Instructions** 并将其替换为来自“手动触发流”操作的 **Additional Instructions** 动态内容。见**图 24.16**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_474_0.png)
 
 图 24.16 – 配置 HTTP 操作的正文
 
-- 10. 在**HTTP 操作**之后，添加一个**解析 JSON**操作。
-
-- 11. 在**内容（Content）**字段中，选择来自 HTTP 操作的**正文（Body）**动态内容令牌。
-
-- 12. 在**架构（Schema）**区域字段中，粘贴以下内容：
+10. 在**HTTP 操作**之后，添加一个**解析 JSON**操作。
+11. 在**内容（Content）**字段中，选择来自 HTTP 操作的**正文（Body）**动态内容令牌。
+12. 在**架构（Schema）**区域字段中，粘贴以下内容：
 
 ```json
 {
@@ -8488,7 +7754,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 }
 ```
 
-**schema** 定义了输出的格式。在 Power Automate 中，OpenAI API 直接返回针对端点执行 HTTP POST 请求的实际输出。你有几种方法可以自己实现这一点，例如使用 Postman (https://www.postman.com) 运行基础查询，如**图 24.17**所示：
+**schema** 定义了输出的格式。在 Power Automate 中，OpenAI API 直接返回针对端点执行 HTTP POST 请求的实际输出。你有几种方法可以自己实现这一点，例如使用 Postman（`https://www.postman.com`）运行基础查询，如**图 24.17**所示：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_476_0.png)
 
@@ -8500,19 +7766,18 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 24.18 – 添加 JSON 负载以生成架构
 
-- 14. 点击完成。
-
-- 15. 此时，你可以点击保存以保留你的进度。
+14. 点击完成。
+15. 此时，你可以点击保存以保留你的进度。
 
 接下来，我们将此输出并插入到 Word 文档中。
 
-### 填充文档并保存新文件
+## 填充文档并保存新文件
 
 我们处于这个示例的最后阶段了！我们将按照以下步骤处理 Word 文档，并将输出发送到 OneDrive for Business：
 
-- 1. 在“解析 JSON”操作之后，添加“填充 Word 文档”操作。
-- 2. 在“填充 Word 文档”弹出窗中，在文件内容（File Content）字段中，添加来自“手动触发流”的文件 Content contentBytes 动态内容。
-- 3. 在文档数据（Document Data）区域字段中，输入以下内容：
+1. 在“解析 JSON”操作之后，添加“填充 Word 文档”操作。
+2. 在“填充 Word 文档”弹出窗中，在文件内容（`File Content`）字段中，添加来自“手动触发流”的文件 `Content contentBytes` 动态内容。
+3. 在文档数据（`Document Data`）区域字段中，输入以下内容：
 
 ```json
 {
@@ -8526,34 +7791,34 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 24.19 – 配置填充文档操作
 
-- 4. 添加一个操作。
-- 5. 添加“创建文件”OneDrive for Business 操作。
-- 6. 在路径（Path）字段中，点击图标并选择根目录（Root）。
-- 7. 在文件名（File Name）字段中，添加表达式：concat(utcNow('yyyyMMdd'), '_', triggerBody()?['name']).
-- 8. 在文件内容（File Content）字段中，添加来自“填充文档”操作的 File Content 动态内容。见**图 24.20**。
+4. 添加一个操作。
+5. 添加“创建文件”OneDrive for Business 操作。
+6. 在路径（`Path`）字段中，点击图标并选择根目录（`Root`）。
+7. 在文件名（`File Name`）字段中，添加表达式：`concat(utcNow('yyyyMMdd'), '_', triggerBody()?['name'])`。
+8. 在文件内容（`File Content`）字段中，添加来自“填充文档”操作的 `File Content` 动态内容。见**图 24.20**。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_474)
+![](img/bfc58bb450784476738fab1c5bfe829d_474.png)
 
 图 24.20 – 配置填充文档操作
 
-- 9. 点击保存。
+9. 点击保存。
 
 现在是见证时刻了！
 
-### 测试流
+## 测试流
 
 为了测试此流，你需要一个像这样包含摘要令牌的 Word 文档。准备好后，让我们开始测试！
 
-- 1. 从流设计器中，点击测试。
-- 2. 选择手动单按钮，然后点击测试。
-- 3. 填写包含项、排除项和额外说明区域。使用示例文本编写你自己的包含项和排除项。
+1. 从流设计器中，点击测试。
+2. 选择手动单按钮，然后点击测试。
+3. 填写包含项、排除项和额外说明区域。使用示例文本编写你自己的包含项和排除项。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_479_0.png)
 
 图 24.21 – 测试流
 
-- 4. 滚动到窗口底部。在文件内容下，点击导入并浏览工作说明书（或你正在使用的任何文档）。
-- 5. 点击运行流。
+4. 滚动到窗口底部。在文件内容下，点击导入并浏览工作说明书（或你正在使用的任何文档）。
+5. 点击运行流。
 
 检查输出步骤以确保一切运行正常。
 
@@ -8565,9 +7830,9 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 24.22 – 查看更新后的 Word 文档
 
-### 恭喜！你成功验证了流！
+## 恭喜！你成功验证了流！
 
-### 进一步探索
+## 进一步探索
 
 现在你已成功为工作说明书创建了执行摘要，可以通过以下想法扩展此流的方法：
 
@@ -8581,11 +7846,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 可以根据你使用的提示以及如何调整此流自由发挥创意。
 
-
-
-
-
-### 总结
+## 总结
 
 在本章中，我们引入了第三方连接器来帮助操作和增强 Word 文档。与我们在几个章节前分析情感时使用的原生 AI 生成器组件不同，我们结合系统提示和用户提示，将内容直接发送到 OpenAI ChatGPT 端点。在检索处理后的内容后，我们使用连接器的“查找并替换”操作将内容插入回源 Word 文档，然后将其保存到 OneDrive for Business。
 
@@ -8606,7 +7867,8 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 - 第 27 节：Power Platform 中的治理
 
 # 第 25 节
-流的导出、导入和分发
+
+## 流的导出、导入和分发
 
 在某些时刻，可能有（或有用）对流进行备份复制以归档，或在环境之间移动它。这可能有几个原因，包括：
 
@@ -8622,7 +7884,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 - 导出流
 - 导入流
 - 分发流
-- 使用解决方案（Solutions）
+- 使用解决方案（`Solutions`）
 
 在本章结束时，你应当能够熟练掌握导出（或备份）、恢复（或导入）以及共享他人可以导入流的流程。
 
@@ -8630,9 +7892,11 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 如果你想备份流或让流在另一个环境中可用，你就需要将其导出。导出流会使其具有可移植性，并让你具备移动它的能力。流可以导出为不同的格式：
 
-- 程序包 (.zip)，用于导入 Power Automate
-- Logic Apps 模板 (.json)，用于导入 Logic Apps
+- 程序包（`.zip`），用于导入 Power Automate
+- Logic Apps 模板（`.json`），用于导入 Logic Apps
 - 解决方案（流和连接的封装集合）
+
+
 
 你选择的导出格式取决于目标环境是什么以及你构建流的时间。这些格式非常相似，因为 Power Automate 是与 Logic Apps 平台使用相同构建构建。在示例中，我们将查看用于在 Power Automate 中重用（相同或不同环境）的模板的步骤。
 
@@ -8644,7 +7908,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要将流作为程序包导出，请遵循以下步骤：
 
-1. 登录 Power Automate 制作网页门户 (https://make.powerautomate.com)。
+1. 登录 Power Automate 制作网页门户 (`https://make.powerautomate.com`)。
 2. 点击“我的流”(My flows)。
 3. 点击要导出的流旁边的三个点，悬停在“导出”(Export)，然后选择“程序包 (.zip)”：
 
@@ -8664,15 +7928,14 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 25.3 – 添加注释
 
-6. **在流资源类型的类型的设置设置面板中，点击“更新”(Update)一词**，以设置程序包在导入到目标环境时的默认配置方式。**选择“创建新建”(Create as new)** 在新的目标环境中创建流，或选择**“更新”(Update)** 以更新目标环境中的现有流。
+6. 在流资源类型的类型的设置设置面板中，点击“更新”(Update)一词，以设置程序包在导入到目标环境时的默认配置方式。选择“创建新建”(Create as new) 在新的目标环境中创建流，或选择“更新”(Update) 以更新目标环境中的现有流。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_488_1.png)
 
 图 25.4 – 自定义导入行为
 
 7. 点击每个资源的扳手图标，以自定义该资源的导入行为。
-
-8. 点击“导出”(Export)。Power Automate 将生成一个 .zip 文件并触发开始下载。
+8. 点击“导出”(Export)。Power Automate 将生成一个 `.zip` 文件并触发开始下载。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_489_0.png)
 
@@ -8686,7 +7949,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要导出解决方案，请遵循以下步骤：
 
-1. 导航到 Power Automate 制作门户 (https://make.powerautomate.com)。
+1. 导航到 Power Automate 制作门户 (`https://make.powerautomate.com`)。
 2. 点击“解决方案”(Solutions)。
 3. 选择“新建解决方案”(New solution)。
 
@@ -8742,27 +8005,22 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 图 25.13 - 查看连接器类型
 
-> 有标准和高级连接器的示例和信息，请参考链接：https://make.powerautomate.com/en-us/connectors。
+> 有标准和高级连接器的示例和信息，请参考链接：`https://make.powerautomate.com/en-us/connectors`。
 
 ### 导入流程序包
 
 要导入流，请遵循以下步骤：
 
-1. 登录 Power Automate 制作网页门户 (https://make.powerautomate.com)。
+1. 登录 Power Automate 制作网页门户 (`https://make.powerautomate.com`)。
 2. 点击“我的流”(My flows)。
-3. 点击“导入”(Import) ：
+3. 点击“导入”(Import)：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_493_1.png)
 
 图 25.14 - 导入到我的流
 
-
-
-
-
 4. 选择导入包（旧版版）。
-
-5. 点击“上传”打开文件资源管理器窗口，并浏览到包含要导入流的 .zip 包文件：
+5. 点击“上传”打开文件资源管理器窗口，并浏览到包含要导入流的 `.zip` 包文件：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_494_0.png)
 
@@ -8775,8 +8033,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 图 25.16 – 在导入前更新项目
 
 7. 选择现有资源或点击“创建新建”以添加正确类型的新资源。然后，点击“保存”：
-
-- 8. 完成后，点击**导入**。
+8. 完成后，点击**导入**。
 
 流将在环境中创建。与任何模板导入或创建一样，请对其进行编辑，确保任何变量或选择列表已更新为正确的对象，以便流能够按预期运行。如果目标环境中当前没有服务或资源类型，需要在导入期间创建它。缺失的资源或服务项将配置为“新建”，你需要为它们指定凭据，如图 25.18 所示。对于目标环境中未配置配置的服务，你需要重复此过程。
 
@@ -8784,33 +8041,33 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要导入解决方案，请按照以下步骤操作：
 
-- 1. 登录 Power Automate 制作门户 (https://make.powerautomate.com)。
-- 2. 点击**我的流**。
+1. 登录 Power Automate 制作门户 (`https://make.powerautomate.com`)。
+2. 点击**我的流**。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_495_0.png)
 
 图 25.17 – 在导入前更新凭据对象
 
-- 3. 点击“导入”：
-- 4. 选择 Power Automate
+3. 点击“导入”：
+4. 选择 Power Automate
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_496_0.png)
 
 图 25.18 – 导入到我的流
 
-- 5. 选择解决方案 (Dataverse)。
-- 6. 点击“导入解决方案”。
-- 7. 选择从何处导入（“设备”或“流水”）。如果你之前按照步骤导出了解决方案包，请选择“设备”。
+5. 选择解决方案 (Dataverse)。
+6. 点击“导入解决方案”。
+7. 选择从何处导入（“设备”或“流水”）。如果你之前按照步骤导出了解决方案包，请选择“设备”。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_496_1.png)
 
 图 25.19 – 从设备导入解决方案
 
-- 8. 点击“浏览”。
-- 9. 找到文件并点击“打开”。
-- 10. 点击“下一步”。
-- 11. 点击“导入”。
-- 12. 等待解决方案导入。
+8. 点击“浏览”。
+9. 找到文件并点击“打开”。
+10. 点击“下一步”。
+11. 点击“导入”。
+12. 等待解决方案导入。
 
 接下来我们将查看分发流。
 
@@ -8818,8 +8075,8 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 如果你导出了一个流并想将其共享，可以通过多种方式：
 
-- 通过电子邮件发送导出的 .zip 文件
-- 将导出的 .zip 文件发布在 OneDrive 或 Dropbox 等文件托管或共享站点
+- 通过电子邮件发送导出的 `.zip` 文件
+- 将导出的 `.zip` 文件发布在 OneDrive 或 Dropbox 等文件托管或共享站点
 - 通过 Power Automate 发送流
 
 前两种相对简单，我们将关注最后一种方法的步骤：通过 Power Automate 发送流。正如你所看到的，这些方法都允许用户下载并安装自己的流副本。
@@ -8828,30 +8085,33 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要通过 Power Automate 发送流，请按照以下步骤操作：
 
-- 1. 登录 Power Automate 制作门户 (https://make.powerautomate.com)。点击“我的流”，然后选择要发送的流。
-- 2. 选择流末尾的三点，然后选择“发送副本”：
+1. 登录 Power Automate 制作门户 (`https://make.powerautomate.com`)。点击“我的流”，然后选择要发送的流。
+2. 选择流末尾的三点，然后选择“发送副本”：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_497_0.png)
 
 图 25.20 – 为要发送的用户准备流副本，然后点击“发送”：
-- 3. 输入要发送流的用户的电子邮件地址，
+
+3. 输入要发送流的用户的电子邮件地址，
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_497_1.png)
 
 图 25.21 – 发送流副本
 
-- 4. 接收者应该收到一封电子邮件，提示将流添加到其环境中。
-- 5. 如果你是发送流的接收者，点击电子邮件正文中的“创建我的流”按钮开始导入和配置过程：
+4. 接收者应该收到一封电子邮件，提示将流添加到其环境中。
+5. 如果你是发送流的接收者，点击电子邮件正文中的“创建我的流”按钮开始导入和配置过程：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_498_0.png)
 
 图 25.22 – 发送流的示例
-- 6. 如必要，更新任何凭据并
+
+6. 如必要，更新任何凭据并
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_498_1.png)
 
 图 25.23 – 发送流的示例
-- 7. 更新任何凭据并点击“继续”。
+
+7. 更新任何凭据并点击“继续”。
 
 ### 总结
 
@@ -8880,22 +8140,18 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 运行历史将显示过去 28 天内流执行的所有次数。要查看运行历史，请按照以下步骤操作：
 
-- 1. 使用一个浏览器会话登录 Office 365 (https://portal.office.com)，使用未分配经理的用户。如果你在使用试用租户完成此过程，可以创建一个新用户账户且不分配经理。
-- 2. 导航到采购审批网站并提交请求。如果你还没有创建此工作流，请回顾第 11 章“处理多个审批”，并创建一个类似的工作流。
-- 3. 使用第二个浏览器会话导航到 Power Automate 制作门户 (https://make.powerautomate.com)。
-- 4. 选择“订单请求两阶段审批”工作流。运行历史将显示在页面底部：
+1. 使用一个浏览器会话登录 Office 365 (`https://portal.office.com`)，使用未分配经理的用户。如果你在使用试用租户完成此过程，可以创建一个新用户账户且不分配经理。
+2. 导航到采购审批网站并提交请求。如果你还没有创建此工作流，请回顾第 11 章“处理多个审批”，并创建一个类似的工作流。
+3. 使用第二个浏览器会话导航到 Power Automate 制作门户 (`https://make.powerautomate.com`)。
+4. 选择“订单请求两阶段审批”工作流。运行历史将显示在页面底部：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_502_0.png)
 
-
-
-
-
 ## 第 26 章
+
 ## 475
 
 5. 在 28 天运行历史记录的“开始”（Start）列下，点击日期链接。
-
 6. 将显示流运行情况。选择带有红色感叹号的步骤或操作。错误将在页面左侧的飞出面板中显示。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_503_0.png)
@@ -8924,20 +8180,20 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 要重新提交流，请按照以下步骤操作：
 
-- 从流的运行历史中打开失败的运行。
-- 点击**重新提交**（Resubmit）按钮：
+1. 从流的运行历史中打开失败的运行。
+2. 点击**重新提交**（Resubmit）按钮：
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_505_0.png)
 
 图 26.5 – 重新提交流
 
-- 3. 在对话框中点击确定以确认重新提交的操作。
+3. 在对话框中点击确定以确认重新提交的操作。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_505_1.png)
 
 图 26.6 – 确认重新提交操作
 
-- 4. 确认流按预期运行。
+4. 确认流按预期运行。
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_505_2.png)
 
@@ -8996,6 +8252,7 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 接下来，我们将查看流失败时生成的错误报告。
 
 ## 第 26 章
+
 509
 
 ### 理解错误代码
@@ -9004,145 +8261,147 @@ JSON 对象可以包含多种数据类型，包括字符串（文本）、整数
 
 | 错误代码 | 详情 |
 | :--- | :--- |
-| 401, 403 | 未授权（Unauthorized）。通常是由于凭据错误，但也可能表示帐户缺少权限。 |
-| 400 | 错误请求（Bad request）。这意味着提交的数据类型或格式不。 |
-| 404 | 未找到（Not found）。此错误意味着找不到指定的资源或路径。 |
-| 409 | 冲突（Conflict）。当两个进程尝试同时更新同一资源时，可能会发生。 |
-| 423 | 文件锁定（File locked）。当你尝试访问被锁定或签出的资源时，可能会发生这种情况。 |
 
-### 监控和故障排除流 (510)
+
+
+# 错误代码参考
+
+## 常见错误代码
+
+| 错误代码 | 详情 |
+| :--- | :--- |
+| `401`, `403` | 未授权（Unauthorized）。通常是由于凭据错误，但也可能表示帐户缺少权限。 |
+| `400` | 错误请求（Bad request）。这意味着提交的数据类型或格式不正确。 |
+| `404` | 未找到（Not found）。此错误意味着找不到指定的资源或路径。 |
+| `409` | 冲突（Conflict）。当两个进程尝试同时更新同一资源时，可能会发生。 |
+| `423` | 文件锁定（File locked）。当你尝试访问被锁定或签出的资源时，可能会发生这种情况。 |
+
+## 监控和故障排除流 (510)
 
 | 错误代码 | 详情 | 建议 |
 | :--- | :--- | :--- |
-| 429 | 超过速率限制（Rate limit exceeded）。如果你遇到 API 请求限制（在短时间内请求过多），就会发生这种情况。 | 检查流的运行历史以查看执行了多少次。检查连接的服务是否有任何速率限制。减少流中的步骤或调用次数，或降低运行流的频率。 |
-| 502 | 网关错误（Bad gateway）。当你指定 HTTP 而不是 HTTPS 作为 URL，或者尝试访问受响应错误的代理服务器保护的资源时，可能会发生。 | 验证指定的否正确的 HTTP 协议。如果服务位于防火墙或代理服务器之后，请确保其配置正确。 |
-| 503 | 服务不可（Service unavailable）。此错误表示你尝试访问的服务无响应、部分离线或负载过。。 | 等待并重试。如果错误持续，请联系服务供应商查看服务是否可用。 |
-| 504 | 网关超时（Gateway timeout）。这可能发生在受防火墙或代理保护的服务上，且连接超时或重置。此外，这可能表明服务受到入侵防御服务的中断。 | 验证保护资源的任何代理或防火墙服务配置正确且可用，并且没有入侵防御服务阻止请求。 |
+| `429` | 超过速率限制（Rate limit exceeded）。如果你遇到 API 请求限制（在短时间内请求过多），就会发生这种情况。 | 检查流的运行历史以查看执行了多少次。检查连接的服务是否有任何速率限制。减少流中的步骤或调用次数，或降低运行流的频率。 |
+| `502` | 网关错误（Bad gateway）。当你指定 HTTP 而不是 HTTPS 作为 URL，或者尝试访问受响应错误的代理服务器保护的资源时，可能会发生。 | 验证指定的 URL 是否正确使用了 HTTP 协议。如果服务位于防火墙或代理服务器之后，请确保其配置正确。 |
+| `503` | 服务不可用（Service unavailable）。此错误表示你尝试访问的服务无响应、部分离线或负载过高。 | 等待并重试。如果错误持续，请联系服务供应商查看服务是否可用。 |
+| `504` | 网关超时（Gateway timeout）。这可能发生在受防火墙或代理保护的服务上，且连接超时或重置。此外，这可能表明服务受到入侵防御服务的中断。 | 验证保护资源的任何代理或防火墙服务配置正确且可用，并且没有入侵防御服务阻止请求。 |
 
-表 26.1 – Power Automate 错误代码
+**表 26.1 – Power Automate 错误代码**
 
-如果你发现某些错误代码看起来很熟悉，是因为 Power Automate 基于标准的 Web 服务协议构建并访问 REST API 资源。检查你流中遇到的错误，以确定是否存在这些常见错误。
+如果你发现某些错误代码看起来很熟悉，是因为 `Power Automate` 基于标准的 Web 服务协议构建并访问 REST API 资源。检查你流中遇到的错误，以确定是否存在这些常见错误。
 
 接下来，我们将查看一些额外的故障排除资源。
 
+第 26 章 483
 
+## 查找其他资源
 
-
-第 26 章
-
-483
-
-### 查找其他资源
-
-有许多资源可以帮助排排除和解决 Power Automate 问题：
+有许多资源可以帮助排除和解决 `Power Automate` 问题：
 
 | 资源 | URL |
-| --- | --- |
-| Power Automate 文档 | https://learn.microsoft.com/en-us/power-automate/ |
-| Power Automate 故障排排除 | https://learn.microsoft.com/en-us/troubleshoot-platform/power-automate/welcome-power-automate |
-| Power Automate 社区 | https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPCommunity |
-| Power Automate 用户组 | https://www.automateug.com/home |
+| :--- | :--- |
+| Power Automate 文档 | `https://learn.microsoft.com/en-us/power-automate/` |
+| Power Automate 故障排除 | `https://learn.microsoft.com/en-us/troubleshoot-platform/power-automate/welcome-power-automate` |
+| Power Automate 社区 | `https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPCommunity` |
+| Power Automate 用户组 | `https://www.automateug.com/home` |
 
-表 26.2 - 额外的 Power Automate 资源
+**表 26.2 - 额外的 Power Automate 资源**
 
-如果你在流中使用了第三方应用程序作为一部分，你可能还想要查看它们提供的任何 REST API 文档。在排排除服务提供程序的连接性和功能问题时，这是一份无价的资源。
+如果你在流中使用了第三方应用程序作为一部分，你可能还想要查看它们提供的任何 REST API 文档。在排除服务提供程序的连接性和功能问题时，这是一份无价的资源。
 
-### 总结
+## 总结
 
-在本章中，你学习了如何使用 Power Automate 中的某些故障排除资源，包括运行历史和电子邮件错误报告。此外，你还学习了流检查器如何帮助识别流中的潜在问题。最后，你还了解了其他可以帮助扩展你的 Power Automate 知识和技能的资源。
+在本章中，你学习了如何使用 `Power Automate` 中的某些故障排除资源，包括运行历史和电子邮件错误报告。此外，你还学习了流检查器如何帮助识别流中的潜在问题。最后，你还了解了其他可以帮助扩展你的 `Power Automate` 知识和技能的资源。
 
-## 27
+---
 
-## Power Platform 中的治理
+# 第 27 章：Power Platform 中的治理
 
-在当今的现代工作场所中，数据和应用程序移动非常快——往往快于旨在保护它们的策略。Microsoft Power Platform 拥有 Power Apps、Power Automate、Power BI 和 Power Pages 等低代码工具，赋予了用户进行创新的能力，而无需等待 IT 部门。这种自由伴随着责任（至少对于企业 IT 而言）——确保每个应用、流和数据集都符合组织的安全、合规性和一致性标准。这正是数据和应用治理介入的场域——在创建者的灵活性和管理者的控制力之间建立平衡。
+在当今的现代工作场所中，数据和应用程序移动非常快——往往快于旨在保护它们的策略。Microsoft `Power Platform` 拥有 `Power Apps`、`Power Automate`、`Power BI` 和 `Power Pages` 等低代码工具，赋予了用户进行创新的能力，而无需等待 IT 部门。这种自由伴随着责任（至少对于企业 IT 而言）——确保每个应用、流和数据集都符合组织的安全、合规性和一致性标准。这正是数据和应用治理介入的场域——在创建者的灵活性和管理者的控制力之间建立平衡。
 
 在本章中，我们将探索数据和应用治理的概念，以及它们如何为企业提供某些护栏，同时又不扼杀大家的创造力。
 
 我们将涵盖以下主题：
 
--   理解治理概念
--   与 Power Platform 卓越中心（Center of Excellence）协作
--   识别合规性控制
+- 理解治理概念
+- 与 `Power Platform` 卓越中心（Center of Excellence）协作
+- 识别合规性控制
 
 让我们开始吧！
 
-### 理解治理概念
+## 理解治理概念
 
-数据治理的思想专注于对组织数据进行管理、完整性和保护。它定义了谁可以访问什么数据、这些数据如何分类，以及它们应该如何存储或共享。强大的数据治理策略允许企业信任 Power BI 仪表板生成的见解以及 Power Automate 流所做出的自动化决策。
+数据治理的思想专注于对组织数据进行管理、完整性和保护。它定义了谁可以访问什么数据、这些数据如何分类，以及它们应该如何存储或共享。强大的数据治理策略允许企业信任 `Power BI` 仪表板生成的见解以及 `Power Automate` 流所做出的自动化决策。
 
-另一方面，应用治理专注于应用程序和工作流如何在生态系统中进行部署和维护。如果没有适当的监督、策略或控制，Power Platform 将变得像狂野西部一样。Power Platform 最大的优势是它将业务自动化和应用创建交给了大众。同样，Power Platform 最大的劣势也是它将业务自动化和应用创建交给了大众。
+另一方面，应用治理专注于应用程序和工作流如何在生态系统中进行部署和维护。如果没有适当的监督、策略或控制，`Power Platform` 将变得像狂野西部一样。`Power Platform` 最大的优势是它将业务自动化和应用创建交给了大众。同样，`Power Platform` 最大的劣势也是它将业务自动化和应用创建交给了大众。
 
 虽然优势为开发具有创新性和洞察力工具的潜力打开了大门，但更频繁发生的劣势可能是由意图良好的员工创建了数百个未监控的应用或自动化任务。应用治理为应用生命周期管理、环境配置、数据泄漏防护（DLP）和所有权跟踪建立了标准。它确保每个解决方案（无论是由 IT 还是业务用户构建）都符合公司的合规和安全要求。
 
-为了使这种治理成为现实，Microsoft 在 Power Platform 中直接包含了强大的工具。通过 Power Platform 管理中心，管理员拥有工具来管理环境、容量并在整个租户中应用策略。数据泄漏防护策略指定了哪些连接器可以跨服务共享数据，确保敏感信息不会流到批准通道之外。
+为了使这种治理成为现实，Microsoft 在 `Power Platform` 中直接包含了强大的工具。通过 `Power Platform` 管理中心，管理员拥有工具来管理环境、容量并在整个租户中应用策略。数据泄漏防护策略指定了哪些连接器可以跨服务共享数据，确保敏感信息不会流到批准通道之外。
 
-卓越中心（CoE）启动包通过预构建的分析、仪表板和工作流扩展了这些功能，用于跟踪应用使用情况、识别高风险制作者并自动化治理任务。Power BI 集成提供了丰富的报告，以视觉化跨环境的采用趋势和合规状态。CoE 是一套强大的工具和仪表板，可以用于跟踪整个组织内 Power Platform 组件的生命周期和使用情况。
+卓越中心（CoE）启动包通过预构建的分析、仪表板和工作流扩展了这些功能，用于跟踪应用使用情况、识别高风险制作者并自动化治理任务。`Power BI` 集成提供了丰富的报告，以视觉化跨环境的采用趋势和合规状态。CoE 是一套强大的工具和仪表板，可以用于跟踪整个组织内 `Power Platform` 组件的生命周期和使用情况。
 
-总而言，它们为组织提供了一份负责任创新的指南。Power Platform 内部治理并不是为了扼杀创造力；它是在赋予力量的同时保持业务及其数据的安全。通过理解数据治理和权限治理之间的相互作用——并利用必要的管理工具——组织让用户安全地构建，同时确保对数字环境的端到端控制。这赋予了公民开发者创新的能力，同时得到了自动化技术的补充，该技术允许通过符合 ISO 标准审计和日志进行更强大的监督。这种赋能与监督的结合，将零散的公民构建应用集合转变为安全的、企业级的变革平台。
+总而言之，它们为组织提供了一份负责任创新的指南。`Power Platform` 内部治理并不是为了扼杀创造力；它是在赋予力量的同时保持业务及其数据的安全。通过理解数据治理和权限治理之间的相互作用——并利用必要的管理工具——组织让用户安全地构建，同时确保对数字环境的端到端控制。这赋予了公民开发者创新的能力，同时得到了自动化技术的补充，该技术允许通过符合 ISO 标准审计和日志进行更强大的监督。这种赋能与监督的结合，将零散的公民构建应用集合转变为安全的、企业级的变革平台。
 
-除了 CoE 工具外，Microsoft 还建议建立一个内部治理机构（由人员组成）来协调 Power Platform 治理，并鼓励采用和负责的开发实践。
+除了 CoE 工具外，Microsoft 还建议建立一个内部治理机构（由人员组成）来协调 `Power Platform` 治理，并鼓励采用和负责的开发实践。
 
-### 与 Power Platform 卓越中心协作
+## 与 Power Platform 卓越中心协作
 
-Power Platform 卓越中心（CoE）是管理、治理和扩展低代码创新的组织骨干。随着企业日益依赖 Power Apps、Power Automate、Power BI 和 Power Pages 等工具，CoE 为原本可能变成混乱的临时应用和断开工作流构成的格局提供了结构和策略。它不仅仅是一个工具箱或一组仪表板——它还是一个驱动整个企业 Power Platform 生态系统采用、确保质量并维护控制的框架。
+`Power Platform` 卓越中心（CoE）是管理、治理和扩展低代码创新的组织骨干。随着企业日益依赖 `Power Apps`、`Power Automate`、`Power BI` 和 `Power Pages` 等工具，CoE 为原本可能变成混乱的临时应用和断开工作流构成的格局提供了结构和策略。它不仅仅是一个工具箱或一组仪表板——它还是一个驱动整个企业 `Power Platform` 生态系统采用、确保质量并维护控制的框架。
 
-CoE 的核心是促进创新与治理之间的平衡。它赋予制作者构建解决方案的能力，同时让管理员能够看到这些解决方案是如何被创建、共享和使用的。CoE 为环境管理、命名规范、安全策略和连接器使用建立了最佳实践。它识别出值得 IT 支持的高价值应用，并突出了可能需要退役的冗余或未使用应用。这种主动的监督将 Power Platform 从独立项目的集合转变为一个协调的、可持续的转型系统。
+CoE 的核心是促进创新与治理之间的平衡。它赋予制作者构建解决方案的能力，同时让管理员能够看到这些解决方案是如何被创建、共享和使用的。CoE 为环境管理、命名规范、安全策略和连接器使用建立了最佳实践。它识别出值得 IT 支持的高价值应用，并突出了可能需要退役的冗余或未使用应用。这种主动的监督将 `Power Platform` 从独立项目的集合转变为一个协调的、可持续的转型系统。
 
-由 Microsoft 开发的 Power Platform CoE 启动包为启动此工作提供了现成的基础。它包含了应用、Power BI 报告、流和 Dataverse 表，有助于监控使用情况、执行策略并鼓励业务部门与 IT 之间的协作。通过其仪表板，管理员可以看到谁在构建、应用使用的频率频率以及数据流向何处。这种可见性对于维护合规性、保护数据以及优化跨环境许可和资源至关重要。
+由 Microsoft 开发的 `Power Platform` CoE 启动包为启动此工作提供了现成的基础。它包含了应用、`Power BI` 报告、流和 `Dataverse` 表，有助于监控使用情况、执行策略并鼓励业务部门与 IT 之间的协作。通过其仪表板，管理员可以看到谁在构建、应用使用的频率以及数据流向何处。这种可见性对于维护合规性、保护数据以及优化跨环境许可和资源至关重要。
 
-安装和配置卓越中心超出了本书的范围，需要大量的管理时间和精力。要了解更多关于部署卓越中心启动包的信息，请访问 https://learn.microsoft.com/en-us/power-platform/guidance/coe/starter-kit。
+安装和配置卓越中心超出了本书的范围，需要大量的管理时间和精力。要了解更多关于部署卓越中心启动包的信息，请访问 `https://learn.microsoft.com/en-us/power-platform/guidance/coe/starter-kit`。
 
 卓越中心启动包的组件分为六类：
 
--   核心组件
--   业务价值工具包
--   治理组件
--   培养组件
--   主题组件
--   创新待办组件
+- 核心组件
+- 业务价值工具包
+- 治理组件
+- 培养组件
+- 主题组件
+- 创新待办组件
 
 在本节中，我们将涵盖这些每一个功能。
 
 ### 核心组件
 
-核心组件构成了整个租户治理和运营洞察的基础。这些组件提供了理解 Power Apps、Power Automate 流和其他 Power Platform 资产如何被创建、共享和使用所需的清单和分析。通过在 Dataverse 中收集和存储有关环境、应用、连接器、制作者和流的元数据，核心组件建立了一个全面的记录系统，从而实现数据驱动的治理和决策。
+核心组件构成了整个租户治理和运营洞察的基础。这些组件提供了理解 `Power Apps`、`Power Automate` 流和其他 `Power Platform` 资产如何被创建、共享和使用所需的清单和分析。通过在 `Dataverse` 中收集和存储有关环境、应用、连接器、制作者和流的元数据，核心组件建立了一个全面的记录系统，从而实现数据驱动的治理和决策。
 
-这些组件的核心是一组清单同步流——使用 Power 管理连接器定期爬取你的租户的 Power Automate 云流。这些流收集了包括所有权、共享权限、环境容量、连接器使用情况和流活动在内的详细信息。你收集的数据填充 Dataverse 表，可以使用内置的 Power Apps 仪表板或包含的 Power BI 报告进行分析。
+这些组件的核心是一组清单同步流——使用 `Power` 管理连接器定期爬取你的租户的 `Power Automate` 云流。这些流收集了包括所有权、共享权限、环境容量、连接器使用情况和流活动在内的详细信息。你收集的数据填充 `Dataverse` 表，可以使用内置的 `Power Apps` 仪表板或包含的 `Power BI` 报告进行分析。
 
-
-
-
-
-# 第 27 章
+**第 27 章**
 
 需要注意的是，CoE 组件本身是流、应用和仪表板，它们会消耗配额（例如流运行）。
 
+```
 ![](img/bfc58bb450784476738fab1c5bfe829d_517_0.png)
+```
 
-图 27.1 - Power Platform 卓越中心（CoE）命令与设置中心
+**图 27.1 - Power Platform 卓越中心（CoE）命令与设置中心**
 
-核心组件还包括模型驱动的 Power Apps，它们作为库存信息评估、分类和监督的行政平台。这些应用程序使管理员和治理团队能够对环境进行分类、定位高价值解决方案并监控合规性。此外，它们促进了与治理和培养组件的集成；例如，风险应用可以启动治理工作流，而出色的开发者可以获得认可和支持。
+核心组件还包括模型驱动的 `Power Apps`，它们作为库存信息评估、分类和监督的行政平台。这些应用程序使管理员和治理团队能够对环境进行分类、定位高价值解决方案并监控合规性。此外，它们促进了与治理和培养组件的集成；例如，风险应用可以启动治理工作流，而出色的开发者可以获得认可和支持。
 
 ### 业务价值工具包
 
-虽然核心组件跟踪库存和使用情况，但业务价值工具包侧重于结果——展示了使用 Power Apps、Power Automate 和 Power BI 构建的低代码解决方案转化为真实的业务效益。
+虽然核心组件跟踪库存和使用情况，但业务价值工具包侧重于结果——展示了使用 `Power Apps`、`Power Automate` 和 `Power BI` 构建的低代码解决方案转化为真实的业务效益。
 
-该工具包使能够量化投资回报率 (ROI)、跟踪生产力提升，并收集成功案例，以证明持续投资该平台的合理性。
+该工具包使组织能够量化投资回报率 (ROI)、跟踪生产力提升，并收集成功案例，以证明持续投资该平台的合理性。
 
 | 价值计算 | Microsoft Power Platform |
 | :--- | :--- |
-| 价值计算是您提供有关应用更详细信息的地方。它有助于构建和交付价值。通过各种下拉控件和影响来审查每个战略目标并考虑其贡献。跟踪可能出现在仪表板中生成的关键元素 | 提供更安全、健康的工作环境 <br> 健康与安全局 | 减少 <br> 通过建立和维护安全健康的工作场所，优先考虑员工的福祉，减轻危害并确保每个人健康。 <br> 核心声明 <br> 转型安全检查以获得更安全的工作场所 <br> 价值计算 <br> 工作场所事故减少 <br> -33.57% | £480,000.00 | 价值计算行动目标 | ○ 目标区域 <br> 已减少 | ○ 工作场所事故 实施前 | 143 实施后 | 95 价值计算的可用衡量标准 <br> ○ 平均工作场所受伤 | | |
+| 价值计算是您提供有关应用更详细信息的地方。它有助于构建和交付价值。通过各种下拉控件和影响来审查每个战略目标并考虑其贡献。跟踪可能出现在仪表板中生成的关键元素 | 提供更安全、健康的工作环境 <br> 健康与安全局 <br> 减少 <br> 通过建立和维护安全健康的工作场所，优先考虑员工的福祉，减轻危害并确保每个人健康。 <br> 核心声明 <br> 转型安全检查以获得更安全的工作场所 <br> 价值计算 <br> 工作场所事故减少 <br> -33.57% <br> £480,000.00 <br> 价值计算行动目标 <br> ○ 目标区域 <br> 已减少 <br> ○ 工作场所事故 实施前 <br> 143 实施后 <br> 95 <br> 价值计算的可用衡量标准 <br> ○ 平均工作场所受伤 |
 
-图 27.2 – 业务价值工具包内部的价值计算
+**图 27.2 – 业务价值工具包内部的价值计算**
 
-该工具包的核心提供了为创作者和业务单元设计的应用程序、模板和 Power BI 仪表板，以便准确记录其应用程序所解决的问题，评估潜在的时间或成本减少，并将这些结果连接到可衡量的业务指标。例如，创作者可能会展示一份演示文稿，说明 Power App 如何每周减少 10 小时的人工数据输入，或替代了产生巨额年度开支的过时工具。随后，管理员可以汇总这些发现，以说明整个组织节省的总工时、避免的成本或效率的提高。
+该工具包的核心提供了为创作者和业务单元设计的应用程序、模板和 `Power BI` 仪表板，以便准确记录其应用程序所解决的问题，评估潜在的时间或成本减少，并将这些结果连接到可衡量的业务指标。例如，创作者可能会展示一份演示文稿，说明 `Power App` 如何每周减少 10 小时的人工数据输入，或替代了产生巨额年度开支的过时工具。随后，管理员可以汇总这些发现，以说明整个组织节省的总工时、避免的成本或效率的提高。
 
-除了指标之外，业务价值工具包还支持故事讲述和利益相关者参与。它帮助组织突出具有影响力的用例，识别值得进一步开发的高价值解决方案，并在团队之间共享最佳实践。通过将定量数据与定性洞察相结合，该工具包更容易向领导层传达 Power Platform 的战略性，不仅展示了平台被使用的范围，还展示了它是如何创造可衡量价值的。
+除了指标之外，业务价值工具包还支持故事讲述和利益相关者参与。它帮助组织突出具有影响力的用例，识别值得进一步开发的高价值解决方案，并在团队之间共享最佳实践。通过将定量数据与定性洞察相结合，该工具包更容易向领导层传达 `Power Platform` 的战略价值，不仅展示了平台被使用的范围，还展示了它是如何创造可衡量价值的。
 
 ### 治理组件
 
-治理组件将核心组件提供的可见性和监控扩展到主动控制和合规性管理。它包括自动化流程、应用和仪表板，帮助管理员执行组织标准、管理风险并维持对 Power Platform 使用情况的监督。通过这些工具，管理员可以识别潜在风险的应用或流——例如广泛共享或使用未经批准的连接器的应用——并触发自动化工作流对其进行审查、批准或修复。
+治理组件将核心组件提供的可见性和监控扩展到主动控制和合规性管理。它包括自动化流程、应用和仪表板，帮助管理员执行组织标准、管理风险并维持对 `Power Platform` 使用情况的监督。通过这些工具，管理员可以识别潜在风险的应用或流——例如广泛共享或使用未经批准的连接器的应用——并触发自动化工作流对其进行审查、批准或修复。
 
 ### 培养组件
 
@@ -9158,65 +8417,65 @@ CoE 的核心是促进创新与治理之间的平衡。它赋予制作者构建�
 
 创新积压的元素为组织提供了一种系统方法，用于收集、评估和排序对新应用程序、流程或解决方案的提案。该框架涵盖应用程序和工作流，允许员工提交想法，阐述他们寻求解决的业务问题，并按部门或潜在影响对这些想法进行分类。
 
+```
 ![](img/bfc58bb450784476738fab1c5bfe829d_520_0.png)
+```
 
-图 27.3 向创新积压提交想法
+**图 27.3 向创新积压提交想法**
 
-接下来，我们将查看 Power Platform 管理中心可用的数据和隐私控制。
+接下来，我们将查看 `Power Platform` 管理中心可用的数据和隐私控制。
 
-### 识别合规控制
+## 识别合规控制
 
-Power Platform 管理中心提供了许多工具来保护和管理跨企业的数据流。以下章节描述了可用的一些数据保护和合规能力。
+`Power Platform` 管理中心提供了许多工具来保护和管理跨企业的数据流。以下章节描述了可用的一些数据保护和合规能力。
 
 ### 客户托管加密密钥
 
-Microsoft Power Platform 中的客户托管密钥 (CMK) 功能允许组织使用自己的加密密钥来保护存储在平台底层服务（如 Dataverse）中的数据。默认情况下，Microsoft 使用微软托管密钥对静态数据进行加密。
+Microsoft `Power Platform` 中的客户托管密钥 (CMK) 功能允许组织使用自己的加密密钥来保护存储在平台底层服务（如 `Dataverse`）中的数据。默认情况下，Microsoft 使用微软托管密钥对静态数据进行加密。
 
 通过激活客户托管密钥，您的组织保留对密钥所有权和生命周期控制。这允许您在需要进行轮换、撤销或禁用。
 
 ### 连接器和数据策略
 
-连接器策略和数据策略（也称为数据泄露防护 DLP 策略）是 Power Platform 中的关键治理功能，旨在控制数据在系统之间的移动方式。它们允许管理员定义可以使用哪些连接器——例如 SharePoint、Outlook、SQL Server 或 Salesforce。见图 27.4。
+连接器策略和数据策略（也称为数据泄露防护 DLP 策略）是 `Power Platform` 中的关键治理功能，旨在控制数据在系统之间的移动方式。它们允许管理员定义可以使用哪些连接器——例如 `SharePoint`、`Outlook`、`SQL Server` 或 `Salesforce`。见图 27.4。
 
+```
 ![](img/bfc58bb450784476738fab1c5bfe829d_521_0.png)
+```
 
-图 27.4 - 查看连接器类别
+**图 27.4 - 查看连接器类别**
 
-例如，DLP 策略可能允许 Power Apps 和 Power Automate 流使用 SharePoint，但禁止连接 Twitter 或 Dropbox。
+例如，DLP 策略可能允许 `Power Apps` 和 `Power Automate` 流使用 `SharePoint`，但禁止连接 `Twitter` 或 `Dropbox`。
 
 ### 网络策略
 
-Azure 虚拟网络 (VNet) 策略通过网络隔离和访问控制为平台环境和 Azure 资源之间提供安全、私有的连接。通过 VNet 集成，管理员可以确保来自 Power Apps、Power Automate 和 Dataverse 的数据流量留在信任网络中，而不是经过公共互联网。此功能允许组织使用私有端安全地连接到本地系统或 Azure 服务。
+Azure 虚拟网络 (VNet) 策略通过网络隔离和访问控制为平台环境和 Azure 资源之间提供安全、私有的连接。通过 VNet 集成，管理员可以确保来自 `Power Apps`、`Power Automate` 和 `Dataverse` 的数据流量留在信任网络中，而不是经过公共互联网。此功能允许组织使用私有端点安全地连接到本地系统或 Azure 服务。
 
-您可以在此处了解更多关于 Power Platform 的 VNet 能力：https://learn.microsoft.com/en-us/power-platform/admin/vnet-support-overview。
+您可以在此处了解更多关于 `Power Platform` 的 VNet 能力：`https://learn.microsoft.com/en-us/power-platform/admin/vnet-support-overview`。
 
 ### 防火墙策略
 
-防火墙策略通过限制连接到 Dataverse 的 IP 地址或范围，允许组织管理和保护环境的网络访问。这些策略充当屏障，仅允许来自信任网络（如公司办公室、VPN 网关或指定的 Azure 区域）的流量。管理员可以在 Power Platform 管理中心设置防火墙规则。
+防火墙策略通过限制连接到 `Dataverse` 的 IP 地址或范围，允许组织管理和保护环境的网络访问。这些策略充当屏障，仅允许来自信任网络（如公司办公室、VPN 网关或指定的 Azure 区域）的流量。管理员可以在 `Power Platform` 管理中心设置防火墙规则。
 
 ### 租户隔离
 
-租户隔离是一种治理和安全功能，控制数据在不同 Microsoft Entra ID（原 Azure AD）租户之间的移动方式，帮助组织防止跨边界的未经授权共享。它允许管理员定义并执行阻止或允许特定的 Power Apps、Power Automate 以及其他 Power Platform 服务连接。在配置租户隔离的情况下，创作者只能连接到已批准的租户或环境，确保敏感业务数据留在组织的信任域内。
+租户隔离是一种治理和安全功能，控制数据在不同 Microsoft `Entra ID`（原 Azure AD）租户之间的移动方式，帮助组织防止跨边界的未经授权共享。它允许管理员定义并执行阻止或允许特定的 `Power Apps`、`Power Automate` 以及其他 `Power Platform` 服务连接。在配置租户隔离的情况下，创作者只能连接到已批准的租户或环境，确保敏感业务数据留在组织的信任域内。
 
 ### Cookie 管理
 
-IP Cookie 绑定是一种安全功能，通过将用户的身份验证 Cookie 与发行时的 IP 地址绑定，防止会话劫持和未经的访问。启用后，此机制可确保如果会话 Cookie 被不同的 IP 地址拦截或重用，会话将失效，从而有效阻止潜在入侵者。
-
-
-
-
+IP Cookie 绑定是一种安全功能，通过将用户的身份验证 Cookie 与发行时的 IP 地址绑定，防止会话劫持和未经授权的访问。启用后，此机制可确保如果会话 Cookie 被不同的 IP 地址拦截或重用，会话将失效，从而有效阻止潜在入侵者。
 
 ### Copilot 代理身份验证
 
-Copilot 代理通过 Microsoft Entra ID (Azure AD) 进行身份验证，继承其运行的用户或环境的权限和访问控制。这意味着 Copilot 只能与经过验证的用户或应用程序有权访问的数据进行交互，从而符合组织的安全策略。
+`Copilot` 代理通过 Microsoft `Entra ID` (Azure AD) 进行身份验证，继承其运行的用户或环境的权限和访问控制。这意味着 `Copilot` 只能与经过验证的用户或应用程序有权访问的数据进行交互，从而符合组织的安全策略。
 
-### 总结
+## 总结
+
+
 
 在本章中，你学习了 Power Platform 和卓越中心启动套件（Center of Excellence Starter Kit）的数据治理、管理和安全功能。这些功能共同可以帮助你保护组织最关键的资产——数据。
 
 恭喜你读完了这本书的最后部分！我们希望你在阅读后，对 Power Automate 如何帮助提高生产力有了更深入了解，并获得了一些如何将 Power Automate 纳入你的工具箱的真实案例。
-
-## 28
 
 ## 解锁你的专属福利
 
@@ -9229,7 +8488,7 @@ Copilot 代理通过 Microsoft Entra ID (Azure AD) 进行身份验证，继承�
 
 ### 通过 3 个简单步骤解锁本书的免费福利
 
-### 第 1 步
+#### 第 1 步
 
 请为第 3 步准备好你的购买发票。如果你拥有纸质版，请使用手机扫描并将其保存为 PDF、JPG 或 PNG 格式。
 
@@ -9237,19 +8496,19 @@ Copilot 代理通过 Microsoft Entra ID (Azure AD) 进行身份验证，继承�
 
 > 注意：如果你直接从 Packt 购买此书，则不需要发票。完成第 2 步后，你可以立即访问你的专属内容。
 
-### 第 2 步
+#### 第 2 步
 
-扫描二维码或访问 packpub.com/unlock。
+扫描二维码或访问 `packpub.com/unlock`。
 
 在打开的页面上（类似于桌面端的图 28.1），按名称搜索此书并选择正确的版本。
 
-### 发现并解锁你书籍的专属福利
+**发现并解锁你书籍的专属福利**
 
 买了 Packt 的书吗？你的购买可能附带免费赠送福利，旨在最大化你的学习效果。在此发现并解锁这些福利
 
 图 28.1：桌面端的 Packt 解锁落地页
 
-### 第 3 步
+#### 第 3 步
 
 选择书籍后，登录你的 Packt 账户或免费创建一个账户。然后上传你的发票（PDF、PNG 或 JPG，大小不超过 10 MB）。按照屏幕上的指令完成流程。
 
@@ -9257,14 +8516,15 @@ Copilot 代理通过 Microsoft Entra ID (Azure AD) 进行身份验证，继承�
 
 如果你遇到困难并需要帮助，请访问 https://www.packpub.com/unlock-benefits/help 查看有关如何查找发票等的详细常见问题解答。此二维码将带你进入帮助页面。
 
-注意：如果你仍然遇到问题，请联系 customercare@packt.com。
+> 注意：如果你仍然遇到问题，请联系 `customercare@packt.com`。
 
-### <packt>
+### Packt
 
-packtpub.com
-订阅我们的在线数字图书馆，即可访问超过 7,000 本书籍和视频，以及行业领先的工具，帮助你规划个人发展并促进职业进步。更多信息，请访问我们的网站。
+`packtpub.com`
 
-### 为什么要订阅？
+订阅我们的在线数字图书馆，即可访问超过 7,000 本`书籍和视频`，以及行业领先的工具，帮助你规划个人发展并促进职业进步。更多信息，请访问我们的网站。
+
+#### 为什么要订阅？
 
 - 通过来自 4,000 多名行业专业人士的实用电子书和视频，减少学习时间，增加编码时间
 - 通过专为你定制的技能计划（Skill Plans）提升学习效果
@@ -9272,15 +8532,15 @@ packtpub.com
 - 全文搜索方便访问关键信息
 - 内容支持复制粘贴、打印和书签
 
-在 www.packtpub.com，你还可以阅读免费技术文章集，订阅一系列免费通讯邮件，并接收 Packt 书籍和电子书的专属折扣和优惠。
+在 `www.packtpub.com`，你还可以阅读免费技术文章集，订阅一系列免费通讯邮件，并接收 Packt 书籍和电子书的专属折扣和优惠。
 
 ### 你可能喜欢的其他书籍
 
 如果你喜欢这本书，你可能对 Packt 的其他书籍感兴趣：
 
-### 数字转型 Power Platform 指南（The Power Platform Playbook for Digital Transformation）
+#### 数字转型 Power Platform 指南（The Power Platform Playbook for Digital Transformation）
 
-Victor Dantas, Chris Huntingtonford
+`Victor Dantas`, `Chris Huntingtonford`
 
 ISBN: 978-1-80512-1-398
 
@@ -9291,9 +8551,9 @@ ISBN: 978-1-80512-1-398
 - 利用真实案例制定数字化转型和变更管理策略
 - 利用 AI 驱动的工具优化业务工作流并增强用户体验
 
-### Microsoft Power Apps 食谱（Microsoft Power Apps Cookbook）
+#### Microsoft Power Apps 食谱（Microsoft Power Apps Cookbook）
 
-Matthew Weston, Elisa Mendoza
+`Matthew Weston`, `Elisa Mendoza`
 
 ISBN: 978-1-83546-5-158
 
@@ -9306,9 +8566,9 @@ ISBN: 978-1-83546-5-158
 - 构建响应式应用
 - 使用 AI 开发自定义应用
 
-### 学习 Power Apps（Learn Power Apps）
+#### 学习 Power Apps（Learn Power Apps）
 
-Matthew Weston, Elisa Mendoza
+`Matthew Weston`, `Elisa Mendoza`
 
 ISBN: 978-1-80107-0-645
 
@@ -9321,15 +8581,13 @@ ISBN: 978-1-80107-0-645
 
 ### Packt 正在寻找作者
 
-如果你有意成为 Packt 的作者，请访问 packt.com 并提交你的想法。我们曾与数千上万像你这样的开发者和技术专业人士合作，分享他们的见解。
+如果你有意成为 Packt 的作者，请访问 `packt.com` 并提交你的想法。我们曾与数千上万像你这样的开发者和技术专业人士合作，分享他们的见解。
 
 ### 分享你的想法
 
 现在你已经完成了《使用 Power Automate 进行工作流自动化》（第三版），我们非常想听听你的想法！如果你是从亚马逊购买的此书，请点击此处直接进入评论页面。你的评论对我们非常重要，并帮助我们确保交付了高质量的内容。
 
-
-
-
+---
 
 # B
 
@@ -9343,14 +8601,13 @@ ISBN: 978-1-80107-0-645
 - 测试 204
 - 触发器，创建 192-194
 
-### 分支 16
+## 分支 16
 
 - 桶 265
 - 业务流程 8, 10
 - 管理 8
 - 运营 8
 - 支持 8
-
 - 按钮流 81, 82
 - 配置，向经理发送电子邮件 83-88
 - 执行 88, 89
@@ -9359,31 +8616,21 @@ ISBN: 978-1-80107-0-645
 # C
 
 - 画布 26
-
-卓越中心 (CoE) 启动工具包 486
-
+- 卓越中心 (CoE) 启动工具包 486
 - ChatGPT 390
-
 - 客户端 ID 299
 - 客户端密钥 299
 - 创建 303-305
-
 - 云流
 - 分享 109-112
-
 - Cloudmersive 免费订阅
 - 注册 436
-
 - 云存储提供商
 - 设置 437
-
 - 集合 434
-
-逗号分隔值 (CSV) 298
-
-通用数据服务 (CDS) 13, 165
-合规控制，管理员中心
-
+- 逗号分隔值 (CSV) 298
+- 通用数据服务 (CDS) 13, 165
+- 合规控制，管理员中心
 - 连接器和数据策略 493
 - Cookie 管理 494
 - Copilot 身份验证 495
@@ -9392,185 +8639,129 @@ ISBN: 978-1-80107-0-645
 - 识别 492
 - 网络策略 494
 - 租户隔离 494
-
-条件操作符 128-130
-对象，评估 130
-
-条件 13, 127
-置信度评分 400
-
+- 条件操作符 128-130
+- 对象，评估 130
+- 条件 13, 127
+- 置信度评分 400
 - 连接 12, 242
 - 创建，到数据库 242, 243
-
 - 连接引用 12
 - 连接字符串 234, 242
-
 - 连接器 10, 11, 43
-
-联系人数据库
-
+- 联系人数据库
 - 配置 340-344
 - 流程，创建 243-245
 - 流程，执行 245
 - 流运行历史，查看 245
 - 流程，验证 245
 - SQL 数据，查看 266
-
-Copilot 390, 415
-
+- Copilot 390, 415
 - Copilot 流
 - 创建 416-419
 - 描述 426, 427
 - 编辑 420-425
-
-CSV 表格操作
-
+- CSV 表格操作
 - 创建 298
-
-客户关系管理 (CRM) 动态值 26
+- 客户关系管理 (CRM) 动态值 26
 
 # D
 
-数据库
-
+- 数据库
 - 连接到 235
 - 连接，通过服务器 236, 237
 - 连接，创建到 242, 243
 - 内容，添加 243
 - 创建 238
-
-数据库表
-
+- 数据库表
 - 创建 239-242
-
-数据网关 15
-
+- 数据网关 15
 - 配置 329-334
-
-数据治理 486
-
-数据泄漏防护 (DLP) 486
-
+- 数据治理 486
+- 数据泄漏防护 (DLP) 486
 - 策略 493
-
-数据爬取 367
-
+- 数据爬取 367
 - 数据，输入 381-384
 - 多页面，使用默认作者 371-373
 - 多页面，使用 LoopIndex 374-381
 - 截图，捕捉 385-387
 - 单页 368-371
-
-Dataverse 13, 14, 15, 166
-
+- Dataverse 13, 14, 15, 166
 - 标准表 166
-
-日期和时间函数 345
-
+- 日期和时间函数 345
 - 星期，计算 150-154
 - 操作 150
 - 工作日，计算 154-159
-
-桌面流
-
+- 桌面流
 - 创建 113-118
 - 仅运行权限，共享 119-121
 - 分享 112, 118, 119
-
-Dropbox
-
+- Dropbox
 - URL 76
-
-动态内容 26, 325
+- 动态内容 26, 325
 
 # E
 
-努力-影响矩阵 6
-电子数据交换 (EDI) 66
-
-电子健康记录 (EMR) 233
-
-电子邮件
-
+- 努力-影响矩阵 6
+- 电子数据交换 (EDI) 66
+- 电子健康记录 (EMR) 233
+- 电子邮件
 - 操作 44
 - 连接器 44
 - 流程，创建 46-48
 - 流程，执行 49,50
 - 读取 45
 - 使用 45
-
-电子邮件附件
-
+- 电子邮件附件
 - 流程，创建 51-56
 - 流程，执行 60
 - 流程，验证 60-62
 - 处理 50, 51
 - 回复邮件，添加 57-75
-
-电子邮件错误报告
-
+- 电子邮件错误报告
 - 查看 478
-
-Encodian Flow 连接器 434
-
+- Encodian Flow 连接器 434
 - 输入格式化 434, 435
 - 令牌 435, 436
-
-Encodian 试用
-
+- Encodian 试用
 - 开始 433
-
-端点 297
-
-企业资源计划 (ERP) 8, 233
-
+- 端点 297
+- 企业资源计划 (ERP) 8, 233
 - 实体 165
-
-Entra ID 295
-
-Entra ID 应用程序
-
+- Entra ID 295
+- Entra ID 应用程序
 - 配置 299-302
+- 错误代码 481, 482
+- 每个人必须审批类型 189
 
-错误代码 481, 482
+# 索引 F
 
-每个人必须审批类型 189
-
-索引
-
-### 高管创建流
+- 高管创建流
 - 内容，发送到 GPT 441-449
 - 创建 437
 - 文档，转换 440, 441
 - 文档，填充 449, 450
 - 测试 451, 452
 - 触发器，配置 438, 439
-
-### 高管创建，解决方案
+- 高管创建，解决方案
 - 云 免费订阅 436
 - 云存储提供商，设置 437
 - 配置 430
 - 文档模板，准备 437
 - Encodian 试用 433
 - OpenAI 订阅，设置 430-432
-
-### 表达式 27, 131, 143
-
-### 文件复制，到 SharePoint
+- 表达式 27, 131, 143
+- 文件复制，到 SharePoint
 - 结果，手动验证 75, 76
 - 流程，测试 74, 75
-
-### 文件发布，到 Dropbox
+- 文件发布，到 Dropbox
 - 流程，测试 78, 79
-
-### 文件
+- 文件
 - 操作 65-67
 - 连接器 65-67
 - 复制，到 SharePoint 68-74
 - 发布，到 Dropbox 76-78
 - 使用 67
-
-### 流程
+- 流程
 - 审批 10
 - 自动化 10
 - 业务流程 120
@@ -9601,21 +8792,17 @@ Entra ID 应用程序
 - SQL 数据，查看 259, 260
 - 测试 38, 39, 257, 258
 - 验证 258
-### Flow 应用 (Power Automate 应用) 226
-流 检查器
+- Flow 应用 (Power Automate 应用) 226
+- 流 检查器
 - 详细错误 480, 481
-
-### 流程标识符 458
-Flow 连接器
+- 流程标识符 458
+- Flow 连接器
 - 链接 10
-
-### 外键 234
-
-### 表单
+- 外键 234
+- 表单
 - 创建 250-253
 - 处理，使用 Power Automate 253-256
-
-### Forms 连接器 250
+- Forms 连接器 250
 - 操作 250
 - 触发器 250
 - 28, 143
@@ -9639,7 +8826,7 @@ Flow 连接器
 # H
 
 - HTTP 操作 297
-HTTP 流程
+- HTTP 流程
 - 创建 305
 - 数据收集 305-309
 - HTML 表格，创建 319
@@ -9652,14 +8839,14 @@ HTTP 流程
 # I
 
 - 初始化变量 163
-- 时云流 81
+- 即时云流 81
 - 快速云流 81
 - 物联网 (IoT) 设备 8
 
 # J
 
 - JavaScript 对象 (JSON) 39, 298
-JSON 语法 434
+- JSON 语法 434
 
 # K
 
@@ -9668,7 +8855,7 @@ JSON 语法 434
 # L
 
 - 许可详情和指南 17
-LoopIndex
+- LoopIndex
 - 多页面，扩展 374-381
 
 # M
@@ -9687,12 +8874,11 @@ LoopIndex
 # N
 
 - 通知连接器 98
-
-数字 26
+- 数字 26
 
 # O
 
-OpenAI 订阅
+- OpenAI 订阅
 - 设置 430-432
 
 # P
@@ -9700,23 +8886,17 @@ OpenAI 订阅
 - 包 15
 - 分页 371
 - 分页 371
-
-并行审批
-使用 189
-
-并行分支
-添加 204-211
-
-解析 JSON 操作 298
+- 并行审批
+- 使用 189
+- 并行分支
+- 添加 204-211
+- 解析 JSON 操作 298
 - 解析 310
-
-Planner 264
+- Planner 264
 - 触发系统 267
-
-平台通知系统 (PNS) 96
+- 平台通知系统 (PNS) 96
 - 概述 96
-
-Power Automate 4, 7
+- Power Automate 4, 7
 - 其它资源
 - 管理员中心 16
 - 合规控制 492
@@ -9730,8 +8910,7 @@ Power Automate 4, 7
 - 过程 8
 - 提示 391
 - 报价请求 (RFP) 76, 429
-
-机器人流程自动化 (RPA) 3, 4, 10
+- 机器人流程自动化 (RPA) 3, 4, 10
 - 机器人流程自动化 (RPA) 流 326
 - 文件系统，交互 326
 - 构建的流，使用 Power Automate
@@ -9741,8 +8920,7 @@ Power Automate 4, 7
 - 测试 361
 - 传递变量 325
 - 验证 361-363
-
-Power Automate 应用 226
+- Power Automate 应用 226
 - 其它资源
 - 管理员中心 16
 - 合规控制 492
@@ -9756,8 +8934,7 @@ Power Automate 应用 226
 - 过程 8
 - 提示 391
 - 报价请求 (RFP) 76, 429
-
-Power Automate Desktop 325
+- Power Automate Desktop 325
 - 其它资源
 - 管理员中心 16
 - 合规控制 492
@@ -9771,8 +8948,7 @@ Power Automate Desktop 325
 - 过程 8
 - 提示 391
 - 报价请求 (RFP) 76, 429
-
-Power Automate 录制器，运行 352-355
+- Power Automate 录制器，运行 352-355
 - 其它资源
 - 管理员中心 16
 - 合规控制 492
@@ -9786,8 +8962,7 @@ Power Automate 录制器，运行 352-355
 - 过程 8
 - 提示 391
 - 报价请求 (RFP) 76, 429
-
-RPA 流程配置 344
+- RPA 流程配置 344
 - 其它资源
 - 管理员中心 16
 - 合规控制 492
@@ -9801,82 +8976,82 @@ RPA 流程配置 344
 - 过程 8
 - 提示 391
 - 报价请求 (RFP) 76, 429
-
-带有 Copilot 功能的记录 324
+- 带有 Copilot 功能的记录 324
 - 表表表示状态转移 (REST) 9
 - URL 9
 - 请求者信息
 - 审批，创建 219-222
 - 获取 217-219
 - 响应，返回 222-226
-
-情感分析 400
+- 情感分析 400
 - 情感分析流
 - 配置 405-412
 - Microsoft Teams 团队，创建 32
 - 共享邮箱箱，创建 404, 405
 - 解决方案前置条件 402
 - 情感值
-
-情感值 400
+- 情感值 400
+- 顺序审批
+- 使用 188
+- 共享流 108
+- 管理 121-123
+- 情感 400
 - 顺序审批
 - 使用 188
 - 共享流 108
 - 管理 121-123
 
-情感 400
-- 顺序审批
-- 使用 188
-- 共享流 108
-- 管理 121-123
+# 索引 R
 
+## solutions 12
 
+## Visual Studio Code (VS Code) 40
 
-
-
-索引
-
-### solutions 12
-### Visual Studio Code (VS Code) 40
-### SQL 数据
+## SQL 数据
 
 # W
-复习 259, 260
-### 网页
-### 字符串函数 144
-导航 366, 367
-使用 147-149
-### 工作流 9
-### 字符串 26
-### 工作流定义语言 (WDL) 143
-### 工作流管理器 4
+
+- 复习 259, 260
+- 网页
+- 导航 366, 367
+- 使用 147-149
+- 工作流 9
+- 工作流定义语言 (WDL) 143
+- 工作流管理器 4
 
 # T
-### 表格 165
-### Teams
-通过配置审批流使用, 216
-### 模板 15
-### 文本函数
-使用 147
-### 令牌 435, 436
-### 触发器 12, 235
-自动化的 12
-即时的 12
-定时的 12
+
+- 表格 165
+- Teams
+- 通过配置审批流使用, 216
+- 模板 15
+- 文本函数
+- 使用 147
+- 令牌 435, 436
+- 触发器 12, 235
+- 自动化的 12
+- 即时的 12
+- 定时的 12
 
 # U
-### 资源标识符 (URI) 9
-### 通用命名规范 (UNC)
-路径 326
-### 用户输入
-创建使用所有输入类型的流 279
-选项 277-279
-配置前提条件 280-282
-### 用户界面 (UI) 流 10
+
+- 资源标识符 (URI) 9
+- 通用命名规范 (UNC)
+- 路径 326
+- 用户输入
+- 创建使用所有输入类型的流 279
+- 选项 277-279
+- 配置前提条件 280-282
+- 用户界面 (UI) 流 10
 
 # V
-### 价值技能矩阵 6
-### 变量 325
-更新 356-359
-### 动词 9
 
+- 价值技能矩阵 6
+
+
+
+### 变量 325
+
+更新 356-359
+
+### 动词 9
