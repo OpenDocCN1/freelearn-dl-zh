@@ -58,6 +58,7 @@
 +   [ChatGPT 对话式人工智能与聊天机器人](docs/cgpt-cnvs-ai-cbt/README.md)
 +   [多智能体系统上下文工程：超越提示词，构建上下文与推理的透明架构引擎](docs/context-engineering-for-multi-agent-systems-move-beyond-prom/README.md)
 +   [大语言模型解码](docs/dec-llm/README.md)
++   [C++ 深度学习](docs/deep-learning-with-c/README.md)
 +   [DeepSeek 实战](docs/deepseek-in-practice/README.md)
 +   [PowerPlatform 数字转型指南](docs/dgt-trans-pwrplat/README.md)
 +   [深度学习架构手册](docs/dl-arch-hb/README.md)
