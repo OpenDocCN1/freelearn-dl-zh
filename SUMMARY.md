@@ -61,6 +61,7 @@
 +   [C++ 深度学习](docs/deep-learning-with-c/README.md)
 +   [DeepSeek 实战](docs/deepseek-in-practice/README.md)
 +   [PowerPlatform 数字转型指南](docs/dgt-trans-pwrplat/README.md)
++   [分布式AI系统](docs/distributed-ai-systems/README.md)
 +   [深度学习架构手册](docs/dl-arch-hb/README.md)
 +   [深度学习初学者指南](docs/dl-bg/README.md)
 +   [深度学习基础知识](docs/dl-bsc/README.md)
