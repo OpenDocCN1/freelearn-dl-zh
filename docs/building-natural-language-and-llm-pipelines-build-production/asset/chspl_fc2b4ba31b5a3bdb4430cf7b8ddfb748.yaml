@@ -1,0 +1,4 @@
+chapter_starts:
+- 'no': 5902
+  confidence: 0.95
+  reason: 文末索引标题，单独成行且符合“文末索引也划分为一章”规则

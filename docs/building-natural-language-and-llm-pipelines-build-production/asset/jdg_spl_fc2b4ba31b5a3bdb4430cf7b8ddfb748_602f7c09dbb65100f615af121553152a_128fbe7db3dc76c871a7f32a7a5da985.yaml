@@ -1,0 +1,12 @@
+chapter_starts:
+- 'no': 5902
+  confidence: 0.95
+  final_reason: 双方均认可该行为文末索引标题，且符合“文末索引也划分为一章”的规则；标题单独成行，语义清晰，无有效反证。
+  accepted_evidence:
+  - 该行内容为“# 索引”，格式上为独立标题行
+  - 位于全书末尾，属于文末索引，按规则应划分一章
+  - 判断方与复核方均建议保留分章
+  rejected_evidence:
+  - 复核方指出其缺少编号、后续无概述段落，但文末索引本身不要求编号或概述，故不构成反证
+  need_human_review: false
+rejected_lines: []

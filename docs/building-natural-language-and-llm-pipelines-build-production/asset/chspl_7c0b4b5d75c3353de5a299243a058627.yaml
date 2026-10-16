@@ -1,0 +1,22 @@
+chapter_starts:
+- 'no': 189
+  confidence: 0.75
+  reason: '## 第一部分: AI 的基础 为部分标题，按部分-章节模式应划分为新章'
+- 'no': 199
+  confidence: 0.8
+  reason: '## 1 自然语言处理流水线引言 单独成行的最高层级编号章节标题，后续为第1章正文概述'
+- 'no': 548
+  confidence: 0.78
+  reason: '## 深入研究大语言模型 单独成行的第2章标题，与前文第2章标记对应，标题长度符合规范'
+- 'no': 1120
+  confidence: 0.8
+  reason: '# 第二部分 为第二部分的起始标题，应作为新章划分'
+- 'no': 1139
+  confidence: 0.85
+  reason: '# deepset 的 Haystack 简介 与前文 # 3 标记对应，为第3章的正式标题单独成行'
+- 'no': 2157
+  confidence: 0.75
+  reason: '## 5 使用自定义组件开发 Haystack 流水线 单独成行的第5章标题'
+- 'no': 2671
+  confidence: 0.7
+  reason: '# 构建可复现和生产就绪 RAG 系统 为第6章起始标题单独成行，后续为第6章技术要求与内容'
