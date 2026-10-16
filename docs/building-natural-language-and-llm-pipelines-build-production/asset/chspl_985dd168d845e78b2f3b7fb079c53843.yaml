@@ -1,0 +1,25 @@
+chapter_starts:
+- 'no': 188
+  confidence: 0.92
+  reason: '部分标题 ## 第一部分: AI 的基础，书为部分-章节模式，部分应作为新章起始'
+- 'no': 197
+  confidence: 0.95
+  reason: '最高层级章标题 ## 1 自然语言处理流水线引言，单独成行，语义统领后续内容'
+- 'no': 545
+  confidence: 0.93
+  reason: '章标题 ## 深入研究大语言模型，与后续章节介绍一致，为第2章起始'
+- 'no': 1118
+  confidence: 0.9
+  reason: '部分标题 # 第二部分，配合 # 使用 Haystack 构建工具层，为部分-章节模式的新部分'
+- 'no': 1136
+  confidence: 0.94
+  reason: '第3章主标题 # deepset 的 Haystack 简介，单独成行，统领后续内容'
+- 'no': 1697
+  confidence: 0.88
+  reason: '章标题 ## 第 4 章，上下文为第4章内容起始'
+- 'no': 2155
+  confidence: 0.95
+  reason: '第5章标题 ## 5 使用自定义组件开发 Haystack 流水线，最高层级章节'
+- 'no': 2668
+  confidence: 0.93
+  reason: '第6章标题 # 构建可复现和生产就绪 RAG 系统，单独成行，语义统领'

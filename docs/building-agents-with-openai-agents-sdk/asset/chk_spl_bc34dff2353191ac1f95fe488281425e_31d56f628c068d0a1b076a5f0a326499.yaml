@@ -1,0 +1,50 @@
+reviews:
+- 'no': 5942
+  overturn_probability: 0.98
+  alternative: 索引中按主题分组的子标题
+  counter_evidence:
+  - 该行出现在书末索引区域，前后行均为带页码的索引条目（如“代理和工具行为 65-68”“链式工具调用 78-80”），不是正文章节标题。
+  - '该行虽以 # 开头，但语义上是对“自定义工具”这一主题的索引词条，后续直接是列表项而非概述段落，不符合章标题的上下文特征。'
+  keep_split: false
+- 'no': 5951
+  overturn_probability: 0.99
+  alternative: 索引中按字母顺序排列的字母分组标题
+  counter_evidence:
+  - 单独的字母“D”是索引常见的字母分组标题，用于组织索引条目，不是书籍章节。
+  - 其下方列出“数据库”“群群系统”等带页码的索引条目，属于索引内部结构，而非正文章节层级。
+  keep_split: false
+- 'no': 5959
+  overturn_probability: 0.97
+  alternative: 索引词条（设计模式，页码 16）
+  counter_evidence:
+  - 行末带有页码“16”，是索引中词条“设计模式”的定位信息，章标题不会附页码。
+  - 该行使用二级标题语法，但内容是索引项的子标题，被前后带页码的列表项包围，应属于索引而非独立章节。
+  keep_split: false
+- 'no': 5963
+  overturn_probability: 0.97
+  alternative: 索引词条（开发前提，页码 44）
+  counter_evidence:
+  - 行末“44”是页码，典型索引格式。
+  - 该行所在区域为索引的字母 P 分组中，后续是“Python 异步编程 46, 47”等索引条目，不是章节正文。
+  keep_split: false
+- 'no': 6080
+  overturn_probability: 0.9
+  alternative: 索引词条（追踪），带子条目的索引主条目
+  counter_evidence:
+  - 该行位于索引中字母 O 分组之后，属于索引内部的主题条目。
+  - 下一行“`tracing primitive` 32, 33”是缩进的子条目，说明这一行是索引中的主词条，而非全书章节。
+  keep_split: false
+- 'no': 6084
+  overturn_probability: 0.95
+  alternative: 索引词条（OpenAI API）
+  counter_evidence:
+  - 该行是索引中按主题区分的词条，后面跟随“注册 38-40”“OpenAI 托管工具 80, 81”等子条目，符合索引层级。
+  - 文末索引整体才应划分为一章，索引内部的词条不应再单独分章。
+  keep_split: false
+- 'no': 6101
+  overturn_probability: 0.96
+  alternative: 索引词条（Python），重复出现的主题条目
+  counter_evidence:
+  - 索引中第5965行已出现一次“# Python”，此处再次出现，说明它是按主题排列的索引词条，不是唯一、统领性的章标题。
+  - 该行后面是“异步编程 46, 47”等索引条目，均为页码信息，属于索引内容。
+  keep_split: false

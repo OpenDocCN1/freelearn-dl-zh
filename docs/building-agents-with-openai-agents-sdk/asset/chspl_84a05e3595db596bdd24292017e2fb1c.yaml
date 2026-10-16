@@ -1,0 +1,16 @@
+chapter_starts:
+- 'no': 3054
+  confidence: 0.75
+  reason: '顶层 # 标题 ''总结''，单独成行，结尾无标点，长度符合章标题特征'
+- 'no': 3075
+  confidence: 0.95
+  reason: '顶层 # 标题 ''多智能体系统与交接 (Handoffs)''，单独成行，统领后续多智能体内容，为新章起始'
+- 'no': 3844
+  confidence: 0.95
+  reason: '顶层 # 标题 ''模型与上下文管理''，单独成行，语义统领后续模型管理内容，为新章起始'
+- 'no': 4133
+  confidence: 0.9
+  reason: '顶层 # 标题 ''# 8''，章编号形式，单独成行，后续为第8章内容'
+- 'no': 4757
+  confidence: 0.85
+  reason: '顶层 # 标题 ''使用 OpenAI Agents SDK 构建智能体系统''，单独成行，统领后续案例章节内容'

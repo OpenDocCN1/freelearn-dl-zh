@@ -1,0 +1,45 @@
+chapter_starts:
+- 'no': 2
+  confidence: 0.88
+  final_reason: 书名/封面标题位于文件最前端，后续为致谢、贡献者、关于作者等序前材料，统一划为前言整体一章。复核方支持保留分章。
+  accepted_evidence:
+  - 书名/封面标题，位于文件最前端且后接图片和致谢，属于前言整体的起首内容
+  - '后续 # 贡献者 # 关于作者 等均为序前信息，与其同属前言前置材料'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 42
+  confidence: 0.9
+  final_reason: 前言标题单独成行，后 1~3 行为概述段落，前为作者介绍等序前内容，上下文断层明显，符合前言章节统领性。复核方支持。
+  accepted_evidence:
+  - 标题单独成行且后 1~3 行为概述段落，符合前言章节统领性
+  - 前几行为作者介绍、订阅等序前内容，上下文断层明显
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 232
+  confidence: 0.92
+  final_reason: '最高层级 # 第一部分，后接 ## AI 智能体 子节，符合部分-章节模式的分章规则，具有统领第一部分内容的概括性。'
+  accepted_evidence:
+  - '最高层级 # 第一部分，后接 ## AI 智能体 的子节，符合部分-章节模式的分章规则'
+  - 内容开始介绍第一部分概念与章节列表，具有统领性
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1380
+  confidence: 0.95
+  final_reason: '最高层级部分标题 # 第二部分：OpenAI Agents SDK，后接部分概述，前后从解锁福利切换到新部分介绍，断层明显，需分章。'
+  accepted_evidence:
+  - 最高层级部分标题 '# 第二部分：OpenAI Agents SDK'，后接对部分内容的概述，符合部分-章节模式需分章
+  - 前后上下文从解锁福利内容切换到新部分介绍，断层明显
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1398
+  confidence: 0.9
+  final_reason: 标题 '# 4：智能体工具与 MCP' 单独成行，长度 <30，无句号，后接学习目标概述，具备章标题统领性。
+  accepted_evidence:
+  - 标题 '# 4：智能体工具与 MCP' 单独成行，长度 <30，无句号，具有统领后续章节内容的概括性
+  - 后接学习目标列表，符合章标题后 1~3 行概述的上下文特征
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 858
+  reason: 复核方反证成立：标题仅为 '# 3'，语义空洞，无概括性，真实章名在下一行 '## 环境设置与开发你的第一个智能体'，更像是排版序号噪声。判断方证据不足，采纳复核方撤回。
+  need_human_review: false

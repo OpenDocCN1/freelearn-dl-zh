@@ -1,0 +1,58 @@
+reviews:
+- 'no': 188
+  overturn_probability: 0.02
+  alternative: 部分标题，但在部分-章节模式下应视为章节级起点
+  counter_evidence:
+  - 后文明确写有“本书的部分包含以下章节”，并列出第1章和第2章
+  - 标题采用“第一部分”形式，且后续紧接该部分概述
+  keep_split: true
+- 'no': 197
+  overturn_probability: 0.05
+  alternative: 正式章节标题
+  counter_evidence:
+  - 前文已在第188行开始“第一部分”，第197行是该部分列出的第1章
+  - 后续内容以“在本章中”“本章结束”等明确章节语义展开
+  keep_split: true
+- 'no': 545
+  overturn_probability: 0.03
+  alternative: 正式章节标题
+  counter_evidence:
+  - 第197行章节内容后出现总结、延伸阅读和第2章承接语
+  - 前文目录明确将其列为第2章主题，后续内容持续使用“本章”指代
+  keep_split: true
+- 'no': 1118
+  overturn_probability: 0.01
+  alternative: 部分标题
+  counter_evidence:
+  - 标题为“第二部分”，与前面的“第一部分”构成连续的部分序列
+  - 后续明确列出第3至第6章，说明这是部分-章节结构中的分界
+  keep_split: true
+- 'no': 1136
+  overturn_probability: 0.02
+  alternative: 正式章节标题
+  counter_evidence:
+  - 前一部分目录明确列出第3章及其主题
+  - 后续多次使用“本章”，并列出本章主题和技术要求
+  keep_split: true
+- 'no': 1697
+  overturn_probability: 0.45
+  alternative: 页眉或页脚残留的章节标记“第4章”，而非完整章节标题
+  counter_evidence:
+  - 第1697行只有“## 第 4 章”，真正的完整章标题“整合组件——针对不同用例的 Haystack 流水线”出现在第1711行
+  - 第1697行前仍在延续第3章内容，且第1711行之后才开始明显的第4章主题
+  - 此前文本中多次出现单独的“## 第 X 章”和页码样式行，显示该书存在 PDF 页眉/页脚抽取噪声
+  keep_split: false
+- 'no': 2155
+  overturn_probability: 0.08
+  alternative: 正式章节标题
+  counter_evidence:
+  - 第1118行部分目录明确列出第5章及该标题
+  - 后续立即介绍本章目标并列出涵盖主题
+  keep_split: true
+- 'no': 2668
+  overturn_probability: 0.18
+  alternative: 缺失编号的正式章节标题，或第6章正文标题
+  counter_evidence:
+  - 前文第1118行部分目录明确列出第6章主题与此处高度一致
+  - 第2668行后紧接“在本章中”“本章结束时”等章节导语
+  keep_split: true

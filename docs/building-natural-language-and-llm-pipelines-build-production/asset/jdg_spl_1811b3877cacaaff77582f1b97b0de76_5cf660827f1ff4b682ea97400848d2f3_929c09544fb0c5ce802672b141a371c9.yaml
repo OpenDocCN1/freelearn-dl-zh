@@ -1,0 +1,31 @@
+chapter_starts:
+- 'no': 5901
+  confidence: 0.9
+  final_reason: 判断方与复核方均支持分章；该行是文末明确的“索引”标题，且规则明确要求文末索引划分为一章。尽管其后直接为索引条目、缺少概述段，但这一反方证据不足以推翻文末索引的特殊规则。
+  accepted_evidence:
+  - 文末索引也划分为一章
+  - “# 索引”单独成行并位于全文末尾
+  - 其后内容连续呈现索引条目列表
+  rejected_evidence:
+  - 缺少章标题后的概述段：索引属于规则明确规定的特殊文末结构，不要求概述段
+  - 不是“第X章”或“第X部分”：索引可依靠语义和版式判断，不要求编号
+  need_human_review: false
+rejected_lines:
+- 'no': 5950
+  reason: 位于索引内部的字母/主题分类标题，属于索引排版层级，不是全书正文最高层级章标题。
+  need_human_review: false
+- 'no': 5976
+  reason: 索引内部的字母分类标题“U”，属于索引排版层级，不应另行分章。
+  need_human_review: false
+- 'no': 5982
+  reason: 索引内部的字母分类标题“V”，属于索引排版层级，不应另行分章。
+  need_human_review: false
+- 'no': 5994
+  reason: 索引内部的字母分类标题“W”，属于索引排版层级，不应另行分章。
+  need_human_review: false
+- 'no': 6006
+  reason: 索引内部的字母分类标题“Y”，属于索引排版层级，不应另行分章。
+  need_human_review: false
+- 'no': 6015
+  reason: 索引内部的字母分类标题“Z”，属于索引排版层级，不应另行分章。
+  need_human_review: false

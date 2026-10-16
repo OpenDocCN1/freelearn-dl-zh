@@ -1,0 +1,19 @@
+chapter_starts:
+- 'no': 2
+  confidence: 0.7
+  reason: 书名/封面标题，起首内容划为前言整体一章
+- 'no': 42
+  confidence: 0.85
+  reason: 前言标题，单独成行且统领后续正文介绍
+- 'no': 232
+  confidence: 0.9
+  reason: '最高层级部分标题 # 第一部分，符合部分-章节模式需分章'
+- 'no': 858
+  confidence: 0.8
+  reason: '第3章起始标记 # 3，后续为 ## 环境设置与开发你的第一个智能体，为新章'
+- 'no': 1380
+  confidence: 0.95
+  reason: '最高层级部分标题 # 第二部分：OpenAI Agents SDK，需分章'
+- 'no': 1398
+  confidence: 0.9
+  reason: '第4章起始 # 4：智能体工具与 MCP，最高层级章节标题'

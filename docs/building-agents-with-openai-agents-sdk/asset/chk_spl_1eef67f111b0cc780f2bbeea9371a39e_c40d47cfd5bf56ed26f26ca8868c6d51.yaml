@@ -1,0 +1,43 @@
+reviews:
+- 'no': 2
+  overturn_probability: 0.15
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 书名/封面标题，位于文件最前端且后接图片和致谢，属于前言整体的起首内容
+  - '后续 # 贡献者 # 关于作者 等均为序前信息，与其同属前言前置材料'
+  keep_split: true
+- 'no': 42
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题单独成行且后 1~3 行为概述段落，符合前言章节统领性
+  - 前几行为作者介绍、订阅等序前内容，上下文断层明显
+  keep_split: true
+- 'no': 232
+  overturn_probability: 0.08
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - '最高层级 # 第一部分，后接 ## AI 智能体 的子节，符合部分-章节模式的分章规则'
+  - 内容开始介绍第一部分概念与章节列表，具有统领性
+  keep_split: true
+- 'no': 858
+  overturn_probability: 0.82
+  alternative: 排版断行/页码式编号
+  counter_evidence:
+  - 标题内容仅为 '# 3'，语义空洞且不符合章标题应具备的概括性，真实章名在下一行 '## 环境设置与开发你的第一个智能体'
+  - '格式特征上仅为数字编号，无统领性描述，更像是页眉页脚或排版序号噪声，后续正文以 ## 开始，层级不一致'
+  keep_split: false
+- 'no': 1380
+  overturn_probability: 0.07
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 最高层级部分标题 '# 第二部分：OpenAI Agents SDK'，后接对部分内容的概述，符合部分-章节模式需分章
+  - 前后上下文从解锁福利内容切换到新部分介绍，断层明显
+  keep_split: true
+- 'no': 1398
+  overturn_probability: 0.12
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题 '# 4：智能体工具与 MCP' 单独成行，长度 <30，无句号，具有统领后续章节内容的概括性
+  - 后接学习目标列表，符合章标题后 1~3 行概述的上下文特征
+  keep_split: true
