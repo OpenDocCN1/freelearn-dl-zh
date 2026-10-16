@@ -1,0 +1,57 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.75
+  alternative: 书名/封面标题
+  counter_evidence:
+  - '行内容为 ''# Midjourney：释放创造未来''，使用单 # 书名级标记，无章节编号，第 1 行后直接进入正文说明而非章节概述'
+  - 书名通常不作为可分章的正文章节，规则中前言序言等前置内容统一划分为一章，书名不满足章节语义特征
+  keep_split: false
+- 'no': 9
+  overturn_probability: 0.08
+  alternative: 正文小标题
+  counter_evidence:
+  - '编号 01 且使用 ##，单独成行，后接 ### 基础提示词 等子节，符合最高层级章节特征'
+  keep_split: true
+- 'no': 35
+  overturn_probability: 0.68
+  alternative: 正文小标题/排版噪声
+  counter_evidence:
+  - 同一编号 02 在行 35、39、43 连续出现三次，分别为 '## 02 图像提示词'、'## 02 文本提示词'、'## 02 参数'，编号重复且无连贯性，违背最高层级章节编号特征
+  - 行 35 后第 1~3 行仅为一句概述，之后立即出现同级编号 02 的新标题，不具备统领后续子节的章节语义，更像是分组小标题
+  keep_split: false
+- 'no': 144
+  overturn_probability: 0.15
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 03 理解 Midjourney 命令单独成行，后接 ### 提示词 等子节，符合最高层级章节特征；行 174 出现重复标题可视为排版重复而非本处错误'
+  keep_split: true
+- 'no': 204
+  overturn_probability: 0.1
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 04 熟悉参数列表单独成行，后接 ### 基础参数 等子节，语义统领参数相关内容'
+  keep_split: true
+- 'no': 340
+  overturn_probability: 0.12
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 05 高级提示词单独成行，后接 ### 图片提示词 等子节，符合章节格式与语义'
+  keep_split: true
+- 'no': 406
+  overturn_probability: 0.1
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 06 Remix 模式单独成行，后接 ### 使用 Remix，符合最高层级章节特征'
+  keep_split: true
+- 'no': 436
+  overturn_probability: 0.1
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 07 多提示词 (Multi Prompts) 单独成行，后接子节，语义清晰且编号连贯'
+  keep_split: true
+- 'no': 455
+  overturn_probability: 0.1
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 08 Pan（平移）选项单独成行，后接 ### 平移图片，编号与前文连贯，符合章节特征'
+  keep_split: true

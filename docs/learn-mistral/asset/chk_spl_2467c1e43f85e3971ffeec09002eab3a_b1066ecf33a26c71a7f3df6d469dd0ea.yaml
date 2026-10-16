@@ -1,0 +1,37 @@
+reviews:
+- 'no': 6270
+  overturn_probability: 0.95
+  alternative: 页码残留或章号与标题分离的排版断行
+  counter_evidence:
+  - 该行仅为孤立的数字“7”，没有语义，不符合章标题的语义特征
+  - 后一行 6272 “# 使用 Mistral 进行编程”才是完整的真实章标题，单分此会产生空章
+  keep_split: false
+- 'no': 6272
+  overturn_probability: 0.2
+  alternative: 若不分章，这行最可能是页眉/重复的章名残留，而非正文小标题
+  counter_evidence:
+  - 该行缺少显式的“第X章”编号，仅凭语义判断，存在被误认为上一章正文中加粗小标题的可能
+  - 其前一行“# 7”也可能被理解为章号，从而造成标题拆分为两行的错觉
+  keep_split: true
+- 'no': 6398
+  overturn_probability: 0.7
+  alternative: 页眉/重复的章节标题（排版噪声），因为前文已经开始了同一编号的第7章
+  counter_evidence:
+  - 行 6272 已经建立了第7章开始，6398 再次出现“第 7 章”导致同一章号重复，不符合连续章节结构
+  - 6398 后紧跟“## 引言”，内容与 6272 后的章节引言高度同主题，更像是页面提取时的页眉/重复标题
+  - 该行与前文之间间隔多个空行，符合页眉残留的版面特征
+  keep_split: false
+- 'no': 7960
+  overturn_probability: 0.25
+  alternative: 若不分章，它最可能是上一章末尾的课外活动/子标题，但语义和内容表明它是新章
+  counter_evidence:
+  - 该行使用“##”二级标题而非顶层“#”，按 Markdown 层级易被误认为上一章的子节
+  - 标题“9 课后 RAG 挑战”没有标准的“第X章”措辞，可能是 OCR 残缺，给识别带来歧义
+  keep_split: true
+- 'no': 8418
+  overturn_probability: 0.25
+  alternative: 若不分章，它最可能是页眉或排版噪声，因为标题中数字“10”位置异常
+  counter_evidence:
+  - 标题“AWS Bedrock 上的 10 Mistral”中“10”插入位置不符合正常中文标题，疑似 OCR 将页码/章号与标题拼合
+  - 它缺少“第X章”的完整结构，仅凭数字推断章号，存在被当作正文广告或页眉的可能
+  keep_split: true

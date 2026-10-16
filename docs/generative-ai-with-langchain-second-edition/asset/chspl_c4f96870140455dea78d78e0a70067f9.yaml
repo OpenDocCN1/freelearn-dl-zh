@@ -1,0 +1,13 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.9
+  reason: 前言是正文之前的内容，统一划分为一章。
+- 'no': 2
+  confidence: 0.95
+  reason: 该标题为第1章章标题，内容涵盖现代LLM景观和代理演进，具有统领性。
+- 'no': 3
+  confidence: 0.9
+  reason: 该标题为第2章章标题，内容涵盖LangChain第一步环境搭建和基础构建块。
+- 'no': 4
+  confidence: 0.9
+  reason: 该标题为第3章章标题，内容涵盖LangGraph工作流构建、状态管理与记忆机制。

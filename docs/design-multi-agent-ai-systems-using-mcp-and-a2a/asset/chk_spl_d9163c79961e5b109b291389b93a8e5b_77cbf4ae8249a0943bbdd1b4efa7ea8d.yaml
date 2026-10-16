@@ -1,0 +1,23 @@
+reviews:
+- 'no': 9804
+  overturn_probability: 0.85
+  alternative: 正文小标题
+  counter_evidence:
+  - '标题使用 ### 层级而非全书最高层级的 ##，不符合章标题格式特征'
+  - 该标题出现在第 9 章正文演示流程的中间，上下文为代码块和说明段落，前面无章末总结，后面直接接 Slack_Bot 请求示例，属于正文中的小节标题
+  - 标题文字“第9章：使用A2A实现多智能体系统”在文档结构中更像是正文小标题或过渡标题，而非独立成章的最高层级章节
+  keep_split: false
+- 'no': 9998
+  overturn_probability: 0.08
+  alternative: 正文小标题
+  counter_evidence:
+  - '标题为 ## 10 开头，单独成行，序号连贯且语义统领后续全部测试调试内容'
+  - 上下文为空行分隔，前后分别为上一章总结和本章引言，符合章标题上下文特征
+  keep_split: true
+- 'no': 10805
+  overturn_probability: 0.05
+  alternative: 正文小标题
+  counter_evidence:
+  - '标题为 ## 11. 部署多智能体系统，单独成行且序号与前一章 10 连贯'
+  - 前后为空行分隔，且随后为技术要求、集群设置等全新主题，符合最高层级章节的语义统领性
+  keep_split: true

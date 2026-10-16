@@ -1,0 +1,25 @@
+chapter_starts:
+- 'no': 3440
+  confidence: 0.92
+  final_reason: 编号特征为第7章，语义边界清晰。前文3438行预告下一章研究，后文紧随章节目标列表，上下文符合新章起点。复核方反证不足。
+  accepted_evidence:
+  - 一级标题编号7，单独成行
+  - 前文预告'在下一章中，我们将介绍本书涵盖的 ChatGPT 应用的第三也是最后一个领域——研究。'
+  - 后文紧接章节目标列表与正文介绍
+  - 复核方 keep_split=true，overturn_probability=0.1
+  rejected_evidence:
+  - 'Markdown源标注为 ## 而非 # 的格式争议'
+  - 标题缺少'第 章'字样可能被误判为节标题
+  need_human_review: false
+- 'no': 3896
+  confidence: 0.93
+  final_reason: 编号特征为第9章，位于参考文献后、章节目标与正文介绍前，上下文明确为新章起点。格式上与前后结构一致，复核维持分章。
+  accepted_evidence:
+  - 标题'# 9 探索 GPTs'编号连续且单独成行
+  - 前接参考文献列表 3887-3895，后接章节目标与正文介绍
+  - 复核方 keep_split=true，overturn_probability=0.08
+  rejected_evidence:
+  - 附近存在推广式#标题如3898行'在 Discord 上加入我们的书籍社区'，#并非唯一章节标记
+  - 标题省略'第 章'字样与3440行格式不一致
+  need_human_review: false
+rejected_lines: []

@@ -1,0 +1,21 @@
+reviews:
+- 'no': 33
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 序言属于规则指定的前置统一章节，前文为献词与作者署名，后文直至前言均为前置材料，语义上构成同一预备章节
+  keep_split: true
+- 'no': 384
+  overturn_probability: 0.02
+  alternative: 正文小标题
+  counter_evidence:
+  - '编号特征符合最高层级 ‘## 1’，单独成行无句号且长度<30字，后1~3行为概述段落并随后出现 ### 概述 等子节，前文为前言结束，语义统领整章'
+  keep_split: true
+- 'no': 1694
+  overturn_probability: 0.88
+  alternative: 正文小标题/排版重复标题
+  counter_evidence:
+  - 同名章节在 1714 行以 ‘## 第2章：GPU硬件、网络与并行策略’ 再次出现，该形式含‘第X章’编号特征更符合最高层级章标题规范，而 1694 行标题为英文数字编号且紧随题词式引语
+    ‘*理解分布式 AI 的硬件拓扑和并行策略*’ 与署名 ‘*黄仁勋*’，不具备章概述段落
+  - '1694 行后内容立即进入 ### 计算能力：AI 集群与指标 等三级小节，标题后 1~3 行并非概述而是题记/标语，属于排版噪声/重复标题而非真正的章节起始'
+  keep_split: false

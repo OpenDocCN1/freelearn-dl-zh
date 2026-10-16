@@ -1,0 +1,92 @@
+chapter_starts:
+- 'no': 46
+  confidence: 0.9
+  final_reason: '序言为正文前前置部分，独立一级 # 标题，后接序言正文，符合前言/序言统一分章规则'
+  accepted_evidence:
+  - '一级 # 标题 # 序言'
+  - 后接序言正文段落，前面为致谢签名
+  rejected_evidence:
+  - 排版噪声可能导致误判
+  need_human_review: false
+- 'no': 91
+  confidence: 0.75
+  final_reason: '目录作为前置导航章节，一级 # 标题单独成行，虽目录非正文章节但书中作为独立前置块处理'
+  accepted_evidence:
+  - '# 目录 一级标题单独成行'
+  - 后接目录列表项
+  rejected_evidence:
+  - 规则未明确目录是否分章，且目录通常仅为导航
+  need_human_review: false
+- 'no': 117
+  confidence: 0.88
+  final_reason: '前言为正文前独立部分，一级 # 标题后直接接前言正文段落'
+  accepted_evidence:
+  - '# 前言 一级标题'
+  - 后接前言正文介绍
+  rejected_evidence:
+  - 可能与目录区混淆
+  need_human_review: false
+- 'no': 235
+  confidence: 0.95
+  final_reason: '一级 # 标题 # 大语言模型简介，语义统领后续内容，为书中第一章主体'
+  accepted_evidence:
+  - '一级 # 标题单独成行'
+  - 后接章首概述段落，后续为 1.X 子节
+  rejected_evidence:
+  - '前文存在多个 # 标题未分章'
+  need_human_review: false
+- 'no': 426
+  confidence: 0.95
+  final_reason: '一级 # 标题 # 2 Azure OpenAI 基础知识，最高层级编号大章，后接章首段落'
+  accepted_evidence:
+  - 编号大章格式
+  - 后接上一章回顾与本章学习内容
+  rejected_evidence:
+  - 可能为目录条目残留
+  need_human_review: false
+- 'no': 902
+  confidence: 0.9
+  final_reason: '一级 # 标题 # Azure OpenAI 高级主题，无编号但为最高层级大章，后接完整章{{首段与子节}}'
+  accepted_evidence:
+  - '一级 # 标题单独成行'
+  - '后接章首概述及 ## 子节'
+  rejected_evidence:
+  - 行982重复出现相同标题，可能OCR重复
+  need_human_review: false
+- 'no': 2096
+  confidence: 0.9
+  final_reason: '一级 # 标题 # 第 2 部分：Azure OpenAI 的实际应用：真实世界用例，符合部分-章节模式'
+  accepted_evidence:
+  - 明确第 2 部分表述
+  - 后列出多章清单
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2110
+  confidence: 0.95
+  final_reason: '一级 # 标题 # 4 开发企业级文档问答解决方案，编号大章，后接章首回顾段'
+  accepted_evidence:
+  - 编号大章格式
+  - 后接在上一章中...典型章首句
+  rejected_evidence:
+  - 目录中可能存在相同条目
+  need_human_review: false
+- 'no': 2364
+  confidence: 0.95
+  final_reason: '一级 # 标题 # 5 构建呼叫中心分析解决方案，编号大章，后接章首段'
+  accepted_evidence:
+  - 编号大章格式
+  - 后接上一章回顾段
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2729
+  confidence: 0.95
+  final_reason: '一级 # 标题 # 6 从结构化数据库中查询，编号大章，后接章首段'
+  accepted_evidence:
+  - 编号大章格式
+  - 后接上文回顾段
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 113
+  reason: '行带有页码 333，与前后目录条目格式一致，后接 # 你可能喜欢的其他书籍 342 与 # 前言，仍位于目录区，并非文末索引正文章节。复核方反证成立，采纳不分章'
+  need_human_review: false

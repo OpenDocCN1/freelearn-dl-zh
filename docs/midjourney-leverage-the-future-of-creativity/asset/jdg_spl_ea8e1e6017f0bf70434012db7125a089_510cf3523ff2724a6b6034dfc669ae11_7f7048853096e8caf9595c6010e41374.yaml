@@ -1,0 +1,65 @@
+chapter_starts:
+- 'no': 9
+  confidence: 0.92
+  final_reason: '判断方与复核方均认可。## 01 提示词的构造为最高层级编号标题，单独成行，后接 ### 基础提示词 等子节，语义统领。'
+  accepted_evidence:
+  - '## 01 提示词的构造，最高层级编号标题，单独成行，后接概述与子节'
+  - '编号 01 且使用 ##，单独成行，后接 ### 基础提示词 等子节，符合最高层级章节特征'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 144
+  confidence: 0.9
+  final_reason: '双方一致认为为最高层级章节。## 03 理解 Midjourney 命令单独成行，后接 ### 提示词 等子节，符合章节格式与语义。'
+  accepted_evidence:
+  - '## 03 理解 Midjourney 命令，最高层级编号标题，单独成行，后接子节'
+  - '## 03 理解 Midjourney 命令单独成行，后接 ### 提示词 等子节，符合最高层级章节特征'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 204
+  confidence: 0.9
+  final_reason: '双方一致认可。## 04 熟悉参数列表单独成行，后接 ### 基础参数 等子节，统领参数章节。'
+  accepted_evidence:
+  - '## 04 熟悉参数列表，最高层级编号标题，单独成行，统领参数章节'
+  - '## 04 熟悉参数列表单独成行，后接 ### 基础参数 等子节，语义统领参数相关内容'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 340
+  confidence: 0.9
+  final_reason: '双方一致认可。## 05 高级提示词单独成行，后接 ### 图片提示词 等子节，符合章节特征。'
+  accepted_evidence:
+  - '## 05 高级提示词，最高层级编号标题，单独成行，开启新主题'
+  - '## 05 高级提示词单独成行，后接 ### 图片提示词 等子节，符合章节格式与语义'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 406
+  confidence: 0.9
+  final_reason: '双方一致认可。## 06 Remix 模式单独成行，后接 ### 使用 Remix，符合最高层级章节特征。'
+  accepted_evidence:
+  - '## 06 Remix 模式，最高层级编号标题，单独成行'
+  - '## 06 Remix 模式单独成行，后接 ### 使用 Remix，符合最高层级章节特征'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 436
+  confidence: 0.9
+  final_reason: 双方一致认可。## 07 多提示词 (Multi Prompts) 单独成行，后接子节，编号连贯。
+  accepted_evidence:
+  - '## 07 多提示词 (Multi Prompts)，最高层级编号标题，单独成行'
+  - '## 07 多提示词 (Multi Prompts) 单独成行，后接子节，语义清晰且编号连贯'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 455
+  confidence: 0.9
+  final_reason: '双方一致认可。## 08 Pan（平移）选项单独成行，后接 ### 平移图片，编号与前文连贯。'
+  accepted_evidence:
+  - '## 08 Pan（平移）选项，最高层级编号标题，单独成行'
+  - '## 08 Pan（平移）选项单独成行，后接 ### 平移图片，编号与前文连贯，符合章节特征'
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 1
+  reason: '复核方反证成立。行内容为 ''# Midjourney：释放创造未来'' 为书名/封面标题，使用单 # 书名级标记，第 1 行后直接进入正文说明而非章节概述，书名不满足正文章节语义特征，应不分章。'
+  need_human_review: false
+- 'no': 35
+  reason: 复核方反证成立。编号 02 在行 35、39、43 连续重复出现三次，分别为图像提示词/文本提示词/参数，编号重复且无连贯性，行 35 后仅一句概述后即被同级编号
+    02 新标题打断，不具备统领后续子节的章节语义，更像是分组小标题，应不分章。
+  need_human_review: false

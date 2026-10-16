@@ -1,0 +1,149 @@
+chapter_starts:
+- 'no': 3069
+  confidence: 0.93
+  final_reason: 位于第3章末尾的小结、习题和订阅信息之后，后文出现'本章包含以下章节'，且之后的长篇内容均围绕 RAG 展开；语义与上下文均表明这是新的最高层级章（第4章）。
+  accepted_evidence:
+  - 前一章以'## 问题'和'## 订阅我们的每周通讯报'收尾，形成明显章节边界
+  - 该行后紧跟章节概述'到本书为止…本章将探索 RAG'及'本章包含以下章节'
+  - 直到 5127 才出现带序号的下一章，期间所有标题均为章内节标题
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5127
+  confidence: 0.97
+  final_reason: 标题自带章序号'5'，后接'本章将涵盖以下主题'及节目录，是明确的最高层级新章。
+  accepted_evidence:
+  - 行文为'# 5 构建智能智能体'，包含明确的章序号'5'
+  - 后续出现'简而言之，本章将涵盖以下主题'
+  - 与上一章之间存在订阅/收尾内容，章节边界清晰
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 2962
+  reason: 复核方证据成立：该行位于第3章消息历史/会话管理内容的延续中，后续为'检查点'的定义和要点列表，属于章内小标题，不是新章。
+  need_human_review: false
+- 'no': 3125
+  reason: 该行位于第4章（3069起）内部，后接'## 从词法检索到语义表示'等子标题，属于章内节标题，无新章引导。
+  need_human_review: false
+- 'no': 3684
+  reason: 位于'分块策略'一节内部，是若干分块方法中的一项，非最高层级章。
+  need_human_review: false
+- 'no': 3690
+  reason: 位于'分块策略'下的'语义分块'子节，不是新章。
+  need_human_review: false
+- 'no': 3731
+  reason: 位于'分块策略'下的'基于代理的分块'子节，不是新章。
+  need_human_review: false
+- 'no': 3748
+  reason: 位于'分块策略'下的'多模态分块'子节，不是新章。
+  need_human_review: false
+- 'no': 3763
+  reason: 位于'分块策略'下的策略选择小节，后接对比表，不是新章。
+  need_human_review: false
+- 'no': 4015
+  reason: 位于第4章'高级 RAG 技术'讨论内部，后接'## 假设性文档生成'等子节，是章内节标题。
+  need_human_review: false
+- 'no': 4019
+  reason: '''RAG 增强技术''下的假设性文档生成小节。'
+  need_human_review: false
+- 'no': 4053
+  reason: 上下文处理是 RAG 增强技术下的具体小节。
+  need_human_review: false
+- 'no': 4091
+  reason: 最大边际相关性是 RAG 增强技术下的具体小节。
+  need_human_review: false
+- 'no': 4114
+  reason: 来源溯源属于'响应增强'主题下的具体小节。
+  need_human_review: false
+- 'no': 4229
+  reason: 自一致性检查属于'响应增强'主题下的具体小节。
+  need_human_review: false
+- 'no': 4350
+  reason: 纠性 RAG 是第4章高级 RAG 技术部分的一个方法小节。
+  need_human_review: false
+- 'no': 4406
+  reason: 代理级 RAG 是第4章高级 RAG 技术部分的一个方法小节。
+  need_human_review: false
+- 'no': 4431
+  reason: 选择正确的技术是第4章末尾的总结性小节，后接技术对比表，不是新章。
+  need_human_review: false
+- 'no': 4470
+  reason: 该标题出现在第4章开头的章节列表（'开发企业文档聊天机器人'）中，属于章内节。
+  need_human_review: false
+- 'no': 4501
+  reason: '''开发企业文档聊天机器人''项目下的文档加载模块小节。'
+  need_human_review: false
+- 'no': 4581
+  reason: 项目下的语言模型设置模块小节。
+  need_human_review: false
+- 'no': 4629
+  reason: 项目下的文档检索模块小节。
+  need_human_review: false
+- 'no': 4714
+  reason: 项目下的状态图设计小节。
+  need_human_review: false
+- 'no': 4720
+  reason: '''设计状态图''下的 Pipeline 步骤说明，层级更低。'
+  need_human_review: false
+- 'no': 4911
+  reason: 项目下的 Streamlit 集成小节。
+  need_human_review: false
+- 'no': 5057
+  reason: 第4章末尾的评估与性能考量小节。
+  need_human_review: false
+- 'no': 5069
+  reason: 该标题出现在第4章开头的章节列表（'RAG 系统的故障排除'）中，属于章内节。
+  need_human_review: false
+- 'no': 5097
+  reason: 第4章章末'总结'，不是新章。
+  need_human_review: false
+- 'no': 5151
+  reason: 位于第5章（5127起）内部，对应章前节目录'什么是工具？'，是章内节。
+  need_human_review: false
+- 'no': 5203
+  reason: 第5章内'LangChain 工具调用与 ReACT 模式'节。
+  need_human_review: false
+- 'no': 5286
+  reason: 第5章内'LangChain 中的工具'节。
+  need_human_review: false
+- 'no': 5351
+  reason: 第5章内'REACT（推理与行动）'节。
+  need_human_review: false
+- 'no': 5489
+  reason: 第5章内'ReACT 工作流与自定义工具'节，后接'## 预构建的 ReACT 工作流'子节。
+  need_human_review: false
+- 'no': 5491
+  reason: 该行是'ReACT 工作流与自定义工具'下的子节。
+  need_human_review: false
+- 'no': 5543
+  reason: 第5章内'现有工具类型'节。
+  need_human_review: false
+- 'no': 5591
+  reason: 第5章内'自定义工具'节。
+  need_human_review: false
+- 'no': 5595
+  reason: '''自定义工具''下的子节''将 Python 函数封装为工具''。'
+  need_human_review: false
+- 'no': 5700
+  reason: '''自定义工具''下的子节''从 Runnable 创建工具''。'
+  need_human_review: false
+- 'no': 5761
+  reason: '''自定义工具''下的子节''子类 StructuredTool 或 BaseTool''。'
+  need_human_review: false
+- 'no': 5802
+  reason: 第5章内'错误处理'节。
+  need_human_review: false
+- 'no': 5807
+  reason: 第5章内'高级工具调用能力'节。
+  need_human_review: false
+- 'no': 5822
+  reason: 第5章内'将工具整合到工作流'节。
+  need_human_review: false
+- 'no': 5825
+  reason: '''将工具整合到工作流''下的''控制生成''子节。'
+  need_human_review: false
+- 'no': 5869
+  reason: 控制生成下的'供应商提供的控制生成'子节。
+  need_human_review: false
+- 'no': 5942
+  reason: 第5章内'ToolNode'小节，位于章节末尾。
+  need_human_review: false

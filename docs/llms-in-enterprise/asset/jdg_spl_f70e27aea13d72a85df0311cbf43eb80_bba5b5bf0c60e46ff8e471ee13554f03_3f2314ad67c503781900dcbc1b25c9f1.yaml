@@ -1,0 +1,78 @@
+chapter_starts:
+- 'no': 8891
+  confidence: 0.85
+  final_reason: 双方一致 + 排版语义均符合，# 实现透明度和职责单独成行，统领透明度后续内容，为全书最高层级大章
+  accepted_evidence:
+  - '一级标题 # 实现透明度和职责，单独成行，语义统领后续透明度内容'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9082
+  confidence: 0.9
+  final_reason: 双方一致 + 排版语义均符合，# LLM 的安全性与鲁棒性单独成行，开启新主题
+  accepted_evidence:
+  - '一级标题 # LLM 的安全性与鲁棒性，单独成行，长度合适，开启新主题'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9294
+  confidence: 0.95
+  final_reason: '双方一致 + 排版语义均符合，带章节序号的 # 14. 新兴趋势与多模态性，明确新章起始'
+  accepted_evidence:
+  - '一级标题 # 14. 新兴趋势与多模态性，带章节序号，明确新章起始'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9809
+  confidence: 0.6
+  final_reason: 判断方采纳且无有效反方证据，# 医疗领域的多模态用例单独成行，作为第14章内独立应用案例章节划分
+  accepted_evidence:
+  - '一级标题 # 医疗领域的多模态用例，单独成行，明确应用案例新章'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9837
+  confidence: 0.75
+  final_reason: '文末总结 # Summary 单独成行，符合文末总结章节划分'
+  accepted_evidence:
+  - '一级标题 # Summary，文末总结章节，单独成行'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9845
+  confidence: 0.8
+  final_reason: '文末参考文献 # 参考文献 单独成行，符合文末参考文献章节'
+  accepted_evidence:
+  - '一级标题 # 参考文献，文末参考文献章节'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 9937
+  confidence: 0.9
+  final_reason: 双方一致，# 索引为文末索引，应单独划分为一章
+  accepted_evidence:
+  - '一级标题 # 索引，文末索引应单独划分为一章'
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 9304
+  reason: '复核方指出位于第14章内部，为章内技术前提小标题，后续为 ## 硬件要求/## 软件要求 子节，无全书最高层级统领性，采纳反方'
+  need_human_review: false
+- 'no': 9328
+  reason: '复核方指出紧跟 # 技术要求 之后，仍在第14章上下文中，为本章内小节，非全书大章，上下文无章间转折'
+  need_human_review: false
+- 'no': 9396
+  reason: '复核方指出仍在第14章内部，后续紧跟 ## 架构基础 等更细子标题，为章内论述板块，非全书最高层级大章'
+  need_human_review: false
+- 'no': 9649
+  reason: '复核方指出位于第14章中段，后续为 ### GPT-4V 等更细子标题，为章内大节，无章节序号，不具备独立成章统领性'
+  need_human_review: false
+- 'no': 9866
+  reason: 复核方指出为文末营销附录，属出版商推广，与书籍核心章节体系无关，属排版噪声/附录
+  need_human_review: false
+- 'no': 9880
+  reason: 复核方指出属于订阅推广子标题，语义为营销说明，非学术章节，属附录小标题
+  need_human_review: false
+- 'no': 9892
+  reason: 复核方指出位于推荐书籍附录板块，为排版性附录小标题，非全书最高层级章节
+  need_human_review: false
+- 'no': 9929
+  reason: 复核方指出为出版社征稿信息，属页脚/附录噪声，与主文主题无关，不应划分新章
+  need_human_review: false
+- 'no': 9933
+  reason: 复核方指出为读者反馈征集，属文末附录互动内容，不具备章节统领性
+  need_human_review: false

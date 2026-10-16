@@ -1,0 +1,40 @@
+chapter_starts:
+- 'no': 6272
+  confidence: 0.8
+  final_reason: '判断方认定为顶层 # 标题且语义统领，复核方 overturn_probability 0.2 且 keep_split=true；标题单独成行、长度符合、后接章节内容，构成第7章真实标题。'
+  accepted_evidence:
+  - '顶层 # 标题 ''使用 Mistral 进行编程'' 单独成行'
+  - 后文为工作坊与技术要求等章节内容，语义统领性强
+  - 复核方认为保持分章，误分风险低
+  rejected_evidence:
+  - '前一行 6270 的孤立数字 # 7 为页码/章号残留，非完整标题'
+  need_human_review: false
+- 'no': 7960
+  confidence: 0.85
+  final_reason: '判断方认定为顶层 # 标题章节编号，复核方 overturn_probability 0.25 keep_split=true；标题
+    ''# 9 课后 RAG 挑战'' 单独成行，后续为独立挑战章节内容，虽使用简略编号但语义为新章起止。'
+  accepted_evidence:
+  - 行号 7960 内容为 '# 9 课后 RAG 挑战'，# 级标题
+  - 后接问题陈述与挑战1/2结构，与前文课外活动明显分界
+  rejected_evidence:
+  - '复核方提示使用 ## 的误读已排除，实际为 # 级'
+  need_human_review: false
+- 'no': 8418
+  confidence: 0.75
+  final_reason: 判断方认定为数字章节标记，复核方 overturn_probability 0.25 keep_split=true；标题 '# AWS
+    Bedrock 上的 10 Mistral' 虽措辞异常但单独成行且后接技术要求、问题描述等全新章节内容，采纳分章。
+  accepted_evidence:
+  - '# 级标题单独成行，后文为 AWS Bedrock 专章内容'
+  - 复核方未提供足以推翻的反证
+  rejected_evidence:
+  - 标题中数字位置异常的疑虑
+  need_human_review: false
+rejected_lines:
+- 'no': 6270
+  reason: 复核方 overturn_probability 0.95，指出该行仅为孤立数字 '7'，无语义，实为页码残留或章号与标题分离的排版断行；真实章标题为下一行
+    6272。
+  need_human_review: false
+- 'no': 6398
+  reason: 复核方 overturn_probability 0.7，指出该行 '第 7 章：使用 LangChain 和 Mistral AI 构建问答系统'
+    与 6272 已建立的第7章重复，疑似页眉/提取噪声；上下文为同一章内容，不应再起新章。
+  need_human_review: false

@@ -1,0 +1,39 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.08
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行6144 '# 第 8 章' 与前后上下文连贯，前文在讨论上下文工程师组织问题，后文直接进入'在现实世界的部署中...'的正文展开，符合真正的章级起始语义；前后无重复出现，与页眉残留特征不符。
+  keep_split: true
+- 'no': 2
+  overturn_probability: 0.88
+  alternative: 页眉页脚
+  counter_evidence:
+  - 行6369 '## 第 9 章' 在文本中被多次重复出现，后续行6498、6546、6574、... 等位置均出现完全相同的 '## 第 9 章'，符合页眉/页码残留的重复噪声特征；前后内容仍为文档
+    3、社交媒体简报等正文内容，并非章节概述段落。
+  keep_split: false
+- 'no': 3
+  overturn_probability: 0.92
+  alternative: 正文小标题
+  counter_evidence:
+  - 行6714 '# 10 生产就绪 AI 的蓝图' 并非标准的 '第 X 章' 编号，语义为本章内的主题小节；真正的第10章标记在行6740出现 '# 第 10
+    章'，且后文立刻给出页码 '## 303'，显示6714为章节内部的引领小标题，标题长度>30字特征也不符合章标题规范。
+  keep_split: false
+- 'no': 4
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行7078 '# 附录 A' 独立成行且为附录起始标记，按规则前言、附录等应单独成章；前后上下文从二维码说明跳转到附录指南，语义上属于新的整体区块。
+  keep_split: true
+- 'no': 5
+  overturn_probability: 0.07
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行7570 '# 附录 B：答案' 为附录章节的明确起始，后文为各章答案汇总，符合附录分章规则；未见重复或页眉残留特征。
+  keep_split: true
+- 'no': 6
+  overturn_probability: 0.03
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行7951 '# 索引' 位于文末，为典型的索引区块，按规则文末索引应划分为一章；前后为书籍推广内容与索引列表，语义边界清晰。
+  keep_split: true

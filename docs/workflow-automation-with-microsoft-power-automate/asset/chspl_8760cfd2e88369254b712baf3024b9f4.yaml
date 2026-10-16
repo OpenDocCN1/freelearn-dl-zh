@@ -1,0 +1,40 @@
+chapter_starts:
+- 'no': 3024
+  confidence: 0.95
+  reason: 一级标题 第 10 章：开始使用审批，符合最高层级大章特征，单独成行且后文为本章概述
+- 'no': 3375
+  confidence: 0.9
+  reason: 标题 第 11 章，出现在第10章总结后，随后有本章主题介绍，符合新章起始
+- 'no': 3643
+  confidence: 0.85
+  reason: '重复出现 # 第 11 章，处于第11章正文流程中，语义上为章节标题的再次出现'
+- 'no': 3820
+  confidence: 0.8
+  reason: '标题 # 12，后接 ## 向 Teams 发送审批，为第12章起始标记'
+- 'no': 4156
+  confidence: 0.9
+  reason: '标题 # 13，后接 ## 使用数据库，为第13章起始'
+- 'no': 4238
+  confidence: 0.85
+  reason: '## 第 13 章，与 # 13 对应，确认第13章章节标题'
+- 'no': 4656
+  confidence: 0.9
+  reason: '标题 # 第 15 章，后接 ## 265 与 Planner/Teams 内容，为第15章起始'
+- 'no': 4895
+  confidence: 0.75
+  reason: '标题 # 接受用户输入，后续出现 ## 第 16 章，为第16章主题入口'
+- 'no': 5101
+  confidence: 0.9
+  reason: '## 第 16 章，明确章节编号，符合大章起始'
+- 'no': 5154
+  confidence: 0.95
+  reason: '## 第 17 章：自动化 Entra ID，标准章节标题，单独成行且后文为本章概述'
+- 'no': 5655
+  confidence: 0.85
+  reason: '## 第 18 章，后接介绍机器人流程自动化，为第18章起始'
+- 'no': 5661
+  confidence: 0.9
+  reason: '# 第 18 章，重复确认的最高层级章节标题'
+- 'no': 5765
+  confidence: 0.95
+  reason: '# 第 19 章，后接 ## 使用 RPA 向 Access 数据库写入数据，为第19章起始'

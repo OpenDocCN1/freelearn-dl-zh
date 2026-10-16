@@ -1,0 +1,45 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.92
+  final_reason: 双方一致支持（judgment确认独立书名/封面首章，review overturn_prob 0.2 keep_split true）；行1独立成行无句号长度合适，位于全书起始，无前置章节；上下文为前言等统一一章起点，后续致谢、贡献者、关于作者正文；符合编号/格式/语义/上下文特征，为最高层级全书首章
+  accepted_evidence:
+  - 'judgment: book title standalone start of first chapter'
+  - 'review: low overturn probability, keep_split true'
+  rejected_evidence:
+  - none
+  need_human_review: false
+- 'no': 656
+  confidence: 0.91
+  final_reason: 双方高度一致（judgment 0.92 keep, review overturn 0.2 keep_split true）；标题单独成行、无句号、长度合适，语义统领企业LLM应用/挑战/设计模式；目录明确为第2章，正文后接概述段落及子节；上下文优先于格式，主标题层级而非小节
+  accepted_evidence:
+  - 'judgment: standalone highest-level chapter title'
+  - 'review: low overturn, keep_split true'
+  rejected_evidence:
+  - 'review counter: lacks explicit ''第2章'' numbering (format feature insufficient
+    alone)'
+  need_human_review: false
+- 'no': 1961
+  confidence: 0.9
+  final_reason: 双方一致支持（judgment 0.9 keep, review overturn 0.2 keep_split true）；标题单独成行、语义概括检索增强生成模式（目录第4章）、后接技术要求+简介+子节；上下文为独立章节起点，符合统领性与层级特征
+  accepted_evidence:
+  - 'judgment: standalone chapter title matching directory'
+  - 'review: low overturn probability, keep_split true'
+  rejected_evidence:
+  - 'review counter: possible ad/page header interference but semantic/context overrides'
+  need_human_review: false
+rejected_lines:
+- 'no': 35
+  reason: 复核方strong evidence overturn (0.8, keep_split false)，judgment keep被覆盖；前言为前置内容（规则统一前言等正文前内容为一章），非最高层级独立章；上下文为段落概要而非章节终结器，且已被行1涵盖
+  need_human_review: false
+- 'no': 272
+  reason: 复核方strong evidence overturn (0.9, keep_split false); content为第1章内子节'语言模型的历史背景与演变'（前文'本章目的'明确第1章延续，后接'早期发展'等子节）；judgment误判为独立章，目录第1章为行80开始
+  need_human_review: false
+- 'no': 380
+  reason: 复核方strong evidence overturn (0.9, keep_split false); 紧接前节为GPT助手训练配方延续，仍属第1章内子节，后续子节'构建基础模型'等；judgment无上下文支持
+  need_human_review: false
+- 'no': 553
+  reason: 复核方strong evidence overturn (0.9, keep_split false); 解码LLM现实与误区为第1章讨论延续（前文为总结），后接多小节；非独立章标题
+  need_human_review: false
+- 'no': 2903
+  reason: 复核方strong evidence overturn (0.85, keep_split false); 为第5章内企业RAG子节（前文上下文定制重要性、第5章目录对应），后接子节'企业案例'等；judgment误判为独立章
+  need_human_review: false

@@ -1,0 +1,67 @@
+chapter_starts:
+- 'no': 32
+  confidence: 0.85
+  final_reason: 判断方认定为前言起始的独立前置章；复核方指出前置内容应统一归为一章且起点应更靠前，但 overturn_probability 低且
+    keep_split 为 true，暂维持分章但置信度下调，存在前置章节起点定位不一致的风险
+  accepted_evidence:
+  - 前言为正文之前独立章节，按规则统一划分为一章
+  - 复核方 keep_split=true，overturn_probability 0.1
+  rejected_evidence:
+  - 应前移至第一个前置标题而非在前言处才分章
+  - 前言本身可作为引导性小节
+  need_human_review: true
+- 'no': 183
+  confidence: 0.96
+  final_reason: 最高层级部分标题“第 1 部分：智能体 AI 的基础”，单独成行、语义统领后续内容，符合部分-章节模式的分章规则
+  accepted_evidence:
+  - 最高层级部分标题单独成行且语义统领后续内容
+  - 复核方 keep_split=true，overturn_probability 0.02
+  rejected_evidence:
+  - 可能为分隔标题页而非承载实质正文
+  need_human_review: false
+- 'no': 193
+  confidence: 0.95
+  final_reason: 最高层级章标题“第 1 章：生成式 AI 与 AI 智能体导论”，单独成行、无句号，符合章标题格式与语义
+  accepted_evidence:
+  - 最高层级章标题单独成行、无句号
+  - 复核方 keep_split=true，overturn_probability 0.03
+  rejected_evidence:
+  - 紧跟部分章节列表，可能为列表项的正文展开
+  need_human_review: false
+- 'no': 537
+  confidence: 0.88
+  final_reason: 编号特征明显且单独成行，虽缺少‘第’‘章’字样但前后文为第2章内容，复核方认为格式不完整但仍 keep_split
+  accepted_evidence:
+  - 章节标题编号+单独成行，为第2章起始
+  - 复核方 keep_split=true，overturn_probability 0.08
+  rejected_evidence:
+  - 缺少中文章标题惯用‘第’‘章’字样，格式类似正文分点标题
+  need_human_review: false
+- 'no': 1149
+  confidence: 0.88
+  final_reason: 编号特征+单独成行对应第3章起始，复核方指出格式不完整但仍建议保持分章
+  accepted_evidence:
+  - 章节标题编号+单独成行，为第3章起始
+  - 复核方 keep_split=true，overturn_probability 0.08
+  rejected_evidence:
+  - 缺少‘第’‘章’和点号，可能为转换残件
+  need_human_review: false
+- 'no': 1891
+  confidence: 0.96
+  final_reason: 最高层级部分标题“第 2 部分：构建你自己的智能体 AI 框架”，单独成行且统领后续内容，符合部分-章节模式
+  accepted_evidence:
+  - 最高层级部分标题单独成行且统领后续
+  - 复核方 keep_split=true，overturn_probability 0.02
+  rejected_evidence:
+  - 可能为正文中的部分分隔页
+  need_human_review: false
+- 'no': 1902
+  confidence: 0.9
+  final_reason: 编号特征+单独成行对应第4章起始，虽格式与第1章不一致但复核方仍建议保持分章
+  accepted_evidence:
+  - 章节标题编号+单独成行，为第4章起始
+  - 复核方 keep_split=true，overturn_probability 0.05
+  rejected_evidence:
+  - 缺少‘第’‘章’字样，与第1章格式不一致
+  need_human_review: false
+rejected_lines: []

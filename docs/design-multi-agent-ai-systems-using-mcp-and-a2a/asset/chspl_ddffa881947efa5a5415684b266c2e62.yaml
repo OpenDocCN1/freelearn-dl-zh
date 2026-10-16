@@ -1,0 +1,10 @@
+chapter_starts:
+- 'no': 3110
+  confidence: 0.98
+  reason: 行内容为 '## 5 实现自定义工具'，符合最高层级章节标题格式，单独成行且后接章节概述
+- 'no': 4419
+  confidence: 0.98
+  reason: 行内容为 '## 6 使用 Slack 和 Chainlit 创建聊天界面'，为最高层级章节标题，单独成行且后接章节引言
+- 'no': 5382
+  confidence: 0.97
+  reason: 行内容为 '## 与模型上下文协议生态集成'，最高层级 Markdown 二级标题，语义为新章起首且后接章节总述

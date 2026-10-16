@@ -1,0 +1,136 @@
+chapter_starts:
+- 'no': 2962
+  confidence: 0.75
+  reason: '一级标题 #，单独成行，标题长度适中，后续为概述段落，符合新章节起始特征'
+- 'no': 3069
+  confidence: 0.9
+  reason: '一级标题 # 构建智能 RAG 系统，语义统领后续内容，章节级标题'
+- 'no': 3125
+  confidence: 0.7
+  reason: '一级标题 #，独立成行，后接内容段落，可视为子章起始'
+- 'no': 3684
+  confidence: 0.6
+  reason: '一级标题 # 特定于文档的分块，独立成行，语义概括后续内容'
+- 'no': 3690
+  confidence: 0.6
+  reason: '一级标题 # 语义分块，独立成行'
+- 'no': 3731
+  confidence: 0.6
+  reason: '一级标题 # 基于代理的分块，独立成行'
+- 'no': 3748
+  confidence: 0.6
+  reason: '一级标题 # 多模态分块，独立成行'
+- 'no': 3763
+  confidence: 0.6
+  reason: '一级标题 # 选择正确的分块策略，独立成行'
+- 'no': 4015
+  confidence: 0.75
+  reason: '一级标题 # RAG 增强技术，语义统领后续多个子节'
+- 'no': 4019
+  confidence: 0.65
+  reason: '一级标题 # 假设性文档生成，独立成行'
+- 'no': 4053
+  confidence: 0.65
+  reason: '一级标题 # 上下文处理，独立成行'
+- 'no': 4091
+  confidence: 0.65
+  reason: '一级标题 # 最大边相关性，独立成行'
+- 'no': 4114
+  confidence: 0.65
+  reason: '一级标题 # 来源溯源，独立成行'
+- 'no': 4229
+  confidence: 0.7
+  reason: '一级标题 # 自一致性检查：确保事实准确性，独立成行'
+- 'no': 4350
+  confidence: 0.8
+  reason: '一级标题 # 纠性 RAG (Corrective RAG)，独立成行，语义为新主题'
+- 'no': 4406
+  confidence: 0.8
+  reason: '一级标题 # 代理级 RAG (Agentic RAG)，独立成行'
+- 'no': 4431
+  confidence: 0.7
+  reason: '一级标题 # 选择正确的技术，独立成行'
+- 'no': 4470
+  confidence: 0.85
+  reason: '一级标题 # 开发企业文档聊天机器人，语义为新章节'
+- 'no': 4501
+  confidence: 0.6
+  reason: '一级标题 # 文档加载，独立成行'
+- 'no': 4581
+  confidence: 0.6
+  reason: '一级标题 # 语言模型设置，独立成行'
+- 'no': 4629
+  confidence: 0.6
+  reason: '一级标题 # 文档检索，独立成行'
+- 'no': 4714
+  confidence: 0.6
+  reason: '一级标题 # 设计状态图，独立成行'
+- 'no': 4720
+  confidence: 0.55
+  reason: '一级标题 # Pipeline 步骤，独立成行'
+- 'no': 4911
+  confidence: 0.65
+  reason: '一级标题 # 集成 Streamlit，独立成行'
+- 'no': 5057
+  confidence: 0.65
+  reason: '一级标题 # 评估与性能考量，独立成行'
+- 'no': 5069
+  confidence: 0.7
+  reason: '一级标题 # RAG 系统的故障排除，独立成行'
+- 'no': 5097
+  confidence: 0.7
+  reason: '一级标题 # 总结，独立成行'
+- 'no': 5127
+  confidence: 0.95
+  reason: '一级标题 # 5 构建智能智能体，带序号章标题，明确为新章'
+- 'no': 5151
+  confidence: 0.7
+  reason: '一级标题 # 什么是工具？，独立成行'
+- 'no': 5203
+  confidence: 0.7
+  reason: '一级标题 # LangChain 工具调用与 ReACT 模式，独立成行'
+- 'no': 5286
+  confidence: 0.7
+  reason: '一级标题 # LangChain 中的工具，独立成行'
+- 'no': 5351
+  confidence: 0.75
+  reason: '一级标题 # REACT（推理与行动），独立成行'
+- 'no': 5489
+  confidence: 0.7
+  reason: '一级标题 # ReACT 工作流与自定义工具，独立成行'
+- 'no': 5491
+  confidence: 0.6
+  reason: '一级标题 # 预构建的 ReACT 工作流，独立成行'
+- 'no': 5543
+  confidence: 0.6
+  reason: '一级标题 # 现有工具类型，独立成行'
+- 'no': 5591
+  confidence: 0.7
+  reason: '一级标题 # 自定义工具，独立成行'
+- 'no': 5595
+  confidence: 0.6
+  reason: '一级标题 # 将 Python 函数封装为工具，独立成行'
+- 'no': 5700
+  confidence: 0.6
+  reason: '一级标题 # 从 Runnable 创建工具，独立成行'
+- 'no': 5761
+  confidence: 0.6
+  reason: '一级标题 # 子类 StructuredTool 或 BaseTool，独立成行'
+- 'no': 5802
+  confidence: 0.65
+  reason: '一级标题 # 错误处理，独立成行'
+- 'no': 5807
+  confidence: 0.7
+  reason: '一级标题 # 高级工具调用能力，独立成行'
+- 'no': 5822
+  confidence: 0.7
+  reason: '一级标题 # 将工具整合到工作流，独立成行'
+- 'no': 5825
+  confidence: 0.6
+  reason: '一级标题 # 控制生成，独立成行'
+- 'no': 5869
+  confidence: 0.6
+  reason: '一级标题 # 供应商提供的控制生成，独立成行'
+- 'no': 5942
+  confidence: 0.6
+  reason: '一级标题 # ToolNode，独立成行'

@@ -1,0 +1,45 @@
+chapter_starts:
+- 'no': 8910
+  confidence: 0.95
+  final_reason: 双方一致认可：前一行'# 11'为章节编号，本行为完整章名，单独成行且无句末标点，语义上统领第11章全部内容，后接章概述段落。
+  accepted_evidence:
+  - 前置行'# 11'为章序号，本行是章名主体
+  - 单独成行，格式符合一级标题特征
+  - 后续为章简介、主题列表等概述性内容
+  rejected_evidence:
+  - '''# 11''可能被单独视为标题，但不影响本行为完整章名的判定'
+  need_human_review: false
+rejected_lines:
+- 'no': 8891
+  reason: 复核方指出此行为第10章末尾的'总结'小节，是章内收尾内容，后跟'课外拓展'同属该章附加部分，且无新章编号，不具备新章统领性。
+  need_human_review: false
+- 'no': 8899
+  reason: 紧随'总结'之后，属于第10章章末的课外拓展/练习部分，与章主题紧密相关，无独立章节编号，不应分为新章。
+  need_human_review: false
+- 'no': 8927
+  reason: 第11章开头的'技术要求'是每章固定的前置小节，后接列表项，属于章内结构，而非独立章节。
+  need_human_review: false
+- 'no': 9066
+  reason: 位于第11章中段，前有多个'##'二级小节，本行虽为'#'级别，但只是章内实战研讨会部分的起始，后接子节，属于章内顶级节而非新章。
+  need_human_review: false
+- 'no': 9909
+  reason: 第11章结尾的常规'总结'小节，是章内收尾部分，后跟'课外活动'也属于该章附加内容，不应分章。
+  need_human_review: false
+- 'no': 9919
+  reason: 第11章末尾的'课外活动'，属于该章教学结构的最后一部分，无章节编号，与本章主题直接相关，不能独立成章。
+  need_human_review: false
+- 'no': 9951
+  reason: 书末出版社的订阅推广广告板块，不属于正文章节，后续还有多个并列推广标题，应整体视为书末附属内容而非新章。
+  need_human_review: false
+- 'no': 9965
+  reason: 订阅推广页中的小标题，与'# 订阅获取免费电子书'同属广告页组，不含技术内容，不构成新章。
+  need_human_review: false
+- 'no': 9979
+  reason: 书末其他书籍推荐板块，属于出版社广告页面，与正文章节无关，不应分章。
+  need_human_review: false
+- 'no': 10025
+  reason: 书末作者招募广告标题，属于出版社营销文案，非技术章节，不具备统领性。
+  need_human_review: false
+- 'no': 10029
+  reason: 书末读者反馈邀请，属于推广页内容，与正文章节无关，不应作为新章。
+  need_human_review: false

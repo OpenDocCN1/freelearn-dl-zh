@@ -1,0 +1,55 @@
+chapter_starts:
+- 'no': 11
+  confidence: 0.85
+  final_reason: '前置内容统一分章起点。行11 # 贡献者 为书前栏目序列的首个标题，后接 # 关于作者 # 关于评审员 # 前言 等前置信息，依据规则将前言、序言、致谢、关于作者等正文之前内容统一划分为一章，从首个前置标题开始划分。复核方
+    overturn_probability 0.05 且 keep_split=true。'
+  accepted_evidence:
+  - '# 贡献者 为书前栏目起始，之后连续出现 # 关于作者 # 关于评审员 # 前言 等前置块'
+  - 规则要求前言、序言、致谢、关于作者等正文前内容统一划分为一章
+  - 复核方认为贡献者为书前栏目而非正文章，支持统一为前置一章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 147
+  confidence: 0.95
+  final_reason: '第1章开篇标题。行147 # 语言模型的优势、局限性和应用场景 单独成行、无句号、长度<30，语义统领后续理论内容，后接引用概述及图1.x子节。前置内容在145结束，之后正式进入正文。复核方
+    overturn_probability 0.05 keep_split=true。'
+  accepted_evidence:
+  - 标题单独成行且无句号，语义概括性强
+  - 后1~3行为概述段落，随后出现 - LLM 适用于哪些场景 等子结构及图1.x
+  - 前一行145为营销评论邀请，上下文断开，符合新章边界
+  rejected_evidence:
+  - 无显式章序号，可能被误认为过渡标题
+  need_human_review: false
+- 'no': 471
+  confidence: 0.97
+  final_reason: '第2章标题。行471 # 2 搭建你自己的聊天机器人 带编号、单独成行，后接引文概述与本章将引导你...等章级概述，符合最高层级大章特征。复核方
+    overturn_probability 0.03 keep_split=true。'
+  accepted_evidence:
+  - 标题含编号 2 且单独成行
+  - 后接引言性概述与子节 * 问题 * 实战工作坊
+  - 上下文从第1章总结/参考文献后自然进入新章
+  rejected_evidence:
+  - 前一行465为社区信息标题，易误判为附加内容，但编号与结构明确为正文章
+  need_human_review: false
+- 'no': 1904
+  confidence: 0.93
+  final_reason: '第4章标题。行1904 # 精通嵌入 单独成行、语义完整统领嵌入主题，后接引文、技术要求、第1步等章级结构，且前文已结束第3章内容。虽无编号但语义与图4.x子结构吻合。复核方
+    overturn_probability 0.05 keep_split=true。'
+  accepted_evidence:
+  - 标题单独成行、无句号、概括性强
+  - 后接 > 你将通过一个词所处的伙伴... 引文及技术要求等章级块
+  - 前后出现 章外 课外拓展 参考文献，符合新章边界
+  rejected_evidence:
+  - 无显式章序号，易与章内h1栏目混淆
+  need_human_review: false
+- 'no': 2667
+  confidence: 0.96
+  final_reason: '第5章标题。行2667 # 5 智能体：从自动化到智能 带编号、单独成行，后接引文、技术要求、问题描述等章级概述，上下文从第4章总结/课外拓展后进入新章。复核方
+    overturn_probability 0.03 keep_split=true。'
+  accepted_evidence:
+  - 标题含编号5且单独成行
+  - 后接引言性概述及 * 定义智能体... 工作坊 列表
+  - 前文为第4章总结及广告表格，上下文断开清晰
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines: []

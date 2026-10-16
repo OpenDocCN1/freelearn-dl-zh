@@ -1,0 +1,64 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.78
+  final_reason: 书名/封面主标题，位于正文之前，规则要求前言序言致谢等正文前内容统一划分为一章。复核方质疑其缺少编号但整体仍为卷首前言起始，采纳先分后审原则保留。
+  accepted_evidence:
+  - 置于正文最前，紧跟封面图与欢迎文字
+  - 后续为目录与前言介绍段落
+  rejected_evidence:
+  - 缺少显式章序号
+  need_human_review: false
+- 'no': 22
+  confidence: 0.95
+  final_reason: 标题 '# 1 生成式 AI 简介' 单独成行，无句号，编号为最高层级，与目录第1章一致，后接本章概述段落，语义统领。
+  accepted_evidence:
+  - 单独成行、编号特征、第1章与目录匹配
+  - 后1~3行为本章概述
+  rejected_evidence:
+  - 复核方提示模板块干扰，实际为章后固定社区模块，不影响章起始判定
+  need_human_review: false
+- 'no': 372
+  confidence: 0.95
+  final_reason: 标题 '# 2 OpenAI 与 ChatGPT：超越市场炒作' 单独成行，最高层级第2章，格式与前后章一致，后接本章介绍。
+  accepted_evidence:
+  - 编号特征、单独成行、语义统领
+  - 与目录第2章一致
+  rejected_evidence:
+  - 标题含冒号及副标题，仍符合章标题格式
+  need_human_review: false
+- 'no': 640
+  confidence: 0.95
+  final_reason: 标题 '# 3 理解提示词设计' 单独成行，最高层级第3章，后接本章介绍段落，与目录第3章匹配。
+  accepted_evidence:
+  - 单独成行、编号特征、后接概述
+  rejected_evidence:
+  - 数字前无'第'字，但格式与相邻章节一致
+  need_human_review: false
+- 'no': 1306
+  confidence: 0.88
+  final_reason: 标题 '# 5 使用 ChatGPT 开发未来' 单独成行，最高层级，第5章与目录完全吻合。前文预告开发、营销和研究，序号跳跃源于预览缺失第4章，非误分。
+  accepted_evidence:
+  - 与目录第5章一致，前文有下一章预告
+  - 单独成行、语义统领
+  rejected_evidence:
+  - 序号从3跳至5缺第4章，属预览不完整
+  need_human_review: false
+- 'no': 1836
+  confidence: 0.93
+  final_reason: 标题 '# 第 7 章 用 ChatGPT 重塑研究' 显式中文章序号，单独成行，语义统领后续研究内容，与目录第7章对应。
+  accepted_evidence:
+  - 显式'第 7 章'编号、单独成行
+  - 后接本章介绍
+  rejected_evidence:
+  - 与前面'# 5'格式不一致，但仍为最高层级章
+  need_human_review: false
+- 'no': 2097
+  confidence: 0.92
+  final_reason: 标题 '# 9 探索 GPTs' 单独成行，最高层级第9章，与目录第9章匹配。序号跳跃因第8章未在预览中出现。
+  accepted_evidence:
+  - 单独成行、编号特征、与目录匹配
+  - 后接本章介绍
+  rejected_evidence:
+  - 可能被误读为节序号，目录确认其为章
+  need_human_review: false
+rejected_lines: []

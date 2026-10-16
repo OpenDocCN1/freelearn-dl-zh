@@ -1,0 +1,22 @@
+reviews:
+- 'no': 5946
+  overturn_probability: 0.08
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行前 5914-5916 为上一章结尾性总结句，5946 之后立即出现本章主题介绍段落 5948-5952，符合章节起始上下文特征
+  - 标题为 ‘## 7 C++中的循环神经网络与长短期记忆网络’，单独成行、编号特征为最高层级大章、无句号且长度 <30 字
+  keep_split: true
+- 'no': 7487
+  overturn_probability: 0.07
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 ‘## 8 C++ 中的生成网络、自编码器与大语言模型’，编号连续且单独成行，后 7489-7492 行为本章主题概览
+  - 前文 7474-7479 为第7章的资源获取尾页内容，7487 后进入全新主题，符合章间边界
+  keep_split: true
+- 'no': 8429
+  overturn_probability: 0.06
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 ‘## 9 C++中的Transformer与大语言模型微调’，最高层级编号、单独成行，且后 8431-8435 行为本章架构介绍
+  - 前文 8368-8370 为第8章小结与延伸阅读，8429 后主题明显切换至 Transformer，符合新章起始特征
+  keep_split: true

@@ -1,0 +1,85 @@
+chapter_starts:
+- 'no': 3024
+  confidence: 0.95
+  final_reason: '双方一致 + 排版语义均符合，一级标题 # 第 10 章：开始使用审批，单独成行，后接本章概述'
+  accepted_evidence:
+  - 标题为第10章标准大章格式
+  - 后文 3026 起为本章概述段
+  - 复核方 overturn_probability 0.1 建议保留
+  rejected_evidence:
+  - 书眉/页眉残留的怀疑无有力证据
+  need_human_review: false
+- 'no': 3375
+  confidence: 0.85
+  final_reason: 标题 第 11 章 出现在第10章总结广告后，后接本章主题介绍，符合新章起始
+  accepted_evidence:
+  - 位置在上一章总结后
+  - '后接 3379 ## 使用审批 等本章内容'
+  rejected_evidence:
+  - 页眉可能性的反方证据不足
+  need_human_review: false
+- 'no': 3820
+  confidence: 0.8
+  final_reason: ' # 12 后接 ## 向 Teams 发送审批，且前有下一章预告，视为第12章起始标记'
+  accepted_evidence:
+  - 后接第12章主题标题
+  - 复核方认为页眉可能但整体语义支持分章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4156
+  confidence: 0.9
+  final_reason: '# 13 后接 ## 使用数据库，前有下一章预告，符合新章起始特征'
+  accepted_evidence:
+  - 后接第13章主题标题
+  - 复核方 overturn_probability 0.15 保留
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4656
+  confidence: 0.75
+  final_reason: '# 第 15 章 后接 ## 265 与 Planner/Teams 内容，为第15章起始，页眉疑虑不足以推翻'
+  accepted_evidence:
+  - 前后文为第15章主题
+  - 复核方 keep_split true
+  rejected_evidence:
+  - 页眉与页码相邻的反方证据
+  need_human_review: false
+- 'no': 4895
+  confidence: 0.75
+  final_reason: '# 接受用户输入 为第16章主题入口，后文出现 ## 第 16 章 为后续页眉'
+  accepted_evidence:
+  - 后文 4900 起为本章概述
+  - 复核方认为为章前引语但支持分章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5154
+  confidence: 0.95
+  final_reason: '## 第 17 章：自动化 Entra ID 为标准章节标题，单独成行且后文为本章概述'
+  accepted_evidence:
+  - 标题含第17章且后接概述段
+  - 复核方 keep_split true
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5765
+  confidence: 0.95
+  final_reason: '# 第 19 章 后接 ## 使用 RPA 向 Access 数据库写入数据，为第19章起始'
+  accepted_evidence:
+  - 前有 --- 分隔与下一章预告
+  - 后接本章主题标题
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 3643
+  reason: '复核方指出为页眉残留，下一行 ## 201 为页码残留，位于第11章正文流程中部，无新章概述，重复出现不符合单一章节标题原则'
+  need_human_review: false
+- 'no': 4238
+  reason: '复核方指出为页眉残留，下一行 ## 237 为页码，且位于第13章正文步骤之间，已有 # 13 作为章起始'
+  need_human_review: false
+- 'no': 5101
+  reason: '复核方指出为页眉残留，后接步骤编号8、9为正文继续，与 # 接受用户输入 冲突，同一章节不能有两个起始'
+  need_human_review: false
+- 'no': 5655
+  reason: 复核方指出为页眉残留，位于第18章正文中部，前文已有图18.1等内容，后文为正文延续，并非新章概述
+  need_human_review: false
+- 'no': 5661
+  reason: '复核方指出为页眉残留，紧随 ## 使用 Copilot 生成脚本 子节，与 5655 重复，明显为页眉OCR多次识别'
+  need_human_review: false

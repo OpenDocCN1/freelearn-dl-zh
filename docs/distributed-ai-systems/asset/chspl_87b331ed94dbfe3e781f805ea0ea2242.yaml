@@ -1,0 +1,10 @@
+chapter_starts:
+- 'no': 2984
+  confidence: 0.95
+  reason: '最高层级二级标题 ## GPU 硬件、网络与并行策略，单独成行，语义统领后续拓扑与并行策略内容'
+- 'no': 3076
+  confidence: 0.97
+  reason: '最高层级二级标题 ## 使用 PyTorch DDP 进行分布式训练，单独成行且后接 DDP 内部原理等章节内容'
+- 'no': 5235
+  confidence: 0.98
+  reason: '带序号的最高层级标题 ## 4 使用完全分片数据并行（FSDP）进行扩展，单独成行，开启新章节'

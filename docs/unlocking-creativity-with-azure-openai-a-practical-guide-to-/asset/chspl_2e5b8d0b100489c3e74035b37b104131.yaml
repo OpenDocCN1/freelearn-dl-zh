@@ -1,0 +1,16 @@
+chapter_starts:
+- 'no': 3114
+  confidence: 0.95
+  reason: 行内容为 '# 7 代码生成与文档编制'，符合编号特征且单独成行，语义为全书最高层级大章起始
+- 'no': 3744
+  confidence: 0.75
+  reason: 行内容为 '# 使用 Azure OpenAI 和 Azure Cognitive 服务构建文本转视频转换'，单独成行且为统领性章级主题，上下文后接概述与技术要求，判定为第9章起始
+- 'no': 4630
+  confidence: 0.8
+  reason: 行内容为 '# 使用 Azure OpenAI Assistants API 创建多模态多代理框架'，单独成行且为新一章的统领主题，上下文出现架构图与创建框架内容，判定为第10章起始
+- 'no': 4859
+  confidence: 0.95
+  reason: 行内容为 '# 11 隐私与安全'，编号特征明确，单独成行，语义统领后续隐私安全内容，为新章起始
+- 'no': 5667
+  confidence: 0.95
+  reason: 行内容为 '# 12 运营 Azure OpenAI'，编号特征明确，单独成行，语义为新部分大章起始

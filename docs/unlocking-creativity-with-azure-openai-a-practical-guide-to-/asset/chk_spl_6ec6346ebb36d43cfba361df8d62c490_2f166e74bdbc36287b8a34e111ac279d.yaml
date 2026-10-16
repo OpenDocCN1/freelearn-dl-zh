@@ -1,0 +1,45 @@
+reviews:
+- 'no': 5900
+  overturn_probability: 0.85
+  alternative: 正文小标题
+  counter_evidence:
+  - '标题为 ## 容量计算器 是二级 Markdown 小节，位于第 12 章内容中段，后接说明段落和表格，非全书最高层级大章'
+  - 前后文均为 PTU 容量计算的连续论述，上游 5902 直接展开计算器说明，下游 5922 图 12.9 仍属同章节，缺乏章节起始的总结/概述段落断裂特征
+  - '书中最高层级章节使用 ## 13、# 等且伴随章节编号，## 级标题在此书中多为节/小节'
+  keep_split: false
+- 'no': 5926
+  overturn_probability: 0.8
+  alternative: 正文小标题
+  counter_evidence:
+  - '标题 ## PTU-M 购买模型 为二级标题，紧接 5928 的段落仍在 PTU 购买模型的子议题内，后续 5930 为列表步骤，属于同一小节的内容延续'
+  - 上下文未出现章节编号或前言/总结的章节边界，5922 图 12.9 与 5924 说明段与之连续，属于第 12 章内部的二级小节
+  keep_split: false
+- 'no': 5958
+  overturn_probability: 0.8
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 选择您想要购买的产品 为二级标题，后接 5960 的说明段落，之后直接进入图片和步骤编号 27、28，仍为 PTU 预留购买流程的连续内容'
+  - 未出现全书最高层级编号或章节起始的统领性概述，前后行均属于第 12 章 'Azure OpenAI 运营化' 之下的操作步骤
+  keep_split: false
+- 'no': 5992
+  overturn_probability: 0.75
+  alternative: 正文小标题
+  counter_evidence:
+  - '## Azure OpenAI 运营化 在 5994 后直接接续编号 6. 点击‘保存’，上文 5984-5991 为步骤列表，显然是同一操作序列被错误断开'
+  - 同一标题在 6016 处再次出现，表明其为小节反复出现或排版噪声，而非唯一章节起点
+  - 上下文仍在第 12 章的 PTU 预留关闭流程中，无章节层级的语义断裂
+  keep_split: false
+- 'no': 6002
+  overturn_probability: 0.78
+  alternative: 正文小标题
+  counter_evidence:
+  - '## Azure OpenAI 扩展 为二级标题，后接 6004 的说明段落，随后 6008、6010 等内容为扩展技术的具体描述，属第 12 章内部子节'
+  - '随后 6022 再次出现 ## Azure OpenAI 扩展，标题重复出现不符合最高层级章节唯一性，显示其为小标题的排版重复'
+  keep_split: false
+- 'no': 6038
+  overturn_probability: 0.7
+  alternative: 正文小标题
+  counter_evidence:
+  - '## 总结 在 6040 后直接给出本章涵盖内容回顾，为第 12 章的章节结语而非新章节起点'
+  - '其后 6044 为 ## 13 章节编号，符合真正的章节边界，6038 的总结应归属第 12 章末段'
+  keep_split: false

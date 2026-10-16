@@ -1,0 +1,40 @@
+reviews:
+- 'no': 3114
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 编号特征符合全书最高层级大章 '# 7 代码生成与文档编制'，单独成行且后接‘在上一章节中...’的概述段落，前文为第6章内容，语义统领性强
+  - 格式特征为#单独成行，长度<30字，末尾无句号
+  keep_split: true
+- 'no': 3744
+  overturn_probability: 0.85
+  alternative: 正文小标题/章节内二级标题
+  counter_evidence:
+  - 缺少全书最高层级编号特征，标题为‘# 使用 Azure OpenAI 和 Azure Cognitive 服务构建文本转视频转换’无‘第X章’或‘# 9’编号，与前后‘#
+    7’、‘# 11’的编号模式不一致
+  - 上下文后紧跟‘## 概述’、‘## 技术要求’等二级标题，且前文已于3114处进入第7章，后文3747起为概述段落，更符合章内大节而非新章起始
+  - 语义上为具体解决方案主题，缺乏概括全章的统领性，且出现重复的‘# 使用 Azure OpenAI 和 Azure Cognitive 服务构建文本转视频转换’式标题，易为正文小标题
+  keep_split: false
+- 'no': 4630
+  overturn_probability: 0.8
+  alternative: 正文小标题
+  counter_evidence:
+  - 标题无章节编号，格式为‘# 使用 Azure OpenAI Assistants API 创建多模态多代理框架’，与已确认的‘# 11 隐私与安全’‘# 12
+    运营 Azure OpenAI’编号风格不符
+  - 上下文中前文已在4591处出现‘# 问题描述’、4603‘# 技术要求’、4625‘# 架构设计’等章内结构，后文紧跟‘> **重要提示**’和架构图，属章内方法论小节而非新章
+  - 标题长度较长且为具体技术实现描述，不符合章标题通常简短概括的语义特征，易误判为正文小标题
+  keep_split: false
+- 'no': 4859
+  overturn_probability: 0.02
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 编号特征明确‘# 11 隐私与安全’，单独成行，前文为第10章总结，后文以‘## AOAI 服务合规性’等子节展开，语义统领后续隐私安全内容
+  - 格式符合真正的章标题：单独成行，末尾无句号，长度<30字
+  keep_split: true
+- 'no': 5667
+  overturn_probability: 0.03
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 编号特征明确‘# 12 运营 Azure OpenAI’，单独成行，且前文4859为第11章，后文以‘## Azure OpenAI 默认日志记录和监控’等子节展开，语义为新大章起始
+  - 格式特征与全书章节编号体系一致
+  keep_split: true

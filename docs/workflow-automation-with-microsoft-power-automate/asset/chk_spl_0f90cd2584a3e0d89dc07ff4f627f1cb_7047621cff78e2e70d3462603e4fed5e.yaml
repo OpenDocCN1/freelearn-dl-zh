@@ -1,0 +1,56 @@
+reviews:
+- 'no': 183
+  overturn_probability: 0.15
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 该行为‘# 第一部分’，后接‘## 基础’及概述段落，符合部分-章节模式下的最高层级分区标题，前文为前言/目录类内容，后文进入正式章节序列
+  - 标题单独成行、长度<30字、语义统领后续章节，符合分章特征
+  keep_split: true
+- 'no': 247
+  overturn_probability: 0.88
+  alternative: 页眉页脚/排版断行
+  counter_evidence:
+  - 该‘# 第 1 章’出现在第1章正文内部，前面第205行已有‘# 1’和第207行‘## 介绍 Microsoft Power Automate’开始本章，后文第249行直接承接段落‘然而，SharePoint
+    工作流的缺点之一是…’，无概述段落且非章节起始
+  - 同书中第1章标题已在第205-207行确立，此处为重复页眉/页码式噪声，格式上与正文小标题混杂且出现多次‘# 第 1 章’重复
+  keep_split: false
+- 'no': 510
+  overturn_probability: 0.82
+  alternative: 页码/排版噪声
+  counter_evidence:
+  - 标题仅为‘## 2’，无完整语义，仅为数字，下一行第512行才是实际章节名‘## 开始使用 Power Automate’，符合页码或分页标记特征
+  - 前后文无章节总结过渡，‘## 2’单独成行但长度异常且无统领性语义，易被误判为页码残留
+  keep_split: false
+- 'no': 907
+  overturn_probability: 0.12
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - ‘# 3 处理电子邮件’单独成行、编号特征明确、后3行为本章概述‘多年来…’，随后进入第3章内容，符合全书最高层级大章特征
+  keep_split: true
+- 'no': 1281
+  overturn_probability: 0.78
+  alternative: 页眉页脚/排版断行
+  counter_evidence:
+  - ‘## 第 4 章’出现在第3章末尾的总结之后，紧邻‘### 复制文件’等第4章内容已在第1283行开始，且第1281行标题后无概述段落，直接为下一小节标题，疑似分页重复标题
+  - 书中第4章的实际起始语义标题为‘### 复制文件’，‘## 第 4 章’格式与正文中出现的其他页眉式重复标题一致，编号特征被误用
+  keep_split: false
+- 'no': 1629
+  overturn_probability: 0.75
+  alternative: 页眉页脚/排版断行
+  counter_evidence:
+  - ‘## 第 5 章’出现在按钮流示例正文中间，前后均为操作步骤描述，后文第1631行直接继续正文‘如果你在 Power Automate 内部没有创建任何连接…’，无章节概述
+  - 第5章实际标题‘## 创建一个向经理发送电子邮件的按钮流’已在第1580行出现且第1629行标题与正文流程中断，符合页眉重复特征
+  keep_split: false
+- 'no': 1739
+  overturn_probability: 0.1
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - ‘# 6 生成推送通知’单独成行、编号+主题、后文为本章概述‘推送通知是一种通信机制…’，符合大章起始规则
+  keep_split: true
+- 'no': 2554
+  overturn_probability: 0.85
+  alternative: 页码/排版噪声
+  counter_evidence:
+  - 标题仅为‘# 9’，无主题词，下一行第2556行才是‘## 理解表达式和函数’，数字标题仅作页码或分页标记
+  - 前后文‘## 理解表达式和函数’已明确本章主题，‘# 9’单独成行且仅含序号，符合页眉页脚/排版断行特征
+  keep_split: false

@@ -1,0 +1,16 @@
+chapter_starts:
+- 'no': 6270
+  confidence: 0.75
+  reason: '顶层 # 标题，单数字章节标记，符合最高层级大章格式'
+- 'no': 6272
+  confidence: 0.8
+  reason: '顶层 # 标题 ''使用 Mistral 进行编程''，单独成行，语义统领后续内容，为新章起始'
+- 'no': 6398
+  confidence: 0.9
+  reason: '顶层 # 标题 ''第 7 章：使用 LangChain 和 Mistral AI 构建问答系统''，标准的第 X 章编号特征'
+- 'no': 7960
+  confidence: 0.85
+  reason: '顶层 # 标题 ''# 9 课后 RAG 挑战''，章节编号特征明显，单独成行'
+- 'no': 8418
+  confidence: 0.85
+  reason: '顶层 # 标题 ''# AWS Bedrock 上的 10 Mistral''，数字章节标记，单独成行，语义统领新部分'

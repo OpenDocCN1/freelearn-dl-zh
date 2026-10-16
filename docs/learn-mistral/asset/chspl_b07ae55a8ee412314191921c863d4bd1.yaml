@@ -1,0 +1,34 @@
+chapter_starts:
+- 'no': 4116
+  confidence: 0.9
+  reason: 顶层单#标题，标志新研讨会章节开始
+- 'no': 4649
+  confidence: 0.85
+  reason: 单#标题“# 总结”，为全书总结章节
+- 'no': 4655
+  confidence: 0.8
+  reason: 单#标题“# 课外活动”，独立章节块
+- 'no': 4667
+  confidence: 0.75
+  reason: 单#标题“# 加入我们的 Discord 和 Reddit 空间”，章节级标题
+- 'no': 4673
+  confidence: 0.9
+  reason: 单#标题“# 6”，章节编号起始
+- 'no': 4675
+  confidence: 0.9
+  reason: 单#标题“# 拆解 RAG 工作流”，为第六章主体标题
+- 'no': 4929
+  confidence: 0.9
+  reason: 单#标题“# 工作坊 1：从零构建 RAG 实现”，新工作坊章节
+- 'no': 5386
+  confidence: 0.85
+  reason: 单#标题“# 理解接下来的工作坊”，章节过渡标题
+- 'no': 5402
+  confidence: 0.9
+  reason: '单#标题“# Workshop 2: 多查询方法”，新工作坊章节'
+- 'no': 5741
+  confidence: 0.8
+  reason: 单#标题“# LangSmith 指标概述”，独立章节块
+- 'no': 5777
+  confidence: 0.9
+  reason: 单#标题“# 工作坊 3：原子化子查询”，新工作坊章节

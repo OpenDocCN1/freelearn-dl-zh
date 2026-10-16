@@ -1,0 +1,59 @@
+chapter_starts:
+- 'no': 183
+  confidence: 0.95
+  final_reason: 双方一致：'# 第一部分'为部分-章节模式的最高层级分区标题，后接'## 基础'及概述段，符合新章划分条件。
+  accepted_evidence:
+  - 行183单独成行，编号'第一部分'
+  - 行185-187为部分标题及概述，语义统领后续章节
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 510
+  confidence: 0.82
+  final_reason: 该行是第2章起始的编号行，后接章名'## 开始使用 Power Automate'及概述段，与第1章'# 1'+章名的双行章首模式一致；复核方将其解释为页码噪声的证据不足。
+  accepted_evidence:
+  - 行510为'## 2'，行512为'## 开始使用 Power Automate'
+  - 行514起为本章概述段；同为双行章首的还有行205/207
+  rejected_evidence:
+  - 复核方认为仅有数字无标题、疑似页码/排版噪声
+  need_human_review: false
+- 'no': 907
+  confidence: 0.95
+  final_reason: 双方一致：'# 3 处理电子邮件'单独成行，编号+主题，后接本章概述段，符合最高层级大章特征。
+  accepted_evidence:
+  - 行907为'# 3 处理电子邮件'
+  - 行909起为本章概述段
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1281
+  confidence: 0.8
+  final_reason: 该行是第4章起始标记，后接章名'### 复制文件'及概述段；正文中的页眉式重复（如行247、1629）后接正文而非章名，因此复核方的页眉说不足以推翻。
+  accepted_evidence:
+  - 行1281为'## 第 4 章'，行1283为'### 复制文件'
+  - 行1285起为第4章概述及主题列表
+  rejected_evidence:
+  - 复核方认为其位于第3章总结后、疑似分页重复标题；但后续为章名+概述，不符合页眉特征
+  need_human_review: false
+- 'no': 1739
+  confidence: 0.95
+  final_reason: 双方一致：'# 6 生成推送通知'单独成行，编号+主题，后接概述段，符合大章起始规则。
+  accepted_evidence:
+  - 行1739为'# 6 生成推送通知'
+  - 行1741起为本章概述段
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2554
+  confidence: 0.82
+  final_reason: 该行是第9章起始编号行，后接章名'## 理解表达式和函数'及概述段，与第1/2章的双行章首模式一致；复核方的页码噪声证据不成立。
+  accepted_evidence:
+  - 行2554为'# 9'，行2556为'## 理解表达式和函数'
+  - 行2558起为本章概述段
+  rejected_evidence:
+  - 复核方认为仅含序号、疑似页码/排版噪声
+  need_human_review: false
+rejected_lines:
+- 'no': 247
+  reason: 复核方反证成立：'# 第 1 章'出现在第1章正文中（实际章首为行205/207），后无章名/概述，直接被正文段落承接，属于页眉式重复标题。
+  need_human_review: false
+- 'no': 1629
+  reason: 复核方反证成立：'## 第 5 章'位于第5章操作步骤列表中间（步骤4与步骤5之间），前后均为操作说明，非章节起始位置，属于页眉式重复标题。
+  need_human_review: false

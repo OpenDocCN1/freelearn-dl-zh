@@ -1,0 +1,25 @@
+chapter_starts:
+- 'no': 183
+  confidence: 0.85
+  reason: 第 X 部分 最高层级分区标题，后续为基础章节，符合部分-章节模式新章划分
+- 'no': 247
+  confidence: 0.9
+  reason: 编号特征‘# 第 1 章’，单独成行，长度小于30字，为全书最高层级大章起始
+- 'no': 510
+  confidence: 0.75
+  reason: 章节编号‘## 2’单独成行，紧随其后为‘## 开始使用 Power Automate’，构成第2章起始
+- 'no': 907
+  confidence: 0.9
+  reason: 编号标题‘# 3 处理电子邮件’，格式符合章标题，单独成行且为正文大章
+- 'no': 1281
+  confidence: 0.85
+  reason: 编号标题‘## 第 4 章’，单独成行，为最高层级大章起始
+- 'no': 1629
+  confidence: 0.85
+  reason: 编号标题‘## 第 5 章’，单独成行，符合大章层级
+- 'no': 1739
+  confidence: 0.9
+  reason: 编号标题‘# 6 生成推送通知’，单独成行，长度合适，为大章起始
+- 'no': 2554
+  confidence: 0.8
+  reason: 编号标题‘# 9’紧随‘## 理解表达式和函数’，为第9章起始标记

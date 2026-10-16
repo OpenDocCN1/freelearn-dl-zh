@@ -1,0 +1,78 @@
+reviews:
+- 'no': 46
+  overturn_probability: 0.1
+  alternative: 前置内容中‘序言’的标题，也可能被误认为目录中的条目或上一段落（致谢）的延续标题
+  counter_evidence:
+  - '‘# 序言’前是致谢和签名，OCR 文本中可能存在排版噪声，不能仅凭 # 号判定为独立章标题'
+  - 若原书把序言并入前言部分，则该行可能只是前言中的一个小标题而非最高层级大章
+  keep_split: true
+- 'no': 91
+  overturn_probability: 0.15
+  alternative: 前置目录页的标题，而不是正文中实际出现的章标题
+  counter_evidence:
+  - 目录本身在书籍中通常只作为导航，不构成正文章节；规则只明确提到前言、序言、索引等，未明确目录
+  - 该行后紧跟一系列列表项，更像是目录页的一部分，而不是独立正文章节的开头
+  keep_split: true
+- 'no': 113
+  overturn_probability: 0.85
+  alternative: 目录中‘索引’条目的残留（带有页码 333）
+  counter_evidence:
+  - 该行带有页码“333”，与前后目录条目格式一致（如“前言 XV”“进一步阅读 15”）
+  - 该行后并没有索引正文，而是紧接另一个目录式标题“# 你可能喜欢的其他书籍 342”和“# 前言”，说明它仍位于目录区，并非真正的文末索引章节
+  keep_split: false
+- 'no': 117
+  overturn_probability: 0.1
+  alternative: 目录中‘前言’条目的残留，或前言区域的小标题
+  counter_evidence:
+  - 它前面是“# 你可能喜欢的其他书籍 342”，可能尚未离开目录区，此处的“# 前言”也许只是目录项
+  - 不过后面跟随前言正文，所以更可能是真正的正文标题；但 OCR 中该标题也可能被误放在目录区内
+  keep_split: true
+- 'no': 235
+  overturn_probability: 0.1
+  alternative: '前言部分内的一级标题（因为前文中也存在多个 # 一级标题但并未分章）'
+  counter_evidence:
+  - '在它之前已有“# 文本中的代码”等多个 # 标题，但这些没有被现有分章结果划分为新章，说明 # 标题在该书 OCR 中并不总是章标题'
+  - '若将前面的 # 标题都视为前言内部的子标题，则“# 大语言模型简介”也可能被误判为章标题；不过从语义和后续结构看它确实是第一章'
+  keep_split: true
+- 'no': 426
+  overturn_probability: 0.05
+  alternative: 目录中列出的章标题条目，而非正文实际出现的标题
+  counter_evidence:
+  - 带编号“2”的标题也可能出现在目录列表中，需依赖上下文判断；但此处后面紧接章首段落，是正文中的真实标题
+  - '若 OCR 将目录中的“2 Azure OpenAI 基础知识”识别为 # 标题，也存在误判可能'
+  keep_split: true
+- 'no': 902
+  overturn_probability: 0.1
+  alternative: 目录条目或 OCR 重复产生的章节标题残留
+  counter_evidence:
+  - 该标题没有章节编号，且后文（行 982）又出现重复的“# Azure OpenAI 高级主题”，可能是 OCR 或排版重复片段
+  - 不过该行后有完整的章首段落和子节，仍可确认为真正的第三章标题
+  keep_split: true
+- 'no': 2096
+  overturn_probability: 0.05
+  alternative: 只是第 2 部分开头的引语标题，而非独立部分标题
+  counter_evidence:
+  - 文中明确写有“第 2 部分”，符合部分-章节模式，应划分新章
+  - 但若原书没有部分模式，此标题可能只是章节装饰语，不过后面列出多章，证明其确实是部分标题
+  keep_split: true
+- 'no': 2110
+  overturn_probability: 0.05
+  alternative: 目录中的章标题条目，而非正文中出现的标题
+  counter_evidence:
+  - 编号“4”符合最高层级章标题格式，但目录中也会出现同样的条目；需要上下文确认
+  - 其后有“在上一章中……”等典型章首句，说明这是正文中的章标题
+  keep_split: true
+- 'no': 2364
+  overturn_probability: 0.05
+  alternative: 目录中的章标题条目，而非正文实际标题
+  counter_evidence:
+  - 编号“5”格式正确，但目录也可能出现同样文本；上下文中的“在上一章中……”表明它是正文章标题
+  - 没有发现能够推翻分章的实质证据
+  keep_split: true
+- 'no': 2729
+  overturn_probability: 0.05
+  alternative: 目录中的章标题条目，而非正文实际标题
+  counter_evidence:
+  - 编号“6”符合章标题格式，但无法仅凭编号排除目录残留；此处的上下文同样表明它是正文中的章节标题
+  - 没有发现需要推翻分章的强证据
+  keep_split: true

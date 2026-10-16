@@ -1,0 +1,76 @@
+chapter_starts:
+- 'no': 3013
+  confidence: 0.95
+  final_reason: 位于第 6 章延伸阅读与订阅页之后，是第 3 部分的真实起始；随后紧跟部分名“部署与代理编排”及部分导读、章节目录，符合部分-章节模式下部分标题单独成章的要求。
+  accepted_evidence:
+  - 行文为“## 第 3 部分”，单独成行、无句号
+  - 后接“## 部署与代理编排”和本部分导读及章节列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3030
+  confidence: 0.97
+  final_reason: 位于第 3 部分导读和章节列表之后，是第 7 章的真实起点；下一行为章名“## 部署基于 Haystack 的应用程序”，再下一段是“在上一章中……在本章中……”的章首概述。
+  accepted_evidence:
+  - 行文为“## 第 7 章”，单独成行、无句号
+  - 紧接章名和章首概述段落
+  - 与 Part 3 导读中“第 7 章：部署基于 Haystack 的应用程序”对应
+  rejected_evidence:
+  - 后续正文中出现的多处“第 7 章”页眉不影响本行作为真正章首
+  need_human_review: false
+- 'no': 3578
+  confidence: 0.85
+  final_reason: 第 7 章总结及促销页之后，出现“## 8 个实践项目”，后续连续使用“在本章中……”并引出 NER、文本分类、LangGraph
+    等第 8 章主题，是第 8 章的实际章首。虽未写作“第 8 章”，但语义和位置均符合新章起点。
+  accepted_evidence:
+  - 位于第 7 章总结/促销页之后，单独成行
+  - 后续段落以“在本章中，我们将通过构建一系列实践项目……”开头
+  - 内容覆盖后续的 NER、文本分类、情感分析和 LangGraph 编排，统领第 8 章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4451
+  confidence: 0.95
+  final_reason: 第 8 章延伸阅读结束后，出现“# 第 4 部分”，随后是部分名“## 代理体 AI 的未来”及部分导读、章节目录；在部分-章节模式下，部分标题应划分为新章。
+  accepted_evidence:
+  - 行文为“# 第 4 部分”，单独成行
+  - 后接“## 代理体 AI 的未来”和本部分导读、章节列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4463
+  confidence: 0.92
+  final_reason: 位于第 4 部分导读和章节目录之后，下一行是章名“## 未来趋势及展望”，再接“在前面的章节中……”的章首概述；这是第 9 章标题块的起始行。
+  accepted_evidence:
+  - 行文为“# 9”，与下一行章名构成第 9 章标题块
+  - 后接章节概述“在前面的章节中，我们从构建基础的 RAG 流水线演进到……”
+  - 与 Part 4 导读中“第 9 章，未来趋势及展望”对应
+  rejected_evidence:
+  - 正文中段的“### 第 9 章”是页眉重复，不是真正起点
+  need_human_review: false
+- 'no': 4804
+  confidence: 0.92
+  final_reason: 第 9 章延伸阅读结束后，出现“## 结语”，随后是章首概述“让我们回顾上一次的 Yelp Navigator……”，这正是第 10
+    章（结语：代理体 AI 的架构）的真实起点。
+  accepted_evidence:
+  - 行文为“## 结语”，单独成行、无句号
+  - 后续段落以本章/本结语概述开头
+  - Part 4 导读将“结语：代理体 AI 的架构”列为第 10 章
+  rejected_evidence:
+  - 行 4874 的“## 第 10 章”是页眉残留，不是真正章首
+  need_human_review: false
+- 'no': 5345
+  confidence: 0.95
+  final_reason: 正文及后页内容结束后出现“# 索引”，后接按字母排序的索引条目；按规则，文末索引统一划分为一章。
+  accepted_evidence:
+  - 行文为“# 索引”，单独成行
+  - 后续为 A/B/C… 的索引条目
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 2956
+  reason: 虽然表面为“## 第 6 章”，但其前后文均已在讨论嵌入模型选择，后接页码 172 和表 6.3/6.4，且第 6 章总结出现在 2981 行；这是页眉/页码残留，并非真正的章首。双方均建议保留，但按“排除页眉、页码残留”规则予以否决。
+  need_human_review: false
+- 'no': 4600
+  reason: 真正第 9 章起点在 4463-4465 行。4600 行以“### 第 9 章”出现在“垂直连接：MCP”与 MCP 解释之间，是书眉重复；复核意见中“页内复现”的表述恰好说明其应作为页眉排除，不能作为新章起点。
+  need_human_review: false
+- 'no': 4874
+  reason: 第 10 章实际起点是 4804 行“## 结语”。4874 行“## 第 10 章”出现在正文中途“智能体转折点”之后，属于页眉残留；判断方单独依据编号特征将其作为起点，证据不足。
+  need_human_review: false

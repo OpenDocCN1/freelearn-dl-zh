@@ -1,0 +1,45 @@
+chapter_starts:
+- 'no': 4116
+  confidence: 0.95
+  final_reason: '双方一致采纳，单 # 顶层标题标志研讨会 2 开始，上下文从第 11 步结束切换至全新研讨会主题'
+  accepted_evidence:
+  - '单 # 顶层标题，且后文开启全新研讨会主题，符合全书最高层级章节特征'
+  - 前文为第 11 步结束，后文为全新研讨会 2 的开始，上下文断层明显
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4675
+  confidence: 0.95
+  final_reason: '双方一致采纳，单 # 标题为第六章主体名称，后续展开 RAG 工作流全篇，语义统领性强且与前研讨会明确切换'
+  accepted_evidence:
+  - '单 # 标题且为第六章主体名称，后续展开 RAG 工作流全篇，语义统领性强'
+  - 上下文从研讨会 2 明确切换至第六章，符合顶层章节开始
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 4649
+  reason: 复核方反证成立，# 总结为研讨会 2 末尾的小结而非全书级大章，位于同一研讨会范围内且为归纳性小节
+  need_human_review: false
+- 'no': 4655
+  reason: 复核方反证成立，# 课外活动为研讨会 2 尾部的附属拓展内容，非最高层级大章
+  need_human_review: false
+- 'no': 4667
+  reason: 复核方反证成立，# 加入我们的 Discord 和 Reddit 空间为推广性附录段落，非统领性章节
+  need_human_review: false
+- 'no': 4673
+  reason: '复核方反证成立，# 6 过于简略孤立，更像章节编号占位或排版噪声，应与下一行 # 拆解 RAG 工作流合并理解'
+  need_human_review: false
+- 'no': 4929
+  reason: 复核方反证成立，# 工作坊 1 为第六章下的子工作坊，属于子层级，规则只划分全书最高层级大章
+  need_human_review: false
+- 'no': 5386
+  reason: 复核方反证成立，# 理解接下来的工作坊为过渡性段落，标题后为说明性段落而非章节概述，属章节内小节
+  need_human_review: false
+- 'no': 5402
+  reason: 复核方反证成立，# Workshop 2 为第六章下的工作坊子标题，非顶层章节
+  need_human_review: false
+- 'no': 5741
+  reason: 复核方反证成立，# LangSmith 指标概述位于 Workshop 2 内部，为具体方法的小节
+  need_human_review: false
+- 'no': 5777
+  reason: 复核方反证成立，# 工作坊 3 为第六章下工作坊子标题，属子层级不划分
+  need_human_review: false

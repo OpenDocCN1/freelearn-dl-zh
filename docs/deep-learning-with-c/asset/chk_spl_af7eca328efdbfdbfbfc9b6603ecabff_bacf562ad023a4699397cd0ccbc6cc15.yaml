@@ -1,0 +1,38 @@
+reviews:
+- 'no': 4
+  overturn_probability: 0.02
+  alternative: 前置内容中的“序言”标题
+  counter_evidence:
+  - 该行是独立的 Markdown 二级标题“## 序言”，后面紧接序言正文。
+  - 规则明确规定序言等正文之前内容统一划分为一章。
+  keep_split: true
+- 'no': 161
+  overturn_probability: 0.01
+  alternative: 部分级标题
+  counter_evidence:
+  - 标题明确采用“第1部分”形式，且后文列出该部分包含的第1至第3章。
+  - 规则明确要求部分-章节模式下，部分标题也划分新章。
+  keep_split: true
+- 'no': 171
+  overturn_probability: 0.01
+  alternative: 章级标题
+  counter_evidence:
+  - 标题包含“第1章”，单独成行且无句末标点。
+  - 后续出现本章概述、主题列表和“技术要求”等子节，具有明显章节起始结构。
+  keep_split: true
+- 'no': 844
+  overturn_probability: 0.03
+  alternative: 章级标题
+  counter_evidence:
+  - 标题以“2”开头，且后文明确使用“本章”并列出本章主题。
+  - 后续出现“技术要求”及多个本章子节，符合新章开头的上下文模式。
+  - 反方证据：全书其他章节多采用“第 X 章”格式，而该行使用“## 2”，格式不完全一致，可能是目录标题或排版变体。
+  keep_split: true
+- 'no': 2412
+  overturn_probability: 0.01
+  alternative: 章级标题
+  counter_evidence:
+  - 标题明确包含“第3章”，单独成行且无句末标点。
+  - 后文紧接章节导入、主题列表及“GPU加速应用与纯CPU应用”等子节。
+  - 前文第2章内容已经结束，章序连续，支持其作为第3章起始。
+  keep_split: true

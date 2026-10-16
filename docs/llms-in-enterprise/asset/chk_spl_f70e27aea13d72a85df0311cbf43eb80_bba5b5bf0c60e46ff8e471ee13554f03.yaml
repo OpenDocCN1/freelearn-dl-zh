@@ -1,0 +1,73 @@
+reviews:
+- 'no': 9304
+  overturn_probability: 0.78
+  alternative: 正文小标题
+  counter_evidence:
+  - '位于第14章 # 14. 新兴趋势与多模态性 下的二级结构，前面 9294 已是带序号的本章级标题，后续为 ## 硬件要求 / ## 软件要求 等子节'
+  - 标题语义为本章内部的技术前提，与后续正文连续，不具备统领整书大章的概括性
+  - '格式上为独立成行的 # 标题，但出现在章节内部，符合正文小标题而非全书最高层级大章'
+  keep_split: false
+- 'no': 9328
+  overturn_probability: 0.72
+  alternative: 正文小标题
+  counter_evidence:
+  - '紧跟在 # 技术要求 之后，处于同一第14章上下文中，后续内容为多模态趋势的展开段落'
+  - 标题长度短且无序号，语义上为本章内的一节主题，符合正文小标题特征
+  - 上下文前 1~3 行并无概述段落起止的章间转折，仍在第14章的论述流中
+  keep_split: false
+- 'no': 9396
+  overturn_probability: 0.68
+  alternative: 正文小标题
+  counter_evidence:
+  - '仍在第14章内部，前面 9328 已为本章小节，后续紧跟 ## 架构基础 等更细粒度子标题'
+  - '标题为 # 理解 LLM 中的多模态性，语义上是本章内部的论述板块，非全书最高层级大章'
+  - 格式虽单独成行，但上下文连续，未出现上一章总结/习题等章节边界信号
+  keep_split: false
+- 'no': 9649
+  overturn_probability: 0.65
+  alternative: 正文小标题
+  counter_evidence:
+  - '位于第14章中段，后续为 ### GPT-4V、### Gemini 1.5 等更细的子标题，层级上为章内大节'
+  - 无章节序号，语义统领的是本章内部技术进展的集合，不具备独立成章的统领性
+  - 前后文为连续的技术讨论，未出现章节分隔的排版噪声或前言/后记边界
+  keep_split: false
+- 'no': 9866
+  overturn_probability: 0.81
+  alternative: 其他
+  counter_evidence:
+  - 出现在文末营销附录区域，后面是二维码、订阅链接等发行信息，非正文内容
+  - '标题 # 订阅免费电子书 语义为出版商推广，与书籍核心章节体系无关，属排版噪声/附录'
+  - 前后无概述段落，下接纯营销文字，不符合章节标题的语义统领特征
+  keep_split: false
+- 'no': 9880
+  overturn_probability: 0.85
+  alternative: 正文小标题
+  counter_evidence:
+  - 属于订阅推广内容的子标题，后面为要点列表 * 通过来自...等营销文案
+  - 标题长度适中但语义为营销说明，非书籍学术章节，符合附录小标题而非大章
+  - 上下文为连续的营销段落，无章节起止的总结/引言结构
+  keep_split: false
+- 'no': 9892
+  overturn_probability: 0.83
+  alternative: 正文小标题
+  counter_evidence:
+  - 位于‘你可能喜欢的其他书籍’附录板块，后续为书籍推荐列表
+  - 标题为推荐书籍的引导语，属于排版性的附录小标题，非全书最高层级章节
+  - 前后文均为书目信息，无统领性正文段落
+  keep_split: false
+- 'no': 9929
+  overturn_probability: 0.8
+  alternative: 其他
+  counter_evidence:
+  - '标题 # Packt 正在寻找像你这样的作者 为出版社征稿信息，属于页脚/附录噪声'
+  - 单独成行但语义为商务招募，与主文主题无关，不应划分新章
+  - 后续为作者投稿链接说明，无学术内容概述
+  keep_split: false
+- 'no': 9933
+  overturn_probability: 0.78
+  alternative: 其他
+  counter_evidence:
+  - '标题 # 分享你的想法 为读者反馈征集，属于文末附录互动内容'
+  - 前后为营销性结语，与索引等正式文末结构不同，属排版断行/附录噪声
+  - 不具备章节统领性，长度短且无序号
+  keep_split: false

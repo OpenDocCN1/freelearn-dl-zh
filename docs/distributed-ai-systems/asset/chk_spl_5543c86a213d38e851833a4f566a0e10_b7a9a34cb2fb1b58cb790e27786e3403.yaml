@@ -1,0 +1,29 @@
+reviews:
+- 'no': 8922
+  overturn_probability: 0.01
+  alternative: 正文小标题或页眉残留
+  counter_evidence:
+  - 该行使用全角冒号（'第 6 章：'），与第7、9章不含冒号的格式不一致，存在被当作二级小标题的干扰因素
+  - 前文8914已出现'本章涵盖了...'的总结句，可能使该行看起来像是同一章内容的延续而非新章起点
+  keep_split: true
+- 'no': 9288
+  overturn_probability: 0.02
+  alternative: 带编号的正文小标题
+  counter_evidence:
+  - 该行格式'## 7'缺少'第'字和冒号，与8922行的章标题格式不同，容易被误认为有序列表项
+  - 前面紧邻图片（9286）和空行，可能是图片排版区域的一部分，而非独立章标题
+  keep_split: true
+- 'no': 10506
+  overturn_probability: 0.01
+  alternative: 列表项或编号段落
+  counter_evidence:
+  - 该行'## 8.'带有阿拉伯数字加点，外观上接近有序列表编号，可能被误判为列表项
+  - 前一行10505为空行，再之前是图片（10503/10504），容易使人将其与图片说明或排版噪声混淆
+  keep_split: true
+- 'no': 11814
+  overturn_probability: 0.03
+  alternative: 页眉或重复的章节标题
+  counter_evidence:
+  - 后文11836行又出现'## 生产级LLM服务技术栈'（无编号），这可能是页眉残留或重复标题，造成该行是否为真正章节起点的疑问
+  - 该行标题与后续11836行内容重复，若仅凭文本表面可能误以为11836才是分章点，但11814带编号且后随副标题，更符合章节起始
+  keep_split: true

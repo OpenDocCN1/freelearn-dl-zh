@@ -1,0 +1,85 @@
+reviews:
+- 'no': 8891
+  overturn_probability: 0.9
+  alternative: 章节末尾的总结小节
+  counter_evidence:
+  - 前文第10章内容尚未结束，'总结'是一章内部的收尾小节，不具备新章起始的统领性
+  - 下一行'# 课外拓展'同样是一章附带的扩展练习，二者应同属上一章
+  keep_split: false
+- 'no': 8899
+  overturn_probability: 0.9
+  alternative: 章节末尾的课外拓展部分
+  counter_evidence:
+  - 紧随'总结'之后，属于同一章附录性质的练习部分
+  - 没有新的章节编号，且'课外拓展'不能独立覆盖后续全部内容，只是该章附加内容
+  keep_split: false
+- 'no': 8910
+  overturn_probability: 0.1
+  alternative: 第11章标题（若不分章则是一种极低概率的误判）
+  counter_evidence:
+  - 前置的'# 11'单独一行，理论上可能使本行被视为章节编号后的标题行，而编号行本身才应是标题
+  - 但结合上下文，'# 11'只是编号，本行才是完整章名，二者共同构成新的章节起始
+  keep_split: true
+- 'no': 8927
+  overturn_probability: 0.95
+  alternative: 正文小标题（章内'技术要求'小节）
+  counter_evidence:
+  - 前面是第11章开头的内容提要列表，'技术要求'是每章都有的固定前置小节，属于章内结构，不是新章
+  - 后续紧跟列表项，没有完整的概述段落来支撑它作为新章的开始
+  keep_split: false
+- 'no': 9066
+  overturn_probability: 0.85
+  alternative: 正文小标题（实战研讨会部分）
+  counter_evidence:
+  - 它出现在第11章中段，前有多个'##'二级小节，突然出现'#'标题只是章内一个大的工作坊部分的起始，不是新章
+  - 后面紧跟'## 需要什么'等子节，说明它本身是包含子节的顶级小节，而非独立章节
+  keep_split: false
+- 'no': 9909
+  overturn_probability: 0.95
+  alternative: 章节末尾的总结小节
+  counter_evidence:
+  - 同8891，'总结'是第11章结尾的常规收尾小节
+  - 后跟'# 课外活动'也属于章节附加内容，所有后续内容都仍在第11章之内
+  keep_split: false
+- 'no': 9919
+  overturn_probability: 0.95
+  alternative: 章节末尾的课外活动部分
+  counter_evidence:
+  - 与'总结'连续出现，属于该章教学结构的最后一部分
+  - 没有章节编号，且'课外活动'内容与本章主题紧密相关，不是独立章节
+  keep_split: false
+- 'no': 9951
+  overturn_probability: 0.9
+  alternative: 书末推广广告板块
+  counter_evidence:
+  - 位置在全书正文之后，属于出版社的订阅推广页面，不属于技术内容
+  - 后续还有'# 为什么要订阅？'等并列推广标题，形成广告页组，不应分割为章节
+  keep_split: false
+- 'no': 9965
+  overturn_probability: 0.95
+  alternative: 书末推广广告板块中的小标题
+  counter_evidence:
+  - 是订阅推广页的组成部分，与前面'# 订阅获取免费电子书'并列
+  - 不含任何技术内容，不构成章节
+  keep_split: false
+- 'no': 9979
+  overturn_probability: 0.95
+  alternative: 书末其他书籍推荐板块
+  counter_evidence:
+  - 内容是推荐其他书籍，属于出版社广告页面
+  - 与前后的推广标题同级，不是正文章节
+  keep_split: false
+- 'no': 10025
+  overturn_probability: 0.95
+  alternative: 书末作者招募广告标题
+  counter_evidence:
+  - 属于出版社号召作者投稿的广告文案
+  - 与正文章节无关，不应作为新章
+  keep_split: false
+- 'no': 10029
+  overturn_probability: 0.95
+  alternative: 书末读者反馈邀请
+  counter_evidence:
+  - 是邀请读者评论的页面，属于推广内容
+  - 不是技术章节，没有统领性
+  keep_split: false

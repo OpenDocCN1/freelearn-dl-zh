@@ -1,0 +1,78 @@
+reviews:
+- 'no': 4116
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - '单 # 顶层标题，且后文开启全新研讨会主题，符合全书最高层级章节特征'
+  - 前文为第 11 步结束，后文为全新研讨会 2 的开始，上下文断层明显
+  keep_split: true
+- 'no': 4649
+  overturn_probability: 0.7
+  alternative: 正文小标题
+  counter_evidence:
+  - 标题为“# 总结”，长度短且位于同一研讨会末尾，后接课外活动等附属内容，更像本部分的小结而非全书级章节
+  - 前后无序号跳跃，上下文仍在研讨会 2 范围内，标题末尾无句号但语义为归纳性小节
+  keep_split: false
+- 'no': 4655
+  overturn_probability: 0.85
+  alternative: 正文小标题
+  counter_evidence:
+  - “# 课外活动”为附属拓展内容，非最高层级大章
+  - 前后仍属于研讨会 2 的尾部，前后几行为建议列表，未出现新章节的概述段落
+  keep_split: false
+- 'no': 4667
+  overturn_probability: 0.9
+  alternative: 正文小标题
+  counter_evidence:
+  - “# 加入我们的 Discord 和 Reddit 空间”为推广性附录段落，非统领性章节
+  - 标题后直接进入联系信息表，长度<30字但语义为附属内容，不符合章标题的概括性
+  keep_split: false
+- 'no': 4673
+  overturn_probability: 0.6
+  alternative: 排版断行/页眉页脚
+  counter_evidence:
+  - 标题仅为“# 6”，过于简略且孤立，后续立即出现“# 拆解 RAG 工作流”，更像章节编号占位或排版噪声
+  - 上下文为章节标题的前导编号，单独成章可能性低，应与下一行合并理解
+  keep_split: false
+- 'no': 4675
+  overturn_probability: 0.1
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - '单 # 标题且为第六章主体名称，后续展开 RAG 工作流全篇，语义统领性强'
+  - 上下文从研讨会 2 明确切换至第六章，符合顶层章节开始
+  keep_split: true
+- 'no': 4929
+  overturn_probability: 0.75
+  alternative: 正文小标题
+  counter_evidence:
+  - “# 工作坊 1：从零构建 RAG 实现”为第六章下的子工作坊，序号为“工作坊 1”，属于子层级
+  - 判断规则要求只划分全书最高层级大章，子层级不划分新章节
+  keep_split: false
+- 'no': 5386
+  overturn_probability: 0.8
+  alternative: 正文小标题
+  counter_evidence:
+  - “# 理解接下来的工作坊”为过渡性段落，后文紧接 Workshop 2 介绍，非独立章节
+  - 标题后1~3行为说明性段落而非概述段落，长度适中且语义为章节内小节
+  keep_split: false
+- 'no': 5402
+  overturn_probability: 0.7
+  alternative: 正文小标题
+  counter_evidence:
+  - '“# Workshop 2: 多查询方法”为第六章下的工作坊子标题，非顶层章节'
+  - 存在父级章节“# 拆解 RAG 工作流”，属子层级不划分
+  keep_split: false
+- 'no': 5741
+  overturn_probability: 0.85
+  alternative: 正文小标题
+  counter_evidence:
+  - “# LangSmith 指标概述”位于 Workshop 2 内部，为具体方法的小节
+  - 前后为运行概述、VectorStoreRetriever 等细节分析，非章节级概述
+  keep_split: false
+- 'no': 5777
+  overturn_probability: 0.7
+  alternative: 正文小标题
+  counter_evidence:
+  - “# 工作坊 3：原子化子查询”为第六章下工作坊子标题，属子层级
+  - 规则要求仅划分全书最高层级大章，工作坊属于子节
+  keep_split: false

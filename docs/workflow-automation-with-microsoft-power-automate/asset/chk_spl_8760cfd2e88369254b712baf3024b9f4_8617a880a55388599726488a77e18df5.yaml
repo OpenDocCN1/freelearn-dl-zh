@@ -1,0 +1,97 @@
+reviews:
+- 'no': 3024
+  overturn_probability: 0.1
+  alternative: 书眉/页眉残留（若忽略后文概述段）
+  counter_evidence:
+  - 该行之前是'获取本书PDF版本'的推广内容，可能被误认为是正文前的广告页眉
+  - 一级标题样式与页眉残留的OCR识别样式相似，但此处后随概述段，且无页码伴随
+  keep_split: true
+- 'no': 3375
+  overturn_probability: 0.2
+  alternative: 页眉（若认为真正的章标题是下一行'## 使用审批'）
+  counter_evidence:
+  - 紧随其后还有'## 使用审批'，两个二级标题连续出现，可能是同一个章标题被OCR拆行
+  - 该行位于上一章总结和广告之后，也有可能只是新章开始前的页眉
+  keep_split: true
+- 'no': 3643
+  overturn_probability: 0.95
+  alternative: 页眉残留（书眉）
+  counter_evidence:
+  - 下一行是'## 201'，明显是页码残留，页眉常与页码相邻出现
+  - 该行位于第11章正文中部（创建第二阶段审批的步骤之间），前后没有新章概述
+  - 同一章内再次出现'## 第 11 章'，不符合单一章节标题原则
+  keep_split: false
+- 'no': 3820
+  overturn_probability: 0.15
+  alternative: 页眉中的章号（若不分章）
+  counter_evidence:
+  - '''# 12''只是简短数字，可能是OCR将书眉中的章号识别为标题'
+  - 但前有'下一章'的预告，后有'## 向 Teams 发送审批'，应视为真正的章起始
+  keep_split: true
+- 'no': 4156
+  overturn_probability: 0.15
+  alternative: 页眉中的章号（若不分章）
+  counter_evidence:
+  - '''# 13''形式简短，可能是OCR将书眉中的章节数字识别为标题'
+  - 但前有'下一章'的预告，后有'## 使用数据库'，符合新章起始特征
+  keep_split: true
+- 'no': 4238
+  overturn_probability: 0.95
+  alternative: 页眉残留（书眉）
+  counter_evidence:
+  - 下一行是'## 237'，明显是页码残留
+  - 该行位于第13章正文的步骤之间（前面是第4步，后面是第5步），不是新章
+  - 已存在'# 13'作为该章起始，重复出现章节名正是页眉的特征
+  keep_split: false
+- 'no': 4656
+  overturn_probability: 0.35
+  alternative: 页眉残留（书眉），若不分章则本章标题缺失
+  counter_evidence:
+  - 紧随其后是'## 265'页码残留，页眉常与页码成对出现
+  - 该行之后直接是正文段落，缺少常见的新章概述句（如'本章将涵盖'），可能是页眉误判
+  keep_split: true
+- 'no': 4895
+  overturn_probability: 0.2
+  alternative: 章前引语或普通小标题（但实际是第16章标题）
+  counter_evidence:
+  - 该标题没有章号，可能被误认为普通标题
+  - 后文出现的'## 第 16 章'虽然很可能是页眉，但会对该行的唯一性造成混淆
+  keep_split: true
+- 'no': 5101
+  overturn_probability: 0.95
+  alternative: 页眉残留（书眉）
+  counter_evidence:
+  - 后接正文为步骤编号8、9，显然是第16章创建流操作的继续
+  - 与'# 接受用户输入'（第16章标题）冲突，一个章节不能有两个起始
+  - 前文第5097行已经总结了流的配置，说明本章尚未结束，该行只是页眉
+  keep_split: false
+- 'no': 5154
+  overturn_probability: 0.1
+  alternative: 页眉（若忽略后文的章节概述）
+  counter_evidence:
+  - 该行以'##'而非'#'开头，在OCR中可能与其他二级子标题混淆
+  - 但内容包含'第17章'且后随概述段，排除误判
+  keep_split: true
+- 'no': 5655
+  overturn_probability: 0.95
+  alternative: 页眉残留（书眉）
+  counter_evidence:
+  - 位于第18章正文中部，前文已有'图18.1'等第18章内容
+  - 后接正文'一旦激活了脚本操作...'，不是新章概述
+  - 紧接着又出现'# 第 18 章'，重复页眉特征明显
+  keep_split: false
+- 'no': 5661
+  overturn_probability: 0.9
+  alternative: 页眉残留（书眉）
+  counter_evidence:
+  - 紧随其后是'## 使用 Copilot 生成脚本'子节标题，说明这里是页眉而非章起始
+  - 与5655行的'## 第 18 章'重复，同一页的页眉被OCR多次识别
+  - 后面跟着图18.2，显然是正文内容
+  keep_split: false
+- 'no': 5765
+  overturn_probability: 0.1
+  alternative: 页眉（但此处确为第19章标题）
+  counter_evidence:
+  - 前面有'---'分隔线，可能只是水平线而非章前标记，存在歧义
+  - 但该行后接'## 使用 RPA 向 Access 数据库写入数据'，且前有'下一章'预告，符合真章标题特征
+  keep_split: true

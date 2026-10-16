@@ -1,0 +1,21 @@
+chapter_starts:
+- 'no': 3588
+  confidence: 0.98
+  final_reason: 部分-章节模式下部分标题应划分新章，且排版语义均符合章起始特征
+  accepted_evidence:
+  - 行号 3588 为 '# 第 2 部分'，其后 3590 为 '# 高级设计模式与技术'，上下文显示为部分-章节模式，按规则部分标题应划分新章
+  - 标题单独成行、长度 <30 字、无句号，语义具有统领性，符合部分起始特征
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4988
+  confidence: 0.95
+  final_reason: 无编号章标题，独立成行且语义统领后续内容，后 1~3 行为概述段落，章节边界清晰
+  accepted_evidence:
+  - 行号 4988 为 '# 数据蓝图：构建有效的 LLM 开发策略'，单独成行、无句号、长度 <30 字，语义统领后续内容
+  - 后 1~3 行 4990-4993 为概述段落，符合章标题上下文特征，且前后为参考文献与技术要求结束处
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 3604
+  reason: 复核方反证成立：行仅为孤立的 '# 6' 无标题文字，真实章节标题在下一行 3606，孤立编号为排版断行/编号占位，不应分章
+  need_human_review: false

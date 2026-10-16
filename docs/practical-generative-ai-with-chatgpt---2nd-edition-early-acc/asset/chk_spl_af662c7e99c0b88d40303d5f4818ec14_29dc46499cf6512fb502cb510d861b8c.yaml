@@ -1,0 +1,50 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.15
+  alternative: 全书书名/封面主标题，而非正文章节标题
+  counter_evidence:
+  - 该行为整本书的标题，没有章序号，也不像章节标题那样后接概述段落，更像卷首书名；
+  - 虽然规则将前言部分统一划为一章，但严格按章标题格式（编号、单独成行、无句号）来判断，它缺少编号特征，存在被泛化误判的可能。
+  keep_split: true
+- 'no': 22
+  overturn_probability: 0.05
+  alternative: 章内的大节标题（如第1章的引言小节）
+  counter_evidence:
+  - 该行后紧跟固定的'在 Discord 上加入我们的书籍社区'模板块，并非典型章标题后直接接正文的样式，可能因排版模板干扰而被误判；
+  - 标题以'# 1'开头，若脱离上下文可能被误读为有序列表项或部分编号，而不是章序号。
+  keep_split: true
+- 'no': 372
+  overturn_probability: 0.05
+  alternative: 章内子标题或节标题
+  counter_evidence:
+  - 标题中带有冒号，形式接近'主标题：副标题'，有被误解为正文小标题的余地；
+  - 与其他章的标题格式不完全一致（有的用'# 数字'，有的用'# 第 X 章'），这种不一致可能引发对层级归属的疑虑。
+  keep_split: true
+- 'no': 640
+  overturn_probability: 0.05
+  alternative: 某个带编号的小节标题
+  counter_evidence:
+  - 标题中的数字'3'前没有'第'或'章'字，单独看可能被当成节编号（如第3节）而非章编号；
+  - 上一章末尾参考文献与下一章开始之间缺少明显的分隔元素，需依赖后续内容才能确认其层级。
+  keep_split: true
+- 'no': 1306
+  overturn_probability: 0.12
+  alternative: 部分/大节的标题，而非完整章标题
+  counter_evidence:
+  - 章序号从3直接跳到5，中间缺失第4章，而第5章标题孤立出现，存在因预览不完整或段落截断造成的错位可能；
+  - 但该行与目录中'第 5 章：使用 ChatGPT 开发未来'完全吻合，且前文有'在下一章中...开发、营销和研究'的预告，仍应视为章标题。
+  keep_split: true
+- 'no': 1836
+  overturn_probability: 0.05
+  alternative: 从目录误插入的标题残留
+  counter_evidence:
+  - 前方的第6章标题完全缺失，使'第 7 章'出现得异常突兀，有可能是文档编辑时从目录复制粘贴的残留标题；
+  - 该行使用'第 7 章'显式中文写法，与相邻的'# 5 使用 ChatGPT 开发未来'等简写格式不同，增加了格式不统一的疑点。
+  keep_split: true
+- 'no': 2097
+  overturn_probability: 0.08
+  alternative: 某个编号小节标题（如第9节）
+  counter_evidence:
+  - 编号从7直接跳到9，缺少第8章，在预览版中可能因为未收录而断裂，但该行本身仍可能是第9章的标题；
+  - '''# 9 探索 GPTs''中''9''同样可能被误读为节序号，需要借助目录中''第 9 章：探索 GPTs''来确认其真实层级。'
+  keep_split: true

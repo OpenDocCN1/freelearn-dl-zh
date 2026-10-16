@@ -1,0 +1,68 @@
+reviews:
+- 'no': 38
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 该行位于目录区块中，与 40、42、63 等同类行一起出现，均为‘# 第 X 章：… 页码’的目录条目格式
+  - 上下文前后为贡献者、关于作者等前言信息，紧接着是连续的章节列表而非正文开头
+  - 标题末尾带页码数字 127，属于排版噪声，非正文章标题
+  keep_split: false
+- 'no': 40
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 与 38 行同属目录列表，单独成行但内容为‘# 第 6 章：… 163’，末尾带页码
+  - 后 1~3 行继续为下一条目录条目 42，无概述段落
+  - 格式特征符合目录而非正文章标题
+  keep_split: false
+- 'no': 42
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 位于目录序列中，标题后带页码 195
+  - 上下文为连续的章节目录条目，44 行起为子目录明细列表
+  - 语义上为目录索引，不具有统领后续正文的特征
+  keep_split: false
+- 'no': 63
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 出现在目录区块中，格式‘# 第 8 章：…’且后接空行后继续目录条目
+  - 前后均为目录条目，无章节概述段落
+  keep_split: false
+- 'no': 65
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 目录列表的连续项，标题后带页码 271
+  - 上下文为书末目录页，不应作为正文章节切分点
+  keep_split: false
+- 'no': 67
+  overturn_probability: 0.95
+  alternative: 目录条目
+  counter_evidence:
+  - 目录条目‘# 第 10 章：… 295’，其后紧跟列表项 - 基础设施与容器化
+  - 明显为目录页的目录条目而非正文章节起始
+  keep_split: false
+- 'no': 88
+  overturn_probability: 0.9
+  alternative: 目录条目
+  counter_evidence:
+  - 仍在前面的目录区块中，‘# 第 11 章：解锁您的专属福利 317’带页码
+  - 后接‘## 通过 3 个简单步骤…’为目录子项，非正文
+  keep_split: false
+- 'no': 92
+  overturn_probability: 0.93
+  alternative: 目录条目
+  counter_evidence:
+  - 该‘# 附录 A：上下文引擎（Context Engine）参考指南 321’出现在目录列表中，末尾带页码
+  - 上下文上下均为目录条目，92 行后立即是‘## 理论基础 322’等目录子项
+  - 真实的附录正文出现在更后位置，不应在此处分章
+  keep_split: false
+- 'no': 125
+  overturn_probability: 0.93
+  alternative: 目录条目
+  counter_evidence:
+  - ‘# 附录 B：答案 345’为目录条目，带页码且前后为目录列表
+  - 其后为‘- 第 1 章 345’等目录明细，非附录正文开始
+  keep_split: false

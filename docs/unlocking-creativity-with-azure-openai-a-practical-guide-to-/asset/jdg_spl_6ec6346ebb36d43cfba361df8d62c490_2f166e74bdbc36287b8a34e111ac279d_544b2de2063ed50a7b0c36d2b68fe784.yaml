@@ -1,0 +1,74 @@
+chapter_starts:
+- 'no': 6046
+  confidence: 0.9
+  final_reason: 第 13 章主标题，## 高级 prompt 工程 单独成行，长度合适，后接本章概述段落，符合最高层级章节起始特征；6044 为章节编号行，合并视为同一章入口
+  accepted_evidence:
+  - '## 高级 prompt 工程 单独成行，后接上一章回顾与本章主题概述'
+  - '前后出现 ## 13 章节编号，构成完整章节头部'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 6611
+  confidence: 0.88
+  final_reason: '一级标题 # 思维树（Tree of Thoughts，ToT）单独成行，语义统领后续 ToT 框架内容，为新主题章节起点'
+  accepted_evidence:
+  - '标题为 # 级，单独成行，无句号，长度<30字'
+  - 后接 ToT 框架介绍段落
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 6643
+  confidence: 0.9
+  final_reason: '# 检索增强生成（RAG）为一级标题，单独成行，统领 RAG 高层流程、工作原理等完整章节内容'
+  accepted_evidence:
+  - '# 级标题单独成行，后接 RAG 架构图与流程说明'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 6703
+  confidence: 0.9
+  final_reason: '# 程序辅助语言模型（PALMs）为一级标题，单独成行，后接概念、示例、优势等完整章节'
+  accepted_evidence:
+  - 一级标题格式符合最高层级章节特征
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 6804
+  confidence: 0.9
+  final_reason: '# ReAct 提示词 为一级标题，单独成行，开启 ReAct 框架介绍章节'
+  accepted_evidence:
+  - 标题单独成行，无句号，后接 2022 年引入说明段
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 6839
+  confidence: 0.9
+  final_reason: '# Reflexion（反思）为一级标题，单独成行，统领 Reflexion 框架组成与应用章节'
+  accepted_evidence:
+  - 一级标题格式符合章节起始，上下文为全新主题
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 7121
+  confidence: 0.9
+  final_reason: '# 远程代码执行 为一级标题，单独成行，开启安全风险章节'
+  accepted_evidence:
+  - 一级标题单独成行，后接 RCE 漏洞说明
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 5900
+  reason: 复核方成立：## 容量计算器 为第12章内部二级小节，非最高层级大章，上下文为连续 PTU 容量计算论述
+  need_human_review: false
+- 'no': 5926
+  reason: 复核方成立：## PTU-M 购买模型 为二级小节，内容延续 PTU 购买流程，无章节边界
+  need_human_review: false
+- 'no': 5958
+  reason: 复核方成立：## 选择您想要购买的产品 为第12章内部操作步骤小节，非章节起始
+  need_human_review: false
+- 'no': 5992
+  reason: 复核方成立：## Azure OpenAI 运营化 为二级小标题且在 6016 处重复出现，后接编号步骤，属小节排版噪声
+  need_human_review: false
+- 'no': 6002
+  reason: 复核方成立：## Azure OpenAI 扩展 为二级小节且标题重复出现，属第12章内部子节，非最高层级章节
+  need_human_review: false
+- 'no': 6038
+  reason: '复核方成立：## 总结 为第12章结语，后接 ## 13 章节编号，属本章末尾而非新章起点'
+  need_human_review: false
+- 'no': 6044
+  reason: '章节编号行 ## 13 与下一行主标题 ## 高级 prompt 工程 合并处理，单独采信主标题 6046，避免重复分章'
+  need_human_review: false

@@ -1,0 +1,16 @@
+chapter_starts:
+- 'no': 11
+  confidence: 0.8
+  reason: 前置内容开始（贡献者），按规则将前言、关于作者等正文前内容统一划分为一章
+- 'no': 147
+  confidence: 0.95
+  reason: 第1章标题，虽无编号但与后续内容（图1.x）吻合，后接概述与子节
+- 'no': 471
+  confidence: 0.97
+  reason: 第2章标题，带编号“2”，单独成行且后接概述与子节
+- 'no': 1904
+  confidence: 0.93
+  reason: 第4章标题，无编号但语义完整，后接概述、技术要求和图4.x子节
+- 'no': 2667
+  confidence: 0.96
+  reason: 第5章标题，带编号“5”，单独成行且后接引言与子节

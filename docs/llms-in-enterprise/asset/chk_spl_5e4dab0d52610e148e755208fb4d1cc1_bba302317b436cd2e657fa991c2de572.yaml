@@ -1,0 +1,57 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.2
+  alternative: 书名/封面标题（前置内容的一部分）
+  counter_evidence:
+  - 它是封面页的书名，并非真正的章节标题，可能仅表示书籍名称
+  - 但根据‘前言、序言、致谢、关于作者等正文之前的内容统一划分为一章’的规则，将此处作为前置内容章节的起点仍然合理
+  keep_split: true
+- 'no': 35
+  overturn_probability: 0.8
+  alternative: 前置内容（封面/版权/目录等）中的一个小标题
+  counter_evidence:
+  - 行1已经作为前置内容章节的起始，前言属于同一前置部分，不应再单独划分为新章
+  - 规则明确‘前言、序言、致谢、关于作者等正文之前的内容，统一划分为一章’，因此前言不是独立章节
+  keep_split: false
+- 'no': 272
+  overturn_probability: 0.9
+  alternative: 第1章内的正文小标题（节标题）
+  counter_evidence:
+  - 目录中第1章标题为‘大语言模型简介’（见行80），此标题只是该章下的第一个主要小节
+  - 前文行260明确写道‘本章的主要目的’，表明仍处于第1章中；后文跟随多个二级子节（如‘早期发展’），属于章内层级
+  keep_split: false
+- 'no': 380
+  overturn_probability: 0.9
+  alternative: 第1章内的正文小标题（节标题）
+  counter_evidence:
+  - 它紧接在‘语言模型的历史背景与演变’之后，讨论的是GPT助手训练配方，仍是第1章内容的一部分
+  - 后续出现‘## 构建基础模型’等二级子节，说明它只是章内的一级节标题
+  keep_split: false
+- 'no': 553
+  overturn_probability: 0.9
+  alternative: 第1章内的正文小标题（节标题）
+  counter_evidence:
+  - 标题‘解码大语言模型的现实与误区’是第1章讨论主题的延续，而非整章的主标题
+  - 其下直接有‘## 阿达·洛夫莱斯的见解’等子节，显示它是章内节而不是章
+  keep_split: false
+- 'no': 656
+  overturn_probability: 0.2
+  alternative: 若不分章，可能是正文中的大节标题，但实际是第2章章标题
+  counter_evidence:
+  - 该标题没有显式的‘第2章’编号，仅凭格式可能被误判为普通节标题
+  - 但目录中第2章标题正是‘企业中的 LLM：应用、挑战与设计模式’，且后接概述段落和多个二级子节，符合章标题特征
+  keep_split: true
+- 'no': 1961
+  overturn_probability: 0.2
+  alternative: 若不分章，可能是正文中的大节标题，但实际是第4章章标题
+  counter_evidence:
+  - 标题前有‘立即解锁本书的专属福利’等广告/页眉内容，可能造成上下文干扰
+  - 但该标题与目录中第4章标题完全一致，且后接‘技术要求’、‘简介’等概述结构，应视为新章起点
+  keep_split: true
+- 'no': 2903
+  overturn_probability: 0.85
+  alternative: 第5章内的正文小标题（节标题）
+  counter_evidence:
+  - 目录中第5章标题为‘自定义上下文感知 LLM’（见行88），而‘企业中的 RAG’只是该章下关于企业应用RAG的节标题
+  - 前文已有‘## 上下文定制重要性’等属于第5章的内容，后文又跟随‘## 企业案例’等子节，说明它是章内的一级节标题
+  keep_split: false

@@ -1,0 +1,34 @@
+chapter_starts:
+- 'no': 46
+  confidence: 0.9
+  reason: '序言为正文前的前置部分，按规则统一划分为一章，且为一级 # 标题'
+- 'no': 91
+  confidence: 0.85
+  reason: '目录为独立前置章节，一级 # 标题'
+- 'no': 113
+  confidence: 0.9
+  reason: '文末索引按规则单独划分为一章，一级 # 标题'
+- 'no': 117
+  confidence: 0.9
+  reason: '前言为正文前独立部分，一级 # 标题'
+- 'no': 235
+  confidence: 0.95
+  reason: '一级 # 标题，内容为大语言模型简介，书中第一章主体，语义统领后续内容'
+- 'no': 426
+  confidence: 0.95
+  reason: '一级 # 标题，编号为 2 Azure OpenAI 基础知识，为最高层级大章'
+- 'no': 902
+  confidence: 0.95
+  reason: '一级 # 标题，Azure OpenAI 高级主题，为最高层级大章'
+- 'no': 2096
+  confidence: 0.9
+  reason: '一级 # 标题，第 2 部分，书中部分-章节模式，应划分新章'
+- 'no': 2110
+  confidence: 0.95
+  reason: '一级 # 标题，第 4 章 开发企业级文档问答解决方案，最高层级大章'
+- 'no': 2364
+  confidence: 0.95
+  reason: '一级 # 标题，第 5 章 构建呼叫中心分析解决方案，最高层级大章'
+- 'no': 2729
+  confidence: 0.95
+  reason: '一级 # 标题，第 6 章 从结构化数据库中查询，最高层级大章'

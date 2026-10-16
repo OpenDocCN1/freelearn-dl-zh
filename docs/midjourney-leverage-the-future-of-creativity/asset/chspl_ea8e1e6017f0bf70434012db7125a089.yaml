@@ -1,0 +1,28 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.95
+  reason: 书名/前言级标题，位于正文之前，单独成行，统领全书
+- 'no': 9
+  confidence: 0.92
+  reason: '## 01 提示词的构造，最高层级编号标题，单独成行，后接概述与子节'
+- 'no': 35
+  confidence: 0.88
+  reason: '## 02 图像提示词，最高层级编号标题，单独成行，开启新主题'
+- 'no': 144
+  confidence: 0.9
+  reason: '## 03 理解 Midjourney 命令，最高层级编号标题，单独成行，后接子节'
+- 'no': 204
+  confidence: 0.9
+  reason: '## 04 熟悉参数列表，最高层级编号标题，单独成行，统领参数章节'
+- 'no': 340
+  confidence: 0.9
+  reason: '## 05 高级提示词，最高层级编号标题，单独成行，开启新主题'
+- 'no': 406
+  confidence: 0.9
+  reason: '## 06 Remix 模式，最高层级编号标题，单独成行'
+- 'no': 436
+  confidence: 0.9
+  reason: '## 07 多提示词 (Multi Prompts)，最高层级编号标题，单独成行'
+- 'no': 455
+  confidence: 0.9
+  reason: '## 08 Pan（平移）选项，最高层级编号标题，单独成行'

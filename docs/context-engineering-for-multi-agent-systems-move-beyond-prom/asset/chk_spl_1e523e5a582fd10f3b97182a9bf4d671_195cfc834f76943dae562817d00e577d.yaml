@@ -1,0 +1,49 @@
+reviews:
+- 'no': 3069
+  overturn_probability: 0.15
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题 '# 第 4 章' 确实为全书大章编号，单独成行且后接正文，属于典型的章节起始
+  - 上下文前为代码示例，后为正文说明，语义上具有统领性
+  keep_split: true
+- 'no': 3333
+  overturn_probability: 0.85
+  alternative: 页码/排版噪声
+  counter_evidence:
+  - 行内容仅为 '# 5'，缺少'章'字，上下文为页眉页脚式的孤立标记，前后均为正文段落而非章节概述
+  - 该标记在文档中多次出现类似孤立数字，与页码残留特征一致，非规范章节标题
+  keep_split: false
+- 'no': 3627
+  overturn_probability: 0.65
+  alternative: 正文小标题/排版断行
+  counter_evidence:
+  - 标题格式为 '## 第 5 章 141'，二级标题且后缀带页码 '141'，不符合真正的章标题格式特征
+  - 前后内容仍延续第5章的论述，并未出现新的章节概述段落，更像是页码混入的副标题
+  keep_split: false
+- 'no': 3950
+  overturn_probability: 0.2
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题 '# 第5章' 单独成行，编号连贯且后接总结段落，符合最高层级大章特征
+  - 上下文明确从第5章内容过渡，属于章节起始
+  keep_split: true
+- 'no': 4277
+  overturn_probability: 0.6
+  alternative: 正文小标题
+  counter_evidence:
+  - 标题使用二级标记 '## 第 6 章'，而全书大章此前均为 '# 第 X 章'，层级不一致
+  - 该行后紧跟图例说明而非章节概述，更接近章节内部的次级标题
+  keep_split: false
+- 'no': 5265
+  overturn_probability: 0.25
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题 '# 第 7 章' 单独成行，编号连贯，后续内容为新章架构介绍，符合大章特征
+  keep_split: true
+- 'no': 5634
+  overturn_probability: 0.7
+  alternative: 正文小标题/排版断行
+  counter_evidence:
+  - 标题使用二级标记 '## 第 8 章'，与此前大章标记不一致，且前后内容为流程图说明的延续
+  - 缺乏章节级概述，前文已在第8章主题内展开，更像是段内小标题
+  keep_split: false

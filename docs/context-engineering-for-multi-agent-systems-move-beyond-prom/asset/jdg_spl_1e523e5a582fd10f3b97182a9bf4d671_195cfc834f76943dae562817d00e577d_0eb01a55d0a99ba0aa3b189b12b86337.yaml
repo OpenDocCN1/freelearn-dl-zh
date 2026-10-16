@@ -1,0 +1,38 @@
+chapter_starts:
+- 'no': 3069
+  confidence: 0.92
+  final_reason: 判断方与复核方均支持分章，标题'# 第 4 章'独立成行、无标点、长度短、统领后续执行器与执行追踪器正文，是全书最高层级大章（第4章）起始
+  accepted_evidence:
+  - 判断方：标题单独成行，编号特征符合最高层级，语义统领后续内容
+  - 复核方：上下文前为代码示例，后为正文概述，排版语义均符合
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3950
+  confidence: 0.88
+  final_reason: 判断方与复核方均支持，'# 第5章'独立成行、编号连贯、统领后续重构与生产级内容，是第5章入口
+  accepted_evidence:
+  - 判断方：标题单独成行，后接总结与示例代码，符合最高层级大章特征
+  - 复核方：标题编号连贯，后续内容为新章概述段落
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5265
+  confidence: 0.93
+  final_reason: 判断方支持，复核方未反驳，'# 第 7 章'独立成行、编号完整、统领后续研究助手与玻璃盒架构描述，是最高层级大章
+  accepted_evidence:
+  - 判断方：标题'# 第 7 章'单独成行，符合编号与语义特征
+  - 复核方：未提出反方证据（keep_split true）
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 3333
+  reason: 复核方强烈指出为页码/排版噪声，内容仅'# 5'无'章'字，孤立标记非规范章标题，无统领性
+  need_human_review: false
+- 'no': 3627
+  reason: 复核方指出为二级标题+'页码'，'## 第 5 章 141'不符合完整章标题格式（额外数字，层级不一致），前后为第5章延续论述
+  need_human_review: false
+- 'no': 4277
+  reason: 复核方指出层级不一致（使用'##'而非'#'）、后接图例非概述、为章节内部次级标题
+  need_human_review: false
+- 'no': 5634
+  reason: 复核方指出标题使用'##'（非最高层级'#'）、前后为流程图说明延续、非章节概述段落
+  need_human_review: false

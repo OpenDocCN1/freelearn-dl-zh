@@ -1,0 +1,40 @@
+chapter_starts:
+- 'no': 38
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 5 章，单独成行，标题末尾无句号，语义统领后续内容
+- 'no': 40
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 6 章，单独成行，格式符合章标题规范
+- 'no': 42
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 7 章，单独成行，语义为新章节起始
+- 'no': 63
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 8 章，单独成行，符合章标题格式
+- 'no': 65
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 9 章，单独成行
+- 'no': 67
+  confidence: 0.95
+  reason: 编号特征匹配最高层级：第 10 章，单独成行
+- 'no': 88
+  confidence: 0.7
+  reason: 编号特征：第 11 章，单独成行，虽为福利章节但符合最高层级编号
+- 'no': 92
+  confidence: 0.95
+  reason: 附录层级标题：附录 A，单独成行，规则要求附录单独成章
+- 'no': 125
+  confidence: 0.95
+  reason: 附录层级标题：附录 B，单独成行，文末附录应划分新章
+- 'no': 144
+  confidence: 0.85
+  reason: 前言为正文前内容，规则要求前言等统一划分为一章，单独成行
+- 'no': 301
+  confidence: 0.8
+  reason: 编号特征：第 1 章以 '# 1' 形式出现，后续紧跟章节副标题，判定为第一章起始
+- 'no': 1300
+  confidence: 0.85
+  reason: 章节级标题 '# 使用 MCP 构建多智能体系统'，上下文为第 2 章内容，符合最高层级章标题语义
+- 'no': 1860
+  confidence: 0.75
+  reason: 显式标记 '# 第 2 章'，为最高层级章节标记

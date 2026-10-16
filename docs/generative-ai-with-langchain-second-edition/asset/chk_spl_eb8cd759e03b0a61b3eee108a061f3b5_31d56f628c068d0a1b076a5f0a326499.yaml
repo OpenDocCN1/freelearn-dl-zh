@@ -1,0 +1,785 @@
+reviews:
+- 'no': 11801
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 225，是索引条目格式
+  - 上下文按字母排序，属文末索引而非正文章节
+  keep_split: false
+- 'no': 11803
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 1，是索引条目格式
+  - 后续为带页码的缩进子条目，索引结构明显
+  keep_split: false
+- 'no': 11807
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 261，是索引条目格式
+  - 前后均为索引项，不是正文章节
+  keep_split: false
+- 'no': 11809
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 8，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11811
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 51，是索引条目格式
+  - 周围是连续索引条目而非章节正文
+  keep_split: false
+- 'no': 11813
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 无章号、无正文概述，不能统领章节
+  keep_split: false
+- 'no': 11819
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 按主题词排列，是索引条目而非章节标题
+  keep_split: false
+- 'no': 11824
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引中的一个主题词
+  keep_split: false
+- 'no': 11835
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 11845
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 行末无句号且内容为术语聚合，不像章标题
+  keep_split: false
+- 'no': 11852
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 30，是索引条目格式
+  - 前后为字母分区下的索引项
+  keep_split: false
+- 'no': 11854
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下均为索引项，不是章节正文
+  keep_split: false
+- 'no': 11857
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 353, 378，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11859
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行是索引主题词而非全书章节
+  keep_split: false
+- 'no': 11868
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 11874
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 262，是索引条目格式
+  - 前后均为索引项，不是章节标题
+  keep_split: false
+- 'no': 11876
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引中的一个主题词
+  keep_split: false
+- 'no': 11879
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 M，是索引的字母分段标记
+  - 其作用是分隔不同首字母的索引项，不具备章节概括性
+  keep_split: false
+- 'no': 11881
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 94，是索引条目格式
+  - 上下文为索引项，不是正文章节
+  keep_split: false
+- 'no': 11883
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 140，是索引条目格式
+  - 周围为按字母排序的索引项
+  keep_split: false
+- 'no': 11885
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 375，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 11887
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 375，是索引条目格式
+  - 前后均为索引项，不是正文章节
+  keep_split: false
+- 'no': 11889
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 2，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 11891
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不统领正文
+  keep_split: false
+- 'no': 11896
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为索引项，不是正文章节
+  keep_split: false
+- 'no': 11899
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 30，是索引条目格式
+  - 前后为按字母排序的索引项
+  keep_split: false
+- 'no': 11901
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 7，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 11903
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 11908
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 353，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 11910
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 375，是索引条目格式
+  - 上下文为索引项，不是正文章节
+  keep_split: false
+- 'no': 11912
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 行号为字母 L 分区下的索引项
+  keep_split: false
+- 'no': 11920
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能覆盖后文
+  keep_split: false
+- 'no': 11923
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 63，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 11925
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不统领正文
+  keep_split: false
+- 'no': 11929
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 11933
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 11938
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 行号为字母 M 分区下的索引项
+  keep_split: false
+- 'no': 11941
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不覆盖正文
+  keep_split: false
+- 'no': 11950
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为索引项，不是正文章节
+  keep_split: false
+- 'no': 11954
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 57，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11956
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 N，是索引的字母分段标记
+  - 其作用是分隔索引项，不具备章节标题特征
+  keep_split: false
+- 'no': 11958
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 411，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 11960
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 127，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11962
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 O，是索引的字母分段标记
+  - 后面紧跟 `- Ollama 49` 等索引项，不是章节正文
+  keep_split: false
+- 'no': 11968
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 28，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 11970
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 30，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11972
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能统领正文
+  keep_split: false
+- 'no': 11978
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 11981
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 76-79，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 11983
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 P，是索引的字母分段标记
+  - 后接索引项而非正文章节
+  keep_split: false
+- 'no': 11988
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 126，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 11990
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不覆盖后文
+  keep_split: false
+- 'no': 11999
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 R，是索引的字母分段标记
+  - 后面紧跟 R 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12001
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 12004
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 411，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12006
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能统领正文
+  keep_split: false
+- 'no': 12019
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 12029
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 12032
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 188-191，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12034
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 92，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12036
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不统领正文
+  keep_split: false
+- 'no': 12041
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 94，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 12043
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 73-75，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12045
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 3，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12047
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是正文章节
+  keep_split: false
+- 'no': 12050
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 293-295，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 12052
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能覆盖正文
+  keep_split: false
+- 'no': 12057
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12062
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不统领后文
+  keep_split: false
+- 'no': 12067
+  overturn_probability: 0.95
+  alternative: 索引二级子条目
+  counter_evidence:
+  - '`##` 是索引条目下的二级分类，不是全书最高层级章节'
+  - 后随的 `-` 子条目仍为索引项，不是正文内容
+  keep_split: false
+- 'no': 12072
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 S，是索引的字母分段标记
+  - 后面紧跟 S 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12074
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 12079
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 12088
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能统领正文
+  keep_split: false
+- 'no': 12093
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 92, 93，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12095
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是正文章节
+  keep_split: false
+- 'no': 12098
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 4，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12100
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 108，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 12102
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能覆盖正文
+  keep_split: false
+- 'no': 12107
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 127，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12109
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 12112
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 69-73，是索引条目格式
+  - 上下文为连续索引项
+  keep_split: false
+- 'no': 12114
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 84，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12116
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 93，是索引条目格式
+  - 周围为按字母排序的索引项
+  keep_split: false
+- 'no': 12118
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 72，是索引条目格式
+  - 上下文为索引项，不是正文章节
+  keep_split: false
+- 'no': 12120
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能统领正文
+  keep_split: false
+- 'no': 12123
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 T，是索引的字母分段标记
+  - 后面紧跟 T 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12125
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 410，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12127
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 429，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12129
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 12133
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 404，是索引条目格式
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 12135
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 383，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12137
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 383，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12139
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 31，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12141
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不统领正文
+  keep_split: false
+- 'no': 12148
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 上下文为连续索引项，不是正文章节
+  keep_split: false
+- 'no': 12154
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能覆盖正文
+  keep_split: false
+- 'no': 12157
+  overturn_probability: 0.98
+  alternative: 索引条目（无页码）
+  counter_evidence:
+  - 上下文均为索引项，单独成行是索引排版而非章节标题
+  - 无章号、无正文概述，不具备章节特征
+  keep_split: false
+- 'no': 12159
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是全书章节
+  keep_split: false
+- 'no': 12162
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 69，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12164
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 U，是索引的字母分段标记
+  - 后面紧跟 U 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12166
+  overturn_probability: 0.95
+  alternative: 索引二级子条目
+  counter_evidence:
+  - '`##` 是索引条目下的二级分类，不是全书最高层级章节'
+  - 后续 `-` 子条目均为索引项，不是正文内容
+  keep_split: false
+- 'no': 12172
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 320，是索引条目格式
+  - 上下文为按字母排序的索引项
+  keep_split: false
+- 'no': 12174
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 V，是索引的字母分段标记
+  - 后面紧跟 V 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12176
+  overturn_probability: 0.95
+  alternative: 索引二级子条目
+  counter_evidence:
+  - '`##` 是索引条目下的二级分类，不是全书最高层级章节'
+  - 后随 `-` 子条目属索引项，不是正文内容
+  keep_split: false
+- 'no': 12179
+  overturn_probability: 0.95
+  alternative: 索引二级子条目
+  counter_evidence:
+  - '`##` 是索引条目下的二级分类，不是全书最高层级章节'
+  - 后续 `-` 子条目均为索引项，不是正文内容
+  keep_split: false
+- 'no': 12184
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不能统领正文
+  keep_split: false
+- 'no': 12191
+  overturn_probability: 0.98
+  alternative: 索引条目（术语+页码）
+  counter_evidence:
+  - 行末带页码 412，是索引条目格式
+  - 上下文为索引项，不是章节标题
+  keep_split: false
+- 'no': 12193
+  overturn_probability: 0.95
+  alternative: 索引字母分组标记
+  counter_evidence:
+  - 该行只有单个字母 Z，是索引的字母分段标记
+  - 后面紧跟 Z 开头的索引项，不是章节标题
+  keep_split: false
+- 'no': 12195
+  overturn_probability: 0.98
+  alternative: 索引条目标题（含子条目）
+  counter_evidence:
+  - 后续行是带页码的 `-` 子条目，属索引结构
+  - 该行只是索引主题词，不是正文章节
+  keep_split: false
+- 'no': 12198
+  overturn_probability: 0.9
+  alternative: 书末免费 PDF 推广区块标题
+  counter_evidence:
+  - 所在位置在索引之后，上下文为书末推广文案
+  - 后接段落和列表项，不具备章节标题的统领性
+  keep_split: false
+- 'no': 12211
+  overturn_probability: 0.9
+  alternative: 书末通讯订阅/推广区块标题
+  counter_evidence:
+  - 该标题后是订阅说明和二维码表格，属于书末附加内容
+  - 不是正文章节，不应作为新的章标题
+  keep_split: false

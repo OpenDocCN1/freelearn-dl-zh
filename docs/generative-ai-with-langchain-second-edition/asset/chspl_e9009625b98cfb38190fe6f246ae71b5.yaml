@@ -1,0 +1,22 @@
+chapter_starts:
+- 'no': 6265
+  confidence: 0.9
+  reason: '一级标题 # Agentic RAG，语义统领后续内容，符合最高层级章起始特征'
+- 'no': 6957
+  confidence: 0.85
+  reason: '一级标题 # 智能体核心逻辑实现，独立章节主题且单独成行'
+- 'no': 7341
+  confidence: 0.95
+  reason: '一级标题 # #7 软件开发与数据分析代理，书中第7章标题'
+- 'no': 8112
+  confidence: 0.9
+  reason: '一级标题 # 将 LLM Agent 应用于数据科学，章节级主题划分'
+- 'no': 8603
+  confidence: 0.85
+  reason: '一级标题 # 构建 LLM 评估共识，独立章节主题'
+- 'no': 8715
+  confidence: 0.85
+  reason: '一级标题 # 在实践中评估 LLM 代理，章节级划分'
+- 'no': 8725
+  confidence: 0.8
+  reason: '一级标题 # 评估结果的正确性，章节级小节作为独立起始'

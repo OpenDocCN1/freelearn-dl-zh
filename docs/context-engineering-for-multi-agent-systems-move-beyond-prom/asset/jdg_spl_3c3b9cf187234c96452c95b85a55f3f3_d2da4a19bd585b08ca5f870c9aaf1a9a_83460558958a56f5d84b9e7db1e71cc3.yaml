@@ -1,0 +1,61 @@
+chapter_starts:
+- 'no': 144
+  confidence: 0.85
+  final_reason: '前言、序言等正文前内容统一划分为一章，行单独成行且为 # 前言，符合前言章划分规则'
+  accepted_evidence:
+  - '行格式为 # 前言 单独成行'
+  - 处于正文前序信息区，前后为贡献者、关于作者等前言内容
+  - 规则要求前言等统一划分为一章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 301
+  confidence: 0.8
+  final_reason: '编号特征为第1章的起始标记，# 1 后紧跟章节副标题 ## 从提示词到上下文：构建语义蓝图，语义统领后续正文'
+  accepted_evidence:
+  - 行内容 '# 1' 单独成行
+  - 后行 303 为章副标题，后续为第1章正文概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1300
+  confidence: 0.85
+  final_reason: 章节级标题 '# 使用 MCP 构建多智能体系统' 单独成行，上下文为第2章内容起始，符合最高层级章标题语义
+  accepted_evidence:
+  - '行单独成行且为 # 标题'
+  - 后文 1302 起为该章概述段落
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1860
+  confidence: 0.75
+  final_reason: 显式标记 '# 第 2 章' 为最高层级章节标记，单独成行
+  accepted_evidence:
+  - 行内容为 '# 第 2 章' 单独成行
+  rejected_evidence: []
+  need_human_review: true
+rejected_lines:
+- 'no': 38
+  reason: 复核方指出为目录条目，标题后带页码 127，上下文为连续目录列表，非正文章节起始，采纳反方证据
+  need_human_review: false
+- 'no': 40
+  reason: 复核方指出为目录条目，标题后带页码 163，后续为目录条目，上下文为目录页
+  need_human_review: false
+- 'no': 42
+  reason: 复核方指出为目录条目，标题后带页码 195，后接目录子项，非正文概述
+  need_human_review: false
+- 'no': 63
+  reason: 复核方指出为目录区块中的目录条目，无章节概述段落
+  need_human_review: false
+- 'no': 65
+  reason: 复核方指出为目录列表项，标题后带页码 271，属于目录索引
+  need_human_review: false
+- 'no': 67
+  reason: 复核方指出为目录条目，后紧跟列表项，为目录页内容
+  need_human_review: false
+- 'no': 88
+  reason: 复核方指出仍在目录区块，标题后带页码 317，后接目录子项，非正文
+  need_human_review: false
+- 'no': 92
+  reason: 复核方指出为目录中的附录 A 条目，标题后带页码 321，后接目录子项，非附录正文开始
+  need_human_review: false
+- 'no': 125
+  reason: 复核方指出为目录中的附录 B 条目，标题后带页码 345，后接目录明细，非附录正文
+  need_human_review: false

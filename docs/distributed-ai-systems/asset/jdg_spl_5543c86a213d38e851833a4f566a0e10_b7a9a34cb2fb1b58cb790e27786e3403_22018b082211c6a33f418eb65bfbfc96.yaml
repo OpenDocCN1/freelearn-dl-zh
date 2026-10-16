@@ -1,0 +1,44 @@
+chapter_starts:
+- 'no': 8922
+  confidence: 0.97
+  final_reason: 双方一致认定为章节起点。'## 第 6 章：分布式推理与 vLLM' 具有明确的顶级章编号，单独成行，且后续为章节内容；全角冒号差异及前文总结句不构成有效反证。
+  accepted_evidence:
+  - 判断方：最高层级章节标题，编号特征明显，单独成行
+  - 复核方：反证不足，keep_split 概率极高
+  rejected_evidence:
+  - 全角冒号格式与第7/9章不完全一致
+  - 前文8914有章节总结句，但属于上一章收尾，不影响新章起始
+  need_human_review: false
+- 'no': 9288
+  confidence: 0.97
+  final_reason: 双方一致认定为章节起点。'## 7 使用 SGLang 进行跨请求优化' 是顶级章标题，无句号且单独成行，后接章节副标题和题记；紧邻图片和空行只是排版上下文。
+  accepted_evidence:
+  - 判断方：编号特征清晰，单独成行，为新一章起始
+  - 复核方：反证不能成立，保持分章
+  rejected_evidence:
+  - 格式缺少'第'字和冒号，但与后接副标题和题记结合仍为章首
+  - 前面有图片和空行，属于排版正常间隔
+  need_human_review: false
+- 'no': 10506
+  confidence: 0.98
+  final_reason: 双方一致认定为章节起点。'## 8. 使用 SLURM 运行分布式训练' 为顶级编号章标题，单独成行，后接加粗副标题和题记；疑似列表项/图片上下文不能推翻。
+  accepted_evidence:
+  - 判断方：编号特征明显，单独成行，为新一章起始
+  - 复核方：反证不足，保持分章
+  rejected_evidence:
+  - '''8.'' 外观接近有序列表项，但 ''##'' 标题级别与后续内容证明其为章标题'
+  - 前有空行和图片，属正常章节切换排版
+  need_human_review: false
+- 'no': 11814
+  confidence: 0.96
+  final_reason: 双方一致认定为章节起点。'## 9 生产级 LLM 服务技术栈' 为顶级编号章标题，单独成行，后接副标题和题记；后文11836的无编号重复标题是页眉/重复噪声，不构成反证。
+  accepted_evidence:
+  - 判断方：编号特征明确，单独成行，为新一章起始
+  - 复核方：该行带编号且后随副标题，更符合章节起始
+  rejected_evidence:
+  - 后文11836出现无编号重复标题'## 生产级LLM服务技术栈'，应为页眉或重复排版，不影响11814的章首地位
+  need_human_review: false
+rejected_lines:
+- 'no': 11836
+  reason: 该行 '## 生产级LLM服务技术栈' 无章号，位于第9章正文后部，复核方也仅将其视为可能的页眉/重复标题，不应划分为新章。
+  need_human_review: false

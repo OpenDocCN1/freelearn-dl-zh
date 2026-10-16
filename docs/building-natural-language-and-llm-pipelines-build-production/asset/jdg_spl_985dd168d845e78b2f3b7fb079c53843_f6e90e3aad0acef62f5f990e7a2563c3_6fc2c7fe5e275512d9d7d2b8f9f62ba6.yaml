@@ -1,0 +1,61 @@
+chapter_starts:
+- 'no': 188
+  confidence: 0.95
+  final_reason: 部分标题，部分-章节模式下应视为新部分起点；双方一致认可
+  accepted_evidence:
+  - '标题为“## 第一部分: AI 的基础”，采用“第X部分”形式'
+  - 后文明确写出“本书的部分包含以下章节”并列出第1、2章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 197
+  confidence: 0.95
+  final_reason: 第1章正式章标题，单独成行，语义统领后续内容；双方一致
+  accepted_evidence:
+  - 标题“## 1 自然语言处理流水线引言”为最高层级章节格式
+  - 后续以“在本章中”“本章结束”等章节语义展开
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 545
+  confidence: 0.95
+  final_reason: 第2章标题，承接第1章并开启新主题；双方一致
+  accepted_evidence:
+  - 前文由总结、延伸阅读自然过渡
+  - 目录明确列为第2章，后续持续使用“本章”指代
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1118
+  confidence: 0.95
+  final_reason: 第二部分标题，部分-章节模式下的新部分起点；双方一致
+  accepted_evidence:
+  - 标题“# 第二部分”与第一部分构成连续的部分序列
+  - 后文明确列出第3至第6章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1136
+  confidence: 0.95
+  final_reason: 第3章正式标题，与部分目录一致，统领本章内容；双方一致
+  accepted_evidence:
+  - 标题“# deepset 的 Haystack 简介”单独成行且语义完整
+  - 后续立即介绍本章主题并列出技术要求
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2155
+  confidence: 0.95
+  final_reason: 第5章正式标题，与部分目录一致，后续为本章导语；双方一致
+  accepted_evidence:
+  - 标题“## 5 使用自定义组件开发 Haystack 流水线”为最高层级章节
+  - 后续列出本章主题并围绕其展开
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2668
+  confidence: 0.92
+  final_reason: 第6章标题，虽缺编号但语义明确且与目录一致；双方一致
+  accepted_evidence:
+  - 前文部分目录明确列出第6章主题
+  - 后续紧接“在本章中”“本章结束时”等章节导语
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 1697
+  reason: 复核方指出该行仅为页眉/页脚残留的“第 4 章”标记，真正的完整章标题“整合组件——针对不同用例的 Haystack 流水线”出现在第1711行；判断方证据不足，优先采纳反方证据
+  need_human_review: true

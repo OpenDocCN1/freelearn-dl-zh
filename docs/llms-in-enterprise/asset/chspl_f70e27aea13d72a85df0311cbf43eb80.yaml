@@ -1,0 +1,49 @@
+chapter_starts:
+- 'no': 8891
+  confidence: 0.85
+  reason: '一级标题 # 实现透明度和职责，单独成行，语义统领后续透明度内容'
+- 'no': 9082
+  confidence: 0.9
+  reason: '一级标题 # LLM 的安全性与鲁棒性，单独成行，长度合适，开启新主题'
+- 'no': 9294
+  confidence: 0.95
+  reason: '一级标题 # 14. 新兴趋势与多模态性，带章节序号，明确新章起始'
+- 'no': 9304
+  confidence: 0.7
+  reason: '一级标题 # 技术要求，单独成行，统领硬件/软件要求段落'
+- 'no': 9328
+  confidence: 0.8
+  reason: '一级标题 # AI 的新兴趋势，单独成行，语义概括后续多模态内容'
+- 'no': 9396
+  confidence: 0.8
+  reason: '一级标题 # 理解 LLM 中的多模态性，单独成行，开启架构讨论'
+- 'no': 9649
+  confidence: 0.85
+  reason: '一级标题 # 多模态 AI 的技术进展，单独成行，统领技术突破章节'
+- 'no': 9809
+  confidence: 0.85
+  reason: '一级标题 # 医疗领域的多模态用例，单独成行，明确应用案例新章'
+- 'no': 9837
+  confidence: 0.75
+  reason: '一级标题 # Summary，文末总结章节，单独成行'
+- 'no': 9845
+  confidence: 0.8
+  reason: '一级标题 # 参考文献，文末参考文献章节'
+- 'no': 9866
+  confidence: 0.7
+  reason: '一级标题 # 订阅免费电子书，附录性质独立章节'
+- 'no': 9880
+  confidence: 0.65
+  reason: '一级标题 # 为什么要订阅？，独立营销章节'
+- 'no': 9892
+  confidence: 0.65
+  reason: '一级标题 # 你可能喜欢的其他书籍，附录推荐章节'
+- 'no': 9929
+  confidence: 0.6
+  reason: '一级标题 # Packt 正在寻找像你这样的作者，附录信息章节'
+- 'no': 9933
+  confidence: 0.6
+  reason: '一级标题 # 分享你的想法，附录反馈章节'
+- 'no': 9937
+  confidence: 0.9
+  reason: '一级标题 # 索引，文末索引应单独划分为一章'

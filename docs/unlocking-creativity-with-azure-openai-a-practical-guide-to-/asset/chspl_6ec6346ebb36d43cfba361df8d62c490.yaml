@@ -1,0 +1,43 @@
+chapter_starts:
+- 'no': 5900
+  confidence: 0.55
+  reason: 二级标题单独成行，标题末尾无句号，长度<30字，为本段落起始的统领性小节
+- 'no': 5926
+  confidence: 0.6
+  reason: 二级标题单独成行，格式符合章标题特征，后接概述段落
+- 'no': 5958
+  confidence: 0.6
+  reason: 二级标题单独成行，标题独立成行且后接说明段落
+- 'no': 5992
+  confidence: 0.65
+  reason: 二级标题单独成行，语义统领后续运营化内容
+- 'no': 6002
+  confidence: 0.65
+  reason: 二级标题单独成行，后接扩展技术概述
+- 'no': 6038
+  confidence: 0.7
+  reason: 总结标题单独成行，符合章节收尾/起始特征
+- 'no': 6044
+  confidence: 0.9
+  reason: '章节编号标题 ## 13 单独成行，符合最高层级大章编号特征'
+- 'no': 6046
+  confidence: 0.85
+  reason: '章节主标题 ## 高级 prompt 工程 单独成行，长度合适且后接本章概述'
+- 'no': 6611
+  confidence: 0.8
+  reason: '一级标题 # 思维树（Tree of Thoughts，ToT）单独成行，为新章级主题'
+- 'no': 6643
+  confidence: 0.85
+  reason: '一级标题 # 检索增强生成（RAG）单独成行，符合新章起始'
+- 'no': 6703
+  confidence: 0.85
+  reason: '一级标题 # 程序辅助语言模型（PALMs）单独成行，为新章'
+- 'no': 6804
+  confidence: 0.85
+  reason: '一级标题 # ReAct 提示词 单独成行，为新章起始'
+- 'no': 6839
+  confidence: 0.85
+  reason: '一级标题 # Reflexion（反思）单独成行，为新章起始'
+- 'no': 7121
+  confidence: 0.9
+  reason: '一级标题 # 远程代码执行 单独成行，为新章起始'
