@@ -1,0 +1,36 @@
+reviews:
+- 'no': 8
+  overturn_probability: 0.85
+  alternative: 前言类正文之前的前置信息
+  counter_evidence:
+  - '与 # 关于作者 # 关于审稿人 等同属前置署名信息，规则要求前言、序言、致谢、关于作者等正文之前的内容统一划分为一章，不应每节单独分章'
+  - '标题格式为 # 贡献者，位于书名和正文前言之间，上下文为献词引文，语义上不统领后续章节内容'
+  keep_split: false
+- 'no': 10
+  overturn_probability: 0.9
+  alternative: 前言类正文之前的前置信息
+  counter_evidence:
+  - '# 关于作者 属于关于作者类前置信息，与 # 贡献者 # 关于审稿人 构成同一前置区块，规则要求统一划分为一章'
+  - 前后行均为空或作者简介正文，标题单独成行但长度短且无统领性，后续直接接作者简介段落而非章节概述
+  keep_split: false
+- 'no': 20
+  overturn_probability: 0.88
+  alternative: 前言类正文之前的前置信息
+  counter_evidence:
+  - '# 关于审稿人 同属前置致谢类信息，与前述贡献者、关于作者连续出现，应合并为同一前置章'
+  - 上下文后接审稿人简介段落，非章节概述段，格式上为二级前置标题，不满足最高层级大章特征
+  keep_split: false
+- 'no': 28
+  overturn_probability: 0.8
+  alternative: 前言类推广/订阅信息
+  counter_evidence:
+  - '# 订阅获取免费电子书 为出版方推广信息，位于前置信息区后、正文前言前，属于排版噪声/前言附属内容'
+  - 标题后接营销描述和链接，并非统领后续技术内容的章节标题，长度短且语义为广告性
+  keep_split: false
+- 'no': 2
+  overturn_probability: 0.7
+  alternative: 书名/封面标题
+  counter_evidence:
+  - '# AI Agents 实战 为书名封面标题，后续为空行和献词，属于封面/版权页范畴，不应作为章节起始'
+  - 规则中前言前内容统一处理，单独将书名作为章节起点会造成误分
+  keep_split: false

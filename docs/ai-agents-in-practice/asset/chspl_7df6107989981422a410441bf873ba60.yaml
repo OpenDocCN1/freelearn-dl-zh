@@ -1,0 +1,22 @@
+chapter_starts:
+- 'no': 4172
+  confidence: 0.95
+  reason: '一级标题 # 第 3 部分，符合最高层级部分划分'
+- 'no': 4174
+  confidence: 0.9
+  reason: '一级标题 # 通往开放、代理化生态系统的之路，承接第3部分的主标题'
+- 'no': 4189
+  confidence: 0.92
+  reason: '一级标题 # 编排智能：下一代代理协议蓝图，为第8章的开篇主标题'
+- 'no': 3764
+  confidence: 0.88
+  reason: 第 7 章 标记，符合编号特征的最高层级大章
+- 'no': 4452
+  confidence: 0.88
+  reason: 第8 章 标记，符合编号特征的最高层级大章
+- 'no': 4733
+  confidence: 0.9
+  reason: '一级标题 # AI 的伦理挑战——公平性、透明性、隐私与问责，符合新章语义统领'
+- 'no': 5157
+  confidence: 0.93
+  reason: '一级标题 # 索引，文末索引应单独划分为一章'

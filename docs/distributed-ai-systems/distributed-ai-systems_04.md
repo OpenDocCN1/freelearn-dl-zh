@@ -1,4 +1,4 @@
-## 使用 PyTorch DDP 进行分布式训练
+# 3 使用 PyTorch DDP 进行分布式训练
 
 ### 使用 DistributedDataParallel 跨多 GPU 扩展训练
 
