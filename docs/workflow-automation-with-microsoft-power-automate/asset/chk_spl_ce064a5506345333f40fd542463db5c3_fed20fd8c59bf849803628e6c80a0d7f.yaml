@@ -1,0 +1,58 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.92
+  alternative: 书籍主标题/封面标题
+  counter_evidence:
+  - 行1为《# Microsoft Power Automate 工作流自动化》，为全书封面主标题，单独成行且为整书唯一书名，不具统领后续章节的章节语义
+  - 其后行3起为献辞、贡献者、关于作者等前置内容，真正的正文前置起始标题在行5 ‘# 贡献者’，行1不应作为分章点
+  - 标题末无序号且长度>30字偏向书名，符合排除特征的排版噪声
+  keep_split: false
+- 'no': 184
+  overturn_probability: 0.08
+  alternative: 部分标题
+  counter_evidence:
+  - 行184为‘# 第一部分’，单独成行且后接‘## 基础’子节，符合部分-章节模式的最高层级划分规则
+  - 上下文行188为第一部分概述段落，符合章节标题后1~3行概述特征
+  keep_split: true
+- 'no': 206
+  overturn_probability: 0.02
+  alternative: 第1章章节标题
+  counter_evidence:
+  - 行206为‘# 1 介绍 Microsoft Power Automate’，编号‘1’为全书最高层级大章，单独成行且无句号
+  - 后接行208起为本章正文概述，上下文为上一部分结束后的新章节起止
+  keep_split: true
+- 'no': 508
+  overturn_probability: 0.03
+  alternative: 第2章章节标题
+  counter_evidence:
+  - 行508为‘# 2 开始使用 Power Automate’，编号连续且格式与第1章一致
+  - 后1~3行为本章引言概述，满足章节语义统领性
+  keep_split: true
+- 'no': 904
+  overturn_probability: 0.03
+  alternative: 第3章章节标题
+  counter_evidence:
+  - 行904为‘# 3 处理电子邮件’，编号特征明显，单独成行无标点
+  - 后接行906起为本章概述，上下文与前一章结束自然衔接
+  keep_split: true
+- 'no': 1277
+  overturn_probability: 0.04
+  alternative: 第4章章节标题
+  counter_evidence:
+  - 行1277为‘# 4 复制文件’，为全书最高层级大章标题
+  - 后行1279起为本章引言，与前章结尾的总结段落分离
+  keep_split: true
+- 'no': 1734
+  overturn_probability: 0.12
+  alternative: 第6章章节标题
+  counter_evidence:
+  - 行1734为‘# 6 生成推送通知’，编号虽跳过第5章，但规则明确序号跳跃仍应划分新章
+  - 单独成行且后接概述段落，语义统领后续推送通知内容
+  keep_split: true
+- 'no': 2548
+  overturn_probability: 0.1
+  alternative: 第9章章节标题
+  counter_evidence:
+  - 行2548为‘# 9 理解表达式和函数’，编号跳跃符合序号连贯性例外规则
+  - 标题单独成行且后接本章学习目标概述，具备章节统领性
+  keep_split: true

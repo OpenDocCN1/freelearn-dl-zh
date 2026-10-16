@@ -1,0 +1,54 @@
+chapter_starts:
+- 'no': 145
+  confidence: 0.9
+  final_reason: 双方一致；前言位于正文前置区，单独成行的顶层一级标题，后接前言正文概述，符合前言统一分章规则
+  accepted_evidence:
+  - 行145为“# 前言”，顶层一级标题且单独成行
+  - 行147起为正常前言概述段落（生成式 AI 强大但不可预测……）
+  - 复核方确认维持分章（overturn_probability=0.25，keep_split=true）
+  rejected_evidence:
+  - 复核方提出的“正文小标题”可能性不成立，因为首个前言位置符合正文前内容分章规则
+  need_human_review: false
+- 'no': 303
+  confidence: 0.95
+  final_reason: 双方一致；正文第1章起始，顶层一级标题，后续为章概述段落，编号虽简写为“1”但为全书最高层级，应分章
+  accepted_evidence:
+  - 行303为“# 1 从提示词到上下文：构建语义蓝图”，单独成行
+  - 行305-311为章概述段落，语义统领第1章
+  - 复核方确认维持（overturn_probability=0.15，keep_split=true）
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1301
+  confidence: 0.9
+  final_reason: 双方一致；正文中对应第2章实际标题，位于正文流程，后续为承接上一章的概述段落，应分章
+  accepted_evidence:
+  - 行1301为“# 使用 MCP 构建多智能体系统”，顶层一级标题且单独成行
+  - 行1303-1305为正文概述，明确承接上一章并引出本章主题
+  - 复核方确认维持（overturn_probability=0.2，keep_split=true）
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 38
+  reason: 复核方反证成立：该行位于目录区，标题尾缀页码“127”，后接行40的连续目录条目而非正文概述，属于目录条目/排版噪声，不应分章
+  need_human_review: false
+- 'no': 40
+  reason: 复核方反证成立：位于目录区，标题尾缀页码“163”，上下文为连续目录条目，无正文内容，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 42
+  reason: 复核方反证成立：位于目录区，标题尾缀页码“195”，后接行44起目录子项列表，无正文概述，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 63
+  reason: 复核方反证成立：位于目录区，后接行65连续目录条目，无正文概述，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 65
+  reason: 复核方反证成立：位于目录区，标题尾缀页码“271”，上下行均为目录条目，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 67
+  reason: 复核方反证成立：位于目录区，标题尾缀页码“295”，后接行69起目录子项列表，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 92
+  reason: 复核方反证成立：位于目录区，标题尾缀页码“321”，后接“## 理论基础 322”等目录明细，属于目录条目/排版噪声
+  need_human_review: false
+- 'no': 125
+  reason: 复核方反证成立：位于目录区，虽然行文本为“# 附录 B：答案 345”但尾缀页码并处于附录答案索引区，后接行127-136“- 第 X 章 页码”列表项，应为目录索引而非附录B正文开头
+  need_human_review: false

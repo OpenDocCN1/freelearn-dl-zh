@@ -1,0 +1,25 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.8
+  reason: 前置内容（贡献者/关于作者/前言等）统一划分为一章，行5为前置内容起始标题
+- 'no': 2
+  confidence: 1.0
+  reason: 部分标题“# 第一部分”，部分-章节模式下应划分新章
+- 'no': 3
+  confidence: 1.0
+  reason: 第1章标题“# 1 介绍 Microsoft Power Automate”
+- 'no': 4
+  confidence: 1.0
+  reason: 第2章标题“# 2 开始使用 Power Automate”
+- 'no': 5
+  confidence: 1.0
+  reason: 第3章标题“# 3 处理电子邮件”
+- 'no': 6
+  confidence: 1.0
+  reason: 第4章标题“# 4 复制文件”
+- 'no': 7
+  confidence: 1.0
+  reason: 第6章标题“# 6 生成推送通知”，虽然缺少第5章标题，但序号跳跃时仍划分新章
+- 'no': 8
+  confidence: 1.0
+  reason: 第9章标题“# 9 理解表达式和函数”，虽然缺少第7、8章标题，但序号跳跃时仍划分新章

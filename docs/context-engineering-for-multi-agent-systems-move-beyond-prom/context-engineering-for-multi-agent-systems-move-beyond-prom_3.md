@@ -1,3 +1,564 @@
+# 使用 MCP 构建多智能体系统
+
+在上一章中，我们建立了上下文工程的基础技能：将模糊的提示词转换为结构化的语义蓝图。现在，我们将在更大规模的范围内应用这项技能，构建一个由专门的 AI 代理组成的系统，它们通过上下文进行通信并协作解决复杂问题。单一的大语言模型（LLM）是一个出色的通用全才，但它并非专家。对于任何复杂的多步骤任务，使用单个 LLM 效率低下且往往会失败。因此，我们将构建一个多智能体系统（MAS），在这个系统中，我们工程化的上下文将超出单个消息的内容，用于定义系统本身的设计。这包括定义需要哪些代理、它们的特定角色和能力，以及它们在不丢失信息的情况下通信的方法。这才是上下文工程的真正范围。
+
+此外，为了使我们的系统更加可靠，我们将实现模型上下文协议（MCP），这是一种共享语言，确保我们工程化的上下文以完美的保真度在代理之间传递。在实操部分，我们将从零开始构建一个 MAS-MCP 系统。你将学习如何设计管理工作流的协调器（Orchestrator）以及执行任务的专家代理（研究员 Researcher 和编写者 Writer）。你还将看到如何将错误处理、消息验证和自动化质量控制直接构建到工作流中，确保系统能够从故障中恢复并保持事实准确性。到最后，你将拥有一个功能完整的系统，它可以接收高级目标并自主管理复杂的多步骤过程。简而言之，我们将涵盖以下主题：
+
+- 构建上下文驱动的 MAS 工作流
+- 使用 MCP 构建一个管理上下文的 MAS
+- 错误处理与验证
+- AI 架构的演进
+- 构建智能体系统的工具
+
+让我们从构建系统开始吧。
+
+## 使用 MCP 架构 MAS 工作流
+
+在编写第一行代码之前，我们需要一个清晰的架构计划。本节将阐述该蓝图。我们将总体目标解构为核心组件，定义系统每个部分的作用，并映射出让代理团队运转起来的通信流。
+
+首先，让我们定义该设计核心的两个概念：MAS 和 MCP：
+
+- **MAS**：我们将设计一个可以运行多个独立代理的系统，每个代理专门负责不同的任务，如研究、写作或数据分析。通过为每个代理提供清晰的上下文，我们确保它能够在其特定的职责上表现出色。
+- **MCP**：为了让代理能够协作，它们需要一种共享语言。MCP 为我们提供了代理之间如何传递任务和信息的规则。它提供了一个框架，确保每条消息都是结构化的、可靠的且被完美理解。
+
+我们的 MAS 由三个不同的组件组成。每个组件都扮演着特定的角色，它们共同构成了一个能够将用户的高级目标转化为成品的工作流：
+
+## 多智能体系统
+
+![图 2.1：我们 MAS 工作流的架构蓝图](img/c9f69ac3fb58ab0dee89a12c2578a735_69_0.png)
+
+流程图说明了系统的完整工作流。让我们分析这个认知流水线每个组件的作用：
+
+- **协调器（Orchestrator，项目经理）**：协调器是操作的大脑。它本身不执行专门的任务，而是管理整个工作流。它接收用户的高级目标，将其分解为逻辑步骤，并将每个步骤委托给正确的代理。它还负责接收一个代理的结果并将其作为上下文传递给下一个代理。换句话说，它在系统级对我们的 MAS 应用了上下文链。
+- **研究员代理（Researcher agent，信息专家）**：这是我们的第一个专门代理。它的目的是获取特定主题，寻找相关信息，并将这些信息综合成结构化的摘要。在我们的项目中，它将接收来自协调器的研究任务，并以清晰的符号列表形式返回结果。
+- **编写者代理（Writer agent，内容创造者）**：这是我们的第二个专门代理。它的长处在于通信和创造性表达。它接收研究员提供的结构化摘要，并将其转化为精炼的、人类可读的内容，并仔细注意语气、风格和叙述。
+
+信息并非仅仅以原始文本的形式流动。代理之间的每一次交互都被封装成结构化的 MCP 消息。这确保了任务和结果始终带有完整的上下文，以一致、可预测且可靠的格式进行传递。MCP 是将一组独立代理连接成一个集成系统的结缔组织。
+
+蓝图准备就绪后，我们已经准备好开始使用 MCP 构建我们的 MAS 了。
+
+> **注意**
+> 在本书中，我们探索了将 MCP 原则应用于代理与代理通信的尖端定义。虽然 MCP 最初是为代理与工具的交互设计的，但最近的探索（例如微软的《你可以在 MCP 上构建代理与代理之间的通信吗？》）展示了 MCP 不断进化的能力如何支持新兴的智能体协调模式。
+> 文章链接：`https://developer.microsoft.com/blog/can-you-build-agent2agent-communication-on-mcp`
+
+## 使用 MCP 构建 MAS
+
+现在我们已经有了蓝图，是时候开始编写代码了。在这一节中，我们将逐步实现 MAS 和 MCP。我们将从系统的核心功能开始，然后在后的“错误处理与验证”章节中返回添加错误处理和验证。
+
+打开本章存储库中的`Open_MCP.ipynb`进行跟随。初始的 OpenAI 安装与第1章中的`SRL.ipynb`相同。
+
+我们将通过以下步骤完成 Colab 单元：首先定义我们的协议，构建每个专家代理，构建协调器来管理它们，最后运行系统查看代理团队的操作。让我们先初始化 OpenAI 客户端。
+
+### 初始化客户端
+
+我们首先初始化 OpenAI 客户端，它将作为我们与 LLM 通信的网关。我们导入了`json`库以整洁的格式显示我们的消息：
+
+```python
+#@title 1. 初始化客户端
+
+# 我们需要 openai 库来与 LLM 通信。
+
+# 注意：此笔记本假设你已经在 Colab 环境中运行了设置单元，
+# 将 Secrets 中的密钥加载到环境变量中，正如你所指定的。
+
+import json
+from openai import OpenAI
+
+# 客户端将从环境中读取 OpenAI_API_KEY。
+client = OpenAI()
+
+print("OpenAI client initialized.")
+```
+
+输出显示确认消息：
+
+```
+OpenAI client initialized.
+```
+
+### 定义协议
+
+正如之前提到的，我们的代理需要一种共享语言来协作。这种语言由 MCP 定义。在本节中，我们将实现一个简化版本来演示该过程。虽然我们的 Python 方法对于学习非常有效，但值得了解规范系统间通信的官方 MCP 规则。
+
+#### 消息格式
+
+MCP 消息的结构有严格定义以确保一致性：
+
+- 所有消息均遵循 JSON-RPC 2.0 格式作为清晰的 JSON 对象
+- 消息必须使用 UTF-8 编码以实现通用性
+- 每条消息必须单行显示，不包含换行符，以便快速可靠地解析
+
+#### 传输层
+
+一旦定义了消息，MCP 就定义了传输层。传输层定义了代理之间传递消息的方式。两种主要方法如下：
+
+- **STDIO（标准输入/输出）**：对于运行在同一机器上的代理（例如在我们的 Colab 笔记本中），它们可以通过标准输入输出直接进行通信。这是最简单直接的方法。
+- **HTTP**：对于运行在不同服务器上的代理，消息通过标准的 HTTP 请求在互联网上传发送。
+
+最后，我们需要一个协议管理框架。
+
+### 协议管理
+
+MCP 还包含了关于兼容性和安全性的规则：
+
+- **版本控制**：使用 HTTP 时，需要版本标头以确保客户端和服务器使用同一套规则。
+- **安全性**：有用于验证连接的规则，以防止常见的网络攻击，并确保你正在与预期的服务器进行通信。
+
+对于本书中的实操项目，我们将通过练习结构化通信来关注 MCP 的精神。一个简单的 Python 字典足以说明这一理念。它可以作为正式 JSON-RPC 对象的替身，让我们能够清晰地看到消息是如何构建和传递的，而不会迷失在协议开销中。
+
+准备工作，我们现在可以创建一个名为`create_mcp_message`的辅助函数。该函数是我们系统中传输消息的模板。通过每次使用相同的结构，我们确保信息永远不会丢失或被误解。以下是代码：
+
+```python
+## 2. 定义协议：MCP 标准
+
+# 在构建智能体之前，我们必须定义它们将使用的语言。
+# MCP 提供了一种简单、结构化的上下文传递方式。在本示例中，
+# 我们的 MCP 消息将是一个带有关键字段的 Python 字典。
+
+def create_mcp_message(sender, content, metadata=None):
+    """
+    创建一个标准的 MCP 消息。
+    """
+    return {
+        "protocol_version": "1.0",
+        "sender": sender,
+        "content": content,
+        "metadata": metadata or {}
+    }
+
+print("--- 示例 MCP (我们的简化版) ---")
+example_mcp = create_mcp_message(
+    sender="Orchestrator",
+    content="研究地中海饮食的好处。",
+    metadata={"task_id": "T-123", "priority": "high"}
+)
+print(json.dumps(example_mcp, indent=2))
+```
+
+输出显示了我们的 JSON 格式的结构化 MCP 消息示例：
+
+```json
+--- Example MCP Message (Our Simplified Version) ---
+{
+  "protocol_version": "1.0",
+  "sender": "Orchestrator",
+  "content": "Research the benefits of the Mediterranean diet.",
+  "metadata": {
+    "task_id": "T-123",
+    "priority": "high"
+  }
+}
+```
+
+
+
+`create_mcp_message` 函数接收三个输入：发送者、内容（任务或信息）以及任何可选元数据。它始终返回一个相同结构的标准 Python 字典。这种一致性是我们系统可靠性的基础。消息在智能体之间流动，没有丢失、误读或误解的风险。
+
+定义好协议后，我们准备好构建专家智能体了。
+
+## 构建智能体
+
+本节包含了将我们在图 2.1 工作流图中的智能体变为栩生运行的代码。我们将每个智能体定义为一个 Python 函数。每个智能体函数都将接受一个结构化的 MCP 消息作为输入，并返回另一个 MCP 消息作为输出。智能体的特定角色由其系统提示词（system prompt）塑造，它告诉 LLM 如何行为。为了保持通信的一致，我们还将创建一个名为 `call_llm` 的单一辅助函数，用于管理与 OpenAI API 的所有交互。
+
+## 多智能体 AI 系统流程图
+
+### 研究员智能体 (Researcher Agent)
+
+![](img/c9f69ac3fb58ab0dee89a12c2578a735_74_0.png)
+
+该图说明了一个使用两个 AI 智能体创建博客文章的工作流。信息从初始想法流到完成的内容经过了一系列步骤：
+
+1. 流程始于一个研究主题，这是启动工作流的提示词。包含主题的消息被发送给我们的第一个智能体——研究员智能体（Researcher agent），它从模拟的内部数据库收集相关的事实和信息。
+2. 一旦研究员获得了原始数据，它将使用 LLM API（一种外部语言模型服务）来处理信息并创建关键发现的摘要。该摘要是过程上一个和下一个阶段之间的桥梁。
+3. 摘要被传递给第二个智能体——作者智能体（Writer agent），它的角色是将研究点转化为完成的文章。作者智能体也会与 LLM API 通信，但是为了执行复杂且具有创造性的任务。
+4. 系统的最终结果是一个博客文章，清晰地展示了专业智能体如何协同工作，将高级目标转化为完整的产物。
+
+我们现在准备好实现相互通信的智能体了。
+
+## 创建辅助函数
+
+在构建智能体本身之前，我们需要一种可靠且一致的方式让它们与 LLM 通信。我们的辅助函数 `call_llm` 处理所有到 OpenAI 的 API 调用。我们的系统使用提示词和用户内容作为输入，并返回模型的响应：
+
+```python
+def call_llm(system_prompt, user_content):
+    """使用新客户端语法调用 OpenAI API 的辅助函数"""
+    try:
+        # 使用更新后的 client.chat.completions.create 方法
+        response = client.chat.completions.create(
+            model="gpt-3",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_content}
+            ]
+        )
+        return response.choices[0].message.content
+```
+
+该函数有两个输入：
+
+- `system_prompt`，一个告诉模型如何行为的字符串。
+- `user_content`，包含用户查询的字符串。
+
+## 定义智能体
+
+```python
+def researcher_agent(mcp_input):
+    """
+    该智能体接收一个主题并从数据库中查找相关信息。
+    """
+    print("\n[研究员智能体已激活]")
+```
+
+```python
+simulated_database = {
+    "keto diet": "生酮饮食富高脂肪、低碳水和中等蛋白质。",
+    "mediterranean diet": "地中海饮食富含水果、蔬菜、全谷物、橄榄油和鱼类。研究显示它与心脏病风险较低。",
+    "intermittent fasting": "间歇性禁食是一种在进食和禁食之间循环的饮食模式。",
+}
+```
+
+适合健康与养博客的鼓励性语气。提示词还规定了长度（约 150 字）并要求一个引入人的标题：
+
+```python
+system_prompt = "你是一位健康与养博客的资深内容写作者。你的语气平易近人、信息量丰富且具有鼓励性。你的任务是根据以下研究点撰写一篇短小、吸引人的博客文章（约 150 字），并带上引入人的标题。"
+```
+
+代理调用 `call_llm`，传入系统提示词和研究摘要。返回的文本就是我们的博客文章。我们还打印了一条消息以确认稿已创建：
+
+```python
+blog_post = call_llm(system_prompt, research_summary)
+print("Blog post drafted.")
+```
+
+最后，使用 `create_mcp_message` 将博客文章封装进新的 MCP 消息。这确保了输出遵循与其他所有消息相同的结构化格式，并包含内容元数据；在此情况下，我们统计了以下字数：
+
+```python
+return create_mcp_message(
+  sender="WriterAgent",
+  content=blog_post,
+  metadata={
+```
+
+这完成了 Writer（写作者）。它接收来自 Researcher（研究者）的结构化输入，应用新的系统提示词，并输出格式一致的 MCP 完整博客文章。
+
+当 Researcher 和 Writer 都准备完成后，我们现在定义了 MAS（多代理系统）的核心。每个代理都有独特的角色，它们共同可以完成从原始信息到最终内容的任务。
+
+## 构建编排器 (Orchestrator)
+
+我们现在有了专门代理，但我们需要一种管理它们的方法。这个角色属于编排器。把它想象成我们 AI 团队的项目经理。它的工作是接收一个高级目标，将其分解为一系列任务，并将这些任务委托给正确的代理。它还管理信息流，将一个代理的输出作为下一个代理的输入。这创建了一个从开始到结束的无缝流程：
+
+### 编排器
+
+![](img/c9f69ac3fb58ab0dee89a12c2578a735_79_0.png)
+
+图 2.3：代理的编排器
+
+上图的工作流在**初始目标**被发送给**编排器**时开始。编排器充当中心枢纽，首先向**Researcher（研究者代理）**发送任务。一旦研究完成，该代理将其发现返回给编排器。编排器处理这些信息并向**Writer（写作者代理）**发送新任务。在 Writer 完成后，它将完成的内容传回编排器。最后，编排器拥有了所有内容来生成**最终输出**，完成整个过程。
+
+以下代码定义了我们的编排器。这个单一函数管理从开始到结束的多代理工作流。它的角色是调用 Researcher，然后是 Writer，最后将输出组装成一个完整的制品。让我们逐步分析：
+
+```python
+def orchestrator(initial_goal):
+    """
+    管理多代理工作流以实现高级目标。
+    """
+    print("=" * 50)
+    print(f"[Orchestrator] Goal Received: '{initial_goal}'")
+    print("=" * 50)
+```
+
+我们从开始定义编排器函数。它接受一个参数 `initial_goal`，代表我们希望系统完成的高级任务。该函数随后打印已接收目标的确认。
+
+第一步是委托研究任务。在这里，我们将"地中海饮食"硬编码为主题，但在实践中，这可以根据用户的目标动态设置：
+
+```python
+# 步骤 1：编排器规划并调用 Researcher 代理
+print("\n[Orchestrator] Task 1: Research. Delegating to Researcher Agent.")
+research_topic = "Mediterranean Diet"
+```
+
+我们将研究主题封装在 MCP 消息中，以保持通信的一致性：
+
+```python
+mcp_to_researcher = create_mcp_message(
+  sender="Orchestrator",
+  content=research_topic
+)
+```
+
+编排器现在使用 MCP 消息调用 Researcher 代理，接收响应并打印返回的摘要：
+
+```python
+mcp_from_researcher = researcher_agent(mcp_to_researcher)
+print("\n[Orchestrator] Research complete. Received summary:")
+print("-" * 20)
+print(mcp_from_researcher['content'])
+print("-" * 20)
+```
+
+编排器现在在 `mcp_from_researcher` 中拥有 Researcher 代理的响应，它可以将其传递给 Writer 代理。Writer 代理反过来首先在 `mcp_to_writer` 中创建 MCP 消息并发送给 Writer 代理，然后显示结果（这将在我们运行系统时出现）。然后它记录写作步骤已完成：
+
+```python
+# 步骤 2：编排器调用 Writer 代理
+print("\n[Orchestrator] Task 2: Write Content. Delegating to Writer Agent.")
+mcp_to_writer = create_mcp_message(
+  sender="Orchestrator",
+  content=blog_post,
+  metadata={
+)
+```
+
+```python
+mcp_from_writer = writer_agent(mcp_to_writer)
+print("\n[Orchestrator] Writing complete.")
+```
+
+最后，编排器获取 Writer 的响应并呈现最终结果：
+
+```python
+### 步骤 3：编排器呈现最终结果
+final_output = mcp_from_writer['content']
+print("\n[Orchestrator] Final Output:")
+print(final_output)
+```
+
+至此，编排器函数完成。
+
+## 运行系统
+
+我们已经准备好了所有组件：Researcher 代理、Writer 代理和编排器。现在让我们运行系统并观察它们的工作。
+
+编排器接收目标，传递给 Researcher，获取摘要，然后传递给 Writer，后者生成博客文章。
+
+```python
+## 运行系统
+user_goal = "Create a blog post about the benefits of Mediterranean diet."
+orchestrator(user_goal)
+```
+
+图 2.4：代理的流程
+
+### 多代理执行流
+
+| 阶段 | 动作 | 输出 |
+| :--- | :--- | :--- |
+| 用户输入 | 目标到编排器 | 关于地中海饮食好处的博客 |
+| 编排器 | 任务 1：研究 | 委托给 Researcher 代理 |
+| Researcher 代理 | 研究完成 | 地中海饮食摘要 |
+| 编排器 | 任务 2：编写内容 | 委托给 Writer 代理 |
+| Writer 代理 | 写作完成 | 博客文章草稿 |
+| 编排器 | 最终输出 | Mediterranean Magic... |
+
+现在让我们看看 MAS 的实际输出。我们将分解控制台日志，显示每个代理如何贡献于最终的博客文章：
+
+1. 系统在我们给编排器一个目标时开始。编排器确认该目标并准备将其分解为第一个任务：
+
+```
+=============================================
+[Orchestrator] Goal Received: 'Create a blog post about the benefits of Mediterranean diet.'
+=============================================
+Orchestrator Delegates to the Researcher
+```
+
+2. 接下来编排器知道了。它宣布研究任务并激活 Researcher 代理。Researcher 随后工作并告诉我们它创建了一个摘要。
+
+
+
+# 多代理系统（MAS）工作流演示
+
+## 系统运行示例
+
+**[Orchestrator]** Task 1: Research. Delegating to Researcher Agent.
+
+**[Researcher Agent Activated]**
+
+Research summary created for 'Mediterranean Diet'
+
+在 Researcher 完成任务后，编排器确认已收到摘要。随后它显示 Researcher 提取的要点。此输出了将用于博客文章的信息：
+
+```
+[Orchestrator] Research complete. Received summary:
+------------------
+- 强调蔬菜、全谷物、橄榄油和鱼类食物。
+- 与心脏病风险降低、大脑健康改善和长寿增加有关。
+- 益处与高摄入单不饱和脂肪（特别是来自橄榄油）和抗氧化剂有关。
+------------------
+```
+
+拿到摘要后，编排器进入下一步。它宣布它正将内容撰写任务委托给 Writer 代理。Writer 开始起草博客文章：
+
+```
+[Orchestrator] Task 2: Write Content. Delegating to Writer Agent.
+[Writer Agent Activated]
+```
+
+### 博客文章草稿已拟定
+
+当 Writer Agent 开始起草博客文章时，编排器（Orchestrator）会确认写作任务已完成：
+
+```
+[Orchestrator] Writing complete.
+```
+
+最后，编排器信号整个工作流已完成。随后它呈现了最终的博客文章，这是所有智能体共同努力的成果：
+
+```
+[Orchestrator] Workflow Complete. Final Output:
+地中海魔法：增强心脏、大脑和长寿的美味之道
+```
+
+地中海风格的餐盘推崇色彩丰富的果蔬、五谷物、丝滑的橄榄油以及大量的鱼。研究表明，这种饮食模式与心脏病风险降低、大脑更健康以及更长寿有关。秘诀是什么？单不饱和脂肪——尤其是特级橄榄油——有助于改善胆固醇平衡并保持血管弹性，而富含抗氧化剂植物和海鲜则对抗氧化压力和炎症……
+
+这次运行展示了我们多智能体系统（MAS）的生命周期。在这个阶段，系统按预期工作。网络波动、格式错误的消息或意外的 LLM 响应可能会中断流程。为了让工作流更加可靠并更接近生产就绪，我们需要通过错误处理、验证和保护措施来加强它。这正是我们下一步要转的地方。
+
+## 错误处理与验证
+
+我们目前为止构建的系统是一个功能性原型；当一切按计划进行时，它可以运行。但在现实世界中，事情很少按计划进行。API 可能会失败，消息可能格式错误，智能体可能会返回意外结果。在考虑其健壮性之前，我们必须改进系统以应对这些潜在的故障。
+
+在本节中，我们将把简单的脚本升级为更具韧性的系统。我们将为 API 调用添加错误处理，创建一个验证器以确保 MCP 消息格式正确，并教编排器在智能体失败或产生缺陷输出时如何保持工作流运行。
+
+在这一部分，我们将在 `MAS_MCP_control.ipynb` 笔记本中工作，其中包含了完整的实现。我们将关注两个核心工程原则：韧性和可靠性：
+
+- **韧性 (Resilience)**：加固与 LLM 的连接，使临时问题（如 API 超时或速率限制）不会导致系统崩溃
+- **可靠性 (Reliability)**：确保消息完整性，使智能体始终交换可预测、有效的 MCP 消息
+
+让我们从提高韧性开始。我们原始的 `call_llm` 函数是有意设计的。我们发送单次 API 请求并返回结果。在生产环境中，这种方法太脆弱了。OpenAI API 可能会宕机，或者如果请求因网络不稳定失败，整个工作流可能会崩溃。为了修复，我们将构建一个更健壮的函数，它可以处理重试。
+
+## 为 LLM 构建健壮组件
+
+加强我们系统的第一步是将原始 `call_llm` 替换为更具韧性的函数：`call_llm_robust`。这个新版本获取请求而不是立即放弃，允许系统从临时问题中恢复。
+
+在定义函数之前，我们需要 `time` 库，它允许我们在重试之间暂停执行。这已经包含在 `MAS_MCP_control.ipynb` 的初始化部分中：
+
+```python
+import time
+```
+
+准备好后，这里是新函数：
+
+```python
+# @title 3.Building Robust Components
+# Hardening the call_llm Function
+
+def call_llm_robust(system_prompt, user_content, retries=3, delay=5):
+    """一个健壮的辅助函数，用于重试调用 OpenAI API."""
+    for i in range(retries):
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_content}
+                ]
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"API call failed on attempt {i+1}/{retries}. Error: {e}")
+            if i < retries:
+                print(f"在 {delay} 秒后重试...")
+                time.sleep(delay)
+            else:
+                print("所有重试均失败。")
+                return None
+```
+
+在这个升级后的函数 `call_llm_robust` 中，我们将 API 调用封装在循环内的 `try/except` 块中。如果发生错误，系统将等待几秒后再次尝试，并在尝试之间通过 `time.sleep` 暂停。这种重试机制使系统对临时网络问题更具韧性。如果所有尝试均失败，函数返回 `None`，这向编排器信号它必须决定如何处理故障。
+
+在建立了 API 用的韧性后，让我们转向可靠性，引入一个在每个 MCP 消息到达智能体之前对其验证的函数。
+
+## 验证 MCP 消息
+
+为了让智能体可靠地通信，它们必须信任接收的消息。如果漏掉格式错误的消息，整个工作流可能会失败。为了防止这种情况，我们引入了 MCP 验证器，这是一个简单的护栏，检查每条消息是否符合我们的协议。检查在消息传递给智能体之前进行：
+
+```python
+# The MCP Validator ---
+def validate_mcp_message(message):
+    """一个检查 MCP 消息结构的简单验证器。"""
+    required_keys = ["protocol_version", "sender", "content", "metadata"]
+
+    if not isinstance(message, dict):
+        print(f"MCP 验证失败：消息不是字典。")
+        return False
+
+    for key in required_keys:
+        if key not in message:
+            print(f"MCP 验证失败：缺少键 '{key}'")
+            return False
+
+    print(f"来自 {message['sender']} 的 MCP 验证通过。")
+    return True
+```
+
+此函数是一个重要的护栏。编排器在传递任何消息之前调用 `validate_mcp_message`，确保结构完整。它首先检查输入是否为字典，然后验证所有必要的键是否存在。
+
+有了这个验证器，编排器可以信任它分发的消息，智能体也可以专注于自己的任务。结合为 API 调用增加韧性的 `call_llm_robust` 函数，我们现在有了一个既可靠又容错的系统基础。
+
+现在让我们通过为专家引入控制来添加另一种保护措施。
+
+## 添加智能体专项控制
+
+我们目前的智能体团队可以工作，但有一个弱点：它完全信任 Writer 的输出。即使有良好的上下文，LLM 也会误解事实或引入幻觉。为了让我们的系统更加可靠，我们需要一个质量控制步骤，在接受 Writer 的工作之前对其检查。
+
+首先，更新智能体。我们在两个智能体内部将旧的 `call_llm` 函数替换为新的 `call_llm_robust` 函数：
+
+```python
+### title 4.Building the Agents: The Specialists
+---
+#### Agent 1: The Researcher ---
+def researcher_agent(mcp_input):
+    ... (code omitted for brevity)
+    system_prompt = "你是一名研究分析师。将提供的信息综合为3-4个简洁的要点。"
+    # 现在使用健壮调用器
+    summary = call_llm_robust(system_prompt, research_result)
+    ... (code omitted for brevity)
+```
+
+```python
+#### Agent 2: The Writer ---
+def writer_agent(mcp_input):
+    ... (code omitted for brevity)
+    system_prompt = "你是一名内容撰稿员。根据以下研究点写一篇简短、吸引人的博客文章（约 150 字），并带有一个引人的标题。"
+    # 现在使用健壮调用器
+    blog_post = call_llm_robust(system_prompt, research_summary)
+    ... (code omitted for brevity)
+```
+
+## 使用 MCP 构建多代理系统
+
+这确保了研究人员（Researcher）和作者（Writer）都能通过重试失败的请求而不是直接报错来应对临时 API 中断。这些代理现在更具韧性，但我们仍然需要一种来验证作者的草稿是否与研究人员的内容一致。下一步是将团队从两个专家扩展到三个。我们引入了验证代理（validator agent）。
+
+验证代理的唯一目的是担任事实检查员。它将作者的草稿与研究人员的摘要进行比较。这种比较确认了事实的一致性。它为我们的系统添加了重要的质量控制层：
+
+```python
+# --- Agent 3: The Validator
+def validator_agent(mcp_input):
+    """该代理根据摘要对草稿进行事实检查."""
+    print("\n[Validator Agent Activated]")
+
+    # 提取两个必要信息
+    source_summary = mcp_input['content']['summary']
+    draft_prompt = mcp_input['content']['draft']
+
+    system_prompt = """
+你是一个严谨的事实检查员。判断"草稿"是否与"源摘要"在事实上一致。
+- 如果草稿中的所有主张都得到了源的支持，请仅回复单词"pass"。
+- 如果草稿包含源中没有任何信息，请回复"fail"并提供一句话的解释。
+"""
+
+    validation_context = f"SOURCE SUMMARY:\n{source_summary}\nDRAFT:\n{draft_prompt}"
+    validation_result = call_llm_robust(system_prompt, validation_context)
+
+    print(f"Validation complete: {validation_result}")
+
+    return create_mcp_message(
+        sender="ValidatorAgent",
+        content=validation_result
+    )
+```
+
+验证代理有其自己的语义蓝图。它需要两个输入：来自研究人员的源摘要和来自作者的博客草稿。如果草稿与摘要一致，模型返回 pass；如果不一致，则返回 fail 并附带简短解释。
+
+
 # 2 
 
 这为编排器（Orchestrator）提供了一个新的保障：它不再需要盲目地信任作者。相反，在接受草稿作为最终版本之前，它可以检查草稿是否与研究结果对齐。
@@ -1206,3 +1767,268 @@ def planner(goal, capabilities):
 ```
 
 简报准备就绪后，规划器（Planner）调用LLM作为推理伙伴。整个过程封装在一个健壮的`try...except`块中，以处理潜在的错误，例如来自LLM的格式不正确的JSON。在调用LLM并解析响应后，规划器会执行关键验证。它检查输出是否为有效列表。为了确保韧性，它还会
+
+
+# 4 
+
+处理LLM可能将列表封装在字典中（例如`"plan": [...]`）的情况，并据此提取列表。如果结构不正确或发生任何其他错误，`except`块将记录详细的错误信息（包括用于便于调试的原始LLM输出），并抛出异常以停止引擎。成功解析并验证的计划将返回给执行器（Executor）使用：
+
+```python
+plan_json = ""
+
+try:
+    plan_json = call_llm_robust(system_prompt, goal, json_mode=True)
+    plan = json.loads(plan_json)
+    # 验证输出结构
+    if not isinstance(plan, list):
+        # 处理 LLM 将 List 封装在字典中的情况（例如 "plan": [...]）
+        if isinstance(plan, dict) and "plan" in plan and isinstance(plan["plan"], list):
+            plan = plan["plan"]
+        else:
+            raise ValueError("规划器未返回有效的 JSON 列表结构.")
+    print("[Engine: Planner] 计划生成成功.")
+    return plan
+except Exception as e:
+    print(f"[Engine: Planner] 生成有效计划失败。错误: {e}。原始 LLM 输出: {plan_json}")
+    raise e
+```
+
+这种设计之所以有效，是因为它为LLM提供了一个明确的可遵循的标准。接下来，我们将看到执行器如何将此计划转化为行动。
+
+# 执行器 (Executor)
+
+执行器是系统的现场经理：它运行每个步骤，调用正确的代理，最重要的是推进上下文，以便后续步骤可以建立在早期结果的基础上。
+
+在调用代理之前，执行器会在输入中查找占位符（诸如`$$ . . $$`）。这些标记充当对之前结果的引用，告诉系统：“在此处使用步骤 1 的输出”。通过解析这些占位符，执行器将计划转换为一个连通的工作流。
+
+这就是上下文链的实际应用。`resolve_dependencies()`辅助函数驱动了这一过程。它扫描代理所需输入中的任何`$$$`占位符。
+
+该函数的外部部分定义了`resolve_dependencies`并创建输入参数的深拷贝。这确保了在替换占位符时，原始计划结构（在其他地方需要）不会被意外修改（变异）：
+
+```python
+def resolve_dependencies(input_params, state):
+    """
+    辅助函数，用执行状态中的实际数据替换 $$$占位符。
+    """
+    # 使用 copy.deepcopy 确保原始计划结构不被修改
+    resolved_input = copy.deepcopy(input_params)
+```
+
+内部解析器（基础情况）解析嵌套函数。它的“基础情况”是处理单个值链的逻辑。它检查字符串是否为占位符（以`$$`开头并以`$$`结尾）。如果是，它会在`state`字典中查找引用键（例如`STEP_1_OUTPUT`）并返回实际数据：
+
+```python
+# 处理潜在嵌套结构的递归函数
+def resolve(value):
+    if isinstance(value, str) and value.startswith("$$") and value.endswith("$$"):
+        ref_key = value[2:-2]
+        if ref_key in state:
+            # 从上一个步骤的输出中检索实际数据（字符串）
+            print(f"[Engine: Executor] 正在解析 {ref_key}")
+            return state[ref_key]
+        else:
+            raise ValueError(f"在 state 中未找到依赖 {ref_key}.")
+```
+
+（注：原文此处存在大量重复的段落，翻译时已按逻辑保留核心内容并确保格式一致）
+
+# 执行追踪器 (Execution Tracer)
+
+在规划器和执行器的协同工作，执行追踪器（Tracer）已经具备了功能，但尚未开始工作。让我们仔细观察。
+
+当新任务开始时，追踪器用目标初始化。
+
+```python
+class ExecutionTrace:
+    """
+    记录 LLM 计划的执行情况。
+    用于调试和分析，让我们能够准确看到系统是如何推理并执行任务的。
+    """
+    def __init__(self, goal):
+        self.goal = goal
+        self.plan = None
+        self.steps = []
+        self.status = "Initialized"
+        self.final_output = None
+        self.start_time = time.time()
+```
+
+过程完成后，追踪器使用`finalize()`将其封装。它记录了最终状态，存储了最终输出，并计算了任务所需的时间。
+
+一旦规划器创建了策略，追踪器就会使用`log_plan()`进行记录。该方法存储整个计划，为我们提供了执行开始前系统意图执行的操作记录：
+
+```python
+def log_plan(self, plan):
+    self.plan = plan
+```
+
+当执行器遍历计划时，`log_step()`记录每一个动作。对于每个步骤，它捕获了了哪个代理、接收了什么输入（`planned_input`）、在什么上下文中运行（`resolved_context`）以及输出了什么（`output`）。这创建了计划如何执行的清晰时间化记录：
+
+```python
+def log_step(self, step_num, agent, planned_input, mcp_output, resolved_context):
+    """记录单个执行步骤的细节."""
+    self.steps.append({
+        "step": step_num,
+        "agent": agent,
+        "planned_input": planned_input,
+        "resolved_context": resolved_context,
+        "output": mcp_output['content']
+    })
+```
+
+```python
+def finalize(self, status, final_output=None):
+    self.status = status
+    self.final_output = final_output
+    self.duration = time.time() - self.start_time
+```
+
+这些方法共同构成了追踪器的严密审查。它让我们能够在任何时候重构系统的推理过程，无论我们是在调试故障、分析性能，还是仅仅研究工作流是如何展开的。本质上，执行追踪器为上下文引擎提供了每个自主系统所需要的要素：可见性、问责制，以及我们始终能看到其思考方式的安心感。
+
+## 整合一切
+
+现在所有的构建模块都已就绪：负责思考的**规划器 (Planner)**、负责执行的**执行器 (Executor)**以及记录每一次移动的**追踪器 (Tracer)**。最后是将它们连接到单一控制循环中。
+
+`context_engine()`函数是系统的开关。它通过协调整个两个阶段的过程让一切运转起来：它先制定计划，然后执行计划。让我们逐步分析。
+
+当一个新任务开始时，该函数会打印目标并创建一个执行追踪器的实例，追踪器会立即开始记录。它还会加载代理注册表（Agent Registry），这是一个告诉系统它拥有哪些引擎以及如何访问它们的目录。从这一刻起，每一个动作、决策和输出都将被记录在追踪（trace）中。
+
+```python
+def context_engine(goal):
+    """
+    Context 引擎的主入口。管理规划与执行。
+    """
+    print(f"\n=== [Context Engine] Starting New Task ===\nGoal:{goal}\n")
+    trace = ExecutionTrace(goal)
+    registry = AGENT_TOOLKIT
+```
+
+接下来是规划（阶段 1）：
+
+```python
+## Phase 1: Plan
+try:
+    capabilities = registry.get_capabilities_description()
+    plan = planner(goal, capabilities)
+    trace.log_plan(plan)
+except Exception as e:
+    trace.finalize("Failed during Planning")
+    # 即使失败也返回追踪信息以便调试
+    return None, trace
+```
+
+引擎获取用户的目标并开始制定计划。它从注册表中检索代理能力的描述，并将其交给规划器，规划器使用大语言模型（LLM）创建一个JSON格式的行动计划。该计划将目标分解为不同的、有序的步骤，描述了哪个代理应该做什么以及按什么顺序执行。一旦规划完成后，追踪器就会记录计划，在执行开始前保留策略。如果在此阶段发生任何错误（例如格式错误或规划失败），系统会整洁地记录并带有完整的追踪信息退出。
+
+计划就绪后，引擎进入执行阶段（阶段 2）：
+
+```python
+print(f"\n[Engine: Executor] Starting Step (step_num): {agent_name})")
+try:
+    handler = registry.get_handler(agent_name)
+    # 上下文组装：解决依赖关系
+    resolved_input = resolve_dependencies(planned_input, state)
+    # 通过 MCP 执行代理
+    # 为代理创建一个包含已解析输入*的 MCP 消息
+    mcp_resolved_input = create_mcp_message("Engine", resolved_input)
+    mcp_output = handler(mcp_resolved_input)
+    # 更新状态日志追踪
+    output_data = mcp_output["content"]
+    # 存储输出数据（上下文本身）
+    state[f"STEP_{step_num}_OUTPUT"] = output_data
+    trace.log_step(step_num, agent_name, planned_input, mcp_output, resolved_input)
+    print(f"[Engine: Executor] Step {step_num} completed.")
+except Exception as e:
+    error_message = f"Execution failed at {step_num}({agent_name})"
+    print(f"[Engine: Executor] ERROR: {error_message}")
+    trace.finalize(f"Failed at Step {step_num}")
+    # 返回追踪信息以调试失败原因
+    return None, trace
+```
+
+这个循环是Context引擎实际工作的地方。执行器遍历计划的每一步，为任务调用相应的代理。在调用代理之前，它会使用`resolve_dependencies()`检查输入中的任何占位符（例如对早期步骤输出的引用），并将它们替换为存储在当前状态中的实际数据。然后，将输入封装成MCP消息并发送给代理，代理的响应将成为该步骤的输出。每个输出都存储在状态字典中，创建了一个后续步骤可以引用的短期记忆。追踪器会记录每一个细节：调用了哪个代理、接收了什么输入、解析了什么上下文以及产生了什么结果。
+
+当所有步骤运行完成后，引擎会完成流程：
+
+```python
+final_output = state.get("STEP_{len(plan)}_OUTPUT")
+trace.finalize("Success", final_output)
+print("\n==[Context Engine] Task Complete ===")
+```
+
+此时，最后一步的输出会被检索并返回。通过标记运行成功、记录结果并测量从开始到结束的时长，该函数返回生成的输出和完整的执行追踪。
+
+## 运行引擎
+
+我们已经构建了拼图的每一个碎片：专家、注册表、规划器、执行器和追踪器。在完成这些架构工作后，是时候启动并听引擎运行了。让我们看看当Context引擎被要求处理一个创意目标时会发生什么。我们将从一个简单的提示开始，要求一个关于阿波罗11号登月的悬疑故事：
+
+```python
+print("******** Example 1: STANDARD WORKFLOW (Suspenseful Narrative)")
+goal_1 = "为一个关于阿波罗11号登月的儿童故事写一个简短的悬疑场景，突出危险性。"
+
+# 运行 Context 引擎
+# 确保 Pinecone 索引已填充（参考第 3 笔记本）以便此工作
+result_1, trace_1 = context_engine(goal_1)
+```
+
+
+
+```python
+if result_1:
+    print("\n******* FINAL OUTPUT 1 ***********\n")
+    display(Markdown(result_1))
+    print("\n\n" + "*"*50 + "\n\n")
+    # 可选：显示追踪以查看引擎的过程
+    trace_1.display_trace()
+```
+
+## 组装 Context 引擎
+
+当此目标传递给引擎时，规划器开始行动：
+
+- 1. 它推理认为，为了创建一个突出“危险性”的悬疑场景，首先需要一个风格指南。因此，它的第一个规划步骤是调用管理员来获取悬疑风格的蓝图。
+- 2. 接下来，它识别出事实部分“阿波罗11号登月”，并知道需要准确的细节。它的第二个步骤是调用研究人员来获取相关事实。
+- 3. 最后，在兼顾风格和内容的计划下，它创建了第三步：调用作家生成最终内容，将第 1 步的蓝图与第 2 步的事实相结合。
+
+靴子悬停在空中。我先看到了影子。在我落下之前，它先吻了表面。接着是接触。第一步。在月球上。世界与我同在，遥远又无处不在。宇服里的空气在低语。表面承住了重量。这一刻被拉得很长，像一个音符，没有破碎。
+
+在生产环境中，你可以决定只向管理员显示执行轨迹，或将输出保存到执行日志中。或者，你也可以决定在训练阶段让用户看到执行轨迹，以理解上下文引擎（Context Engine）。这可以在实施期间的研讨会上决定。
+
+随着这次成功执行，我们现在可以退一步，欣赏我们构建的内容。每一个架构组件都在协同工作，将抽象的意图转化为结构化、可追踪且有意义的输出。让我们回顾这一架构飞跃，以及使其在实践中运行如此优雅的设计原则。
+
+# 总结
+
+本章解决的核心挑战是预定义工作流的僵化。目标是创建一个高级控制器，通过对可用工具进行推理来动态执行复杂任务。这段旅程始于构建规划器（Planner），它作为战略核心，创建实现目标的逐步配方。然后我们构建了执行器（Executor），即执行计划的运营经理。最后，包含了一个追踪器（Tracer），以确保整个过程透明且可调试。
+
+引入的关键创新是规划阶段。在这里，规划器会咨询代理注册表（Agent Registry），该工具包描述了每个专家代理（管理员、研究员、作家）的能力。凭借这些知识，规划器使用外部 LLM 生成一个为用户特定高层目标量身定制的自定义、多步骤的 JSON 计划。这将“做什么”与“怎么做”分离开了。执行器遵循 JSON 计划，按正确的顺序调用专家代理。这一阶段实现了上下文链（Context Chaining），这在第一章中讨论过。这使得系统能够处理线性工作流无法处理的复杂依赖任务。
+
+本章以一个功能完备、能够独立思考的上下文引擎告终。通过动态生成自己的工作流，系统不再是简单的流水线，而是一个智能且模块化的工作坊。在下一章中，我们将通过集成生产级功能（如上下文管理、安全防护和错误处理），对该引擎进行加固，以用于实际应用。
+
+# 4 
+
+125
+
+## 问题
+
+- 1. 执行器是否创建了实现用户目标的战略性、逐步的计划？（是或否）
+- 2. 代理注册表的主要目的是为了记录每个操作以供调试吗？（是或否）
+- 3. 文本中描述的上下文链是指一个代理的输出成为下一个代理的输入的过程吗？（是或否）
+- 4. 专家代理（管理员/Librarian、研究员/Researcher 和作家/Writer）是否在架构图中用蓝色表示？（是或否）
+- 5. `resolve_dependencies()` 函数是否允许代理查询向量数据库？（是或否）
+- 6. 规划器是否使用代理注册表中的 `get_capabilities_description()` 方法来理解哪些工具可用？（是或否）
+- 7. `context_engine()` 函数是通往外部 LLM 的主要接口吗？（是或否）
+- 8. 作家（Writer）代理是否处理程序化 RAG 以获取风格蓝图？（是或否）
+- 9. 整个过程首尾是否由代表用户目标和最终输出的橙色组件界定？（是或否）
+- 10. 所有代理是否都使用模型上下文协议（MCP）进行通信？（是或否）
+
+## 参考文献
+
+- * Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. Chain-of-Thought Eliciting Reasoning in Large Language Models. arXiv preprint arXiv:2201.11903.
+- * Yao, S., Zhao, J., Yu, D., N, Ha., & Tsvetkov, Y. (2022). ReAct: Synergizing Reasoning and Acting in Language Models. arXiv preprint arXiv:2210.03629.
+- * Schick, T., Dwivedi-Yu, J., Dessi, R., Raileanu, R., Romeli, M., Zettlemoyer, L., Cancedada, N., & Scialom, T. (2023). Toolformer: Language Models Can Teach Themselves to Use Tools. arXiv preprint arXiv:2302.04761.
+
+# 续读
+
+- Wu, Q., Bansal, G., Zhang, J., Wu, Y., Zhang, S., Zhu, E., Li, B., Jiang, L., Zhang, J., & Wang, C. (2023). AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation. AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation. *arXiv preprint arXiv:2308.08155.*
+
+# 订阅免费电子书
+
+新框架、演进中的架构、研究发布、生产环境分析——AI_Distilled 将噪音过滤为为亲手操作 LLM 和生成 AI 系统的工程师和研究人员提供的每周简报。现在订阅即可获得免费电子书，以及有帮助的每周见解。

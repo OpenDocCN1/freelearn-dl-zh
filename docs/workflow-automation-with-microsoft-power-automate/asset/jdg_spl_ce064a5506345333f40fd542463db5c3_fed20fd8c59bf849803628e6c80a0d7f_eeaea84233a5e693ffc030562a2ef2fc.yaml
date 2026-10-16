@@ -1,0 +1,70 @@
+chapter_starts:
+- 'no': 5
+  confidence: 0.9
+  final_reason: 前言、序言、致谢、关于作者等正文之前的内容统一划分为一章，行5 ‘# 贡献者’ 为前置内容起始标题，单独成行且为前置区首个一级标题
+  accepted_evidence:
+  - 前置内容统一一章规则
+  - '行5 为 # 贡献者，单独成行'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 184
+  confidence: 1.0
+  final_reason: 行184为‘# 第一部分’，单独成行且后接‘## 基础’子节，符合部分-章节模式的最高层级划分规则，上下文行188为第一部分概述段落
+  accepted_evidence:
+  - '行184为 # 第一部分 单独成行'
+  - 后接概述段落
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 206
+  confidence: 1.0
+  final_reason: 行206为‘# 1 介绍 Microsoft Power Automate’，编号为全书最高层级大章，单独成行无句号，后接行208起为本章正文概述
+  accepted_evidence:
+  - 编号特征符合大章
+  - 单独成行且后接概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 508
+  confidence: 1.0
+  final_reason: 行508为‘# 2 开始使用 Power Automate’，编号连续且格式与第1章一致，后1~3行为本章引言概述，满足章节语义统领性
+  accepted_evidence:
+  - 编号连续
+  - 后接引言概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 904
+  confidence: 1.0
+  final_reason: 行904为‘# 3 处理电子邮件’，编号特征明显单独成行无标点，后接行906起为本章概述，上下文与前一章结束自然衔接
+  accepted_evidence:
+  - 编号特征
+  - 后接概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1277
+  confidence: 1.0
+  final_reason: 行1277为‘# 4 复制文件’，为全书最高层级大章标题，后行1279起为本章引言，与前章结尾总结段落分离
+  accepted_evidence:
+  - 大章标题格式
+  - 上下文分离
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1734
+  confidence: 0.95
+  final_reason: 行1734为‘# 6 生成推送通知’，编号虽跳过第5章但规则明确序号跳跃仍应划分新章，单独成行且后接概述段落，语义统领后续推送通知内容
+  accepted_evidence:
+  - 单独成行
+  - 后接概述
+  - 序号跳跃仍分章规则
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2548
+  confidence: 0.95
+  final_reason: 行2548为‘# 9 理解表达式和函数’，编号跳跃符合序号连贯性例外规则，标题单独成行且后接本章学习目标概述，具备章节统领性
+  accepted_evidence:
+  - 编号跳跃可分章
+  - 后接概述
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 1
+  reason: 行1为《# Microsoft Power Automate 工作流自动化》，为全书封面主标题，单独成行且为整书唯一书名，不具统领后续章节的章节语义，前置内容起始在行5
+  need_human_review: false

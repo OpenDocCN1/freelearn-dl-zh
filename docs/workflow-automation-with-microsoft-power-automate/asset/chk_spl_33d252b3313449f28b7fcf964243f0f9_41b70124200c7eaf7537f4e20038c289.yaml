@@ -1,0 +1,69 @@
+reviews:
+- 'no': 6223
+  overturn_probability: 0.08
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# 19 20 使用 RPA 自动化网页页面”，含章号20且后接章节概述，为一级标题
+  - 前文 6071 行 “# 19 ” 为前章结尾，此处语义上为新章起点
+  keep_split: true
+- 'no': 6576
+  overturn_probability: 0.82
+  alternative: 正文小标题/排版噪声
+  counter_evidence:
+  - 该行后 12 行内出现 “## 介绍 AI 模型和生成式 AI” 657...6588 为真实二级小标题，6576 为重复/误排版的标题噪声
+  - 前后文仍属第21章 “介绍 AI 模型和生成式 AI” 的前言与获取PDF章节，未出现章节切换的概述段落
+  keep_split: false
+- 'no': 6718
+  overturn_probability: 0.88
+  alternative: 正文小标题
+  counter_evidence:
+  - '标记为 ##，为二级标题而非一级章标题'
+  - 前后文为第22章“创建情感分析流”内部的二级节划分，直接后接第22章主体内容，无最高层级章号切换
+  keep_split: false
+- 'no': 6940
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# 23 使用 Copilot 创建和管理流”，一级标题含章号23，后接章节介绍与子节列表
+  keep_split: true
+- 'no': 7495
+  overturn_probability: 0.78
+  alternative: 正文小标题
+  counter_evidence:
+  - 该行位于第24章“创建执行摘要流程”内部，前面已出现 “# 24 ” 7520 行，后文为 “## 配置触发器”等子节
+  - 无章号且标题长度、语义为本章内的流程步骤小标题，非最高层级章节
+  keep_split: false
+- 'no': 7824
+  overturn_probability: 0.1
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# 第 4 部分”，书存在部分-章节模式，按规则部分应划分新章
+  - 后接 “# 管理” 与该部分章节列表，语义为部分起始
+  keep_split: true
+- 'no': 7836
+  overturn_probability: 0.12
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# 第 25 节”，在部分模式下为最高层级章节标题，后接 “## 流的导出、导入和分发”
+  - 上下文为新一章的开篇介绍
+  keep_split: true
+- 'no': 8089
+  overturn_probability: 0.15
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本含章号26及完整标题，后接章节概述与运行历史子节
+  - '虽使用 ## 标记，但语义上为第26章的真实章节起点'
+  keep_split: true
+- 'no': 8282
+  overturn_probability: 0.04
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# 27 Power Platform 中的治理”，一级标题含章号27，后接章节内容与子节
+  keep_split: true
+- 'no': 8557
+  overturn_probability: 0.18
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行文本为 “# B”，后接按字母排序的索引条目 “基础顺序审批流” 等，为文末索引章节
+  - 按规则文末索引应划分为一章
+  keep_split: true
