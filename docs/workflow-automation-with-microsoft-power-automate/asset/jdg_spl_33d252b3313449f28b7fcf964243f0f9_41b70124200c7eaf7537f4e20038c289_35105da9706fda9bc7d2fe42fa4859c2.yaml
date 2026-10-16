@@ -1,0 +1,85 @@
+chapter_starts:
+- 'no': 6223
+  confidence: 0.8
+  final_reason: 行内含第 20 章序号与标题，后接浏览器自动化章节概述及“## 导航网页”等子节；行首“19”应为上一章页眉残留，不影响分章。
+  accepted_evidence:
+  - 行文本“# 19 20 使用 RPA 自动化网页页面”可识别出第 20 章题名“使用 RPA 自动化网页页面”
+  - 后接“Power Automate 的浏览器自动化功能将机器人流程自动化（RPA）直接带入现代工作区”等章首概述及多个二级子节
+  rejected_evidence:
+  - 行首“19”疑为页眉/页码残留，但与第 20 章起始位置重合，不足以否决分章
+  need_human_review: false
+- 'no': 6576
+  confidence: 0.75
+  final_reason: 虽无显式章号，但语义与上下文指向第 21 章起始；该行位于“获取本书 PDF 版本”插页之后，后接章首概述及“### 学习 AI 模型”等子节。后续同名二级标题属于章内重复，不构成否决。
+  accepted_evidence:
+  - 后接“在本书的示例中，你已经使用条件来确定执行流的哪个分支……这就是 AI 模型变得有用的地方”章首引言
+  - 后接“### 学习 AI 模型”“### 学习生成式 AI 模型”等第 21 章子节
+  rejected_evidence:
+  - 复核方指出 6588 行存在“## 介绍 AI 模型和生成式 AI”同名标题，但该重复发生在章首引言之后，不能推翻首现的 H1 章标题
+  need_human_review: false
+- 'no': 6718
+  confidence: 0.85
+  final_reason: 前文为第 21 章“### 总结”，后接新章引言及“图 22.3”等第 22 章编号内容；虽标记为“##”，但语义、上下文和后续子节均证明这是第
+    22 章起始。
+  accepted_evidence:
+  - 前接第 21 章“### 总结”，后接“创建情感分析流”的章首正文及图像编号“图 22.3”
+  - 后接“### 创建 Microsoft Teams 团队”“### 配置情感分析流”等章内子节
+  rejected_evidence:
+  - 复核方仅依据“##”层级和缺少显式章号提出反驳，未考虑本书多个最高层级章标题也使用“##”的情况
+  need_human_review: false
+- 'no': 6940
+  confidence: 0.95
+  final_reason: 双方一致：一级标题含章号 23 与完整章名，后接章节引言、能力列表和“### Copilot 拥有哪些能力？”等子节，符合最高层级章标题。
+  accepted_evidence:
+  - 行文本“# 23 使用 Copilot 创建和管理流”包含章号 23
+  - 后接“在第 21 章……我们开始探索如何将 Microsoft Copilot……”章首引言及子节列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 7824
+  confidence: 0.9
+  final_reason: 双方一致：该行“# 第 4 部分”说明本书为部分-章节模式，按规则“第 X 部分”也应切为新章；后接部分名称“管理”及第 25/26/27
+    节列表。
+  accepted_evidence:
+  - 行文本“# 第 4 部分”是明确的部分层级标题
+  - 后接“# 管理”及“第 25 节：流的导出、导入和分发”等章节列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 7836
+  confidence: 0.85
+  final_reason: 双方一致：部分-章节模式下，“# 第 25 节”实际对应该部分最高层级章标题，后接“## 流的导出、导入和分发”及开篇概述，应分章。
+  accepted_evidence:
+  - 行文本“# 第 25 节”位于第 4 部分章节列表之后，对应下一章起点
+  - 后接“## 流的导出、导入和分发”及“在某些时刻，可能有……”章节概述
+  rejected_evidence:
+  - 虽用“节”字，但此处并非“X.Y”子层级，而是章节序号误标，不影响分章
+  need_human_review: false
+- 'no': 8089
+  confidence: 0.9
+  final_reason: 双方一致：行含章号 26 与章名“监控和排除流的故障”，后接章节概述及“### 监控流”等子节；虽为“##”，语义与上下文均指向第
+    26 章起始。
+  accepted_evidence:
+  - 行文本“## 26 监控和排除流的故障”包含章号 26
+  - 前文为第 25 章“### 总结”，后接“尽管付出了巨大努力，有时流仍然失败……”章首概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 8282
+  confidence: 0.95
+  final_reason: 双方一致：一级标题含章号 27 与完整章名，后接章节引言和“## 理解治理概念”等子节，符合章标题特征。
+  accepted_evidence:
+  - 行文本“# 27 Power Platform 中的治理”包含章号 27
+  - 后接“在当今的现代工作场所中……”概述及“## 与 Power Platform 卓越中心协作”等子节
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 8557
+  confidence: 0.9
+  final_reason: 双方一致：行“# B”开始的是文末按字母排序的索引内容，后续出现“# C”“# D”等字母索引；按规则文末索引统一划分为一章。
+  accepted_evidence:
+  - 行文本“# B”后接“基础顺序审批流”等索引条目
+  - 后续“# C”“# D”“# E”等结构证明这是文末索引
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 7495
+  reason: 复核方反证成立：在该行之前已出现“图 24.1 – OpenAI 平台概览页”以及“### 开始 Encodian 试用”“### 创建流程”“###
+    配置触发器”等第 24 章内容，说明第 24 章在此之前已经开始；7495 行“# 创建执行摘要流程”是章内页面标题/页眉，其后还重复了“## 配置触发器”，并非新的最高层级章起始。
+  need_human_review: false
