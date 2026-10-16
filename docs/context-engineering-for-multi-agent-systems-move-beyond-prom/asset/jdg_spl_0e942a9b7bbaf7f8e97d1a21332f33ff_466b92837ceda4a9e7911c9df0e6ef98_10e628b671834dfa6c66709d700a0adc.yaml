@@ -1,0 +1,62 @@
+chapter_starts:
+- 'no': 6704
+  confidence: 0.95
+  final_reason: 双方一致认定行6704为章标题：“# 10 生产就绪 AI 的蓝图”带顶级章序号且语义统领，虽存在页眉噪声但不足以推翻。
+  accepted_evidence:
+  - 判断方：带序号10且语义统领，符合章标题特征
+  - 复核方：overturn_probability=0.15，keep_split=true
+  rejected_evidence:
+  - 复核方提出多处孤立'# 9'/'# 10'页眉残留，但本行含完整标题而非孤立数字
+  need_human_review: false
+- 'no': 7067
+  confidence: 0.9
+  final_reason: 双方一致认定附录A起始；后续行7089的'# 附录 A'系页眉残留，不影响本行作为章起始。
+  accepted_evidence:
+  - 判断方：独立附录起始，应划分为新章
+  - 复核方：keep_split=true
+  rejected_evidence:
+  - 复核方指出7089重复出现'# 附录 A'，可能为页眉，但不足以推翻
+  need_human_review: false
+- 'no': 7560
+  confidence: 0.95
+  final_reason: 双方一致认定附录B起始，行7814的'# 附录 B'为页眉残留。
+  accepted_evidence:
+  - 判断方：独立附录起始，应划分为新章
+  - 复核方：overturn_probability=0.1，keep_split=true
+  rejected_evidence:
+  - 复核方指出7814重复出现'# 附录 B'，但本行带“：答案”且后接概述，标题特征更强
+  need_human_review: false
+- 'no': 7942
+  confidence: 0.95
+  final_reason: 文末索引按规则划分为一章，双方均保留分章。
+  accepted_evidence:
+  - 判断方：文末索引按规定划分为一章
+  - 复核方：overturn_probability=0.1，keep_split=true
+  rejected_evidence:
+  - 复核方认为索引是附属内容，但规则明确文末索引划分为一章
+  need_human_review: false
+rejected_lines:
+- 'no': 6359
+  reason: 孤立的“# 9”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 6488
+  reason: 孤立的“# 9”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 6536
+  reason: 孤立的“# 9”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 6564
+  reason: 孤立的“# 9”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 6730
+  reason: 孤立的“# 10”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 6991
+  reason: 孤立的“# 10”页眉/页码残留，无标题语义，不应分章
+  need_human_review: false
+- 'no': 7089
+  reason: “# 附录 A”在正文中重复出现，属于页眉残留，不是新章起始
+  need_human_review: false
+- 'no': 7814
+  reason: “# 附录 B”在答案列表中重复出现，属于页眉残留，不是新章起始
+  need_human_review: false

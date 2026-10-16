@@ -1,0 +1,55 @@
+reviews:
+- 'no': 3072
+  overturn_probability: 0.92
+  alternative: 页码/排版断行
+  counter_evidence:
+  - 标题仅为 '# 4 '，为孤立数字标记，无统领性语义；后接空行后直接是代码说明'处理LLM可能将列表封装在字典中...'，无概述段落
+  - 前后文为代码块连续讲解，3071 为代码注释，3074 直接进入技术描述，不构成章节转折
+  keep_split: false
+- 'no': 3305
+  overturn_probability: 0.95
+  alternative: 页码/排版噪声
+  counter_evidence:
+  - 标题为 '# 4 '，后一行即页码'125'，典型页眉页脚排版残留
+  - 上下文为'本章以一个功能完备...告终'总结后直接插入页码标记，随后即'## 问题'，不符合章节标题后1~3行概述段落特征
+  keep_split: false
+- 'no': 3336
+  overturn_probability: 0.15
+  alternative: 正文小标题
+  counter_evidence:
+  - 标题格式为 '# 5 加固上下文引擎'，为完整章节命名且语义统领后续加固内容；前后为第4章总结与第5章引言的转折
+  keep_split: true
+- 'no': 3952
+  overturn_probability: 0.25
+  alternative: 正文小标题
+  counter_evidence:
+  - 标题为 '# 第5章'，明确的第X章命名，后续进入'受信任...'新章节介绍，符合最高层级章节特征
+  keep_split: true
+- 'no': 3841
+  overturn_probability: 0.88
+  alternative: 页码/排版断行
+  counter_evidence:
+  - 标题仅为 '# 5 '，为空白页码标记，后接'`engine.py`文件现在导入了助手函数...'，为正文延续
+  - 附近已存在'# 5 加固上下文引擎'真实章节标题，此处重复编号明显为排版噪声
+  keep_split: false
+- 'no': 4275
+  overturn_probability: 0.9
+  alternative: 页码/排版噪声
+  counter_evidence:
+  - 标题仅为 '# 6 '，孤立数字标记；后文直接为'图 6.2 的图例包含了上下文引擎的颜色编码'，为正文段落延续
+  - 上下文前后均为第6章架构漫览内容，并非新章起始，无概述段落
+  keep_split: false
+- 'no': 5260
+  overturn_probability: 0.9
+  alternative: 页码/排版断行
+  counter_evidence:
+  - 标题仅为 '# 7 '，孤立数字；后一行为空，随后为'受信任的。然后，我们将构建思维图...'，为正文段落
+  - 前文已在'# 高保真 RAG 与防御...'章节内，数字标记符合页码排版特征
+  keep_split: false
+- 'no': 5625
+  overturn_probability: 0.85
+  alternative: 页码/排版断行
+  counter_evidence:
+  - 标题仅为 '# 8 '，孤立数字标记；后接'我们正在构建一个通用的多领域上下文引擎...'，为'分步架构演练'小节内容
+  - 前后文连续阐述架构演练，无章节转折的总结/预告结构
+  keep_split: false

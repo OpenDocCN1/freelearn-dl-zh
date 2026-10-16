@@ -868,3 +868,4 @@ workflow.add_conditional_edges(
 - Al-Qawasmeh, O., Al-Smadi, M., and Friahat, N. (2016). Arabic entity disambiguation using linked open data. In 2016 7th International Conference on Information and Communication Systems (ICICS), pages 333–338: https://ieexplore.ieee.org/document/74670
 
 - LangChain & LangGraph (2025). LangChain & LangGraph 1.0 alpha releases: https://blog.langchain.com/langchain-langchain-1-0-alpha-releases
+

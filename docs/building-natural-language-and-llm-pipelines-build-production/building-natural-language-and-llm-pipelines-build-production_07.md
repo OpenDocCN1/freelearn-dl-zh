@@ -340,3 +340,4 @@ pipe.add_component("weave", connector)
 新框架、演进中的架构、研究发布、生产分析——AI_Distilled 为实际操作 LLM 和 GenAI 系统的工程师和研究人员过滤噪音并提供每周简报。现在即可获取免费电子书，以及帮助你保持敏锐的每周见解。
 
 访问 `https://packt.link/80z6Y` 订阅或扫描下方二维码。
+

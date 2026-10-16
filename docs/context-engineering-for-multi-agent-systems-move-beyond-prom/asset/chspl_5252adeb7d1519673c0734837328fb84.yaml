@@ -1,0 +1,34 @@
+chapter_starts:
+- 'no': 38
+  confidence: 0.95
+  reason: 顶层一级标题，匹配“第 X 章”编号特征，单独成行，语义为大章起始
+- 'no': 40
+  confidence: 0.95
+  reason: 顶层一级标题，第 6 章，编号连贯，标题长度符合且单独成行
+- 'no': 42
+  confidence: 0.95
+  reason: 顶层一级标题，第 7 章，符合章标题格式特征
+- 'no': 63
+  confidence: 0.95
+  reason: 顶层一级标题，第 8 章，单独成行且语义统领
+- 'no': 65
+  confidence: 0.95
+  reason: 顶层一级标题，第 9 章，符合编号与格式规则
+- 'no': 67
+  confidence: 0.95
+  reason: 顶层一级标题，第 10 章，单独成行标题
+- 'no': 92
+  confidence: 0.9
+  reason: 顶层一级标题，附录 A，按规则附录应作为新章划分
+- 'no': 125
+  confidence: 0.9
+  reason: 顶层一级标题，附录 B，符合附录分章规则
+- 'no': 145
+  confidence: 0.85
+  reason: 前言类正文前内容，按规则统一划分为一章，顶层一级标题
+- 'no': 303
+  confidence: 0.95
+  reason: 顶层一级标题，第 1 章，编号特征明确且为正文大章起始
+- 'no': 1301
+  confidence: 0.9
+  reason: 顶层一级标题，标题为“使用 MCP 构建多智能体系统”，对应第 2 章内容，单独成行

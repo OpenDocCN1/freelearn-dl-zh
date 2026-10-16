@@ -1,0 +1,63 @@
+chapter_starts:
+- 'no': 3015
+  confidence: 0.98
+  final_reason: 双方一致：部分标题，后接部分引言和章节列表，符合部分-章节模式下的分章规则
+  accepted_evidence:
+  - 行内容为“## 第 3 部分”
+  - 后续行为“## 部署与代理编排”，并给出学习目标及章节列表（第 7、8 章）
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3033
+  confidence: 0.99
+  final_reason: 双方一致：编号+标题明确，单独成行，后接典型章首引言段落
+  accepted_evidence:
+  - 行内容为“# 7 部署基于 Haystack 的应用程序”
+  - 后续行为“在上一章中，我们专注于构建和测试流水线。在本章中，我们将专注于将该流水线引入生产环境……”
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3580
+  confidence: 0.9
+  final_reason: 判断方主张为第8章起始；复核方虽指出标题层级（##）与相邻章不一致，但结合上下文本章概述和技术要求结构，维持分章
+  accepted_evidence:
+  - 后续连续三个“在本章中……”概述段落及主题列表
+  - 随后出现每章均有的“## 技术要求”小节，符合章首结构
+  rejected_evidence:
+  - 标题为“##”而非“#”，层级与前后章不一致
+  need_human_review: false
+- 'no': 4452
+  confidence: 0.98
+  final_reason: 双方一致：部分标题，后接部分主题描述和章节列表，符合部分-章节模式分章规则
+  accepted_evidence:
+  - 行内容为“# 第 4 部分”
+  - 后续行为“## 代理体 AI 的未来”，并给出第 9、10 章列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4465
+  confidence: 0.99
+  final_reason: 双方一致：编号+标题明确，后接章首概述与主题列表
+  accepted_evidence:
+  - 行内容为“# 9 未来趋势及展望”
+  - 后续为“在前面的章节中……本章将……”的章首引言
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4803
+  confidence: 0.92
+  final_reason: 双方一致维持分章：结语具有独立章节结构（主题列表、技术要求），且与前后章节分界明显
+  accepted_evidence:
+  - 后接“在本章中……”“完成本结语后……”等章首概述及主题列表
+  - 存在“### 可选技术要求”等章节结构
+  rejected_evidence:
+  - 使用“##”二级标题，复核方提出可能为正文小标题，但最终维持分章
+  need_human_review: false
+- 'no': 5345
+  confidence: 0.97
+  final_reason: 双方一致：文末索引应划分为一章
+  accepted_evidence:
+  - 行内容为“# 索引”
+  - 后续为按字母排序的索引条目
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 2957
+  reason: 复核方反方证据成立：行后紧跟页码172和表格，前后为连续正文讨论，无章首概述；“# 6”符合页眉/页码残留特征，判断方无有力反驳
+  need_human_review: false
