@@ -1,0 +1,16 @@
+chapter_starts:
+- 'no': 2
+  confidence: 0.85
+  reason: 书籍标题页，整本书前置信息统一划分为首章
+- 'no': 234
+  confidence: 0.9
+  reason: '# 第一部分 为部分-章节模式下的部分标题，应划分新章'
+- 'no': 860
+  confidence: 0.9
+  reason: '# 3 环境设置与开发你的第一个智能体 为最高层级章节标题，单独成行且语义统领'
+- 'no': 1381
+  confidence: 0.9
+  reason: '# 第二部分：OpenAI Agents SDK 为部分标题，书为部分-章节模式需划分新章'
+- 'no': 1400
+  confidence: 0.85
+  reason: '# 4：智能体工具与 MCP 为章节级标题，单独成行且后续内容为章节正文'

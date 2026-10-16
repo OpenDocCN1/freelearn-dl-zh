@@ -1,0 +1,33 @@
+reviews:
+- 'no': 5945
+  overturn_probability: 0.92
+  alternative: 索引条目分组标题/排版噪声
+  counter_evidence:
+  - 上下文为书后索引，行前后均为“词条 + 页码”格式，如 5901 余弦相似度 124，5903 CoT 17
+  - 标题后1~3行均为带页码的列表项 - 代理和工具行为 65-68，- 链式工具调用 78-80，而非概述段落
+  - '行长度短且以 # 开头，符合索引字母分组的排版噪声，非全书最高层级大章'
+  keep_split: false
+- 'no': 5954
+  overturn_probability: 0.95
+  alternative: 索引字母分组标题
+  counter_evidence:
+  - 前后内容为索引条目 - 数据库, - 数据库查询工具 76-78 等，均为词条+页码
+  - '标题为 # D、# E、# F 等单字母分组，是索引的字母分页标记，不是章节标题'
+  - 标题后直接跟子列表，无统领性概述段落，符合排版断行特征
+  keep_split: false
+- 'no': 5968
+  overturn_probability: 0.9
+  alternative: 索引条目分组标题
+  counter_evidence:
+  - '所在段落为索引部分，与 # D、# E 连续出现，均为字母分组'
+  - 后续行均为 - Python 异步编程 46, 47 等索引条目，不具备章节的语义统领性
+  - '标题末尾无句号但出现多次重复的 # Python，在 6104 处亦出现，明显是索引重复词条而非章标题'
+  keep_split: false
+- 'no': 5974
+  overturn_probability: 0.95
+  alternative: 索引字母分组标题
+  counter_evidence:
+  - '标题 # E 后紧跟 - 动态编排 136-139 等词条+页码列表'
+  - '上下文与 # D 段完全一致，属于索引字母分组'
+  - 无章节编号特征，也无覆盖后续内容的概述段落
+  keep_split: false
