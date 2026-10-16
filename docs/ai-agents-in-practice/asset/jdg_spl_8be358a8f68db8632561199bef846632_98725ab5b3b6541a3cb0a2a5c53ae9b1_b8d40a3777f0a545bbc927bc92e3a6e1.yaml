@@ -1,0 +1,85 @@
+chapter_starts:
+- 'no': 84
+  confidence: 0.9
+  final_reason: '## 前言 为正文前言的统领标题，符合前言、序言等正文之前内容统一划分为一章的规则；标题单独成行且语义概括后续引言内容，与前置署名信息区分。'
+  accepted_evidence:
+  - '标题为 ## 前言，位于献词、贡献者等前置信息之后，紧接引言概述段落'
+  - 前后上下文为前言性说明，非目录或广告信息
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 274
+  confidence: 0.95
+  final_reason: ' # 第 1 部分 为全书最高层级部分标题，书为部分-章节模式，部分标题应划分新章；标题单独成行，语义统领后续第1部分内容。'
+  accepted_evidence:
+  - '标题格式为 # 第 1 部分，单独成行'
+  - '后接 ## AI 工作流的基础与 AI 智能体的崛起 等子节，符合部分层级特征'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 294
+  confidence: 0.95
+  final_reason: '# 1 生成式 AI 工作流的演变 为最高层级大章标题，编号特征明确，单独成行，语义统领整章内容，后接技术要求与本章概述。'
+  accepted_evidence:
+  - '标题格式 # 1 ...，长度<30字，无句号'
+  - '后1~3行为本章概述，后续为节标题 ## 技术要求'
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 744
+  confidence: 0.85
+  final_reason: '# 2 为章节编号标题，对应第2章 AI 代理的崛起；在当前文本片段中为该章的起点标记，后接 ## AI 代理的崛起 章节概述。'
+  accepted_evidence:
+  - 标题单独成行，编号特征符合最高层级大章
+  - '后接 ## AI 代理的崛起 及本章主题概述'
+  rejected_evidence:
+  - 标题仅为编号缺少完整标题
+  need_human_review: false
+- 'no': 974
+  confidence: 0.95
+  final_reason: '# 3 AI 编排器的必要性 为最高层级大章标题，编号+标题，单独成行，语义统领后续内容。'
+  accepted_evidence:
+  - '标题格式 # 3 ...，符合章标题特征'
+  - 后接本章涵盖主题概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1283
+  confidence: 0.95
+  final_reason: '# 4 内存和上下文管理的必要 为最高层级大章标题，编号特征明确，单独成行，统领后续内存相关内容。'
+  accepted_evidence:
+  - '标题格式 # 4 ...'
+  - 后接本章涵盖主题列表
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1743
+  confidence: 0.95
+  final_reason: '# 5 工具与外部集成的需求 为最高层级大章标题，编号特征明确，语义概括整章。'
+  accepted_evidence:
+  - '标题格式 # 5 ...'
+  - 后接本章主题概述
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 2204
+  confidence: 0.95
+  final_reason: '# 6 使用 LangChain 构建你的第一个 AI 代理 为最高层级大章标题，编号明确，单独成行，统领后续实践内容。'
+  accepted_evidence:
+  - '标题格式 # 6 ...'
+  - 后接本章目标概述及技术要求
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 2
+  reason: '复核方指出 # AI Agents 实战 为书名封面标题，属于封面/版权页范畴；规则要求前言前内容统一处理，不应单独将书名作为章节起点，误分风险高。'
+  need_human_review: false
+- 'no': 8
+  reason: '复核方反方证据成立：# 贡献者 属于前置署名信息，与 # 关于作者 # 关于审稿人 构成同一前置区块，规则要求前言、致谢、关于作者等正文之前内容统一划分为一章，不应每节单独分章。'
+  need_human_review: false
+- 'no': 10
+  reason: 复核方反方证据成立：# 关于作者 为前置作者简介信息，与贡献者、审稿人同属前置区块，应合并至统一前言章；前后为作者简介正文，缺乏章节统领性。
+  need_human_review: false
+- 'no': 20
+  reason: 复核方反方证据成立：# 关于审稿人 为前置致谢类信息，应与贡献者、关于作者合并为同一前置章；后接审稿人简介段落，非章节概述。
+  need_human_review: false
+- 'no': 28
+  reason: 复核方反方证据成立：# 订阅获取免费电子书 为出版方推广/订阅信息，属于前言附属广告内容，非统领技术内容的章节标题。
+  need_human_review: false
+- 'no': 41
+  reason: '## 第 9 章：应对现实 AI 中的伦理挑战 出现在目录/片段中，格式为 ## 子层级且后接页码，语义上为目录条目而非正文章节起始；上下文优先原则下不分章。'
+  need_human_review: false
