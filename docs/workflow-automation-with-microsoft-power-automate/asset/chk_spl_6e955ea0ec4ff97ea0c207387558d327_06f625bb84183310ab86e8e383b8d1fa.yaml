@@ -1,0 +1,49 @@
+reviews:
+- 'no': 3017
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 10 开始使用审批'，单独成行，编号为最高层级章节，符合格式与语义特征；后续内容为全新章节绪论
+  keep_split: true
+- 'no': 3369
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 11 使用审批'，单独成行，编号连贯且统领后续章节内容
+  keep_split: true
+- 'no': 3809
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 12 向 Teams 发送审批'，单独成行，最高层级编号，语义独立
+  keep_split: true
+- 'no': 4144
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 13 使用数据库'，单独成行，符合最高层级章节特征
+  keep_split: true
+- 'no': 4673
+  overturn_probability: 0.78
+  alternative: 排版噪声/页眉页脚残留
+  counter_evidence:
+  - 标题内容仅为 '# 15 '，无实质章节名称，仅数字加空格，长度异常且无统领性语义；前后上下文为图示说明和准备工作设置，未出现章节绪论段落；更像是排版断行或目录页码残留，被误判为章节标题
+  keep_split: false
+- 'no': 4879
+  overturn_probability: 0.25
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题 '# 接受用户输入' 单独成行，虽缺少数字编号但语义可统领后续内容，且后接技术要求与章节结构；置信度可接受，维持分章更合理
+  keep_split: true
+- 'no': 5581
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 18 介绍机器人流程自动化'，单独成行，最高层级编号，语义独立
+  keep_split: true
+- 'no': 5747
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 标题为 '# 19 使用 RPA 向 Access 数据库写入数据'，单独成行，编号连贯且统领后续内容
+  keep_split: true

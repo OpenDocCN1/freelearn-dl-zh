@@ -1,0 +1,69 @@
+chapter_starts:
+- 'no': 3017
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 10 开始使用审批'，单独成行，编号与语义均符合；后接章节绪论及主题列表，前接第9章总结，上下文吻合。
+  accepted_evidence:
+  - 行内容为 '# 10 开始使用审批'，格式为 '# 数字 标题'，属于全书最高层级章节
+  - 单独成行，无句号，长度小于30字
+  - 后文3019-3023为章节绪论与本章主题列表，语义统领后续内容
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3369
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 11 使用审批'，编号连贯、独立成行，且后接章节绪论与前文总结，均为典型章起始。
+  accepted_evidence:
+  - 行内容为 '# 11 使用审批'，编号衔接第10章，符合最高层级章节
+  - 后接3371-3378为章节绪论和主题列表
+  - 前有第10章总结（3362-3364）
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3809
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 12 向 Teams 发送审批'，单独成行、语义明确，与前后章节衔接自然。
+  accepted_evidence:
+  - 行内容为 '# 12 向 Teams 发送审批'，格式与编号符合最高层级章节
+  - 后接3811-3820为章节绪论与主题列表
+  - 前文3804预告下一章内容，上下文吻合
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4144
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 13 使用数据库'，独立成行、编号连续，后接章节绪论，符合分章条件。
+  accepted_evidence:
+  - 行内容为 '# 13 使用数据库'，编号与格式符合最高层级章节
+  - 后接4146-4157为章节绪论和主题列表
+  - 前文4139预告下一章数据库，上下文匹配
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4879
+  confidence: 0.85
+  final_reason: 无编号标题，但 '# 接受用户输入' 单独成行、语义统领后续章节内容，且后接章节绪论与前文预告，双方一致认为应分章。
+  accepted_evidence:
+  - 行内容为 '# 接受用户输入'，虽然无编号，但语义明确可概括后续内容
+  - 后接4880-4892为章节绪论和主题列表
+  - 前文4868明确预告下一章为接受用户输入，上下文衔接
+  rejected_evidence:
+  - 标题缺少章序号，但复核方经评估认为语义证据强于编号缺失，维持分章
+  need_human_review: false
+- 'no': 5581
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 18 介绍机器人流程自动化'，编号连续、独立成行，后接章节绪论，符合章节划分。
+  accepted_evidence:
+  - 行内容为 '# 18 介绍机器人流程自动化'，格式和编号符合最高层级章节
+  - 后接5583-5594为章节绪论与主题列表
+  - 前文5565为'# 第 3 部分'，本书为部分-章节模式，该行是后续章节标题
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5747
+  confidence: 0.95
+  final_reason: 最高层级章节标题 '# 19 使用 RPA 向 Access 数据库写入数据'，独立成行、编号连续，后接章节绪论，符合分章条件。
+  accepted_evidence:
+  - 行内容为 '# 19 使用 RPA 向 Access 数据库写入数据'，格式和编号符合最高层级章节
+  - 后接5749-5762为章节绪论和主题列表
+  - 前文5744为分隔线，上下文自然切换至新章
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 4673
+  reason: 行内容仅为 '# 15 '，缺乏实际标题文字，无统领性语义；上下文为图示说明和准备工作设置，未出现章节绪论，更像是排版残留（如页码或目录碎片），不符合章标题定义。复核方反证成立，故拒绝分章。
+  need_human_review: false

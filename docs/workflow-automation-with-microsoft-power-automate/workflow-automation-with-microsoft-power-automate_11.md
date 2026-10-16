@@ -1,236 +1,334 @@
+# 12 向 Teams 发送审批
 
+Microsoft 已将 Teams 定位于“协作枢纽”（`https://learn.microsoft.com/en-us/microsoftteams/teams-overview`；参见 [协作](https://Teamwork)）。考虑到此，我们将应用在第 10 节“开始使用审批”中获得的审批流技能，并用这些技能来为 Microsoft Teams 构建一个审批体验。你将能够使用这些技能，帮助为使用 Teams 作为平台的组织成员简化审批流程。
 
-传统的看板通过与工作阶段对齐的列来组织任务。任务卡从左到右跨列移动，代表了整个工作过程的进度。在 Microsoft Planner 中，任务被放置在称为“桶”（`buckets`）的组中，并可以在桶内进行排序或分类。
+在本章中，我们将涵盖以下主题：
 
-Microsoft Planner 有三个触发条件：当任务创建时、当任务分配给我时，以及当任务完成时。这些条件都非常通俗易懂。在本章中，我们将重点关注“当任务分配给我时”。输出是一个任务对象，具有多个参数，如计划 ID（指向任务所属计划的对象 ID）、任务标题（`Title`）、桶 ID（任务所属的桶）、分配人员（`assignments`，谁负责处理该任务）、优先级、完成百分比状态，以及创建、开始和完成的各种日期。
+- 理解工作流
+- 配置先决条件
+- 配置一个使用 Teams 的审批流
+- 测试工作流
 
-你可以在此处找到 Planner 连接器功能的完整列表：`https://learn.microsoft.com/en-us/connectors/planner`。
+在本章结束时，你将能够将 Power Automate 审批流与 Microsoft Teams 集成。
 
-# Slack
+让我们开始吧！
 
-在 Microsoft Teams 出现之前，有了 Slack。Slack 和 Teams 一样都是基于云的协作和消息平台，旨在帮助团队实时通信和工作。它将对话组织到频道（`channels`）中——即项目、主题或团队的专用空间。像 Teams 一样，它还支持一对一或小群聊的直接消息。用户可以共享文件、搜索过去的讨论，并与广泛的应用程序和服务集成，使其更新、警报和工作流的核心枢纽。
+### 理解工作流
 
-Slack 有自己的一套触发器，在本章中，我们将重点关注操作（`actions`）。Slack 可用的操作包括创建和加入频道，以及发布消息。
+在配置审批流程之前，你需要确保支持该流程的所有组件都已存在。在示例工作流中，我们将配置一个采购订单审批，该审批将在文档发布到 SharePoint 站点时开始。如果采购申请获得批准，该文档将移动到“已批准（Approved）”文件夹。如果被拒绝，它将移动到“已拒绝（Rejected）”文件夹。请求者将在结束时收到一封邮件告知其状态。
 
-你可以在此处找到 Slack 连接器功能的完整列表：`https://learn.microsoft.com/en-us/connectors/slack`。
+这个复杂的工作流将使用几个熟悉的组件，包括：
 
-# 准备工作设置
+- SharePoint **当文件夹中创建文件时 触发器**
+- Office 365 Users **获取用户配置文件 (V2)** 动作
+- Office 365 Users **获取经理 (V2)** 动作
+- 审批（Approvals） **创建审批 (V2)** 动作
+- 条件
 
-在本节中，我们将关注环境和组件的设置。
+在本章中，我们还引入了 **Microsoft Teams 连接器**。通过 Microsoft Teams 连接器，你将能够执行此类操作：
 
-为了运行此内容，你需要在 `https://slack.com/intl1/en-in` 注册一个免费的 Slack 账户。
+- **作为 Flow 机器人向用户发送你自己的自适应卡片**：自适应卡片是直接在 Microsoft Teams 会话或体验中展示内容的新方法。自适应卡片可以包含图表、图像和格式化文本等组件。
+- **作为 Flow 机器人向用户发送消息**：这将允许 Power Automate 和 Flow 机器人与审批请求者进行通信。
 
-一旦激活了账户，请登录。你将看到一个与图 15.1 截图类似的桌面：
+这些新操作将允许 Power Automate 与 Microsoft Teams 平台交互。为了提高业务生产力，审批人员应该能够在 Microsoft Teams 应用程序内部响应审批。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_294_0.png)
+现在你已经熟悉了我们将要使用的组件，让我们继续配置先决条件。
 
-图 15.1 – Slack 界面
+### 配置先决条件
 
-默认情况下，你应该有一个名为 `#all-<organization>` 的频道。我们将使用该频道发布通知，但你也可以使用任何需要的频道。
+此审批流将需要一些组件和先决条件。你已经熟悉其中许多项，但我们将回顾此工作流的准确要求。接下来的两个部分将描述这些要求。
 
-你还需要一个 Planner 计划。你可以作为团队的一部分进行设置，也可以直接使用独立计划。要设置独立计划，导航到 `https://planner.cloud.microsoft` 并点击“新建计划”（`New plan`）。选择空白计划或从模板中选择一个。
+### SharePoint 站点
 
-# 15 
+此审批流的一个输出是根据是否获得批准或拒绝，在 SharePoint 站点上移动文档。这需要一个包含“已提交（Submitted）”、“已批准（Approved）”和“已拒绝（Rejected）”文件夹的 SharePoint 站点，如下所示：
 
-![](img/bfc58bb450784476738fab1c5bfe829d_295_0.png)
+![](img/bfc58bb45078446738fab1c5bfe29d_243.png)
 
-图 15.2 – 创建新计划
+图 12.1 – 创建文件夹
 
-现在，是时候开始构建流了！
+在示例中，我们将使用名为“采购订单”的 SharePoint 站点（参见第 10 节“开始使用审批”），但你可以使用任何站点。
 
-# 使用 Planner 触发流
+### 用于 Teams 的 Power Automate 应用
 
-设置好你的 Slack 工作空间和 Planner 后，让我们开始创建一个工作流吧。
+Power Automate（原名为 Flow）允许 Teams 与 Power Automate 之间进行双向交互。要安装该应用，请按照以下步骤操作：
 
-和我们在书中目前为止处理过的许多流一样，我们将从一个自动化触发器开始。按照以下步骤启动它。
+1. 启动 Microsoft Teams（桌面版或网页版 `https://teams.microsoft.com`）。
+2. 在左侧栏中点击三个点（...），搜索 **Power Automate**：
 
-1. 导航到 Power Automate 制作网页门户（`https://make.powerautomate.com`）并登录。
-2. 点击“创建”（`Create`）并选择“自动化的流”（`Automated flow`）。
-3. 为你的流输入名称，然后选择“当任务分配给我时”（`When a task is assigned to me`）Planner 触发器操作。
+![](img/bfc58bb45078446738fab1c5bfe29d_243.png)
 
-就这些。此触发器没有主要的参数，因为它是在检测 Microsoft 365 生态系统中的 Planner 分配。见图 15.3。
+图 12.2 – 添加 Power Automate
 
-![](img/bfc58bb450784476738fab1c5bfe829d_295_1.png)
+3. 在应用页面上，点击添加，并同意 Workflows 的隐私条款。
 
-图 15.3 – 查看 Planner 参数
+![](img/bfc58bb45078446738fab1c5bfe29d_244.png)
 
-接下来，我们将添加与 Slack 的连接。
+图 12.3 – 使用 Power Automate 应用
 
-# 向 Slack 频道发布更新
+一旦安装了该应用，你就可以开始配置了。
 
-在不同平台之间保持同步非常重要，这就是为什么我们要将这些任务分配发送到 Slack。
+### 使用 Teams 配置审批流
 
-1. 在你的流处于打开状态下，点击“添加操作”（`Add an action`）。
-2. 选择“发布消息 (V2)”（`Post message (V2)`）Slack 操作。
+正如“理解工作流”部分所述，此流将由文件放入 SharePoint 站点触发，并向审批者和请求者发送审批通知。由于这是一个较长的流程，我们将分阶段完成：
 
-![](img/bfc58bb450784476738fab1c5bfe829d_296_0.png)
+- 获取请求者信息
+- 创建审批
+- 返回响应
 
-图 15.4 - 添加发布消息 (V2) 操作
+让我们开始吧！
 
-3. 如果提示，请登录 Slack。
-4. 在“发布消息 (V2)”飞出窗口中，选择“参数”（`Parameters`）选项卡。
-5. 在“频道名称”（`Channel Name`）下拉菜单中，选择 `all-<organization>` 频道（或你选择的任何频道）。
+### 获取请求者信息
 
-![](img/bfc58bb450784476738fab1c5bfe829d_296_1.png)
+在第一部分中，我们将配置触发器以检测文件并获取请求者的信息。要配置工作流，请遵循以下步骤：
 
-图 15.5 - 选择目标频道
+1. 导航到 Automate 门户（`https://make.powerautomate.com`），选择创建，然后从空白开始工作流。
+2. 搜索“当文件夹中创建文件时”。
+3. 在站点地址字段中，选择 SharePoint 站点。在文件夹字段中，选择“已提交（Submitted）”文件夹。
 
+![](img/bfc58bb45078446738fab1c5bfe29d_245.png)
 
+4. 点击新步骤。
+5. 选择 SharePoint 获取文件属性。在站点地址字段中，选择 SharePoint 站点。在库名称字段中，选择文档库。在 ID 字段中，选择来自“当文件夹中创建文件时”的 `ItemId` 令牌。
 
-### 配置发布消息
-6. 在“消息文本”（`Message Text`）字段中添加通知文本。在示例中，我们添加了标题（`Title`，任务名称）、分配人员（`assignments Assigned To User Id`，任务分配给谁）以及分配者（`Assigned By User Id`，任务由谁分配给谁的）的动态内容值令牌。
+![](img/bfc58bb45078446738fab1c5bfe29d_246.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_297_0.png)
+6. 点击新步骤。
+7. 选择 Office 365 获取用户配置文件 (V2) 动作。在 UPN 字段中，选择来自“获取文件属性”的 Created By Email 动态令牌：
 
-图 15.6 - 配置发布消息
+![](img/bfc58bb45078446738fab1c5bfe29d_247_1.png)
 
-由于`Assigned To User Id`是一个数组，我们将使用`Title`的动态内容值令牌。
+8. 点击新步骤。
+9. 选择 Office 365 获取经理 (V2) 动作。在用户 (UPN) 字段中，选择来自“获取用户配置文件 (V2)”的用户主要名称令牌。
+10. 点击保存。
 
-7. 展开“高级参数”（`Advanced parameters`）。
+### 创建审批
 
-![](img/bfc58bb450784476738fab1c5bfe829d_297_1.png)
+此时，你已经创建了收集文件和请求者信息的部分。接下来，我们将配置审批请求。
 
-图 15.7 - 添加高级参数
+在本节中，你将通过添加和配置审批动作继续创建上一节的审批。
 
-8. 点击`ID`字段内部。
+1. 在“获取经理 (V2)”动作之后添加一个动作。
+2. 选择审批 创建审批 动作。
+3. 在审批类型下，选择“批准/拒绝 - 响应响应者”。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_298_0.png)
 
-图 15.8 - 选择用户
 
-9. 点击“保存”（`Save`）。
+# 配置审批工作流
 
-10. 保存流。
+4. 在标题下，选择能够唯一标识此请求的文本。在示例中，你可以选择来自“获取文件属性”部分的 `Title` 和 `Created ByDisplayName` 动态值令牌。
 
-### 测试流
-流保存好后，是时候触发它了。
+![](img/bfc58bb45078446738fab1c5bfe29d_247_0.png)
 
-1. 导航到你的计划。
+图 12.8 – 配置获取用户配置文件 (V2) 动作
 
-2. 选择一个现有任务或创建一个新任务。
+在 **Assigned**（分配给）字段中，选择 **Get manager**（获取经理）部分下的 **Mail** 动态内容令牌值：
 
-![](img/bfc58bb450784476738fab1c5bfe829d_299_0.png)
+![](img/bfc58bb450784476738fab1c5bfe829d_248_0.png)
 
-图 15.9 - 添加任务
+图 12.9 – 配置“创建审批”
 
-3. 为你的流输入名称，然后点击“分配”（`Assign`）。
+在 **Link**（链接）项字段中，添加 **Get file properties**（获取文件属性）部分下的 **Link to item**（项目链接）动态值内容令牌。
 
-## 输出调试
-如果你熟悉 Microsoft 365，可能会识别出显示的数字而不是名称。哦，不！看起来出问题了！让我们查看输出。
+添加操作。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_299_1.png)
+选择 Microsoft Teams 操作中的 **Post card in a chat or channel**（在聊天或通道中发布卡片）：
 
-图 15.10 - 输出调试
+![](img/bfc58bb450784476738fab1c5bfe829d_248_1.png)
 
-在画布上，选择“当任务分配给我时”触发器操作的“运行结果”（`Run results`）。滚动到`OUTPUTS`部分并点击。
+图 12.10 – 添加自适应卡片操作
 
-![](img/bfc58bb450784476738fab1c5bfe829d_300_0.png)
+在 **Post as**（发布者身份）字段中，选择 **Flow bot**。
 
-滚动到输出底部，你可以看到`assignments`数组。深入查看，你会发现`id`属性关联有一个数字——并不用户友好。这种格式被称为`GUID`（全局唯一标识符）——它是用户的不可变表示。幸运的是，我们有方法查询它！
+10. 在 **Post in**（发布位置）字段中，选择 **Chat with Flow bot**（与 Flow bot 聊天）。等待卡片上的操作动态更新，如**图 12.11** 所示：
 
-- 回到流并展开“对于”（`For each`）循环。
+![](img/bfc58bb450784476738fab1c5bfe829d_249_0.png)
 
-- 在“发布消息 (V2)”操作上方点击“+”插入新步骤。
+11. 在 **Recipient**（收件者）字段中，选择 **Get manager** 操作下的 **Mail** 动态内容令牌。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_301_0.png)
+12. 在 **Adaptive Card**（自适应卡片）字段中，选择 **Create an approval**（创建审批）部分下的 **Teams Adaptive Card** 动态内容令牌：
 
-图 15.11 - 插入新操作
+![](img/bfc58bb450784476738fab1c5bfe829d_249_1.png)
 
-3. 添加“组合”（`Compose`）操作。
+13. 添加操作。
 
-4. 将该操作名称更新为描述性名称，例如`Compose assignedTo`。
+14. 选择 **Wait for an approval**（等待审批）操作。
 
-5. 选择“输入”（`Inputs`）字段。
+15. 在 **Approval ID** 字段中，选择 **Create an approval** 下的 **Approval ID** 动态内容令牌：
 
-6. 添加`assignments Assigned User Id`的动态内容值。
+![](img/bfc58bb450784476738fab1c5bfe829d_250_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_301_1.png)
+图 12.13 – 配置“等待审批”操作
 
-图 15.12 - 添加第一个 Compose 语句
+16. 点击保存。
 
-7. 在`Compose-assignedTo`操作之后，添加另一个“组合”操作。
+现在你已经配置好了一个审批工作流，它将启动、向 Teams 用户发送自适应卡片，并等待他们的响应。在下一节中，我们将评估响应并决定采取什么操作。
 
-8. 将该操作名称更新为描述性名称，例如`Compose assignedBy`。
+## 返回响应
 
-9. 选择“输入”（`Inputs`）字段。
+在最后一个章节中，我们将根据审批者的响应来配置操作（通知请求者并移动已提交的文件）。由于步骤较多，我们将其分为较小的部分。
 
-10. 添加`assignments Assigned By User Id`的动态内容值。
+首先，我们将配置当审批者决定批准请求时会发生什么。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_301_2.png)
+要完成流的这部分，请确保来自上一个节的流处于编辑状态，并按照以下步骤操作：
 
-图 15.13 - 添加第二个 Compose 语句
+1. 在 **Wait for an approval** 操作之后，添加操作。
+2. 选择 **Condition**（条件）控制。
+3. 在控制器左侧的 **Choose a value**（选择值）框中，选择 **Outcome**（结果）动态内容令牌：
 
-11. 在第二个`Compose`动作和`Post message (V2)`动作之间插入一个动作。
+![](img/bfc58bb450784476738fab1c5bfe829d_251_0.png)
 
-12. 选择`Get user profile (V2)`动作。
+图 12.14 – 配置条件控制器
 
-![](img/bfc58bb450784476738fab1c5bfe829d_302_0.png)
+4. 为条件选择 **is equal to**（等于）评估方法。
+5. 在条件的右侧框中输入文本 `Approve`（批准），点击 **Add action**（添加操作）。
+6. 在条件的 **True**（真）分支中，点击 **Add action**。
+7. 选择 **Post message in a chat or channel**（在聊天或通道中发布消息）操作：
 
-图 15.16 – 添加 Get user profile (V2) 动作
+![](img/bfc58bb450784476738fab1c5bfe829d_251_1.png)
 
-13. 将`Get user profile (V2)`动作的名称更新为具有描述性的名称，例如`Get user profile (V2) – assignedTo`。
+图 12.15 – 添加发布消息操作
 
-14. 选择`User (UPN)`字段，并添加来自`Compose – assignedTo`的`Outputs`动态内容标记。
+8. 在 **Post as** 中，选择 **Flow bot**。
+9. 在 **Recipient** 字段中，选择 **Chat with the Flow bot**。
+10. 在 **Recipient** 字段中，添加 **Get user profile**（获取用户配置文件）部分下的 **Mail** 动态内容令牌。这将响应发送给请求者。
+11. 在 **Message** 字段中，输入将发布在请求者消息正文中的文本。
+12. 在 **True** 分支中，添加操作。
+13. 选择 SharePoint **Move file**（移动文件）操作。
+14. 在 **Current Site Address**（当前站点地址）中，选择流中使用的 SharePoint 站点。
+15. 在 **File to Move**（要移动的文件）中，选择 **When a file is created in a folder**（文件夹中创建文件时）部分下的 `headers/x-ms-file-id` 动态内容令牌。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_302_1.png)
+![](img/bfc58bb450784476738fab1c5bfe829d_252_0.png)
 
-图 15.17 – 获取 assignedTo 的用户配置文件
+图 12.16 - 添加 x-ms-file-id 动态内容令牌
 
-15. 在`Get user profile (V2)`动作和`Post message (V2)`动作之间插入一个动作。
+16. 在 **Destination Site address**（目标站点地址）中，选择你创建 `Approved` 文件夹的 SharePoint 站点。
+17. 对于 **Destination Folder**（目标文件夹），选择如果目标文件夹中存在同名文件时要的操作。在 **Another file is already there**（已存在文件）下拉菜单中选择一个选项，例如 **Move with a new name**（重命名移动）操作。完成的分支应该类似于图 12.17。
 
-16. 选择`Get user profile (V2)`动作。
+![](img/bfc58bb450784476738fab1c5bfe829d_252_1.png)
 
-17. 将`Get user profile (V2)`动作的名称更新为具有描述性的名称，例如`Get user profile (V2) – assignedTo`。
+图 12.17 - 配置 SharePoint 移动文件操作
 
-18. 选择`User (UPN)`字段，并添加来自`Compose – assignedBy`动作的`Outputs`动态内容标记。
+19. 点击保存。
 
-19. 选择`Post message (V2)`动作卡片。
+现在，我们将配置当审批者拒绝或否定请求时会发生什么。步骤非常相似——事实上，它们是同一组操作，你可以编辑消息响应和文件目标。你可以重复步骤并进行更新，也可以使用 **Copy action**（复制操作）功能节省时间：
 
-20. 选择`Message Text`字段。
+1. 在 **True** 分支中，右键点击 **Post message in a chat or channel** 操作的卡片，并选择 **Copy action**：
 
-21. 将`userId`和`value/assignedBy`动态值标记替换为新的`Get user profile (V2)`动作值，如图 15.18 所示：
+![](img/bfc58bb450784476738fab1c5bfe829d_253_0.png)
 
-![](img/bfc58bb450784476738fab1c5bfe829d_303_0.png)
+图 12.18 - 复制操作
 
-图 15.18 - 使用新的动态内容值更新流
+2. 在 **False** 条件分支中，右键点击 **Add action** `+` 号并选择 **Paste action**（粘贴操作）。
+3. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
+4. 更新 **Message** 字段，替换现有的发布在请求者消息正文中的值。正如你配置原始操作时一样，你可以使用文本、表达式和动态内容的组合。
 
-22. 点击保存。
+![](img/bfc58bb450784476738fab1c5bfe829d_253_1.png)
 
-让我们再次尝试！
+图 12.19 - 更新粘贴操作的属性
 
-# 重新测试流
-是时候看看我们成功了。
+5. 在 **True** 条件分支中，选择 **Move file** 操作的卡片，然后选择 **Copy action**。
+6. 在 **False** 条件分支中，右键点击 **Add an action** `+` 号并选择 **Paste after action**（在操作后粘贴）。
+7. 在粘贴操作的浮窗中，更新操作标题以使其唯一且易读。
+8. 对于 **Destination Folder**，选择默认文档库中的 **Rejected** 文件夹。
+9. 最后，选择如果目标文件夹中存在同名文件时要的操作。在 **If another folder is already there** 下拉菜单下选择一个选项，例如 **Move with a new name** 操作。完成的分支应该类似于图 12.20：
 
-1. 回到你正在操作的计划。
+![](img/bfc58bb450784476738fab1c5bfe829d_254_0.png)
 
-2. 选择一个任务（或创建一个新任务）并为自己添加一个新的分配。
+图 12.20 - 检查 If 分支的配置
 
-3. 等待任务执行。
+10. 点击保存。
 
-4. 去检查 Slack！
+你已经配置好了一个审批工作流，它将启动、向 Teams 用户发送自适应卡片，并等待他们的响应。在下一节中，我们将评估响应并决定采取什么操作。
 
-![](img/bfc58bb450784476738fab1c5bfe829d_303_1.png)
+## 测试流
 
-图 15.19 - 查看更新后流的输出
+为了测试此流，你需要满足以下条件：
 
-成功了！
+- 至少两个开启了 Exchange Online 和 Microsoft Teams 的用户
+- 用户启用了 Power Automate（以前称为 Flow）
+- 其中一个用户应配置为另一个用户的经理
+- 至少两个浏览器会话，分别以审批者请求者的身份登录
 
-处理流有时会很复杂，需要一些尝试才能得到你想要的结果。当你看到意外之外的值时，务必检查每个动作的输出。
+使用 Microsoft365 管理中心 (https://admin.microsoft.com) 配置经理。导航到 `Users | Active users`，选择一个用户进行编辑，并点击 `manager` 链接进行配置：
 
-### 进一步探索
-“当任务分配给我（`When a task is assigned to me`）”触发器的缺点之一是它只适用于直接分配给你的任务。处理此流另一种方法可能是使用触发器，例如[创建新任务时（`When a new task is created`）](https://learn.microsoft.com/en-us/connectors/planner/#when-a-new-task-is-created)。仅凭该动作你无法获得分配详情，而且结果可能不如我们的预期，因此你需要利用`Get task details`来检索额外信息。
+![](img/bfc58bb450784476738fab1c5bfe829d_255_0.png)
+
+图 12.21 – 配置经理
+
+如果你没有权限设置经理，你需要编辑流以使用特定的用户邮箱地址作为审批者，而不是 `Get manager (V2)` 操作的 `Mail` 令牌。
+
+测试过程将涉及三个核心步骤：
+
+- 请求审批
+- 审批请求
+- 检查响应
+
+让我们开始测试吧！
+
+### 请求审批
+
+流程必须由请求者启动。请求者必须在 Entra 中填写经理字段。一旦满足此要求，请按照以下步骤操作：
+
+1. 从流中，点击 **Test** 并选择 **Manually** 单选按钮。点击 **Test** 启动测试过程。
+2. 使用一个浏览器会话，以请求者用户登录 Microsoft 365。
+3. 浏览到流监控的 SharePoint 站点。
+4. 向监控文件的 SharePoint 站点中的 `Submitted` 文件夹上传文件。
+
+此活动将触发流。
+
+### 审批请求
+
+对于此过程，你必须拥有以审批者身份登录的独立浏览器会话：
+
+1. 以审批者身份通过浏览器会话登录 Office 365 时，打开 Microsoft Teams (https://teams.microsoft.com/)。
+2. 选择左侧栏的 **Chat** 并选择来自 Workflows 应用的消息。
+3. 要批准或拒绝请求，点击自适应卡片上的 **Approve**（批准）或 **Reject**（拒绝）按钮：
+
+![](img/bfc58bb450784476738fab1c5bfe829d_256_0.png)
+
+4. 可选，输入批准或拒绝意见。点击 **Submit**（提交）。
+
+完成后，它将触发流的后续部分。
+
+### 查看响应
+
+在最后这一步骤中，请求者应该能够查看审批者的响应：
+
+1. 以请求者的身份通过浏览器会话登录 Office 365，启动 Teams (https://teams.microsoft.com)。
+2. 选择左侧边栏的“聊天”(Chat)，并选择来自 Power Automate 应用的消息。
+3. 审核消息：
+
+![](img/bfc58bb450784476738fab1c5bfe829d_257_0.png)
+
+你也可以在 Teams 中通过选择左侧边栏的“审批”(Approvals) 应用，然后导航到“审批 | 已发送”(Approvals | Sent)，作为请求者查看请求状态：
+
+![](img/bfc58bb450784476738fab1c5bfe829d_257_1.png)
+
+审批流程已完成。
+
+
+
+你还可以使用额外的验证方法，例如查看流的运行历史并浏览 SharePoint 文档库以确认文件已移动：
+
+![](img/bfc58bb450784476738fab1c5bfe829d_258_0.png)
+
+图 12.25 – 文件已移动到“已批准”文件夹
+
+自适应卡片和流消息是可以自定义的：
+
+> 你可以使用 Microsoft 自适应卡片设计器 (https://www.adaptivecards.io/designer/) 学习如何开发自己的自定义自适应卡片，并查看自适应卡片设计中心 (https://adaptivecards.microsoft.com/?topic=design-best-practices)。
+
+随着你对动态内容标记、格式和表达式变得越来越熟悉和自信，你可以基于这些示例进行构建，使卡片和消息更加个性化和详细。
 
 ### 总结
-本章介绍了新的应用、触发器和动作——让你有机会与 Microsoft Planner 和 Slack 进行协作。
 
-虽然流最初看起来可能很简单，但输出并不符合我们的预期，导致我们必须排查故障并修改流以正确查找所需的数据。
+在本章中，你利用了迄为止通过书中中学的知识，在 Microsoft Teams 中构建了审批功能的集成。你使用了熟悉的组件，例如 SharePoint 文件创建触发器和条件，并扩展到使用自适应卡片和用于 Microsoft Teams 的 Flow 机器人。
 
-在下一章中，我们将学习如何使用 Power Automate 接受用户输入以创建更具交互性的流。
+使用这种类型的设计可以防止审批者为了完成审批而在 Microsoft Teams 之外进行任务切换或应用程序切换，这将帮助你的组织提高生产力。它还帮助你为使用你的流的用户开发更具定制化的体验。
 
-获取本书的 PDF 版本和独家额外内容
+最后，你能够测试该流并分别从请求者和审批者的角度查看它。
 
-立即锁定
+在下一章中，你将学习如何将数据库整合到流中。这将为与业务应用程序交互提供许多机会，允许你创建复杂的、业务驱动的自动化流程。
 
-扫描二维码（或访问 packpub.com/unlock）。按书名搜索此书，确认版本，然后按照页面上的步骤操作。
+![](img/bfc58bb450784476738fab1c5bfe829d_259_0.png)
 
-注意：请妥善保存发票。直接从 Packt 购买不需要发票。
