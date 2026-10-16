@@ -1,0 +1,25 @@
+chapter_starts:
+- 'no': 2957
+  confidence: 0.95
+  reason: 行内容为“# 6”，是第6章的标题起始
+- 'no': 3015
+  confidence: 0.98
+  reason: 行内容为“## 第 3 部分”，部分-章节模式下的部分标题，应划分新章
+- 'no': 3033
+  confidence: 0.99
+  reason: 行内容为“# 7 部署基于 Haystack 的应用程序”，编号+标题明确的第7章起始
+- 'no': 3580
+  confidence: 0.9
+  reason: 行内容为“## 8 个实践项目”，带有章编号8且后续为章节概述，应为第8章起始
+- 'no': 4452
+  confidence: 0.98
+  reason: 行内容为“# 第 4 部分”，部分-章节模式下的部分标题，应划分新章
+- 'no': 4465
+  confidence: 0.99
+  reason: 行内容为“# 9 未来趋势及展望”，编号+标题明确的第9章起始
+- 'no': 4803
+  confidence: 0.92
+  reason: 行内容为“## 结语”，无编号但语义上为独立终章，后接整章内容
+- 'no': 5345
+  confidence: 0.97
+  reason: 行内容为“# 索引”，文末索引应划分为一章
