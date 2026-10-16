@@ -11,6 +11,6 @@
 +   [8 分步架构演练](context-engineering-for-multi-agent-systems-move-beyond-prom_4_3.md)
 +   [9](context-engineering-for-multi-agent-systems-move-beyond-prom_4_4.md)
 +   [10 生产就绪 AI 的蓝图](context-engineering-for-multi-agent-systems-move-beyond-prom_5.md)
-+   [附录 A](context-engineering-for-multi-agent-systems-move-beyond-prom_6.md)
++   [附录 A：上下文引擎参考指南](context-engineering-for-multi-agent-systems-move-beyond-prom_6.md)
 +   [附录 B：答案](context-engineering-for-multi-agent-systems-move-beyond-prom_7.md)
 +   [索引](context-engineering-for-multi-agent-systems-move-beyond-prom_8.md)
