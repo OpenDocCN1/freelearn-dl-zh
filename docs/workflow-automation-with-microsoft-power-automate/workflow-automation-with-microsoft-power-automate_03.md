@@ -264,9 +264,7 @@ Power Automate 不使用离散或自定义的代码模块，而是使用基于 R
 
 - 29. 在 **Flag Status** 下拉菜单中，选择 **Complete**（已完成）。
 
-# 3 
 
-## 57
 
 ![](img/bfc58bb450784476738fab1c5bfe829d_85_0.png)
 

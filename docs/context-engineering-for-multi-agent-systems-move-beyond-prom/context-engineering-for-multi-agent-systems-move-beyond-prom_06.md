@@ -202,9 +202,7 @@ def execute_and_display(goal, config, client, pc):
         print(f"Trace Status: {trace.status}")
 ```
 
-# 5 
 
-## 159
 
 ```python
 print(f"Total Duration: {trace.duration:.2f} seconds")
@@ -269,9 +267,7 @@ execute_and_display(goal, config, client, pc)
 
 - 6. 第 4 章原型中主要的日志方法是使用 Python 内置的 `logging` 模块吗？
 
-# 5 
 
-## 161
 
 - 7. 在重构管理员（Librarian）和研究员（Researcher）智能体时，是否发现它们返回的是字符串而非结构化字典？
 
@@ -618,9 +614,7 @@ def get_handler(self, agent_name, client, index, generation_model,
         raise ValueError(f"注册表中未找到代理 {agent_name}")
 ```
 
-# 6 
 
-### 179
 
 ```python
 if agent_name == "Librarian":
@@ -695,9 +689,7 @@ def get_capabilities_description(self):
 
 图 6.5 显示了动态的四步发现过程，该过程使 Planner LLM 能够学习并策略地使用新智能体：
 
-# 6 
 
-### 181
 
 ![](img/c9f69ac3fb58ab0dee89a12c2578a735_207_0.png)
 

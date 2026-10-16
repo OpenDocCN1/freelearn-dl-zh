@@ -238,9 +238,7 @@ elif isinstance(facts_data, str):
 
 图 7.4 详细说明了这些分布在我们模块化架构中的特定函数是如何协同工作交付最终结果的：
 
-# 7 
 
-# 227
 
 ![](img/c9f69ac3fb58ab0dee89a12c2578a735_253_0.png)
 
@@ -266,9 +264,7 @@ elif isinstance(facts_data, str):
 
 图 7.5 详细说明了这些分布在我们模块化架构中的特定函数是如何协同工作交付最终结果的。
 
-# 7 
 
-# 229
 
 ![](img/c9f69ac3fb58ab0dee89a12c2578a735_255_0.png)
 

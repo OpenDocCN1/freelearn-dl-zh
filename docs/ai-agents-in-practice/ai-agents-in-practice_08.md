@@ -1,6 +1,4 @@
-# 7 
 
-## 165
 
 现在，在多代理系统中，同样的日历功能可以由专门的“日历代理”（Calendar Agent）来处理。该代理将超越基础的数据检索。它可以执行以下操作：
 
@@ -353,9 +351,7 @@ def read_sample_portfolio(
     response += (
 ```
 
-# 7 
 
-## 183
 
 ```python
 f"{stock['symbol']} {stock['sector']}: "

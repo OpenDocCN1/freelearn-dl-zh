@@ -503,9 +503,7 @@ Power Automate Desktop 还可以启动各种脚本，包括 DOS、VBS、Java、P
 
 
 
-# 18 
-
-## 使用 Copilot 生成脚本
+# 18 使用 Copilot 生成脚本
 
 图 18.2 – 使用 Copilot 生成脚本
 

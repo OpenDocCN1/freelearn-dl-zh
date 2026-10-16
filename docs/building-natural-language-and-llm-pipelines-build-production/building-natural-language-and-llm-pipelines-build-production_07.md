@@ -120,9 +120,7 @@ self.output_mapping = {
 
 - `wandb_experiments/*`：此目录隔离了我们的观测性逻辑，包含如 [`rag_analytics.py`](https://github.com/PacktPublishing/Building-Natural-Language-and-LLM-Pipelines/blob/main/ch6/jupyter-notebooks/scripts/wandb_experiments/rag_analytics.py) 等用于 [Weights & Biases](https://wand.ai/) 跟踪的脚本。
 
-# 6 
 
-## 162
 
 这种项目结构不仅是组织文件的方便方法；它是协作的蓝图。这种架构直接对应于 MLOps 团队的角色。`rag/` 目录是 NLP 工程师的领域（构建应用）。`synthetic_data_generation/` 和 `ragas_evaluation/` 目录属于 QA 或测试工程师（确保质量）。`wandb_experiments/` 是 DevOps、MLOps 工程师的领域（监控）。这种结构在不同部分之间建立了明确的权和“数据契约”，这对于团队和产品的扩展至关重要。我们将通过强调贯穿始终的关键软件开发工具来结束本节。
 
