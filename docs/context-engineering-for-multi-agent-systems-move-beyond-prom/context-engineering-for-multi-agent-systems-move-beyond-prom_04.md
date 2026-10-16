@@ -1,4 +1,4 @@
-# 第 2 章
+# 2 
 
 这为编排器（Orchestrator）提供了一个新的保障：它不再需要盲目地信任作者。相反，在接受草稿作为最终版本之前，它可以检查草稿是否与研究结果对齐。
 
@@ -277,7 +277,7 @@ while not pc.describe_index(INDEX_NAME).status['ready']:
     print("Waiting for index to be ready...")
 ```
 
-# 第 3 章
+# 3 
 
 ```python
 time.sleep(1)
@@ -716,7 +716,7 @@ mcp_to_researcher = create_mcp_message(
     content={"topic_query": topic_query})
 ```
 
-# 第 3 章
+# 3 
 
 ```python
 # display_mcp(mcp_to_researcher, "Orchestrator -> Researcher")
@@ -984,7 +984,7 @@ def agent_writer(mcp_message):
     previous_content = mcp_message['content'].get('previous_content')
 ```
 
-## 第 4 章
+# 4 
 
 接下来是一个关键检查：如果没有定义文本编写方式的蓝图，Writer（写入器）将无法执行：
 

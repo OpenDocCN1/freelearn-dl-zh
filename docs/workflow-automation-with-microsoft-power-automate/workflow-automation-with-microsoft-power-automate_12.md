@@ -204,7 +204,7 @@ concat(triggerBody()?['email'],_'FavoriteThing_',triggerBody()?['file']['name'])
 
 > 注：原文末尾部分存在大量重复的乱码文本，译文已根据逻辑进行了清理和去重。
 
-## 第 16 章
+# 16 
 
 8. 选择`POST`作为方法。
 9. 在`Uri`文本字段中输入`/api/web/lists/GetByTitle('Favorite%20Things')/items(@outputs('Create_item'))?['body/id']/ValidateUpdateListItem`，并将列表标题替换为您的列表名称。如果您的列表名称包含空格，您可能需要将空格字符替换为其`URL`编码值`%20`。

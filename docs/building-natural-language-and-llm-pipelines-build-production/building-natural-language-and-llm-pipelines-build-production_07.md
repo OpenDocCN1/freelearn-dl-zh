@@ -120,7 +120,7 @@ self.output_mapping = {
 
 - `wandb_experiments/*`：此目录隔离了我们的观测性逻辑，包含如 [`rag_analytics.py`](https://github.com/PacktPublishing/Building-Natural-Language-and-LLM-Pipelines/blob/main/ch6/jupyter-notebooks/scripts/wandb_experiments/rag_analytics.py) 等用于 [Weights & Biases](https://wand.ai/) 跟踪的脚本。
 
-## 第 6 章
+# 6 
 
 ## 162
 
@@ -286,7 +286,7 @@ pipe.add_component("weave", connector)
 
 `text-embedding-3-large`模型是一个专业工具。它应该保留用于高风险、利基领域（例如法律、金融或医疗 RAG），在这些领域中，其对复杂上下文的细微差别理解可能证明指数级成本是合理的。使用我们的笔记本显示性能-成本权衡的示例运行可以在表 6.3 和表 6.4 中看到。
 
-## 第 6 章
+# 6 
 
 172
 

@@ -1,6 +1,4 @@
-## 2
-
-## 开始使用 Power Automate
+# 2 开始使用 Power Automate
 
 在第一章中，我们介绍了 `Microsoft Power Automate` 的一些基本概念。现在你已经熟悉了 `Power Automate` 背后的一些思想和术语，让我们来看看如何导航界面。
 
@@ -250,7 +248,7 @@ IEML Copy
 
 4. 输入流名称姓名。
 
-## 第 2 章
+# 2 
 
 5. 在“选择流触发器”（Choose your flow's trigger）中，输入 `X` 以过滤与 `X` 相关的触发器。选择“发布新推文时”（When a new tweet is posted）并点击“创建”（Create）。
 

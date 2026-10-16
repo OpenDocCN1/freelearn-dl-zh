@@ -124,7 +124,7 @@ Power Automate 条件还允许使用多个条件，以及评估一组条件。Po
 4. 添加操作。选择“获取经理 (V2)”操作：`Get manager (V2)`。
 5. 在“获取经理 (V2)”面板中，在“用户 UPN”字段中，添加来自“获取我的配置 (V2)”操作的“用户主要名称 (User Principal Name)”动态值。
 
-## 第 6 章
+# 6 
 
 ## 101
 
@@ -356,7 +356,7 @@ Power Automate，正如第 2 章“入门 Power Automate”中提到的，可以
 
 图 7.15 – 指定工作文件夹
 
-## 第 7 章
+# 7 
 
 10. 现在，将“写入 CMD 会话”（Write to CMD session）操作拖到画布区域，位于“打开 CMD 会话”操作下方。
 

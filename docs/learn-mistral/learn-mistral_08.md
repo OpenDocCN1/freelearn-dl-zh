@@ -124,7 +124,7 @@ os.environ['MISTRAL_API_KEY'] = '<your Mistral API key goes here...>'
 
 
 
-# 第 7 章：使用 LangChain 和 Mistral AI 构建问答系统
+# 7 使用 LangChain 和 Mistral AI 构建问答系统
 
 ## 引言
 

@@ -1,4 +1,4 @@
-# 第 7 章
+# 7 
 
 ## 165
 
@@ -353,7 +353,7 @@ def read_sample_portfolio(
     response += (
 ```
 
-## 第 7 章
+# 7 
 
 ## 183
 
@@ -459,9 +459,7 @@ def doc_writing_node(state: State):
     )
 ```
 
-# 188
-
-# 多代理应用
+# 188 多代理应用
 
 ```
 'doc_writer': {'messages': [HumanMessage(content='2025年第四季度投资组合优化的报告已成功生成。您可以在文件 **Portfolio_Optimization_Q4_2025.txt** 中找到它。如果您需要进一步的帮助或任何修改，请随时告诉我！', additional_kwargs={}, response_metadata={}, name='doc_writer', id='8f9e6a9-fafc-4d6c-bbbc-3951465a3cbe')])}

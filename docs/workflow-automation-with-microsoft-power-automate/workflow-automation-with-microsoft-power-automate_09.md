@@ -1,6 +1,4 @@
-# 12
-
-## 向 Teams 发送审批
+# 12 向 Teams 发送审批
 
 Microsoft 已将 Teams 定位于“协作枢纽”（`https://learn.microsoft.com/en-us/microsoftteams/teams-overview`；参见 [协作](https://Teamwork)）。考虑到此，我们将应用在第 10 节“开始使用审批”中获得的审批流技能，并用这些技能来为 Microsoft Teams 构建一个审批体验。你将能够使用这些技能，帮助为使用 Teams 作为平台的组织成员简化审批流程。
 

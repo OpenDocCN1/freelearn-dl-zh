@@ -633,7 +633,7 @@ class AgentState(MessagesState):
   """
 ```
 
-# 第 8 章
+# 8 
 
 ```python
 # 用户意图（由澄清节点设置）
@@ -682,7 +682,7 @@ revision_feedback: str      # 需要改进的内容
 
 连接图涉及添加这些节点并用边将它们连接起来。关重要的是，我们使用条件边进行动态路由，而不是固定路径（例如 A 始终到 B），条件边查看代理的输出（`"next_agent": "sentiment"`）并动态将执行路由到相应的节点。这允许复杂的非线性工作流，其路径完全由用户的特定请求决定。包含此模式的示例如图 8.2 所示。
 
-# 第 8 章
+# 8 
 
 # 238
 
@@ -746,7 +746,7 @@ workflow.add_edge("sentiment", "summary")
 workflow.add_edge("summary", "supervisor_approval")
 ```
 
-# 第 8 章
+# 8 
 
 主管随后将是终止进程或返回到任何节点并请求重新执行工具。
 

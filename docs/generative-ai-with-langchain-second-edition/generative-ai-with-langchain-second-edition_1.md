@@ -1809,9 +1809,7 @@ local_model = Ollama(model="llava")
 
 ![](img/b4e68161fea00e7befce1e978c814dda_129_0.png)
 
-# 3
-
-## 使用 LangGraph 构建工作流
+# 3 使用 LangGraph 构建工作流
 
 到目前为止，我们学习了 LLM、作为框架的 LangChain，以及如何在原生模式下使用 LangChain 使用 LLM（仅根据提示词请求生成文本输出）。在本章中，我们将首先快速介绍 LangGraph 这一框架，并学习如何通过链链多个步骤来使用 LangChain 和 LangGraph 开发更复杂的工作流。作为一个示例，我们将讨论解析 LLM 的输出，并研究 LangChain 和 LangGraph 中的错误处理模式。然后，我们将继续介绍更高级的提示开发方法，并探索 LangChain 为少样本提示（few-shot prompting）及其他技术提供了哪些构建块。
 

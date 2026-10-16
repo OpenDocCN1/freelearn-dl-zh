@@ -1044,7 +1044,7 @@ systems:
 
 
 
-## 第 11 章
+# 11 
 
 - *NVIDIA CUDA C++ 编程指南 / Nsight Systems 与 Nsight Compute 指南*。它们是用于 GPU 调试、性能分析和稳定性检查的实用工具。
 - *Evidently AI 文档（漂移和数据质量报告）*。PSI/KS、校准检查和分群仪表盘的具体实现。

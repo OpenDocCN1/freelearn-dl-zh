@@ -20,9 +20,7 @@
 
 - 第 7 章：处理共享流
 
-# 1
-
-## 介绍 Microsoft Power Automate
+# 1 介绍 Microsoft Power Automate
 
 信息时代的业务活动充满了重复性任务：接收电子邮件、生成采购订单、发送消息、路由文档、批准休假请求等。在许多情况下，这些活动并没有产生真正的价值，尽管它们确实需要完成以帮助支持业务目标。
 
@@ -62,7 +60,7 @@ Power Automate 是 Power Platform 产品家族的一部分，它是一个工作�
 
 许多读者可能熟悉 SharePoint 工作流的概念。在 SharePoint 平台上，您可以使用 SharePoint Designer 和 Workflow Manager 等产品，根据工作活动启动业务流程，例如文档被签入到特定的库中。SharePoint 工作流的巨大优点之一是，它们可以在 SharePoint 环境内实现业务流程和任务。
 
-# 第 1 章
+# 1 
 
 然而，SharePoint 工作流的缺点之一是它们只能自动化 SharePoint 环境内部的业务流程和任务。任何需要扩展到 SharePoint 的内容可能都需要大量的自定义开发。
 
@@ -175,7 +173,7 @@ Power Automate 的能力仅限于你的想象以及你想要集成的应用程�
 
 连接器是用于直接与源系统和目标系统交互的组件。连接器包含了与应用程序交互所需的配置信息。你可以在下面的图中看到连接器的一些示例：
 
-# 第 1 章
+# 1 
 
 # 11
 

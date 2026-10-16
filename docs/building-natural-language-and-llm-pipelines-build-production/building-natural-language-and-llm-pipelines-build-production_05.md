@@ -14,7 +14,7 @@
 
 - Haystack 2.0 核心构建模块：从组件到智能体
 
-# 第 3 章
+# 3 
 
 - 核心特性与优势
 
@@ -142,7 +142,7 @@ pipe.connect("retriever.documents", "generator.documents")
 
 可以在此处找到探索简单管道及其可视化的 Jupyter notebook：https://github.com/PacktPublishing/Building-Natural-Language-and-LLM-Pipelines/blob/main/ch3/jupyter-notebooks/your-first-pipeline.ipynb。
 
-# 第 3 章
+# 3 
 
 
 
@@ -330,7 +330,7 @@ Haystack 2.0 的组合性使得从流水线到智能体的转换异常容易。�
 
 - **ByteStream（字节流）**：代表转换为文本之前的原始二进制数据，例如图像或 `PDF` 文件。它包含字节形式的数据和相关的元数据，包括 `mime_type`（例如 `image/png`）。
 
-## 第 3 章
+# 3 
 
 - **ChatMessage（聊天消息）**：用于构建对话式应用程序和代理。与简单的文本字符串不同，`ChatMessage` 是结构化对象，可以包含多态内容，包括文本、图像（`ImageContent`）、工具调用（`ToolCall`）和工具结果（`ToolCallResult`）。它显式定义了发送者的角色（用户、助手、系统或工具）。
 
@@ -559,7 +559,7 @@ deepset 提供的 Haystack 简介
 
 上述工作流可以应用于各种用例。流水线的功能取决于所选组件以及它们连接的顺序。如果你的工作流需要重复或根据给定条件采取特定路径，Haystack 的流水线提供了分支功能。
 
-## 第 4 章
+# 4 
 
 ### 利用分支
 
