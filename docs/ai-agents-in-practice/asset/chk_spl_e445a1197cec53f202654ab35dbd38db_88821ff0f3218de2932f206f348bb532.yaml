@@ -1,0 +1,83 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.05
+  alternative: 书名或封面标题
+  counter_evidence:
+  - 该行是文档最开头的一级标题，后面紧接献词、贡献者和作者信息，符合正文前置内容的结构。
+  - 虽然没有“第 X 章”编号，但规则明确允许将前置内容统一作为一章。
+  keep_split: true
+- 'no': 82
+  overturn_probability: 0.08
+  alternative: 前言部分的标题
+  counter_evidence:
+  - “前言”属于正文之前的前置内容，也可能只是书籍元信息中的一个小节。
+  - 其后连续出现适用读者、涵盖内容、代码下载和使用规范等前置说明，尚未进入正式章节。
+  keep_split: true
+- 'no': 271
+  overturn_probability: 0.03
+  alternative: 部分标题
+  counter_evidence:
+  - 该行明确为“第 1 部分”，而后续第 1 章和第 2 章均列在该部分下。
+  - 规则明确规定存在“第 X 部分”时，部分标题也应划分新章。
+  keep_split: true
+- 'no': 290
+  overturn_probability: 0.04
+  alternative: 正式章节标题
+  counter_evidence:
+  - 该行使用独立一级标题格式，并以无标点的概括性短语结尾。
+  - 前面部分导言明确列出“第 1 章：生成式 AI 工作流的演变”，后面紧接本章概述、主题列表和技术要求。
+  keep_split: true
+- 'no': 742
+  overturn_probability: 0.32
+  alternative: 第 2 章的无编号正文小标题
+  counter_evidence:
+  - 真正的章节编号标题“# 2”出现在后面的第 893 行，而该行本身是二级标题。
+  - 前一节内容在第 708 行已进入总结，并在第 718 行明确说“下一章”，因此第 742 行确实可能是第 2 章正文的语义标题。
+  - 该标题后紧接章节概述、主题列表和技术要求，结构上支持它作为章节开头。
+  keep_split: true
+- 'no': 893
+  overturn_probability: 0.22
+  alternative: 正文中的重复章节标记或排版残留
+  counter_evidence:
+  - 第 742 行已经以“AI 代理的崛起”开始第 2 章内容，因此第 893 行可能是扫描或排版过程中插入的重复章标题。
+  - 第 893 行只有“第 2 章”，后面紧接“# 39”和快速提示、图像及案例内容，并没有新的章节概述。
+  - 第 816 行明确说明本书在此处讨论基于 LLM 的单一代理，内容连续延伸到第 953 行，未显示第 893 行开启了新主题。
+  keep_split: false
+- 'no': 970
+  overturn_probability: 0.03
+  alternative: 正式章节标题
+  counter_evidence:
+  - 该行具有明确的“第 3 章”编号和概括性标题。
+  - 后续紧接章节导言、主题列表和章节目标，符合标准章节起始结构。
+  keep_split: true
+- 'no': 1278
+  overturn_probability: 0.08
+  alternative: 正式章节标题
+  counter_evidence:
+  - 该行明确包含“第 4 章”，且后面紧接章节概述和主题列表。
+  - 其前一章在第 1250 至 1256 行总结并预告下一章，章节边界清晰。
+  keep_split: true
+- 'no': 1746
+  overturn_probability: 0.28
+  alternative: 第 5 章的无编号正文标题
+  counter_evidence:
+  - 该行是二级标题，而同一章的独立编号标记“# 5”出现在第 1744 行。
+  - 第 1744 行在上一章参考文献和订阅信息之后已经形成章节起点，故第 1746 行更像该章的正式副标题。
+  - 后续内容确实是第 5 章的概述和主题列表，但这并不能证明二级标题本身需要再次分章。
+  keep_split: false
+- 'no': 2209
+  overturn_probability: 0.26
+  alternative: 第 6 章的无编号正文标题
+  counter_evidence:
+  - 该行是二级标题，而第 2207 行已经出现“# 6”，很可能是同一章节的编号页眉或章节标记。
+  - 第 2209 行虽然后接章节介绍和主题列表，但其层级低于第 2207 行，不能单独作为最高层级大章。
+  - 书中多处出现“# 第 X 章”或单独的“# X”后再接二级标题，说明这种排版模式中的二级标题通常不是额外章节。
+  keep_split: false
+- 'no': 80
+  overturn_probability: 0.12
+  alternative: 索引标题或目录中的索引条目
+  counter_evidence:
+  - 该行位于前言之后、正式正文之前的目录性内容附近，且此前第 40 行开始出现明显的目录条目和页码。
+  - 第 80 行之后紧接第 82 行“前言”，说明这里可能是目录中的“索引”条目，而不一定是文末实际索引。
+  - 规则要求文末索引划分为一章，但该行所在位置并非文末，存在目录误识别的可能。
+  keep_split: false

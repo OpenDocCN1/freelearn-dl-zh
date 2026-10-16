@@ -1,0 +1,35 @@
+chapter_starts:
+- 'no': 3670
+  confidence: 0.7
+  final_reason: 复核方认为虽存在页眉噪声模式，但上下文更支持其为第7章起始标记；保留分章。
+  accepted_evidence:
+  - 3670 行 '# 第 7 章' 为最高层级章节标题文本
+  - 后续内容延续第7章主体
+  rejected_evidence:
+  - 3672 行 '## 165' 构成章名+页码的排版噪声组合
+  need_human_review: false
+- 'no': 4185
+  confidence: 0.9
+  final_reason: 书为部分-章节模式，'# 第 3 部分' 为最高层级部分标题，位于第三部分内容起点，应划分新章。
+  accepted_evidence:
+  - 4185 行 '# 第 3 部分' 单独成行，符合部分标题特征
+  - 4189 后为部分概述段落
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5169
+  confidence: 0.85
+  final_reason: 文末索引 '# 索引' 按规则统一划分为一章。
+  accepted_evidence:
+  - 5169 行 '# 索引' 后接索引条目，为独立文档单元
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 3305
+  reason: 复核方反证成立：该行夹在 Python 代码块中间，为页眉残留 '第 6 章' + 页码噪声，非正文章标题；且 3225 行已有本章实质标题。
+  need_human_review: false
+- 'no': 4223
+  reason: 复核方反证成立：真正的第8章标题已在4202行出现并有概述，4223 为页眉残留，与后续示例正文不符。
+  need_human_review: false
+- 'no': 5058
+  reason: 复核方反证成立：第9章真实标题在4746行，5058为 '第 9 章'+页码247 的页眉残留，分章会截断章节。
+  need_human_review: false

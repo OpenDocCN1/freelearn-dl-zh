@@ -1,0 +1,14 @@
+chapter_starts: []
+rejected_lines:
+- 'no': 1
+  reason: 复核方指出该行为图书主标题/封面信息，非正文章节标题；后续直接进入子节，无章节概述段落，符合书名特征，不应分章
+  need_human_review: false
+- 'no': 2
+  reason: 复核方指出行为空字符串，为排版空行；不具备标题语义、单独成行且有统领性的特征，不应作为章节分割点
+  need_human_review: false
+- 'no': 3
+  reason: '复核方指出行为 ## 4.1 下载 Ollama 模型，为子层级编号 4.1 的小节；判断规则仅划分全书最高层级大章，子节不应分章'
+  need_human_review: false
+- 'no': 4
+  reason: 复核方指出行为空行，为 Markdown 排版断行；无标题语义且无统领性，不应分章
+  need_human_review: false

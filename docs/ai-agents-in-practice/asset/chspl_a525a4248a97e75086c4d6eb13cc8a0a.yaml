@@ -1,0 +1,19 @@
+chapter_starts:
+- 'no': 3305
+  confidence: 0.95
+  reason: 最高层级章节标题 '# 第 6 章'，单独成行，符合编号特征
+- 'no': 3670
+  confidence: 0.95
+  reason: 最高层级章节标题 '# 第 7 章'，单独成行，符合编号特征
+- 'no': 4185
+  confidence: 0.9
+  reason: 书为部分-章节模式，'# 第 3 部分' 为最高层级部分标题，应划分新章
+- 'no': 4223
+  confidence: 0.95
+  reason: 最高层级章节标题 '# 第 8 章'，单独成行，符合编号特征
+- 'no': 5058
+  confidence: 0.95
+  reason: 最高层级章节标题 '# 第 9 章'，单独成行，符合编号特征
+- 'no': 5169
+  confidence: 0.85
+  reason: 文末索引 '# 索引'，按规则统一划分为一章

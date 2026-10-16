@@ -1,0 +1,72 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.9
+  final_reason: 书名/封面标题，处于文档最开头，后接献词、贡献者、作者等前置内容，符合正文前置内容统一划分为一章的规则。双方一致且证据成立。
+  accepted_evidence:
+  - 该行是文档最开头的一级标题，后面紧接献词、贡献者和作者信息，符合正文前置内容的结构
+  - 规则明确允许将前置内容统一作为一章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 82
+  confidence: 0.85
+  final_reason: '## 前言 为正文前的前言类统一章节，后续为适用读者、涵盖内容、下载说明等前置说明，尚未进入正式章节。复核方证据成立。'
+  accepted_evidence:
+  - “前言”属于正文之前的前置内容
+  - 其后连续出现适用读者、涵盖内容、代码下载和使用规范等前置说明，尚未进入正式章节
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 271
+  confidence: 0.95
+  final_reason: '# 第 1 部分 为最高层级的部分标题，书为部分-章节模式，部分标题应划分新章。双方一致。'
+  accepted_evidence:
+  - 该行明确为“第 1 部分”，而后续第 1 章和第 2 章均列在该部分下
+  - 规则明确规定存在“第 X 部分”时，部分标题也应划分新章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 290
+  confidence: 0.97
+  final_reason: '# 1 生成式 AI 工作流的演变 为最高层级大章起始，单独成行且语义统领后续内容，前文部分导言已列出本章，后接概述、主题列表和技术要求。'
+  accepted_evidence:
+  - 该行使用独立一级标题格式，并以无标点的概括性短语结尾
+  - 前面部分导言明确列出“第 1 章：生成式 AI 工作流的演变”，后面紧接本章概述、主题列表和技术要求
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 742
+  confidence: 0.7
+  final_reason: '## AI 代理的崛起 在排版上为二级标题，但上下文显示其后紧接章节概述、主题列表和技术要求，且前文第 1 章已在 708 行总结并预告下一章，语义上承担第
+    2 章起始功能。复核方认为结构支持作为章节开头，采纳为主章节起点。'
+  accepted_evidence:
+  - 该标题后紧接章节概述、主题列表和技术要求，结构上支持它作为章节开头
+  - 前一节内容在第 708 行已进入总结，并在第 718 行明确说“下一章”
+  rejected_evidence:
+  - 真正的章节编号标题“# 2”出现在后面的第 893 行，而该行本身是二级标题
+  need_human_review: false
+- 'no': 970
+  confidence: 0.97
+  final_reason: '# 第 3 章：AI 编排器的必要性 最高层级大章标题，单独成行且后接概述，符合编号特征和语义特征。'
+  accepted_evidence:
+  - 该行具有明确的“第 3 章”编号和概括性标题
+  - 后续紧接章节导言、主题列表和章节目标，符合标准章节起始结构
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 1278
+  confidence: 0.95
+  final_reason: '# 第 4 章：内存和上下文管理的必要 为最高层级大章标题，前面第 3 章已总结并预告下一章，边界清晰。'
+  accepted_evidence:
+  - 该行明确包含“第 4 章”，且后面紧接章节概述和主题列表
+  - 其前一章在第 1250 至 1256 行总结并预告下一章，章节边界清晰
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 893
+  reason: '复核方指出第 742 行已开启第 2 章内容，第 893 行“# 第 2 章”为排版残留/重复标记，后接 # 39、快速提示和案例，未开启新主题。误分风险高，不采纳。'
+  need_human_review: false
+- 'no': 1746
+  reason: 该行为二级标题，而同一章的编号标记“# 5”出现在第 1744 行，后续内容为第 5 章概述。二级标题不应再次分章，属章节内部副标题。
+  need_human_review: false
+- 'no': 2209
+  reason: 该行为二级标题，而第 2207 行已出现“# 6”，为同一章节的编号页眉。二级标题层级低于最高层级大章，不应单独分章。
+  need_human_review: false
+- 'no': 80
+  reason: 该行位于前言之前、正式正文之前的目录性位置，之后紧接第 82 行“前言”。非文末索引，更可能是目录条目，误识别为索引。
+  need_human_review: false

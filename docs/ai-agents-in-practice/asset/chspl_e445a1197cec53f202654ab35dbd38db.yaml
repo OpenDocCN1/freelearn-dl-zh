@@ -1,0 +1,34 @@
+chapter_starts:
+- 'no': 1
+  confidence: 0.6
+  reason: 书名/封面标题，作为正文之前的前置统一章节起点
+- 'no': 82
+  confidence: 0.85
+  reason: '## 前言 为正文前的前言类统一章节，符合前言、序言统一划分为一章的规则'
+- 'no': 271
+  confidence: 0.9
+  reason: '# 第 1 部分 为最高层级的部分标题，书为部分-章节模式，部分标题应划分新章'
+- 'no': 290
+  confidence: 0.95
+  reason: '# 1 生成式 AI 工作流的演变 为最高层级大章起始，单独成行且语义统领后续内容'
+- 'no': 742
+  confidence: 0.75
+  reason: '## AI 代理的崛起 与前文 # 2 共同构成第2章起始，语义为章节统领'
+- 'no': 893
+  confidence: 0.9
+  reason: '# 第 2 章 为明确的最高层级章节编号标题'
+- 'no': 970
+  confidence: 0.97
+  reason: '# 第 3 章：AI 编排器的必要性 最高层级大章标题，单独成行且后接概述'
+- 'no': 1278
+  confidence: 0.97
+  reason: '# 第 4 章：内存和上下文管理的必要 最高层级大章标题，符合编号特征和语义特征'
+- 'no': 1746
+  confidence: 0.9
+  reason: '## 工具与外部集成的需求 与 # 5 共同构成第5章起始，为最高层级章节'
+- 'no': 2209
+  confidence: 0.95
+  reason: '## 使用 LangChain 构建你的第一个 AI 代理 与 # 6 构成第6章起始，为最高层级大章'
+- 'no': 80
+  confidence: 0.8
+  reason: '## 索引 文末索引应单独划分为一章'

@@ -1,0 +1,29 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.85
+  alternative: 书名/封面标题
+  counter_evidence:
+  - 行内容为 '# AI 网络秘籍（早期访问）' 为图书主标题，属前置封面信息，非正文章节标题
+  - '后续直接进入 ## 4.1 子节，无章节概述段落，且标题长度与书名特征一致'
+  keep_split: false
+- 'no': 2
+  overturn_probability: 0.99
+  alternative: 空行/排版断行
+  counter_evidence:
+  - 行 2 内容为空字符串，不符合标题单独成行且有语义的要求
+  - '真正的章标题绝不会为空，后接的行 3 为子节标题 ## 4.1，上下文不支持新章'
+  keep_split: false
+- 'no': 3
+  overturn_probability: 0.92
+  alternative: 正文小标题/子节
+  counter_evidence:
+  - 行 3 内容为 '## 4.1 下载 Ollama 模型'，编号为 4.1 属子层级，非全书最高层级大章
+  - 判断规则要求只划分全书最高层级大章如第 X 章/Y.，子节不应分章，且前后为配方步骤内容
+  keep_split: false
+- 'no': 4
+  overturn_probability: 0.99
+  alternative: 空行/排版断行
+  counter_evidence:
+  - 行 4 内容为空，为 Markdown 排版空行
+  - 空行不具备标题语义且无统领性，不应作为章节分割点
+  keep_split: false
