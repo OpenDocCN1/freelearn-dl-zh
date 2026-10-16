@@ -1,0 +1,54 @@
+reviews:
+- 'no': 2957
+  overturn_probability: 0.88
+  alternative: 页眉页脚/排版噪声
+  counter_evidence:
+  - 行后紧跟 172 页码行 2959，随后直接是表格 | 指标 | 小型嵌入模型 | 大型嵌入模型 |，非章节概述段落
+  - 前文 2951-2955 为连贯正文讨论 embedding 成本，2957 前后无章节总结或新章节介绍语境
+  - '同章内已出现 ## 总结 2982、## 构建可复现且生产就绪的 RAG 系统 2988 等二级标题，# 6 更像是表格/页内编号或排版残留，非最高层级章节标题'
+  keep_split: false
+- 'no': 3015
+  overturn_probability: 0.08
+  alternative: 部分标题
+  counter_evidence:
+  - '行内容为 ## 第 3 部分，后续 3017 为 ## 部署与代理编排 并随即给出本部分学习目标和章节列表，符合部分-章节模式下的部分划分规则'
+  - 前后与第 7 章内容形成明显分界，语义具有统领性
+  keep_split: true
+- 'no': 3033
+  overturn_probability: 0.02
+  alternative: 章节标题
+  counter_evidence:
+  - '行内容为 # 7 部署基于 Haystack 的应用程序，编号+标题明确且单独成行，后续为本章引入段落，符合最高层级章节特征'
+  keep_split: true
+- 'no': 3580
+  overturn_probability: 0.35
+  alternative: 正文小标题
+  counter_evidence:
+  - '该行 ## 8 个实践项目 在上下文中紧接 ## 获取本书的 PDF 版本和独家额外奖励 3575，且随后内容为本章实践项目的介绍，缺乏独立章节的完整前言/技术要求块，更多是第8章内部的小节'
+  - '即使作为章节入口，其标题形式为 ## 而非 #，与前后 # 9 等章节层级不一致'
+  keep_split: true
+- 'no': 4452
+  overturn_probability: 0.03
+  alternative: 部分标题
+  counter_evidence:
+  - '行内容为 # 第 4 部分，后续为 ## 代理体 AI 的未来 并给出本部分章节列表，符合部分标题划分新章的规则'
+  keep_split: true
+- 'no': 4465
+  overturn_probability: 0.01
+  alternative: 章节标题
+  counter_evidence:
+  - '行内容为 # 9 未来趋势及展望，编号+标题明确，后续为本章主题概述，符合最高层级章节特征'
+  keep_split: true
+- 'no': 4803
+  overturn_probability: 0.25
+  alternative: 正文小标题
+  counter_evidence:
+  - '行内容为 ## 结语，使用二级标题标记，且后文为回顾性总结而非全新章节内容，语义上可视为本书尾声而非独立技术章节'
+  - '但结语在书籍结构中常被独立成章，且前后与 # 10 章节分界明显，维持分章亦可接受'
+  keep_split: true
+- 'no': 5345
+  overturn_probability: 0.02
+  alternative: 索引
+  counter_evidence:
+  - '行内容为 # 索引，文末索引应划分为一章，符合判断规则中文末索引划分为一章的要求'
+  keep_split: true
