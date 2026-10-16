@@ -1,0 +1,43 @@
+chapter_starts:
+- 'no': 3078
+  confidence: 0.99
+  final_reason: '双方一致，一级标题 # 多智能体系统与交接 (Handoffs)，前文 3072 为上一章结束语，后文为本章概述与学习目标，符合最高层级大章起始'
+  accepted_evidence:
+  - 行号3078 为一级标题 `# 多智能体系统与交接 (Handoffs)`
+  - 前文 3072 为上一章结束语“在下一章中...”
+  - 后文 3080 起为本章概述，符合最高层级大章起始特征
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 3848
+  confidence: 0.95
+  final_reason: '复核方支持，虽为 ## 二级标记，但前文 3846 为‘在下一章中…’章节结束，后文为本章学习目标概述，语义上构成新章，单独成行无句号'
+  accepted_evidence:
+  - 行号3848 为 `## 模型与上下文管理`
+  - 前文 3846 明确‘在下一章中...’
+  - 后文 3850 起为本章学习目标概述，语义上构成新章
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 4138
+  confidence: 1.0
+  final_reason: '双方一致，带编号顶层标题 # 8 智能体系统管理，前后上下文为章节切换，符合编号特征和语义统领性'
+  accepted_evidence:
+  - 行号4138 为带编号的顶层标题 `# 8 智能体系统管理`
+  - 前后上下文为章节切换，符合编号特征和语义统领性
+  rejected_evidence: []
+  need_human_review: false
+- 'no': 5755
+  confidence: 1.0
+  final_reason: '双方一致，文末 # 索引，单独成行且无句号，按规则文末索引统一划分为一章'
+  accepted_evidence:
+  - 行号5755 为 `# 索引`，文末索引
+  - 按规则文末索引统一划分为一章，单独成行且无句号
+  rejected_evidence: []
+  need_human_review: false
+rejected_lines:
+- 'no': 4760
+  reason: 复核方反证成立，行号4760 为 `# 使用 OpenAI Agents SDK 构建智能体系统`，出现于 4757 `---`、`以下是排版后的内容：`、`[content]`
+    之后，为排版后示例的重复标题，非正文流程，不构成新最高层级大章
+  need_human_review: false
+- 'no': 5057
+  reason: 复核方反证成立，行号5057 为 `## 构建一个客服员工 AI 智能体`，为二级小标题，位于第9章案例研究内部，标题后接具体说明段落，不具备统领整章的概括性，二级子层级不应划分新章节
+  need_human_review: false

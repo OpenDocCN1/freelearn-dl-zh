@@ -1,0 +1,38 @@
+reviews:
+- 'no': 1
+  overturn_probability: 0.05
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行号3078 为一级标题 `# 多智能体系统与交接 (Handoffs)`，前文 3072 为上一章结束语“在下一章中...”，后文 3080 起为本章概述，符合最高层级大章起始特征
+  keep_split: true
+- 'no': 2
+  overturn_probability: 0.15
+  alternative: 正文二级小标题
+  counter_evidence:
+  - 行号3848 为 `## 模型与上下文管理`，虽为二级标记，但前文 3846 明确‘在下一章中...’，后文 3850 起为本章学习目标概述，语义上构成新章；格式上单独成行且无句号，长度<30字，可接受为章标题
+  keep_split: true
+- 'no': 3
+  overturn_probability: 0.02
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行号4138 为带编号的顶层标题 `# 8 智能体系统管理`，前后上下文为章节切换，符合编号特征和语义统领性
+  keep_split: true
+- 'no': 4
+  overturn_probability: 0.85
+  alternative: 排版噪声/其他
+  counter_evidence:
+  - 行号4760 为 `# 使用 OpenAI Agents SDK 构建智能体系统`，出现于 4757 `---`、`以下是排版后的内容：`、`[content]`
+    之后，是排版后示例的重复标题，非正文流程；其前后并非章节衔接，前文 4755 为 `---`，后文 4762 仅为过渡说明，且全书已在 4138 处开启第8章，此处不构成新最高层级大章
+  keep_split: false
+- 'no': 5
+  overturn_probability: 0.78
+  alternative: 正文小标题
+  counter_evidence:
+  - 行号5057 为 `## 构建一个客服员工 AI 智能体`，为二级小标题，位于第9章案例研究内部，前文 5050 为技术要求，后文为案例步骤，标题长度适中且后接具体说明段落，不具备统领整章的概括性；按规则二级子层级不应划分新章节
+  keep_split: false
+- 'no': 6
+  overturn_probability: 0.03
+  alternative: 若不分章，这行最可能是什么
+  counter_evidence:
+  - 行号5755 为 `# 索引`，文末索引，按规则文末索引统一划分为一章，单独成行且无句号
+  keep_split: true
