@@ -1,4 +1,4 @@
-# 第四章：4\. 使用 OpenAI 和 TensorFlow 进行强化学习入门
+# 第四章：使用 OpenAI 和 TensorFlow 进行强化学习入门
 
 概述
 

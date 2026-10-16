@@ -1,4 +1,4 @@
-# 第三章：3. TensorFlow 开发
+# 第三章：TensorFlow 开发
 
 概述
 
