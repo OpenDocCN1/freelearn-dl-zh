@@ -34,4 +34,4 @@
 +   [第二十六章：竞品工具及适用场景](agentic-coding-with-openai-codex-cli_35.md)
 +   [第二十七章：为长期运行智能体构建工程护架](agentic-coding-with-openai-codex-cli_36.md)
 +   [第二十八章：Agentic Engineering Pod（智能体工程小组）](agentic-coding-with-openai-codex-cli_37.md)
-+   [第二十九章：结语：智能体工程师](agentic-coding-with-openai-codex-cli_38.md)
++   [结语：智能体工程师](agentic-coding-with-openai-codex-cli_38.md)

@@ -6,4 +6,4 @@
 +   [4：智能体工具与 MCP](building-agents-with-openai-agents-sdk_5.md)
 +   [多智能体系统与交接 (Handoffs)](building-agents-with-openai-agents-sdk_6.md)
 +   [模型与上下文管理](building-agents-with-openai-agents-sdk_7.md)
-+   [8](building-agents-with-openai-agents-sdk_8.md)
++   [8 智能体系统管理](building-agents-with-openai-agents-sdk_8.md)
