@@ -84,7 +84,9 @@
 
 该过程如图 19.1 所示。
 
-![ DB: TTserrgaaminiennts 11 22 rˆrσσσμRewla(Labo,,re,aσσdls),μ ](img/B22150_19_01.png)
+```
+ DB: TTserrgaaminiennts 11 22 rˆrσσσμRewla(Labo,,re,aσσdls),μ 
+```
 
 图 19.1: RLHF 结构
 

@@ -160,7 +160,9 @@ distances = pd.read_csv('PeMSD7_W_228.csv.csv', names=range(0,228))
 
 有几种方法可以从距离矩阵计算邻接矩阵。例如，当两个站点之间的距离小于平均距离时，我们可以为它们分配一个连接。相反，我们将执行在[2]中介绍的更高级的处理，计算加权邻接矩阵。我们不使用二进制值，而是通过以下公式计算 0（无连接）和 1（强连接）之间的权重：
 
-![](img/Formula_B19153_15_001.jpg)
+```
+w_ij = { exp(-d_ij^2/σ^2), i ≠ j and exp(-d_ij^2/σ^2) ≥ ε; 0, otherwise. }
+```
 
 在这里，`W[ij]`表示从节点`i` 到节点`j`的边的权重，`d[ij]`是这两个节点之间的距离，`σ²`和`ε`是两个阈值，用来控制邻接矩阵的分布和稀疏度。[2]的官方实现可以在 GitHub 上找到（[`github.com/VeritasYin/STGCN_IJCAI-18`](https://github.com/VeritasYin/STGCN_IJCAI-18)）。我们将重用相同的阈值`σ² = 0.1`和`ε = 0.5`。
 

@@ -266,9 +266,11 @@ DQN 智能体包含几个组件，分别是`DQN`类、`Agent`类和`train`方法
 
 DQN 中的权重更新按以下 Q 学习方程进行：  
 
-![](img/Formula_B15074_03_001.jpg)  
+```
+Δw = α[ (R + γmax_a Q̂(s',a;w)) - Q̂(s,a;w) ] ∇_w Q̂(s,a;w)
+```  
 
-这里，![](img/Formula_B15074_03_002.png) 是 DQN 参数（权重）的变化，s 是当前状态，a 是当前动作，s' 是下一个状态，w 代表 DQN 的权重，![](img/Formula_B15074_03_003.png) 是折扣因子，![](img/Formula_B15074_03_004.png) 是学习率，![](img/Formula_B15074_03_005.png) 表示由 DQN 预测的给定状态（s）和动作（a）的 Q 值，权重为 ![](img/Formula_B15074_03_006.png)。  
+这里，`ΔW` 是 DQN 参数（权重）的变化，s 是当前状态，a 是当前动作，s' 是下一个状态，w 代表 DQN 的权重，`y` 是折扣因子，`α` 是学习率，`Ĉ(s, a; w)` 表示由 DQN 预测的给定状态（s）和动作（a）的 Q 值，权重为 ![](img/Formula_B15074_03_006.png)。  
 
 为了理解 DQN 智能体与 Double-DQN 智能体的区别，请对比第 8 步（DQN）和第 13 步（Double DQN）中的`replay_experience`方法。你会注意到，关键区别在于计算`next_q_values`。DQN 智能体使用预测的 Q 值的最大值（这可能是高估的），而 Double DQN 智能体使用两个不同神经网络的预测 Q 值。这种方法是为了避免 DQN 智能体高估 Q 值的问题。  
 

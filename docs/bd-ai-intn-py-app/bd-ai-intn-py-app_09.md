@@ -623,7 +623,9 @@ RAG 目前是使用 LLM 最流行的方式之一。一套独特的指标已经�
 
 Ragas 包含一个用于测量忠诚度的模块。它使用以下公式计算忠诚度：
 
-![](img/B22495_09_Equation.jpg)
+```
+Faithfulness = Number of claims that can be inferred from the context / Total number of claims in the response
+```
 
 将数据输入到忠诚度公式中的步骤如下：
 
