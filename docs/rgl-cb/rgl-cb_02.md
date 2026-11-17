@@ -719,7 +719,9 @@ F1-score = 2 * (Precision * Recall) / (Precision + Recall)
 
 MSE 是预测值和真实值之间的平均平方差：
 
-![](img/Formula_02_006.jpg)
+```
+MSE = 1/m ∑_{i=1}^{m} (y_i − ŷ_i)²
+```
 
 在这里，`m`是样本数量，*ŷ*是预测值，`y`是真实值：
 
