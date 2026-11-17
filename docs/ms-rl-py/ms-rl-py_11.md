@@ -65,7 +65,9 @@ Environment-ID: Short description
 
 在完全竞争的环境中，一个代理的成功意味着其他代理的失败。因此，这些环境被建模为零和博弈：
 
-![](img/Formula_09_001.jpg)
+```
+R^1 + R^2 + ⋯ + R^N = 0
+```
 
 其中！[](img/Formula_09_002.png)是！[](img/Formula_09_003.png)代理的奖励。
 
@@ -81,7 +83,9 @@ Environment-ID: Short description
 
 第三类环境涉及代理之间的合作与竞争。这些环境通常被建模为一般和博弈：
 
-![](img/Formula_09_004.jpg)
+```
+R^1 + R^2 + ... + R^N = r
+```
 
 这里！[](img/Formula_09_005.png)是！[](img/Formula_09_006.png)代理的奖励，！[](img/Formula_09_007.png)是代理可以收集的固定总奖励。
 
@@ -306,7 +310,7 @@ class TicTacToe(MultiAgentEnv):
         return obs
 ```
 
-最后，`step` 方法会处理玩家的操作，并将环境推进到下一步。如果赢了，玩家会得到一个 ![](img/Formula_09_008.png)，如果输了，则得到 ![](img/Formula_09_009.png)。注意，策略可能会建议在已占据的方格上放置标记，这种行为会被惩罚并扣除 ![](img/Formula_09_010.png) 分。
+最后，`step` 方法会处理玩家的操作，并将环境推进到下一步。如果赢了，玩家会得到一个 `1`，如果输了，则得到 `-1`。注意，策略可能会建议在已占据的方格上放置标记，这种行为会被惩罚并扣除 `-10` 分。
 
 ## 配置训练器
 
