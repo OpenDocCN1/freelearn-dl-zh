@@ -142,17 +142,23 @@ Mask R-CNN 的这个结构在 Mesh R-CNN 中也是相同的。然而，最终增
 
 计算 `P` 和 `Q` 之间的 Chamfer 距离：
 
-![](img/Formula_10_001.jpg)
+```
+L_cham(P,Q) = |P|^(-1) * sum_( (p,q) in Delta_p,q ) ||p-q||^2 + |Q|^(-1) * sum_( (q,p) in Delta_q,p ) ||q-p||^2
+```
 
 接下来，计算绝对法向距离：
 
-![](img/Formula_10_002.jpg)
+```
+L_norm(P,Q) = -|P|^-1 Σ_(p,q)∈Δ_P,Q |u_p·u_q| -|Q|^-1 Σ_(q,p)∈Δ_Q,P |u_q·u_p|
+```
 
 这里，`u`p 和 `u`q 分别是指向 `p` 和 `q` 点的单位法向量。
 
 然而，只有这两种损失退化了网格。这就是为什么在高质量网格生成中，加入了一个形状正则化器，这被称为边缘损失：
 
-![](img/Formula_10_003.jpg)
+```
+L_edge(V, E) = (1/|E|) * ∑_{(v,v')∈E} ||v - v'||^2 where E ⊆ V × V
+```
 
 最终的网格损失是三种损失的加权平均：Chamfer 损失、法线损失和边缘损失。
 

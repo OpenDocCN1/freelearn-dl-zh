@@ -477,7 +477,9 @@ INFO:test_encoders:Left: 56 Right: 74
 
 圆周率π，或`π`，是轮子直径与周长的比值。要得到周长，我们将直径乘以π，得到`πD`，其中`D`是直径。我们可以将π除以每转的总刻度数，然后当我们乘以计数的刻度数`T`，然后是直径`D`，我们得到轮子行驶的距离`d`：
 
-![公式_11_003.png](img/Formula_11_003.png)
+```
+d = π/(40) × D × T
+```
 
 那么，我们如何将其转换为代码？请参考以下步骤：
 
@@ -952,17 +954,25 @@ INFO:drive_distance:Distances: primary: 1002 mm, secondary: 1002 mm
 
 如果我们将转弯半径视为设置机器人中间的位置，那么内轮的转弯半径是转弯半径与轮距一半的差值：
 
-![](img/Formula_11_004.png)
+```
+inner_wheel_turn_radius = turn_radius - wheel_distance/2
+```
 
 外轮的转弯半径是转弯半径加上轮距的一半：
 
-![](img/Formula_11_005.png)
+```
+outer_wheel_turn_radius = turn_radius + (wheel_distance)/(2)
+```
 
 我们将我们的转向角度转换为弧度，然后我们可以将这个角度乘以每个轮子的半径，以得到每个轮子需要移动的距离：
 
-![](img/Formula_11_006.png)
+```
+outer_wheel_turn_distance = angle_in_radians * outer_wheel_turn_radius
+```
 
-![](img/Formula_11_007.png)
+```
+inner_wheel_turn_distance = angle_in_radians * inner_wheel_turn_radius
+```
 
 Python有数学函数可以将度数转换为弧度。
 

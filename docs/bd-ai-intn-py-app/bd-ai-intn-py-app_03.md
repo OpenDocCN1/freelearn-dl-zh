@@ -94,13 +94,15 @@ n-gram 语言模型可以被描述为一个巨大的查找表，其中模型考�
 
 1.  在查找表中记录所有计数。
 
-1.  按如下方式计算单词 ![](img/B22495_03_Equations.png) 在单词 ![](img/B22495_03_Equations1.png) 后出现的概率：将单词对 ![](img/B22495_03_Equations2.png) 的计数除以单个单词 ![](img/B22495_03_Equations1.png) 的计数。
+1.  按如下方式计算单词 `w_2` 在单词 `w_1` 后出现的概率：将单词对 `(w_1, w_2)` 的计数除以单个单词 `w_1` 的计数。
 
 例如，要计算单词 *dog* 在单词 *the* 后出现的概率，按以下方式将配对计数除以单个单词计数：
 
-![](img/B22495_03_Equations3.png)
+```
+p(dog | the) = count(the dog) / count(the)
+```
 
-这里，术语 ![](img/B22495_03_Equations4.png) 读作“在 y 的条件下 x 的概率。”换句话说，在已经看到单词 *the* 的情况下看到单词 *dog* 的概率是看到这两个单词组合的计数（分子）除以看到 *the* 单独的所有计数（分母）。
+这里，术语 `p(x|y)` 读作“在 y 的条件下 x 的概率。”换句话说，在已经看到单词 *the* 的情况下看到单词 *dog* 的概率是看到这两个单词组合的计数（分子）除以看到 *the* 单独的所有计数（分母）。
 
 因此，n-gram 语言模型的训练过程只需要对文本进行单次遍历，统计所有出现的 n-gram 和 (n-1)-gram，并将数字存储在表中。
 
@@ -120,7 +122,7 @@ n-gram 语言模型可以被描述为一个巨大的查找表，其中模型考�
 
 然而，将`n`增加到较大的值有几个挑战，这使得这种方法在实践中不可行。
 
-查找表的大小会随着`n`的增大而指数级增长。《牛津高阶英汉双解大词典》包含大约273,000个英语单词([https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words](https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words))，这允许有74.5亿种可能的两个单词组合（尽管这些组合中的许多在文本中永远不会出现）。将n-gram模型增加到`n=8`，八个单词的可能组合增长到天文数字！[](img/B22495_03_Equations6.png)。在表中为每个组合存储条目是不可能的，因为这个数字远远超过了世界上所有可用的硬盘存储空间，尤其是在世界总数据量预计到2025年将达到175泽字节= ![](img/B22495_03_Equations7.png)字节的情况下([https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html](https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html))。当然，这些单词组合中的大多数永远不会遇到，你可以在表中选择省略未见的n-gram。
+查找表的大小会随着`n`的增大而指数级增长。《牛津高阶英汉双解大词典》包含大约273,000个英语单词([https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words](https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words))，这允许有74.5亿种可能的两个单词组合（尽管这些组合中的许多在文本中永远不会出现）。将n-gram模型增加到`n=8`，八个单词的可能组合增长到天文数字！[](img/B22495_03_Equations6.png)。在表中为每个组合存储条目是不可能的，因为这个数字远远超过了世界上所有可用的硬盘存储空间，尤其是在世界总数据量预计到2025年将达到175泽字节= `175 · 10^21`字节的情况下([https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html](https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html))。当然，这些单词组合中的大多数永远不会遇到，你可以在表中选择省略未见的n-gram。
 
 这个挑战，被称为`n`，任何单个n-gram出现的概率会指数级下降。大多数`n`个单词的组合在现实规模的训练数据集中永远不会遇到。当处理不属于训练语料库的文本时，模型将为未见的n-gram分配零概率。在这种情况下，模型将无法做出有意义的预测，并且随着`n`的增大，这个问题会加剧。
 
@@ -160,7 +162,7 @@ n-gram 语言模型可以被描述为一个巨大的查找表，其中模型考�
 
 图3.1：前馈神经网络架构
 
-放大单个神经元的运作，*图3.2*展示了一个从两个其他神经元（表示为![img/B22495_03_Equations8.png](img/B22495_03_Equations8.png)和![img/B22495_03_Equations9.png](img/B22495_03_Equations9.png)）接收输入的神经元。连接到神经元的权重（表示为![img/B22495_03_Equations10.png](img/B22495_03_Equations10.png)和![img/B22495_03_Equations.png](img/B22495_03_Equations.png)）。输入首先与相应的权重相乘，然后求和。得到的和通过一个非线性激活函数![img/B22495_03_Equations11.png](img/B22495_03_Equations11.png)传递，结果形成神经元的输出（表示为![img/B22495_03_Equations12.png](img/B22495_03_Equations12.png)）。从数学的角度来看，这可以表示为以下公式：![img/B22495_03_Equations13.png](img/B22495_03_Equations13.png)
+放大单个神经元的运作，*图3.2*展示了一个从两个其他神经元（表示为`z_1`和`Z_2`）接收输入的神经元。连接到神经元的权重（表示为`w_1`和`w_2`）。输入首先与相应的权重相乘，然后求和。得到的和通过一个非线性激活函数![img/B22495_03_Equations11.png](img/B22495_03_Equations11.png)传递，结果形成神经元的输出（表示为`Z_3`）。从数学的角度来看，这可以表示为以下公式：`z_3 = f_act(w_1·z_1 + w_2·z_2)`
 
 尽管本章不涉及激活函数的具体细节，但可以说非线性对于网络能够学习数据中的复杂模式至关重要。
 
